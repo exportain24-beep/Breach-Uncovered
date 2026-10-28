@@ -507,7 +507,7 @@
       "act": "escalation",
       "label": "Knocking at Lockheed Martin",
       "mood": "tense",
-      "narration": "[cautiously] Prosecutors say the group tried to steal over $1 billion from banks. Then they turned to America's defense industry. In 2016 and 2017, they sent spear-phishing emails to defense companies, including Lockheed Martin. That means fake emails made for one person, to trick them into clicking. Some mentioned a missile defense system called THAAD. [short pause] This time, the trick failed.",
+      "narration": "[cautiously] Prosecutors say the group tried to steal over $1 billion from banks. In 2016 and 2017, they sent spear-phishing emails to defense companies, including Lockheed Martin. That means fake emails made for one person, to trick them into clicking. Some mentioned a missile defense system called THAAD. [short pause] This time, the trick failed.",
       "visuals": [
         {
           "type": "gfx",
@@ -523,7 +523,7 @@
         {
           "type": "stock",
           "query": "fighter jet flying",
-          "at": "defense industry"
+          "at": "defense companies"
         },
         {
           "type": "gfx",
@@ -591,7 +591,7 @@
       "act": "escalation",
       "label": "WannaCry hits the world",
       "mood": "shock",
-      "narration": "[urgently] In May 2017 came WannaCry. It was ransomware. That's a program that locks your files and demands money. It spread by itself, from computer to computer. Hundreds of thousands of machines were hit worldwide. [sad] In Britain, it hit the National Health Service. Thousands of hospital appointments were canceled. [pause] Who was behind it? The FBI had been digging for years.",
+      "narration": "[urgently] In May 2017 came WannaCry. It was ransomware. That's a program that locks your files and demands money. It spread by itself, from computer to computer. Hundreds of thousands of machines were hit worldwide. [sad] In Britain, it hit the National Health Service. Thousands of hospital appointments were canceled. [pause] The FBI had been digging for years.",
       "visuals": [
         {
           "type": "gfx",
@@ -732,7 +732,7 @@
       "act": "unmasking",
       "label": "Who was Kim Hyon Woo?",
       "mood": "reveal",
-      "narration": "[serious] That second account used a name, Kim Hyon Woo. It was likely a fake name. Kim Hyon Woo accounts set up other email and social media accounts. Some were used against Sony and Bangladesh Bank. Remember Andoson David, the Facebook bait account? [short pause] The FBI says it was set up with one of those same email addresses. [slowly] One thread now ran from the coder to the attacks.",
+      "narration": "[serious] That second account used a name, Kim Hyon Woo. It was likely a fake name. Kim Hyon Woo accounts set up other email and social media accounts. Remember Andoson David, the Facebook bait account? [short pause] The FBI says it was set up with one of those same email addresses. [slowly] One thread now ran from the coder to the attacks.",
       "visuals": [
         {
           "type": "gfx",
@@ -763,18 +763,6 @@
           "kind": "network",
           "text": "Accounts creating accounts",
           "at": "set up other email"
-        },
-        {
-          "type": "gfx",
-          "kind": "flow",
-          "data": {
-            "nodes": [
-              "Kim Hyon Woo",
-              "Sony",
-              "Bangladesh Bank"
-            ]
-          },
-          "at": "used against Sony"
         },
         {
           "type": "gfx",
@@ -813,7 +801,7 @@
       "act": "unmasking",
       "label": "Too many fingerprints",
       "mood": "reveal",
-      "narration": "[calmly] Email wasn't the only clue. The same pieces of code showed up in different attacks. Logins traced back to North Korea and China. [short pause] Eric Chien, a Symantec security expert, said Park mixed his normal work with government work. And US search warrants could reach his American email accounts. [reflective] Priscilla Moriuchi said the case was built on all the mistakes he made.",
+      "narration": "[calmly] Email wasn't the only clue. The same pieces of code showed up in different attacks. [short pause] Eric Chien, a Symantec security expert, said Park mixed his normal work with government work. And US search warrants could reach his American email accounts. [reflective] Priscilla Moriuchi said the case was built on all the mistakes he made.",
       "visuals": [
         {
           "type": "gfx",
@@ -826,24 +814,6 @@
           "kind": "doc",
           "text": "Same code in different attacks",
           "at": "pieces of code showed up"
-        },
-        {
-          "type": "gfx",
-          "kind": "globe",
-          "text": "Logins traced",
-          "data": [
-            [
-              "Pyongyang",
-              39.0,
-              125.7
-            ],
-            [
-              "Los Angeles",
-              34.05,
-              -118.24
-            ]
-          ],
-          "at": "Logins traced back"
         },
         {
           "type": "gfx",
@@ -881,7 +851,7 @@
       "act": "aftermath",
       "label": "Charged, then denied",
       "mood": "tense",
-      "narration": "[serious] On June 8, 2018, prosecutors filed a criminal complaint in Los Angeles. It stayed secret for three months. Then, on September 6, 2018, the charges went public. Park was charged with conspiracy to commit computer fraud and wire fraud. Wire fraud carries up to 20 years in prison. The US Treasury also put sanctions on Park and Chosun Expo. [surprised] North Korea's answer? It said Park Jin Hyok doesn't exist.",
+      "narration": "[serious] On June 8, 2018, prosecutors filed a criminal complaint in Los Angeles. Then, on September 6, 2018, the charges went public. Park was charged with conspiracy to commit computer fraud and wire fraud. Wire fraud carries up to 20 years in prison. The US Treasury also put sanctions on Park and Chosun Expo. [surprised] North Korea's answer? It said Park Jin Hyok doesn't exist.",
       "visuals": [
         {
           "type": "gfx",
@@ -907,7 +877,7 @@
           "type": "gfx",
           "kind": "redact",
           "text": "SEALED",
-          "at": "stayed secret"
+          "at": "filed a criminal complaint"
         },
         {
           "type": "gfx",
@@ -968,7 +938,7 @@
       "act": "aftermath",
       "label": "Undone by an inbox",
       "mood": "calm",
-      "narration": "[softly] As far as the public knows, Park Jin Hyok has never been arrested. He is still on the FBI's wanted list. The charges haven't been tested in court. They're still only accusations. [short pause] But the case put a real company behind years of attacks. [slowly] And what gave them away was the most ordinary thing in any office… an email account. [pause] If you like true stories like this, subscribe to Breach Uncovered.",
+      "narration": "[softly] As far as the public knows, Park Jin Hyok has never been arrested. The charges are still only accusations. [short pause] But the case put a real company behind years of attacks. [slowly] And what gave them away was the most ordinary thing in any office… an email account. [pause] If you like true stories like this, subscribe to Breach Uncovered.",
       "visuals": [
         {
           "type": "gfx",
@@ -979,13 +949,13 @@
         {
           "type": "archival",
           "query": "FBI seal",
-          "at": "FBI's wanted list"
+          "at": "has never been arrested"
         },
         {
           "type": "gfx",
           "kind": "doc",
           "text": "Charges are still accusations",
-          "at": "tested in court"
+          "at": "only accusations"
         },
         {
           "type": "gfx",
