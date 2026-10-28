@@ -7,10 +7,20 @@
    "yt": "MBW8Q7s92Mo",
    "fb": "2209360256679014",
    "comment_done": true
+  },
+  "2": {
+   "publish_at": "2026-10-28T17:00:00+00:00",
+   "first_comment": "It started with skulls on a website and a group nobody had heard of. Should the world have seen the Sony hack coming after this?",
+   "title": "DarkSeoul Hack: How North Korea Wiped 48,000 Computers at 2 p.m.",
+   "yt": "dztHRGzVo8U",
+   "fb": "3313863365466547"
   }
  },
  "playlists": {
-  "Breach Uncovered \u2014 All Case Files": "PLZY-3v_Q5P7w"
+  "Breach Uncovered \u2014 All Case Files": "PLZY-3v_Q5P7w",
+  "Breach Uncovered \u2014 State Cases": "PLXd5x2ANsGZQ"
  },
- "slots_used": []
+ "slots_used": [
+  "2026-10-28T17:00:00+00:00"
+ ]
 }
