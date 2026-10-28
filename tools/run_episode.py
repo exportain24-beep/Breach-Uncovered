@@ -59,6 +59,13 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--episode", type=int); ap.add_argument("--dry", action="store_true"); ap.add_argument("--now", action="store_true", help="publish ~15 min after upload instead of the next fixed slot"); ap.add_argument("--offline", action="store_true", help="no network: estimated timing, procedural visuals (local testing)"); a = ap.parse_args()
     if os.path.exists("data/PAUSE") and not a.episode and not a.dry:
         print("publishing is paused (data/PAUSE exists):", open("data/PAUSE").read().strip()[:200]); return 0
+    if os.path.exists("data/NOT_BEFORE") and not a.episode and not a.dry:       # automatic hold: cron runs do nothing until this UTC time, then resume by themselves
+        import datetime as _dt
+        nb = open("data/NOT_BEFORE").read().strip()
+        try:
+            if _dt.datetime.now(_dt.timezone.utc) < _dt.datetime.fromisoformat(nb.replace("Z", "+00:00")):
+                print("holding until", nb); return 0
+        except Exception as e: print("bad NOT_BEFORE ignored:", e)
     state = load_state(); cases = json.load(open("data/cases.json"))
     if not a.dry:
         try: post_pending_comments(state); save_state(state)

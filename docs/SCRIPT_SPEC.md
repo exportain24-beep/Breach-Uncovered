@@ -1,7 +1,7 @@
 # Breach Uncovered — episode script spec
 
 Channel: English-language documentary storytelling about REAL hacks. Narrated by one ElevenLabs voice
-(`fPIfC3elMLbN9tNwMXkw`, model **`eleven_v4_turbo` ONLY — locked by the owner, no other model ever**). Output of this spec = one JSON file per episode in `scripts/`.
+(`oO7sLA3dWfQXsKeSAjpA`, model **`eleven_v4_turbo` ONLY — locked by the owner, no other model ever**). Output of this spec = one JSON file per episode in `scripts/`.
 
 ## Goal
 A viewer who knows nothing about security should be unable to stop listening. Think investigative-podcast

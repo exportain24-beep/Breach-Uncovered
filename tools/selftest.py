@@ -10,7 +10,7 @@ if k:
     r = requests.get("https://api.elevenlabs.io/v1/models", headers={"xi-api-key": k}, timeout=30)
     ids = [m["model_id"] for m in r.json()] if r.status_code == 200 else []
     row("Model eleven_v4_turbo available on this key", "eleven_v4_turbo" in ids, f"HTTP {r.status_code}; v4-family: {[i for i in ids if 'v4' in i]}")
-    vid = os.environ.get("ELEVENLABS_VOICE_ID", "fPIfC3elMLbN9tNwMXkw")
+    vid = os.environ.get("ELEVENLABS_VOICE_ID", "oO7sLA3dWfQXsKeSAjpA")
     r = requests.get("https://api.elevenlabs.io/v1/voices/" + vid, headers={"xi-api-key": k}, timeout=30)
     row("Voice reachable", r.status_code == 200, f"{r.json().get('name') if r.status_code == 200 else r.text[:120]}")
     if r.status_code != 200:                                  # I / l and O / 0 look alike when an id is typed by hand: try those spellings
