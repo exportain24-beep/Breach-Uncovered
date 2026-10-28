@@ -10,8 +10,20 @@ if k:
     r = requests.get("https://api.elevenlabs.io/v1/models", headers={"xi-api-key": k}, timeout=30)
     ids = [m["model_id"] for m in r.json()] if r.status_code == 200 else []
     row("Model eleven_v4_turbo available on this key", "eleven_v4_turbo" in ids, f"HTTP {r.status_code}; v4-family: {[i for i in ids if 'v4' in i]}")
-    r = requests.get("https://api.elevenlabs.io/v1/voices/" + os.environ.get("ELEVENLABS_VOICE_ID", "fPIfC3elMLbN9tNwMXkw"), headers={"xi-api-key": k}, timeout=30)
+    vid = os.environ.get("ELEVENLABS_VOICE_ID", "fPIfC3elMLbN9tNwMXkw")
+    r = requests.get("https://api.elevenlabs.io/v1/voices/" + vid, headers={"xi-api-key": k}, timeout=30)
     row("Voice reachable", r.status_code == 200, f"{r.json().get('name') if r.status_code == 200 else r.text[:120]}")
+    if r.status_code != 200:                                  # I / l and O / 0 look alike when an id is typed by hand: try those spellings
+        import itertools
+        pos = [i for i, c in enumerate(vid) if c in "Il0O"]; alt = {"I": "l", "l": "I", "0": "O", "O": "0"}
+        for combo in itertools.product((0, 1), repeat=len(pos)):
+            v2 = list(vid)
+            for flip, i in zip(combo, pos):
+                if flip: v2[i] = alt[v2[i]]
+            v2 = "".join(v2)
+            if v2 == vid: continue
+            r2 = requests.get("https://api.elevenlabs.io/v1/voices/" + v2, headers={"xi-api-key": k}, timeout=30)
+            row(f"Voice spelling {v2}", r2.status_code == 200, r2.json().get("name") if r2.status_code == 200 else "not found")
     r = requests.get("https://api.elevenlabs.io/v1/user/subscription", headers={"xi-api-key": k}, timeout=30)
     if r.status_code == 200:
         j = r.json(); left = j["character_limit"] - j["character_count"]; row("ElevenLabs usage", True, f"info only: {left:,} plan characters left; pay-as-you-go API usage is not gated by this")
