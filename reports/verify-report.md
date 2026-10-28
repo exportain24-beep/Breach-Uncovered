@@ -1,4 +1,4 @@
-# Access verification — 2026-10-28 05:16 UTC
+# Access verification — 2026-10-28 05:22 UTC
 
 ## YouTube
 
@@ -32,6 +32,12 @@
 | ✅ | Permission `business_management` |  |
 | ❌ | Permission `pages_messaging` | optional |
 | ℹ️ | Other granted | public_profile |
-| ✅ | “Require App Secret” enabled (call without proof is blocked) | blocked ✔ |
-| ❌ | Page found + page token derived | 100 (#100) Tried accessing nonexisting field (tasks) |
+| ✅ | “Require App Secret” enabled (call without proof is blocked) | blocked ✔ — 100 API calls from the server require an appsecret_proof argument |
+| ✅ | Page found + page token derived | **Breach Uncovered** (Digital creator) |
+| ✅ | Page tasks (full control) | MANAGE, CREATE_CONTENT, MODERATE, MESSAGING, ADVERTISE, ANALYZE, MANAGE_LEADS, VIEW_MONETIZATION_INSIGHTS |
+| ✅ | Read posts (feed) |  |
+| ✅ | Read videos |  |
+| ❌ | Insights | 100 (#100) The value must be a valid insights metric |
+| ✅ | Page info (About/description) readable |  |
+| ✅ | Webhook subscriptions endpoint |  |
 | ℹ️ | App | Breach Uncovered |
