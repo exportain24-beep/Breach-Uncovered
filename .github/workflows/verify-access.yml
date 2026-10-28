@@ -1,0 +1,29 @@
+name: Verify access
+on:
+  push:
+    paths: ["tools/verify_access.py", ".github/workflows/verify-access.yml", "tools/.verify-trigger"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run checks
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          FB_SYSTEM_USER_TOKEN: ${{ secrets.FB_SYSTEM_USER_TOKEN }}
+          FB_APP_ID: ${{ secrets.FB_APP_ID }}
+          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+        run: python3 tools/verify_access.py
+      - name: Save report
+        run: |
+          mkdir -p reports && mv verify-report.md reports/verify-report.md
+          git config user.name "breach-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/verify-report.md
+          git commit -m "Access verification report [skip ci]" || true
+          git push
