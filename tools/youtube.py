@@ -59,9 +59,14 @@ def ensure_playlist(title, description, state):
     pl[title] = r.json()["id"]; return pl[title]
 
 def add_to_playlist(pl_id, video_id):
-    r = requests.post(f"{API}/playlistItems?part=snippet", headers=H({"Content-Type": "application/json"}),
-                      json={"snippet": {"playlistId": pl_id, "resourceId": {"kind": "youtube#video", "videoId": video_id}}}, timeout=30)
-    if r.status_code != 200: raise RuntimeError(f"playlist add failed {r.status_code} {r.text[:200]}")
+    import time
+    for attempt in range(4):                       # YouTube answers 409/5xx now and then; the video itself is fine
+        r = requests.post(f"{API}/playlistItems?part=snippet", headers=H({"Content-Type": "application/json"}),
+                          json={"snippet": {"playlistId": pl_id, "resourceId": {"kind": "youtube#video", "videoId": video_id}}}, timeout=30)
+        if r.status_code == 200: return
+        if r.status_code not in (409, 500, 502, 503, 504): break
+        time.sleep(5 * (attempt + 1))
+    raise RuntimeError(f"playlist add failed {r.status_code} {r.text[:200]}")
 
 def comment(video_id, text):
     r = requests.post(f"{API}/commentThreads?part=snippet", headers=H({"Content-Type": "application/json"}),
