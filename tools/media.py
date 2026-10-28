@@ -84,10 +84,11 @@ def save_used(ids):
         os.makedirs(os.path.dirname(USED_FILE) or ".", exist_ok=True); json.dump(sorted(ids)[-4000:], open(USED_FILE, "w"))
     except Exception as e: print("could not save used media:", e)
 
-def fetch(v, used, mood="curious"):
+def fetch(v, used, mood="curious", allow_images=True):
     q = (v.get("query") or "").strip()
     if not q: return None
     order = [commons_image, pixabay_image, pixabay_video] if v["type"] == "archival" else [pixabay_video, pixabay_image, commons_image]
+    if not allow_images: order = [f for f in order if f not in (pixabay_image,)] + ([commons_image] if v["type"] == "archival" and commons_image not in order else [])
     for fn in order:
         try:
             a = fn(q, used)
@@ -113,7 +114,8 @@ def fetch_all(script, workdir):
     for s in script["scenes"]:
         for vi, v in enumerate(s.get("visuals", [])):
             if v["type"] in ("stock", "archival"):
-                a = fetch(v, used, s.get("mood", "curious"))
+                nimg = sum(1 for x in assets.values() if x["kind"] == "image")       # Facebook reduces reach of mostly-static videos: keep stills <= 25%
+                a = fetch(v, used, s.get("mood", "curious"), allow_images=(nimg <= .25 * max(8, len(assets))))
                 if a: assets[f"{s['id']}:{vi}"] = {k: a[k] for k in ("path", "kind", "credit")}; credits.append(a["credit"])
                 else: print(f"no asset for scene {s['id']} visual {vi}: {v.get('query')}")
     json.dump(assets, open(os.path.join(workdir, "assets.json"), "w"), indent=1); save_used(used)
