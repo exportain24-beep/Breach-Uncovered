@@ -91,7 +91,7 @@
       "act": "quiet_part",
       "label": "March: a fix nobody installed",
       "mood": "calm",
-      "narration": "[calmly] In March 2017, Microsoft fixed a weak spot in Windows. Tech people call a fix like this a patch. Think of it as a new lock for a broken door. Britain's hospitals are run by the NHS, the country's free, government-run health service. It warned them to install the fix. But many computers never got it. Some still ran Windows XP, a version so old that Microsoft had stopped fixing it.",
+      "narration": "[calmly] In March 2017, Microsoft fixed a weak spot in Windows. Think of it as a new lock for a broken door. Britain's hospitals are run by the NHS, the country's free, government-run health service. It warned them to install the fix. But many computers never got it. Some still ran Windows XP, a version so old that Microsoft had stopped fixing it.",
       "visuals": [
         {
           "type": "gfx",
@@ -150,7 +150,7 @@
       "act": "quiet_part",
       "label": "April: a spy tool gets loose",
       "mood": "curious",
-      "narration": "[cautiously] Then, in April, a mystery group called the Shadow Brokers dumped hacking tools online. The tools were said to come from the NSA, America's biggest spy agency. One was called EternalBlue. It slipped in through that same weak spot. Any computer without the March fix was at risk. Now anyone could grab it. A few weeks later, someone did.",
+      "narration": "[cautiously] Then, in April, a mystery group called the Shadow Brokers dumped hacking tools online. The tools were said to come from the NSA, America's biggest spy agency. One was called EternalBlue. It slipped in through that same weak spot. Now anyone could grab it. A few weeks later, someone did.",
       "visuals": [
         {
           "type": "gfx",
@@ -276,7 +276,7 @@
       "act": "escalation",
       "label": "Hospitals in trouble",
       "mood": "shock",
-      "narration": "[worried] By that afternoon, England's hospitals were in real trouble. Staff were locked out of their computers. Appointments were canceled. Five emergency rooms had to send ambulances elsewhere. In the end, at least 81 hospital groups were hit, plus nearly 600 family doctor offices. Imagine walking into a hospital where nothing works. And the attack was still spreading.",
+      "narration": "[worried] By that afternoon, England's hospitals were in real trouble. Staff were locked out of their computers. Appointments were canceled. Five emergency rooms had to send ambulances elsewhere. In the end, at least 81 hospital groups were hit, plus nearly 600 family doctor offices. And the attack was still spreading.",
       "visuals": [
         {
           "type": "archival",
@@ -324,11 +324,6 @@
             "unit": ""
           },
           "at": "at least 81 hospital groups"
-        },
-        {
-          "type": "stock",
-          "query": "empty waiting room chairs",
-          "at": "nothing works"
         },
         {
           "type": "gfx",
@@ -424,7 +419,7 @@
       "act": "scramble",
       "label": "Meet the guy on his week off",
       "mood": "calm",
-      "narration": "[warmly] Meet Marcus Hutchins. He was 22 and lived with his family in Ilfracombe, a seaside town in England. He loved to surf. Online, he went by MalwareTech. He hunted bad software for a security company, working from his bedroom. That Friday was supposed to be his week off. He woke around 10 and went to lunch with a friend. [short pause] At about 2:30, he got home to news that the hospitals were under attack.",
+      "narration": "[warmly] Meet Marcus Hutchins. He was 22 and lived with his family in Ilfracombe, a seaside town in England. He loved to surf. He hunted bad software for a security company, working from his bedroom. That Friday was supposed to be his week off. He woke around 10 and went to lunch with a friend. [short pause] At about 2:30, he got home to news that the hospitals were under attack.",
       "visuals": [
         {
           "type": "gfx",
@@ -441,7 +436,7 @@
           "type": "gfx",
           "kind": "terminal",
           "text": "MalwareTech; hunting bad software",
-          "at": "went by MalwareTech"
+          "at": "hunted bad software"
         },
         {
           "type": "gfx",
@@ -481,7 +476,7 @@
       "act": "scramble",
       "label": "A strange web address",
       "mood": "curious",
-      "narration": "[curious] Marcus got a copy of WannaCry and looked inside. He spotted something odd. Before doing any damage, it tried to visit a long, random web address. And nobody owned that address. So Marcus bought it for $10.69. He often did this with addresses found in bad software. It shows where an attack is spreading. [softly] As he said later, \"The intent was to just monitor the spread.\"",
+      "narration": "[curious] Marcus got a copy of WannaCry and looked inside. He spotted something odd. Before doing any damage, it tried to visit a long, random web address. And nobody owned that address. So Marcus bought it for $10.69. It shows where an attack is spreading. [softly] As he said later, \"The intent was to just monitor the spread.\"",
       "visuals": [
         {
           "type": "gfx",
@@ -536,7 +531,7 @@
       "act": "reveal",
       "label": "The accidental off switch",
       "mood": "reveal",
-      "narration": "[surprised] The moment the address went live, it lit up. Thousands of infected computers were checking in every second. Then Marcus and his team worked out why. [pause] Every copy of WannaCry asked one question. Is this address out there? If no, it attacked. If yes, it stopped. [dramatically] Marcus had flipped an off switch by accident. In his words, \"we actually stopped the spread just by registering the domain.\"",
+      "narration": "[surprised] The moment the address went live, it lit up. Thousands of infected computers were checking in every second. [pause] Every copy of WannaCry asked one question. Is this address out there? If no, it attacked. If yes, it stopped. [dramatically] Marcus had flipped an off switch by accident. In his words, \"we actually stopped the spread just by registering the domain.\"",
       "visuals": [
         {
           "type": "stock",
@@ -608,7 +603,7 @@
       "act": "scramble",
       "label": "Too late for some, then a fight",
       "mood": "sad",
-      "narration": "[sad] But the switch had a limit. It couldn't unlock computers already locked. Of 37 hospital groups fully locked out, 32 were hit before the switch. [serious] Then, on Saturday morning, someone aimed the Mirai botnet at the address. That's a huge army of hacked gadgets, like home cameras. [breathless] Marcus and his team kept it online. In two days, the switch prevented about a million infections. He had been awake for more than 30 hours.",
+      "narration": "[sad] But the switch had a limit. It couldn't unlock computers already locked. Of 37 hospital groups fully locked out, 32 were hit before the switch. [serious] Then, on Saturday morning, someone aimed the Mirai botnet at the address. That's a huge army of hacked gadgets, like home cameras. [breathless] Marcus and his team kept it online. In two days, the switch prevented about a million infections.",
       "visuals": [
         {
           "type": "gfx",
@@ -679,16 +674,6 @@
             "label": "infections prevented"
           },
           "at": "about a million infections"
-        },
-        {
-          "type": "gfx",
-          "kind": "counter",
-          "data": {
-            "value": 30,
-            "suffix": "h",
-            "label": "hours awake"
-          },
-          "at": "more than 30 hours"
         }
       ]
     },
@@ -914,7 +899,7 @@
       "act": "aftermath",
       "label": "The bill, and the $10 hero",
       "mood": "hopeful",
-      "narration": "[reflective] And Marcus? He pleaded guilty. In July 2019, a judge sentenced him to time served. No prison. Britain later added up the damage. WannaCry cost its health service about 92 million pounds and 19,000 canceled appointments. [long pause] [softly] The fix had been out for two months. In the end, a surfer, a weird web address and $10.69 saved the day. If you like true stories like this, subscribe to Breach Uncovered.",
+      "narration": "[reflective] And Marcus? He pleaded guilty. In July 2019, a judge sentenced him to time served. No prison. WannaCry cost its health service about 92 million pounds and 19,000 canceled appointments. [long pause] [softly] The fix had been out for two months. In the end, a surfer, a weird web address and $10.69 saved the day. If you like true stories like this, subscribe to Breach Uncovered.",
       "visuals": [
         {
           "type": "archival",
