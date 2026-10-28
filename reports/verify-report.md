@@ -37,7 +37,7 @@
 | ✅ | Page tasks (full control) | MANAGE, CREATE_CONTENT, MODERATE, MESSAGING, ADVERTISE, ANALYZE, MANAGE_LEADS, VIEW_MONETIZATION_INSIGHTS |
 | ✅ | Read posts (feed) |  |
 | ✅ | Read videos |  |
-| ❌ | Insights | 100 (#100) The value must be a valid insights metric |
+| ✅ | Insights |  |
 | ✅ | Page info (About/description) readable |  |
 | ✅ | Webhook subscriptions endpoint |  |
 | ℹ️ | App | Breach Uncovered |
