@@ -6,6 +6,8 @@ import requests
 MODEL = "eleven_v4_turbo"          # LOCKED. Never change.
 VOICE = os.environ.get("ELEVENLABS_VOICE_ID", "vYENaCJHl4vFKNDYPr8y")
 API = "https://api.elevenlabs.io/v1"
+# Natural, expressive storytelling delivery (owner feedback): moderate stability lets the audio tags and the story's emotion come through.
+VOICE_SETTINGS = {"stability": 0.45, "similarity_boost": 0.8, "style": 0.3, "use_speaker_boost": True, "speed": 1.0}
 
 def _headers(): return {"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Content-Type": "application/json"}
 
@@ -33,7 +35,7 @@ def synth(text, prev_text, next_text, out_path):
     assert MODEL == "eleven_v4_turbo", "model is locked to eleven_v4_turbo"
     assert len(text) < 9500, "scene too long for one request"
     url = f"{API}/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_128"
-    body = {"model_id": MODEL, "text": text}
+    body = {"model_id": MODEL, "text": text, "voice_settings": dict(VOICE_SETTINGS)}
     if prev_text: body["previous_text"] = prev_text[-600:]
     if next_text: body["next_text"] = next_text[:600]
     last = None
@@ -43,6 +45,8 @@ def synth(text, prev_text, next_text, out_path):
         last = f"{r.status_code} {r.text[:300]}"
         if r.status_code == 400 and ("previous_text" in body or "next_text" in body) and re.search(r"previous_text|next_text|stitch", r.text, re.I):
             body.pop("previous_text", None); body.pop("next_text", None); continue
+        if r.status_code == 400 and "voice_settings" in body:             # a setting this model does not accept: retry once without it
+            print("ElevenLabs rejected voice_settings, retrying with the voice's defaults:", r.text[:200]); body.pop("voice_settings", None); continue
         if r.status_code in (429, 500, 502, 503, 504): time.sleep(5 * (attempt + 1)); continue
         raise RuntimeError("ElevenLabs error " + last)
     else:

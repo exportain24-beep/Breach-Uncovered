@@ -42,7 +42,8 @@ Every word, title and tag is written for **native English speakers, US viewers f
 12–18 scenes. Each scene = one beat of the story (roughly 40–90 words, about 25–35 seconds), 8–10 visuals each.
 
 ## Story architecture (vary it — do not make every episode identical)
-1. **Cold open (≤ 80 words, no greeting, no channel name, no "today we'll look at").** Start mid-action, or with
+0. **THE 5-SECOND HOOK (non-negotiable).** The very first 1–2 sentences (about 5 seconds of speech, **at most 14 words in the first sentence**) must make a stranger think "wait, WHAT? I have to hear this." Use the single most shocking, strange or emotional TRUE detail of the story, stated simply: a startling number, a bizarre moment, a quiet question, a promise that something went terribly wrong. No setup, no greeting, no channel name, no "this is the story of". Examples of the right feel: "A single typo stopped a billion dollars from vanishing." / "Thousands of computers died at the same second, and nobody knew why." The hook is spoken with a strong audio tag ([dramatically], [whispers], [serious]) and its first 5 seconds get the fastest cuts.
+1. **Cold open (≤ 80 words, no greeting, no channel name, no "today we'll look at").** It starts with the 5-second hook above, then explains it. Start mid-action, or with
    a startling real number, or with a real quote from the sources, or with the moment the victim noticed.
    Pick a *different* opener style from the neighbouring episodes.
 2. **Stakes + who** — who was hit, why it mattered, in plain words.

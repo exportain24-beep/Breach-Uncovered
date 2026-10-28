@@ -12,12 +12,22 @@
       "act": "cold_open",
       "label": "2 p.m. in Seoul: the screens die",
       "mood": "shock",
-      "narration": "[serious] It's Wednesday, March 20, 2013. Seoul, South Korea. It's 2 in the afternoon. [short pause] Then, all at once, the computers die. At big banks. At major TV stations. Screens freeze. Machines restart, and they never come back. One reporter takes a photo of a dead screen. It shows one cold line. [slowly] Boot device not found. [short pause] [curious] So who did this? And how? To find out, we have to go back almost a year.",
+      "narration": "[dramatically] One afternoon, a hidden timer killed thousands of computers across South Korea. [short pause] [serious] It's Wednesday, March 20, 2013, in Seoul. It's 2 in the afternoon. At big banks and major TV stations, screens freeze. Machines restart, and they never come back. One reporter takes a photo of a dead screen. It shows one cold line. [slowly] Boot device not found. [short pause] [curious] So who set that timer? And how? To find out, we have to go back almost a year.",
       "visuals": [
+        {
+          "type": "stock",
+          "query": "hidden bomb timer close up",
+          "at": "a hidden timer"
+        },
+        {
+          "type": "stock",
+          "query": "computer screen glitch",
+          "at": "killed thousands of computers"
+        },
         {
           "type": "archival",
           "query": "Seoul skyline daytime",
-          "at": "Seoul, South Korea",
+          "at": "across South Korea",
           "overlay": "Seoul, March 20, 2013"
         },
         {
@@ -27,23 +37,13 @@
         },
         {
           "type": "stock",
-          "query": "computer screen glitch",
-          "at": "the computers die"
-        },
-        {
-          "type": "stock",
           "query": "bank interior people",
           "at": "At big banks"
         },
         {
           "type": "stock",
-          "query": "television studio cameras",
-          "at": "At major TV stations"
-        },
-        {
-          "type": "stock",
           "query": "frozen monitor office",
-          "at": "Screens freeze"
+          "at": "screens freeze"
         },
         {
           "type": "stock",
@@ -181,7 +181,7 @@
       "act": "quiet_part",
       "label": "A dangerous winter and a timer",
       "mood": "tense",
-      "narration": "[serious] Then came early 2013. Things between the two Koreas got very tense. In February, North Korea tested a nuclear weapon. Soon after, it said the deal that stopped the Korean War in 1953 was no longer valid. It was even threatening the United States. That same February, investigators say, North Korean computers ran a test of the attack. Like a fire drill. [short pause] Then someone set a timer. The date? March 20. The time? 2 in the afternoon.",
+      "narration": "[serious] Then came early 2013. Things between the two Koreas got very tense. In February, North Korea tested a nuclear weapon. Soon after, it said the deal that stopped the Korean War in 1953 was no longer valid. It was even threatening the United States. That same February, investigators say, North Korean computers ran a test of the attack. Like a fire drill. [short pause] Then someone set the timer. The date? March 20. The time? 2 in the afternoon.",
       "visuals": [
         {
           "type": "stock",
@@ -221,7 +221,7 @@
         {
           "type": "stock",
           "query": "countdown timer digital",
-          "at": "someone set a timer"
+          "at": "someone set the timer"
         },
         {
           "type": "motion",

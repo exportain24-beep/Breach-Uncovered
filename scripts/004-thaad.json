@@ -12,18 +12,28 @@
       "act": "cold_open",
       "label": "A job offer that looked too good",
       "mood": "curious",
-      "narration": "[softly] It's 2016. An email lands in the inbox of a worker at an American defense company. It's from a recruiter at a rival company. There's a great new job on offer. [short pause] Some of these emails even mention THAAD. That's a US missile shield. [serious] But according to the FBI, the recruiter wasn't real. The email was bait. And the people who sent it, the US government says, worked for North Korea.",
+      "narration": "[dramatically] North Korean hackers sent fake job offers to the people building America's missile shield. [short pause] At least, that's what the FBI says. [softly] Here's how it began. It's 2016. An email lands in the inbox of a worker at an American defense company. It's from a recruiter at a rival company. There's a great new job on offer. Some of these emails even mention THAAD. That's the missile shield. [serious] But the recruiter wasn't real. The email was bait. And the US government says the trail led back to North Korea's military.",
       "visuals": [
+        {
+          "type": "archival",
+          "query": "Pyongyang skyline",
+          "at": "North Korean hackers"
+        },
+        {
+          "type": "stock",
+          "query": "email inbox laptop",
+          "at": "fake job offers"
+        },
+        {
+          "type": "stock",
+          "query": "radar dish sky",
+          "at": "America's missile shield"
+        },
         {
           "type": "motion",
           "kind": "title",
           "text": "USA · 2016",
           "at": "It's 2016"
-        },
-        {
-          "type": "stock",
-          "query": "email inbox laptop",
-          "at": "An email lands"
         },
         {
           "type": "stock",
@@ -42,11 +52,6 @@
         },
         {
           "type": "stock",
-          "query": "radar dish sky",
-          "at": "even mention THAAD"
-        },
-        {
-          "type": "stock",
           "query": "man frowning screen",
           "at": "the recruiter wasn't real"
         },
@@ -56,9 +61,9 @@
           "at": "The email was bait"
         },
         {
-          "type": "archival",
-          "query": "Pyongyang skyline",
-          "at": "worked for North Korea"
+          "type": "stock",
+          "query": "army trucks convoy",
+          "at": "North Korea's military"
         }
       ]
     },

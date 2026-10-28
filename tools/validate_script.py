@@ -53,6 +53,8 @@ def validate(path):
             if t not in ("motion", "archival", "stock"): errs.append(f"scene {i}: bad visual type {t}")
             elif t == "motion" and x.get("kind") not in MOTION_KINDS: errs.append(f"scene {i}: bad motion kind {x.get('kind')}")
             elif t in ("archival", "stock") and not x.get("query"): errs.append(f"scene {i}: {t} visual needs query")
+    first = re.split(r"(?<=[.!?])\s+", re.sub(r"\[[^\]]*\]", " ", sc[0]["narration"]).strip())[0] if sc else ""
+    if len(first.split()) > 14: errs.append(f"hook: first sentence is {len(first.split())} words (max 14, must grab in 5 seconds)")
     allv = [x for s in sc for x in (s.get("visuals") or [])]
     if sum(1 for x in allv if x.get("type") == "motion") > 8: errs.append("more than 8 motion cards in the episode (text overload)")
     if sum(1 for x in allv if x.get("overlay")) > 4: errs.append("more than 4 overlay texts in the episode")

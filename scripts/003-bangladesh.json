@@ -12,8 +12,23 @@
       "act": "cold_open",
       "label": "The printer that went quiet",
       "mood": "tense",
-      "narration": "[quietly] It's Friday morning, February 5, 2016. Dhaka, Bangladesh. A senior officer named Zubair Bin Huda walks over to a printer. This printer sits inside the country's central bank. Every morning, it prints a paper record of the bank's money transfers abroad. But today, the tray is empty. [short pause] He tries to print the records by hand. Nothing works. He doesn't worry much. It has acted up before. [ominously] But this time, nearly one billion dollars is already on the move.",
+      "narration": "[dramatically] Hackers tried to steal almost a billion dollars, and a printer hid it. [short pause] [quietly] Friday morning, February 5, 2016. Dhaka, Bangladesh. A senior officer named Zubair Bin Huda walks over to a printer. It sits inside the country's central bank. Every morning, it prints a paper record of the bank's money transfers abroad. But today, the tray is empty. He tries to print the records by hand. Nothing works. He doesn't worry much. It has acted up before. [ominously] But this time, the money is already on the move.",
       "visuals": [
+        {
+          "type": "stock",
+          "query": "hacker hands keyboard dark",
+          "at": "Hackers tried to steal"
+        },
+        {
+          "type": "stock",
+          "query": "stacks of hundred dollar bills",
+          "at": "almost a billion dollars"
+        },
+        {
+          "type": "stock",
+          "query": "office printer close dark",
+          "at": "a printer hid it"
+        },
         {
           "type": "stock",
           "query": "dhaka city morning",
@@ -26,29 +41,14 @@
           "at": "walks over to a printer"
         },
         {
-          "type": "stock",
-          "query": "office printer close",
-          "at": "This printer sits inside"
-        },
-        {
           "type": "archival",
           "query": "Bangladesh Bank headquarters Motijheel Dhaka",
           "at": "the country's central bank"
         },
         {
           "type": "stock",
-          "query": "paper printing documents",
-          "at": "prints a paper record"
-        },
-        {
-          "type": "stock",
           "query": "empty paper tray",
           "at": "the tray is empty"
-        },
-        {
-          "type": "stock",
-          "query": "man typing computer",
-          "at": "print the records by hand"
         },
         {
           "type": "stock",
@@ -63,7 +63,7 @@
         {
           "type": "stock",
           "query": "money transfer screen",
-          "at": "nearly one billion dollars"
+          "at": "the money is already"
         }
       ]
     },

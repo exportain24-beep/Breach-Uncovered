@@ -110,11 +110,9 @@ def make(meta, out):
     glitch_text(img, (56, y), l1, f1, (255, 255, 255)); y += int(f1.size * 1.02)
     glitch_text(img, (56, y), l2, f2, BRAND_YELLOW)
     d = ImageDraw.Draw(img, "RGBA")
-    # top-left case tag + year badge
-    tag = f"CASE #{meta['episode']:03d}"
-    ft = font("Inter-Bold.otf", 34); tw = ft.getlength(tag)
-    d.rectangle((56, 44, 56 + tw + 40, 96), fill=accent + (255,)); d.text((76, 70), tag, font=ft, fill=(0, 0, 0), anchor="lm")
-    fy = font("InterDisplay-Black.otf", 52); d.text((56 + tw + 70, 70), str(meta["year"]), font=fy, fill=(255, 255, 255), anchor="lm", stroke_width=4, stroke_fill=(0, 0, 0))
+    # top-left year badge (no case numbers)
+    fy = font("InterDisplay-Black.otf", 60); yt = str(meta["year"]); yw = fy.getlength(yt)
+    d.rectangle((56, 40, 56 + yw + 44, 112), fill=accent + (255,)); d.text((78, 77), yt, font=fy, fill=(0, 0, 0), anchor="lm")
     # top-right brand mark; bottom-left tag; bottom-right stays EMPTY (YouTube timestamp overlay)
     fb = font("Inter-Bold.otf", 28)
     lg = Image.open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "brand", "logo_wordmark.png")).convert("RGBA")

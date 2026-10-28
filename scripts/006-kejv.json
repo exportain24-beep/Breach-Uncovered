@@ -12,8 +12,23 @@
       "act": "cold_open",
       "label": "Coders for hire, on paper",
       "mood": "curious",
-      "narration": "[curious] Picture a small team of programmers for hire. They work in an office in China. They write code for paying clients. They answer email, and they get the job done. [short pause] On paper, their company was a normal software business. It was called Chosun Expo. [serious] But in 2018, the United States government said it was something else. [slowly] It said Chosun Expo was a cover for North Korea's hackers.",
+      "narration": "[dramatically] The hackers who hit Sony and robbed a bank were exposed by Gmail. [short pause] Not by some genius trick. By ordinary email accounts, the FBI says. [curious] To see how, picture a small team of programmers for hire. They work in an office in China. They write code for paying clients, and they answer email. [short pause] On paper, their company was a normal software business. It was called Chosun Expo. [serious] But in 2018, the United States government said it was something else. [slowly] It said Chosun Expo was a cover for North Korea's hackers.",
       "visuals": [
+        {
+          "type": "stock",
+          "query": "movie studio backlot",
+          "at": "hackers who hit Sony"
+        },
+        {
+          "type": "stock",
+          "query": "bank vault door",
+          "at": "robbed a bank"
+        },
+        {
+          "type": "stock",
+          "query": "laptop email login",
+          "at": "exposed by Gmail"
+        },
         {
           "type": "stock",
           "query": "programmers office team",
@@ -31,13 +46,8 @@
         },
         {
           "type": "stock",
-          "query": "business handshake meeting",
-          "at": "paying clients"
-        },
-        {
-          "type": "stock",
           "query": "typing email laptop",
-          "at": "They answer email"
+          "at": "they answer email"
         },
         {
           "type": "stock",
@@ -45,19 +55,9 @@
           "at": "On paper"
         },
         {
-          "type": "stock",
-          "query": "software developer working",
-          "at": "a normal software business"
-        },
-        {
           "type": "archival",
           "query": "United States Capitol building",
           "at": "the United States government"
-        },
-        {
-          "type": "stock",
-          "query": "dark computer screen glow",
-          "at": "something else"
         },
         {
           "type": "archival",

@@ -33,19 +33,22 @@ def _pix_get(path, params):
 def pixabay_video(q, used):
     hits = _pix_get("videos/", {"q": q, "order": "popular"}) or []
     for h in hits:
-        if h["id"] in used or h.get("duration", 0) < 5: continue
-        vs = h["videos"]; v = vs.get("large") if vs.get("large", {}).get("url") else vs.get("medium")
+        key = f"pxv{h['id']}"
+        if key in used or h.get("duration", 0) < 5: continue
+        vs = h["videos"]; lg = vs.get("large") or {}
+        v = lg if (lg.get("url") and 0 < lg.get("size", 0) <= 45_000_000) else (vs.get("medium") if vs.get("medium", {}).get("url") else lg)
         if not v or not v.get("url"): continue
         p = _download(v["url"], os.path.join(CACHE, f"pxv_{h['id']}.mp4"))
-        return {"path": p, "kind": "video", "credit": f"Video by {h.get('user', 'Pixabay contributor')} via Pixabay", "id": h["id"]}
+        return {"path": p, "kind": "video", "credit": f"Video by {h.get('user', 'Pixabay contributor')} via Pixabay", "id": key}
     return None
 
 def pixabay_image(q, used):
     hits = _pix_get("", {"q": q, "image_type": "photo", "orientation": "horizontal", "min_width": 1280, "order": "popular"}) or []
     for h in hits:
-        if h["id"] in used: continue
+        key = f"pxi{h['id']}"
+        if key in used: continue
         p = _download(h["largeImageURL"], os.path.join(CACHE, f"pxi_{h['id']}.jpg"))
-        return {"path": p, "kind": "image", "credit": f"Photo by {h.get('user', 'Pixabay contributor')} via Pixabay", "id": h["id"]}
+        return {"path": p, "kind": "image", "credit": f"Photo by {h.get('user', 'Pixabay contributor')} via Pixabay", "id": key}
     return None
 
 def commons_image(q, used):
@@ -59,14 +62,29 @@ def commons_image(q, used):
         lic = _strip(md.get("LicenseShortName", {}).get("value", ""))
         if ii.get("mime") not in ("image/jpeg", "image/png") or ii.get("width", 0) < 900: continue
         if not lic or BAD_LICENSE.search(lic) or not OK_LICENSE.search(lic): continue
-        if pg["pageid"] in used: continue
+        if f"wc{pg['pageid']}" in used: continue
         url = ii.get("thumburl") or ii["url"]
         p = _download(url, os.path.join(CACHE, f"wc_{pg['pageid']}.jpg"))
         who = _strip(md.get("Artist", {}).get("value", "")) or "Wikimedia Commons contributor"
-        return {"path": p, "kind": "image", "credit": f"{pg['title'].replace('File:', '')} — {who[:60]} / {lic} / Wikimedia Commons", "id": pg["pageid"], "license": lic}
+        return {"path": p, "kind": "image", "credit": f"{pg['title'].replace('File:', '')} — {who[:60]} / {lic} / Wikimedia Commons", "id": f"wc{pg['pageid']}", "license": lic}
     return None
 
-def fetch(v, used):
+FALLBACK_Q = {"calm": ["city skyline morning", "people walking street", "office window sunlight"], "curious": ["magnifying glass documents", "typing laptop closeup", "city night lights"],
+              "tense": ["dark corridor", "red warning light", "server room dark"], "shock": ["glitch screen", "red alert screen", "lightning storm"],
+              "reveal": ["spotlight dark room", "documents desk lamp", "courtroom"], "sad": ["rain window", "empty office", "lonely street night"],
+              "hopeful": ["sunrise city", "people working together", "green light"]}
+USED_FILE = os.environ.get("USED_MEDIA_FILE", "data/used_media.json")
+
+def load_used():
+    try: return set(json.load(open(USED_FILE)))
+    except Exception: return set()
+
+def save_used(ids):
+    try:
+        os.makedirs(os.path.dirname(USED_FILE) or ".", exist_ok=True); json.dump(sorted(ids)[-4000:], open(USED_FILE, "w"))
+    except Exception as e: print("could not save used media:", e)
+
+def fetch(v, used, mood="curious"):
     q = (v.get("query") or "").strip()
     if not q: return None
     order = [commons_image, pixabay_image, pixabay_video] if v["type"] == "archival" else [pixabay_video, pixabay_image, commons_image]
@@ -83,15 +101,20 @@ def fetch(v, used):
                 a = fn(short, used)
                 if a: used.add(a["id"]); return a
             except Exception as e: print("media error", fn.__name__, short, e)
+    for q2 in FALLBACK_Q.get(mood, FALLBACK_Q["curious"]):            # last resort: a generic shot that fits the mood
+        try:
+            a = pixabay_video(q2, used)
+            if a: used.add(a["id"]); return a
+        except Exception as e: print("media error fallback", q2, e)
     return None
 
 def fetch_all(script, workdir):
-    assets, used, credits = {}, set(), []
+    assets, used, credits = {}, load_used(), []
     for s in script["scenes"]:
         for vi, v in enumerate(s.get("visuals", [])):
             if v["type"] in ("stock", "archival"):
-                a = fetch(v, used)
+                a = fetch(v, used, s.get("mood", "curious"))
                 if a: assets[f"{s['id']}:{vi}"] = {k: a[k] for k in ("path", "kind", "credit")}; credits.append(a["credit"])
                 else: print(f"no asset for scene {s['id']} visual {vi}: {v.get('query')}")
-    json.dump(assets, open(os.path.join(workdir, "assets.json"), "w"), indent=1)
+    json.dump(assets, open(os.path.join(workdir, "assets.json"), "w"), indent=1); save_used(used)
     return assets, sorted(set(credits))

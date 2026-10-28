@@ -12,13 +12,23 @@
       "act": "cold_open",
       "label": "The day the screens turned red",
       "mood": "shock",
-      "narration": "[serious] Friday, May 12, 2017. In hospitals across England, computer screens suddenly go red. Patient files won't open. A message demands money. Soon, the same thing is happening all over the world. And the person who slows it down isn't a cop or a spy. [softly] He's a 22-year-old in a little beach town, with $10.69 and a lot of curiosity. But to see how this started, we have to go back two months.",
+      "narration": "[dramatically] A 22-year-old stopped a global cyberattack with a $10.69 web address. [serious] It starts on Friday, May 12, 2017. In hospitals across England, computer screens suddenly go red. Patient files won't open. A message demands money. Soon, the same thing is happening all over the world. And the hero of this story isn't a cop or a spy. [softly] He's a surfer in a little beach town, with a lot of curiosity. But to see how this started, we have to go back two months.",
       "visuals": [
+        {
+          "type": "stock",
+          "query": "young man laptop night",
+          "at": "A 22-year-old"
+        },
+        {
+          "type": "stock",
+          "query": "world map lights",
+          "at": "a global cyberattack"
+        },
         {
           "type": "motion",
           "kind": "title",
-          "text": "May 12, 2017",
-          "at": "Friday, May 12"
+          "text": "$10.69",
+          "at": "$10.69 web address"
         },
         {
           "type": "stock",
@@ -42,11 +52,6 @@
         },
         {
           "type": "stock",
-          "query": "world map lights",
-          "at": "all over the world"
-        },
-        {
-          "type": "stock",
           "query": "police officer walking",
           "at": "isn't a cop or a spy"
         },
@@ -54,11 +59,6 @@
           "type": "archival",
           "query": "Ilfracombe harbour",
           "at": "a little beach town"
-        },
-        {
-          "type": "stock",
-          "query": "young man laptop night",
-          "at": "a lot of curiosity"
         },
         {
           "type": "stock",
