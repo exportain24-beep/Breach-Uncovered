@@ -12,58 +12,74 @@
       "act": "cold_open",
       "label": "The printer that went quiet",
       "mood": "tense",
-      "narration": "[dramatically] Hackers tried to steal almost a billion dollars, and a printer hid it. [short pause] [quietly] Friday morning, February 5, 2016. Dhaka, Bangladesh. A senior officer named Zubair Bin Huda walks over to a printer. It sits inside the country's central bank. Every morning, it prints a paper record of the bank's money transfers abroad. But today, the tray is empty. He tries to print the records by hand. Nothing works. He doesn't worry much. It has acted up before. [ominously] But this time, the money is already on the move.",
+      "narration": "[dramatically] Hackers tried to steal almost a billion dollars, and a printer hid it. [short pause] [quietly] It was Friday morning, February 5, 2016, in Dhaka, Bangladesh. Zubair Bin Huda, a senior officer at the central bank, walked over to the printer. It prints a paper record of every money transfer. Today, the tray was empty. Nothing he tried would work. He wasn't worried. It had acted up before. [ominously] But the money was already on the move.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "hacker hands keyboard dark",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Nearly $1 billion targeted",
           "at": "Hackers tried to steal"
         },
         {
-          "type": "stock",
-          "query": "stacks of hundred dollar bills",
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 951,
+            "prefix": "$",
+            "suffix": "M",
+            "label": "requested by hackers"
+          },
           "at": "almost a billion dollars"
         },
         {
           "type": "stock",
-          "query": "office printer close dark",
+          "query": "office printer dark",
           "at": "a printer hid it"
         },
         {
-          "type": "stock",
-          "query": "dhaka city morning",
-          "at": "Dhaka, Bangladesh",
-          "overlay": "Dhaka, February 2016"
-        },
-        {
-          "type": "stock",
-          "query": "office corridor walking",
-          "at": "walks over to a printer"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Feb 4",
+              "Orders sent"
+            ],
+            [
+              "Feb 5",
+              "Printer fails"
+            ]
+          ],
+          "at": "Friday morning, February 5, 2016"
         },
         {
           "type": "archival",
           "query": "Bangladesh Bank headquarters Motijheel Dhaka",
-          "at": "the country's central bank"
+          "at": "in Dhaka, Bangladesh"
         },
         {
-          "type": "stock",
-          "query": "empty paper tray",
-          "at": "the tray is empty"
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Print tray: empty",
+          "label": "Feb 5, 2016",
+          "at": "the tray was empty"
         },
         {
-          "type": "stock",
-          "query": "error message screen",
-          "at": "Nothing works"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "print records;error;retry;error",
+          "at": "Nothing he tried would work"
         },
         {
-          "type": "stock",
-          "query": "man shrugging office",
-          "at": "He doesn't worry much"
-        },
-        {
-          "type": "stock",
-          "query": "money transfer screen",
-          "at": "the money is already"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Bangladesh Bank",
+              "New York Fed"
+            ],
+            "amount": "$951M"
+          },
+          "at": "the money was already on the move"
         }
       ]
     },
@@ -72,17 +88,13 @@
       "act": "stakes",
       "label": "A bank for a whole country",
       "mood": "calm",
-      "narration": "[calmly] So what is Bangladesh Bank? It isn't a normal bank. It's the central bank of Bangladesh. Think of it as the country's version of the Federal Reserve. It keeps a big part of the nation's savings in US dollars. Much of that money sits in one account. That account is in New York, at the Federal Reserve Bank. The country uses this money to pay for things it buys from other countries. [serious] So whoever came for it wasn't just robbing a bank. They were robbing a nation.",
+      "narration": "[calmly] Bangladesh Bank is the country's central bank. Think of it as Bangladesh's version of the Federal Reserve. It keeps much of the nation's savings in US dollars. A big part sits in one account in New York, at the Federal Reserve Bank. [serious] So whoever came for this money wasn't robbing a bank. They were robbing a whole country.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "busy dhaka street",
-          "at": "So what is Bangladesh Bank"
-        },
-        {
-          "type": "archival",
-          "query": "Bangladesh Bank building",
-          "at": "It isn't a normal bank"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "A nation's central bank",
+          "at": "Bangladesh Bank is the country's central bank"
         },
         {
           "type": "archival",
@@ -90,34 +102,51 @@
           "at": "version of the Federal Reserve"
         },
         {
-          "type": "stock",
-          "query": "us dollar bills",
-          "at": "savings in US dollars"
+          "type": "gfx",
+          "kind": "lock",
+          "text": "National savings",
+          "data": {
+            "state": "locked"
+          },
+          "at": "nation's savings in US dollars"
         },
         {
-          "type": "stock",
-          "query": "bank vault door",
-          "at": "sits in one account"
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "Dhaka",
+              23.8,
+              90.4
+            ],
+            [
+              "New York",
+              40.7,
+              -74.0
+            ]
+          ],
+          "at": "one account in New York"
         },
         {
           "type": "archival",
           "query": "Federal Reserve Bank of New York building",
-          "at": "in New York"
+          "at": "at the Federal Reserve Bank"
         },
         {
-          "type": "stock",
-          "query": "cargo ship port",
-          "at": "things it buys from other countries"
-        },
-        {
-          "type": "stock",
-          "query": "shipping containers crane",
-          "at": "from other countries"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Hackers",
+              "Bangladesh Bank"
+            ]
+          },
+          "at": "wasn't robbing a bank"
         },
         {
           "type": "stock",
           "query": "crowd city people",
-          "at": "robbing a nation"
+          "at": "robbing a whole country"
         }
       ]
     },
@@ -126,43 +155,53 @@
       "act": "quiet_part",
       "label": "A job application",
       "mood": "curious",
-      "narration": "[curious] To see how it happened, we have to go back a full year. It's January 2015. A few people at Bangladesh Bank get an email. It's from a job seeker named Rasel Ahlam. He's polite. He says his resume is attached. But Rasel Ahlam wasn't real. The email was a trap. Opening the file could quietly let strangers into the computer. Investigators say at least one person opened it. [whispers] And that one click opened the door.",
+      "narration": "[curious] To see how it began, go back one year. It's January 2015. Some staff at Bangladesh Bank get an email from a job seeker named Rasel Ahlam. He's polite. He says his resume is attached. [short pause] But Rasel Ahlam wasn't real. The email was a trap. Investigators say at least one person opened the file. [whispers] That one click let strangers in.",
       "visuals": [
         {
           "type": "stock",
           "query": "calendar pages turning",
-          "at": "go back a full year"
+          "at": "go back one year"
         },
         {
-          "type": "motion",
-          "kind": "title",
-          "text": "January 2015",
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Jan 2015",
+              "Fake job email"
+            ],
+            [
+              "May 2015",
+              "Accounts opened"
+            ],
+            [
+              "Feb 2016",
+              "Heist"
+            ]
+          ],
           "at": "It's January 2015"
         },
         {
-          "type": "stock",
-          "query": "office workers desks",
-          "at": "A few people at Bangladesh Bank"
+          "type": "gfx",
+          "kind": "email",
+          "data": {
+            "from": "jobs@example-careers.com",
+            "subject": "Job application",
+            "line": "My resume is attached"
+          },
+          "at": "get an email from a job seeker"
         },
         {
-          "type": "stock",
-          "query": "email inbox laptop",
-          "at": "get an email"
-        },
-        {
-          "type": "stock",
-          "query": "job interview resume",
-          "at": "from a job seeker"
-        },
-        {
-          "type": "stock",
-          "query": "reading email smiling",
-          "at": "He's polite"
-        },
-        {
-          "type": "stock",
-          "query": "file attachment download",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Resume.pdf attached",
           "at": "his resume is attached"
+        },
+        {
+          "type": "gfx",
+          "kind": "redact",
+          "text": "NOT REAL",
+          "at": "Rasel Ahlam wasn't real"
         },
         {
           "type": "stock",
@@ -170,14 +209,18 @@
           "at": "The email was a trap"
         },
         {
-          "type": "stock",
-          "query": "mouse click closeup",
-          "at": "at least one person opened it"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "open attachment;connecting;connected",
+          "at": "at least one person opened the file"
         },
         {
-          "type": "stock",
-          "query": "door opening dark",
-          "at": "that one click opened the door"
+          "type": "gfx",
+          "kind": "lock",
+          "data": {
+            "state": "open"
+          },
+          "at": "let strangers in"
         }
       ]
     },
@@ -186,7 +229,7 @@
       "act": "quiet_part",
       "label": "The thieves who waited",
       "mood": "tense",
-      "narration": "[slowly] Then the hackers did something strange for thieves. They waited. For months, they crept quietly through the bank's computers. They were looking for one thing. It's called SWIFT. SWIFT is like a super-safe email system for banks. Banks use it to tell each other where to send money. A message from a central bank carries a lot of trust. So if you could send those messages yourself… [whispers] you wouldn't need to break into a vault. You could just ask.",
+      "narration": "[slowly] Then the hackers did something odd for thieves. They waited. For months, they crept through the bank's computers. They were looking for one thing, called SWIFT. SWIFT is a super-safe messaging system that banks use to tell each other where to send money. A message from a central bank gets a lot of trust. [whispers] So they didn't need to break into a vault. They could just ask.",
       "visuals": [
         {
           "type": "stock",
@@ -194,50 +237,56 @@
           "at": "They waited"
         },
         {
-          "type": "stock",
-          "query": "server room dark",
-          "at": "crept quietly through the bank's computers"
+          "type": "gfx",
+          "kind": "network",
+          "text": "Hackers inside",
+          "at": "crept through the bank's computers"
         },
         {
-          "type": "stock",
-          "query": "network cables blinking",
-          "at": "looking for one thing"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "headline",
-          "text": "SWIFT: how banks message each other",
-          "at": "It's called SWIFT"
+          "text": "SWIFT: how banks message",
+          "at": "called SWIFT"
         },
         {
-          "type": "stock",
-          "query": "sending email animation",
-          "at": "super-safe email system"
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Super-safe messaging",
+          "data": {
+            "state": "locked"
+          },
+          "at": "super-safe messaging system"
         },
         {
-          "type": "stock",
-          "query": "bank building exterior",
-          "at": "Banks use it"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Bank A",
+              "SWIFT",
+              "Bank B"
+            ]
+          },
+          "at": "tell each other where to send money"
         },
         {
           "type": "stock",
           "query": "handshake business",
-          "at": "carries a lot of trust"
+          "at": "gets a lot of trust"
         },
         {
-          "type": "stock",
-          "query": "hands keyboard night",
-          "at": "send those messages yourself"
-        },
-        {
-          "type": "stock",
-          "query": "vault lock spinning",
+          "type": "gfx",
+          "kind": "lock",
+          "data": {
+            "state": "crack"
+          },
           "at": "break into a vault"
         },
         {
-          "type": "stock",
-          "query": "hand holding cash",
-          "at": "You could just ask"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "compose message;send payment order",
+          "at": "They could just ask"
         }
       ]
     },
@@ -246,12 +295,24 @@
       "act": "quiet_part",
       "label": "Four quiet accounts in Manila",
       "mood": "curious",
-      "narration": "[cautiously] Meanwhile, someone was getting the escape route ready. This was in Manila, the capital of the Philippines. In May 2015, four bank accounts were opened there. They were at a bank called RCBC, at its branch on Jupiter Street. News reports say they were opened with fake driver's licenses. Each account got just $500. Then nothing happened. For nine months, the accounts just sat there. Empty. Quiet. Waiting.",
+      "narration": "[cautiously] Meanwhile, someone was building an escape route in Manila, the capital of the Philippines. In May 2015, four bank accounts were opened at a bank called RCBC, at its Jupiter Street branch. News reports say they used fake driver's licenses. Each account got just $500. Then nothing happened for nine months. [quietly] The accounts sat there. Empty. Quiet. Waiting.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "getaway car road",
-          "at": "getting the escape route ready"
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "New York",
+              40.7,
+              -74.0
+            ],
+            [
+              "Manila",
+              14.6,
+              121.0
+            ]
+          ],
+          "at": "escape route in Manila"
         },
         {
           "type": "archival",
@@ -260,44 +321,45 @@
           "overlay": "Manila, May 2015"
         },
         {
-          "type": "stock",
-          "query": "bank teller counter",
-          "at": "four bank accounts were opened"
-        },
-        {
           "type": "archival",
           "query": "Rizal Commercial Banking Corporation RCBC Plaza Makati",
           "at": "a bank called RCBC"
         },
         {
-          "type": "stock",
-          "query": "street sign city",
-          "at": "its branch on Jupiter Street"
-        },
-        {
-          "type": "stock",
-          "query": "id card closeup",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Driver's license: fake",
           "at": "fake driver's licenses"
         },
         {
-          "type": "stock",
-          "query": "few dollar bills",
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 500,
+            "prefix": "$",
+            "label": "in each account"
+          },
           "at": "Each account got just"
         },
         {
-          "type": "stock",
-          "query": "dusty empty desk",
-          "at": "Then nothing happened"
-        },
-        {
-          "type": "stock",
-          "query": "calendar months passing",
-          "at": "For nine months"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "May 2015",
+              "Accounts opened"
+            ],
+            [
+              "Feb 2016",
+              "Money arrives"
+            ]
+          ],
+          "at": "nothing happened for nine months"
         },
         {
           "type": "stock",
           "query": "empty bank lobby",
-          "at": "Empty. Quiet. Waiting"
+          "at": "Quiet. Waiting"
         }
       ]
     },
@@ -306,7 +368,7 @@
       "act": "escalation",
       "label": "The perfect weekend",
       "mood": "tense",
-      "narration": "[serious] Next, the hackers picked their moment. And they picked it well. In Bangladesh, the weekend is Friday and Saturday. In New York, it's Saturday and Sunday. And that Monday, February 8, was Lunar New Year. That's a holiday in the Philippines. Put it all together. For several days, the three places would never be at work at the same time. So if something went wrong, who would answer the phone?",
+      "narration": "[serious] Next, the hackers picked their moment. In Bangladesh, the weekend is Friday and Saturday. In New York, it's Saturday and Sunday. And Monday, February 8, was Lunar New Year, a holiday in the Philippines. Put it together. For days, the three places would never be at work at the same time. [short pause] If something went wrong, who would answer the phone?",
       "visuals": [
         {
           "type": "stock",
@@ -314,14 +376,29 @@
           "at": "picked their moment"
         },
         {
-          "type": "stock",
-          "query": "dhaka rickshaw street",
-          "at": "In Bangladesh, the weekend"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Dhaka off: Friday, Saturday",
+          "at": "the weekend is Friday and Saturday"
         },
         {
-          "type": "stock",
-          "query": "new york weekend street",
-          "at": "In New York, it's Saturday"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Fri-Sat",
+              "Dhaka off"
+            ],
+            [
+              "Sat-Sun",
+              "New York off"
+            ],
+            [
+              "Mon",
+              "Manila holiday"
+            ]
+          ],
+          "at": "it's Saturday and Sunday"
         },
         {
           "type": "stock",
@@ -329,31 +406,31 @@
           "at": "was Lunar New Year"
         },
         {
-          "type": "stock",
-          "query": "fireworks night city",
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "Dhaka",
+              23.8,
+              90.4
+            ],
+            [
+              "Manila",
+              14.6,
+              121.0
+            ],
+            [
+              "New York",
+              40.7,
+              -74.0
+            ]
+          ],
           "at": "a holiday in the Philippines"
         },
         {
-          "type": "motion",
-          "kind": "timeline",
-          "text": "Fri to Mon: nobody at work",
-          "at": "Put it all together",
-          "data": {
-            "events": [
-              "Fri-Sat: Dhaka off",
-              "Sat-Sun: New York off",
-              "Mon: Manila holiday"
-            ]
-          }
-        },
-        {
-          "type": "stock",
-          "query": "world clocks wall",
-          "at": "the three places"
-        },
-        {
-          "type": "stock",
-          "query": "empty office chairs",
+          "type": "gfx",
+          "kind": "rack",
+          "text": "Offices dark",
           "at": "never be at work"
         },
         {
@@ -368,57 +445,66 @@
       "act": "escalation",
       "label": "Nearly a billion dollars",
       "mood": "shock",
-      "narration": "[dramatically] Thursday night, February 4, Dhaka time. The bank had closed for the weekend. That's when the hackers struck. Using the bank's own SWIFT system, they sent 35 payment orders to New York. Together, the orders asked for about $951 million. That's almost all the money in the account. To the Fed, the messages looked real. And back in Dhaka, the hackers had secretly changed the software that ran that printer. [whispers] So nobody would see a thing.",
+      "narration": "[dramatically] Thursday night, February 4, Dhaka time. The bank had closed for the weekend. That's when the hackers struck. Using the bank's own SWIFT system, they sent 35 payment orders to New York. Together, they asked for about $951 million. To the Fed, the orders looked real. And in Dhaka, the hackers had tampered with the printer's software. [whispers] So nobody would see a thing.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "city night skyline",
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Feb 4",
+              "35 orders sent"
+            ],
+            [
+              "Feb 5",
+              "Printer fails"
+            ],
+            [
+              "Feb 6",
+              "Records printed"
+            ]
+          ],
           "at": "Thursday night, February 4"
         },
         {
           "type": "stock",
-          "query": "office lights off",
-          "at": "closed for the weekend"
+          "query": "city night skyline",
+          "at": "had closed for the weekend"
         },
         {
-          "type": "stock",
-          "query": "red alert screen",
+          "type": "gfx",
+          "kind": "network",
+          "text": "Fake orders spreading",
           "at": "the hackers struck"
         },
         {
-          "type": "stock",
-          "query": "computer code screen",
-          "at": "the bank's own SWIFT system"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "open SWIFT;send 35 orders;confirm",
+          "at": "bank's own SWIFT system"
         },
         {
-          "type": "stock",
-          "query": "message sending fast",
-          "at": "sent 35 payment orders"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "counter",
-          "text": "Asked for",
-          "at": "about $951 million",
           "data": {
-            "value": 951000000,
-            "prefix": "$"
-          }
+            "value": 951,
+            "prefix": "$",
+            "suffix": "M",
+            "label": "requested"
+          },
+          "at": "about $951 million"
         },
         {
-          "type": "stock",
-          "query": "money counting machine",
-          "at": "almost all the money"
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Orders fully authenticated",
+          "at": "the orders looked real"
         },
         {
-          "type": "stock",
-          "query": "approved stamp paper",
-          "at": "the messages looked real"
-        },
-        {
-          "type": "stock",
-          "query": "printer paper jam",
-          "at": "the software that ran that printer"
+          "type": "gfx",
+          "kind": "redact",
+          "text": "TAMPERED",
+          "at": "tampered with the printer's software"
         },
         {
           "type": "stock",
@@ -432,47 +518,47 @@
       "act": "escalation",
       "label": "Saved by a street name",
       "mood": "curious",
-      "narration": "[curious] Then something strange happened. The New York Fed's system flagged many of the orders. Why? According to Reuters, part of the reason was one word. Jupiter. Remember the branch on Jupiter Street? Jupiter was also the name of a ship and a shipping company on a US blacklist. The two had nothing to do with each other. It was pure luck. But that one word slowed everything down. Most of the orders were never paid.",
+      "narration": "[curious] Then luck stepped in. The New York Fed flagged many of the orders. According to Reuters, one reason was a single word. Jupiter. Remember the branch on Jupiter Street? Jupiter was also the name of a ship company on a US blacklist. The two had nothing to do with each other. But that one word slowed everything down. Most of the orders were never paid.",
       "visuals": [
         {
           "type": "archival",
           "query": "Federal Reserve Bank of New York Liberty Street",
-          "at": "The New York Fed's system"
+          "at": "New York Fed flagged"
         },
         {
-          "type": "stock",
-          "query": "warning sign flashing",
-          "at": "flagged many of the orders"
-        },
-        {
-          "type": "stock",
-          "query": "newspaper printing press",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "One word raised the alarm",
           "at": "According to Reuters"
         },
         {
-          "type": "stock",
-          "query": "magnifying glass word",
-          "at": "one word. Jupiter"
-        },
-        {
-          "type": "stock",
-          "query": "manila street night",
-          "at": "the branch on Jupiter Street"
+          "type": "gfx",
+          "kind": "doc",
+          "text": "JUPITER",
+          "at": "a single word"
         },
         {
           "type": "stock",
           "query": "oil tanker sea",
-          "at": "the name of a ship"
+          "at": "Jupiter was also the name"
         },
         {
-          "type": "stock",
-          "query": "list document closeup",
-          "at": "on a US blacklist"
+          "type": "gfx",
+          "kind": "redact",
+          "text": "BLACKLIST",
+          "at": "ship company on a US blacklist"
         },
         {
-          "type": "stock",
-          "query": "dice rolling table",
-          "at": "It was pure luck"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Manila branch",
+              "Sanctioned ship firm"
+            ],
+            "blocked": true
+          },
+          "at": "nothing to do with each other"
         },
         {
           "type": "stock",
@@ -480,8 +566,21 @@
           "at": "slowed everything down"
         },
         {
-          "type": "stock",
-          "query": "stop hand gesture",
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Orders sent",
+                35
+              ],
+              [
+                "Paid",
+                5
+              ]
+            ],
+            "unit": ""
+          },
           "at": "never paid"
         }
       ]
@@ -491,32 +590,35 @@
       "act": "escalation",
       "label": "One typo, $20 million",
       "mood": "tense",
-      "narration": "[serious] Most. But not all. Five orders got through. One of them sent $20 million to Sri Lanka. It was meant for a group called the Shalika Foundation. But the hackers spelled it wrong. They typed Fandation. [short pause] A bank in the middle, Deutsche Bank, spotted the typo and asked questions. That money was stopped. [exhales] The other four payments went to Manila. That's $81 million, landing in those quiet accounts on Jupiter Street.",
+      "narration": "[serious] Five orders did get through. One sent $20 million to Sri Lanka, meant for the Shalika Foundation. But the hackers spelled it wrong. They typed Fandation. [short pause] Deutsche Bank, a bank in the middle, spotted the typo and asked questions. That money was stopped. [exhales] The other four payments went to Manila. That was $81 million, landing in the quiet accounts on Jupiter Street.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "gate opening slowly",
-          "at": "Five orders got through"
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "New York",
+              40.7,
+              -74.0
+            ],
+            [
+              "Colombo",
+              6.9,
+              79.9
+            ]
+          ],
+          "at": "million to Sri Lanka"
         },
         {
-          "type": "stock",
-          "query": "colombo sri lanka city",
-          "at": "to Sri Lanka"
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Shalika Foundation",
+          "at": "meant for the Shalika Foundation"
         },
         {
-          "type": "stock",
-          "query": "charity donation box",
-          "at": "a group called the Shalika Foundation"
-        },
-        {
-          "type": "stock",
-          "query": "spelling mistake paper",
-          "at": "spelled it wrong"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "redact",
-          "text": "Shalika Fandation",
+          "text": "Fandation",
           "at": "They typed Fandation"
         },
         {
@@ -525,24 +627,45 @@
           "at": "Deutsche Bank"
         },
         {
-          "type": "stock",
-          "query": "woman reading screen",
-          "at": "spotted the typo"
-        },
-        {
-          "type": "stock",
-          "query": "red stop button",
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "New York Fed",
+              "Sri Lanka"
+            ],
+            "amount": "$20M",
+            "blocked": true
+          },
           "at": "That money was stopped"
         },
         {
-          "type": "stock",
-          "query": "airplane night flight",
-          "at": "went to Manila"
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "New York",
+              40.7,
+              -74.0
+            ],
+            [
+              "Manila",
+              14.6,
+              121.0
+            ]
+          ],
+          "at": "The other four payments"
         },
         {
-          "type": "stock",
-          "query": "money falling slow",
-          "at": "landing in those quiet accounts"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 81,
+            "prefix": "$",
+            "suffix": "M",
+            "label": "reached Manila"
+          },
+          "at": "That was $81 million"
         }
       ]
     },
@@ -551,12 +674,32 @@
       "act": "scramble",
       "label": "Nobody picks up",
       "mood": "tense",
-      "narration": "[nervous] Back in Dhaka, staff fought with the printer for more than a day. On Saturday, February 6, they finally printed the records by hand. And then they saw it. The New York Fed had been asking about dozens of payment orders. Orders the bank never meant to send. [urgently] The bank sent a message. Our system has been hacked. Please stop all payment instructions immediately. They emailed. They called. They faxed. But it was the weekend in New York. And nobody answered.",
+      "narration": "[nervous] Back in Dhaka, staff fought with the printer for more than a day. On Saturday, February 6, they finally printed the records by hand. Then they saw it. The New York Fed had been asking about dozens of payment orders. [urgently] They emailed. They called. They faxed. Their message said, Our system has been hacked. Please stop all payment instructions immediately. But it was the weekend in New York. Nobody answered.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "technician fixing printer",
+          "type": "gfx",
+          "kind": "rack",
+          "text": "Records unreadable",
           "at": "fought with the printer"
+        },
+        {
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Feb 5",
+              "Printer fails"
+            ],
+            [
+              "Feb 6",
+              "Records printed"
+            ],
+            [
+              "Feb 8",
+              "Freeze request"
+            ]
+          ],
+          "at": "On Saturday, February 6"
         },
         {
           "type": "stock",
@@ -564,30 +707,20 @@
           "at": "printed the records by hand"
         },
         {
-          "type": "stock",
-          "query": "shocked man office",
-          "at": "then they saw it"
-        },
-        {
-          "type": "stock",
-          "query": "stack of papers",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Fed queries: dozens of orders",
           "at": "dozens of payment orders"
         },
         {
-          "type": "motion",
-          "kind": "quote",
-          "text": "Our system has been hacked.",
-          "at": "Our system has been hacked"
-        },
-        {
-          "type": "stock",
-          "query": "typing email fast",
+          "type": "gfx",
+          "kind": "email",
+          "data": {
+            "from": "ops@example-bank.com",
+            "subject": "Stop all payments",
+            "line": "Our system has been hacked"
+          },
           "at": "They emailed"
-        },
-        {
-          "type": "stock",
-          "query": "phone call worried",
-          "at": "They called"
         },
         {
           "type": "stock",
@@ -595,14 +728,16 @@
           "at": "They faxed"
         },
         {
-          "type": "stock",
-          "query": "wall street sunday empty",
-          "at": "the weekend in New York"
+          "type": "gfx",
+          "kind": "quote",
+          "text": "Our system has been hacked. - Bangladesh Bank",
+          "at": "Our system has been hacked"
         },
         {
-          "type": "stock",
-          "query": "phone ringing unanswered",
-          "at": "nobody answered"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "No answer from New York",
+          "at": "Nobody answered"
         }
       ]
     },
@@ -611,57 +746,69 @@
       "act": "scramble",
       "label": "A message one day late",
       "mood": "tense",
-      "narration": "[serious] Monday came. It was Lunar New Year in the Philippines. Bangladesh Bank sent an urgent message to RCBC. Stop the payments. Freeze the money. But the message didn't arrive until the next day. By then, it was too late. The money had been moved between accounts and turned into Philippine pesos. Much of it was taken out as cash. About $58 million had already left the Jupiter Street branch. [sighs] The trail was going cold.",
+      "narration": "[serious] On Monday, February 8, the bank asked RCBC to stop the payments and freeze the money. But the message didn't arrive until the next day. By then, about $58 million had already left the Jupiter Street branch. The money had moved between accounts and turned into Philippine pesos. [sighs] The trail was going cold.",
       "visuals": [
         {
           "type": "stock",
-          "query": "sunrise city monday",
-          "at": "Monday came"
-        },
-        {
-          "type": "stock",
           "query": "chinese new year dragon",
-          "at": "Lunar New Year in the Philippines"
+          "at": "On Monday, February 8"
         },
         {
-          "type": "stock",
-          "query": "urgent message phone",
-          "at": "sent an urgent message"
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Freeze request",
+          "data": {
+            "state": "locked"
+          },
+          "at": "freeze the money"
         },
         {
-          "type": "stock",
-          "query": "frozen ice closeup",
-          "at": "Freeze the money"
-        },
-        {
-          "type": "stock",
-          "query": "hourglass sand running",
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Monday",
+              "Freeze request sent"
+            ],
+            [
+              "Tuesday",
+              "Message arrives"
+            ]
+          ],
           "at": "didn't arrive until the next day"
         },
         {
-          "type": "stock",
-          "query": "bank transfer arrows",
-          "at": "moved between accounts"
-        },
-        {
-          "type": "stock",
-          "query": "philippine peso bills",
-          "at": "turned into Philippine pesos"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 58,
+            "prefix": "$",
+            "suffix": "M",
+            "label": "already withdrawn"
+          },
+          "at": "about $58 million"
         },
         {
           "type": "stock",
           "query": "cash withdrawal counter",
-          "at": "taken out as cash"
+          "at": "Jupiter Street branch"
         },
         {
-          "type": "stock",
-          "query": "person carrying bag",
-          "at": "had already left the Jupiter Street branch"
+          "type": "gfx",
+          "kind": "network",
+          "text": "Money moves between accounts",
+          "at": "moved between accounts"
+        },
+        {
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "convert USD to PHP;transfer;withdraw cash",
+          "at": "Philippine pesos"
         },
         {
           "type": "stock",
           "query": "foggy empty road",
-          "at": "The trail was going cold"
+          "at": "trail was going cold"
         }
       ]
     },
@@ -670,7 +817,7 @@
       "act": "scramble",
       "label": "Lost in the casinos",
       "mood": "curious",
-      "narration": "[curious] So where did the money go? A lot of it went to casinos. Reports say about $50 million went to accounts linked to two Manila casinos. Why casinos? Back then, the Philippines' law against money laundering didn't cover them. Money laundering means hiding where dirty money came from. Once the cash hit the gambling tables, it was almost impossible to follow. Another $31 million reportedly went to a Chinese man named Xu Weikang. Reports say he left on a private plane. He hasn't been seen since.",
+      "narration": "[curious] So where did it go? A lot of it went to casinos. Reports say about $50 million went to accounts linked to two Manila casinos. Back then, the Philippines' law against money laundering didn't cover casinos. Money laundering means hiding where dirty money came from. Once the cash hit the gambling tables, it was almost impossible to follow. Another $31 million reportedly went to a man named Xu Weikang, who left on a private plane.",
       "visuals": [
         {
           "type": "stock",
@@ -678,44 +825,68 @@
           "at": "went to casinos"
         },
         {
-          "type": "stock",
-          "query": "casino chips table",
-          "at": "two Manila casinos"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 50,
+            "prefix": "$",
+            "suffix": "M",
+            "label": "to two casinos"
+          },
+          "at": "about $50 million"
         },
         {
-          "type": "stock",
-          "query": "law books shelf",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Casinos not covered by law",
           "at": "law against money laundering"
         },
         {
-          "type": "stock",
-          "query": "washing machine spinning",
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Stolen money",
+              "Casino",
+              "Hidden trail"
+            ]
+          },
           "at": "hiding where dirty money came from"
         },
         {
           "type": "stock",
           "query": "roulette wheel spinning",
-          "at": "hit the gambling tables"
+          "at": "gambling tables"
         },
         {
-          "type": "stock",
-          "query": "footprints fading sand",
+          "type": "gfx",
+          "kind": "network",
+          "text": "The trail disappears",
           "at": "almost impossible to follow"
         },
         {
-          "type": "stock",
-          "query": "briefcase of money",
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Casinos",
+                50
+              ],
+              [
+                "Xu Weikang",
+                31
+              ]
+            ],
+            "unit": "M"
+          },
           "at": "Another $31 million"
         },
         {
-          "type": "stock",
-          "query": "private jet runway",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Reported exit: private plane",
           "at": "left on a private plane"
-        },
-        {
-          "type": "stock",
-          "query": "airplane disappearing clouds",
-          "at": "hasn't been seen since"
         }
       ]
     },
@@ -724,117 +895,122 @@
       "act": "unmasking",
       "label": "So who did it?",
       "mood": "reveal",
-      "narration": "[serious] For two years, one big question hung in the air. Who did this? Then, on September 6, 2018, the US Justice Department gave its answer. It charged a North Korean computer programmer named Park Jin Hyok. Prosecutors say he worked for a hacking team backed by North Korea's government. Security experts call that group Lazarus. He has never been arrested. Today, he's on the FBI's wanted list. And the charges have never been tested in court.",
+      "narration": "[serious] For two years, nobody knew who did it. Then, on September 6, 2018, the US Justice Department named a suspect. It charged a North Korean programmer named Park Jin Hyok. Prosecutors say he worked for a hacking team backed by North Korea's government. Experts call that group Lazarus. Prosecutors also link it to the Sony Pictures hack in 2014. He has never been arrested. He's on the FBI's wanted list. The charges have never been tested in court.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "question mark dark",
-          "at": "one big question"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Who did it?",
+          "at": "nobody knew who did it"
         },
         {
-          "type": "stock",
-          "query": "detective board clues",
-          "at": "Who did this"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Feb 2016",
+              "Heist"
+            ],
+            [
+              "Jun 2018",
+              "Complaint filed"
+            ],
+            [
+              "Sep 2018",
+              "Charges unsealed"
+            ]
+          ],
+          "at": "September 6, 2018"
         },
         {
           "type": "archival",
           "query": "Robert F. Kennedy Department of Justice Building",
-          "at": "the US Justice Department",
-          "overlay": "Washington, 2018"
+          "at": "the US Justice Department"
         },
         {
-          "type": "motion",
-          "kind": "title",
-          "text": "Charged: September 6, 2018",
-          "at": "gave its answer"
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "Park Jin Hyok",
+          "data": {
+            "rows": [
+              [
+                "Charged",
+                "September 2018"
+              ],
+              [
+                "Role",
+                "Programmer"
+              ],
+              [
+                "Backer",
+                "North Korea"
+              ],
+              [
+                "Status",
+                "FBI wanted list"
+              ]
+            ]
+          },
+          "at": "Park Jin Hyok"
         },
         {
-          "type": "archival",
-          "query": "Pyongyang skyline",
-          "at": "a North Korean computer programmer"
-        },
-        {
-          "type": "stock",
-          "query": "courtroom gavel",
-          "at": "Prosecutors say"
-        },
-        {
-          "type": "archival",
-          "query": "Kim Il Sung Square Pyongyang",
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "Pyongyang",
+              39.0,
+              125.7
+            ],
+            [
+              "New York",
+              40.7,
+              -74.0
+            ]
+          ],
           "at": "backed by North Korea's government"
         },
         {
-          "type": "archival",
-          "query": "FBI seal",
-          "at": "the FBI's wanted list"
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "Lazarus",
+          "data": {
+            "rows": [
+              [
+                "Base",
+                "North Korea"
+              ],
+              [
+                "Target",
+                "Banks"
+              ],
+              [
+                "Link",
+                "Sony Pictures hack"
+              ]
+            ]
+          },
+          "at": "group Lazarus"
         },
         {
-          "type": "stock",
-          "query": "empty courtroom",
+          "type": "archival",
+          "query": "Sony Pictures Studios Culver City",
+          "at": "Sony Pictures hack in 2014"
+        },
+        {
+          "type": "gfx",
+          "kind": "redact",
+          "text": "ALLEGED",
           "at": "never been tested in court"
         }
       ]
     },
     {
       "id": 14,
-      "act": "unmasking",
-      "label": "A clue from Hollywood",
-      "mood": "reveal",
-      "narration": "[curious] How did the FBI link him to this? Through clues hidden in the hacking tools. The FBI says tools used in different attacks shared the same hidden fingerprints. Some of those fingerprints also showed up in the 2014 hack of the movie studio Sony Pictures. Prosecutors say the same group did both. And Bangladesh was just one target. The Justice Department says that from 2015 to 2018, the group tried to steal at least $1 billion from banks around the world.",
-      "visuals": [
-        {
-          "type": "stock",
-          "query": "fbi agent computer",
-          "at": "How did the FBI link him"
-        },
-        {
-          "type": "stock",
-          "query": "toolbox tools closeup",
-          "at": "clues hidden in the hacking tools"
-        },
-        {
-          "type": "stock",
-          "query": "fingerprint scan",
-          "at": "the same hidden fingerprints"
-        },
-        {
-          "type": "stock",
-          "query": "film reel projector",
-          "at": "the 2014 hack"
-        },
-        {
-          "type": "archival",
-          "query": "Sony Pictures Studios Culver City",
-          "at": "the movie studio Sony Pictures"
-        },
-        {
-          "type": "stock",
-          "query": "puzzle pieces fitting",
-          "at": "the same group did both"
-        },
-        {
-          "type": "stock",
-          "query": "dartboard target",
-          "at": "just one target"
-        },
-        {
-          "type": "stock",
-          "query": "gold bars stack",
-          "at": "at least $1 billion"
-        },
-        {
-          "type": "stock",
-          "query": "world map lights",
-          "at": "banks around the world"
-        }
-      ]
-    },
-    {
-      "id": 15,
       "act": "aftermath",
       "label": "Who paid the price",
       "mood": "sad",
-      "narration": "[reflective] The fallout was fast. In March 2016, the head of Bangladesh Bank, Governor Atiur Rahman, quit his job. In Manila, the branch manager on Jupiter Street was charged. Her name was Maia Santos Deguito. In January 2019, a court found her guilty of money laundering and sentenced her to prison. In 2023, a higher court agreed. Bangladesh Bank also sued RCBC in a New York court. [sighs] That legal fight dragged on for years.",
+      "narration": "[reflective] The fallout was fast. In March 2016, Bangladesh Bank's governor, Atiur Rahman, quit. In Manila, the Jupiter Street branch manager, Maia Deguito, was charged. In January 2019, a court found her guilty of money laundering. In 2023, a higher court agreed. [sighs] Only about $15 million of the stolen $81 million ever came back.",
       "visuals": [
         {
           "type": "stock",
@@ -842,93 +1018,131 @@
           "at": "The fallout was fast"
         },
         {
-          "type": "stock",
-          "query": "empty office chair",
-          "at": "quit his job"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Mar 2016",
+              "Governor quits"
+            ],
+            [
+              "Jan 2019",
+              "Manager convicted"
+            ],
+            [
+              "2023",
+              "Appeal upheld"
+            ]
+          ],
+          "at": "In March 2016"
         },
         {
-          "type": "stock",
-          "query": "manila city traffic",
-          "at": "In Manila, the branch manager"
-        },
-        {
-          "type": "stock",
-          "query": "handcuffs closeup",
-          "at": "was charged"
-        },
-        {
-          "type": "stock",
-          "query": "judge courtroom",
-          "at": "a court found her guilty"
-        },
-        {
-          "type": "stock",
-          "query": "prison bars",
-          "at": "sentenced her to prison"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "headline",
-          "text": "Ex-bank manager guilty of laundering",
+          "text": "Bank governor quits",
+          "at": "Atiur Rahman, quit"
+        },
+        {
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Maia Deguito: charged",
+          "at": "Maia Deguito, was charged"
+        },
+        {
+          "type": "gfx",
+          "kind": "redact",
+          "text": "GUILTY",
+          "at": "found her guilty"
+        },
+        {
+          "type": "gfx",
+          "kind": "quote",
+          "text": "Conviction upheld - Court of Appeals",
           "at": "a higher court agreed"
         },
         {
-          "type": "archival",
-          "query": "New York County Supreme Court building",
-          "at": "in a New York court"
-        },
-        {
-          "type": "stock",
-          "query": "legal documents stack",
-          "at": "dragged on for years"
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Stolen",
+                81
+              ],
+              [
+                "Recovered",
+                15
+              ]
+            ],
+            "unit": "M"
+          },
+          "at": "Only about $15 million"
         }
       ]
     },
     {
-      "id": 16,
+      "id": 15,
       "act": "aftermath",
       "label": "A billion asked, $81M gone",
       "mood": "hopeful",
-      "narration": "[slowly] So let's add it up. The hackers asked for nearly $1 billion. They got away with $81 million. Only about $15 million of it ever came back. They weren't stopped by some genius security system. They were stopped by a street name, a spelling mistake and a lot of luck. After this, banks everywhere worked harder to guard their SWIFT systems. [softly] One of the biggest cyber heists ever didn't start with a gun. It started with a fake job email… and a printer nobody worried about. If you like stories like this, subscribe to Breach Uncovered.",
+      "narration": "[slowly] So let's add it up. The hackers asked for nearly $1 billion. They got away with $81 million. They were stopped by a street name, a spelling mistake and plain luck. [softly] One of the biggest cyber heists ever started with a fake job email, and a printer nobody worried about. If you like stories like this, subscribe to Breach Uncovered.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "calculator adding numbers",
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Asked for",
+                951
+              ],
+              [
+                "Stolen",
+                81
+              ],
+              [
+                "Recovered",
+                15
+              ]
+            ],
+            "unit": "M"
+          },
           "at": "let's add it up"
         },
         {
-          "type": "stock",
-          "query": "pile of cash",
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 81,
+            "prefix": "$",
+            "suffix": "M",
+            "label": "stolen"
+          },
           "at": "They got away with"
         },
         {
-          "type": "stock",
-          "query": "coins dropping hand",
-          "at": "Only about $15 million"
-        },
-        {
-          "type": "stock",
-          "query": "security camera wall",
-          "at": "some genius security system"
-        },
-        {
-          "type": "stock",
-          "query": "street sign closeup",
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Jupiter Street",
+          "data": {
+            "state": "crack"
+          },
           "at": "a street name"
         },
         {
-          "type": "stock",
-          "query": "four leaf clover",
-          "at": "a lot of luck"
+          "type": "gfx",
+          "kind": "redact",
+          "text": "FANDATION",
+          "at": "a spelling mistake"
         },
         {
-          "type": "stock",
-          "query": "bank security guard",
-          "at": "worked harder to guard"
-        },
-        {
-          "type": "stock",
-          "query": "laptop email glowing",
+          "type": "gfx",
+          "kind": "email",
+          "data": {
+            "from": "jobs@example-careers.com",
+            "subject": "Job application",
+            "line": "My resume is attached"
+          },
           "at": "a fake job email"
         },
         {
@@ -937,8 +1151,9 @@
           "at": "a printer nobody worried about"
         },
         {
-          "type": "stock",
-          "query": "city night timelapse",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Breach Uncovered",
           "at": "subscribe to Breach Uncovered"
         }
       ]

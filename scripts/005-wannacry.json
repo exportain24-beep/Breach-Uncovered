@@ -12,57 +12,76 @@
       "act": "cold_open",
       "label": "The day the screens turned red",
       "mood": "shock",
-      "narration": "[dramatically] A 22-year-old stopped a global cyberattack with a $10.69 web address. [serious] It starts on Friday, May 12, 2017. In hospitals across England, computer screens suddenly go red. Patient files won't open. A message demands money. Soon, the same thing is happening all over the world. And the hero of this story isn't a cop or a spy. [softly] He's a surfer in a little beach town, with a lot of curiosity. But to see how this started, we have to go back two months.",
+      "narration": "[dramatically] A 22-year-old stopped a global cyberattack with a $10.69 web address. [serious] It began on Friday, May 12, 2017. Hospital screens across England suddenly turned red. Patient files wouldn't open. A message demanded money. Soon, the same thing was happening around the world. The hero wasn't a cop or a spy. [softly] He was a surfer in a small beach town. But first, we have to go back two months.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "young man laptop night",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "22-year-old stops global attack",
           "at": "A 22-year-old"
         },
         {
-          "type": "stock",
-          "query": "world map lights",
-          "at": "a global cyberattack"
-        },
-        {
-          "type": "motion",
-          "kind": "title",
-          "text": "$10.69",
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 10.69,
+            "prefix": "$",
+            "label": "the price of the off switch"
+          },
           "at": "$10.69 web address"
         },
         {
-          "type": "stock",
-          "query": "hospital hallway night",
-          "at": "In hospitals across England"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Mar 2017",
+              "Fix released"
+            ],
+            [
+              "May 12",
+              "WannaCry hits"
+            ]
+          ],
+          "at": "Friday, May 12, 2017"
+        },
+        {
+          "type": "gfx",
+          "kind": "rack",
+          "text": "Hospital screens go red",
+          "data": {
+            "total": 81
+          },
+          "at": "suddenly turned red"
+        },
+        {
+          "type": "gfx",
+          "kind": "email",
+          "data": {
+            "from": "pay@example-ransom.com",
+            "subject": "Your files are locked",
+            "line": "Pay $300 in bitcoin"
+          },
+          "at": "A message demanded money"
         },
         {
           "type": "stock",
-          "query": "computer screen glitch red",
-          "at": "computer screens suddenly go red"
+          "query": "surfer ocean waves",
+          "at": "a surfer in a small beach town"
         },
         {
-          "type": "stock",
-          "query": "nurse at computer",
-          "at": "Patient files won't open"
-        },
-        {
-          "type": "stock",
-          "query": "warning message screen",
-          "at": "A message demands money"
-        },
-        {
-          "type": "stock",
-          "query": "police officer walking",
-          "at": "isn't a cop or a spy"
-        },
-        {
-          "type": "archival",
-          "query": "Ilfracombe harbour",
-          "at": "a little beach town"
-        },
-        {
-          "type": "stock",
-          "query": "calendar pages flipping",
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Mar 2017",
+              "Fix released"
+            ],
+            [
+              "May 2017",
+              "Attack"
+            ]
+          ],
           "at": "go back two months"
         }
       ]
@@ -72,57 +91,57 @@
       "act": "quiet_part",
       "label": "March: a fix nobody installed",
       "mood": "calm",
-      "narration": "[calmly] It's March 2017. Microsoft fixes a weak spot in Windows, the software that runs most office computers. Tech people call a fix like this a patch. Think of it as a new lock for a broken door. In Britain, most hospitals are run by the NHS. That's the country's free, government-run health service. In March and April, it warns hospitals to install the fix. But plenty of computers never get it. Some still run Windows XP, a version so old that Microsoft had stopped fixing it.",
+      "narration": "[calmly] In March 2017, Microsoft fixed a weak spot in Windows. Tech people call a fix like this a patch. Think of it as a new lock for a broken door. Britain's hospitals are run by the NHS, the country's free, government-run health service. It warned them to install the fix. But many computers never got it. Some still ran Windows XP, a version so old that Microsoft had stopped fixing it.",
       "visuals": [
+        {
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Mar 2017",
+              "Microsoft fixes flaw"
+            ],
+            [
+              "Mar-Apr",
+              "NHS sends alerts"
+            ]
+          ],
+          "at": "In March 2017"
+        },
         {
           "type": "archival",
           "query": "Microsoft Redmond campus",
-          "at": "Microsoft fixes a weak spot"
+          "at": "Microsoft fixed a weak spot"
         },
         {
-          "type": "stock",
-          "query": "windows laptop startup",
+          "type": "gfx",
+          "kind": "lock",
+          "text": "A weak spot",
+          "data": {
+            "state": "open"
+          },
           "at": "a weak spot in Windows"
         },
         {
-          "type": "stock",
-          "query": "office workers computers",
-          "at": "runs most office computers"
-        },
-        {
-          "type": "stock",
-          "query": "technician fixing computer",
-          "at": "call a fix like this"
-        },
-        {
-          "type": "stock",
-          "query": "new door lock",
+          "type": "gfx",
+          "kind": "lock",
+          "text": "The fix: a new lock",
+          "data": {
+            "state": "locked"
+          },
           "at": "a new lock for a broken door"
         },
         {
-          "type": "archival",
-          "query": "Royal London Hospital",
-          "at": "most hospitals are run"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "NHS warns hospitals to update",
+          "at": "It warned them"
         },
         {
-          "type": "stock",
-          "query": "doctor walking hospital",
-          "at": "health service"
-        },
-        {
-          "type": "stock",
-          "query": "email inbox warning",
-          "at": "warns hospitals to install"
-        },
-        {
-          "type": "stock",
-          "query": "dusty old computer",
-          "at": "plenty of computers never get it"
-        },
-        {
-          "type": "stock",
-          "query": "old computer monitor",
-          "at": "Some still run Windows XP"
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Windows XP: no more fixes",
+          "at": "Windows XP"
         }
       ]
     },
@@ -131,57 +150,57 @@
       "act": "quiet_part",
       "label": "April: a spy tool gets loose",
       "mood": "curious",
-      "narration": "[cautiously] Then, in April, something strange happens online. A mystery group calling itself the Shadow Brokers dumps a pile of hacking tools on the internet. The tools are said to come from the NSA, America's biggest spy agency. One tool is called EternalBlue. It sneaks in through that same weak spot in Windows. Any computer without the March fix is at risk. Now anyone can grab it. A few weeks later, someone does.",
+      "narration": "[cautiously] Then, in April, a mystery group called the Shadow Brokers dumped hacking tools online. The tools were said to come from the NSA, America's biggest spy agency. One was called EternalBlue. It slipped in through that same weak spot. Any computer without the March fix was at risk. Now anyone could grab it. A few weeks later, someone did.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "dark internet code",
-          "at": "something strange happens online"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Shadow Brokers leak hacking tools",
+          "at": "dumped hacking tools online"
         },
         {
-          "type": "stock",
-          "query": "anonymous mask",
-          "at": "A mystery group"
-        },
-        {
-          "type": "stock",
-          "query": "files download screen",
-          "at": "dumps a pile of hacking tools"
-        },
-        {
-          "type": "archival",
-          "query": "National Security Agency headquarters Fort Meade",
+          "type": "gfx",
+          "kind": "redact",
+          "text": "LEAKED",
           "at": "come from the NSA"
         },
         {
           "type": "archival",
-          "query": "National Security Agency seal",
-          "at": "America's biggest spy agency"
+          "query": "National Security Agency headquarters Fort Meade",
+          "at": "biggest spy agency"
         },
         {
-          "type": "stock",
-          "query": "blue digital lock",
-          "at": "One tool is called EternalBlue"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "download leak; 100 percent; done",
+          "at": "called EternalBlue"
         },
         {
-          "type": "stock",
-          "query": "cracked wall",
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Same weak spot",
+          "data": {
+            "state": "crack"
+          },
           "at": "that same weak spot"
         },
         {
-          "type": "stock",
-          "query": "unlocked padlock",
-          "at": "is at risk"
-        },
-        {
-          "type": "stock",
-          "query": "hand grabbing",
-          "at": "anyone can grab it"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Shadow Brokers",
+              "Internet",
+              "Anyone"
+            ],
+            "amount": "Free for all"
+          },
+          "at": "grab it"
         },
         {
           "type": "stock",
           "query": "shadow figure doorway",
-          "at": "someone does"
+          "at": "someone did"
         }
       ]
     },
@@ -190,52 +209,65 @@
       "act": "escalation",
       "label": "Friday: WannaCry wakes up",
       "mood": "tense",
-      "narration": "[serious] Now it's Friday, May 12. The attack begins. It's called WannaCry. It's ransomware, a program that locks up your files and holds them hostage. To get them back, you're told to pay $300 in bitcoin, a kind of digital money. But WannaCry has a nasty trick. It uses EternalBlue to jump from computer to computer by itself. Nobody has to click a bad link. [ominously] One sick machine can quietly infect the whole office.",
+      "narration": "[serious] Then came Friday, May 12. The program was called WannaCry. It was ransomware. That's a program that locks your files and holds them hostage. To get them back, you had to pay $300 in bitcoin, a kind of digital money. And WannaCry had a nasty trick. It used EternalBlue to jump from computer to computer by itself. [ominously] Nobody had to click anything.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "clock ticking",
-          "at": "The attack begins"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "May 12",
+              "2017"
+            ],
+            [
+              "Friday",
+              "Attack begins"
+            ]
+          ],
+          "at": "Friday, May 12"
         },
         {
-          "type": "stock",
-          "query": "locked folder icon",
-          "at": "locks up your files"
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Files held hostage",
+          "data": {
+            "state": "locked"
+          },
+          "at": "locks your files"
         },
         {
-          "type": "stock",
-          "query": "chain padlock",
-          "at": "holds them hostage"
+          "type": "gfx",
+          "kind": "email",
+          "data": {
+            "from": "pay@example-ransom.com",
+            "subject": "Pay to get your files back",
+            "line": "Send $300 in bitcoin"
+          },
+          "at": "had to pay"
         },
         {
-          "type": "stock",
-          "query": "bitcoin coin",
-          "at": "300 in bitcoin"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 300,
+            "prefix": "$",
+            "label": "ransom per computer"
+          },
+          "at": "$300 in bitcoin"
         },
         {
-          "type": "stock",
-          "query": "digital money",
-          "at": "a kind of digital money"
-        },
-        {
-          "type": "stock",
-          "query": "snake moving",
-          "at": "a nasty trick"
-        },
-        {
-          "type": "stock",
-          "query": "computer network cables",
+          "type": "gfx",
+          "kind": "network",
+          "text": "Spreading by itself",
+          "data": {
+            "total": 200000
+          },
           "at": "jump from computer to computer"
         },
         {
           "type": "stock",
           "query": "mouse click finger",
-          "at": "click a bad link"
-        },
-        {
-          "type": "stock",
-          "query": "dark office empty",
-          "at": "the whole office"
+          "at": "click anything"
         }
       ]
     },
@@ -244,7 +276,7 @@
       "act": "escalation",
       "label": "Hospitals in trouble",
       "mood": "shock",
-      "narration": "[worried] By that afternoon, England's hospitals are in real trouble. Staff are locked out of their computers. Appointments get canceled. At five emergency rooms, ambulances have to be sent somewhere else. In the end, at least 81 hospital groups are hit. So are nearly 600 family doctor offices. Picture walking into a hospital, and the computers just... don't work. And the attack is still spreading.",
+      "narration": "[worried] By that afternoon, England's hospitals were in real trouble. Staff were locked out of their computers. Appointments were canceled. Five emergency rooms had to send ambulances elsewhere. In the end, at least 81 hospital groups were hit, plus nearly 600 family doctor offices. Imagine walking into a hospital where nothing works. And the attack was still spreading.",
       "visuals": [
         {
           "type": "archival",
@@ -252,49 +284,59 @@
           "at": "England's hospitals"
         },
         {
-          "type": "stock",
-          "query": "frustrated woman computer",
+          "type": "gfx",
+          "kind": "rack",
+          "text": "Hospital computers go dark",
+          "data": {
+            "total": 81
+          },
           "at": "locked out of their computers"
+        },
+        {
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Appointments canceled",
+          "at": "Appointments were canceled"
+        },
+        {
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 5,
+            "label": "emergency rooms sent ambulances away"
+          },
+          "at": "Five emergency rooms"
+        },
+        {
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Hospital groups",
+                81
+              ],
+              [
+                "Family doctors",
+                595
+              ]
+            ],
+            "unit": ""
+          },
+          "at": "at least 81 hospital groups"
         },
         {
           "type": "stock",
           "query": "empty waiting room chairs",
-          "at": "Appointments get canceled"
+          "at": "nothing works"
         },
         {
-          "type": "stock",
-          "query": "ambulance lights night",
-          "at": "five emergency rooms"
-        },
-        {
-          "type": "stock",
-          "query": "ambulance driving road",
-          "at": "sent somewhere else"
-        },
-        {
-          "type": "stock",
-          "query": "hospital building exterior",
-          "at": "In the end"
-        },
-        {
-          "type": "motion",
-          "kind": "counter",
-          "text": "81 hospital groups hit",
-          "at": "81 hospital groups"
-        },
-        {
-          "type": "stock",
-          "query": "doctor office desk",
-          "at": "family doctor offices"
-        },
-        {
-          "type": "stock",
-          "query": "hospital entrance doors",
-          "at": "walking into a hospital"
-        },
-        {
-          "type": "stock",
-          "query": "ink spreading water",
+          "type": "gfx",
+          "kind": "network",
+          "text": "Still spreading",
+          "data": {
+            "total": 200000
+          },
           "at": "still spreading"
         }
       ]
@@ -304,31 +346,52 @@
       "act": "escalation",
       "label": "Then the whole world",
       "mood": "tense",
-      "narration": "[urgently] And it's not just Britain. That same Friday, Spain's big phone company, Telefónica, tells workers to shut down their computers. FedEx gets hit too. Within a day, so do Renault car factories in France and Germany's national railway. Phones, packages, cars, trains. Everything runs on computers. And WannaCry keeps jumping from country to country. Who could possibly stop it?",
+      "narration": "[urgently] It wasn't just Britain. Spain's big phone company, Telefónica, told workers to shut down their computers. FedEx was hit. So were Renault car factories in France and Germany's national railway. Within two days, about 200,000 victims in 150 countries were counted. Phones, packages, cars, trains. Everything runs on computers. Who could stop it?",
       "visuals": [
         {
-          "type": "stock",
-          "query": "globe spinning",
-          "at": "not just Britain"
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "London",
+              51.5,
+              -0.1
+            ],
+            [
+              "Beijing",
+              39.9,
+              116.4
+            ],
+            [
+              "Madrid",
+              40.4,
+              -3.7
+            ]
+          ],
+          "at": "wasn't just Britain"
         },
         {
-          "type": "archival",
-          "query": "Madrid skyline",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Telefónica orders computers off",
           "at": "Spain's big phone company"
-        },
-        {
-          "type": "archival",
-          "query": "Telefonica headquarters Madrid",
-          "at": "tells workers to shut down"
         },
         {
           "type": "stock",
           "query": "delivery truck highway",
-          "at": "FedEx gets hit too"
+          "at": "FedEx was hit"
         },
         {
-          "type": "stock",
-          "query": "car factory robots",
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "WannaCry",
+              "Renault",
+              "Deutsche Bahn"
+            ],
+            "amount": "Factories and trains"
+          },
           "at": "Renault car factories"
         },
         {
@@ -337,24 +400,22 @@
           "at": "Germany's national railway"
         },
         {
-          "type": "stock",
-          "query": "smartphone hand",
-          "at": "Phones, packages, cars, trains"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 200000,
+            "label": "victims in 150 countries"
+          },
+          "at": "about 200,000 victims"
         },
         {
-          "type": "stock",
-          "query": "city lights aerial",
+          "type": "gfx",
+          "kind": "network",
+          "text": "One infection, many countries",
+          "data": {
+            "total": 200000
+          },
           "at": "Everything runs on computers"
-        },
-        {
-          "type": "stock",
-          "query": "flags of countries",
-          "at": "from country to country"
-        },
-        {
-          "type": "stock",
-          "query": "man thinking dark",
-          "at": "Who could possibly stop it"
         }
       ]
     },
@@ -363,57 +424,54 @@
       "act": "scramble",
       "label": "Meet the guy on his week off",
       "mood": "calm",
-      "narration": "[warmly] Now meet Marcus Hutchins. He's 22, and he lives with his family in Ilfracombe, a seaside town in England. He loves to surf. Online, people know him as MalwareTech. He hunts bad software for a security company in Los Angeles, working from his bedroom. This is supposed to be his week off. That Friday, he wakes up around 10 and goes to lunch with a friend. When he gets home at about 2:30, his computer is flooded with messages. The health service is under attack.",
+      "narration": "[warmly] Meet Marcus Hutchins. He was 22 and lived with his family in Ilfracombe, a seaside town in England. He loved to surf. Online, he went by MalwareTech. He hunted bad software for a security company, working from his bedroom. That Friday was supposed to be his week off. He woke around 10 and went to lunch with a friend. [short pause] At about 2:30, he got home to news that the hospitals were under attack.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "young man walking street",
-          "at": "Now meet Marcus Hutchins"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Marcus Hutchins, age 22",
+          "at": "Meet Marcus Hutchins"
         },
         {
           "type": "archival",
           "query": "Ilfracombe",
-          "at": "a seaside town in England",
-          "overlay": "Ilfracombe, England"
+          "at": "a seaside town in England"
         },
         {
-          "type": "stock",
-          "query": "surfer ocean waves",
-          "at": "He loves to surf"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "MalwareTech; hunting bad software",
+          "at": "went by MalwareTech"
         },
         {
-          "type": "stock",
-          "query": "computer code screen",
-          "at": "people know him as MalwareTech"
-        },
-        {
-          "type": "archival",
-          "query": "Los Angeles skyline",
-          "at": "a security company in Los Angeles"
-        },
-        {
-          "type": "stock",
-          "query": "bedroom desk night",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Works from his bedroom",
           "at": "working from his bedroom"
         },
         {
-          "type": "stock",
-          "query": "morning alarm clock",
-          "at": "wakes up around 10"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "10 AM",
+              "Wakes up"
+            ],
+            [
+              "Lunch",
+              "With a friend"
+            ],
+            [
+              "2:30 PM",
+              "Home to news"
+            ]
+          ],
+          "at": "woke around 10"
         },
         {
-          "type": "stock",
-          "query": "friends lunch cafe",
-          "at": "lunch with a friend"
-        },
-        {
-          "type": "stock",
-          "query": "phone notifications",
-          "at": "flooded with messages"
-        },
-        {
-          "type": "stock",
-          "query": "hospital emergency sign",
+          "type": "gfx",
+          "kind": "quote",
+          "text": "The NHS is under attack. - news that day",
           "at": "under attack"
         }
       ]
@@ -423,57 +481,52 @@
       "act": "scramble",
       "label": "A strange web address",
       "mood": "curious",
-      "narration": "[curious] Marcus gets a copy of WannaCry and looks inside. He spots something odd. Before it does any damage, it tries to visit a web address. The name is a long string of random letters. And nobody owns it. So Marcus buys it, for $10.69. He does this a lot with addresses he finds in bad software. It shows him where an attack is spreading. [softly] As he said later, \"The intent was to just monitor the spread.\"",
+      "narration": "[curious] Marcus got a copy of WannaCry and looked inside. He spotted something odd. Before doing any damage, it tried to visit a long, random web address. And nobody owned that address. So Marcus bought it for $10.69. He often did this with addresses found in bad software. It shows where an attack is spreading. [softly] As he said later, \"The intent was to just monitor the spread.\"",
       "visuals": [
         {
-          "type": "stock",
-          "query": "magnifying glass screen",
-          "at": "looks inside"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "open sample; read; found address",
+          "at": "looked inside"
         },
         {
-          "type": "stock",
-          "query": "man looking closely screen",
-          "at": "something odd"
+          "type": "gfx",
+          "kind": "doc",
+          "text": "A long, random web address",
+          "at": "random web address"
         },
         {
-          "type": "stock",
-          "query": "browser address bar",
-          "at": "visit a web address"
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Nobody owned it",
+          "data": {
+            "state": "open"
+          },
+          "at": "nobody owned that address"
         },
         {
-          "type": "stock",
-          "query": "random letters",
-          "at": "random letters"
-        },
-        {
-          "type": "stock",
-          "query": "empty lot for sale",
-          "at": "nobody owns it"
-        },
-        {
-          "type": "stock",
-          "query": "credit card online",
-          "at": "So Marcus buys it"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "counter",
-          "text": "$10.69",
+          "data": {
+            "value": 10.69,
+            "prefix": "$",
+            "label": "bought the address"
+          },
           "at": "for $10.69"
         },
         {
-          "type": "stock",
-          "query": "typing keyboard close",
-          "at": "He does this a lot"
-        },
-        {
-          "type": "stock",
-          "query": "map pins",
+          "type": "gfx",
+          "kind": "network",
+          "text": "Watching the spread",
+          "data": {
+            "total": 200000
+          },
           "at": "where an attack is spreading"
         },
         {
-          "type": "stock",
-          "query": "glowing dots network",
+          "type": "gfx",
+          "kind": "quote",
+          "text": "The intent was to just monitor the spread. - Marcus Hutchins",
           "at": "monitor the spread"
         }
       ]
@@ -483,57 +536,69 @@
       "act": "reveal",
       "label": "The accidental off switch",
       "mood": "reveal",
-      "narration": "[surprised] The moment the address goes live, it lights up. Thousands of infected computers check in every second. Then Marcus and his team work out what it means. [pause] Every copy of WannaCry was asking one question. Is this address out there? If the answer was no, it attacked. If the answer was yes, it stopped. [dramatically] By buying it, Marcus had flipped an off switch. In his words, \"we actually stopped the spread just by registering the domain.\"",
+      "narration": "[surprised] The moment the address went live, it lit up. Thousands of infected computers were checking in every second. Then Marcus and his team worked out why. [pause] Every copy of WannaCry asked one question. Is this address out there? If no, it attacked. If yes, it stopped. [dramatically] Marcus had flipped an off switch by accident. In his words, \"we actually stopped the spread just by registering the domain.\"",
       "visuals": [
         {
           "type": "stock",
           "query": "light switch on",
-          "at": "the address goes live"
+          "at": "address went live"
         },
         {
-          "type": "stock",
-          "query": "server lights blinking",
-          "at": "it lights up"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "ping; ping; ping; ping",
+          "at": "checking in every second"
         },
         {
-          "type": "stock",
-          "query": "data traffic lines",
-          "at": "Thousands of infected computers"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "WannaCry copy",
+              "Marcus's address"
+            ],
+            "amount": "Is it out there?"
+          },
+          "at": "asked one question"
         },
         {
-          "type": "stock",
-          "query": "team video call",
-          "at": "Marcus and his team"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "No",
+              "It attacks"
+            ],
+            [
+              "Yes",
+              "It stops"
+            ]
+          ],
+          "at": "If no, it attacked"
         },
         {
-          "type": "stock",
-          "query": "question mark",
-          "at": "asking one question"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "WannaCry copy",
+              "Spread"
+            ],
+            "amount": "Stopped",
+            "blocked": true
+          },
+          "at": "If yes, it stopped"
         },
         {
-          "type": "stock",
-          "query": "red traffic light",
-          "at": "If the answer was no"
-        },
-        {
-          "type": "stock",
-          "query": "green traffic light",
-          "at": "If the answer was yes"
-        },
-        {
-          "type": "stock",
-          "query": "hand flipping switch",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "The accidental off switch",
           "at": "flipped an off switch"
         },
         {
-          "type": "stock",
-          "query": "relieved man smiling",
-          "at": "In his words"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "quote",
-          "text": "\"we actually stopped the spread\"",
+          "text": "we actually stopped the spread - Marcus Hutchins",
           "at": "we actually stopped the spread"
         }
       ]
@@ -541,266 +606,191 @@
     {
       "id": 10,
       "act": "scramble",
-      "label": "Too late for some",
+      "label": "Too late for some, then a fight",
       "mood": "sad",
-      "narration": "[sad] But the switch had a limit. It couldn't unlock computers that were already locked. It could only stop new ones. So timing decided who got hurt. The north of England, the Midlands and the East were hit early that Friday, before the switch. Of the 37 hospital groups that got fully locked out, 32 were there. On America's East Coast, it was still morning. Marcus's boss later told NBC News he had \"saved the United States.\"",
+      "narration": "[sad] But the switch had a limit. It couldn't unlock computers already locked. Of 37 hospital groups fully locked out, 32 were hit before the switch. [serious] Then, on Saturday morning, someone aimed the Mirai botnet at the address. That's a huge army of hacked gadgets, like home cameras. [breathless] Marcus and his team kept it online. In two days, the switch prevented about a million infections. He had been awake for more than 30 hours.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "broken lock",
-          "at": "the switch had a limit"
-        },
-        {
-          "type": "stock",
-          "query": "locked computer screen",
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Locked stays locked",
+          "data": {
+            "state": "crack"
+          },
           "at": "already locked"
         },
         {
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Locked out",
+                37
+              ],
+              [
+                "Hit before switch",
+                32
+              ]
+            ],
+            "unit": ""
+          },
+          "at": "37 hospital groups"
+        },
+        {
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Fri",
+              "Switch works"
+            ],
+            [
+              "Sat AM",
+              "Mirai attack"
+            ]
+          ],
+          "at": "Saturday morning"
+        },
+        {
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Mirai botnet",
+              "Marcus's address"
+            ],
+            "amount": "Junk traffic",
+            "blocked": true
+          },
+          "at": "aimed the Mirai botnet"
+        },
+        {
           "type": "stock",
-          "query": "hourglass sand",
-          "at": "timing decided"
+          "query": "security camera",
+          "at": "home cameras"
         },
         {
-          "type": "archival",
-          "query": "Manchester Royal Infirmary",
-          "at": "The north of England"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 1,
+            "suffix": "M",
+            "label": "infections prevented"
+          },
+          "at": "about a million infections"
         },
         {
-          "type": "archival",
-          "query": "Birmingham city centre",
-          "at": "the Midlands"
-        },
-        {
-          "type": "stock",
-          "query": "worried nurse",
-          "at": "got fully locked out"
-        },
-        {
-          "type": "archival",
-          "query": "New York City skyline morning",
-          "at": "America's East Coast"
-        },
-        {
-          "type": "stock",
-          "query": "office morning coffee",
-          "at": "it was still morning"
-        },
-        {
-          "type": "stock",
-          "query": "newsroom tv screens",
-          "at": "told NBC News"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 30,
+            "suffix": "h",
+            "label": "hours awake"
+          },
+          "at": "more than 30 hours"
         }
       ]
     },
     {
       "id": 11,
       "act": "scramble",
-      "label": "The weekend fight for the switch",
-      "mood": "tense",
-      "narration": "[serious] Then a new problem. The switch only works while the address stays online. If it goes down, sleeping copies of WannaCry could wake up. On Saturday morning, someone aims the Mirai botnet at it. That's a huge army of hacked gadgets, like home cameras and routers. They flood the address with junk traffic. [breathless] Marcus and his team fight to keep it up. It holds. In its first two days, the switch stops about a million infections. By then, Marcus has been awake for more than 30 hours.",
+      "label": "A ransom that flopped",
+      "mood": "hopeful",
+      "narration": "[calmly] The ransom turned into a flop. Most victims didn't pay. By one early count, the attackers collected only about $55,000. No hospital group in England paid. Reporters soon found Marcus. He shrugged off the praise. [softly] \"I'm definitely not a hero,\" he said.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "power outage",
-          "at": "a new problem"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "The ransom flop",
+          "at": "turned into a flop"
+        },
+        {
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Victims",
+                200000
+              ],
+              [
+                "Paid",
+                192
+              ]
+            ],
+            "unit": ""
+          },
+          "at": "didn't pay"
+        },
+        {
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 55,
+            "prefix": "$",
+            "suffix": "K",
+            "label": "collected"
+          },
+          "at": "about $55,000"
+        },
+        {
+          "type": "gfx",
+          "kind": "redact",
+          "text": "NOT PAID",
+          "at": "No hospital group"
         },
         {
           "type": "stock",
-          "query": "server rack lights",
-          "at": "stays online"
+          "query": "reporters microphones",
+          "at": "Reporters soon found Marcus"
         },
         {
-          "type": "stock",
-          "query": "dark computer screen",
-          "at": "sleeping copies"
-        },
-        {
-          "type": "stock",
-          "query": "sunrise city",
-          "at": "On Saturday morning"
-        },
-        {
-          "type": "stock",
-          "query": "crowd marching",
-          "at": "a huge army of hacked gadgets"
-        },
-        {
-          "type": "stock",
-          "query": "security camera",
-          "at": "home cameras and routers"
-        },
-        {
-          "type": "stock",
-          "query": "traffic jam highway",
-          "at": "junk traffic"
-        },
-        {
-          "type": "stock",
-          "query": "people working late office",
-          "at": "fight to keep it up"
-        },
-        {
-          "type": "stock",
-          "query": "dominoes falling",
-          "at": "about a million infections"
-        },
-        {
-          "type": "stock",
-          "query": "tired man coffee",
-          "at": "awake for more than 30 hours"
+          "type": "gfx",
+          "kind": "quote",
+          "text": "I'm definitely not a hero. - Marcus Hutchins",
+          "at": "not a hero"
         }
       ]
     },
     {
       "id": 12,
-      "act": "scramble",
-      "label": "Microsoft breaks its own rule",
-      "mood": "curious",
-      "narration": "[curious] Microsoft is scrambling too. That Saturday, it does something unusual. It sends out a free fix for Windows XP, the old version it had stopped supporting. The next day, its president, Brad Smith, points a finger at governments. He says they hoard hacking tools instead of reporting the weak spots. He compares the leak to the military having some of its Tomahawk missiles stolen. Meanwhile, the attackers were waiting to get paid.",
-      "visuals": [
-        {
-          "type": "archival",
-          "query": "Microsoft headquarters Redmond",
-          "at": "Microsoft is scrambling too"
-        },
-        {
-          "type": "stock",
-          "query": "software update screen",
-          "at": "a free fix"
-        },
-        {
-          "type": "stock",
-          "query": "old desktop computer",
-          "at": "the old version"
-        },
-        {
-          "type": "archival",
-          "query": "Brad Smith Microsoft president",
-          "at": "Brad Smith"
-        },
-        {
-          "type": "stock",
-          "query": "pointing finger",
-          "at": "points a finger at governments"
-        },
-        {
-          "type": "stock",
-          "query": "secret files folder",
-          "at": "hoard hacking tools"
-        },
-        {
-          "type": "archival",
-          "query": "Pentagon building",
-          "at": "the military having"
-        },
-        {
-          "type": "archival",
-          "query": "Tomahawk missile launch",
-          "at": "Tomahawk missiles stolen"
-        },
-        {
-          "type": "stock",
-          "query": "empty wallet",
-          "at": "waiting to get paid"
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "act": "scramble",
-      "label": "A ransom that flopped",
-      "mood": "hopeful",
-      "narration": "[calmly] By Sunday, Europol, Europe's police agency, counts about 200,000 victims in 150 countries. Its boss is worried about Monday, when millions of people go back to work. But the ransom turns into a flop. Most victims don't pay. By one early count, the attackers collected only about $55,000. Not a single hospital group in England paid. That same week, reporters find Marcus. He shrugs off the praise. \"I'm definitely not a hero,\" he says.",
-      "visuals": [
-        {
-          "type": "archival",
-          "query": "Europol headquarters The Hague",
-          "at": "By Sunday, Europol"
-        },
-        {
-          "type": "stock",
-          "query": "world map digital",
-          "at": "in 150 countries"
-        },
-        {
-          "type": "stock",
-          "query": "monday morning commute",
-          "at": "go back to work"
-        },
-        {
-          "type": "stock",
-          "query": "piggy bank",
-          "at": "turns into a flop"
-        },
-        {
-          "type": "stock",
-          "query": "closed wallet",
-          "at": "Most victims don't pay"
-        },
-        {
-          "type": "stock",
-          "query": "counting cash",
-          "at": "the attackers collected"
-        },
-        {
-          "type": "stock",
-          "query": "nurse smiling hospital",
-          "at": "Not a single hospital group"
-        },
-        {
-          "type": "stock",
-          "query": "reporters microphones",
-          "at": "reporters find Marcus"
-        },
-        {
-          "type": "stock",
-          "query": "young man shrugging",
-          "at": "shrugs off the praise"
-        }
-      ]
-    },
-    {
-      "id": 14,
       "act": "twist",
       "label": "From hero to handcuffs",
       "mood": "shock",
-      "narration": "[serious] Three months later, in August 2017, Marcus flies to Las Vegas for a big hacker conference. As he heads home, the FBI arrests him at the airport. It's not about WannaCry. It's about different bad software, a bank-stealing program called Kronos. Prosecutors say he helped make it years earlier, as a teenager. [slowly] The young man who helped save the world is suddenly facing charges in America. And the big question is still open. Who built WannaCry?",
+      "narration": "[serious] Three months later, in August 2017, Marcus flew to Las Vegas for a big hacker conference. As he headed home, the FBI arrested him at the airport. It wasn't about WannaCry. It was about a bank-stealing program called Kronos. Prosecutors said he helped make it years earlier, as a teenager. [slowly] The man who helped save the world now faced charges in America. So who built WannaCry?",
       "visuals": [
         {
-          "type": "stock",
-          "query": "airplane window clouds",
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "May 2017",
+              "Stops WannaCry"
+            ],
+            [
+              "Aug 2017",
+              "Arrested"
+            ]
+          ],
           "at": "Three months later"
         },
         {
           "type": "archival",
           "query": "Las Vegas Strip",
-          "at": "flies to Las Vegas",
-          "overlay": "Las Vegas, 2017"
+          "at": "flew to Las Vegas"
         },
         {
-          "type": "stock",
-          "query": "conference crowd",
-          "at": "a big hacker conference"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "FBI arrests the hero",
+          "at": "the FBI arrested him"
         },
         {
-          "type": "archival",
-          "query": "McCarran International Airport Las Vegas",
-          "at": "at the airport"
-        },
-        {
-          "type": "archival",
-          "query": "FBI seal",
-          "at": "the FBI arrests him"
-        },
-        {
-          "type": "stock",
-          "query": "handcuffs",
-          "at": "It's not about WannaCry"
-        },
-        {
-          "type": "stock",
-          "query": "bank building",
-          "at": "program called Kronos"
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Charged over Kronos malware",
+          "at": "called Kronos"
         },
         {
           "type": "stock",
@@ -808,129 +798,183 @@
           "at": "as a teenager"
         },
         {
-          "type": "stock",
-          "query": "courtroom",
-          "at": "facing charges in America"
+          "type": "gfx",
+          "kind": "redact",
+          "text": "CHARGED",
+          "at": "faced charges"
         },
         {
-          "type": "stock",
-          "query": "mystery door shadow",
-          "at": "Who built WannaCry"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "who built wannacry?",
+          "at": "who built WannaCry"
         }
       ]
     },
     {
-      "id": 15,
+      "id": 13,
       "act": "unmasking",
       "label": "The trail leads to North Korea",
       "mood": "reveal",
-      "narration": "[serious] In December 2017, the White House gives an answer. Tom Bossert, the president's homeland security adviser, says the US government believes North Korea did it. He calls the attack \"cowardly, costly and careless.\" Britain agrees. Then, in September 2018, the Justice Department charges a North Korean programmer named Park Jin Hyok. Prosecutors say he worked for a fake company that served North Korea's military spies. He's still only accused. He has never faced trial.",
+      "narration": "[serious] In December 2017, the White House gave an answer. Tom Bossert, the president's homeland security adviser, said North Korea was responsible. He called the attack \"cowardly, costly and careless.\" Britain agreed. In 2018, the Justice Department charged a North Korean programmer named Park Jin Hyok. Prosecutors said he worked for a front company tied to North Korea's military spies. He's still only accused.",
       "visuals": [
+        {
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Dec 2017",
+              "US blames North Korea"
+            ],
+            [
+              "2018",
+              "Charges filed"
+            ]
+          ],
+          "at": "In December 2017"
+        },
         {
           "type": "archival",
           "query": "White House north lawn",
-          "at": "the White House gives an answer"
+          "at": "the White House"
         },
         {
-          "type": "archival",
-          "query": "White House press briefing room",
-          "at": "Tom Bossert"
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "Pyongyang",
+              39.0,
+              125.7
+            ],
+            [
+              "London",
+              51.5,
+              -0.1
+            ]
+          ],
+          "at": "North Korea was responsible"
         },
         {
-          "type": "archival",
-          "query": "Pyongyang skyline",
-          "at": "North Korea did it"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "quote",
-          "text": "\"cowardly, costly and careless\"",
-          "at": "He calls the attack"
+          "text": "cowardly, costly and careless - Tom Bossert",
+          "at": "cowardly, costly and careless"
         },
         {
           "type": "archival",
           "query": "Houses of Parliament London",
-          "at": "Britain agrees"
+          "at": "Britain agreed"
         },
         {
-          "type": "archival",
-          "query": "Robert F. Kennedy Department of Justice Building",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Justice Department charges programmer",
           "at": "the Justice Department"
         },
         {
-          "type": "archival",
-          "query": "FBI wanted poster Park Jin Hyok",
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "Park Jin Hyok",
+          "data": {
+            "rows": [
+              [
+                "Charged",
+                "2018"
+              ],
+              [
+                "Front",
+                "Chosun Expo"
+              ],
+              [
+                "Status",
+                "Only accused"
+              ]
+            ]
+          },
           "at": "Park Jin Hyok"
         },
         {
-          "type": "stock",
-          "query": "office building facade",
-          "at": "a fake company"
-        },
-        {
-          "type": "archival",
-          "query": "Kim Il Sung Square",
-          "at": "military spies"
-        },
-        {
-          "type": "stock",
-          "query": "judge gavel",
-          "at": "never faced trial"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Military spies",
+              "Front company",
+              "Programmer"
+            ],
+            "amount": "Alleged link"
+          },
+          "at": "a front company"
         }
       ]
     },
     {
-      "id": 16,
+      "id": 14,
       "act": "aftermath",
       "label": "The bill, and the $10 hero",
       "mood": "hopeful",
-      "narration": "[reflective] And Marcus? He pleads guilty. In July 2019, a judge gives him time served. No prison. Britain later added up the damage. WannaCry cost its health service about $120 million and some 19,000 canceled appointments. That's about one for every seat at Madison Square Garden. [long pause] [softly] The fix had been out for two months. In the end, what saved the day was a surfer, a weird web address and $10.69. If you like true stories like this, subscribe to Breach Uncovered.",
+      "narration": "[reflective] And Marcus? He pleaded guilty. In July 2019, a judge sentenced him to time served. No prison. Britain later added up the damage. WannaCry cost its health service about 92 million pounds and 19,000 canceled appointments. [long pause] [softly] The fix had been out for two months. In the end, a surfer, a weird web address and $10.69 saved the day. If you like true stories like this, subscribe to Breach Uncovered.",
       "visuals": [
         {
           "type": "archival",
           "query": "Milwaukee federal courthouse",
-          "at": "He pleads guilty"
+          "at": "He pleaded guilty"
         },
         {
-          "type": "stock",
-          "query": "walking free sunlight",
-          "at": "No prison"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Jul 2019",
+              "Time served"
+            ],
+            [
+              "Sentence",
+              "No prison"
+            ]
+          ],
+          "at": "In July 2019"
         },
         {
-          "type": "archival",
-          "query": "NHS hospital sign",
-          "at": "added up the damage"
-        },
-        {
-          "type": "stock",
-          "query": "calculator bills",
-          "at": "about 120 million"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "counter",
-          "text": "19,000 appointments canceled",
-          "at": "some 19,000"
+          "data": {
+            "value": 92,
+            "prefix": "£",
+            "suffix": "M",
+            "label": "cost to the NHS"
+          },
+          "at": "92 million pounds"
         },
         {
-          "type": "archival",
-          "query": "Madison Square Garden",
-          "at": "Madison Square Garden"
+          "type": "gfx",
+          "kind": "rack",
+          "text": "Appointments lost",
+          "data": {
+            "total": 19000
+          },
+          "at": "19,000 canceled appointments"
+        },
+        {
+          "type": "gfx",
+          "kind": "lock",
+          "text": "The fix came first",
+          "data": {
+            "state": "open"
+          },
+          "at": "out for two months"
         },
         {
           "type": "stock",
-          "query": "calendar crossed out",
-          "at": "had been out for two months"
-        },
-        {
-          "type": "stock",
-          "query": "surfer walking beach",
+          "query": "beach waves sunset",
           "at": "a surfer"
         },
         {
-          "type": "stock",
-          "query": "typing laptop close up",
-          "at": "a weird web address"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "A $10.69 web address saved the day",
+          "at": "saved the day"
         },
         {
           "type": "stock",

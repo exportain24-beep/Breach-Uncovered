@@ -10,60 +10,79 @@
     {
       "id": 1,
       "act": "cold_open",
-      "label": "A job offer that looked too good",
+      "label": "A job offer that was a trap",
       "mood": "curious",
-      "narration": "[dramatically] North Korean hackers sent fake job offers to the people building America's missile shield. [short pause] At least, that's what the FBI says. [softly] Here's how it began. It's 2016. An email lands in the inbox of a worker at an American defense company. It's from a recruiter at a rival company. There's a great new job on offer. Some of these emails even mention THAAD. That's the missile shield. [serious] But the recruiter wasn't real. The email was bait. And the US government says the trail led back to North Korea's military.",
+      "narration": "[dramatically] North Korean hackers sent fake job offers to the people building America's missile shield. [short pause] That's what the FBI says. [softly] It began in 2016. A worker at an American defense company got an email. It came from a recruiter at a rival firm. A great new job was waiting. [serious] But the recruiter wasn't real. The email was bait.",
       "visuals": [
         {
-          "type": "archival",
-          "query": "Pyongyang skyline",
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "Pyongyang",
+              39.0,
+              125.7
+            ],
+            [
+              "Washington",
+              38.9,
+              -77.04
+            ]
+          ],
           "at": "North Korean hackers"
         },
         {
-          "type": "stock",
-          "query": "email inbox laptop",
+          "type": "gfx",
+          "kind": "email",
+          "data": {
+            "from": "recruiter@example-careers.com",
+            "subject": "Your new job offer",
+            "line": "Open the attached file"
+          },
           "at": "fake job offers"
         },
         {
           "type": "stock",
           "query": "radar dish sky",
-          "at": "America's missile shield"
+          "at": "missile shield"
         },
         {
-          "type": "motion",
-          "kind": "title",
-          "text": "USA · 2016",
-          "at": "It's 2016"
-        },
-        {
-          "type": "stock",
-          "query": "office worker desk morning",
-          "at": "a worker at an American"
-        },
-        {
-          "type": "stock",
-          "query": "business handshake office",
-          "at": "from a recruiter"
-        },
-        {
-          "type": "stock",
-          "query": "smiling man reading laptop",
-          "at": "a great new job"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "2016",
+              "Fake recruiter emails"
+            ],
+            [
+              "2017",
+              "THAAD set up"
+            ]
+          ],
+          "at": "It began in 2016"
         },
         {
           "type": "stock",
-          "query": "man frowning screen",
-          "at": "the recruiter wasn't real"
+          "query": "office worker desk",
+          "at": "got an email"
         },
         {
-          "type": "stock",
-          "query": "fishing hook water",
-          "at": "The email was bait"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "A dream job, offered by email",
+          "at": "great new job"
         },
         {
-          "type": "stock",
-          "query": "army trucks convoy",
-          "at": "North Korea's military"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "The recruiter was fake",
+          "at": "recruiter wasn't real"
+        },
+        {
+          "type": "gfx",
+          "kind": "redact",
+          "text": "BAIT",
+          "at": "email was bait"
         }
       ]
     },
@@ -72,31 +91,32 @@
       "act": "stakes",
       "label": "The shield that stops missiles",
       "mood": "calm",
-      "narration": "[calmly] So what is THAAD? It's a system that shoots down enemy missiles. It hits them high in the sky, as they fall toward their target. The company in charge of building it is Lockheed Martin. It's one of the biggest weapons makers in America. The plan was to set it up in South Korea. Right next door, North Korea kept testing missiles. [short pause] So the people who built it knew things other countries badly wanted to know.",
+      "narration": "[calmly] So what is THAAD? It's a system that shoots down enemy missiles. It hits them high in the sky, as they fall toward their target. Lockheed Martin, one of America's biggest weapons makers, leads the building of it. The plan was to set it up in South Korea. Right next door, North Korea kept testing missiles. [short pause] So the people who built it knew secrets other countries wanted.",
       "visuals": [
         {
           "type": "archival",
           "query": "THAAD interceptor launch Missile Defense Agency",
-          "at": "So what is THAAD"
+          "at": "what is THAAD"
         },
         {
-          "type": "stock",
-          "query": "missile launch smoke",
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "track missile; lock on; intercept",
           "at": "shoots down enemy missiles"
         },
         {
-          "type": "stock",
-          "query": "blue sky clouds timelapse",
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Missile shield",
+          "data": {
+            "state": "locked"
+          },
           "at": "high in the sky"
         },
         {
-          "type": "archival",
-          "query": "Lockheed Martin headquarters Bethesda",
-          "at": "The company in charge"
-        },
-        {
-          "type": "archival",
-          "query": "Lockheed Martin logo",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Lockheed Martin leads THAAD",
           "at": "Lockheed Martin"
         },
         {
@@ -105,19 +125,32 @@
           "at": "biggest weapons makers"
         },
         {
-          "type": "archival",
-          "query": "Seoul skyline",
-          "at": "set it up in South Korea"
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "Bethesda",
+              38.98,
+              -77.1
+            ],
+            [
+              "Seoul",
+              37.57,
+              126.98
+            ]
+          ],
+          "at": "South Korea"
         },
         {
           "type": "stock",
-          "query": "military parade tanks",
-          "at": "North Korea kept testing missiles"
+          "query": "rocket launch night",
+          "at": "kept testing missiles"
         },
         {
-          "type": "stock",
-          "query": "engineers meeting room",
-          "at": "the people who built it"
+          "type": "gfx",
+          "kind": "doc",
+          "text": "THAAD secrets are valuable",
+          "at": "knew secrets"
         }
       ]
     },
@@ -126,355 +159,332 @@
       "act": "quiet",
       "label": "Coders in a Chinese port city",
       "mood": "curious",
-      "narration": "Meanwhile, across the sea, there's a busy port city in China called Dalian. It's not far from North Korea. Here, a team of North Korean programmers worked for a company called Chosun Expo. They took paid coding jobs for outside customers. One of them was a man named Park Jin Hyok. Investigators say he worked for this company for more than ten years. [cautiously] On paper, it was a normal tech business. But the US government says it was a front. A cover, tied to a North Korean military spy unit called Lab 110.",
+      "narration": "[cautiously] Across the sea, in the Chinese port city of Dalian, a company called Chosun Expo sold coding work. North Korean programmers worked there. One was Park Jin Hyok. Investigators say he worked for the company for more than ten years. On paper, it was a normal tech business. But the US government says it was a front. It was tied to Lab 110, a North Korean military spy unit.",
       "visuals": [
         {
           "type": "archival",
           "query": "Dalian China skyline",
-          "at": "a busy port city",
-          "overlay": "Dalian, China"
+          "at": "port city of Dalian"
         },
         {
-          "type": "archival",
-          "query": "Port of Dalian ships",
-          "at": "called Dalian"
-        },
-        {
-          "type": "stock",
-          "query": "map border river",
-          "at": "not far from North Korea"
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Chosun Expo: coding for hire",
+          "at": "Chosun Expo"
         },
         {
           "type": "stock",
           "query": "programmers office computers",
-          "at": "a team of North Korean programmers"
+          "at": "North Korean programmers"
         },
         {
-          "type": "stock",
-          "query": "coding screen close up",
-          "at": "paid coding jobs"
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "Park Jin Hyok",
+          "data": {
+            "rows": [
+              [
+                "Job",
+                "Programmer"
+              ],
+              [
+                "Employer",
+                "Chosun Expo"
+              ],
+              [
+                "Base",
+                "Dalian, China"
+              ]
+            ]
+          },
+          "at": "Park Jin Hyok"
         },
         {
-          "type": "stock",
-          "query": "man silhouette window",
-          "at": "a man named Park Jin Hyok"
-        },
-        {
-          "type": "stock",
-          "query": "calendar pages turning",
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 10,
+            "suffix": "+",
+            "label": "years at Chosun Expo"
+          },
           "at": "more than ten years"
         },
         {
           "type": "stock",
           "query": "modern office building",
-          "at": "a normal tech business"
+          "at": "normal tech business"
         },
         {
-          "type": "stock",
-          "query": "theater mask dark",
+          "type": "gfx",
+          "kind": "redact",
+          "text": "FRONT",
           "at": "it was a front"
         },
         {
-          "type": "archival",
-          "query": "Korean People's Army soldiers",
-          "at": "a North Korean military spy unit"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Chosun Expo",
+              "Lab 110",
+              "Military spy unit"
+            ],
+            "amount": "Tied together"
+          },
+          "at": "Lab 110"
         }
       ]
     },
     {
       "id": 4,
       "act": "quiet",
-      "label": "A crew with a long record",
+      "label": "The crew with a long record",
       "mood": "tense",
-      "narration": "Security experts had a nickname for this hacking crew. They called it the Lazarus Group. By 2016, the US says, it already had a long record. In November 2014, it hacked Sony Pictures. That was payback for a comedy movie that made fun of North Korea's leader. Then, in February 2016, it stole $81 million from Bangladesh's central bank. [pause] Now, according to prosecutors, the same crew picked a new kind of target. Not a movie studio. Not a bank. America's defense companies.",
+      "narration": "Security experts call this crew the Lazarus Group. By 2016, the US says, it already had a long record. In November 2014, it hacked Sony Pictures. In February 2016, it stole $81 million from Bangladesh's central bank. Now, according to prosecutors, it picked a new kind of target. Not a movie studio. Not a bank. [pause] America's defense companies.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "security analyst monitors",
-          "at": "Security experts had a nickname"
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "Lazarus Group",
+          "data": {
+            "rows": [
+              [
+                "Base",
+                "North Korea"
+              ],
+              [
+                "Type",
+                "Military hackers"
+              ],
+              [
+                "Link",
+                "Lab 110"
+              ]
+            ]
+          },
+          "at": "Lazarus Group"
         },
         {
-          "type": "stock",
-          "query": "hooded figure keyboard",
-          "at": "the Lazarus Group"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "timeline",
-          "text": "Sony 2014 · Bangladesh 2016",
+          "data": [
+            [
+              "Nov 2014",
+              "Sony hacked"
+            ],
+            [
+              "Feb 2016",
+              "Bank robbed"
+            ]
+          ],
           "at": "a long record"
         },
         {
           "type": "archival",
           "query": "Sony Pictures Studios Culver City",
-          "at": "it hacked Sony Pictures"
+          "at": "hacked Sony Pictures"
         },
         {
-          "type": "stock",
-          "query": "movie theater seats",
-          "at": "a comedy movie"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 81,
+            "prefix": "$",
+            "suffix": "M",
+            "label": "stolen from a bank"
+          },
+          "at": "$81 million"
         },
         {
           "type": "archival",
           "query": "Bangladesh Bank building Dhaka",
-          "at": "Bangladesh's central bank"
+          "at": "central bank"
         },
         {
-          "type": "stock",
-          "query": "money counting machine",
-          "at": "stole $81 million"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "A brand new kind of target",
+          "at": "new kind of target"
         },
         {
-          "type": "stock",
-          "query": "film clapperboard",
-          "at": "Not a movie studio"
-        },
-        {
-          "type": "stock",
-          "query": "bank vault door",
-          "at": "Not a bank"
-        },
-        {
-          "type": "archival",
-          "query": "The Pentagon aerial view",
-          "at": "America's defense companies"
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Defense companies",
+          "data": {
+            "state": "locked"
+          },
+          "at": "defense companies"
         }
       ]
     },
     {
       "id": 5,
       "act": "quiet",
-      "label": "Doing their homework first",
+      "label": "Bait made just for you",
       "mood": "tense",
-      "narration": "[cautiously] Before you trick someone, you need to know them. And the FBI says these hackers did their homework. Records show someone using a North Korean internet address. They visited the websites of targets like Lockheed Martin. At the same time, they were looking up Lockheed workers. And they were sending messages to its employees. Reports on the case say this was their habit. Before their attacks that worked, they studied their targets online. They checked social media, too. [short pause] Then they set the bait.",
+      "narration": "[cautiously] Before you trick someone, you need to know them. The FBI says these hackers did their homework. Someone on a North Korean internet address visited Lockheed Martin's websites. They looked up Lockheed workers and studied people on social media. Then came the bait, called spear-phishing. A normal scam email goes to thousands of people. Spear-phishing aims at one person. The hackers made accounts in the names of recruiters. Then they wrote to workers at rival companies.",
       "visuals": [
         {
           "type": "stock",
           "query": "magnifying glass papers",
-          "at": "you need to know them"
+          "at": "need to know them"
         },
         {
-          "type": "stock",
-          "query": "notebook writing hand",
-          "at": "did their homework"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "North Korean address",
+              "Lockheed websites"
+            ],
+            "amount": "Visits"
+          },
+          "at": "North Korean internet address"
         },
         {
-          "type": "stock",
-          "query": "internet cables lights",
-          "at": "a North Korean internet address"
-        },
-        {
-          "type": "stock",
-          "query": "website scrolling screen",
-          "at": "They visited the websites"
-        },
-        {
-          "type": "stock",
-          "query": "employee badge office",
-          "at": "looking up Lockheed workers"
-        },
-        {
-          "type": "stock",
-          "query": "typing message phone",
-          "at": "sending messages to its employees"
-        },
-        {
-          "type": "stock",
-          "query": "person browsing laptop night",
-          "at": "studied their targets online"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Lockheed workers researched",
+          "at": "looked up Lockheed workers"
         },
         {
           "type": "stock",
           "query": "social media phone scroll",
-          "at": "They checked social media"
+          "at": "social media"
+        },
+        {
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Spear-phishing",
+          "data": {
+            "state": "open"
+          },
+          "at": "called spear-phishing"
+        },
+        {
+          "type": "gfx",
+          "kind": "network",
+          "text": "Same scam, thousands of inboxes",
+          "at": "thousands of people"
         },
         {
           "type": "stock",
-          "query": "mousetrap cheese",
-          "at": "they set the bait"
+          "query": "archery target arrow",
+          "at": "aims at one person"
+        },
+        {
+          "type": "gfx",
+          "kind": "email",
+          "data": {
+            "from": "talent@example-recruiting.com",
+            "subject": "A role made for you",
+            "line": "Take a look at the file"
+          },
+          "at": "names of recruiters"
+        },
+        {
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "pick target; write offer; send",
+          "at": "wrote to workers"
         }
       ]
     },
     {
       "id": 6,
       "act": "escalation",
-      "label": "The recruiter who didn't exist",
-      "mood": "tense",
-      "narration": "The bait was a trick called spear-phishing. Normal phishing is like a big fishing net. The same scam email goes out to thousands of people. Spear-phishing is aimed at just one person. It's personal. It looks real. It's built to make you click a link or open a file. Here's how it worked this time, investigators say. The hackers made email accounts in the names of recruiters at one defense company. Then they wrote to workers at rival companies. [softly] Think about it. A job offer feels flattering. It feels private. It's just the kind of email you want to open.",
+      "label": "THAAD named in the bait",
+      "mood": "shock",
+      "narration": "Some of these emails, the Justice Department says, mentioned THAAD by name. [serious] In May 2017, the shield was set up in South Korea. That summer, North Korea launched missiles on July 4 and July 28. Newsweek reported they might reach the western United States. Right then, Palo Alto Networks, a security company, found fake job ads that hid malware. That means harmful software. One ad was for a manager on the THAAD program.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "spear fishing underwater",
-          "at": "a trick called spear-phishing"
+          "type": "archival",
+          "query": "US Department of Justice seal",
+          "at": "Justice Department says"
         },
         {
-          "type": "stock",
-          "query": "fishing net boat",
-          "at": "a big fishing net"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "THAAD named in the bait",
+          "at": "THAAD by name"
         },
         {
-          "type": "stock",
-          "query": "crowd walking city",
-          "at": "thousands of people"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "May 2017",
+              "THAAD in South Korea"
+            ],
+            [
+              "Jul 4",
+              "Missile launch"
+            ],
+            [
+              "Jul 28",
+              "Second launch"
+            ]
+          ],
+          "at": "In May 2017"
         },
         {
-          "type": "stock",
-          "query": "archery target arrow",
-          "at": "aimed at just one person"
+          "type": "archival",
+          "query": "THAAD battery South Korea",
+          "at": "set up in South Korea"
         },
         {
-          "type": "stock",
-          "query": "finger clicking mouse",
-          "at": "click a link"
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "Pyongyang",
+              39.0,
+              125.7
+            ],
+            [
+              "Los Angeles",
+              34.05,
+              -118.24
+            ]
+          ],
+          "at": "launched missiles"
         },
         {
-          "type": "stock",
-          "query": "fake name tag",
-          "at": "in the names of recruiters"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 28,
+            "prefix": "July ",
+            "label": "second missile launch"
+          },
+          "at": "July 28"
         },
         {
-          "type": "stock",
-          "query": "businesswoman typing email",
-          "at": "they wrote to workers"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Palo Alto finds fake job ads",
+          "at": "Palo Alto Networks"
         },
         {
-          "type": "stock",
-          "query": "man smiling phone",
-          "at": "A job offer feels flattering"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "open job_ad; hidden file runs",
+          "at": "hid malware"
         },
         {
-          "type": "stock",
-          "query": "closed office door",
-          "at": "It feels private"
-        },
-        {
-          "type": "stock",
-          "query": "hand hovering mouse",
-          "at": "you want to open"
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Job ad: THAAD program manager",
+          "at": "manager on the THAAD"
         }
       ]
     },
     {
       "id": 7,
-      "act": "escalation",
-      "label": "THAAD named in the bait",
-      "mood": "tense",
-      "narration": "Some of these emails, the Justice Department says, mentioned THAAD by name. [serious] Then, in May 2017, the shield was set up in South Korea. Tension with North Korea was rising fast. That summer, a security company called Palo Alto Networks spotted something. It found emails full of hidden malware, dressed up as job ads. Malware just means harmful software. The emails went to people who worked for US military contractors. Researchers linked them to the Lazarus Group. One fake ad, Newsweek reported, was for a manager job on the THAAD program.",
-      "visuals": [
-        {
-          "type": "archival",
-          "query": "US Department of Justice seal",
-          "at": "the Justice Department says"
-        },
-        {
-          "type": "motion",
-          "kind": "map",
-          "text": "THAAD · South Korea · May 2017",
-          "at": "in May 2017"
-        },
-        {
-          "type": "archival",
-          "query": "THAAD battery South Korea",
-          "at": "set up in South Korea",
-          "overlay": "South Korea, 2017"
-        },
-        {
-          "type": "stock",
-          "query": "news broadcast studio",
-          "at": "Tension with North Korea"
-        },
-        {
-          "type": "stock",
-          "query": "summer city heat",
-          "at": "That summer"
-        },
-        {
-          "type": "stock",
-          "query": "red alert screen",
-          "at": "spotted something"
-        },
-        {
-          "type": "stock",
-          "query": "computer virus warning",
-          "at": "hidden malware"
-        },
-        {
-          "type": "stock",
-          "query": "job listing newspaper",
-          "at": "dressed up as job ads"
-        },
-        {
-          "type": "stock",
-          "query": "soldier military base",
-          "at": "US military contractors"
-        },
-        {
-          "type": "stock",
-          "query": "business manager office",
-          "at": "a manager job"
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "act": "escalation",
-      "label": "Fireworks and missiles",
-      "mood": "shock",
-      "narration": "The timing was hard to ignore. On July 4, 2017, America's Independence Day, North Korea launched a missile. It was a new kind, called the Hwasong-14. It was built to fly from one continent to another. On July 28, North Korea launched another one. Newsweek reported the test showed its missiles might reach the western United States. [pause] And right around then, those fake job ads were landing in inboxes. [short pause] So did anyone fall for it?",
-      "visuals": [
-        {
-          "type": "stock",
-          "query": "clock ticking close",
-          "at": "The timing was hard"
-        },
-        {
-          "type": "stock",
-          "query": "fireworks night sky",
-          "at": "America's Independence Day"
-        },
-        {
-          "type": "stock",
-          "query": "rocket launch night",
-          "at": "North Korea launched a missile"
-        },
-        {
-          "type": "archival",
-          "query": "Hwasong-14 missile",
-          "at": "called the Hwasong-14"
-        },
-        {
-          "type": "stock",
-          "query": "earth from space",
-          "at": "from one continent to another"
-        },
-        {
-          "type": "stock",
-          "query": "night sky streak",
-          "at": "launched another one"
-        },
-        {
-          "type": "archival",
-          "query": "California coastline aerial",
-          "at": "the western United States"
-        },
-        {
-          "type": "stock",
-          "query": "notification inbox phone",
-          "at": "landing in inboxes"
-        },
-        {
-          "type": "stock",
-          "query": "worried woman laptop",
-          "at": "did anyone fall for it"
-        }
-      ]
-    },
-    {
-      "id": 9,
       "act": "scramble",
       "label": "The door that held",
       "mood": "hopeful",
-      "narration": "[surprised] At Lockheed Martin, the answer was no. The Justice Department says the attempts to break into Lockheed's computers did not succeed. [exhales] In hacking stories, that's a rare happy ending. But there's a lot we still don't know. The government hasn't said what stopped them. It hasn't said how many emails went out. And it hasn't said if every other company was as lucky. [serious] The hackers had failed here. But they had left something behind.",
+      "narration": "[surprised] At Lockheed Martin, the answer was no. The Justice Department says the attempts to break into Lockheed's computers did not succeed. [exhales] In hacking stories, that's a rare happy ending. But there's a lot we still don't know. The government hasn't said what stopped them. It hasn't said how many emails went out. [serious] The hackers had failed here. But they had left clues behind.",
       "visuals": [
         {
           "type": "archival",
@@ -482,293 +492,405 @@
           "at": "At Lockheed Martin"
         },
         {
-          "type": "stock",
-          "query": "locked door handle",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Break-in attempts failed",
+          "at": "the answer was no"
+        },
+        {
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Lockheed held",
+          "data": {
+            "state": "locked"
+          },
           "at": "break into Lockheed's computers"
         },
         {
-          "type": "stock",
-          "query": "server room blue",
+          "type": "gfx",
+          "kind": "redact",
+          "text": "FAILED",
           "at": "did not succeed"
         },
         {
           "type": "stock",
           "query": "sunrise city skyline",
-          "at": "a rare happy ending"
+          "at": "rare happy ending"
         },
         {
-          "type": "stock",
-          "query": "fog forest",
-          "at": "a lot we still don't know"
-        },
-        {
-          "type": "stock",
-          "query": "security operations center",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "What stopped them? Unknown",
           "at": "what stopped them"
         },
         {
-          "type": "stock",
-          "query": "stack of letters",
-          "at": "how many emails went out"
-        },
-        {
-          "type": "stock",
-          "query": "dice rolling table",
-          "at": "as lucky"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "count emails; result unknown",
+          "at": "how many emails"
         },
         {
           "type": "stock",
           "query": "footprints sand",
-          "at": "left something behind"
+          "at": "left clues behind"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "act": "unmasking",
+      "label": "One hundred search warrants",
+      "mood": "curious",
+      "narration": "FBI agents in Los Angeles had been chasing this crew since the Sony hack. The case grew and grew. In the end, agents used about 100 search warrants. Those let them look inside roughly 1,000 email and social media accounts. [cautiously] And they found clues tying the job emails to Sony. Some used the same fake names and accounts. Some were opened from North Korean internet addresses. Different target. Same crew.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "Los Angeles skyline night",
+          "at": "Los Angeles"
+        },
+        {
+          "type": "gfx",
+          "kind": "headline",
+          "text": "The FBI case keeps growing",
+          "at": "The case grew"
+        },
+        {
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 100,
+            "label": "search warrants"
+          },
+          "at": "100 search warrants"
+        },
+        {
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Search warrants",
+                100
+              ],
+              [
+                "Accounts checked",
+                1000
+              ]
+            ],
+            "unit": ""
+          },
+          "at": "1,000 email and social media accounts"
+        },
+        {
+          "type": "stock",
+          "query": "detective board strings",
+          "at": "found clues"
+        },
+        {
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Sony attack",
+              "Defense job emails"
+            ],
+            "amount": "Same crew"
+          },
+          "at": "job emails to Sony"
+        },
+        {
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "Pyongyang",
+              39.0,
+              125.7
+            ],
+            [
+              "Los Angeles",
+              34.05,
+              -118.24
+            ]
+          ],
+          "at": "North Korean internet addresses"
+        },
+        {
+          "type": "gfx",
+          "kind": "quote",
+          "text": "Different target. Same crew. - Investigators",
+          "at": "Same crew"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "act": "unmasking",
+      "label": "The fake name that slipped",
+      "mood": "reveal",
+      "narration": "Then the hackers' cover started to slip. They used a fake name online: Kim Hyon Woo. Park also had his own real accounts for his normal job. Investigators say the two worlds touched. Both email names started with the same three letters, tty. Each account was saved in the other's address book. And both were reached from some of the same internet addresses. [short pause] Two strangers kept using the same front door.",
+      "visuals": [
+        {
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Cover slips",
+          "data": {
+            "state": "crack"
+          },
+          "at": "cover started to slip"
+        },
+        {
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Fake name: Kim Hyon Woo",
+          "at": "Kim Hyon Woo"
+        },
+        {
+          "type": "stock",
+          "query": "man working office",
+          "at": "normal job"
+        },
+        {
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Kim Hyon Woo",
+              "Park Jin Hyok"
+            ],
+            "amount": "Linked"
+          },
+          "at": "the two worlds touched"
+        },
+        {
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "name_one: tty...; name_two: tty...",
+          "at": "same three letters"
+        },
+        {
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Saved in each other's contacts",
+          "at": "other's address book"
+        },
+        {
+          "type": "gfx",
+          "kind": "network",
+          "text": "Shared internet addresses",
+          "at": "same internet addresses"
+        },
+        {
+          "type": "stock",
+          "query": "front door house",
+          "at": "same front door"
         }
       ]
     },
     {
       "id": 10,
       "act": "unmasking",
-      "label": "One hundred search warrants",
-      "mood": "curious",
-      "narration": "In Los Angeles, FBI agents had been chasing this crew since the Sony hack in 2014. The case grew and grew. In the end, agents used about 100 search warrants. That let them look inside roughly 1,000 email and social media accounts. [cautiously] And they found clues tying the job-offer emails back to Sony. Some used the same fake names and accounts as the Sony attack. Some were opened from North Korean internet addresses. The hacking tools even shared a rare building block with the Sony tools. Different target. Same crew.",
-      "visuals": [
-        {
-          "type": "archival",
-          "query": "Los Angeles skyline night",
-          "at": "In Los Angeles",
-          "overlay": "Los Angeles, FBI"
-        },
-        {
-          "type": "archival",
-          "query": "FBI seal",
-          "at": "FBI agents"
-        },
-        {
-          "type": "stock",
-          "query": "files boxes archive",
-          "at": "The case grew"
-        },
-        {
-          "type": "motion",
-          "kind": "counter",
-          "text": "100 warrants · 1,000 accounts",
-          "at": "about 100 search warrants"
-        },
-        {
-          "type": "stock",
-          "query": "person scrolling emails",
-          "at": "email and social media accounts"
-        },
-        {
-          "type": "stock",
-          "query": "detective board strings",
-          "at": "they found clues"
-        },
-        {
-          "type": "stock",
-          "query": "name badge blank",
-          "at": "the same fake names"
-        },
-        {
-          "type": "stock",
-          "query": "world map lights",
-          "at": "North Korean internet addresses"
-        },
-        {
-          "type": "stock",
-          "query": "puzzle pieces fit",
-          "at": "a rare building block"
-        },
-        {
-          "type": "stock",
-          "query": "fingerprint scan close",
-          "at": "Same crew"
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "act": "unmasking",
-      "label": "The fake name that slipped",
+      "label": "A résumé and a big mistake",
       "mood": "reveal",
-      "narration": "Then the hackers' cover started to slip. They used a fake name online: Kim Hyon Woo. That name was on several email and social media accounts. Park, meanwhile, had his own real accounts for his normal job. Investigators say the two worlds touched. Both email names started with the same three letters, tty. Each account was saved in the other's address book. And both were reached from some of the same internet addresses. [short pause] It was like two strangers who kept using the same front door.",
-      "visuals": [
-        {
-          "type": "stock",
-          "query": "mask falling off",
-          "at": "cover started to slip"
-        },
-        {
-          "type": "stock",
-          "query": "keyboard typing close",
-          "at": "a fake name online"
-        },
-        {
-          "type": "stock",
-          "query": "login screen password",
-          "at": "several email and social media accounts"
-        },
-        {
-          "type": "stock",
-          "query": "man working office",
-          "at": "his normal job"
-        },
-        {
-          "type": "stock",
-          "query": "two hands touching",
-          "at": "the two worlds touched"
-        },
-        {
-          "type": "stock",
-          "query": "letters typewriter",
-          "at": "the same three letters"
-        },
-        {
-          "type": "stock",
-          "query": "phone contacts list",
-          "at": "the other's address book"
-        },
-        {
-          "type": "stock",
-          "query": "network cables router",
-          "at": "the same internet addresses"
-        },
-        {
-          "type": "stock",
-          "query": "front door house",
-          "at": "the same front door"
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "act": "unmasking",
-      "label": "A résumé and a lack of opsec",
-      "mood": "reveal",
-      "narration": "Then agents found Park's résumé. It said he worked as a developer. One of his skills was a coding language called Visual C++. Agents say that's the language used to build many of the Lazarus Group's hacking tools. [sarcastic] For a man accused of hiding behind fake names, he left a very real paper trail. Eric Chien, an expert at the security company Symantec, called it \"a lack of opsec.\" Opsec means keeping your secret work apart from your real life. [short pause] Park, the FBI says, didn't.",
+      "narration": "Then agents found Park's résumé. It said he worked as a developer. One skill was a coding language called Visual C++. Agents say that's the language used to build many Lazarus tools. [sarcastic] For a man accused of hiding behind fake names, he left a very real paper trail. Eric Chien of the security company Symantec called it \"a lack of opsec.\" Opsec means keeping secret work apart from real life. [short pause] Park, the FBI says, didn't.",
       "visuals": [
         {
           "type": "stock",
           "query": "resume paper desk",
-          "at": "found Park's résumé"
+          "at": "Park's résumé"
         },
         {
-          "type": "stock",
-          "query": "software developer screen",
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "Park Jin Hyok",
+          "data": {
+            "rows": [
+              [
+                "Job",
+                "Developer"
+              ],
+              [
+                "Skill",
+                "Visual C++"
+              ],
+              [
+                "Employer",
+                "Chosun Expo"
+              ]
+            ]
+          },
           "at": "worked as a developer"
         },
         {
-          "type": "stock",
-          "query": "code editor dark",
-          "at": "a coding language"
-        },
-        {
-          "type": "stock",
-          "query": "toolbox tools",
-          "at": "many of the Lazarus Group's hacking tools"
+          "type": "gfx",
+          "kind": "rack",
+          "text": "Lazarus tools, one language",
+          "at": "many Lazarus tools"
         },
         {
           "type": "stock",
           "query": "paper documents desk",
-          "at": "a very real paper trail"
+          "at": "paper trail"
         },
         {
-          "type": "motion",
+          "type": "gfx",
           "kind": "quote",
-          "text": "\"a lack of opsec\" — Eric Chien",
+          "text": "a lack of opsec - Eric Chien",
           "at": "a lack of opsec"
         },
         {
-          "type": "stock",
-          "query": "brick wall",
-          "at": "keeping your secret work apart"
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Secret work",
+                50
+              ],
+              [
+                "Real life",
+                50
+              ]
+            ],
+            "unit": ""
+          },
+          "at": "secret work apart"
         },
         {
-          "type": "stock",
-          "query": "family dinner table",
-          "at": "your real life"
-        },
-        {
-          "type": "stock",
-          "query": "spotlight dark stage",
+          "type": "gfx",
+          "kind": "redact",
+          "text": "EXPOSED",
           "at": "Park, the FBI says"
         }
       ]
     },
     {
-      "id": 13,
+      "id": 11,
       "act": "aftermath",
       "label": "Charged, but out of reach",
       "mood": "reveal",
-      "narration": "On June 8, 2018, prosecutors in Los Angeles filed charges in secret. On September 6, they made them public. Park Jin Hyok was charged with two crimes: hacking and fraud. The most serious one carries up to 20 years in prison. The case also tied the crew to WannaCry, a 2017 attack that locked up computers around the world. The Treasury also hit Park with sanctions. [serious] FBI Director Christopher Wray said: \"We stand with our partners to name the North Korean government as the force behind this destructive global cyber campaign.\"",
+      "narration": "On June 8, 2018, prosecutors in Los Angeles filed charges in secret. On September 6, they made them public. Park Jin Hyok was charged with two crimes: computer fraud and wire fraud. The worst carries up to 20 years in prison. Prosecutors also tied the crew to WannaCry, a 2017 attack that locked up computers worldwide. The Treasury put sanctions on Park. [serious] FBI Director Christopher Wray named the North Korean government as the force behind it.",
       "visuals": [
         {
           "type": "archival",
           "query": "United States Courthouse Los Angeles",
-          "at": "filed charges in secret"
+          "at": "prosecutors in Los Angeles"
         },
         {
-          "type": "motion",
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Jun 8, 2018",
+              "Filed in secret"
+            ],
+            [
+              "Sep 6, 2018",
+              "Made public"
+            ]
+          ],
+          "at": "charges in secret"
+        },
+        {
+          "type": "gfx",
           "kind": "headline",
           "text": "North Korean programmer charged",
-          "at": "they made them public"
+          "at": "made them public"
         },
         {
-          "type": "stock",
-          "query": "press conference microphones",
-          "at": "Park Jin Hyok was charged"
-        },
-        {
-          "type": "stock",
-          "query": "judge gavel",
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Computer fraud",
+                5
+              ],
+              [
+                "Wire fraud",
+                20
+              ]
+            ],
+            "unit": " yrs"
+          },
           "at": "two crimes"
         },
         {
-          "type": "stock",
-          "query": "prison bars",
-          "at": "20 years in prison"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 20,
+            "suffix": " yrs",
+            "label": "maximum prison term"
+          },
+          "at": "up to 20 years"
         },
         {
-          "type": "stock",
-          "query": "ransomware screen computer",
-          "at": "the crew to WannaCry"
-        },
-        {
-          "type": "stock",
-          "query": "hospital corridor",
-          "at": "around the world"
+          "type": "gfx",
+          "kind": "rack",
+          "text": "WannaCry locks computers",
+          "at": "locked up computers worldwide"
         },
         {
           "type": "archival",
           "query": "Treasury Building Washington",
-          "at": "The Treasury also hit"
+          "at": "The Treasury"
         },
         {
-          "type": "archival",
-          "query": "Christopher Wray official portrait",
+          "type": "gfx",
+          "kind": "quote",
+          "text": "destructive global cyber campaign - Christopher Wray",
           "at": "FBI Director Christopher Wray"
-        },
-        {
-          "type": "archival",
-          "query": "United States Capitol",
-          "at": "the North Korean government"
         }
       ]
     },
     {
-      "id": 14,
+      "id": 12,
       "act": "aftermath",
       "label": "The job offer that never stopped",
       "mood": "sad",
-      "narration": "Park has never been arrested. The US and North Korea have no deal to hand over suspects. So he's on the FBI's Most Wanted list, far out of reach. North Korea says it wasn't involved. [reflective] And the trick he's accused of helping run never really went away. In 2020, researchers at McAfee reported more fake job offers. They believed North Korean hackers were behind them. This time they went after defense and aerospace workers. [softly] So the next time a stranger offers you a dream job… read it twice. [short pause] If you like true stories like this, subscribe to Breach Uncovered.",
+      "narration": "Park has never been arrested. The two countries have no deal to hand over suspects. So he's on the FBI's Most Wanted list, far out of reach. North Korea denies any role. [reflective] The trick never really went away. In 2020, McAfee reported more fake job offers aimed at defense and aerospace workers. [softly] So if a stranger offers you a dream job… read it twice. If you like true stories like this, subscribe to Breach Uncovered.",
       "visuals": [
         {
-          "type": "archival",
-          "query": "FBI wanted poster Park Jin Hyok",
-          "at": "Park has never been arrested"
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "Park Jin Hyok",
+          "data": {
+            "rows": [
+              [
+                "Status",
+                "Never arrested"
+              ],
+              [
+                "List",
+                "FBI Most Wanted"
+              ],
+              [
+                "Charges",
+                "Two fraud counts"
+              ]
+            ]
+          },
+          "at": "never been arrested"
         },
         {
-          "type": "stock",
-          "query": "border fence barbed wire",
-          "at": "no deal to hand over suspects"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "United States",
+              "North Korea"
+            ],
+            "amount": "No deal",
+            "blocked": true
+          },
+          "at": "no deal to hand over"
+        },
+        {
+          "type": "gfx",
+          "kind": "redact",
+          "text": "WANTED",
+          "at": "Most Wanted list"
         },
         {
           "type": "stock",
@@ -776,18 +898,34 @@
           "at": "far out of reach"
         },
         {
-          "type": "archival",
-          "query": "Kim Il Sung Square",
-          "at": "North Korea says"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "North Korea denies involvement",
+          "at": "denies any role"
         },
         {
-          "type": "stock",
-          "query": "ocean waves dark",
-          "at": "never really went away"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "2016",
+              "Fake recruiters"
+            ],
+            [
+              "2020",
+              "More fake job offers"
+            ]
+          ],
+          "at": "In 2020"
         },
         {
-          "type": "stock",
-          "query": "laptop email dark room",
+          "type": "gfx",
+          "kind": "email",
+          "data": {
+            "from": "jobs@example-aerospace.com",
+            "subject": "Dream job opening",
+            "line": "Open the attached file"
+          },
           "at": "more fake job offers"
         },
         {
@@ -796,19 +934,13 @@
           "at": "defense and aerospace workers"
         },
         {
-          "type": "stock",
-          "query": "stranger handshake",
-          "at": "a stranger offers you"
-        },
-        {
-          "type": "stock",
-          "query": "reading phone close",
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Read it twice",
+          "data": {
+            "state": "locked"
+          },
           "at": "read it twice"
-        },
-        {
-          "type": "stock",
-          "query": "city night lights",
-          "at": "subscribe to Breach Uncovered"
         }
       ]
     }
@@ -918,6 +1050,11 @@
       "claim": "In July 2020 McAfee reported suspected North Korean hackers posing as job recruiters to target aerospace and defense workers",
       "source": "https://cyberscoop.com/north-korea-aerospace-defense-mcafee-job-offers/",
       "confidence": "reported"
+    },
+    {
+      "claim": "The Lazarus-linked conspiracy hacked Sony Pictures in November 2014 and stole $81 million from Bangladesh Bank in February 2016, according to the Justice Department complaint",
+      "source": "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "alleged"
     }
   ],
   "sources": [
