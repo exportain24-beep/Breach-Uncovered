@@ -1,0 +1,28 @@
+name: Self-test (secrets + services)
+on: { workflow_dispatch: {} }
+permissions: { contents: write }
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install numpy scipy pillow opencv-python-headless requests
+      - name: Run checks
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          FB_SYSTEM_USER_TOKEN: ${{ secrets.FB_SYSTEM_USER_TOKEN }}
+          FB_APP_ID: ${{ secrets.FB_APP_ID }}
+          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+        run: python3 tools/selftest.py
+        continue-on-error: true
+      - name: Save report
+        run: |
+          git config user.name "breach-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/selftest.md; git commit -m "Self-test report [skip ci]" || true; git pull --rebase -q || true; git push || true

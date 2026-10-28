@@ -10,6 +10,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 FONTS = os.path.join(HERE, "..", "assets", "fonts")
 def font(name, size): return ImageFont.truetype(os.path.join(FONTS, name), size)
 
+BRAND_YELLOW = (255, 212, 0)
 ACCENT = {  # category -> (accent, glow)
     "state": (255, 59, 48), "espionage": (0, 200, 255), "infra": (255, 176, 0), "finance": (46, 230, 140),
     "ransomware": (255, 59, 48), "breach": (255, 120, 40), "profile": (190, 110, 255),
@@ -64,10 +65,13 @@ def icon(d, cat, cx, cy, s, col):
         d.ellipse((cx - s*.2, cy - s*.46, cx + s*.2, cy - s*.06), fill=col)
         d.pieslice((cx - s*.5, cy - s*.12, cx + s*.5, cy + s*.9), 180, 360, fill=col)
         d.ellipse((cx - s*.11, cy - s*.34, cx + s*.11, cy - s*.12), fill=(6, 8, 14))
-    else:                                                      # shield (state / vuln)
+    else:                                                      # breached shield: exclamation + crack
         p = [(0,-.5),(.4,-.34),(.38,.1),(0,.5),(-.38,.1),(-.4,-.34)]
-        d.polygon([(cx + x*s, cy + y*s) for x, y in p], outline=col, fill=None, width=w)
-        d.line([(cx - s*.16, cy - s*.02), (cx - s*.03, cy + s*.12), (cx + s*.2, cy - s*.14)], fill=col, width=w)
+        d.polygon([(cx + x*s, cy + y*s) for x, y in p], fill=col)
+        k = (6, 8, 14)
+        d.polygon([(cx + x*s, cy + y*s) for x, y in [(-.21,-.43),(-.17,-.22),(-.26,-.08),(-.18,.1),(-.27,.27),(-.2,.4),(-.17,.24),(-.22,.08),(-.14,-.08),(-.22,-.22)]], fill=k)
+        d.rounded_rectangle((cx + s*.03, cy - s*.26, cx + s*.13, cy + s*.06), s*.02, fill=k)
+        d.ellipse((cx + s*.025, cy + s*.12, cx + s*.135, cy + s*.23), fill=k)
 
 def glitch_text(img, xy, text, f, fill, shift=5):
     """Chromatic-aberration text with a hard black stroke."""
@@ -88,6 +92,13 @@ def make(meta, out):
     cat = meta.get("category", "state"); accent, _ = ACCENT.get(cat, ACCENT["state"]), None
     rng = random.Random(meta.get("episode", 1) * 7919)
     img = bg(rng, accent); d = ImageDraw.Draw(img, "RGBA")
+    if meta.get("photo") and os.path.exists(meta["photo"]):
+        ph = Image.open(meta["photo"]).convert("L"); ph = ph.resize((int(H * ph.width / ph.height * 1.0), H)) if ph.width / ph.height > W / H * .6 else ph.resize((W // 2 + 200, int((W // 2 + 200) * ph.height / ph.width)))
+        ph = ImageChops.multiply(ph, Image.new("L", ph.size, 235)); ph = ph.crop((0, 0, min(ph.width, W // 2 + 200), min(ph.height, H)))
+        duo = Image.merge("RGB", [ph.point(lambda v, c=c: int(6 + v / 255 * (c - 6))) for c in (accent[0], accent[1], accent[2])])
+        mask = Image.linear_gradient("L").rotate(90).resize(duo.size); mask = ImageChops.invert(mask) if False else mask.transpose(Image.FLIP_LEFT_RIGHT)
+        base = Image.new("RGB", (W, H), (0, 0, 0)); base.paste(duo, (W - duo.width, 0)); full = Image.new("L", (W, H), 0); full.paste(mask, (W - duo.width, 0))
+        img = Image.composite(base, img, full.point(lambda v: int(v * .75)))
     # icon on the right, with a soft glow copy
     glow = Image.new("RGBA", (W, H), (0, 0, 0, 0)); icon(ImageDraw.Draw(glow), cat, 960, 360, 430, accent + (255,))
     img.paste(glow.filter(ImageFilter.GaussianBlur(28)), (0, 0), glow.filter(ImageFilter.GaussianBlur(28)))
@@ -95,23 +106,26 @@ def make(meta, out):
     # text block (left)
     l1, l2 = meta["line1"].upper(), meta["line2"].upper()
     f1 = fit(l1, "InterDisplay-Black.otf", 700, 150); f2 = fit(l2, "InterDisplay-Black.otf", 700, 150)
-    y = 190
+    y = 215
     glitch_text(img, (56, y), l1, f1, (255, 255, 255)); y += int(f1.size * 1.02)
-    glitch_text(img, (56, y), l2, f2, accent)
+    glitch_text(img, (56, y), l2, f2, BRAND_YELLOW)
     d = ImageDraw.Draw(img, "RGBA")
     # top-left case tag + year badge
     tag = f"CASE #{meta['episode']:03d}"
     ft = font("Inter-Bold.otf", 34); tw = ft.getlength(tag)
     d.rectangle((56, 44, 56 + tw + 40, 96), fill=accent + (255,)); d.text((76, 70), tag, font=ft, fill=(0, 0, 0), anchor="lm")
     fy = font("InterDisplay-Black.otf", 52); d.text((56 + tw + 70, 70), str(meta["year"]), font=fy, fill=(255, 255, 255), anchor="lm", stroke_width=4, stroke_fill=(0, 0, 0))
-    # bottom bar: true-story tag + brand
-    d.rectangle((0, H - 74, W, H), fill=(0, 0, 0, 200)); d.rectangle((0, H - 78, W, H - 74), fill=accent + (255,))
-    fb = font("Inter-Bold.otf", 30)
-    d.text((56, H - 37), meta.get("tag", "THE TRUE STORY").upper(), font=fb, fill=(255, 255, 255), anchor="lm")
-    d.text((W - 56, H - 37), "BREACH UNCOVERED", font=fb, fill=accent, anchor="rm")
+    # top-right brand mark; bottom-left tag; bottom-right stays EMPTY (YouTube timestamp overlay)
+    fb = font("Inter-Bold.otf", 28)
+    d.text((W - 56, 70), "BREACH UNCOVERED", font=fb, fill=(255, 255, 255, 235), anchor="rm")
+    d.rectangle((W - 56 - fb.getlength("BREACH UNCOVERED"), 92, W - 56, 97), fill=accent + (255,))
+    tag = meta.get("tag", "THE TRUE STORY").upper(); fg = font("Inter-Bold.otf", 34); tw2 = fg.getlength(tag)
+    d.rectangle((0, H - 92, tw2 + 112, H - 36), fill=(0, 0, 0, 215)); d.rectangle((0, H - 92, 14, H - 36), fill=accent + (255,))
+    d.text((40, H - 64), tag, font=fg, fill=(255, 255, 255), anchor="lm")
     # vignette
     v = Image.new("L", (W, H), 0); ImageDraw.Draw(v).ellipse((-260, -200, W + 260, H + 200), fill=255)
     v = v.filter(ImageFilter.GaussianBlur(120)); img = Image.composite(img, Image.new("RGB", (W, H), (0, 0, 0)), v)
+    ImageDraw.Draw(img).rectangle((0, 0, W - 1, H - 1), outline=(70, 78, 96), width=3)   # keeps edges visible in dark mode
     q = 92
     img.save(out, "JPEG", quality=q, optimize=True)
     while os.path.getsize(out) > 1_900_000 and q > 60:   # YouTube limit 2 MB
