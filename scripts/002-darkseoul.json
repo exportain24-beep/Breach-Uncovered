@@ -12,59 +12,63 @@
       "act": "cold_open",
       "label": "2 p.m. in Seoul: the screens die",
       "mood": "shock",
-      "narration": "[dramatically] One afternoon, a hidden timer killed thousands of computers across South Korea. [short pause] [serious] It's Wednesday, March 20, 2013, in Seoul. It's 2 in the afternoon. At big banks and major TV stations, screens freeze. Machines restart, and they never come back. One reporter takes a photo of a dead screen. It shows one cold line. [slowly] Boot device not found. [short pause] [curious] So who set that timer? And how? To find out, we have to go back almost a year.",
+      "narration": "[dramatically] At exactly 2 p.m., thousands of computers across South Korea died together. [short pause] [serious] It was Wednesday, March 20, 2013. Banks and TV stations froze. Machines restarted and never came back. One reporter photographed a dead screen. It said, Boot device not found. [curious] Someone had set a timer. But who? To find out, we go back almost a year.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "hidden bomb timer close up",
-          "at": "a hidden timer"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 2,
+            "suffix": " p.m.",
+            "label": "March 20, 2013"
+          },
+          "at": "At exactly 2 p.m."
         },
         {
-          "type": "stock",
-          "query": "computer screen glitch",
-          "at": "killed thousands of computers"
+          "type": "gfx",
+          "kind": "rack",
+          "text": "Screens go dark",
+          "data": {
+            "total": 48000
+          },
+          "at": "thousands of computers"
         },
         {
-          "type": "archival",
-          "query": "Seoul skyline daytime",
-          "at": "across South Korea",
-          "overlay": "Seoul, March 20, 2013"
-        },
-        {
-          "type": "stock",
-          "query": "office clock wall",
-          "at": "2 in the afternoon"
-        },
-        {
-          "type": "stock",
-          "query": "bank interior people",
-          "at": "At big banks"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Screens die across South Korea",
+          "at": "across South Korea"
         },
         {
           "type": "stock",
           "query": "frozen monitor office",
-          "at": "screens freeze"
+          "at": "Banks and TV stations froze"
         },
         {
-          "type": "stock",
-          "query": "computer reboot black",
-          "at": "Machines restart"
-        },
-        {
-          "type": "stock",
-          "query": "camera taking photo",
-          "at": "takes a photo"
-        },
-        {
-          "type": "motion",
-          "kind": "terminal",
-          "text": "Boot device not found.",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Boot device not found",
           "at": "Boot device not found"
         },
         {
           "type": "stock",
-          "query": "old calendar pages",
-          "at": "go back almost a year"
+          "query": "countdown timer digital",
+          "at": "Someone had set a timer"
+        },
+        {
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Jun 2012",
+              "Planning begins"
+            ],
+            [
+              "Mar 2013",
+              "Wipe hits"
+            ]
+          ],
+          "at": "almost a year"
         }
       ]
     },
@@ -73,27 +77,31 @@
       "act": "stakes",
       "label": "A country that lives online",
       "mood": "calm",
-      "narration": "[calmly] First, picture South Korea back then. It's one of the most connected countries on Earth. People pay with cards. They bank on their phones. They get their news from big TV networks like KBS and MBC. Big banks like Shinhan and NongHyup handle people's money all day long. All of it runs on computers that most people never think about. [short pause] [ominously] But just across the border, someone was thinking about them a lot.",
+      "narration": "[calmly] South Korea was one of the most connected countries on Earth. People paid with cards and banked on their phones. Big banks like Shinhan and NongHyup handled their money. TV networks like KBS and MBC told them the news. All of it ran on computers. [ominously] And investigators say someone across the border was planning to hit them.",
       "visuals": [
         {
           "type": "stock",
           "query": "Seoul street crowd",
-          "at": "picture South Korea back then"
+          "at": "most connected countries"
         },
         {
-          "type": "stock",
-          "query": "fiber optic lights",
-          "at": "most connected countries on Earth"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "A country always online",
+          "at": "paid with cards"
         },
         {
-          "type": "stock",
-          "query": "card payment terminal",
-          "at": "People pay with cards"
-        },
-        {
-          "type": "stock",
-          "query": "phone banking app",
-          "at": "bank on their phones"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Customers",
+              "Shinhan Bank",
+              "NongHyup Bank"
+            ],
+            "amount": "Money"
+          },
+          "at": "Big banks like Shinhan"
         },
         {
           "type": "archival",
@@ -101,24 +109,19 @@
           "at": "KBS and MBC"
         },
         {
-          "type": "archival",
-          "query": "Shinhan Bank Seoul",
-          "at": "Shinhan and NongHyup"
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Trusted systems",
+          "data": {
+            "state": "locked"
+          },
+          "at": "All of it ran"
         },
         {
-          "type": "stock",
-          "query": "server racks lights",
-          "at": "All of it runs on computers"
-        },
-        {
-          "type": "archival",
-          "query": "Korean Demilitarized Zone fence",
-          "at": "just across the border"
-        },
-        {
-          "type": "stock",
-          "query": "binoculars looking distance",
-          "at": "thinking about them a lot"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Danger across the border",
+          "at": "across the border"
         }
       ]
     },
@@ -127,46 +130,63 @@
       "act": "quiet_part",
       "label": "June 2012: the quiet start",
       "mood": "curious",
-      "narration": "[curious] That someone was North Korea. At least, that's what South Korean investigators would later say. They say the planning started in June 2012. Nobody in Seoul noticed a thing. In the months before the attack, workers got emails that looked normal. But they weren't normal. They were bait. Security company McAfee later found that emails like these planted back doors. A back door is a secret way into a computer. [whispers] The attackers were inside. And they were waiting.",
+      "narration": "[curious] South Korean investigators later blamed North Korea. They say the planning began in June 2012. Nobody in Seoul noticed. Workers got emails that looked normal. They were bait. Security company McAfee found emails like these planted back doors. A back door is a secret way into a computer. [whispers] The attackers were inside, and they were waiting.",
       "visuals": [
         {
-          "type": "archival",
-          "query": "Pyongyang skyline",
-          "at": "That someone was North Korea"
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "The suspect",
+          "data": {
+            "rows": [
+              [
+                "Accused",
+                "North Korea"
+              ],
+              [
+                "Planning",
+                "June 2012"
+              ],
+              [
+                "Target",
+                "South Korea"
+              ]
+            ]
+          },
+          "at": "blamed North Korea"
         },
         {
-          "type": "stock",
-          "query": "detectives evidence board",
-          "at": "South Korean investigators"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 8,
+            "suffix": " months",
+            "label": "of planning"
+          },
+          "at": "the planning began"
         },
         {
-          "type": "stock",
-          "query": "summer city street",
-          "at": "June 2012"
-        },
-        {
-          "type": "stock",
-          "query": "busy office workers",
-          "at": "Nobody in Seoul noticed"
-        },
-        {
-          "type": "stock",
-          "query": "email inbox screen",
+          "type": "gfx",
+          "kind": "email",
+          "data": {
+            "from": "hr@example-careers.com",
+            "subject": "Updated work schedule",
+            "line": "Open the attached file"
+          },
           "at": "emails that looked normal"
         },
         {
-          "type": "stock",
-          "query": "fishing hook bait",
+          "type": "gfx",
+          "kind": "redact",
+          "text": "BAIT",
           "at": "They were bait"
         },
         {
-          "type": "stock",
-          "query": "laptop dark room",
-          "at": "planted back doors"
-        },
-        {
-          "type": "stock",
-          "query": "door opening dark",
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Back door",
+          "data": {
+            "state": "open"
+          },
           "at": "a secret way into"
         },
         {
@@ -181,37 +201,38 @@
       "act": "quiet_part",
       "label": "A dangerous winter and a timer",
       "mood": "tense",
-      "narration": "[serious] Then came early 2013. Things between the two Koreas got very tense. In February, North Korea tested a nuclear weapon. Soon after, it said the deal that stopped the Korean War in 1953 was no longer valid. It was even threatening the United States. That same February, investigators say, North Korean computers ran a test of the attack. Like a fire drill. [short pause] Then someone set the timer. The date? March 20. The time? 2 in the afternoon.",
+      "narration": "[serious] Then came early 2013, and tensions rose. In February, North Korea tested a nuclear weapon. It also said the 1953 deal that stopped the Korean War no longer counted. That same month, investigators say, the attackers ran a test. Like a fire drill. [short pause] Then someone set the timer. March 20. 2 in the afternoon.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "winter city snow",
-          "at": "early 2013"
-        },
-        {
-          "type": "archival",
-          "query": "Panmunjom Joint Security Area",
-          "at": "the two Koreas"
-        },
-        {
-          "type": "stock",
-          "query": "news broadcast television",
+          "type": "gfx",
+          "kind": "redact",
+          "text": "NUCLEAR TEST",
           "at": "tested a nuclear weapon"
         },
         {
-          "type": "archival",
-          "query": "Korean Armistice Agreement 1953 signing",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "1953 armistice no longer valid",
           "at": "stopped the Korean War"
         },
         {
-          "type": "archival",
-          "query": "United States Capitol",
-          "at": "threatening the United States"
-        },
-        {
-          "type": "stock",
-          "query": "computer code screen",
-          "at": "ran a test of the attack"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "1953",
+              "Korean War deal"
+            ],
+            [
+              "Feb 2013",
+              "Nuclear test, drill"
+            ],
+            [
+              "Mar 20",
+              "Wipe day"
+            ]
+          ],
+          "at": "ran a test"
         },
         {
           "type": "stock",
@@ -219,15 +240,23 @@
           "at": "Like a fire drill"
         },
         {
-          "type": "stock",
-          "query": "countdown timer digital",
-          "at": "someone set the timer"
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Timer armed",
+          "data": {
+            "state": "locked"
+          },
+          "at": "set the timer"
         },
         {
-          "type": "motion",
+          "type": "gfx",
           "kind": "counter",
-          "text": "March 20 · 2:00 p.m.",
-          "at": "The date"
+          "data": {
+            "value": 20,
+            "prefix": "March ",
+            "label": "2 p.m. local time"
+          },
+          "at": "March 20"
         }
       ]
     },
@@ -235,28 +264,30 @@
       "id": 5,
       "act": "quiet_part",
       "label": "The safety tool that turned",
-      "mood": "tense",
-      "narration": "[cautiously] But how do you hit thousands of computers at the same moment? The attackers found a clever shortcut. Big companies use special software to send updates to all their computers at once. In some places, that software came from AhnLab, a Korean security company. The attackers used stolen usernames and passwords to get into it. [short pause] Think about that. The tool meant to keep computers safe would now deliver the bomb. It even tried to switch off antivirus programs first.",
+      "mood": "curious",
+      "narration": "[cautiously] But how do you hit thousands of computers at once? The attackers found a shortcut. Big companies use special software to send updates to all their computers. At some places, that software came from AhnLab, a Korean security company. The attackers used stolen usernames and passwords to get in. [short pause] The tool meant to keep computers safe now carried the bomb.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "rows of computers",
-          "at": "thousands of computers"
+          "type": "gfx",
+          "kind": "network",
+          "text": "One update, every computer",
+          "data": {
+            "total": 48000
+          },
+          "at": "thousands of computers at once"
         },
         {
-          "type": "stock",
-          "query": "shortcut path road",
-          "at": "a clever shortcut"
-        },
-        {
-          "type": "stock",
-          "query": "software update progress",
-          "at": "send updates"
-        },
-        {
-          "type": "stock",
-          "query": "corporate office building",
-          "at": "all their computers at once"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Update software",
+              "Banks",
+              "TV stations"
+            ],
+            "amount": "Malware"
+          },
+          "at": "send updates to all"
         },
         {
           "type": "archival",
@@ -264,24 +295,25 @@
           "at": "came from AhnLab"
         },
         {
-          "type": "stock",
-          "query": "password login screen",
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "login admin; password hidden; access granted",
           "at": "stolen usernames and passwords"
         },
         {
-          "type": "stock",
-          "query": "security shield screen",
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Trusted tool broken",
+          "data": {
+            "state": "crack"
+          },
           "at": "meant to keep computers safe"
         },
         {
-          "type": "stock",
-          "query": "delivery truck road",
-          "at": "deliver the bomb"
-        },
-        {
-          "type": "stock",
-          "query": "switch turning off",
-          "at": "switch off antivirus programs"
+          "type": "gfx",
+          "kind": "redact",
+          "text": "LOGIC BOMB",
+          "at": "carried the bomb"
         }
       ]
     },
@@ -290,52 +322,52 @@
       "act": "escalation",
       "label": "2 p.m.: the wipe begins",
       "mood": "shock",
-      "narration": "[dramatically] March 20. The clock hits 2. The timer goes off. [short pause] The program is a wiper. That means it doesn't steal. It destroys. It erases the small part of a hard drive that tells a computer how to start up. Without it, the machine is just a dead box. Researchers at Sophos found it wrote one strange word over and over. Hastati. It's an old name for soldiers in ancient Rome's army. [serious] And it didn't just hit desk computers. It went after big servers too.",
+      "narration": "[dramatically] March 20. The clock hit 2. The timer went off. [short pause] The program was a wiper. It doesn't steal. It destroys. It erased the part of a hard drive that tells a computer how to start. Without that, the machine is a dead box. Researchers at Sophos found it wrote one strange word over and over. Hastati. It's the name of an ancient Roman army unit.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "clock second hand",
-          "at": "The clock hits 2"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 14,
+            "suffix": ":00",
+            "label": "timer set for March 20"
+          },
+          "at": "The clock hit 2"
         },
         {
-          "type": "stock",
-          "query": "red alert screen",
-          "at": "The timer goes off"
+          "type": "gfx",
+          "kind": "redact",
+          "text": "WIPER",
+          "at": "The program was a wiper"
         },
         {
-          "type": "stock",
-          "query": "eraser rubbing paper",
-          "at": "It destroys"
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Start-up code erased",
+          "data": {
+            "state": "crack"
+          },
+          "at": "how to start"
         },
         {
-          "type": "stock",
-          "query": "hard drive spinning",
-          "at": "small part of a hard drive"
+          "type": "gfx",
+          "kind": "rack",
+          "text": "Machines go dead",
+          "data": {
+            "total": 48000
+          },
+          "at": "a dead box"
         },
         {
-          "type": "stock",
-          "query": "computer black screen",
-          "at": "just a dead box"
-        },
-        {
-          "type": "stock",
-          "query": "scientist computer lab",
-          "at": "Researchers at Sophos"
-        },
-        {
-          "type": "stock",
-          "query": "repeating text screen",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "HASTATI.",
           "at": "one strange word"
         },
         {
           "type": "archival",
           "query": "Roman legion reenactment",
-          "at": "ancient Rome's army"
-        },
-        {
-          "type": "stock",
-          "query": "data center aisle",
-          "at": "big servers too"
+          "at": "ancient Roman army unit"
         }
       ]
     },
@@ -344,32 +376,37 @@
       "act": "escalation",
       "label": "Frozen ATMs, dark newsrooms",
       "mood": "tense",
-      "narration": "[worried] Out on the streets, people felt it fast. At Shinhan Bank, online banking and ATMs went down for about two hours. Cash machines froze in other places too. At one Starbucks in downtown Seoul, people were asked to pay in cash. Inside the TV stations, it was just as bad. Staff at KBS, MBC and YTN, a news channel, couldn't log in to their news systems. [short pause] Oddly, the shows stayed on the air. [nervous] But who was doing this?",
+      "narration": "[worried] Out on the streets, people felt it fast. At Shinhan Bank, online banking and ATMs went down for about two hours. At one Starbucks in downtown Seoul, customers had to pay cash. Inside the TV stations, staff at KBS, MBC and YTN couldn't log in to their news systems. [short pause] Oddly, the shows stayed on the air. [nervous] But who was behind it?",
       "visuals": [
         {
-          "type": "stock",
-          "query": "busy city sidewalk",
-          "at": "Out on the streets"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "Customer",
+              "ATM",
+              "Shinhan Bank"
+            ],
+            "amount": "Cash",
+            "blocked": true
+          },
+          "at": "At Shinhan Bank"
         },
         {
-          "type": "stock",
-          "query": "ATM machine street",
-          "at": "online banking and ATMs"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 2,
+            "suffix": " hours",
+            "label": "Shinhan shutdown"
+          },
+          "at": "about two hours"
         },
         {
-          "type": "stock",
-          "query": "ATM screen error",
-          "at": "Cash machines froze"
-        },
-        {
-          "type": "stock",
-          "query": "coffee shop counter",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Seoul Starbucks: cash only",
           "at": "one Starbucks in downtown Seoul"
-        },
-        {
-          "type": "stock",
-          "query": "paying with cash",
-          "at": "pay in cash"
         },
         {
           "type": "archival",
@@ -377,19 +414,16 @@
           "at": "Inside the TV stations"
         },
         {
-          "type": "stock",
-          "query": "newsroom desks monitors",
-          "at": "news systems"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "login KBS; login MBC; login YTN; access denied",
+          "at": "couldn't log in"
         },
         {
-          "type": "stock",
-          "query": "on air sign",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Broadcasts not affected",
           "at": "stayed on the air"
-        },
-        {
-          "type": "stock",
-          "query": "worried man phone",
-          "at": "who was doing this"
         }
       ]
     },
@@ -398,12 +432,22 @@
       "act": "escalation",
       "label": "Skulls on the homepage",
       "mood": "curious",
-      "narration": "[curious] That same afternoon, a strange answer popped up. The website of LG U+, a big Korean internet company, was taken over. It showed skulls. It played the sound of laughter. A group called the Whois Team said they did it. Their message said: [softly] This is the beginning of our movement. [short pause] Unfortunately, we have deleted your data. We'll be back soon. [serious] It looked like a silly prank by show-offs. Some experts thought so too. They were wrong.",
+      "narration": "[curious] That afternoon, a strange clue popped up. The website of LG U+, a big Korean internet company, was taken over. It showed skulls and played laughter. A group called the Whois Team claimed it. Their message said, [softly] This is the beginning of our movement. [short pause] Unfortunately, we have deleted your data. [serious] It looked like a prank. It wasn't.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "web browser loading",
-          "at": "a strange answer popped up"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "2:00 p.m.",
+              "Wiper triggers"
+            ],
+            [
+              "Same day",
+              "LG U+ site defaced"
+            ]
+          ],
+          "at": "That afternoon"
         },
         {
           "type": "archival",
@@ -411,40 +455,27 @@
           "at": "a big Korean internet company"
         },
         {
-          "type": "stock",
-          "query": "skull dark screen",
+          "type": "gfx",
+          "kind": "redact",
+          "text": "DEFACED",
           "at": "It showed skulls"
         },
         {
-          "type": "stock",
-          "query": "evil laughing mask",
-          "at": "the sound of laughter"
-        },
-        {
-          "type": "stock",
-          "query": "masked figure computer",
-          "at": "the Whois Team"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "quote",
-          "text": "\"This is the beginning of our movement.\"",
+          "text": "This is the beginning of our movement. - Whois Team",
           "at": "beginning of our movement"
         },
         {
-          "type": "stock",
-          "query": "deleting files screen",
+          "type": "gfx",
+          "kind": "quote",
+          "text": "We have deleted your data. - Whois Team",
           "at": "we have deleted your data"
         },
         {
           "type": "stock",
           "query": "prank joke clown",
-          "at": "a silly prank"
-        },
-        {
-          "type": "stock",
-          "query": "experts meeting table",
-          "at": "Some experts thought so"
+          "at": "It looked like a prank"
         }
       ]
     },
@@ -453,53 +484,74 @@
       "act": "escalation",
       "label": "48,000 computers wiped",
       "mood": "sad",
-      "narration": "[serious] Over the next days, the damage got clearer. At first, officials counted about 32,000 broken computers. Then the number kept going up. In the end, investigators said 48,000 computers and servers were hit. That's more than every seat at Yankee Stadium. Some banks had trouble for two to five days. [short pause] There was one piece of good news. Officials said no bank records or personal data were taken. [slowly] This attack wasn't about money. It was about chaos.",
+      "narration": "[serious] Over the next days, the damage grew clearer. First, officials counted about 32,000 broken computers. In the end, they said 48,000 computers and servers were hit. That's more than the seats in Yankee Stadium. Some banks struggled for two to five days. [short pause] But officials said no bank records or personal data were taken. [slowly] This attack wasn't about money. It was about chaos.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "broken computers pile",
-          "at": "the damage got clearer"
-        },
-        {
-          "type": "stock",
-          "query": "officials press conference",
-          "at": "officials counted"
-        },
-        {
-          "type": "motion",
+          "type": "gfx",
           "kind": "counter",
-          "text": "32,000 → 48,000 computers",
+          "data": {
+            "value": 32,
+            "suffix": "K",
+            "label": "first estimate"
+          },
           "at": "about 32,000 broken computers"
         },
         {
-          "type": "stock",
-          "query": "graph rising arrow",
-          "at": "the number kept going up"
+          "type": "gfx",
+          "kind": "rack",
+          "text": "Final count",
+          "data": {
+            "total": 48000
+          },
+          "at": "48,000 computers and servers"
         },
         {
-          "type": "stock",
-          "query": "server room technician",
-          "at": "computers and servers were hit"
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Yankee Stadium seats",
+                46500
+              ],
+              [
+                "Machines hit",
+                48000
+              ]
+            ],
+            "unit": ""
+          },
+          "at": "seats in Yankee Stadium"
         },
         {
-          "type": "archival",
-          "query": "Yankee Stadium",
-          "at": "every seat at Yankee Stadium"
-        },
-        {
-          "type": "stock",
-          "query": "bank queue waiting",
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Day 1",
+              "Banks go down"
+            ],
+            [
+              "Days 2-5",
+              "Banks still struggling"
+            ]
+          ],
           "at": "two to five days"
         },
         {
-          "type": "stock",
-          "query": "bank vault door",
-          "at": "no bank records"
+          "type": "gfx",
+          "kind": "lock",
+          "text": "No data stolen",
+          "data": {
+            "state": "locked"
+          },
+          "at": "personal data were taken"
         },
         {
-          "type": "stock",
-          "query": "chaos traffic jam",
-          "at": "It was about chaos"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Not about money",
+          "at": "wasn't about money"
         }
       ]
     },
@@ -508,165 +560,153 @@
       "act": "scramble",
       "label": "The China clue that wasn't",
       "mood": "tense",
-      "narration": "[nervous] Now everyone wanted a name. And on March 21, the day after the attack, it looked like they had one. South Korea's internet watchdog said the bad code came from an address in China. The news spread fast. [short pause] Then officials took it back. The address wasn't in China at all. It belonged to NongHyup Bank's own network. Someone had misread it in the rush. [sighs] It showed how hard it is to catch a hacker. Clues can lie.",
+      "narration": "[nervous] Everyone wanted a name. On March 21, South Korea's internet regulator said the bad code came from an address in China. Then officials took it back. The address belonged to NongHyup Bank's own network. [sighs] Clues can lie. And the attackers weren't done. On March 25 and 26, a second wave hit dozens of servers and websites. [curious] Investigators found more than 1,000 internet addresses in 40 countries. So where did it start?",
       "visuals": [
         {
           "type": "stock",
           "query": "reporters microphones crowd",
-          "at": "everyone wanted a name"
+          "at": "Everyone wanted a name"
         },
         {
-          "type": "stock",
-          "query": "morning city sunrise",
-          "at": "the day after the attack"
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Mar 20",
+              "Wipe hits"
+            ],
+            [
+              "Mar 21",
+              "China address claim"
+            ],
+            [
+              "Later",
+              "Claim retracted"
+            ]
+          ],
+          "at": "On March 21"
         },
         {
-          "type": "stock",
-          "query": "magnifying glass document",
-          "at": "internet watchdog"
-        },
-        {
-          "type": "archival",
-          "query": "Beijing skyline",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Code traced to China?",
           "at": "an address in China"
         },
         {
-          "type": "stock",
-          "query": "newspaper printing press",
-          "at": "The news spread fast"
+          "type": "gfx",
+          "kind": "redact",
+          "text": "RETRACTED",
+          "at": "took it back"
         },
         {
-          "type": "stock",
-          "query": "man shaking head",
-          "at": "officials took it back"
+          "type": "gfx",
+          "kind": "network",
+          "text": "Second wave: servers hit",
+          "data": {
+            "total": 58
+          },
+          "at": "a second wave hit"
         },
         {
-          "type": "archival",
-          "query": "NongHyup Bank building",
-          "at": "NongHyup Bank's own network"
-        },
-        {
-          "type": "stock",
-          "query": "rushing people office",
-          "at": "misread it in the rush"
-        },
-        {
-          "type": "stock",
-          "query": "foggy road night",
-          "at": "Clues can lie"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 40,
+            "suffix": " countries",
+            "label": "1,000+ addresses"
+          },
+          "at": "in 40 countries"
         }
       ]
     },
     {
       "id": 11,
-      "act": "scramble",
-      "label": "They came back for more",
-      "mood": "tense",
-      "narration": "[worried] And the attackers weren't done. Just days later, on March 25 and 26, a second wave hit. It struck dozens of servers and more than a dozen websites. Some of those sites were run by people who had escaped from North Korea. Meanwhile, investigators dug through mountains of clues. They found more than 1,000 internet addresses spread across 40 countries. [short pause] The trail went all over the world. [curious] But where did it really start?",
+      "act": "unmasking",
+      "label": "April 10: Seoul names a suspect",
+      "mood": "reveal",
+      "narration": "[serious] On April 10, 2013, South Korean officials faced reporters. They named North Korea. They said a spy agency run by the North's military was behind it. Many of the harmful programs had been used before. And North Korean systems had reached into South Korean networks at least 13 times. Chun Kil-soo, from Korea's internet security agency, said, [slowly] We saw evidence that the attack was extremely carefully prepared.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "storm waves crashing",
-          "at": "a second wave hit"
+          "type": "gfx",
+          "kind": "counter",
+          "data": {
+            "value": 10,
+            "prefix": "April ",
+            "label": "2013: Seoul names North Korea"
+          },
+          "at": "On April 10, 2013"
         },
         {
           "type": "stock",
-          "query": "server lights blinking",
-          "at": "dozens of servers"
+          "query": "press conference podium",
+          "at": "South Korean officials faced"
         },
         {
-          "type": "stock",
-          "query": "website error page",
-          "at": "more than a dozen websites"
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "North Korea's spy agency",
+          "data": {
+            "rows": [
+              [
+                "Base",
+                "North Korea"
+              ],
+              [
+                "Type",
+                "Military spy agency"
+              ],
+              [
+                "Status",
+                "Accused"
+              ]
+            ]
+          },
+          "at": "They named North Korea"
         },
         {
-          "type": "stock",
-          "query": "border fence barbed",
-          "at": "escaped from North Korea"
+          "type": "gfx",
+          "kind": "bars",
+          "data": {
+            "items": [
+              [
+                "Programs found",
+                76
+              ],
+              [
+                "Reused before",
+                30
+              ]
+            ],
+            "unit": ""
+          },
+          "at": "had been used before"
         },
         {
-          "type": "stock",
-          "query": "files stacked desk",
-          "at": "mountains of clues"
+          "type": "gfx",
+          "kind": "flow",
+          "data": {
+            "nodes": [
+              "North Korean systems",
+              "South Korean networks"
+            ],
+            "amount": "13 times"
+          },
+          "at": "reached into South Korean networks"
         },
         {
-          "type": "stock",
-          "query": "world map digital",
-          "at": "40 countries"
-        },
-        {
-          "type": "stock",
-          "query": "airplane flight path",
-          "at": "all over the world"
-        },
-        {
-          "type": "stock",
-          "query": "forest path trail",
-          "at": "where did it really start"
+          "type": "gfx",
+          "kind": "quote",
+          "text": "Extremely carefully prepared. - Chun Kil-soo",
+          "at": "We saw evidence"
         }
       ]
     },
     {
       "id": 12,
       "act": "unmasking",
-      "label": "April 10: Seoul names a suspect",
-      "mood": "reveal",
-      "narration": "[serious] On April 10, 2013, South Korean officials stood up in front of reporters. They named North Korea. They said a spy agency run by the North's military was behind it. Here's why. Many of the harmful programs had been used before, in older attacks. And North Korean systems had reached into South Korean networks at least 13 times. Chun Kil-soo, from Korea's internet security agency, put it simply. [slowly] We saw evidence that the attack was extremely carefully prepared.",
-      "visuals": [
-        {
-          "type": "stock",
-          "query": "press conference podium",
-          "at": "stood up in front of reporters"
-        },
-        {
-          "type": "archival",
-          "query": "Pyongyang Juche Tower",
-          "at": "They named North Korea"
-        },
-        {
-          "type": "stock",
-          "query": "soldiers marching parade",
-          "at": "run by the North's military"
-        },
-        {
-          "type": "stock",
-          "query": "old files archive",
-          "at": "used before, in older attacks"
-        },
-        {
-          "type": "stock",
-          "query": "network cables plugged",
-          "at": "reached into South Korean networks"
-        },
-        {
-          "type": "stock",
-          "query": "fingerprint scan screen",
-          "at": "at least 13 times"
-        },
-        {
-          "type": "stock",
-          "query": "man speaking microphone",
-          "at": "put it simply"
-        },
-        {
-          "type": "motion",
-          "kind": "quote",
-          "text": "\"Extremely carefully prepared.\"",
-          "at": "extremely carefully prepared"
-        },
-        {
-          "type": "stock",
-          "query": "chess board strategy",
-          "at": "We saw evidence"
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "act": "unmasking",
       "label": "Years in the shadows",
       "mood": "curious",
-      "narration": "[curious] Private security companies kept digging. And the story got bigger. Symantec gave the hackers a name: the DarkSeoul gang. It linked them to about four years of attacks on South Korea. Many of them hit on dates that meant something. On June 25, 2013, the anniversary of the start of the Korean War, government websites were attacked again. Symantec tied one of those attacks to the same gang. McAfee found spying on South Korea's military going back to at least 2009. [ominously] The wipe was just the loud part.",
+      "narration": "[curious] Security companies kept digging. Symantec named the hackers the DarkSeoul gang. It tied them to about four years of attacks on South Korea. One hit came on June 25, 2013, the anniversary of the start of the Korean War. McAfee found spying on South Korea's military going back to at least 2009. [ominously] The wipe was just the loud part.",
       "visuals": [
         {
           "type": "stock",
@@ -674,160 +714,205 @@
           "at": "kept digging"
         },
         {
-          "type": "stock",
-          "query": "city lights night",
-          "at": "the story got bigger"
-        },
-        {
-          "type": "stock",
-          "query": "analyst studying screens",
-          "at": "Symantec gave the hackers"
-        },
-        {
-          "type": "stock",
-          "query": "dark alley night",
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "The DarkSeoul gang",
+          "data": {
+            "rows": [
+              [
+                "Named by",
+                "Symantec"
+              ],
+              [
+                "Active",
+                "About four years"
+              ],
+              [
+                "Target",
+                "South Korea"
+              ]
+            ]
+          },
           "at": "the DarkSeoul gang"
         },
         {
-          "type": "motion",
+          "type": "gfx",
           "kind": "timeline",
-          "text": "2009 spying · 2013 wiper · June 25 attacks",
-          "at": "about four years of attacks"
+          "data": [
+            [
+              "2009",
+              "Spying begins"
+            ],
+            [
+              "2013",
+              "Wiper attack"
+            ],
+            [
+              "Jun 25, 2013",
+              "Anniversary attack"
+            ]
+          ],
+          "at": "four years of attacks"
         },
         {
-          "type": "stock",
-          "query": "calendar date circled",
-          "at": "dates that meant something"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Anniversary attack: June 25",
+          "at": "One hit came on June 25"
         },
         {
           "type": "archival",
           "query": "War Memorial of Korea Seoul",
-          "at": "the start of the Korean War"
+          "at": "start of the Korean War"
         },
         {
-          "type": "stock",
-          "query": "government website laptop",
-          "at": "government websites were attacked"
+          "type": "gfx",
+          "kind": "redact",
+          "text": "OPERATION TROY",
+          "at": "The wipe was just"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "act": "aftermath",
+      "label": "The road to Hollywood",
+      "mood": "reveal",
+      "narration": "[deep voice] Now jump ahead to November 2014. Sony Pictures, the Hollywood studio, was hacked. On December 19, the FBI blamed North Korea. And it pointed back to Seoul. It said the Sony tools were like those used in March 2013 against South Korean banks and TV stations. [short pause] In 2016, security companies tied both attacks to one team. Today, it's known as Lazarus.",
+      "visuals": [
+        {
+          "type": "gfx",
+          "kind": "timeline",
+          "data": [
+            [
+              "Mar 2013",
+              "Seoul wiper"
+            ],
+            [
+              "Nov 2014",
+              "Sony hacked"
+            ],
+            [
+              "Dec 19",
+              "FBI statement"
+            ]
+          ],
+          "at": "jump ahead to November 2014"
         },
         {
-          "type": "stock",
-          "query": "military radar screen",
-          "at": "South Korea's military"
+          "type": "archival",
+          "query": "Sony Pictures Studios Culver City",
+          "at": "the Hollywood studio"
         },
         {
-          "type": "stock",
-          "query": "thunder lightning storm",
-          "at": "just the loud part"
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Sony Pictures hacked",
+          "at": "was hacked"
+        },
+        {
+          "type": "gfx",
+          "kind": "redact",
+          "text": "FBI STATEMENT",
+          "at": "the FBI blamed North Korea"
+        },
+        {
+          "type": "gfx",
+          "kind": "globe",
+          "data": [
+            [
+              "Seoul",
+              37.6,
+              127.0
+            ],
+            [
+              "Culver City",
+              34.0,
+              -118.4
+            ]
+          ],
+          "at": "pointed back to Seoul"
+        },
+        {
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Sony tools matched Seoul tools",
+          "at": "Sony tools were like"
+        },
+        {
+          "type": "gfx",
+          "kind": "dossier",
+          "text": "Lazarus Group",
+          "data": {
+            "rows": [
+              [
+                "Linked",
+                "DarkSeoul and Sony"
+              ],
+              [
+                "Year",
+                "2016"
+              ],
+              [
+                "Report",
+                "Operation Blockbuster"
+              ]
+            ]
+          },
+          "at": "known as Lazarus"
         }
       ]
     },
     {
       "id": 14,
       "act": "aftermath",
-      "label": "The road to Hollywood",
-      "mood": "reveal",
-      "narration": "[deep voice] Now jump ahead to November 2014. Sony Pictures, the Hollywood movie studio, gets hacked. A wiper erases its computers. On December 19, the FBI says North Korea's government did it. And the FBI points straight back to Seoul. It says the tools used on Sony were like the ones used that March against South Korean banks and TV stations. [short pause] In 2016, a group of security companies tied both attacks to one team of hackers. Today, they're known as Lazarus.",
-      "visuals": [
-        {
-          "type": "archival",
-          "query": "Hollywood sign",
-          "at": "jump ahead to November 2014"
-        },
-        {
-          "type": "archival",
-          "query": "Sony Pictures Studios Culver City",
-          "at": "the Hollywood movie studio",
-          "overlay": "Culver City, 2014"
-        },
-        {
-          "type": "stock",
-          "query": "office computers dark",
-          "at": "A wiper erases its computers"
-        },
-        {
-          "type": "archival",
-          "query": "FBI seal",
-          "at": "the FBI says"
-        },
-        {
-          "type": "motion",
-          "kind": "network",
-          "text": "Seoul 2013 → Sony 2014",
-          "at": "points straight back to Seoul"
-        },
-        {
-          "type": "stock",
-          "query": "toolbox tools closeup",
-          "at": "the tools used on Sony"
-        },
-        {
-          "type": "stock",
-          "query": "team meeting computers",
-          "at": "a group of security companies"
-        },
-        {
-          "type": "stock",
-          "query": "hooded figures shadow",
-          "at": "one team of hackers"
-        },
-        {
-          "type": "stock",
-          "query": "dark room monitors",
-          "at": "they're known as Lazarus"
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "act": "aftermath",
       "label": "The warning nobody heard",
       "mood": "sad",
-      "narration": "[reflective] Here's what makes this story so chilling. Almost everything from the Sony hack happened in Seoul first. The quiet break-in. The fake hacker group. The skulls on a screen. The timer set to the minute. At the time, an American cybersecurity expert named James Barnett gave a warning. [serious] This needs to be a wake-up call. This can happen anywhere. [long pause] [softly] Most of the world didn't wake up. Not until it hit Hollywood. If you like true stories like this, subscribe to Breach Uncovered.",
+      "narration": "[reflective] Here's what makes this chilling. Almost everything in the Sony hack happened in Seoul first. The quiet break-in. The fake hacker group. The skulls on a screen. A timer set to the minute. American expert James Barnett warned, [serious] This needs to be a wake-up call. This can happen anywhere. [long pause] [softly] Most of the world didn't wake up until it hit Hollywood. If you like true stories like this, subscribe to Breach Uncovered.",
       "visuals": [
         {
-          "type": "stock",
-          "query": "Seoul night aerial",
+          "type": "gfx",
+          "kind": "headline",
+          "text": "Seoul came first",
           "at": "happened in Seoul first"
         },
         {
-          "type": "stock",
-          "query": "lock picking door",
+          "type": "gfx",
+          "kind": "lock",
+          "text": "Quiet break-in",
+          "data": {
+            "state": "open"
+          },
           "at": "The quiet break-in"
         },
         {
-          "type": "stock",
-          "query": "anonymous mask dark",
+          "type": "gfx",
+          "kind": "doc",
+          "text": "Whois Team claimed it",
           "at": "The fake hacker group"
         },
         {
-          "type": "stock",
-          "query": "glitch skull monitor",
-          "at": "The skulls on a screen"
+          "type": "gfx",
+          "kind": "terminal",
+          "text": "set timer; 14:00; wait",
+          "at": "A timer set"
         },
         {
-          "type": "stock",
-          "query": "stopwatch closeup",
-          "at": "The timer set to the minute"
+          "type": "gfx",
+          "kind": "quote",
+          "text": "This needs to be a wake-up call. - James Barnett",
+          "at": "This needs to be"
         },
         {
-          "type": "stock",
-          "query": "alarm clock ringing",
-          "at": "a wake-up call"
-        },
-        {
-          "type": "stock",
-          "query": "globe spinning night",
+          "type": "gfx",
+          "kind": "quote",
+          "text": "This can happen anywhere. - James Barnett",
           "at": "This can happen anywhere"
-        },
-        {
-          "type": "stock",
-          "query": "city sleeping dawn",
-          "at": "didn't wake up"
         },
         {
           "type": "archival",
           "query": "Hollywood Boulevard",
-          "at": "Not until it hit Hollywood"
+          "at": "until it hit Hollywood"
         }
       ]
     }
