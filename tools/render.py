@@ -17,13 +17,18 @@ from thumbnail import ACCENT
 W, H, FPS = 1920, 1080, 24
 YEL = (255, 212, 0)
 GAP, ACT_GAP, OUTRO = 0.40, 0.65, 3.0
-LOGO_PATH = os.path.join(HERE, "..", "assets", "brand", "logo.png")
+BRAND = os.path.join(HERE, "..", "assets", "brand")
 _LOGO = {}
-def logo(size):
-    """Channel logo (assets/brand/logo.png), cached per size; always the same artwork."""
-    if size not in _LOGO:
-        _LOGO[size] = Image.open(LOGO_PATH).convert("RGBA").resize((size, size), Image.LANCZOS)
-    return _LOGO[size]
+def _load(name, key, w=None, h=None):
+    k = (name, w, h)
+    if k not in _LOGO:
+        im = Image.open(os.path.join(BRAND, name)).convert("RGBA")
+        if w: h = round(im.height * w / im.width)
+        else: w = round(im.width * h / im.height)
+        _LOGO[k] = im.resize((w, h), Image.LANCZOS)
+    return _LOGO[k]
+def logo(height): return _load("logo_mark.png", "m", h=height)        # B keyhole mark (transparent background)
+def wordmark(width): return _load("logo_wordmark.png", "w", w=width)   # mark + BREACH UNCOVERED (transparent background)
 
 # ------------------------------------------------------------------------------------------ timing
 def words_of(narr): return re.sub(r"\[[^\]]*\]", " ", narr).split()
@@ -302,9 +307,8 @@ def render(script_path, workdir, out, max_seconds=None, seed=1):
         # logo sting right after the cold open (scene 2): channel identity, once per video
         if si == 1 and .15 <= lt < 2.2:
             q = lt - .15; a = min(1, q / .3) * min(1, (2.05 - q) / .4); sz = int(300 + 40 * min(1, q / 2.0))
-            st_ = Image.new("RGBA", (900, 520), (0, 0, 0, 0)); lg = logo(sz); st_.alpha_composite(lg, ((900 - sz) // 2, 0))
-            sd = ImageDraw.Draw(st_); sd.text((450, 450), "BREACH UNCOVERED", font=motion.DISP(64), fill=(255, 255, 255, 255), anchor="mm")
-            blend(fr, st_, (W - 900) // 2, 250, a * .96)
+            wm = wordmark(int(820 + 60 * min(1, q / 2.0)))
+            blend(fr, wm, (W - wm.width) // 2, (H - wm.height) // 2 - 40, a * .98)
         # hud, progress, fades
         blend(fr, hud, 28, 22, .9)
         cv2.rectangle(fr, (0, H - 6), (int(W * T / total), H), acc, -1)
@@ -312,12 +316,11 @@ def render(script_path, workdir, out, max_seconds=None, seed=1):
         if T > total - OUTRO + .3:
             k = min(1, (T - (total - OUTRO + .3)) / 1.0); fr = (fr * (1 - k)).astype(np.uint8)
             if k > .5:
-                end = Image.new("RGBA", (1400, 640), (0, 0, 0, 0)); ed = ImageDraw.Draw(end)
-                end.alpha_composite(logo(340), (530, 0))
-                ed.text((700, 400), "BREACH UNCOVERED", font=motion.DISP(96), fill=(255, 255, 255, 255), anchor="mm")
-                ed.text((700, 500), "TRUE STORIES OF REAL HACKS", font=motion.BOLD(40), fill=YEL + (255,), anchor="mm")
-                ed.text((700, 575), "SUBSCRIBE FOR THE NEXT CASE FILE", font=motion.BOLD(30), fill=(255, 255, 255, 200), anchor="mm")
-                blend(fr, end, (W - 1400) // 2, 190, (k - .5) * 2)
+                wm = wordmark(1180); end = Image.new("RGBA", (1400, wm.height + 170), (0, 0, 0, 0)); ed = ImageDraw.Draw(end)
+                end.alpha_composite(wm, ((1400 - wm.width) // 2, 0))
+                ed.text((700, wm.height + 40), "TRUE STORIES OF REAL HACKS", font=motion.BOLD(40), fill=YEL + (255,), anchor="mm")
+                ed.text((700, wm.height + 110), "SUBSCRIBE FOR THE NEXT CASE FILE", font=motion.BOLD(30), fill=(255, 255, 255, 200), anchor="mm")
+                blend(fr, end, (W - 1400) // 2, (H - end.height) // 2, (k - .5) * 2)
         pipe.stdin.write(np.ascontiguousarray(fr).tobytes())
         if fi % 240 == 0: print(f"  frame {fi}/{nfr}  ({time.time() - t_start:.0f}s)", flush=True)
     pipe.stdin.close(); pipe.wait()
