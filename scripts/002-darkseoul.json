@@ -1,0 +1,144 @@
+{
+  "episode": 2,
+  "key": "darkseoul",
+  "title": "DarkSeoul — the wiper that came before Sony",
+  "year": 2013,
+  "category": "state",
+  "needs_review": false,
+  "review_note": "",
+  "scenes": [
+    {"id": 1, "act": "cold_open", "label": "2 p.m.: Seoul's screens go dark",
+     "narration": "[serious] Wednesday, March 20, 2013. Seoul, South Korea. At exactly 2 in the afternoon, computers inside some of the country's biggest banks and TV networks stop working. Not slowly. All at once. [short pause] Screens freeze. Machines reboot — and never come back. One reporter photographs a single line glowing on a dead monitor: Boot device not found. [slowly] Please install an operating system on your hard disk.",
+     "visuals": [
+       {"type": "stock", "query": "office computers screens dark", "overlay": "2:00 p.m."},
+       {"type": "motion", "kind": "title", "text": "Seoul, South Korea · March 20, 2013"},
+       {"type": "motion", "kind": "terminal", "text": "Boot device not found. Please install an operating system on your hard disk."}
+     ]},
+    {"id": 2, "act": "stakes", "label": "Banks, broadcasters, and a blackout",
+     "narration": "[curious] The list of victims reads like a who's who of South Korean daily life. KBS and MBC, two of the nation's largest broadcasters. YTN, a 24-hour news channel. Shinhan Bank, NongHyup Bank, and branches of Jeju Bank, along with insurance affiliates. At Shinhan, online banking and ATMs went down for about two hours. Across the country, cash machines froze. At a Starbucks in downtown Seoul, customers were asked to pay in cash. For millions of people, the question was simple — [short pause] what is happening to our money?",
+     "visuals": [
+       {"type": "archival", "query": "KBS broadcasting center Yeouido Seoul", "overlay": "KBS · MBC · YTN"},
+       {"type": "stock", "query": "ATM machine city street", "overlay": "ATMs offline"},
+       {"type": "motion", "kind": "network", "text": "Shinhan · NongHyup · Jeju Bank · KBS · MBC · YTN"}
+     ]},
+    {"id": 3, "act": "stakes", "label": "Why a crash in Seoul matters",
+     "narration": "[serious] South Korea is one of the most wired countries on Earth. Its banks and newsrooms run on networks most people never think about. And March 2013 was not a calm moment. A month earlier, North Korea had tested a nuclear weapon. It had just declared the 1953 armistice — the agreement that stopped the Korean War — no longer valid, and it was openly threatening the United States. So when the screens went black, a defense ministry spokesman chose his words carefully: [cautiously] they did not rule out North Korea, but said it was premature to say so.",
+     "visuals": [
+       {"type": "stock", "query": "Seoul city night skyline", "overlay": "Tensions rising"},
+       {"type": "motion", "kind": "timeline", "text": "Feb 2013: North Korea nuclear test → March 2013: armistice declared void → March 20: screens go dark"}
+     ]},
+    {"id": 4, "act": "quiet_part", "label": "The skulls on the homepage",
+     "narration": "[ominously] At about the same moment, the homepage of LG U+, a major South Korean internet provider, was replaced. Skulls. Lightning effects. The sound of laughter. And a message from a group calling itself the Whois Team, who said they had, quote, an interest in hacking. A video carrying their claim said: [softly] This is the beginning of our movement. [short pause] Unfortunately, we have deleted your data. We'll be back soon. [serious] It looked like a prank by attention-seeking amateurs. Some analysts thought exactly that. They were wrong.",
+     "visuals": [
+       {"type": "motion", "kind": "quote", "text": "\"This is the beginning of our movement.\" — Whois Team"},
+       {"type": "stock", "query": "skull glitch computer screen", "overlay": "Whois Team"}
+     ]},
+    {"id": 5, "act": "quiet_part", "label": "What the wiper actually did",
+     "narration": "[serious] This was not a typical attack. Most hacks steal something. This one destroyed. The malicious program was a wiper — software built to erase. It went after the master boot record, the tiny section of a hard drive that tells a computer how to start. Wipe that, and the machine has no idea who it is. Researchers at Sophos found the drives were overwritten with a single repeated word: [slowly] Hastati… or Principes. Both are names of ranks in the ancient Roman army's battle line.",
+     "visuals": [
+       {"type": "motion", "kind": "doc_callout", "text": "Disk overwritten: HASTATI. HASTATI. HASTATI."},
+       {"type": "archival", "query": "Roman legion soldiers illustration", "overlay": "Hastati · Principes"}
+     ]},
+    {"id": 6, "act": "quiet_part", "label": "A time bomb set for 2 p.m.",
+     "narration": "[cautiously] And the timing was no accident. One version of the wiper was programmed to wait until March 20, 2013, at 14:00 local time — 2 p.m. — before doing anything at all. It also tried to shut down programs from two Korean antivirus companies, AhnLab and Hauri, and then forced the computer to restart. It didn't stop at Windows PCs, either. A companion script went after Linux and Unix servers, the heavy-duty machines in the back room. [short pause] Someone had studied these networks. Closely.",
+     "visuals": [
+       {"type": "motion", "kind": "counter", "text": "Trigger: March 20, 2013 · 14:00"},
+       {"type": "stock", "query": "server room corridor", "overlay": "Servers targeted too"}
+     ]},
+    {"id": 7, "act": "escalation", "label": "Turning the defenses into a weapon",
+     "narration": "[serious] How did it reach so many machines at once? AhnLab's own emergency response team found part of the answer. The attackers had gained access to a patch management system — the trusted tool companies use to push software updates to every computer they own. [slowly] The very system meant to keep machines safe became the delivery truck. McAfee later reported that, in the months before, spear-phishing emails — targeted messages dressed up to look legitimate — had planted back doors inside target PCs. The attackers were already in. They were just waiting.",
+     "visuals": [
+       {"type": "motion", "kind": "network", "text": "Update server → thousands of PCs"},
+       {"type": "stock", "query": "email inbox laptop dark", "overlay": "Spear-phishing"}
+     ]},
+    {"id": 8, "act": "escalation", "label": "48,000 machines",
+     "narration": "[dramatically] The first estimate was about 32,000 computers. It kept climbing. South Korean investigators eventually put the total at 48,000 PCs and servers — roughly the number of seats at Yankee Stadium, every one of them wiped. Staff at KBS, MBC and YTN couldn't use their news systems for days, although officials said TV broadcasts themselves stayed on the air. Banks were hampered for two to five days. [short pause] Regulators did say one thing for comfort: no bank records or personal data had been compromised. This attack was not about theft. It was about chaos.",
+     "visuals": [
+       {"type": "motion", "kind": "counter", "text": "32,000 → 48,000 computers"},
+       {"type": "stock", "query": "newsroom television studio", "overlay": "Down for days"}
+     ]},
+    {"id": 9, "act": "scramble", "label": "The trail that led to China",
+     "narration": "[nervous] The day after the attack, the scramble produced its first big lead. South Korea's communications regulator announced that malicious code spread through NongHyup Bank's server had been traced to an IP address in China. Headlines followed. [short pause] Then, quietly, officials took it back. The address wasn't Chinese at all. It was a private internal address belonging to NongHyup itself — misread in the rush. [sighs] It was an early lesson in how hard it is to say who is behind a cyberattack.",
+     "visuals": [
+       {"type": "motion", "kind": "headline", "text": "Cyberattack traced to Chinese address"},
+       {"type": "motion", "kind": "redact", "text": "Retracted: address belonged to NongHyup Bank"}
+     ]},
+    {"id": 10, "act": "scramble", "label": "They came back for more",
+     "narration": "[worried] And the attackers weren't finished. Days later, on March 25 and 26, a second wave hit 58 servers and 14 websites — including sites run by North Korean defectors. Meanwhile, investigators were working through a mountain of evidence: access logs, malware samples, more than 1,000 IP addresses spread across 40 countries. They needed more than a hunch. They needed a fingerprint.",
+     "visuals": [
+       {"type": "motion", "kind": "timeline", "text": "March 20: wiper · March 25–26: 58 servers, 14 websites"},
+       {"type": "motion", "kind": "map", "text": "1,000+ IP addresses · 40 countries"}
+     ]},
+    {"id": 11, "act": "unmasking", "label": "April 10: Seoul names Pyongyang",
+     "narration": "[serious] On April 10, 2013, South Korean officials stepped up to the microphones. Their verdict: the attack bore the marks of North Korea's Reconnaissance General Bureau, its main military intelligence agency. Investigators said the planning began in June 2012 — about eight months earlier. They said North Korean computers had tested the attack orders in February. Of 76 malware programs used, 30 were recycled from earlier attacks. And South Korean networks had been directly accessed at least 13 times from systems known to be operated by North Korea. [short pause] One official put it plainly: [slowly] We saw evidence that the attack was extremely carefully prepared.",
+     "visuals": [
+       {"type": "motion", "kind": "doc_callout", "text": "Planning began: June 2012 · Test run: February 2013"},
+       {"type": "motion", "kind": "quote", "text": "\"Extremely carefully prepared.\" — Korea Internet & Security Agency"}
+     ]},
+    {"id": 12, "act": "unmasking", "label": "Four years in the shadows",
+     "narration": "[curious] Private researchers kept digging — and the story got bigger. Symantec dubbed the attackers the DarkSeoul gang and tied them to roughly four years of attacks on South Korea, often timed to symbolic dates. On June 25, 2013, the 63rd anniversary of the start of the Korean War, government websites were hit again, and Symantec linked one of those attacks directly to DarkSeoul. McAfee went further. It found a campaign it called Operation Troy, dating back to at least 2009, built to spy on South Korea's military. [ominously] The wiper, it turned out, was just the loudest part of a much longer operation.",
+     "visuals": [
+       {"type": "motion", "kind": "timeline", "text": "2009: Operation Troy begins · March 2013: wiper · June 25, 2013: war anniversary attacks"},
+       {"type": "archival", "query": "Korean War Memorial Washington DC", "overlay": "June 25, 2013"}
+     ]},
+    {"id": 13, "act": "aftermath", "label": "The rehearsal for Hollywood",
+     "narration": "[deep voice] Fast-forward to November 2014. Sony Pictures, in Culver City, California, is hit by a wiper that erases its computers. On December 19, the FBI officially blames the North Korean government. And in that statement, the bureau points straight back to Seoul. It says the tools used against Sony were similar to those in a cyberattack the previous March against South Korean banks and media outlets. [short pause] In 2016, a coalition of security companies called Operation Blockbuster connected DarkSeoul and Sony to the same crew — the group now known as Lazarus.",
+     "visuals": [
+       {"type": "archival", "query": "FBI seal", "overlay": "December 19, 2014"},
+       {"type": "archival", "query": "Sony Pictures studio Culver City", "overlay": "Sony Pictures, 2014"},
+       {"type": "motion", "kind": "network", "text": "DarkSeoul 2013 → Sony 2014 → Lazarus"}
+     ]},
+    {"id": 14, "act": "aftermath", "label": "The warning nobody outside heard",
+     "narration": "[reflective] Here is what makes DarkSeoul haunting. Every piece of the Sony playbook was already on display in Seoul: the patient break-in, the fake hacktivist name, the skulls on the screen, the wiper set to a precise hour. As one American cybersecurity lawyer said at the time: [serious] This needs to be a wake-up call. This can happen anywhere. [long pause] [softly] Most of the world didn't wake up — not until it happened in Hollywood. If you like stories like this, subscribe to Breach Uncovered.",
+     "visuals": [
+       {"type": "motion", "kind": "quote", "text": "\"This can happen anywhere.\""},
+       {"type": "stock", "query": "city night lights aerial", "overlay": ""}
+     ]}
+  ],
+  "facts": [
+    {"claim": "Computers at South Korean banks and broadcasters went down at 2 p.m. local time on Wednesday, March 20, 2013.", "source": "https://www.washingtontimes.com/news/2013/mar/20/major-computer-crash-in-skorea-hackers-suspected/", "confidence": "confirmed"},
+    {"claim": "A KBS World Radio reporter photographed a screen reading 'Boot device not found. Please install an operating system on your hard disk.'", "source": "https://www.nbcnews.com/news/amp/wbna51256632", "confidence": "reported"},
+    {"claim": "Victims included KBS, MBC, YTN, Shinhan Bank, NongHyup Bank, Jeju Bank and insurance affiliates.", "source": "https://www.darkreading.com/cyberattacks-data-breaches/north-korea-behind-bank-malware-south-korea-says", "confidence": "confirmed"},
+    {"claim": "Shinhan Bank had a roughly two-hour shutdown including online banking and ATMs; a downtown Seoul Starbucks asked customers to pay cash; TV broadcasts were not affected.", "source": "https://www.washingtontimes.com/news/2013/mar/20/major-computer-crash-in-skorea-hackers-suspected/", "confidence": "reported"},
+    {"claim": "North Korea had tested a nuclear weapon a month earlier and revoked the 1953 armistice; a defense ministry spokesman said it was premature to blame the North.", "source": "https://www.nbcnews.com/news/amp/wbna51256632", "confidence": "reported"},
+    {"claim": "LG U+ homepage replaced with skulls, laughter and lightning effects and a Whois Team message 'an interest in hacking' / 'beginning of our movement'.", "source": "https://www.malwarebytes.com/ja/blog/news/2013/03/who-is-whois", "confidence": "confirmed"},
+    {"claim": "Whois Team video: 'Unfortunately, We have deleted your data. We'll be back soon.'", "source": "https://www.nbcnews.com/news/amp/wbna51256632", "confidence": "reported"},
+    {"claim": "Wipers overwrote the MBR with repeated 'HASTATI.' or 'PRINCPES' strings, names of Roman battle-line units; one variant waited until March 20, 2013 14:00; tried to kill AhnLab and Hauri processes; forced reboot; a companion script targeted Linux/Unix servers.", "source": "https://www.sophos.com/research/wiper-malware-analysis-attacking-korean-financial-sector", "confidence": "confirmed"},
+    {"claim": "AhnLab ASEC found attackers distributed malware through patch management software.", "source": "https://www.darkreading.com/cyberattacks-data-breaches/north-korea-behind-bank-malware-south-korea-says", "confidence": "confirmed"},
+    {"claim": "Spear-phishing emails in the three months before the attack installed back doors (McAfee).", "source": "https://www.theregister.com/2013/07/11/mcafee_dark_seoul_analysis/", "confidence": "reported"},
+    {"claim": "Initial estimate about 32,000 computers; later 48,000 PCs and servers.", "source": "https://www.darkreading.com/cyberattacks-data-breaches/north-korea-behind-bank-malware-south-korea-says", "confidence": "confirmed"},
+    {"claim": "Banks hampered two to five days; broadcasters' staff couldn't access news systems for several days; no bank records or personal data compromised; 76 malware programs, 30 recycled; 1,000+ IPs in 40 countries; planned about eight months; quote 'extremely carefully prepared'.", "source": "https://amp.cbc.ca/news/world/south-korea-blames-north-korea-for-cyberattack-1.1323636", "confidence": "reported"},
+    {"claim": "On March 21, 2013 the Korea Communications Commission traced code to a Chinese IP; later retracted as a NongHyup private IP address.", "source": "https://www.foxnews.com/world/probe-shows-chinese-address-as-source-of-cyberattack-in-south-korea", "confidence": "confirmed"},
+    {"claim": "Second wave March 25-26 targeted 58 servers and 14 websites including North Korean defector sites; planning from June 2012; February 2013 test; 13 direct accesses from North Korean systems; Reconnaissance General Bureau methods.", "source": "https://www.darkreading.com/cyberattacks-data-breaches/north-korea-behind-bank-malware-south-korea-says", "confidence": "alleged"},
+    {"claim": "South Korea announced North Korea attribution on April 10, 2013.", "source": "https://expansion.mx/mundo/2013/04/10/corea-del-sur-culpa-al-norte-de-ciberataques-contra-sus-bancos-y-medios", "confidence": "confirmed"},
+    {"claim": "Symantec tied the DarkSeoul gang to about four years of attacks, including a June 25, 2013 DDoS on the 63rd Korean War anniversary.", "source": "https://www.security.com/threat-intelligence/darkseoul-cyberattacks-south-korea", "confidence": "reported"},
+    {"claim": "McAfee's Operation Troy dates to at least 2009 and aimed to spy on South Korea's military.", "source": "https://www.theregister.com/2013/07/11/mcafee_dark_seoul_analysis/", "confidence": "reported"},
+    {"claim": "FBI on December 19, 2014 said Sony malware was similar to tools used in a March 2013 cyberattack against South Korean banks and media outlets.", "source": "https://databreaches.net/2014/12/19/fbi-update-on-sony-investigation/", "confidence": "confirmed"},
+    {"claim": "Operation Blockbuster (February 2016) linked DarkSeoul and the Sony attack to the Lazarus Group.", "source": "https://www.kaspersky.com/about/news/virus/2016/Kaspersky-Lab-helps-to-disrupt-activity-of-Lazarus-Group-responsible-for-multiple-devastating-cyber-attacks", "confidence": "reported"},
+    {"claim": "James Barnett of Venable: 'This needs to be a wake-up call. This can happen anywhere.'", "source": "https://www.foxnews.com/world/probe-shows-chinese-address-as-source-of-cyberattack-in-south-korea", "confidence": "confirmed"}
+  ],
+  "sources": [
+    "https://www.darkreading.com/cyberattacks-data-breaches/north-korea-behind-bank-malware-south-korea-says",
+    "https://www.washingtontimes.com/news/2013/mar/20/major-computer-crash-in-skorea-hackers-suspected/",
+    "https://www.nbcnews.com/news/amp/wbna51256632",
+    "https://amp.cbc.ca/news/world/south-korea-blames-north-korea-for-cyberattack-1.1323636",
+    "https://www.foxnews.com/world/probe-shows-chinese-address-as-source-of-cyberattack-in-south-korea",
+    "https://www.sophos.com/research/wiper-malware-analysis-attacking-korean-financial-sector",
+    "https://www.malwarebytes.com/ja/blog/news/2013/03/who-is-whois",
+    "https://www.security.com/threat-intelligence/darkseoul-cyberattacks-south-korea",
+    "https://www.theregister.com/2013/07/11/mcafee_dark_seoul_analysis/",
+    "https://databreaches.net/2014/12/19/fbi-update-on-sony-investigation/",
+    "https://www.fbi.gov/news/press-releases/update-on-sony-investigation",
+    "https://www.kaspersky.com/about/news/virus/2016/Kaspersky-Lab-helps-to-disrupt-activity-of-Lazarus-Group-responsible-for-multiple-devastating-cyber-attacks"
+  ],
+  "seo": {
+    "youtube_title": "DarkSeoul Hack: How North Korea Wiped 48,000 Computers Before Sony",
+    "youtube_description": "DarkSeoul explained: the true story of how 48,000 computers at South Korean banks and TV networks were wiped at exactly 2 p.m. on March 20, 2013.\nThe cyberattack South Korea blamed on North Korea — and the FBI later linked to the Sony Pictures hack.\n\nOn March 20, 2013, ATMs froze, bank systems crashed and newsrooms at KBS, MBC and YTN went dark as a wiper erased hard drives across South Korea. A group calling itself the Whois Team posted skulls on an internet provider's homepage, but investigators found something far more patient: months of planning, a hijacked software-update system and malware recycled from earlier attacks.\n\nIn April 2013, South Korea attributed the attack to North Korea's Reconnaissance General Bureau. Security researchers tied the DarkSeoul gang to years of attacks, and in December 2014 the FBI cited the South Korea attack when it blamed North Korea for hacking Sony Pictures. This hacking documentary walks through the whole story, using only public records and reporting.\n\n{{CHAPTERS}}\n\nSources:\nhttps://www.darkreading.com/cyberattacks-data-breaches/north-korea-behind-bank-malware-south-korea-says\nhttps://www.sophos.com/research/wiper-malware-analysis-attacking-korean-financial-sector\nhttps://www.security.com/threat-intelligence/darkseoul-cyberattacks-south-korea\nhttps://www.theregister.com/2013/07/11/mcafee_dark_seoul_analysis/\nhttps://www.fbi.gov/news/press-releases/update-on-sony-investigation\n\nEducational documentary based on public records. No hacking instructions.\n\n#cybersecurity #truecrime #DarkSeoul",
+    "tags": ["DarkSeoul", "Dark Seoul cyberattack", "South Korea cyber attack 2013", "Lazarus Group", "North Korea hackers", "2013", "cyber attack", "true story", "hacking documentary", "cybersecurity", "cybercrime", "wiper malware", "Whois Team hack", "Sony hack North Korea", "South Korea banks hacked", "Operation Troy"],
+    "hashtags": ["#cybersecurity", "#truecrime", "#DarkSeoul"],
+    "thumb": {"line1": "48,000 PCs", "line2": "WIPED AT 2 PM", "tag": "NORTH KOREA VS SEOUL"},
+    "facebook_text": "At exactly 2 p.m., 48,000 computers across South Korea erased themselves.\n\n- ATMs froze and TV newsrooms at KBS, MBC and YTN went dark on March 20, 2013\n- Investigators said planning began about eight months earlier\n- The FBI later pointed to this attack when it blamed North Korea for the Sony hack\n\nWould you have recognized it as a warning?\n\n#cybersecurity #truecrime #DarkSeoul",
+    "first_comment": "DarkSeoul looked like a prank by a group called Whois Team, but it was months in the making. Should the world have seen the Sony hack coming after this?",
+    "search_terms": ["dark seoul cyberattack", "south korea cyber attack 2013", "how north korea hacked south korean banks", "march 20 2013 south korea hack", "darkseoul explained", "lazarus group dark seoul", "south korea banks broadcasters hacked"]
+  }
+}
