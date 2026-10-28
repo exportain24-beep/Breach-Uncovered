@@ -1,5 +1,8 @@
 name: Self-test (secrets + services)
-on: { workflow_dispatch: {} }
+on:
+  workflow_dispatch: {}
+  push:
+    paths: ["tools/.selftest-trigger"]
 permissions: { contents: write }
 jobs:
   test:
