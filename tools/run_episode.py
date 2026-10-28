@@ -57,6 +57,8 @@ def post_pending_comments(state):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--episode", type=int); ap.add_argument("--dry", action="store_true"); ap.add_argument("--now", action="store_true", help="publish ~15 min after upload instead of the next fixed slot"); ap.add_argument("--offline", action="store_true", help="no network: estimated timing, procedural visuals (local testing)"); a = ap.parse_args()
+    if os.path.exists("data/PAUSE") and not a.episode and not a.dry:
+        print("publishing is paused (data/PAUSE exists):", open("data/PAUSE").read().strip()[:200]); return 0
     state = load_state(); cases = json.load(open("data/cases.json"))
     if not a.dry:
         try: post_pending_comments(state); save_state(state)
