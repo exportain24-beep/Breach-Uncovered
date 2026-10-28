@@ -1,0 +1,47 @@
+name: Blender 3D test renders
+on:
+  push:
+    paths: ["blender3d/.test-now"]     # first line = script inside blender3d/ to run
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: breach-blender, cancel-in-progress: false }
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cache Blender + MakeHuman assets
+        uses: actions/cache@v4
+        with: { path: ~/bcache, key: blender-4.2-mpfb-v1 }
+      - name: Install Blender 4.2 LTS, MPFB, MakeHuman CC0 asset packs, HDRI
+        run: |
+          set -e; mkdir -p ~/bcache; cd ~/bcache
+          sudo apt-get update -y -q && sudo apt-get install -y -q libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libegl1 libxkbcommon0 libsm6 ffmpeg >/dev/null
+          if [ ! -d blender ]; then V=$(curl -s https://download.blender.org/release/Blender4.2/ | grep -o 'blender-4\.2\.[0-9]*-linux-x64\.tar\.xz' | sort -V | tail -1); echo "Blender $V"; curl -sL -o b.tar.xz https://download.blender.org/release/Blender4.2/$V; tar xf b.tar.xz; mv blender-4.2.*-linux-x64 blender; rm b.tar.xz; fi
+          for p in makehuman_system_assets suits01 hair01 skins01 shirts01 pants01 shoes01; do [ -f $p.zip ] || curl -sfL -o $p.zip https://files2.makehumancommunity.org/asset_packs/$p/${p}_cc0.zip || curl -sfL -o $p.zip https://files.makehumancommunity.org/asset_packs/$p/${p}_cc0.zip || echo "no $p"; done
+          [ -f studio.hdr ] || curl -sfL -o studio.hdr "$(curl -s https://api.polyhaven.com/files/studio_small_09 | python3 -c 'import sys,json; print(json.load(sys.stdin)["hdri"]["2k"]["hdr"]["url"])')" || true
+          [ -d mpfb2 ] || git clone -q --depth 1 https://github.com/makehumancommunity/mpfb2 mpfb2
+          ls -la ~/bcache
+      - name: Install MPFB extension + packs into Blender user dirs
+        run: |
+          set -e; B=~/bcache/blender/blender
+          cd ~/bcache/mpfb2/src/mpfb && zip -qr /tmp/mpfb.zip . && cd -
+          $B -b --command extension install-file -r user_default -e /tmp/mpfb.zip
+          D=$(ls -d ~/.config/blender/4.2/extensions/.user/user_default 2>/dev/null || true); mkdir -p "$D/mpfb/data"
+          for z in ~/bcache/*.zip; do unzip -oq "$z" -d "$D/mpfb/data"; done
+          ls "$D/mpfb/data" | head -30
+      - name: Render tests
+        timeout-minutes: 150
+        run: |
+          S=$(head -n1 blender3d/.test-now | tr -d '\r '); mkdir -p previews/blender reports
+          export HDRI=~/bcache/studio.hdr
+          for E in EEVEE CYCLES; do ~/bcache/blender/blender -b -P blender3d/$S -- previews/blender $E 2>&1 | grep -v "^Fra:\|Sample\|Remaining" | tail -n 120 | tee -a reports/blender-test.log || true; done
+          rm -f previews/blender/*.blend1; ls -la previews/blender
+      - name: Save results
+        if: always()
+        run: |
+          git config user.name "breach-bot"; git config user.email "actions@users.noreply.github.com"
+          find previews/blender -name "*.blend" -size +60M -delete || true
+          git add previews/blender reports/blender-test.log || true; git commit -qm "Blender test renders [skip ci]" || true; git pull --rebase -q || true; git push || true
