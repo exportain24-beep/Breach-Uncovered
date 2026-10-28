@@ -38,12 +38,34 @@ def validate(path):
         if w > 140: warns.append(f"scene {i}: {w} words (long beat)")
         if not s.get("label") or len(s["label"]) > 40: errs.append(f"scene {i}: label missing or >40 chars")
         v = s.get("visuals") or []
-        if not 1 <= len(v) <= 3: errs.append(f"scene {i}: needs 1-3 visuals")
+        nb = sum(1 for x in v if x.get("type") in ("stock", "archival"))
+        need = max(3, int(w / 8))          # about one shot per 3-4 seconds of speech
+        if nb < min(need, 6): errs.append(f"scene {i}: {nb} stock/archival shots, need >= {min(need, 6)} (aim ~{max(3, w // 8)})")
+        elif nb < need - 2: warns.append(f"scene {i}: only {nb} shots for {w} words (aim ~{max(3, w // 8)})")
+        if sum(1 for x in v if x.get("type") == "motion") > 1: errs.append(f"scene {i}: max 1 motion card per scene")
+        plain_low = re.sub(r"\[[^\]]*\]", " ", n).lower()
+        for x in v:
+            at = (x.get("at") or "").strip().lower()
+            if not at: warns.append(f"scene {i}: visual without 'at' cue")
+            elif re.sub(r"[^\w\s']", "", at) not in re.sub(r"[^\w\s']", "", plain_low): warns.append(f"scene {i}: 'at' phrase not found in narration: {at}")
         for x in v:
             t = x.get("type")
             if t not in ("motion", "archival", "stock"): errs.append(f"scene {i}: bad visual type {t}")
             elif t == "motion" and x.get("kind") not in MOTION_KINDS: errs.append(f"scene {i}: bad motion kind {x.get('kind')}")
             elif t in ("archival", "stock") and not x.get("query"): errs.append(f"scene {i}: {t} visual needs query")
+    allv = [x for s in sc for x in (s.get("visuals") or [])]
+    if sum(1 for x in allv if x.get("type") == "motion") > 8: errs.append("more than 8 motion cards in the episode (text overload)")
+    if sum(1 for x in allv if x.get("overlay")) > 4: errs.append("more than 4 overlay texts in the episode")
+    qs = [x.get("query", "").lower() for x in allv if x.get("query")]
+    if len(set(qs)) < len(qs): warns.append("repeated visual queries: " + ", ".join(sorted({q for q in qs if qs.count(q) > 1})[:5]))
+    if sum(1 for x in allv if x.get("type") in ("stock", "archival")) < 55: errs.append("fewer than 55 stock/archival shots in the episode")
+    alltext = " ".join(re.sub(r"\[[^\]]*\]", " ", s.get("narration", "")) for s in sc)
+    sents = [t for t in re.split(r"(?<=[.!?])\s+", alltext) if t.strip()]
+    avg = len(alltext.split()) / max(1, len(sents))
+    if avg > 14: errs.append(f"average sentence length {avg:.1f} words (need <= 14: simpler, shorter sentences)")
+    hard = re.findall(r"\b(?:infiltrat\w+|exfiltrat\w+|orchestrat\w+|ostensibl\w+|subsequent\w*|attribut\w+|nefarious|perpetrat\w+|compromis\w+|clandestine|utiliz\w+|aforementioned|notwithstanding)\b", alltext, re.I)
+    if len(hard) > 3: errs.append("too much formal vocabulary: " + ", ".join(sorted(set(h.lower() for h in hard))))
+    if "mood" not in sc[0]: warns.append("scenes should have a 'mood'")
     if sc and len(re.sub(r"\[[^\]]*\]", "", sc[0]["narration"]).split()) > 90: errs.append("cold open > 90 words")
     if not 900 <= words <= 1400: errs.append(f"narration {words} words (need 900-1400)")
     tags = sum(len(re.findall(r"\[[^\]]*\]", s.get("narration", ""))) for s in sc)

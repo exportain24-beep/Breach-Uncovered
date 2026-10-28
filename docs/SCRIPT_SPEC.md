@@ -9,6 +9,18 @@ storytelling: a cold open that grabs in 10 seconds, a human at the centre, risin
 consequence that lands. Every fact is real and sourced; the drama comes from structure, pacing and voice —
 never from invented facts.
 
+## LANGUAGE — the most important rule (owner feedback after episode 1)
+Write the way a friend tells a true story over dinner. A 14-year-old who speaks English as a second language must follow every line.
+- **Plain, everyday, spoken English.** Common words only ("hacked into", "stole", "found out", "got scared", not "infiltrated", "exfiltrated", "orchestrated", "ostensibly", "subsequently", "attributed to").
+- **Short sentences** (average 8–14 words, none over 25). One idea per sentence. Use contractions (it's, they didn't, we'll).
+- **Tell it as a STORY in time order**: who these people were -> what normal life looked like -> the first small thing that went wrong -> it gets worse -> people panic -> they work out who did it -> what it cost and what changed. The listener must always know who, where, when and what is happening now. Say the year/date early and keep time words ("that night", "two days later", "by morning").
+- Name the people and companies, one or two at a time. Give each important person a simple handle on first use ("Kim, the IT guy"; only real roles from sources). Don't pile up names, acronyms or numbers: at most 2 big numbers per scene; round them ("about 100 terabytes" -> "a huge amount of data, about 100 terabytes").
+- Explain any tech word in one plain sentence the first time, or avoid it. No jargon dumps, no lists of malware names.
+- Feelings and stakes: show what it felt like for people (confusion, fear, anger) ONLY where sources support it; otherwise use neutral suspense ("Nobody knew what was coming.").
+- Curiosity hooks: end most scenes with a line that makes the listener want the next scene (a question, a "but", a cliffhanger). Light humor/irony is fine when the facts allow it.
+- Read it out loud: if you stumble, simplify. If a sentence needs re-reading, split it.
+- Voice: write for ONE natural, warm, expressive narrator. Use audio tags (see Voice direction) so the delivery changes with the emotion of each moment: surprise, worry, calm explanation, sharp suspense, relief.
+
 ## Audience & SEO targeting (US-first, then UK / Canada / Australia)
 Every word, title and tag is written for **native English speakers, US viewers first**.
 - **American English**: spelling (organization, color, defense), idiom, dates as "November 24, 2014", money in $
@@ -27,7 +39,7 @@ Every word, title and tag is written for **native English speakers, US viewers f
 
 ## Length
 5.5–8 minutes of speech = **950–1,300 words** of narration in total (validator enforces 900–1,400).
-12–18 scenes. Each scene = one beat of the story (roughly 40–90 words).
+12–18 scenes. Each scene = one beat of the story (roughly 40–90 words, about 25–35 seconds), 8–10 visuals each.
 
 ## Story architecture (vary it — do not make every episode identical)
 1. **Cold open (≤ 80 words, no greeting, no channel name, no "today we'll look at").** Start mid-action, or with
@@ -74,21 +86,15 @@ Explain every technical term the first time in one plain sentence. Never lecture
 - Never put tags inside quoted source text unless the speaker's delivery is documented.
 - No markdown, no stage directions, no sound-effect tags, no parentheses in `narration`.
 
-## Visual direction (per scene)
-Each scene lists 1–3 `visuals`. The renderer builds: motion-graphics (our own), archival/public-domain images,
-free stock b-roll. Be specific and *searchable*:
-- `type`: `motion` | `archival` | `stock`
-- `motion` (our own animated cards, no assets needed): `kind` one of `timeline`, `counter` (animated number),
-  `doc_callout` (highlight a line on a document/screenshot-style card), `network` (nodes/lines spreading),
-  `map` (pin on a region), `terminal` (typed, harmless on-screen text), `quote` (large pull-quote), `headline`
-  (newspaper-style card), `redact` (redaction bars), `title` (place/date lower-third). Provide `text`/`data`.
-- `archival`: `query` for Wikimedia Commons / Internet Archive / US-government public-domain imagery
-  (e.g. "FBI seal", "Bangladesh Bank building Dhaka", "Sony Pictures studio Culver City").
-  Prefer **places, buildings, public-domain official photos, logos used editorially**. Never a person's photo
-  unless it is an official public-domain image (FBI wanted posters, DOJ releases).
-- `stock`: `query` for generic b-roll (e.g. "server room corridor", "hacker typing dark room", "city night lights",
-  "hospital corridor", "power substation", "stock market trading floor"). Keep 2–5 words.
-- `overlay` (optional): short on-screen text (date, place, number), ≤ 6 words.
+## Visual direction — B-roll that follows the voice (commercial documentary look)
+The picture must CHANGE about every 3–4 seconds and each shot must match what the narrator is saying at that moment.
+A 30-second scene therefore needs **8–10 visuals**. Each visual carries an `at` cue: a 2–5 word phrase copied EXACTLY (same words, any case) from that scene's narration; the shot starts when the narrator says it. Order the visuals as they are spoken.
+- `type: "stock"` — generic b-roll from Pixabay video. Query = 2–3 plain English words that literally show the moment: "typing keyboard dark", "office night windows", "worried man phone", "server room blue", "airplane takeoff", "bank vault door", "city traffic night", "police car lights", "hospital corridor", "money counting", "stock market screen", "red alert screen". Think like a video editor: pick concrete things you can SEE. Vary them — never reuse one query in an episode; avoid cheesy "hacker in hoodie" more than twice.
+- `type: "archival"` — real places/buildings/logos/official public-domain images from Wikimedia Commons (e.g. "Sony Pictures Studios Culver City", "Federal Reserve Bank of New York building", "Pyongyang skyline", "FBI seal"). Use for the specific real place or institution being named, 1–3 per scene. Never a private person's photo.
+- `type: "motion"` — our own animated card (kinds: `timeline`, `counter`, `doc_callout`, `network`, `map`, `terminal`, `quote`, `headline`, `redact`, `title`). Use sparingly: **at most 1 per scene and at most 6 in the whole episode**, only where a number/date/place/quote really helps. Text on it ≤ 8 words. Never two on screen together.
+- `overlay` text on stock/archival: **max 3 in the whole episode**, ≤ 5 words (place + year). The narrator's captions already carry the words — do not duplicate them as on-screen text.
+- Match mood: calm explaining = wide/slow shots; tension = tight/dark shots; shock = sudden contrast.
+- Scene field `mood`: one of `calm`, `curious`, `tense`, `shock`, `reveal`, `sad`, `hopeful` — drives music and sound effects. Vary moods across the episode.
 
 ## JSON schema (file: `scripts/NNN-<key>.json`, NNN = zero-padded episode number)
 ```json
@@ -96,11 +102,12 @@ free stock b-roll. Be specific and *searchable*:
   "episode": 1, "key": "sony", "title": "Sony Pictures hack — the Guardians of Peace", "year": 2014,
   "category": "state", "needs_review": false, "review_note": "",
   "scenes": [
-    {"id": 1, "act": "cold_open", "label": "The skeleton on the screen",
+    {"id": 1, "act": "cold_open", "label": "The skeleton on the screen", "mood": "shock",
      "narration": "[serious] ... text with tags ...",
      "visuals": [
-       {"type": "stock", "query": "dark office computers", "overlay": ""},
-       {"type": "motion", "kind": "title", "text": "Culver City, California · Nov 24, 2014"}
+       {"type": "stock", "query": "dark office computers", "at": "words from the narration"},
+       {"type": "archival", "query": "Sony Pictures Studios Culver City", "at": "another phrase", "overlay": "Culver City, 2014"},
+       {"type": "motion", "kind": "title", "text": "Nov 24, 2014", "at": "a third phrase"}
      ]}
   ],
   "facts": [
