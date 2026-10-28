@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><title>3D shot player</title>
+<style>html,body{margin:0;background:#000}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+<canvas id="c"></canvas>
+<script type="module">
+import { createWorld } from './world.js';
+const q = new URLSearchParams(location.search), W = +q.get('w') || 1080, H = +q.get('h') || 1920;
+const c = document.getElementById('c'); c.width = W; c.height = H; c.style.width = W + 'px'; c.style.height = H + 'px';
+try {
+  const world = await createWorld(c, W, H);
+  window.loadShots = (s) => world.load(s); window.draw = (t) => { world.draw(t); return 1; }; window.world = world; window.ready = true;
+} catch (e) { window.err = String(e && e.stack || e); console.log('ERR', window.err); }
+</script>
