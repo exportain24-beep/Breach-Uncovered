@@ -14,7 +14,7 @@ if k:
     row("Voice vYENaCJHl4vFKNDYPr8y reachable", r.status_code == 200, f"{r.json().get('name') if r.status_code == 200 else r.text[:120]}")
     r = requests.get("https://api.elevenlabs.io/v1/user/subscription", headers={"xi-api-key": k}, timeout=30)
     if r.status_code == 200:
-        j = r.json(); left = j["character_limit"] - j["character_count"]; row("ElevenLabs characters left", left > 20000, f"{left:,} left (one episode ≈ 7,000)")
+        j = r.json(); left = j["character_limit"] - j["character_count"]; row("ElevenLabs usage", True, f"info only: {left:,} plan characters left; pay-as-you-go API usage is not gated by this")
 import media
 os.environ.setdefault("MEDIA_CACHE", "/tmp/mediatest"); os.makedirs(os.environ["MEDIA_CACHE"], exist_ok=True)
 row("PIXABAY_API_KEY present", bool(os.environ.get("PIXABAY_API_KEY")))
