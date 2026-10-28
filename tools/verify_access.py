@@ -101,7 +101,7 @@ if ptok:
     check("Read posts (feed)", s == 200, "" if s == 200 else err(x))
     s, x = req(f"{G}/{page_id}/videos?" + urllib.parse.urlencode({**P, "limit": 1, "fields": "id"}))
     check("Read videos", s == 200, "" if s == 200 else err(x))
-    s, x = req(f"{G}/{page_id}/insights?" + urllib.parse.urlencode({**P, "metric": "page_impressions_unique", "period": "day"}))
+    s, x = req(f"{G}/{page_id}/insights?" + urllib.parse.urlencode({**P, "metric": "page_post_engagements", "period": "day"}))
     check("Insights", s == 200, "" if s == 200 else err(x))
     s, x = req(f"{G}/{page_id}?" + urllib.parse.urlencode({**P, "fields": "about,description,website,emails"}))
     check("Page info (About/description) readable", s == 200, "" if s == 200 else err(x))
