@@ -1,0 +1,75 @@
+=== episode 1: Sony Pictures hack — the Guardians of Peace ===
+stage: voice (eleven_v4_turbo)
+stage: voice done in 89s; fetching visuals
+stage: visuals done in 14s (16 assets); rendering
+  frame 0/13133  (0s)
+  frame 240/13133  (12s)
+  frame 480/13133  (24s)
+  frame 720/13133  (36s)
+  frame 960/13133  (50s)
+  frame 1200/13133  (58s)
+  frame 1440/13133  (65s)
+  frame 1680/13133  (77s)
+  frame 1920/13133  (87s)
+  frame 2160/13133  (97s)
+  frame 2400/13133  (107s)
+  frame 2640/13133  (122s)
+  frame 2880/13133  (136s)
+  frame 3120/13133  (149s)
+  frame 3360/13133  (162s)
+  frame 3600/13133  (172s)
+  frame 3840/13133  (182s)
+  frame 4080/13133  (192s)
+  frame 4320/13133  (204s)
+  frame 4560/13133  (215s)
+  frame 4800/13133  (224s)
+  frame 5040/13133  (233s)
+  frame 5280/13133  (243s)
+  frame 5520/13133  (255s)
+  frame 5760/13133  (267s)
+  frame 6000/13133  (279s)
+  frame 6240/13133  (290s)
+  frame 6480/13133  (301s)
+  frame 6720/13133  (312s)
+  frame 6960/13133  (326s)
+  frame 7200/13133  (334s)
+  frame 7440/13133  (343s)
+  frame 7680/13133  (351s)
+  frame 7920/13133  (368s)
+  frame 8160/13133  (383s)
+  frame 8400/13133  (398s)
+  frame 8640/13133  (408s)
+  frame 8880/13133  (417s)
+  frame 9120/13133  (426s)
+  frame 9360/13133  (437s)
+  frame 9600/13133  (446s)
+  frame 9840/13133  (454s)
+  frame 10080/13133  (463s)
+  frame 10320/13133  (477s)
+  frame 10560/13133  (488s)
+  frame 10800/13133  (499s)
+  frame 11040/13133  (511s)
+  frame 11280/13133  (524s)
+  frame 11520/13133  (532s)
+  frame 11760/13133  (540s)
+  frame 12000/13133  (547s)
+  frame 12240/13133  (555s)
+  frame 12480/13133  (565s)
+  frame 12720/13133  (574s)
+  frame 12960/13133  (583s)
+rendered out/001.mp4 528.0 MB in 590s
+stage: render done
+built out/001.mp4  528 MB  9.1 min  title: How Sony Pictures Was Hacked: The True Story of the Interview Hack
+YT playlist warning: playlist add failed 409 {
+  "error": {
+    "code": 409,
+    "message": "The operation was aborted.",
+    "errors": [
+      {
+        "domain": "youtube.CoreErrorDomain",
+        "reason": "SERVICE_UNAVAILABLE"
+      }
+    ],
+YouTube OK MBW8Q7s92Mo
+Facebook OK 2209360256679014
+episode 1 scheduled for 2026-10-28T10:11:00+00:00

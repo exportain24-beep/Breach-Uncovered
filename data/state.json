@@ -1,5 +1,15 @@
 {
- "episodes": {},
- "playlists": {},
+ "episodes": {
+  "1": {
+   "publish_at": "2026-10-28T10:11:00+00:00",
+   "first_comment": "Sony canceled The Interview after the threats, then released it online days later. Was pulling it the right call, or did it hand the hackers a win?",
+   "title": "How Sony Pictures Was Hacked: The True Story of the Interview Hack",
+   "yt": "MBW8Q7s92Mo",
+   "fb": "2209360256679014"
+  }
+ },
+ "playlists": {
+  "Breach Uncovered \u2014 All Case Files": "PLZY-3v_Q5P7w"
+ },
  "slots_used": []
 }
