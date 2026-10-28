@@ -17,6 +17,7 @@ jobs:
         with: { name: short-preview, run-id: "${{ steps.rid.outputs.id }}", github-token: "${{ github.token }}", path: art }
       - name: Compress (< 50 MB) and commit to previews/
         run: |
+          ffmpeg -version >/dev/null 2>&1 || (sudo apt-get update -y -q && sudo apt-get install -y -q ffmpeg)
           mkdir -p previews; f=$(ls art/*.mp4 | head -1)
           ffmpeg -y -v error -i "$f" -c:v libx264 -preset slow -crf 24 -maxrate 6M -bufsize 12M -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart previews/short-preview.mp4
           ls -la previews
