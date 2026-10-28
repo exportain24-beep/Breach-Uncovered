@@ -1,0 +1,1283 @@
+[
+ {
+  "episode": 1,
+  "key": "sony",
+  "title": "Sony Pictures hack — the Guardians of Peace",
+  "year": 2014,
+  "category": "state",
+  "actor": "DPRK RGB / Lab 110 (Lazarus)",
+  "sources_from_user_file": [
+   "https://www.fbi.gov/news/press-releases/update-on-sony-investigation",
+   "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and"
+  ],
+  "origin": "user_file",
+  "note": "Series opener, from the user's script",
+  "status": "pending"
+ },
+ {
+  "episode": 2,
+  "key": "darkseoul",
+  "title": "DarkSeoul — the wiper that came before Sony",
+  "year": 2013,
+  "category": "state",
+  "actor": "DPRK (Lazarus)",
+  "sources_from_user_file": [
+   "https://www.fbi.gov/news/press-releases/update-on-sony-investigation"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 3,
+  "key": "bangladesh",
+  "title": "Bangladesh Bank — the $81M SWIFT heist",
+  "year": 2016,
+  "category": "finance",
+  "actor": "DPRK RGB",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 4,
+  "key": "thaad",
+  "title": "Phishing the THAAD contractors",
+  "year": 2016,
+  "category": "espionage",
+  "actor": "DPRK Lab 110",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and"
+  ],
+  "origin": "user_file",
+  "note": "Original case 7",
+  "status": "pending"
+ },
+ {
+  "episode": 5,
+  "key": "wannacry",
+  "title": "WannaCry — the worm that froze hospitals",
+  "year": 2017,
+  "category": "ransomware",
+  "actor": "DPRK RGB",
+  "sources_from_user_file": [
+   "https://www.justice.gov/usao-cdca/pr/3-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyber-attacks-and"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 6,
+  "key": "kejv",
+  "title": "Chosun Expo — the front company behind the hacks",
+  "year": 2018,
+  "category": "profile",
+  "actor": "Park Jin Hyok",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archives/opa/press-release/file/1092091/dl"
+  ],
+  "origin": "user_file",
+  "note": "Complaint affidavit",
+  "status": "pending"
+ },
+ {
+  "episode": 7,
+  "key": "yahoo",
+  "title": "Yahoo — half a billion accounts and the FSB",
+  "year": 2014,
+  "category": "breach",
+  "actor": "FSB officers + Belan + Baratov",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archives/opa/pr/us-charges-russian-fsb-officers-and-their-criminal-conspirators-hacking-yahoo-and-millions"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 8,
+  "key": "stuxnet",
+  "title": "Stuxnet — the first digital weapon",
+  "year": 2010,
+  "category": "infra",
+  "actor": "State coalition",
+  "sources_from_user_file": [
+   "https://www.cisa.gov/news-events/ics-advisories/icsa-10-238-01b"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 9,
+  "key": "morris",
+  "title": "The Morris Worm",
+  "year": 1988,
+  "category": "hacker",
+  "actor": "Robert T. Morris",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 10,
+  "key": "melissa",
+  "title": "Melissa — the virus that jammed email",
+  "year": 1999,
+  "category": "malware",
+  "actor": "David L. Smith",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 11,
+  "key": "heartbleed",
+  "title": "Heartbleed — the bug that leaked the internet's memory",
+  "year": 2014,
+  "category": "vuln",
+  "actor": "Bug (CVE-2014-0160)",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "Narrative, no exploit detail",
+  "status": "pending"
+ },
+ {
+  "episode": 12,
+  "key": "joanap",
+  "title": "Joanap — the FBI maps a hidden botnet",
+  "year": 2019,
+  "category": "state",
+  "actor": "DPRK",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archives/opa/pr/justice-department-announces-court-authorized-efforts-map-and-disrupt-botnet-used-north"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 13,
+  "key": "lazarus_banks",
+  "title": "Lazarus and the billion-dollar bank campaign",
+  "year": 2015,
+  "category": "finance",
+  "actor": "DPRK RGB",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and"
+  ],
+  "origin": "user_file",
+  "note": "Original case 6",
+  "status": "pending"
+ },
+ {
+  "episode": 14,
+  "key": "duqu",
+  "title": "Duqu — Stuxnet's silent twin",
+  "year": 2011,
+  "category": "espionage",
+  "actor": "Unattributed state actor",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 15,
+  "key": "lockbit",
+  "title": "Operation Cronos — hacking LockBit",
+  "year": 2024,
+  "category": "ransomware",
+  "actor": "LockBit",
+  "sources_from_user_file": [
+   "https://www.nationalcrimeagency.gov.uk/news/nca-leads-international-investigation-targeting-worlds-most-harmful-ransomware-group"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 16,
+  "key": "baratov",
+  "title": "Karim Baratov — the hacker-for-hire",
+  "year": 2014,
+  "category": "profile",
+  "actor": "Karim Baratov",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archives/opa/pr/canadian-hacker-who-conspired-and-aided-russian-fsb-officers-pleads-guilty"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 17,
+  "key": "uber",
+  "title": "Uber's secret $100,000 bug bounty",
+  "year": 2016,
+  "category": "breach",
+  "actor": "Uber / Joe Sullivan",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "Original source link was a Mar-a-Lago PDF (wrong) — find DOJ Sullivan release",
+  "status": "pending"
+ },
+ {
+  "episode": 18,
+  "key": "shamoon",
+  "title": "Shamoon — 30,000 Aramco computers wiped",
+  "year": 2012,
+  "category": "infra",
+  "actor": "Cutting Sword of Justice",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 19,
+  "key": "iloveyou",
+  "title": "ILOVEYOU — the love letter worm",
+  "year": 2000,
+  "category": "malware",
+  "actor": "Onel de Guzman (suspect)",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 20,
+  "key": "log4shell",
+  "title": "Log4Shell — the bug in everything",
+  "year": 2021,
+  "category": "vuln",
+  "actor": "Bug (CVE-2021-44228)",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "Narrative, no exploit detail",
+  "status": "pending"
+ },
+ {
+  "episode": 21,
+  "key": "estonia",
+  "title": "Estonia 2007 — a nation under digital siege",
+  "year": 2007,
+  "category": "state",
+  "actor": "Hybrid / state-aligned",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 22,
+  "key": "marinechain",
+  "title": "Marine Chain — North Korea's fake crypto fleet",
+  "year": 2018,
+  "category": "finance",
+  "actor": "DPRK RGB",
+  "sources_from_user_file": [
+   "https://www.justice.gov/usao-cdca/pr/3-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyber-attacks-and"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 23,
+  "key": "night_dragon",
+  "title": "Night Dragon — raiding the oil majors",
+  "year": 2011,
+  "category": "espionage",
+  "actor": "China-based actors",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 24,
+  "key": "changehc",
+  "title": "Change Healthcare — America's billing system goes dark",
+  "year": 2024,
+  "category": "ransomware",
+  "actor": "ALPHV/BlackCat",
+  "sources_from_user_file": [
+   "https://www.hhs.gov/hipaa/for-professionals/special-topics/change-healthcare-cybersecurity-incident-frequently-asked-questions/index.html"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 25,
+  "key": "flyhook",
+  "title": "Invita — the FBI's fake company sting",
+  "year": 2000,
+  "category": "profile",
+  "actor": "Gorshkov & Ivanov",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archive/criminal/cybercrime/press-releases/2001/gorshkovconvict.htm"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 26,
+  "key": "capitalone",
+  "title": "Capital One — the cloud engineer who bragged",
+  "year": 2019,
+  "category": "breach",
+  "actor": "Paige Thompson",
+  "sources_from_user_file": [
+   "https://www.justice.gov/usao-wdwa/united-states-v-paige-thompson"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 27,
+  "key": "ukraine2015",
+  "title": "Ukraine 2015 — the first hacker-made blackout",
+  "year": 2015,
+  "category": "infra",
+  "actor": "Sandworm (GRU)",
+  "sources_from_user_file": [
+   "https://nsarchive.gwu.edu/sites/default/files/documents/3891751/SANS-and-Electricity-Information-Sharing-and.pdf",
+   "https://cyote.inl.gov/content/uploads/24/2025/12/CyOTE-Case-Study_Ukraine-2015.pdf"
+  ],
+  "origin": "user_file",
+  "note": "Merges original 26-30",
+  "status": "pending"
+ },
+ {
+  "episode": 28,
+  "key": "codered",
+  "title": "Code Red — the worm that hit the White House",
+  "year": 2001,
+  "category": "malware",
+  "actor": "Unknown",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 29,
+  "key": "georgia",
+  "title": "Georgia 2008 — cyberattacks beside tanks",
+  "year": 2008,
+  "category": "state",
+  "actor": "State-aligned",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 30,
+  "key": "applejeus",
+  "title": "The trojanized crypto trading apps",
+  "year": 2018,
+  "category": "finance",
+  "actor": "DPRK RGB",
+  "sources_from_user_file": [
+   "https://www.justice.gov/usao-cdca/pr/3-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyber-attacks-and"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 31,
+  "key": "moonlight",
+  "title": "Moonlight Maze — the first APT",
+  "year": 1996,
+  "category": "espionage",
+  "actor": "Russia-linked",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 32,
+  "key": "norsk",
+  "title": "Norsk Hydro vs. LockerGoga",
+  "year": 2019,
+  "category": "ransomware",
+  "actor": "LockerGoga crew",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 33,
+  "key": "drinkman",
+  "title": "Vladimir Drinkman — arrested on vacation",
+  "year": 2012,
+  "category": "profile",
+  "actor": "Drinkman & Smilianets",
+  "sources_from_user_file": [
+   "https://www.justice.gov/usao-nj/pr/russian-national-pleads-guilty-largest-known-data-breach-conspiracy-ever-charged"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 34,
+  "key": "hbgary",
+  "title": "HBGary Federal — the security firm that got hacked",
+  "year": 2011,
+  "category": "breach",
+  "actor": "Anonymous",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 35,
+  "key": "industroyer",
+  "title": "Industroyer — malware that speaks the grid's language",
+  "year": 2016,
+  "category": "infra",
+  "actor": "Sandworm",
+  "sources_from_user_file": [
+   "https://malpedia.caad.fkie.fraunhofer.de/details/win.industroyer"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 36,
+  "key": "slammer",
+  "title": "SQL Slammer — 10 minutes to infect the internet",
+  "year": 2003,
+  "category": "malware",
+  "actor": "Unknown",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 37,
+  "key": "greatcannon",
+  "title": "The Great Cannon",
+  "year": 2015,
+  "category": "state",
+  "actor": "PRC network operators",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 38,
+  "key": "carbanak",
+  "title": "Carbanak — €1 billion without a gun",
+  "year": 2013,
+  "category": "finance",
+  "actor": "Carbanak / Cobalt",
+  "sources_from_user_file": [
+   "https://www.europol.europa.eu/media-press/newsroom/news/mastermind-behind-eur-1-billion-cyber-bank-robbery-arrested-in-spain"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 39,
+  "key": "titan",
+  "title": "Titan Rain and Shawn Carpenter",
+  "year": 2003,
+  "category": "espionage",
+  "actor": "PRC-linked",
+  "sources_from_user_file": [
+   "https://content.time.com/time/press_releases/article/0,8599,1098911,00.html"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 40,
+  "key": "baltimore",
+  "title": "Baltimore — the city held hostage",
+  "year": 2019,
+  "category": "ransomware",
+  "actor": "RobbinHood",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 41,
+  "key": "mckinnon",
+  "title": "Gary McKinnon — the UFO hacker and the 10-year fight",
+  "year": 2001,
+  "category": "profile",
+  "actor": "Gary McKinnon",
+  "sources_from_user_file": [
+   "https://www.theguardian.com/world/2012/oct/16/gary-mckinnon-hacker-sparked-storm"
+  ],
+  "origin": "user_file",
+  "note": "Merges original 81-82",
+  "status": "pending"
+ },
+ {
+  "episode": 42,
+  "key": "diginotar",
+  "title": "DigiNotar — a fake Google certificate",
+  "year": 2011,
+  "category": "breach",
+  "actor": "Iran-linked",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 43,
+  "key": "notpetya",
+  "title": "NotPetya — the $10 billion wiper",
+  "year": 2017,
+  "category": "infra",
+  "actor": "Sandworm",
+  "sources_from_user_file": [
+   "https://www.cisa.gov/news-events/alerts/2017/07/01/petya-ransomware"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 44,
+  "key": "conficker",
+  "title": "Conficker — the worm no one could kill",
+  "year": 2008,
+  "category": "malware",
+  "actor": "Unknown",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 45,
+  "key": "shadowbrokers",
+  "title": "The Shadow Brokers — EternalBlue leaks",
+  "year": 2016,
+  "category": "state",
+  "actor": "Shadow Brokers",
+  "sources_from_user_file": [
+   "https://www.cisa.gov/news-events/alerts/2017/07/01/petya-ransomware"
+  ],
+  "origin": "user_file",
+  "note": "Merges original 89-90",
+  "status": "pending"
+ },
+ {
+  "episode": 46,
+  "key": "cobalt_atm",
+  "title": "Cobalt — midnight ATM jackpotting",
+  "year": 2016,
+  "category": "finance",
+  "actor": "Cobalt group",
+  "sources_from_user_file": [
+   "https://www.europol.europa.eu/media-press/newsroom/news/mastermind-behind-eur-1-billion-cyber-bank-robbery-arrested-in-spain"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 47,
+  "key": "ghostnet",
+  "title": "GhostNet — spying on 103 countries",
+  "year": 2009,
+  "category": "espionage",
+  "actor": "China-based network",
+  "sources_from_user_file": [
+   "https://citizenlab.ca/wp-content/uploads/2017/05/ghostnet.pdf"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 48,
+  "key": "garmin",
+  "title": "Garmin — the day the watches stopped",
+  "year": 2020,
+  "category": "ransomware",
+  "actor": "Evil Corp (WastedLocker)",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 49,
+  "key": "lauri_love",
+  "title": "Lauri Love vs. the United States",
+  "year": 2013,
+  "category": "profile",
+  "actor": "Lauri Love",
+  "sources_from_user_file": [
+   "https://www.theguardian.com/world/gary-mckinnon"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 50,
+  "key": "psn",
+  "title": "PlayStation Network — 77 million accounts",
+  "year": 2011,
+  "category": "breach",
+  "actor": "Unknown",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 51,
+  "key": "triton",
+  "title": "TRITON — attacking a refinery's safety system",
+  "year": 2017,
+  "category": "infra",
+  "actor": "TsNIIKhM (TEMP.Veles)",
+  "sources_from_user_file": [
+   "https://www.cisa.gov/sites/default/files/documents/MAR-17-352-01%20HatMan%20-%20Safety%20System%20Targeted%20Malware%20%28Update%20B%29.pdf"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 52,
+  "key": "mirai",
+  "title": "Mirai — the botnet of cameras that broke the internet",
+  "year": 2016,
+  "category": "malware",
+  "actor": "Paras Jha et al.",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "Includes Dyn outage",
+  "status": "pending"
+ },
+ {
+  "episode": 53,
+  "key": "vulkan",
+  "title": "Vulkan Files — Russia's private cyberwar contractor",
+  "year": 2023,
+  "category": "state",
+  "actor": "NTC Vulkan (leak)",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "Verify against Guardian/Spiegel/WaPo reporting",
+  "status": "pending"
+ },
+ {
+  "episode": 54,
+  "key": "heartland",
+  "title": "Heartland — 130 million cards",
+  "year": 2007,
+  "category": "finance",
+  "actor": "Albert Gonzalez ring",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archive/usao/nj/Press/files/pdffiles/2009/GonzIndictment.pdf"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 55,
+  "key": "aurora",
+  "title": "Operation Aurora — Google vs. China",
+  "year": 2009,
+  "category": "espionage",
+  "actor": "Elderwood group",
+  "sources_from_user_file": [
+   "https://www.wired.com/2010/01/operation-aurora/"
+  ],
+  "origin": "user_file",
+  "note": "Merges original 45-51",
+  "status": "pending"
+ },
+ {
+  "episode": 56,
+  "key": "colonial",
+  "title": "Colonial Pipeline — fuel panic",
+  "year": 2021,
+  "category": "ransomware",
+  "actor": "DarkSide",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 57,
+  "key": "mitnick",
+  "title": "Kevin Mitnick — the most wanted hacker",
+  "year": 1995,
+  "category": "profile",
+  "actor": "Kevin Mitnick",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 58,
+  "key": "target",
+  "title": "Target 2013 — through the air-conditioning vendor",
+  "year": 2013,
+  "category": "breach",
+  "actor": "Crime group",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 59,
+  "key": "dragonfly",
+  "title": "Dragonfly — seven years inside energy plants",
+  "year": 2011,
+  "category": "infra",
+  "actor": "FSB officers (Berserk Bear)",
+  "sources_from_user_file": [
+   "https://www.cisa.gov/sites/default/files/publications/AA22-083A_TTPs_of_Indicted_State-Sponsored_Russian_Cyber_Actors_Targeting_the_Energy_Sector.pdf"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 60,
+  "key": "dnc",
+  "title": "DNC hack — Fancy Bear and Cozy Bear",
+  "year": 2016,
+  "category": "state",
+  "actor": "GRU / SVR",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 61,
+  "key": "tjx",
+  "title": "TJX — hackers in the parking lot",
+  "year": 2005,
+  "category": "finance",
+  "actor": "Gonzalez & Watt",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archive/usao/ma/news/2010/April/TOEYsentPR.html"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 62,
+  "key": "redoctober",
+  "title": "Red October — five years in embassies",
+  "year": 2007,
+  "category": "espionage",
+  "actor": "Russian-speaking actor",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 63,
+  "key": "jbs",
+  "title": "JBS — the meat plant ransomware",
+  "year": 2021,
+  "category": "ransomware",
+  "actor": "REvil",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 64,
+  "key": "mafiaboy",
+  "title": "Mafiaboy takes down Yahoo and CNN",
+  "year": 2000,
+  "category": "profile",
+  "actor": "'Mafiaboy'",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 65,
+  "key": "homedepot",
+  "title": "Home Depot — 56 million cards",
+  "year": 2014,
+  "category": "breach",
+  "actor": "Crime group",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 66,
+  "key": "incontroller",
+  "title": "INCONTROLLER — the sabotage toolkit caught early",
+  "year": 2022,
+  "category": "infra",
+  "actor": "State APT",
+  "sources_from_user_file": [
+   "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-265a"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 67,
+  "key": "macron",
+  "title": "MacronLeaks — hack and leak before the vote",
+  "year": 2017,
+  "category": "state",
+  "actor": "APT28",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 68,
+  "key": "hannaford",
+  "title": "Hannaford — every checkout swipe copied",
+  "year": 2007,
+  "category": "finance",
+  "actor": "Gonzalez ring",
+  "sources_from_user_file": [
+   "https://www.justice.gov/archive/usao/nj/Press/files/pdffiles/2009/GonzIndictment.pdf"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 69,
+  "key": "apt1",
+  "title": "APT1 — the 12-story building in Shanghai",
+  "year": 2006,
+  "category": "espionage",
+  "actor": "PLA Unit 61398",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 70,
+  "key": "kaseya",
+  "title": "Kaseya — 1,500 companies in one day",
+  "year": 2021,
+  "category": "ransomware",
+  "actor": "REvil",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 71,
+  "key": "lulzsec",
+  "title": "LulzSec — 50 days of chaos",
+  "year": 2011,
+  "category": "profile",
+  "actor": "LulzSec",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 72,
+  "key": "ashleymadison",
+  "title": "Ashley Madison — the leak that ruined lives",
+  "year": 2015,
+  "category": "breach",
+  "actor": "Impact Team",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 73,
+  "key": "volt",
+  "title": "Volt Typhoon — hiding in America's water and power",
+  "year": 2023,
+  "category": "infra",
+  "actor": "PRC (Volt Typhoon)",
+  "sources_from_user_file": [
+   "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 74,
+  "key": "vault7",
+  "title": "Vault 7 — the CIA's leaked hacking arsenal",
+  "year": 2017,
+  "category": "state",
+  "actor": "Joshua Schulte (convicted)",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 75,
+  "key": "newswire",
+  "title": "The newswire hack — $30M from tomorrow's news",
+  "year": 2010,
+  "category": "finance",
+  "actor": "Korchevsky et al.",
+  "sources_from_user_file": [
+   "https://www.justice.gov/usao-nj/file/705921/dl?inline="
+  ],
+  "origin": "user_file",
+  "note": "Merges original 71-73",
+  "status": "pending"
+ },
+ {
+  "episode": 76,
+  "key": "poisoncarp",
+  "title": "Poison Carp — spyware hunting Tibetans",
+  "year": 2018,
+  "category": "espionage",
+  "actor": "Poison Carp",
+  "sources_from_user_file": [
+   "https://citizenlab.ca/research/poison-carp-tibetan-groups-targeted-with-1-click-mobile-exploits/"
+  ],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 77,
+  "key": "conti_cr",
+  "title": "Costa Rica — a nation declares emergency",
+  "year": 2022,
+  "category": "ransomware",
+  "actor": "Conti",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 78,
+  "key": "twitter2020",
+  "title": "Twitter 2020 — the Bitcoin scam on Obama and Musk",
+  "year": 2020,
+  "category": "profile",
+  "actor": "Graham Ivan Clark",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 79,
+  "key": "anthem",
+  "title": "Anthem — the largest health-insurer breach",
+  "year": 2015,
+  "category": "breach",
+  "actor": "PRC-linked",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 80,
+  "key": "mtgox",
+  "title": "Mt. Gox — the missing 850,000 bitcoin",
+  "year": 2014,
+  "category": "finance",
+  "actor": "Hackers / insiders",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 81,
+  "key": "solarwinds",
+  "title": "SolarWinds — the supply-chain masterplan",
+  "year": 2019,
+  "category": "espionage",
+  "actor": "SVR (APT29)",
+  "sources_from_user_file": [
+   "https://www.cisa.gov/news-events/directives/ed-21-01-mitigate-solarwinds-orion-code-compromise-closed",
+   "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-352a"
+  ],
+  "origin": "user_file",
+  "note": "Merges original 57,60",
+  "status": "pending"
+ },
+ {
+  "episode": 82,
+  "key": "moveit",
+  "title": "MOVEit — mass extortion through a file-transfer tool",
+  "year": 2023,
+  "category": "ransomware",
+  "actor": "Cl0p",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 83,
+  "key": "lapsus",
+  "title": "Lapsus$ — teenagers vs. Microsoft and Nvidia",
+  "year": 2022,
+  "category": "profile",
+  "actor": "Lapsus$",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 84,
+  "key": "equifax",
+  "title": "Equifax — 147 million people",
+  "year": 2017,
+  "category": "breach",
+  "actor": "PLA members (indicted)",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 85,
+  "key": "polynetwork",
+  "title": "Poly Network — the hacker who gave it back",
+  "year": 2021,
+  "category": "finance",
+  "actor": "'Mr. White Hat'",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 86,
+  "key": "fireeye",
+  "title": "FireEye — the hack that exposed SolarWinds",
+  "year": 2020,
+  "category": "espionage",
+  "actor": "SVR (APT29)",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 87,
+  "key": "mgm",
+  "title": "MGM and Caesars — Scattered Spider",
+  "year": 2023,
+  "category": "profile",
+  "actor": "Scattered Spider",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 88,
+  "key": "marriott",
+  "title": "Marriott/Starwood — 500 million guests",
+  "year": 2018,
+  "category": "breach",
+  "actor": "PRC-linked",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 89,
+  "key": "ronin",
+  "title": "Ronin Bridge — $620M and Axie Infinity",
+  "year": 2022,
+  "category": "finance",
+  "actor": "DPRK (Lazarus)",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 90,
+  "key": "supernova",
+  "title": "SUPERNOVA — the second hacker in SolarWinds",
+  "year": 2020,
+  "category": "espionage",
+  "actor": "Separate actor",
+  "sources_from_user_file": [],
+  "origin": "user_file",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 91,
+  "key": "silkroad",
+  "title": "Silk Road — the Dread Pirate Roberts",
+  "year": 2013,
+  "category": "profile",
+  "actor": "Ross Ulbricht",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 92,
+  "key": "lastpass",
+  "title": "LastPass — the vault that was stolen",
+  "year": 2022,
+  "category": "breach",
+  "actor": "Unknown",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 93,
+  "key": "bybit",
+  "title": "Bybit — the $1.5 billion heist",
+  "year": 2025,
+  "category": "finance",
+  "actor": "DPRK (Lazarus)",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 94,
+  "key": "shadyrat",
+  "title": "Operation Shady RAT",
+  "year": 2011,
+  "category": "espionage",
+  "actor": "Unattributed",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 95,
+  "key": "alphabay",
+  "title": "AlphaBay and Hansa — the dark-web double sting",
+  "year": 2017,
+  "category": "profile",
+  "actor": "Law enforcement operation",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 96,
+  "key": "snowflake",
+  "title": "Snowflake — stolen logins, 165 customers",
+  "year": 2024,
+  "category": "breach",
+  "actor": "UNC5537",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 97,
+  "key": "rsa",
+  "title": "RSA SecurID — the breach behind the breach",
+  "year": 2011,
+  "category": "espionage",
+  "actor": "APT",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 98,
+  "key": "opm",
+  "title": "OPM — 21 million security-clearance files",
+  "year": 2015,
+  "category": "espionage",
+  "actor": "PRC-linked",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 99,
+  "key": "hafnium",
+  "title": "Exchange ProxyLogon — 30,000 servers at once",
+  "year": 2021,
+  "category": "espionage",
+  "actor": "Hafnium (PRC)",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ },
+ {
+  "episode": 100,
+  "key": "salttyphoon",
+  "title": "Salt Typhoon — inside US telecoms",
+  "year": 2024,
+  "category": "espionage",
+  "actor": "PRC",
+  "sources_from_user_file": [],
+  "origin": "added_replacement",
+  "note": "",
+  "status": "pending"
+ }
+]
