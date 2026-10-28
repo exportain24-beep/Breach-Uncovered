@@ -130,7 +130,7 @@
       "act": "quiet_part",
       "label": "June 2012: the quiet start",
       "mood": "curious",
-      "narration": "[curious] South Korean investigators later blamed North Korea. They say the planning began in June 2012. Nobody in Seoul noticed. Workers got emails that looked normal. They were bait. Security company McAfee found emails like these planted back doors. A back door is a secret way into a computer. [whispers] The attackers were inside, and they were waiting.",
+      "narration": "[curious] South Korean investigators later blamed North Korea. They say the planning began in June 2012. Nobody in Seoul noticed. Workers got emails that looked normal. They were bait. McAfee found emails like these planted back doors. A back door is a secret way into a computer. [whispers] The attackers were inside, and they were waiting.",
       "visuals": [
         {
           "type": "gfx",
@@ -201,7 +201,7 @@
       "act": "quiet_part",
       "label": "A dangerous winter and a timer",
       "mood": "tense",
-      "narration": "[serious] Then came early 2013, and tensions rose. In February, North Korea tested a nuclear weapon. It also said the 1953 deal that stopped the Korean War no longer counted. That same month, investigators say, the attackers ran a test. Like a fire drill. [short pause] Then someone set the timer. March 20. 2 in the afternoon.",
+      "narration": "[serious] Then came early 2013, and tensions rose. In February, North Korea tested a nuclear weapon. It also said the 1953 deal that stopped the Korean War was over. That same month, investigators say, the attackers ran a test. Like a fire drill. [short pause] Then someone set the timer. March 20. 2 in the afternoon.",
       "visuals": [
         {
           "type": "gfx",
@@ -265,7 +265,7 @@
       "act": "quiet_part",
       "label": "The safety tool that turned",
       "mood": "curious",
-      "narration": "[cautiously] But how do you hit thousands of computers at once? The attackers found a shortcut. Big companies use special software to send updates to all their computers. At some places, that software came from AhnLab, a Korean security company. The attackers used stolen usernames and passwords to get in. [short pause] The tool meant to keep computers safe now carried the bomb.",
+      "narration": "[cautiously] But how do you hit thousands of computers at once? Big companies use special software to send updates to all their computers. At some places, that software came from AhnLab, a Korean security company. The attackers used stolen usernames and passwords to get in. [short pause] The tool meant to keep computers safe now carried the bomb.",
       "visuals": [
         {
           "type": "gfx",
@@ -376,7 +376,7 @@
       "act": "escalation",
       "label": "Frozen ATMs, dark newsrooms",
       "mood": "tense",
-      "narration": "[worried] Out on the streets, people felt it fast. At Shinhan Bank, online banking and ATMs went down for about two hours. At one Starbucks in downtown Seoul, customers had to pay cash. Inside the TV stations, staff at KBS, MBC and YTN couldn't log in to their news systems. [short pause] Oddly, the shows stayed on the air. [nervous] But who was behind it?",
+      "narration": "[worried] At Shinhan Bank, online banking and ATMs went down for about two hours. At one Starbucks in downtown Seoul, customers had to pay cash. Inside the TV stations, staff at KBS, MBC and YTN couldn't log in to their news systems. [short pause] Oddly, the shows stayed on the air. [nervous] But who was behind it?",
       "visuals": [
         {
           "type": "gfx",
@@ -560,7 +560,7 @@
       "act": "scramble",
       "label": "The China clue that wasn't",
       "mood": "tense",
-      "narration": "[nervous] Everyone wanted a name. On March 21, South Korea's internet regulator said the bad code came from an address in China. Then officials took it back. The address belonged to NongHyup Bank's own network. [sighs] Clues can lie. And the attackers weren't done. On March 25 and 26, a second wave hit dozens of servers and websites. [curious] Investigators found more than 1,000 internet addresses in 40 countries. So where did it start?",
+      "narration": "[nervous] Everyone wanted a name. On March 21, South Korea's internet regulator said the bad code came from an address in China. Then officials took it back. The address belonged to NongHyup Bank's own network. [sighs] Clues can lie. On March 25 and 26, a second wave hit dozens of servers and websites. [curious] Investigators found more than 1,000 internet addresses in 40 countries.",
       "visuals": [
         {
           "type": "stock",
@@ -624,7 +624,7 @@
       "act": "unmasking",
       "label": "April 10: Seoul names a suspect",
       "mood": "reveal",
-      "narration": "[serious] On April 10, 2013, South Korean officials faced reporters. They named North Korea. They said a spy agency run by the North's military was behind it. Many of the harmful programs had been used before. And North Korean systems had reached into South Korean networks at least 13 times. Chun Kil-soo, from Korea's internet security agency, said, [slowly] We saw evidence that the attack was extremely carefully prepared.",
+      "narration": "[serious] On April 10, 2013, South Korean officials faced reporters. They named North Korea. They said a spy agency run by the North's military was behind it. Many of the harmful programs had been used before. North Korean systems had reached into South Korean networks at least 13 times. Chun Kil-soo, from Korea's internet security agency, said, [slowly] We saw evidence that the attack was extremely carefully prepared.",
       "visuals": [
         {
           "type": "gfx",
@@ -778,7 +778,7 @@
       "act": "aftermath",
       "label": "The road to Hollywood",
       "mood": "reveal",
-      "narration": "[deep voice] Now jump ahead to November 2014. Sony Pictures, the Hollywood studio, was hacked. On December 19, the FBI blamed North Korea. And it pointed back to Seoul. It said the Sony tools were like those used in March 2013 against South Korean banks and TV stations. [short pause] In 2016, security companies tied both attacks to one team. Today, it's known as Lazarus.",
+      "narration": "[deep voice] Now jump ahead to November 2014. Sony Pictures, the Hollywood studio, was hacked. On December 19, the FBI blamed North Korea. And it pointed back to Seoul. It said the Sony tools were like those used in March 2013 against South Korean banks and TV stations. [short pause] In 2016, security companies tied both attacks to one team. Today, it's called Lazarus.",
       "visuals": [
         {
           "type": "gfx",
@@ -859,7 +859,7 @@
               ]
             ]
           },
-          "at": "known as Lazarus"
+          "at": "called Lazarus"
         }
       ]
     },
@@ -868,7 +868,7 @@
       "act": "aftermath",
       "label": "The warning nobody heard",
       "mood": "sad",
-      "narration": "[reflective] Here's what makes this chilling. Almost everything in the Sony hack happened in Seoul first. The quiet break-in. The fake hacker group. The skulls on a screen. A timer set to the minute. American expert James Barnett warned, [serious] This needs to be a wake-up call. This can happen anywhere. [long pause] [softly] Most of the world didn't wake up until it hit Hollywood. If you like true stories like this, subscribe to Breach Uncovered.",
+      "narration": "[reflective] Almost everything in the Sony hack happened in Seoul first. The quiet break-in. The fake hacker group. The skulls on a screen. A timer set to the minute. American expert James Barnett warned, [serious] This needs to be a wake-up call. This can happen anywhere. [long pause] [softly] Most of the world didn't wake up until it hit Hollywood. If you like true stories like this, subscribe to Breach Uncovered.",
       "visuals": [
         {
           "type": "gfx",
