@@ -1,0 +1,503 @@
+{
+  "episode": 3,
+  "key": "bangladesh",
+  "title": "Bangladesh Bank — the $81M SWIFT heist",
+  "year": 2016,
+  "category": "finance",
+  "needs_review": false,
+  "review_note": "",
+  "scenes": [
+    {
+      "id": 1,
+      "act": "cold_open",
+      "label": "A printer that wouldn't print",
+      "narration": "[quietly] Friday, February 5, 2016. Dhaka, Bangladesh. On the tenth floor of the country's central bank, a printer has stopped working. It's not just any printer. It's the machine that prints a paper record of every international money transfer the bank makes. Nobody panics. [short pause] It has glitched before. But this time, the silence of that printer is hiding something enormous. [ominously] Somewhere on the other side of the world, nearly a billion dollars is already on the move.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "office printer blinking light",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "title",
+          "text": "Dhaka, Bangladesh · February 5, 2016"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "act": "stakes",
+      "label": "The bank behind a nation",
+      "narration": "[serious] Bangladesh Bank is the central bank of Bangladesh — the country's version of the Federal Reserve. Like many central banks, it keeps a big chunk of its foreign reserves, in US dollars, in an account at the Federal Reserve Bank of New York, in Lower Manhattan. That money is a national safety net. It pays for imports, steadies the currency and backs the economy of a country of millions. So when someone set out to empty that account, they weren't robbing a bank. They were robbing a nation.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "Bangladesh Bank building Dhaka"
+        },
+        {
+          "type": "archival",
+          "query": "Federal Reserve Bank of New York building"
+        },
+        {
+          "type": "motion",
+          "kind": "map",
+          "text": "Dhaka to New York",
+          "data": {
+            "pins": [
+              "Dhaka",
+              "New York"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "act": "quiet_part",
+      "label": "A job application",
+      "narration": "[curious] The story really begins a year earlier, in January 2015. Several employees at Bangladesh Bank received a polite email from a job seeker who called himself Rasel Ahlam. Attached, it seemed, was his resume and a cover letter. But Rasel Ahlam did not exist. The email was what security people call spear-phishing — a fake message tailored to trick one specific organization. [short pause] According to investigators, at least one person opened it. And that single click let the intruders in.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "doc_callout",
+          "text": "From: Rasel Ahlam — Subject: Job application"
+        },
+        {
+          "type": "stock",
+          "query": "email inbox on computer screen"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "act": "quiet_part",
+      "label": "Patient guests",
+      "narration": "[slowly] Then the attackers did something most of us wouldn't expect from thieves. They waited. For months, they moved quietly through the bank's network, studying how it worked. Their goal was the bank's connection to SWIFT. SWIFT is the secure messaging system banks around the world use to tell each other to move money. A SWIFT message from a central bank carries enormous trust. If you could send those messages yourself, you wouldn't need to crack a vault. [whispers] You could simply ask for the money.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "network",
+          "text": "Inside the network",
+          "data": {
+            "nodes": [
+              "Email",
+              "Workstation",
+              "Servers",
+              "SWIFT terminal"
+            ]
+          }
+        },
+        {
+          "type": "stock",
+          "query": "server room corridor dark"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "act": "quiet_part",
+      "label": "Four accounts on Jupiter Street",
+      "narration": "[cautiously] Meanwhile, across the Bay of Bengal and beyond, in Manila, someone was preparing the getaway. In May 2015, four bank accounts were opened at a branch of the Philippines' Rizal Commercial Banking Corporation, known as RCBC, on Jupiter Street. According to reporting on the investigation, the accounts were opened with fake driver's licenses. Each got an initial deposit of just $500. And then they sat there, dormant, for nine months. [short pause] Waiting.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "Manila city street night traffic"
+        },
+        {
+          "type": "motion",
+          "kind": "title",
+          "text": "Jupiter Street, Makati · May 2015"
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "Opening deposit",
+          "data": {
+            "value": 500,
+            "prefix": "$"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "act": "escalation",
+      "label": "The timing was the weapon",
+      "narration": "[serious] The timing of the attack was chosen with care. In Bangladesh, the weekend falls on Friday and Saturday. In New York, it falls on Saturday and Sunday. And Monday, February 8, 2016, was the start of the Lunar New Year, a holiday in the Philippines. Put it together and you get a window of several days when the bank in Dhaka, the Fed in New York and the banks in Manila would never all be at their desks at the same time.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "timeline",
+          "text": "The five-day window",
+          "data": {
+            "events": [
+              "Thu Feb 4 · orders sent",
+              "Fri–Sat · Dhaka weekend",
+              "Sat–Sun · New York weekend",
+              "Mon Feb 8 · Lunar New Year"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "act": "escalation",
+      "label": "Nearly a billion dollars",
+      "narration": "[dramatically] On the evening of Thursday, February 4, Dhaka time, the attackers struck. Using the bank's own SWIFT access, they sent 35 payment orders to the New York Fed. Together, the orders asked for about $951 million — almost everything in the account. To the Fed, the messages looked real. The New York Fed later said the instructions were fully authenticated by the SWIFT messaging system. [short pause] And to keep anyone in Dhaka from noticing, the attackers had tampered with the software behind that printer.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "Requested",
+          "data": {
+            "value": 951000000,
+            "prefix": "$"
+          }
+        },
+        {
+          "type": "motion",
+          "kind": "terminal",
+          "text": "35 payment orders queued"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "act": "escalation",
+      "label": "The word that saved millions",
+      "narration": "[curious] Then something odd happened. The Fed's systems flagged many of the requests. One reason, according to Reuters, was a single word. The Manila branch's address included Jupiter — and Jupiter was also the name of an oil tanker and shipping company on a US sanctions list. There is no suggestion either had anything to do with the heist. It was pure coincidence. [short pause] But that coincidence slowed everything down, and most of the orders were never paid.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "doc_callout",
+          "text": "Beneficiary address: Jupiter Street — flagged"
+        },
+        {
+          "type": "stock",
+          "query": "oil tanker at sea"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "act": "escalation",
+      "label": "Five orders slip through",
+      "narration": "[grim] Most — but not all. Five payments, worth $101 million, cleared. One of them, $20 million, was headed to Sri Lanka, to an organization called the Shalika Foundation. Except the attackers had typed it as Shalika Fandation. A routing bank, Deutsche Bank, noticed the misspelling and asked questions. That transfer was stopped. [exhales] The other four went to the Philippines. Total: $81 million, landing in those quiet accounts on Jupiter Street.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "redact",
+          "text": "Shalika Fandation"
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "Got through to Manila",
+          "data": {
+            "value": 81000000,
+            "prefix": "$"
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "act": "scramble",
+      "label": "Nobody is answering",
+      "narration": "[nervous] Back in Dhaka, the broken printer finally came back to life. And when it did, it spat out page after page of transfers nobody had approved. A senior official later said that because glitches had happened before, they thought it was a common problem, just like any other day. By Saturday, staff realized what had happened. They emailed the New York Fed. They called. They faxed. [short pause] But it was the weekend in New York, and nobody was answering.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "empty bank office at night"
+        },
+        {
+          "type": "motion",
+          "kind": "quote",
+          "text": "Our system has been hacked. Please stop all payment instructions immediately."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "act": "scramble",
+      "label": "Gone into the casinos",
+      "narration": "[serious] In Manila, the dormant accounts woke up. On Friday, February 5, the money began to move — shuffled between accounts, converted into Philippine pesos and partly pulled out in cash. Much of it then flowed into casinos. Reporting on the case says about $50 million went to accounts linked to the Solaire and Midas casinos. Why casinos? [slowly] Because at the time, the Philippines' anti-money-laundering law did not cover them. Once the money hit the gaming tables, the trail went cold.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "casino chips on gaming table"
+        },
+        {
+          "type": "archival",
+          "query": "Manila skyline Makati"
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "Into casinos",
+          "data": {
+            "value": 50000000,
+            "prefix": "$"
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "act": "scramble",
+      "label": "The man who flew away",
+      "narration": "[cautiously] According to reporting on a Philippine Senate investigation, another $31 million was handed to a Chinese national named Xu Weikang — who reportedly left the country on a private plane and has not been seen since. A businessman who organized gambling trips, Kim Wong, returned money to the authorities, and Bangladesh Bank says it recovered about $16 million from him. He was charged, but the charges were later dropped. [sighs] The rest of the $81 million simply vanished.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "private jet on runway night"
+        },
+        {
+          "type": "motion",
+          "kind": "headline",
+          "text": "Senate probe follows the missing millions"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "act": "unmasking",
+      "label": "Who was really behind it?",
+      "narration": "[serious] For two years, the big question hung in the air. Who had pulled this off? On September 6, 2018, the US Justice Department gave its answer. It unsealed a criminal complaint charging a North Korean programmer, Park Jin Hyok, with conspiracy to commit computer fraud and wire fraud. Prosecutors say he was part of a hacking team backed by the North Korean government — the group security researchers call Lazarus.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "FBI wanted poster Park Jin Hyok"
+        },
+        {
+          "type": "archival",
+          "query": "US Department of Justice seal"
+        },
+        {
+          "type": "motion",
+          "kind": "title",
+          "text": "Charged · September 6, 2018"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "act": "unmasking",
+      "label": "A fingerprint from Hollywood",
+      "narration": "[curious] How did investigators connect the dots? According to the FBI, the malware used in different attacks shared telltale features — including a distinctive data table that also turned up in the 2014 hack of Sony Pictures. Prosecutors say the same group was behind that attack, the Bangladesh Bank heist and attempts on other banks. And the ambition was staggering. [slowly] Between 2015 and 2018, the Justice Department says, the group tried to steal at least $1 billion from banks around the world.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "network",
+          "text": "Shared code, shared hands",
+          "data": {
+            "nodes": [
+              "Sony Pictures 2014",
+              "Bangladesh Bank 2016",
+              "Other banks"
+            ]
+          }
+        },
+        {
+          "type": "archival",
+          "query": "Sony Pictures studio Culver City"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "act": "aftermath",
+      "label": "Who paid the price",
+      "narration": "[reflective] The fallout in Bangladesh was swift. In March 2016, the bank's governor, Atiur Rahman, resigned. In the Philippines, the only person convicted so far was Maia Santos Deguito, the manager of that Jupiter Street branch. In January 2019, a court in Makati found her guilty on eight counts of money laundering and sentenced her to prison. In 2023, an appeals court upheld the conviction. Bangladesh Bank also sued RCBC in New York, a legal fight that has dragged on for years.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "headline",
+          "text": "Ex-bank manager found guilty of money laundering"
+        },
+        {
+          "type": "motion",
+          "kind": "timeline",
+          "text": "Fallout",
+          "data": {
+            "events": [
+              "Mar 2016 · Governor resigns",
+              "Jan 2019 · Deguito convicted",
+              "2023 · Conviction upheld"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "act": "aftermath",
+      "label": "The heist that almost worked",
+      "narration": "[slowly] In the end, the attackers asked for nearly $1 billion and got away with $81 million. Not because the system stopped them — but because of a street name, a spelling mistake and a lot of luck. Banks around the world tightened how they protect their SWIFT connections. [pause] But the lesson is simple. [softly] One of the biggest bank heists of the digital age didn't start with a gun or a tunnel. It started with a job application… and a printer nobody thought twice about. If you like stories like this, subscribe to Breach Uncovered.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "city night lights timelapse"
+        },
+        {
+          "type": "motion",
+          "kind": "quote",
+          "text": "Nearly $1 billion asked. $81 million gone."
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "claim": "Hackers sent 35 fraudulent SWIFT payment orders to the New York Fed on February 4, 2016, requesting about $951 million",
+      "source": "https://www.businessinsurance.com/new-york-fed-bangladesh-bank-cyber-security-heist-fireeye-jupiter/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Five payments worth $101 million were paid; $20 million to Sri Lanka was reversed, $81 million went to four accounts in the Philippines",
+      "source": "https://www.businessinsurance.com/new-york-fed-bangladesh-bank-cyber-security-heist-fireeye-jupiter/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Jupiter in the Manila bank address matched a US-sanctioned tanker/shipping company name, raising alarms at the Fed",
+      "source": "https://www.businessinsurance.com/new-york-fed-bangladesh-bank-cyber-security-heist-fireeye-jupiter/",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Bangladesh Bank's emergency email: 'Our system has been hacked. Please stop all payment (debit) instructions immediately.'",
+      "source": "https://www.businessinsurance.com/new-york-fed-bangladesh-bank-cyber-security-heist-fireeye-jupiter/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "The Fed said the instructions were fully authenticated by the SWIFT messaging system",
+      "source": "https://amp.scmp.com/news/asia/south-asia/article/1926264/faulty-printer-and-software-led-theft-us81-million-bangladesh",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Printer fault on February 5; joint director Zubair bin Huda: glitches happened before, thought it was a common problem",
+      "source": "https://amp.scmp.com/news/asia/south-asia/article/1926264/faulty-printer-and-software-led-theft-us81-million-bangladesh",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "The printer held the paper record of transfers; hackers tampered with its software",
+      "source": "https://www.thedailystar.net/tech-startup/news/when-north-korean-hackers-almost-pulled-billion-dollar-heist-bangladesh-bank-2115317",
+      "confidence": "reported"
+    },
+    {
+      "claim": "January 2015 phishing email from fake job applicant 'Rasel Ahlam'",
+      "source": "https://www.thedailystar.net/tech-startup/news/when-north-korean-hackers-almost-pulled-billion-dollar-heist-bangladesh-bank-2115317",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Four RCBC Jupiter Street accounts opened May 2015 with fake driver's licenses and $500 deposits",
+      "source": "https://www.thedailystar.net/tech-startup/news/when-north-korean-hackers-almost-pulled-billion-dollar-heist-bangladesh-bank-2115317",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Bangladesh weekend Friday-Saturday; Lunar New Year Monday February 8, 2016",
+      "source": "https://www.thedailystar.net/tech-startup/news/when-north-korean-hackers-almost-pulled-billion-dollar-heist-bangladesh-bank-2115317",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "$20 million to 'Shalika Fandation' blocked after Deutsche Bank questioned the misspelling",
+      "source": "https://www.occrp.org/en/news/bangladesh-typo-triggers-alarm-prevents-billion-dollar-bank-heist",
+      "confidence": "reported"
+    },
+    {
+      "claim": "About $50 million went to Solaire and Midas casinos; $31 million to Xu Weikang who left by private plane; casinos not covered by AML law",
+      "source": "https://www.thedailystar.net/tech-startup/news/when-north-korean-hackers-almost-pulled-billion-dollar-heist-bangladesh-bank-2115317",
+      "confidence": "reported"
+    },
+    {
+      "claim": "About $16 million recovered from Kim Wong; charges later dropped",
+      "source": "https://www.thedailystar.net/tech-startup/news/when-north-korean-hackers-almost-pulled-billion-dollar-heist-bangladesh-bank-2115317",
+      "confidence": "reported"
+    },
+    {
+      "claim": "DOJ complaint against Park Jin Hyok filed June 8, 2018, unsealed September 6, 2018; conspiracy to commit computer fraud and wire fraud",
+      "source": "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Shared malware data table linked Sony Pictures attack and bank intrusions; group attempted thefts of at least $1 billion 2015-2018",
+      "source": "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Governor Atiur Rahman resigned in March 2016",
+      "source": "https://www.businessinsurance.com/new-york-fed-bangladesh-bank-cyber-security-heist-fireeye-jupiter/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Maia Deguito convicted on eight counts of money laundering by Makati RTC in January 2019, 4 to 7 years",
+      "source": "https://www.philstar.com/business/2019/01/10/1883908/business",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Court of Appeals upheld Deguito's conviction in 2023",
+      "source": "https://www.abs-cbn.com/news/04/19/23/ca-upholds-maia-deguitos-money-laundering-conviction",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Bangladesh Bank sued RCBC in New York; litigation ongoing for years",
+      "source": "https://www.casino.org/news/new-york-supreme-court-allows-bangladesh-lawsuit-against-philippines/",
+      "confidence": "confirmed"
+    }
+  ],
+  "sources": [
+    "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+    "https://www.businessinsurance.com/new-york-fed-bangladesh-bank-cyber-security-heist-fireeye-jupiter/",
+    "https://www.thedailystar.net/tech-startup/news/when-north-korean-hackers-almost-pulled-billion-dollar-heist-bangladesh-bank-2115317",
+    "https://amp.scmp.com/news/asia/south-asia/article/1926264/faulty-printer-and-software-led-theft-us81-million-bangladesh",
+    "https://www.occrp.org/en/news/bangladesh-typo-triggers-alarm-prevents-billion-dollar-bank-heist",
+    "https://www.tripwire.com/state-of-security/typo-helped-prevent-hackers-from-stealing-1b-in-bank-heist",
+    "https://www.philstar.com/business/2019/01/10/1883908/business",
+    "https://www.abs-cbn.com/news/04/19/23/ca-upholds-maia-deguitos-money-laundering-conviction",
+    "https://www.casino.org/news/new-york-supreme-court-allows-bangladesh-lawsuit-against-philippines/"
+  ],
+  "seo": {
+    "youtube_title": "How Bangladesh Bank Was Hacked: The $81M Heist That Almost Hit $1B",
+    "youtube_description": "How was Bangladesh Bank hacked? The true story of the $81 million SWIFT heist — the cyberattack that asked for nearly $1 billion.\nA fake job application, a broken printer and a holiday weekend: this is the Bangladesh Bank cyber heist explained.\n\nIn February 2016, hackers used Bangladesh Bank's own SWIFT access to send 35 payment orders to the Federal Reserve Bank of New York, asking for about $951 million. A street name that matched a US sanctions list and a misspelled word stopped most of it — but $81 million still reached accounts in the Philippines and vanished into casinos.\n\nTwo years later, the US Justice Department charged North Korean programmer Park Jin Hyok, accusing him of being part of the government-backed hacking team known as Lazarus — the same group prosecutors tie to the Sony Pictures hack.\n\n{{CHAPTERS}}\n\nSources:\nhttps://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and\nhttps://www.businessinsurance.com/new-york-fed-bangladesh-bank-cyber-security-heist-fireeye-jupiter/\nhttps://www.thedailystar.net/tech-startup/news/when-north-korean-hackers-almost-pulled-billion-dollar-heist-bangladesh-bank-2115317\nhttps://amp.scmp.com/news/asia/south-asia/article/1926264/faulty-printer-and-software-led-theft-us81-million-bangladesh\nhttps://www.occrp.org/en/news/bangladesh-typo-triggers-alarm-prevents-billion-dollar-bank-heist\n\nEducational documentary based on public records. No hacking instructions.\n\n#cybersecurity #truecrime #BangladeshBank",
+    "tags": [
+      "bangladesh bank heist",
+      "bangladesh bank hack",
+      "lazarus group",
+      "north korea hackers",
+      "swift hack",
+      "2016 bank heist",
+      "park jin hyok",
+      "cyber attack",
+      "true story",
+      "hacking documentary",
+      "cybersecurity",
+      "cybercrime",
+      "how bangladesh bank was hacked",
+      "81 million dollar heist",
+      "biggest bank cyber heist",
+      "new york fed hack"
+    ],
+    "hashtags": [
+      "#cybersecurity",
+      "#truecrime",
+      "#BangladeshBank"
+    ],
+    "thumb": {
+      "line1": "$1 BILLION",
+      "line2": "ALMOST STOLEN",
+      "tag": "NORTH KOREA VS THE NY FED"
+    },
+    "facebook_text": "A broken printer almost let hackers steal nearly $1 billion from a central bank.\n\n- In 2016, hackers sent 35 fake payment orders to the New York Fed\n- A misspelled word, \"Fandation,\" stopped a $20 million transfer\n- $81 million still vanished into casinos in the Philippines\n\nCould your bank spot a fake order this good? #cybersecurity #truecrime #BangladeshBank",
+    "first_comment": "A street name and a typo saved hundreds of millions of dollars. Do you think banks got lucky here, or did the system actually work?",
+    "search_terms": [
+      "how was bangladesh bank hacked",
+      "bangladesh bank heist explained",
+      "lazarus group bangladesh bank",
+      "81 million swift hack",
+      "north korea bank heist",
+      "bangladesh bank heist documentary",
+      "shalika fandation typo"
+    ]
+  }
+}

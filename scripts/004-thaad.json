@@ -1,0 +1,476 @@
+{
+  "episode": 4,
+  "key": "thaad",
+  "title": "Phishing the THAAD contractors",
+  "year": 2016,
+  "category": "espionage",
+  "needs_review": false,
+  "review_note": "Complaint PDF on justice.gov was unreachable from this environment; defense-contractor facts come from the DOJ release, partial affidavit OCR (nsarchive, paras 9, 14, 52, 59) and press coverage of the complaint. Closing claim about later fake-job campaigns rests on the CyberScoop 2020 report headline; THAAD deployment date from Newsweek. Spot-check before publish if desired.",
+  "scenes": [
+    {
+      "id": 1,
+      "act": "cold_open",
+      "label": "A job offer from a rival",
+      "narration": "[softly] It looked like good news. A recruiter from a competing defense company, reaching out with an opportunity. [short pause] Some of these messages even mentioned THAAD — the American missile shield being set up in South Korea. [serious] But according to the FBI, the recruiter was a fake. The message was bait. And the people who wrote it, the US government says, were working for North Korea.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "email inbox laptop night",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "quote",
+          "text": "\"A new opportunity…\""
+        },
+        {
+          "type": "motion",
+          "kind": "title",
+          "text": "US defense industry · 2016–2017"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "act": "stakes",
+      "label": "The shield built to stop missiles",
+      "narration": "[serious] THAAD stands for Terminal High Altitude Area Defense. In plain words, it is a system designed to shoot down a ballistic missile as it comes back down, just inside or just beyond the atmosphere. Its prime contractor is Lockheed Martin, one of the biggest defense companies in America. In May 2017, as tensions on the Korean Peninsula climbed, the system was deployed in South Korea. [short pause] And that made the people who build it a target.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "THAAD interceptor launch Missile Defense Agency",
+          "overlay": ""
+        },
+        {
+          "type": "archival",
+          "query": "Lockheed Martin logo",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "map",
+          "text": "South Korea · THAAD deployed May 2017"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "act": "quiet",
+      "label": "Programmers in a Chinese port city",
+      "narration": "To understand who was behind the emails, prosecutors point to one man: Park Jin Hyok. According to the FBI, Park was a North Korean computer programmer who worked for more than a decade for a company called Chosun Expo Joint Venture. On paper, it was a business. A team of North Korean programmers worked out of Dalian, a port city in northeast China, taking paid coding and IT jobs for outside clients. [cautiously] But the Justice Department calls Chosun Expo a front — affiliated with a North Korean hacking unit sometimes known as Lab 110, part of the country's military intelligence.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "Dalian China skyline",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "network",
+          "text": "Chosun Expo → Lab 110 → military intelligence"
+        },
+        {
+          "type": "stock",
+          "query": "programmers office computers",
+          "overlay": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "act": "quiet",
+      "label": "A crew with a reputation",
+      "narration": "Security researchers have their own name for this crew: the Lazarus Group. And by 2016, it already had a long record. Prosecutors tie the same conspiracy to the hack of Sony Pictures in November 2014, launched in retaliation for the comedy The Interview. They tie it to the theft of $81 million from Bangladesh's central bank in February 2016. [pause] Now, the government says, the same people were turning toward something else. Not a movie studio. Not a bank. America's defense industry.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "timeline",
+          "text": "Sony 2014 · Bangladesh Bank 2016 · Defense contractors 2016–17"
+        },
+        {
+          "type": "archival",
+          "query": "Sony Pictures studio Culver City",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "$81 million"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "act": "quiet",
+      "label": "Doing their homework",
+      "narration": "Before you can fool someone, you have to know them. According to the FBI's sworn affidavit, the subjects did their homework. Court-ordered records show that people using a North Korean internet address visited the websites of intended victims such as Lockheed Martin — while researching Lockheed personnel and sending messages to its employees. [short pause] Reporting on the complaint says the hackers' successful attacks were usually preceded by the same thing: careful reconnaissance of their targets, online and on social media.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "hacker typing dark room",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "doc_callout",
+          "text": "…visit the websites of some of their intended victims such as Lockheed Martin"
+        },
+        {
+          "type": "stock",
+          "query": "social media profile scrolling",
+          "overlay": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "act": "escalation",
+      "label": "The recruiter who wasn't real",
+      "narration": "The weapon was spear-phishing. Ordinary phishing is a wide net, the same scam sent to thousands. Spear-phishing is a message written for one person — personal, believable, built to get them to click a link or open a file. Here, the affidavit says, the subjects created email accounts in the names of recruiters or high-profile people at one defense company, then used them to send recruiting messages to employees at its competitors. [softly] It's a clever disguise. A job offer is flattering. It feels private. And it's exactly the kind of message you want to open.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "terminal",
+          "text": "From: Recruiter — Subject: Career opportunity"
+        },
+        {
+          "type": "motion",
+          "kind": "network",
+          "text": "fake recruiter → employees at rival contractors"
+        },
+        {
+          "type": "stock",
+          "query": "office worker reading email",
+          "overlay": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "act": "escalation",
+      "label": "THAAD in the message",
+      "narration": "Some of those messages, according to the Justice Department, made reference to THAAD itself. And in July 2017, the security firm Palo Alto Networks reported a wave of booby-trapped documents disguised as job ads, aimed at employees of US military contractors and linked by researchers to the Lazarus Group. One fake posting, Newsweek reported, was for a management position involving the THAAD missile defense system. [serious] The timing was hard to miss. That same month, North Korea launched missiles on July 4 and again on July 28, testing its Hwasong-14 intercontinental ballistic missile.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "headline",
+          "text": "Hackers target US military workers with fake job ads"
+        },
+        {
+          "type": "motion",
+          "kind": "timeline",
+          "text": "July 4 · July 28, 2017 — missile launches"
+        },
+        {
+          "type": "stock",
+          "query": "missile launch night sky",
+          "overlay": ""
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "act": "scramble",
+      "label": "The door that held",
+      "narration": "So what did the hackers get out of Lockheed Martin? [short pause] According to the Justice Department… nothing. The attempts to break into Lockheed Martin's computer systems were not successful. [reflective] In a story like this, that is a rare ending. The government has not said publicly exactly what stopped them, how many messages were sent in all, or whether every other contractor on the list was as lucky.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "quote",
+          "text": "Attempts to breach Lockheed Martin \"were not successful\""
+        },
+        {
+          "type": "stock",
+          "query": "security operations center screens",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "redact",
+          "text": "Number of targets: not disclosed"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "act": "scramble",
+      "label": "Same fingerprints, different target",
+      "narration": "But a failed break-in still leaves fingerprints. When investigators traced the defense contractor emails, they found them tangled up with the Sony case. Some messages used the same aliases and accounts seen in the 2014 Sony attack, sometimes accessed from North Korean internet addresses. And the malware carried the same distinctive data table found in the Sony malware, and in tools used against banks. [pause] Different targets. Same toolbox.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "network",
+          "text": "Sony 2014 ↔ banks ↔ defense contractors"
+        },
+        {
+          "type": "motion",
+          "kind": "doc_callout",
+          "text": "Same distinct data table"
+        },
+        {
+          "type": "stock",
+          "query": "fingerprint scan close up",
+          "overlay": ""
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "act": "unmasking",
+      "label": "One hundred search warrants",
+      "narration": "Building the case took years. According to the complaint, investigators filed about 100 search warrants to get into roughly 1,000 email and social media accounts. The result was an affidavit 179 pages long, sworn by FBI Special Agent Nathan P. Shields of the Los Angeles field office. [cautiously] It reads less like a spy thriller and more like a giant ledger — which account logged in from where, whose address sat in whose contact list, which login came from inside North Korea.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "FBI seal",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "100 warrants · 1,000 accounts"
+        },
+        {
+          "type": "motion",
+          "kind": "title",
+          "text": "Los Angeles · June 8, 2018"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "act": "unmasking",
+      "label": "The name that slipped",
+      "narration": "And somewhere in all that data, the cover slipped. The hackers used a fake persona, Kim Hyon Woo, across several email and social media accounts. Park, meanwhile, used his own accounts for ordinary Chosun Expo work in China. The FBI says the two worlds touched. The usernames shared a pattern. One account was saved in the other's address book. Only the Kim Hyon Woo account could open an archive stored in an account tied to Park. And both sets were reached from some of the same IP addresses — the numeric address every internet connection carries.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "network",
+          "text": "\"Kim Hyon Woo\" ↔ Park's real accounts"
+        },
+        {
+          "type": "motion",
+          "kind": "redact",
+          "text": "tty••••@ ↔ tty••••@"
+        },
+        {
+          "type": "stock",
+          "query": "data center cables",
+          "overlay": ""
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "act": "unmasking",
+      "label": "A lack of opsec",
+      "narration": "Eric Chien of the security firm Symantec put it bluntly, calling it \"a lack of opsec.\" Opsec is short for operational security — the discipline of keeping your real identity walled off from your secret work. Agents even found a résumé showing Park had been employed as a developer, listing skills that included Visual C++, a programming language Lazarus used to build many of its tools. [short pause] For a man accused of hiding behind fake names, his paper trail was remarkably real.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "quote",
+          "text": "\"a lack of opsec\" — Eric Chien, Symantec"
+        },
+        {
+          "type": "motion",
+          "kind": "doc_callout",
+          "text": "Résumé: developer · Visual C++"
+        },
+        {
+          "type": "stock",
+          "query": "paper documents on desk",
+          "overlay": ""
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "act": "aftermath",
+      "label": "Charged, but out of reach",
+      "narration": "On September 6, 2018, the Justice Department unsealed the charges: conspiracy to commit computer fraud and abuse, with a maximum of 5 years in prison, and conspiracy to commit wire fraud, with a maximum of 20. The complaint tied the same conspiracy to Sony, to Bangladesh Bank, to the attempts on US defense contractors — and to WannaCry, the 2017 ransomware that hit hundreds of thousands of computers and badly disrupted Britain's National Health Service. The Treasury also sanctioned Park and Chosun Expo. [serious] FBI Director Christopher Wray said: \"We stand with our partners to name the North Korean government as the force behind this destructive global cyber campaign.\"",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "US Department of Justice building Washington",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "headline",
+          "text": "North Korean programmer charged — Sept 6, 2018"
+        },
+        {
+          "type": "motion",
+          "kind": "quote",
+          "text": "\"…the force behind this destructive global cyber campaign.\""
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "act": "aftermath",
+      "label": "The offer that keeps coming",
+      "narration": "Park Jin Hyok has never been arrested. The United States has no extradition agreement with North Korea, and he appears on the FBI's Most Wanted list. North Korea denies involvement. [reflective] And the trick he is accused of helping run never really went away. In the years since, security researchers have kept reporting North Korean campaigns built on fake job offers aimed at defense and aerospace workers. [softly] So the next time a stranger offers you your dream job… read it twice. [short pause] If you like stories like this, subscribe to Breach Uncovered.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "FBI wanted poster Park Jin Hyok",
+          "overlay": ""
+        },
+        {
+          "type": "stock",
+          "query": "city night lights",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "title",
+          "text": "Breach Uncovered"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "claim": "In 2016-2017 the conspiracy sent spear-phishing emails to US defense contractors including Lockheed Martin, prime contractor for THAAD; some emails purported to be from recruiters at competing contractors and some referenced THAAD, deployed in South Korea",
+      "source": "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Attempts to breach Lockheed Martin were unsuccessful",
+      "source": "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Park Jin Hyok worked for over a decade for Chosun Expo Joint Venture, affiliated with Lab 110, a component of North Korean military intelligence; researchers call the team Lazarus Group",
+      "source": "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Park worked among a team of North Korean programmers employed by Chosun Expo in Dalian, China, on paid programming/IT projects",
+      "source": "https://nsarchive.gwu.edu/media/18208/ocr",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Subjects using North Korean IP Address #6 visited websites of intended victims such as Lockheed Martin while researching Lockheed personnel and messaging employees",
+      "source": "https://nsarchive.gwu.edu/media/18208/ocr",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Subjects created accounts in names of recruiters or high-profile personnel at one company to send recruitment messages to employees of competitors such as other defense contractors",
+      "source": "https://nsarchive.gwu.edu/media/18208/ocr",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Defense-contractor emails used aliases/accounts seen in the Sony attack, sometimes accessed from North Korean IPs, and malware with the same distinct data table as Sony and bank malware",
+      "source": "https://threatpost.com/u-s-ties-lazarus-to-north-korea-and-major-hacking-conspiracy/137264/",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Successful attacks were preceded by reconnaissance of targets online and in social media, including Lockheed Martin employees",
+      "source": "https://www.federaltimes.com/?p=16538",
+      "confidence": "reported"
+    },
+    {
+      "claim": "In July 2017 Palo Alto Networks reported Lazarus-linked malicious job-ad lures targeting US military contractor employees; one fake ad was for a management position involving THAAD; North Korean missile tests on July 4 and July 28; Hwasong-14 ICBM; THAAD deployed in South Korea May 2017",
+      "source": "https://www.newsweek.com/north-korea-hackers-targeted-us-military-workers-job-ad-spam-during-missile-651080",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Investigators filed 100 search warrants covering about 1,000 email and social media accounts; affidavit 179 pages by FBI Special Agent Nathan P. Shields, Los Angeles",
+      "source": "https://www.govinfosecurity.com/feds-charge-north-korean-devastating-cyberattacks-a-11473",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Kim Hyon Woo persona linked to Park via shared 'tty' account names, address-book entry, archive access, and common IP addresses; resume listed developer work and Visual C++",
+      "source": "https://www.securityweek.com/opsec-mistakes-allowed-us-link-north-korean-man-hacks",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Eric Chien of Symantec described Park's account reuse as 'a lack of opsec'; complaint filed June 8, 2018",
+      "source": "https://www.darkreading.com/threat-intelligence/the-opsec-fail-that-helped-unmask-a-north-korean-state-hacker",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Charges unsealed September 6, 2018: conspiracy to commit computer fraud and abuse (max 5 years) and conspiracy to commit wire fraud (max 20 years); OFAC sanctioned Park and KEJV; Wray quote; WannaCry hit hundreds of thousands of computers and the UK NHS",
+      "source": "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "US and North Korea have no extradition agreement",
+      "source": "https://www.govinfosecurity.com/feds-charge-north-korean-devastating-cyberattacks-a-11473",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Park is on the FBI Most Wanted list",
+      "source": "https://www.hackread.com/wannacry-ransomware-fame-north-korean-hacker-tracked-down-by-the-us/",
+      "confidence": "reported"
+    },
+    {
+      "claim": "North Korea denied involvement; incident categorized as espionage against Lockheed Martin",
+      "source": "https://www.cfr.org/cyber-operations/targeting-of-u-s-defense-contractors-2",
+      "confidence": "reported"
+    },
+    {
+      "claim": "North Korean hackers continued using fake job-recruitment emails against aerospace and defense workers (2020)",
+      "source": "https://cyberscoop.com/north-korea-aerospace-defense-mcafee-job-offers/",
+      "confidence": "reported"
+    }
+  ],
+  "sources": [
+    "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+    "https://nsarchive.gwu.edu/media/18208/ocr",
+    "https://threatpost.com/u-s-ties-lazarus-to-north-korea-and-major-hacking-conspiracy/137264/",
+    "https://www.newsweek.com/north-korea-hackers-targeted-us-military-workers-job-ad-spam-during-missile-651080",
+    "https://www.darkreading.com/threat-intelligence/the-opsec-fail-that-helped-unmask-a-north-korean-state-hacker",
+    "https://www.securityweek.com/opsec-mistakes-allowed-us-link-north-korean-man-hacks",
+    "https://www.govinfosecurity.com/feds-charge-north-korean-devastating-cyberattacks-a-11473",
+    "https://www.cfr.org/cyber-operations/targeting-of-u-s-defense-contractors-2",
+    "https://www.federaltimes.com/?p=16538",
+    "https://www.hackread.com/wannacry-ransomware-fame-north-korean-hacker-tracked-down-by-the-us/",
+    "https://cyberscoop.com/north-korea-aerospace-defense-mcafee-job-offers/"
+  ],
+  "seo": {
+    "youtube_title": "How North Korea Tried to Hack the THAAD Missile Makers | True Story",
+    "youtube_description": "How North Korea tried to hack the makers of THAAD, America's missile shield in South Korea, with fake job offers from recruiters who did not exist. The true story of the Lazarus Group's spear-phishing campaign against Lockheed Martin and US defense contractors, explained.\n\nIn 2016 and 2017, according to the US Justice Department, hackers working for North Korea sent spear-phishing emails to American defense contractors, including Lockheed Martin, the prime contractor for the THAAD missile defense system. The emails posed as messages from recruiters at rival companies, and some mentioned THAAD by name. The attempts on Lockheed Martin failed, but the digital fingerprints matched the 2014 Sony Pictures hack and the $81 million Bangladesh Bank heist.\n\nThe FBI's 179-page affidavit names Park Jin Hyok, a North Korean programmer who worked for a front company called Chosun Expo in Dalian, China. Reused email accounts, a fake persona and a real résumé helped investigators connect him to the Lazarus Group. He was charged in September 2018 and remains out of reach.\n\n{{CHAPTERS}}\n\nSources:\nhttps://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and\nhttps://threatpost.com/u-s-ties-lazarus-to-north-korea-and-major-hacking-conspiracy/137264/\nhttps://www.newsweek.com/north-korea-hackers-targeted-us-military-workers-job-ad-spam-during-missile-651080\nhttps://www.securityweek.com/opsec-mistakes-allowed-us-link-north-korean-man-hacks\nhttps://www.govinfosecurity.com/feds-charge-north-korean-devastating-cyberattacks-a-11473\n\nEducational documentary based on public records. No hacking instructions.\n\n#cybersecurity #truecrime #lazarusgroup",
+    "tags": [
+      "THAAD hack",
+      "Lockheed Martin hack",
+      "North Korea hackers",
+      "Lazarus Group",
+      "Park Jin Hyok",
+      "2017",
+      "cyber attack",
+      "true story",
+      "hacking documentary",
+      "cybersecurity",
+      "cybercrime",
+      "spear phishing explained",
+      "fake job offer phishing",
+      "north korea cyber espionage",
+      "defense contractor hack",
+      "lab 110"
+    ],
+    "hashtags": [
+      "#cybersecurity",
+      "#truecrime",
+      "#lazarusgroup"
+    ],
+    "thumb": {
+      "line1": "FAKE JOB OFFER",
+      "line2": "MISSILE SHIELD",
+      "tag": "NORTH KOREA VS LOCKHEED"
+    },
+    "facebook_text": "The recruiter was fake. The target was America's missile shield.\n\n• In 2016–2017, the US says North Korean hackers posed as recruiters to phish defense contractors, including Lockheed Martin.\n• Some emails even mentioned THAAD, the missile defense system deployed in South Korea.\n• The attempts on Lockheed failed, and the FBI later charged a North Korean programmer, Park Jin Hyok.\n\nWould you have opened that job offer?\n\n#cybersecurity #truecrime #lazarusgroup",
+    "first_comment": "Fake recruiters are still one of the most common tricks out there. Would you trust an unexpected job offer from a rival company, and how would you check if it was real?",
+    "search_terms": [
+      "north korea thaad hack",
+      "lockheed martin hacked north korea",
+      "lazarus group fake job offer",
+      "park jin hyok explained",
+      "north korea hackers defense contractors",
+      "thaad cyber attack",
+      "how north korea hacks with fake job offers"
+    ]
+  }
+}

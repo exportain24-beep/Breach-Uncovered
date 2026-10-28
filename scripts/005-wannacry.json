@@ -1,0 +1,464 @@
+{
+  "episode": 5,
+  "key": "wannacry",
+  "title": "WannaCry — the worm that froze hospitals",
+  "year": 2017,
+  "category": "ransomware",
+  "needs_review": false,
+  "review_note": "",
+  "scenes": [
+    {
+      "id": 1,
+      "act": "cold_open",
+      "label": "A $10.69 web address",
+      "narration": "[serious] It cost $10.69. That's what a 22-year-old in England paid for a web address on Friday, May 12, 2017 — a name so long and so random that no human would ever type it. [short pause] He wasn't trying to save anyone. He just wanted to watch. But that cheap little purchase was about to slam the brakes on a cyberattack racing across the planet. [slowly] By then, the hospitals were already going dark.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "hacker typing dark room",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "$10.69"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "act": "stakes",
+      "label": "Friday afternoon in the hospitals",
+      "narration": "[grim] The hospitals belonged to the NHS — Britain's government-run health service, the place nearly everyone in England goes when they get sick. Picture a receptionist trying to pull up a patient's file and finding a red warning screen instead. Now multiply that. At least 81 of England's 236 hospital trusts — the groups that run local hospitals — were hit. So were 595 family-doctor practices. [pause] Five emergency rooms had to turn ambulances away and send patients somewhere else.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "hospital corridor",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "81 of 236 NHS trusts hit"
+        },
+        {
+          "type": "motion",
+          "kind": "map",
+          "text": "England · May 12, 2017"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "act": "stakes",
+      "label": "The red screen",
+      "narration": "[serious] The screen had a name on it: WannaCry. This was ransomware — malicious software that scrambles your files so you can't open them, then demands money for the key. The price was $300, payable in bitcoin, per computer. [short pause] Appointments were cancelled. Ambulances were diverted. And the strangest part? Nobody had clicked anything. The machines were catching it from each other.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "red warning computer screen",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "doc_callout",
+          "text": "Files locked · $300 in bitcoin"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "act": "escalation",
+      "label": "Not just Britain",
+      "narration": "[urgently] Within 48 hours, Europol — the European Union's police agency — counted roughly 200,000 victims in at least 150 countries. Spain's phone giant Telefónica told employees to disconnect. FedEx was hit. So were Renault factories in France and Germany's national railway. China's state oil company, universities in Iran. [pause] Europol's director, Rob Wainwright, put it bluntly: \"We are in the face of an escalating threat.\" He was worried about Monday morning — when millions of people would switch their computers back on.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "network",
+          "text": "200,000 victims · 150 countries"
+        },
+        {
+          "type": "stock",
+          "query": "train station departure board",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "quote",
+          "text": "\"We are in the face of an escalating threat.\" — Europol"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "act": "quiet_part",
+      "label": "A weapon that walked out the door",
+      "narration": "[cautiously] So how did a piece of ransomware move this fast? The answer starts inside America's own spy agency. WannaCry was amplified with code called EternalBlue — a hacking tool reportedly built by the NSA, and leaked online in early 2017 by a mysterious group calling itself the Shadow Brokers. [short pause] EternalBlue turned WannaCry into a worm: a program that copies itself from one computer to the next on its own, through a weakness in older versions of Windows. No email. No click. Just spread.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "National Security Agency headquarters Fort Meade",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "network",
+          "text": "worm: machine to machine, no click"
+        },
+        {
+          "type": "motion",
+          "kind": "redact",
+          "text": "EternalBlue — leaked 2017"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "act": "quiet_part",
+      "label": "The fix that already existed",
+      "narration": "[slowly] Here's the part that stings. Microsoft had already released a fix for that weakness in March — two months earlier. Britain's health service had sent critical alerts in March and April urging hospitals to install it. Back in 2014, trusts were told to have \"robust plans\" to get off the ancient Windows XP by April 2015. [sighs] According to the government's own auditors, every infected organization was running unpatched or unsupported Windows. The head of the National Audit Office said the attack \"could have been prevented by the NHS following basic IT security best practice.\"",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "timeline",
+          "text": "March 2017: patch released · May 12: attack"
+        },
+        {
+          "type": "motion",
+          "kind": "quote",
+          "text": "\"could have been prevented... basic IT security best practice\""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "act": "scramble",
+      "label": "A bedroom in England",
+      "narration": "[curious] Meanwhile, in a bedroom in England, Marcus Hutchins was looking at a sample of the malware. Online he went by MalwareTech. He worked remotely for Kryptos Logic, a Los Angeles cybersecurity company, tracking networks of hijacked computers. [short pause] He noticed something odd. Before doing its damage, the code reached out to a web address that didn't exist — that long, nonsense name. Hutchins did what he often did with addresses like that. He registered it. \"The intent was to just monitor the spread,\" he said later.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "bedroom desk computer night",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "title",
+          "text": "Marcus Hutchins · \"MalwareTech\""
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "act": "scramble",
+      "label": "The accidental off switch",
+      "narration": "[surprised] The moment the address went live, it lit up — thousands of connections every second, from infected machines all over the world. Then came the realization. The worm was checking whether that address existed. If it answered, the worm stood down. His colleague Jamie Hankins remembered thinking: \"If the domain is reachable it won't infect — I think.\" [pause] It worked. Hutchins put it simply: \"we actually stopped the spread just by registering the domain.\" A $10.69 kill switch.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "terminal",
+          "text": "connections: thousands per second"
+        },
+        {
+          "type": "motion",
+          "kind": "quote",
+          "text": "\"we actually stopped the spread just by registering the domain\""
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "act": "scramble",
+      "label": "Why timing decided who suffered",
+      "narration": "[serious] The kill switch couldn't unlock computers that were already scrambled. It could only stop new ones from being hit. And timing decided who suffered. Of the 37 trusts locked out of their devices, 32 were in the north of England and the Midlands and East — regions struck early on Friday, before the switch was flipped. [short pause] Kryptos Logic's CEO later claimed Hutchins had \"not only saved the United States\" — the attack slowed before America's workday was fully underway.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "map",
+          "text": "North of England · Midlands & East"
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "32 of 37 locked trusts hit early"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "act": "scramble",
+      "label": "Keeping the switch alive",
+      "narration": "[breathless] But a kill switch only works while it stays switched on. The address now pointed to a sinkhole — a server that quietly soaks up traffic from infected machines. Soon, attackers aimed a giant army of hijacked devices, the Mirai botnet, at it, trying to drown it in junk traffic. If it went down, dormant infections could wake up. [exhales] It held. Hutchins was awake for more than 30 hours. In its first two days, the switch stopped about a million infections from going off.",
+      "visuals": [
+        {
+          "type": "stock",
+          "query": "server room corridor",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "~1,000,000 infections stopped in 2 days"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "act": "scramble",
+      "label": "Not much money for a global attack",
+      "narration": "[curious] Meanwhile, Microsoft did something unusual. On May 13, it pushed out an emergency fix for Windows XP — a system it no longer supported. Its president, Brad Smith, blasted governments for stockpiling hacking tools, comparing the leak to someone stealing Tomahawk missiles. [short pause] And the ransom? A strange flop. By one early count, just 192 victims had paid — about $55,000 in total. No NHS organization paid at all.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "Microsoft Redmond campus",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "192 victims paid · about $55,000"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "act": "twist",
+      "label": "From hero to defendant",
+      "narration": "[softly] Hutchins never wanted the spotlight. \"I'm definitely not a hero,\" he told reporters. [pause] Three months later, in August 2017, the FBI arrested him at the airport in Las Vegas. Not over WannaCry — over a banking trojan called Kronos, malware he had created as a teenager, years before. [slowly] He pleaded guilty. On July 26, 2019, a federal judge in Wisconsin sentenced him to time served and one year of supervised release. No prison. The judge credited him for stepping up when the world needed it.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "McCarran International Airport Las Vegas",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "headline",
+          "text": "WannaCry hero arrested by FBI"
+        },
+        {
+          "type": "motion",
+          "kind": "title",
+          "text": "Wisconsin federal court · July 26, 2019"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "act": "unmasking",
+      "label": "Fingerprints that point to Pyongyang",
+      "narration": "[serious] So who built WannaCry? On December 18, 2017, the White House answered. Homeland Security Adviser Tom Bossert said the US government attributes the attack to North Korea. He called it \"cowardly, costly and careless,\" adding: \"These disruptions put lives at risk.\" [short pause] Britain agreed. Its security minister, Ben Wallace, said his government was \"as sure as possible\" that Pyongyang was behind it. Bossert also defended the NSA — saying it was \"not at all\" at fault.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "White House press briefing room",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "quote",
+          "text": "\"cowardly, costly and careless\" — Tom Bossert"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "act": "unmasking",
+      "label": "Names on an indictment",
+      "narration": "[deep voice] In September 2018, the Justice Department charged a North Korean programmer named Park Jin Hyok. Prosecutors say he worked for a front company tied to North Korean military intelligence, and they connected the dots through email accounts, aliases, shared code and reused infrastructure. [pause] In February 2021, a new indictment added two more names, Jon Chang Hyok and Kim Il, accused members of the unit researchers call the Lazarus Group. One official called them \"the world's leading 21st century nation-state bank robbers.\" All three remain accused, not convicted.",
+      "visuals": [
+        {
+          "type": "archival",
+          "query": "FBI wanted poster Park Jin Hyok",
+          "overlay": ""
+        },
+        {
+          "type": "archival",
+          "query": "Department of Justice seal",
+          "overlay": ""
+        },
+        {
+          "type": "motion",
+          "kind": "redact",
+          "text": "United States v. Park Jin Hyok"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "act": "aftermath",
+      "label": "The bill, and the lesson",
+      "narration": "[reflective] Britain later estimated WannaCry cost its health service about £92 million — roughly $120 million — and around 19,000 cancelled appointments. That's about one for every seat in Madison Square Garden. Worldwide, prosecutors put the damage at hundreds of millions, if not billions, of dollars. [long pause] [softly] The fix existed two months before the attack. What saved the world was a curious young man, a nonsense web address, and $10.69. [short pause] If you like stories like this, subscribe to Breach Uncovered.",
+      "visuals": [
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "£92 million · 19,000 appointments"
+        },
+        {
+          "type": "stock",
+          "query": "empty hospital waiting room",
+          "overlay": ""
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "claim": "WannaCry was released worldwide on Friday, May 12, 2017.",
+      "source": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "At least 81 of 236 NHS trusts in England were affected, plus 603 other organizations including 595 GP practices.",
+      "source": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Five A&E departments had to divert patients.",
+      "source": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "All infected NHS organizations ran unpatched or unsupported Windows; NHS Digital issued alerts in March and April 2017.",
+      "source": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Trusts were told in 2014 to have robust plans to move off Windows XP by April 2015.",
+      "source": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Amyas Morse: the attack 'could have been prevented by the NHS following basic IT security best practice.'",
+      "source": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "32 of the 37 trusts locked out were in the North and Midlands & East regions, hit before the kill switch.",
+      "source": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "No NHS organization paid the ransom.",
+      "source": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Roughly 200,000 victims in at least 150 countries within 48 hours; ransom $300 in bitcoin; 192 victims had paid 31.7 BTC (about $55,490).",
+      "source": "https://www.occrp.org/en/news/ransomware-attack-hits-200000-targets-in-150-countries",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Telefónica, FedEx, Deutsche Bahn, Renault, China National Petroleum Corporation and Iranian universities were affected; Wainwright quote.",
+      "source": "https://www.occrp.org/en/news/ransomware-attack-hits-200000-targets-in-150-countries",
+      "confidence": "reported"
+    },
+    {
+      "claim": "WannaCry used EternalBlue, a leaked NSA tool released by the Shadow Brokers in early 2017.",
+      "source": "https://cyberscoop.com/white-house-defends-nsa-thanks-microsoft-facebook-countering-north-korean-hackers/",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Microsoft patched supported systems in March (MS17-010) and released an emergency XP patch on May 13, 2017; Brad Smith compared the leak to stolen Tomahawk missiles.",
+      "source": "https://www.engadget.com/2017-05-13-Microsoft-WindowsXP-WannaCrypt-NHS-patch.html",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Hutchins registered the domain for $10.69; it registered thousands of connections per second; quotes on monitoring the spread.",
+      "source": "https://www.bgr.com/tech/ransomware-wannacry-cyber-attack-kill-switch/",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Hutchins worked from his bedroom for Kryptos Logic; CEO Salim Neino said he 'not only saved the United States'.",
+      "source": "https://www.nbcnews.com/storyline/hacking-of-america/marcus-hutchins-saved-u-s-wannacry-cyberattack-bedroom-compter-n759931",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Hankins quote; Mirai botnet attacked the sinkhole; Hutchins awake 30+ hours; kill switch prevented about a million detonations in two days.",
+      "source": "https://techcrunch.com/2019/07/08/the-wannacry-sinkhole/",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Hutchins arrested August 2017 in Las Vegas over Kronos; sentenced July 26, 2019 to time served and one year supervised release by Judge Stadtmueller.",
+      "source": "https://www.theregister.com/2019/07/26/hutchins_sentencing/",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Bossert attributed WannaCry to North Korea: 'cowardly, costly and careless'; 'These disruptions put lives at risk'; UK's Ben Wallace 'as sure as possible'.",
+      "source": "https://www.mprnews.org/story/2017/12/19/npr-us-says-nkorea-responsible-wannacry-ransomware-attack",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Park Jin Hyok charged in 2018; Chosun Expo front; damage 'hundreds of millions, if not billions'.",
+      "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "February 2021 indictment adds Jon Chang Hyok and Kim Il; RGB units known as Lazarus Group; Demers quote.",
+      "source": "https://www.justice.gov/usao-cdca/pr/3-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyber-attacks-and",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "DHSC estimated WannaCry cost the NHS £92 million and 19,000 appointments.",
+      "source": "https://www.theregister.com/2018/10/12/nhs_wannacry_update",
+      "confidence": "confirmed"
+    }
+  ],
+  "sources": [
+    "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+    "https://www.occrp.org/en/news/ransomware-attack-hits-200000-targets-in-150-countries",
+    "https://techcrunch.com/2019/07/08/the-wannacry-sinkhole/",
+    "https://cyberscoop.com/white-house-defends-nsa-thanks-microsoft-facebook-countering-north-korean-hackers/",
+    "https://www.mprnews.org/story/2017/12/19/npr-us-says-nkorea-responsible-wannacry-ransomware-attack",
+    "https://www.theregister.com/2019/07/26/hutchins_sentencing/",
+    "https://www.theregister.com/2018/10/12/nhs_wannacry_update",
+    "https://www.bgr.com/tech/ransomware-wannacry-cyber-attack-kill-switch/",
+    "https://www.nbcnews.com/storyline/hacking-of-america/marcus-hutchins-saved-u-s-wannacry-cyberattack-bedroom-compter-n759931",
+    "https://www.engadget.com/2017-05-13-Microsoft-WindowsXP-WannaCrypt-NHS-patch.html",
+    "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+    "https://www.justice.gov/usao-cdca/pr/3-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyber-attacks-and"
+  ],
+  "seo": {
+    "youtube_title": "WannaCry: How a $10 Web Address Stopped the Hospital Hack",
+    "youtube_description": "How WannaCry was hacked into the world: the true story of the 2017 ransomware worm that froze British hospitals — and the $10.69 web address that stopped it.\nA WannaCry documentary on the biggest ransomware attack of its time, North Korea, a leaked NSA tool, and an accidental hero.\n\nOn May 12, 2017, ransomware called WannaCry tore through roughly 200,000 computers in 150 countries in two days. In England, at least 81 hospital trusts and 595 family-doctor practices were hit, emergency rooms diverted ambulances, and about 19,000 appointments were cancelled. The worm spread using EternalBlue, a hacking tool reportedly built by the NSA and leaked by the Shadow Brokers — exploiting a flaw Microsoft had patched two months earlier.\n\nThen a 22-year-old researcher, Marcus Hutchins, registered a strange web address hidden in the code and accidentally flipped a kill switch. Months later the FBI arrested him over unrelated malware. The US and UK governments attribute WannaCry to North Korea, and the Justice Department has charged three alleged North Korean military hackers.\n\n{{CHAPTERS}}\n\nSources:\nhttps://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/\nhttps://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and\nhttps://www.justice.gov/usao-cdca/pr/3-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyber-attacks-and\nhttps://www.occrp.org/en/news/ransomware-attack-hits-200000-targets-in-150-countries\nhttps://techcrunch.com/2019/07/08/the-wannacry-sinkhole/\nhttps://www.mprnews.org/story/2017/12/19/npr-us-says-nkorea-responsible-wannacry-ransomware-attack\n\nEducational documentary based on public records. No hacking instructions.\n\n#cybersecurity #truecrime #wannacry",
+    "tags": [
+      "wannacry",
+      "wannacry ransomware",
+      "lazarus group",
+      "north korea hackers",
+      "2017",
+      "cyber attack",
+      "true story",
+      "hacking documentary",
+      "cybersecurity",
+      "cybercrime",
+      "marcus hutchins kill switch",
+      "nhs cyber attack",
+      "eternalblue nsa leak",
+      "biggest ransomware attack",
+      "wannacry explained"
+    ],
+    "hashtags": [
+      "#cybersecurity",
+      "#truecrime",
+      "#wannacry"
+    ],
+    "thumb": {
+      "line1": "$10.69 STOPPED",
+      "line2": "WANNACRY",
+      "tag": "NORTH KOREA VS HOSPITALS"
+    },
+    "facebook_text": "A 22-year-old spent $10.69 on a web address — and slowed one of the biggest cyberattacks in history.\n\n• May 12, 2017: WannaCry hit roughly 200,000 victims in 150 countries in two days\n• At least 81 English hospital trusts were hit and about 19,000 appointments cancelled\n• The fix had existed for two months — the US says North Korea was behind it\n\nWould you have patched in time?\n\n#cybersecurity #truecrime #wannacry",
+    "first_comment": "Microsoft released the fix two months before WannaCry hit. Who do you think deserves the most blame — the attackers, the leaked NSA tool, or the organizations that never patched?",
+    "search_terms": [
+      "what was wannacry",
+      "how was wannacry stopped",
+      "wannacry kill switch explained",
+      "wannacry north korea",
+      "marcus hutchins wannacry",
+      "nhs cyber attack 2017",
+      "eternalblue wannacry nsa"
+    ]
+  }
+}

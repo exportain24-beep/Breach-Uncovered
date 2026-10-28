@@ -1,0 +1,142 @@
+{
+  "episode": 1,
+  "key": "sony",
+  "title": "Sony Pictures hack — the Guardians of Peace",
+  "year": 2014,
+  "category": "state",
+  "needs_review": false,
+  "review_note": "",
+  "scenes": [
+    {"id": 1, "act": "cold_open", "label": "A red skeleton on every screen",
+     "narration": "[serious] Monday, November 24, 2014. At Sony Pictures, employees look at their computers — and a scarlet skeleton looks back. Scrolling text reads: Hacked By hashtag GOP. [slowly] Then a warning. \"We've already warned you, and this is just a beginning.\" [short pause] Soon, one of the biggest studios in Hollywood is running on pens and paper. And the people behind that skeleton are only getting started.",
+     "visuals": [
+       {"type": "stock", "query": "dark office computer screens", "overlay": ""},
+       {"type": "motion", "kind": "title", "text": "Sony Pictures · November 24, 2014"},
+       {"type": "motion", "kind": "quote", "text": "We've already warned you, and this is just a beginning."}
+     ]},
+    {"id": 2, "act": "stakes", "label": "A studio, and a comedy",
+     "narration": "[calmly] Sony Pictures Entertainment is the Hollywood arm of the Japanese electronics giant — the studio behind blockbusters, TV shows and thousands of employees. That winter, it had a holiday comedy on the calendar. It was called The Interview, and in it, two Americans are sent on a mission to assassinate the leader of North Korea. Sony planned to open it on Christmas Day, on about 3,500 screens. [short pause] To one government on the other side of the world, this was not a joke.",
+     "visuals": [
+       {"type": "archival", "query": "Sony Pictures studio Culver City", "overlay": "Sony Pictures Entertainment"},
+       {"type": "motion", "kind": "counter", "text": "3,500 screens planned", "data": {"to": 3500}}
+     ]},
+    {"id": 3, "act": "quiet", "label": "An email nobody took seriously",
+     "narration": "[curious] The first sign came three days before the skeleton. On November 21, an email arrived for Sony's chief executive Michael Lynton, studio chief Amy Pascal and three other executives. It came from a sender calling itself God'sApstls, and it demanded \"monetary compensation.\" No amount. No instructions anyone acted on. [sighs] Most recipients ignored it, or treated it like spam. Inside every big company, odd threatening emails show up all the time. [softly] This one was different. The people who sent it were already inside.",
+     "visuals": [
+       {"type": "motion", "kind": "doc_callout", "text": "Demand: \"monetary compensation\"", "data": {"date": "November 21, 2014"}},
+       {"type": "stock", "query": "email inbox laptop night", "overlay": "Nov 21, 2014"}
+     ]},
+    {"id": 4, "act": "quiet", "label": "Months inside the network",
+     "narration": "[slowly] How long had they been there? According to US investigators, the attackers spent at least two months quietly copying files out of Sony's network. One person claiming to speak for the hackers said it was closer to a year. The group later boasted it had taken more than 100 terabytes of data — a claim that was never independently verified. [short pause] Either way, by the time anyone saw a skeleton, the theft was already done. What came next was not about stealing. It was about destruction.",
+     "visuals": [
+       {"type": "motion", "kind": "network", "text": "Files copied out for at least 2 months"},
+       {"type": "stock", "query": "server room corridor", "overlay": "100+ TB claimed"}
+     ]},
+    {"id": 5, "act": "escalation", "label": "The wiper goes off",
+     "narration": "[serious] The skeleton was the moment the trap was sprung. Behind it was wiper malware — software designed not to steal information, but to erase it, leaving a machine useless. Researchers linked it to a variant of an older wiper known as Shamoon. [slowly] The FBI would later say the attack rendered thousands of Sony's computers inoperable. Desktops, servers, the systems a modern studio runs on — gone, or frozen. [pause] And all of it happened on a single day.",
+     "visuals": [
+       {"type": "motion", "kind": "terminal", "text": "STATUS: system unavailable"},
+       {"type": "motion", "kind": "quote", "text": "rendered thousands of SPE's computers inoperable — FBI"},
+       {"type": "stock", "query": "computer screen glitch error", "overlay": ""}
+     ]},
+    {"id": 6, "act": "scramble", "label": "Hollywood goes analog",
+     "narration": "[cautiously] Sony's first public statement was almost comically calm: \"We are investigating an IT matter.\" Inside, it was anything but. Employees worked with pens and paper. The company handed out 190 BlackBerry phones to key staff just to keep people talking. Shops on the studio lot could only take cash. [short pause] Hours after the computers went dark, Sony's top lawyer notified the FBI, and agents from the Los Angeles cyber squad arrived that same afternoon. The investigation had begun. The leaks were about to.",
+     "visuals": [
+       {"type": "stock", "query": "pen and paper office desk", "overlay": "190 BlackBerrys handed out"},
+       {"type": "archival", "query": "FBI seal", "overlay": "FBI Los Angeles"}
+     ]},
+    {"id": 7, "act": "escalation", "label": "The vault spills open",
+     "narration": "[dramatically] The group called itself the Guardians of Peace, and it started dumping Sony's secrets online. Unreleased movies appeared on file-sharing sites — the musical Annie, the period drama Mr. Turner, and Still Alice. A copy of the script for the James Bond film Spectre leaked too. So did spreadsheets of executive salaries, future film plans and screenplays. [short pause] For a movie studio, unreleased films are the crown jewels. But the hackers had taken something that would hurt far more people.",
+     "visuals": [
+       {"type": "motion", "kind": "headline", "text": "Unreleased Sony films leak online"},
+       {"type": "motion", "kind": "redact", "text": "Annie · Mr. Turner · Still Alice · Spectre script"}
+     ]},
+    {"id": 8, "act": "escalation", "label": "47,000 Social Security numbers",
+     "narration": "[serious] Ordinary employees. Their personal and family information spilled out alongside the Hollywood gossip — including medical details. By early December, reports put the number of unique Social Security numbers exposed at about 47,000. [slowly] That is roughly a sold-out Major League ballpark, every seat filled with someone whose identity was now floating around the internet. Many of them had never worked on a film people would recognize. Before the month was out, former employees had filed four lawsuits against Sony over the exposed data.",
+     "visuals": [
+       {"type": "motion", "kind": "counter", "text": "Social Security numbers exposed", "data": {"to": 47000}},
+       {"type": "stock", "query": "baseball stadium crowd night", "overlay": "~47,000 people"}
+     ]},
+    {"id": 9, "act": "escalation", "label": "When the emails came out",
+     "narration": "[cautiously] Then came the emails. Years of private messages between Sony's most powerful people were suddenly readable by anyone — and reporters read them. Some were embarrassing. Some were worse. Amy Pascal and producer Scott Rudin had to apologize publicly after racially insensitive emails about President Obama were exposed. [sighs] Every frank opinion, every unguarded joke, every negotiation — out in the open. It was the kind of damage no backup could restore. [short pause] And still, the Guardians of Peace had not said what they actually wanted.",
+     "visuals": [
+       {"type": "motion", "kind": "doc_callout", "text": "Leaked: executive email archives"},
+       {"type": "stock", "query": "newspaper printing press", "overlay": ""}
+     ]},
+    {"id": 10, "act": "escalation", "label": "A threat aimed at moviegoers",
+     "narration": "[ominously] On December 16, they finally said it. For the first time, the group named The Interview directly, and threatened the film's New York premiere on December 18 and its Christmas Day release. [slowly] This was no longer about a company's files. Now the threat was aimed at the people who might buy a ticket. [pause] Theater owners had to decide, in a matter of hours, whether a comedy was worth the risk.",
+     "visuals": [
+       {"type": "motion", "kind": "timeline", "text": "Dec 16: threat · Dec 18: premiere · Dec 25: release"},
+       {"type": "stock", "query": "empty movie theater seats", "overlay": "December 16, 2014"}
+     ]},
+    {"id": 11, "act": "scramble", "label": "The movie disappears",
+     "narration": "[nervous] One by one, the chains backed away — Regal, AMC, Cinemark, Carmike and others. With all five of the biggest theater chains refusing to show it, Sony canceled the Christmas release on December 17. [short pause] That same day, US officials told reporters that North Korea was \"centrally involved.\" Michael Lynton would later insist the theaters left Sony no choice: \"This was not our decision.\" [softly] A group of hackers had just pulled a Hollywood movie out of American theaters.",
+     "visuals": [
+       {"type": "motion", "kind": "headline", "text": "Sony cancels Christmas release"},
+       {"type": "stock", "query": "movie theater marquee night", "overlay": "December 17, 2014"}
+     ]},
+    {"id": 12, "act": "unmasking", "label": "The FBI names a country",
+     "narration": "[serious] On December 19, the FBI made it official. Its statement said: \"the North Korean government is responsible for these actions.\" The Bureau added that it was \"deeply concerned about the destructive nature of this attack on a private sector entity.\" [pause] Hours later, President Obama stood at his year-end news conference and said Sony had \"made a mistake\" in pulling the film. It was dangerous, he argued, to let \"some dictator\" control free speech in America. [deep voice] \"We will respond,\" he said.",
+     "visuals": [
+       {"type": "motion", "kind": "quote", "text": "The North Korean government is responsible for these actions. — FBI"},
+       {"type": "archival", "query": "White House press briefing room", "overlay": "December 19, 2014"}
+     ]},
+    {"id": 13, "act": "aftermath", "label": "Christmas on YouTube",
+     "narration": "[curious] Sony changed course. On December 23, it let about 300 mostly independent theaters show The Interview on Christmas Day. On December 24, it put the film online — on YouTube, Google Play and Xbox Video. It became Sony's biggest digital seller ever, with more than $40 million online and about $12 million in theaters. [sighs] It still lost money against a $65 million investment. And the hack itself cost Sony about $41 million out of pocket through March 2015. North Korea, for its part, accused Obama of forcing the film's distribution.",
+     "visuals": [
+       {"type": "stock", "query": "streaming movie on laptop", "overlay": "Online: December 24, 2014"},
+       {"type": "motion", "kind": "counter", "text": "Hack costs through March 2015", "data": {"to": 41, "prefix": "$", "suffix": "M"}}
+     ]},
+    {"id": 14, "act": "unmasking", "label": "A name, four years later",
+     "narration": "[slowly] On January 2, 2015, the United States imposed new sanctions on North Korea. Then, on September 6, 2018, the Justice Department unsealed charges against a North Korean programmer named Park Jin Hyok. Prosecutors say he worked for Chosun Expo, a front company tied to Lab 110, a unit of North Korean military intelligence — part of the group researchers call Lazarus. [short pause] The same complaint accuses that group of stealing $81 million from Bangladesh Bank, and of building WannaCry, the 2017 ransomware that hit Britain's National Health Service. The charges remain accusations; Park is presumed innocent.",
+     "visuals": [
+       {"type": "archival", "query": "Park Jin Hyok FBI wanted poster", "overlay": "Charged: September 6, 2018"},
+       {"type": "motion", "kind": "network", "text": "Sony 2014 · Bangladesh Bank 2016 · WannaCry 2017"},
+       {"type": "archival", "query": "US Department of Justice building", "overlay": ""}
+     ]},
+    {"id": 15, "act": "aftermath", "label": "What the skeleton changed",
+     "narration": "[reflective] FBI Director Christopher Wray put it plainly: \"We stand with our partners to name the North Korean government as the force behind this destructive global cyber campaign.\" At Sony, Amy Pascal stepped down as studio chief, and Tom Rothman took over in February 2015. [pause] The Sony hack showed every company that an attack can do more than steal — it can wipe out machines, expose employees and decide what America gets to watch. [softly] All because of a comedy. If you like stories like this, subscribe to Breach Uncovered.",
+     "visuals": [
+       {"type": "motion", "kind": "quote", "text": "...the force behind this destructive global cyber campaign. — FBI Director Christopher Wray"},
+       {"type": "stock", "query": "Hollywood hills night lights", "overlay": ""}
+     ]}
+  ],
+  "facts": [
+    {"claim": "On November 24, 2014 Sony learned of the hack when malware made employee computers inoperable; Guardians of Peace released stolen data.", "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack", "confidence": "confirmed"},
+    {"claim": "Defacement read 'Hacked By #GOP' with 'We've already warned you, and this is just a beginning' and a deadline of November 24, 11:00 PM GMT.", "source": "https://thehackernews.com/2014/11/Sony-Pictures-Hacked.html", "confidence": "reported"},
+    {"claim": "A scarlet skeleton was displayed; employees worked with pens and paper; Sony issued 190 BlackBerrys; lot shops took only cash; Sony said 'We are investigating an IT matter'; FBI LA cyber squad arrived the same afternoon.", "source": "https://fortune.com/longform/sony-hack-final-part/", "confidence": "reported"},
+    {"claim": "On November 21, 2014 'God'sApstls' emailed Lynton, Pascal and three other executives demanding 'monetary compensation'; most ignored it.", "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack", "confidence": "reported"},
+    {"claim": "US investigators said attackers spent at least two months copying files; a claimant said up to a year; hackers claimed 100+ TB, not verified.", "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack", "confidence": "reported"},
+    {"claim": "The attackers used a variant of the Shamoon wiper malware.", "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack", "confidence": "reported"},
+    {"claim": "FBI: the attack rendered thousands of SPE's computers inoperable; 'the North Korean government is responsible for these actions'; 'deeply concerned about the destructive nature of this attack on a private sector entity.'", "source": "https://techcrunch.com/2014/12/19/the-fbi-blames-north-korea-for-sony-hack/", "confidence": "confirmed"},
+    {"claim": "Leaked unreleased films included Annie, Mr. Turner and Still Alice; the Spectre screenplay leaked; salaries and future plans exposed.", "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack", "confidence": "confirmed"},
+    {"claim": "About 47,000 unique Social Security numbers were exposed; four lawsuits filed by former employees in December 2014.", "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack", "confidence": "reported"},
+    {"claim": "Amy Pascal and Scott Rudin apologized after racially insensitive emails about Obama leaked.", "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack", "confidence": "confirmed"},
+    {"claim": "On December 16, 2014 the group named The Interview and threatened the December 18 New York premiere and December 25 release.", "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack", "confidence": "confirmed"},
+    {"claim": "The Interview was planned for about 3,500 screens; the five major chains declined; Sony canceled on December 17; Lynton: 'This was not our decision.'", "source": "https://fortune.com/longform/sony-hack-final-part/", "confidence": "confirmed"},
+    {"claim": "Obama said Sony 'made a mistake', warned against letting 'some dictator' control free speech, and said 'We will respond.'", "source": "https://www.npr.org/sections/thetwo-way/2014/12/19/371881952/live-obamas-year-end-news-conference", "confidence": "confirmed"},
+    {"claim": "About 300 mostly independent theaters showed the film on Christmas; online release December 24 on Google Play, Xbox Video and YouTube.", "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack", "confidence": "confirmed"},
+    {"claim": "The Interview earned more than $40 million digitally and $12 million in theaters against a $65 million investment; hack out-of-pocket costs $41 million through March.", "source": "https://fortune.com/longform/sony-hack-final-part/", "confidence": "reported"},
+    {"claim": "US imposed additional sanctions on North Korea on January 2, 2015.", "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack", "confidence": "confirmed"},
+    {"claim": "On September 6, 2018 DOJ unsealed charges against Park Jin Hyok of Chosun Expo, affiliated with Lab 110; linked to Sony, $81 million Bangladesh Bank theft and WannaCry; Wray quote.", "source": "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and", "confidence": "alleged"},
+    {"claim": "Tom Rothman replaced Amy Pascal in February 2015.", "source": "https://fortune.com/longform/sony-hack-final-part/", "confidence": "confirmed"}
+  ],
+  "sources": [
+    "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+    "https://techcrunch.com/2014/12/19/the-fbi-blames-north-korea-for-sony-hack/",
+    "https://fortune.com/longform/sony-hack-final-part/",
+    "https://www.npr.org/sections/thetwo-way/2014/12/19/371881952/live-obamas-year-end-news-conference",
+    "https://thehackernews.com/2014/11/Sony-Pictures-Hacked.html",
+    "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack"
+  ],
+  "seo": {
+    "youtube_title": "How Sony Pictures Was Hacked: The True Story of the Interview Hack",
+    "youtube_description": "How was Sony Pictures hacked? The true story of the 2014 Sony hack — a red skeleton, wiped computers, leaked movies and a threat that pulled The Interview from theaters.\nThe FBI blamed North Korea. This documentary explains what happened, step by step, from public records.\n\nOn November 24, 2014, employees at Sony Pictures Entertainment found a scarlet skeleton on their screens and the words \"Hacked By #GOP.\" Wiper malware rendered thousands of computers inoperable, and a group calling itself the Guardians of Peace began leaking unreleased films, executive emails and about 47,000 Social Security numbers.\n\nWhen the hackers threatened theaters showing The Interview, the biggest chains backed out and Sony canceled the Christmas release. The FBI said the North Korean government was responsible, President Obama said Sony made a mistake, and in 2018 the Justice Department charged a North Korean programmer, Park Jin Hyok, who is accused of working for a front company tied to military intelligence.\n\n{{CHAPTERS}}\n\nSources:\nhttps://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and\nhttps://techcrunch.com/2014/12/19/the-fbi-blames-north-korea-for-sony-hack/\nhttps://fortune.com/longform/sony-hack-final-part/\nhttps://www.npr.org/sections/thetwo-way/2014/12/19/371881952/live-obamas-year-end-news-conference\nhttps://en.wikipedia.org/wiki/2014_Sony_Pictures_hack\n\nEducational documentary based on public records. No hacking instructions.\n\n#cybersecurity #truecrime #sonyhack",
+    "tags": ["sony pictures hack", "sony hack 2014", "guardians of peace", "lazarus group", "north korea hack", "the interview movie hack", "2014", "cyber attack", "true story", "hacking documentary", "cybersecurity", "cybercrime", "how was sony pictures hacked", "sony hack north korea explained", "biggest cyberattack hollywood", "park jin hyok"],
+    "hashtags": ["#cybersecurity", "#truecrime", "#sonyhack"],
+    "thumb": {"line1": "SONY GOT", "line2": "WIPED OUT", "tag": "NORTH KOREA VS HOLLYWOOD"},
+    "facebook_text": "A red skeleton appeared on Sony's screens — and a Hollywood movie vanished from theaters.\n\n• November 24, 2014: wiper malware knocked out thousands of Sony Pictures computers.\n• Hackers leaked unreleased films, executive emails and about 47,000 Social Security numbers.\n• The FBI said North Korea was responsible. Would you have pulled the movie?\n\n#cybersecurity #truecrime #sonyhack",
+    "first_comment": "Sony canceled The Interview after the threats, then released it online days later. Was pulling it the right call, or did it hand the hackers a win?",
+    "search_terms": ["how was sony pictures hacked", "sony hack north korea explained", "sony pictures hack 2014", "guardians of peace sony", "the interview movie hack", "sony hack documentary", "lazarus group sony"]
+  }
+}
