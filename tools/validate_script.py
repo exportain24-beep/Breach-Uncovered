@@ -8,6 +8,7 @@ ALLOWED_TAGS = {
     "frustrated", "worried", "grim", "calmly", "urgently", "incredulous", "reflective", "ominously", "quietly",
 }
 MOTION_KINDS = {"timeline", "counter", "doc_callout", "network", "map", "terminal", "quote", "headline", "redact", "title"}
+GFX_KINDS = {"network", "globe", "rack", "terminal", "counter", "timeline", "lock", "email", "flow", "bars", "dossier", "headline", "quote", "redact", "doc"}
 BANNED = ["next episode", "previous episode", "last video", "next video", "welcome back", "in today's video",
           "hey guys", "hello everyone", "welcome to breach uncovered"]
 
@@ -38,11 +39,11 @@ def validate(path):
         if w > 140: warns.append(f"scene {i}: {w} words (long beat)")
         if not s.get("label") or len(s["label"]) > 40: errs.append(f"scene {i}: label missing or >40 chars")
         v = s.get("visuals") or []
-        nb = sum(1 for x in v if x.get("type") in ("stock", "archival"))
-        need = max(3, int(w / 8))          # about one shot per 3-4 seconds of speech
-        if nb < min(need, 6): errs.append(f"scene {i}: {nb} stock/archival shots, need >= {min(need, 6)} (aim ~{max(3, w // 8)})")
-        elif nb < need - 2: warns.append(f"scene {i}: only {nb} shots for {w} words (aim ~{max(3, w // 8)})")
-        if sum(1 for x in v if x.get("type") == "motion") > 1: errs.append(f"scene {i}: max 1 motion card per scene")
+        nb = sum(1 for x in v if x.get("type") in ("stock", "archival", "gfx"))
+        need = max(3, int(w / 9))          # a new picture about every 3-4 seconds of speech
+        if nb < min(need, 6): errs.append(f"scene {i}: {nb} shots, need >= {min(need, 6)} (aim ~{max(3, w // 9)})")
+        elif nb < need - 2: warns.append(f"scene {i}: only {nb} shots for {w} words (aim ~{max(3, w // 9)})")
+        if sum(1 for x in v if x.get("type") == "motion"): errs.append(f"scene {i}: old 'motion' cards are retired, use full-frame 'gfx' shots")
         plain_low = re.sub(r"\[[^\]]*\]", " ", n).lower()
         for x in v:
             at = (x.get("at") or "").strip().lower()
@@ -50,17 +51,20 @@ def validate(path):
             elif re.sub(r"[^\w\s']", "", at) not in re.sub(r"[^\w\s']", "", plain_low): warns.append(f"scene {i}: 'at' phrase not found in narration: {at}")
         for x in v:
             t = x.get("type")
-            if t not in ("motion", "archival", "stock"): errs.append(f"scene {i}: bad visual type {t}")
-            elif t == "motion" and x.get("kind") not in MOTION_KINDS: errs.append(f"scene {i}: bad motion kind {x.get('kind')}")
+            if t not in ("gfx", "archival", "stock"): errs.append(f"scene {i}: bad visual type {t}")
+            elif t == "gfx" and x.get("kind") not in GFX_KINDS: errs.append(f"scene {i}: bad gfx kind {x.get('kind')}")
             elif t in ("archival", "stock") and not x.get("query"): errs.append(f"scene {i}: {t} visual needs query")
     first = re.split(r"(?<=[.!?])\s+", re.sub(r"\[[^\]]*\]", " ", sc[0]["narration"]).strip())[0] if sc else ""
     if len(first.split()) > 14: errs.append(f"hook: first sentence is {len(first.split())} words (max 14, must grab in 5 seconds)")
     allv = [x for s in sc for x in (s.get("visuals") or [])]
-    if sum(1 for x in allv if x.get("type") == "motion") > 8: errs.append("more than 8 motion cards in the episode (text overload)")
+    nclip = sum(1 for x in allv if x.get("type") in ("stock", "archival")); ngfx = sum(1 for x in allv if x.get("type") == "gfx")
+    if nclip > .30 * (nclip + ngfx): errs.append(f"stock/archival clips are {nclip}/{nclip + ngfx} shots (max 30%: the rest must be our own motion graphics)")
+    kinds = [x.get("kind") for x in allv if x.get("type") == "gfx"]
+    if kinds and max(kinds.count(k) for k in set(kinds)) > max(4, .25 * len(kinds)): errs.append("one gfx kind is used too often (vary the graphics: " + ", ".join(sorted(set(kinds))) + ")")
     if sum(1 for x in allv if x.get("overlay")) > 4: errs.append("more than 4 overlay texts in the episode")
     qs = [x.get("query", "").lower() for x in allv if x.get("query")]
     if len(set(qs)) < len(qs): warns.append("repeated visual queries: " + ", ".join(sorted({q for q in qs if qs.count(q) > 1})[:5]))
-    if sum(1 for x in allv if x.get("type") in ("stock", "archival")) < 55: errs.append("fewer than 55 stock/archival shots in the episode")
+    if nclip + ngfx < 70: errs.append(f"only {nclip + ngfx} shots in the episode (need >= 70, a new picture every 3-4 seconds)")
     alltext = " ".join(re.sub(r"\[[^\]]*\]", " ", s.get("narration", "")) for s in sc)
     sents = [t for t in re.split(r"(?<=[.!?])\s+", alltext) if t.strip()]
     avg = len(alltext.split()) / max(1, len(sents))
@@ -69,7 +73,7 @@ def validate(path):
     if len(hard) > 3: errs.append("too much formal vocabulary: " + ", ".join(sorted(set(h.lower() for h in hard))))
     if "mood" not in sc[0]: warns.append("scenes should have a 'mood'")
     if sc and len(re.sub(r"\[[^\]]*\]", "", sc[0]["narration"]).split()) > 90: errs.append("cold open > 90 words")
-    if not 900 <= words <= 1400: errs.append(f"narration {words} words (need 900-1400)")
+    if not 700 <= words <= 840: errs.append(f"narration {words} words (need 700-840: the video must stay under 6 minutes)")
     tags = sum(len(re.findall(r"\[[^\]]*\]", s.get("narration", ""))) for s in sc)
     if not 6 <= tags <= 45: warns.append(f"{tags} audio tags (target 8-25)")
     caps = sum(len(re.findall(r"\b[A-Z]{3,}\b", re.sub(r"\[[^\]]*\]", "", s.get("narration", "")))) for s in sc)

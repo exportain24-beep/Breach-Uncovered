@@ -11,7 +11,7 @@ import numpy as np, cv2
 from PIL import Image, ImageDraw
 
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import motion, sfx
+import motion, sfx, gfx
 from thumbnail import ACCENT
 
 W, H, FPS = 1920, 1080, 24
@@ -217,10 +217,10 @@ def scene_plan(sc, seed):
     for m in range(1, len(cues)): cues[m] = max(cues[m], cues[m - 1])
     shots = []
     for vi, v in enumerate(vis):
-        if v["type"] not in ("stock", "archival"): continue
+        if v["type"] not in ("stock", "archival", "gfx"): continue
         t = cues[vi]
         if shots and t - shots[-1]["t0"] < (1.6 if sc["s"].get("act") == "cold_open" else MIN_SHOT): continue          # too close: previous shot simply stays
-        shots.append({"t0": t, "vi": vi, "type": v["type"]})
+        shots.append({"t0": t, "vi": vi, "type": v["type"], "kind": v.get("kind")})
     if shots: shots[0]["t0"] = 0.0
     if len(shots) > 1 and dur - shots[-1]["t0"] < 1.4: shots.pop()
     mood = sc["s"].get("mood", "curious")
@@ -258,6 +258,10 @@ ACCENT_P = {"calm": .12, "curious": .28, "tense": .42, "shock": .5, "reveal": .3
 TEXT_FX = {"counter": ("ping", "tick"), "terminal": ("typing",), "headline": ("shutter", "glitch"), "redact": ("impact_crack",), "network": ("chirps",),
            "map": ("whoosh_low",), "doc_callout": ("whoosh_air",), "timeline": ("whoosh_fast",), "quote": ("sub_drop",), "title": ("whoosh_air",)}
 
+GFX_FX = {"network": ("chirps",), "globe": ("whoosh_low",), "rack": ("static", "low_pulse"), "terminal": ("typing",), "counter": ("tick", "ping"),
+          "timeline": ("whoosh_fast",), "lock": ("impact_crack",), "email": ("ping",), "flow": ("tick",), "bars": ("ping",), "dossier": ("shutter",),
+          "headline": ("shutter", "glitch"), "quote": ("sub_drop",), "redact": ("impact_crack",), "doc": ("whoosh_air",)}
+
 def plan_sfx(scenes, plans, total, ep):
     rng = random.Random(ep * 7 + 3); ev = []; recent = []; last_t = [-9.0]
     def pick(pool):
@@ -276,8 +280,11 @@ def plan_sfx(scenes, plans, total, ep):
             put("whoosh_low", t0 + .1, .35, force=True); put("impact_thud", t0 + .5, .5, force=True)    # logo sting
         else:
             nm = pick(POOLS.get(mood, POOLS["curious"])); put(nm, t0, dur={"low_pulse": 2.5}.get(nm), force=True)
+        for k, sh in enumerate(pl["shots"]):
+            if sh["type"] == "gfx":
+                for nm in GFX_FX.get(sh["kind"], ()): put(nm, t0 + sh["t0"] + .15, GAIN.get(nm, .4), dur={"typing": 2.4, "chirps": 2.2}.get(nm), force=(k == 0 and False))
         for k, sh in enumerate(pl["shots"][1:], 1):
-            if rng.random() < ACCENT_P.get(mood, .25):
+            if sh["type"] != "gfx" and rng.random() < ACCENT_P.get(mood, .25):
                 nm = "shutter" if sh["type"] == "archival" and rng.random() < .6 else pick(["tick", "whoosh_fast", "whoosh_air"] + (["zap"] if mood in ("shock", "tense") else []))
                 put(nm, t0 + sh["t0"], .26)
         for e in pl["texts"]:
@@ -354,14 +361,17 @@ def render(script_path, workdir, out, max_seconds=None, seed=1):
         if sh:
             cleanup(si, k - 1)
             ts = max(0.0, lt - sh["t0"]); L = max(1.0, sh["t1"] - sh["t0"]); p_ = prov(si, sh["vi"])
-            fr = p_.frame(ts, L) if p_ is not None else None
+            if sh["type"] == "gfx": fr = gfx.render(sh["kind"], sc["s"]["visuals"][sh["vi"]], ts, L, acc, ep * 31 + si * 7 + sh["vi"])
+            else: fr = p_.frame(ts, L) if p_ is not None else None
             if fr is not None and isinstance(p_, VidBG):                       # slow push-in / pull-out on video shots
                 z = 1.0 + .06 * min(1.0, ts / L) if k % 2 == 0 else 1.06 - .06 * min(1.0, ts / L)
                 fr = cv2.warpAffine(fr, np.float32([[z, 0, W * (1 - z) / 2], [0, z, H * (1 - z) / 2]]), (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
             if fr is not None and k > 0 and ts < TR:                              # transition between shots
                 tr = sh["tr"]
                 if tr == "dissolve":
-                    pv = sh_list[k - 1]; pp = prov(si, pv["vi"]); pf = pp.frame((pv["t1"] - pv["t0"]) + ts, 1) if pp is not None else None
+                    pv = sh_list[k - 1]
+                    if pv["type"] == "gfx": pf = gfx.render(pv["kind"], sc["s"]["visuals"][pv["vi"]], (pv["t1"] - pv["t0"]) + ts, pv["t1"] - pv["t0"], acc, ep * 31 + si * 7 + pv["vi"])
+                    else: pp = prov(si, pv["vi"]); pf = pp.frame((pv["t1"] - pv["t0"]) + ts, 1) if pp is not None else None
                     if pf is not None: a = ts / TR; fr = cv2.addWeighted(pf, 1 - a, fr, a, 0)
                 elif tr == "punch":
                     z = 1 + .08 * (1 - ts / TR) ** 2; fr = cv2.warpAffine(fr, np.float32([[z, 0, W * (1 - z) / 2], [0, z, H * (1 - z) / 2]]), (W, H), borderMode=cv2.BORDER_REFLECT)
