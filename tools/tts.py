@@ -4,7 +4,7 @@ import base64, hashlib, json, os, re, subprocess, time
 import requests
 
 MODEL = "eleven_v4_turbo"          # LOCKED. Never change.
-VOICE = os.environ.get("ELEVENLABS_VOICE_ID", "vYENaCJHl4vFKNDYPr8y")
+VOICE = os.environ.get("ELEVENLABS_VOICE_ID", "fPIfC3elMLbN9tNwMXkw")
 API = "https://api.elevenlabs.io/v1"
 # Natural, expressive storytelling delivery (owner feedback): moderate stability lets the audio tags and the story's emotion come through.
 VOICE_SETTINGS = {"stability": 0.45, "similarity_boost": 0.8, "style": 0.3, "use_speaker_boost": True, "speed": 1.0}
