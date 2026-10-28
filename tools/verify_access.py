@@ -87,14 +87,15 @@ if dd:
     if extra: log(f"| ℹ️ | Other granted | {', '.join(extra)} |")
 # Require App Secret check: call without proof should fail if enabled
 s, n = req(f"{G}/me?" + urllib.parse.urlencode({"access_token": tok}))
-check("“Require App Secret” enabled (call without proof is blocked)", s != 200, "blocked ✔" if s != 200 else "NOT enabled — turn it on in App settings → Advanced")
-s, pg = req(f"{G}/{page_id}?" + urllib.parse.urlencode({"fields": "name,access_token,tasks,fan_count,category", "access_token": tok, "appsecret_proof": proof(tok)}))
+check("“Require App Secret” enabled (call without proof is blocked)", s != 200, ("blocked ✔ — " + err(n)[:90]) if s != 200 else "NOT enabled — turn it on in App settings → Advanced")
+s, pg = req(f"{G}/{page_id}?" + urllib.parse.urlencode({"fields": "name,access_token,category", "access_token": tok, "appsecret_proof": proof(tok)}))
 ptok = pg.get("access_token")
 check("Page found + page token derived", bool(ptok), f"**{pg.get('name')}** ({pg.get('category')})" if ptok else err(pg))
 if ptok:
     print(f"::add-mask::{ptok}")
     P = {"access_token": ptok, "appsecret_proof": proof(ptok)}
-    tasks = pg.get("tasks") or []
+    s, acc = req(f"{G}/me/accounts?" + urllib.parse.urlencode({"fields": "id,tasks", "access_token": tok, "appsecret_proof": proof(tok)}))
+    tasks = next((a.get("tasks", []) for a in acc.get("data", []) if a.get("id") == page_id), [])
     check("Page tasks (full control)", all(x in tasks for x in ["MANAGE","CREATE_CONTENT","MODERATE","ANALYZE"]), ", ".join(tasks))
     s, x = req(f"{G}/{page_id}/feed?" + urllib.parse.urlencode({**P, "limit": 1, "fields": "id"}))
     check("Read posts (feed)", s == 200, "" if s == 200 else err(x))
