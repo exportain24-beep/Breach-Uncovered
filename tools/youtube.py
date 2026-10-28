@@ -16,7 +16,7 @@ def H(extra=None): return {"Authorization": f"Bearer {token()}", **(extra or {})
 
 def upload_video(path, snippet, publish_at_iso, chunk=32 * 1024 * 1024):
     size = os.path.getsize(path)
-    body = {"snippet": snippet, "status": {"privacyStatus": "private", "publishAt": publish_at_iso, "selfDeclaredMadeForKids": False, "embeddable": True, "publicStatsViewable": True}}
+    body = {"snippet": snippet, "status": {"privacyStatus": "private", "publishAt": publish_at_iso, "selfDeclaredMadeForKids": False, "containsSyntheticMedia": False, "embeddable": True, "publicStatsViewable": True}}
     r = requests.post("https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
                       headers=H({"Content-Type": "application/json; charset=UTF-8", "X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(size)}), json=body, timeout=60)
     if r.status_code != 200: raise RuntimeError(f"YT init failed {r.status_code} {r.text[:300]}")

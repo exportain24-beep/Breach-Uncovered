@@ -56,7 +56,7 @@ def post_pending_comments(state):
         if ok: st["comment_done"] = True
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--episode", type=int); ap.add_argument("--dry", action="store_true"); ap.add_argument("--offline", action="store_true", help="no network: estimated timing, procedural visuals (local testing)"); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("--episode", type=int); ap.add_argument("--dry", action="store_true"); ap.add_argument("--now", action="store_true", help="publish ~15 min after upload instead of the next fixed slot"); ap.add_argument("--offline", action="store_true", help="no network: estimated timing, procedural visuals (local testing)"); a = ap.parse_args()
     state = load_state(); cases = json.load(open("data/cases.json"))
     if not a.dry:
         try: post_pending_comments(state); save_state(state)
@@ -83,8 +83,9 @@ def main():
     print(f"built {out}  {os.path.getsize(out)/1e6:.0f} MB  {total/60:.1f} min  title: {snippet['title']}")
     if a.dry: return 0
 
-    slot = next_slot(state); st.update({"publish_at": slot.isoformat(), "first_comment": script["seo"]["first_comment"], "title": snippet["title"]})
-    state["slots_used"].append(slot.isoformat()); save_state(state)
+    slot = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=15)).replace(second=0, microsecond=0) if a.now else next_slot(state); st.update({"publish_at": slot.isoformat(), "first_comment": script["seo"]["first_comment"], "title": snippet["title"]})
+    if not a.now: state["slots_used"].append(slot.isoformat())
+    save_state(state)
     err = []
     if not st.get("yt"):
         try:

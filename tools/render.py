@@ -17,6 +17,13 @@ from thumbnail import ACCENT
 W, H, FPS = 1920, 1080, 24
 YEL = (255, 212, 0)
 GAP, ACT_GAP, OUTRO = 0.40, 0.65, 3.0
+LOGO_PATH = os.path.join(HERE, "..", "assets", "brand", "logo.png")
+_LOGO = {}
+def logo(size):
+    """Channel logo (assets/brand/logo.png), cached per size; always the same artwork."""
+    if size not in _LOGO:
+        _LOGO[size] = Image.open(LOGO_PATH).convert("RGBA").resize((size, size), Image.LANCZOS)
+    return _LOGO[size]
 
 # ------------------------------------------------------------------------------------------ timing
 def words_of(narr): return re.sub(r"\[[^\]]*\]", " ", narr).split()
@@ -239,7 +246,8 @@ def render(script_path, workdir, out, max_seconds=None, seed=1):
                 if b: lst.append(b)
         sbg[i] = lst; return lst
     hud = Image.new("RGBA", (520, 70), (0, 0, 0, 0)); hd = ImageDraw.Draw(hud)
-    hd.text((34, 35), f"CASE #{ep:03d}  ·  {script['year']}", font=motion.BOLD(28), fill=(255, 255, 255, 215), anchor="lm")
+    hd.text((86, 35), f"CASE #{ep:03d}  ·  {script['year']}", font=motion.BOLD(28), fill=(255, 255, 255, 215), anchor="lm")
+    hud.alpha_composite(logo(64), (6, 3))
     cmd = ["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", wav,
            "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-maxrate", "9M", "-bufsize", "18M", "-pix_fmt", "yuv420p",
            "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-t", f"{total:.3f}", out]
@@ -291,18 +299,25 @@ def render(script_path, workdir, out, max_seconds=None, seed=1):
                 hi = max([i for i, w in enumerate(ch) if w["s"] <= lt] or [0]); img = caption_img(ch, hi)
                 a = min(1, (lt - ch[0]["s"] + .05) / .12); blend(fr, img, (W - img.width) // 2, 835 + (0 if len(ch) < 6 else 0), a)
                 break
+        # logo sting right after the cold open (scene 2): channel identity, once per video
+        if si == 1 and .15 <= lt < 2.2:
+            q = lt - .15; a = min(1, q / .3) * min(1, (2.05 - q) / .4); sz = int(300 + 40 * min(1, q / 2.0))
+            st_ = Image.new("RGBA", (900, 520), (0, 0, 0, 0)); lg = logo(sz); st_.alpha_composite(lg, ((900 - sz) // 2, 0))
+            sd = ImageDraw.Draw(st_); sd.text((450, 450), "BREACH UNCOVERED", font=motion.DISP(64), fill=(255, 255, 255, 255), anchor="mm")
+            blend(fr, st_, (W - 900) // 2, 250, a * .96)
         # hud, progress, fades
         blend(fr, hud, 28, 22, .9)
-        if int(T * 1.6) % 2 == 0: cv2.circle(fr, (44, 58), 7, (230, 30, 40), -1)
         cv2.rectangle(fr, (0, H - 6), (int(W * T / total), H), acc, -1)
         if T < .35: fr = cv2.multiply(fr, np.uint8(255 * (T / .35)), scale=1 / 255.) if False else (fr * (T / .35)).astype(np.uint8)
         if T > total - OUTRO + .3:
             k = min(1, (T - (total - OUTRO + .3)) / 1.0); fr = (fr * (1 - k)).astype(np.uint8)
             if k > .5:
-                end = Image.new("RGBA", (1400, 300), (0, 0, 0, 0)); ed = ImageDraw.Draw(end)
-                ed.text((700, 100), "BREACH UNCOVERED", font=motion.DISP(96), fill=(255, 255, 255, 255), anchor="mm")
-                ed.text((700, 200), "TRUE STORIES OF REAL HACKS", font=motion.BOLD(40), fill=YEL + (255,), anchor="mm")
-                blend(fr, end, (W - 1400) // 2, 390, (k - .5) * 2)
+                end = Image.new("RGBA", (1400, 640), (0, 0, 0, 0)); ed = ImageDraw.Draw(end)
+                end.alpha_composite(logo(340), (530, 0))
+                ed.text((700, 400), "BREACH UNCOVERED", font=motion.DISP(96), fill=(255, 255, 255, 255), anchor="mm")
+                ed.text((700, 500), "TRUE STORIES OF REAL HACKS", font=motion.BOLD(40), fill=YEL + (255,), anchor="mm")
+                ed.text((700, 575), "SUBSCRIBE FOR THE NEXT CASE FILE", font=motion.BOLD(30), fill=(255, 255, 255, 200), anchor="mm")
+                blend(fr, end, (W - 1400) // 2, 190, (k - .5) * 2)
         pipe.stdin.write(np.ascontiguousarray(fr).tobytes())
         if fi % 240 == 0: print(f"  frame {fi}/{nfr}  ({time.time() - t_start:.0f}s)", flush=True)
     pipe.stdin.close(); pipe.wait()

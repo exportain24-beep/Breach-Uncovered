@@ -1,5 +1,7 @@
 name: Daily episode
 on:
+  push:
+    paths: ["tools/.run-now"]   # first-video kick-off: pushing this file builds and publishes the next episode ~15 min after upload
   schedule:
     - cron: "0 13 * * *"   # builds + schedules the 17:00 UTC slot (23:00 Bangladesh = US lunch / UK evening)
     - cron: "0 19 * * *"   # builds + schedules the 23:00 UTC slot (05:00 Bangladesh = US evening)
@@ -44,6 +46,7 @@ jobs:
           ARGS=""
           [ -n "${{ github.event.inputs.episode }}" ] && ARGS="$ARGS --episode ${{ github.event.inputs.episode }}"
           [ "${{ github.event.inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry"
+          [ "${{ github.event_name }}" = "push" ] && ARGS="$ARGS --now"
           python3 tools/run_episode.py $ARGS
       - name: Save state
         if: always()
