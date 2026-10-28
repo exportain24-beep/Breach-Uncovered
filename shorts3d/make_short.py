@@ -81,7 +81,7 @@ def blend(fr, img, x, y, a=1.0):
     reg = fr[y0:y1, x0:x1].astype(np.float32); fr[y0:y1, x0:x1] = (reg * (1 - al) + t[..., :3] * al).astype(np.uint8)
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("script"); ap.add_argument("out"); ap.add_argument("--workdir", default="/tmp/short_work"); ap.add_argument("--offline", action="store_true"); ap.add_argument("--seconds", type=float)
+    ap = argparse.ArgumentParser(); ap.add_argument("script"); ap.add_argument("out"); ap.add_argument("--workdir", default="/tmp/short_work"); ap.add_argument("--offline", action="store_true"); ap.add_argument("--seconds", type=float); ap.add_argument("--rscale", type=float, default=.6667)
     a = ap.parse_args(); script = json.load(open(a.script, encoding="utf-8")); os.makedirs(a.workdir, exist_ok=True); ep = script["episode"]
     if a.offline or not os.environ.get("ELEVENLABS_API_KEY"): timing = R.estimate_timing(script); print("timing: estimated (no voice)")
     else:
@@ -99,12 +99,13 @@ def main():
     os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
-        b, pg = render3d.open_page(p, port, W, H); pg.evaluate("s => window.loadShots(s)", shots)
+        RW, RH = int(W * a.rscale) // 2 * 2, int(H * a.rscale) // 2 * 2; b, pg = render3d.open_page(p, port, RW, RH); pg.evaluate("s => window.loadShots(s)", shots)
         ff = subprocess.Popen(cmd, stdin=subprocess.PIPE); n = int(total * FPS); t_start = time.time(); si = 0; cc = {}
         for fi in range(n):
             T = fi / FPS
             pg.evaluate(f"window.draw({T})"); jpg = pg.locator("#c").screenshot(type="jpeg", quality=92)
             fr = cv2.cvtColor(cv2.imdecode(np.frombuffer(jpg, np.uint8), cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB)
+            if fr.shape[1] != W: fr = cv2.resize(fr, (W, H), interpolation=cv2.INTER_CUBIC)
             fr = (fr.astype(np.float32) * vig).astype(np.uint8)
             g = grain[fi % 4]; fr = np.clip(fr.astype(np.int16) + cv2.resize(g, (W, H), interpolation=cv2.INTER_NEAREST)[..., None], 0, 255).astype(np.uint8)
             for q, sh in enumerate(shots):                                      # cut flash + tiny punch

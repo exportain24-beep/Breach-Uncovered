@@ -32,10 +32,13 @@ jobs:
           [ -z "$S" ] && S="$(head -n1 shorts3d/.test-now | tr -d '\r ')"
           mkdir -p out reports; set -o pipefail
           python3 -u shorts3d/make_short.py "$S" out/short-preview.mp4 --workdir work/short 2>&1 | tee reports/short-run.log | tail -n 200
-      - name: Publish preview to the previews branch (so it can be fetched and watched)
+      - name: Save preview into the repo (previews/ folder) so it can be fetched and watched
         if: always()
         run: |
           git config user.name "breach-bot"; git config user.email "actions@users.noreply.github.com"
-          mkdir -p /tmp/pv; cp out/short-preview.mp4 /tmp/pv/ 2>/dev/null || true; cp reports/short-run.log /tmp/pv/ 2>/dev/null || true
-          git checkout --orphan previews-tmp; git rm -rf . -q; cp /tmp/pv/* . ; git add -A; git commit -m "3D short preview [skip ci]" -q || true
-          git push -f origin HEAD:previews || true
+          mkdir -p previews; cp out/short-preview.mp4 previews/ 2>/dev/null || true; cp reports/short-run.log previews/ 2>/dev/null || true
+          git add previews; git commit -m "3D short preview [skip ci]" -q || true
+          git pull --rebase -q || true; git push || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: short-preview, path: "out/*.mp4", retention-days: 5, if-no-files-found: ignore }
