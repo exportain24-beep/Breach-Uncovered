@@ -93,9 +93,9 @@ def main():
     # ---- frames
     srv, port = render3d.serve(); logo = R.logo(84); wm = R.wordmark(620)
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32); r = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2); vig = np.clip(1.1 - .5 * r ** 1.9, .3, 1)[..., None]
-    grain = [np.random.default_rng(i).integers(-7, 8, (H // 2, W // 2, 1)).astype(np.int16) for i in range(4)]
+    grain = [np.random.default_rng(i).integers(-3, 4, (H // 2, W // 2, 1)).astype(np.int16) for i in range(4)]
     cmd = ["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", wav, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
-           "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-t", f"{total:.3f}", a.out]
+           "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-maxrate", "12M", "-bufsize", "24M", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-t", f"{total:.3f}", a.out]
     os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
