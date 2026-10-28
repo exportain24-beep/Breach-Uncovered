@@ -5,203 +5,961 @@
   "year": 2018,
   "category": "profile",
   "needs_review": false,
-  "review_note": "The cases.json source (justice.gov complaint PDF) could not be downloaded directly; the same complaint affidavit was read via the National Security Archive OCR copy (first ~100k of 130k characters, through the Bangladesh Bank section), plus the DOJ press release, Dark Reading, SCMP and Wikipedia. Only facts found in those sources are used.",
+  "review_note": "Rewritten in plain spoken English (owner feedback). Facts unchanged from the verified version (DOJ press release re-checked 2026-10-28; complaint affidavit via National Security Archive OCR copy, Dark Reading, SCMP, Wikipedia) plus NPR for North Korea calling The Interview an act of war.",
   "scenes": [
     {
       "id": 1,
       "act": "cold_open",
-      "label": "A software company, on paper",
-      "narration": "[serious] On paper, it was a software company. It had offices in China and in North Korea. It took on programming jobs for paying clients — and some of those clients, according to the FBI, knew exactly who they were hiring. [short pause] Its name was Chosun Expo. And in 2018, the United States Justice Department said it was something else entirely. [slowly] A front for the North Korean government.",
+      "label": "Coders for hire, on paper",
+      "mood": "curious",
+      "narration": "[curious] Picture a small team of programmers for hire. They work in an office in China. They write code for paying clients. They answer email, and they get the job done. [short pause] On paper, their company was a normal software business. It was called Chosun Expo. [serious] But in 2018, the United States government said it was something else. [slowly] It said Chosun Expo was a cover for North Korea's hackers.",
       "visuals": [
-        {"type": "stock", "query": "programmers office monitors night", "overlay": ""},
-        {"type": "motion", "kind": "headline", "text": "Chosun Expo Joint Venture: \"a front for the North Korean government\""}
+        {
+          "type": "stock",
+          "query": "programmers office team",
+          "at": "small team of programmers"
+        },
+        {
+          "type": "stock",
+          "query": "office building china",
+          "at": "an office in China"
+        },
+        {
+          "type": "stock",
+          "query": "code on monitor",
+          "at": "They write code"
+        },
+        {
+          "type": "stock",
+          "query": "business handshake meeting",
+          "at": "paying clients"
+        },
+        {
+          "type": "stock",
+          "query": "typing email laptop",
+          "at": "They answer email"
+        },
+        {
+          "type": "stock",
+          "query": "documents signing desk",
+          "at": "On paper"
+        },
+        {
+          "type": "stock",
+          "query": "software developer working",
+          "at": "a normal software business"
+        },
+        {
+          "type": "archival",
+          "query": "United States Capitol building",
+          "at": "the United States government"
+        },
+        {
+          "type": "stock",
+          "query": "dark computer screen glow",
+          "at": "something else"
+        },
+        {
+          "type": "archival",
+          "query": "Pyongyang skyline",
+          "at": "North Korea's hackers"
+        }
       ]
     },
     {
       "id": 2,
       "act": "stakes",
-      "label": "Sony, a central bank, and WannaCry",
-      "narration": "[calmly] Why would one small company matter? Because of what prosecutors say its people did on the side. The destructive attack on Sony Pictures in November 2014. The theft of $81 million from Bangladesh's central bank in February 2016. Attacks on other banks that, by the FBI's count, aimed at well over $1 billion. Spear-phishing against American defense contractors, including Lockheed Martin. [short pause] And WannaCry — the 2017 ransomware that hit hundreds of thousands of computers around the world.",
+      "label": "A quiet coder named Park",
+      "mood": "calm",
+      "narration": "[calmly] Let's go back to the start. Chosun Expo had offices in China and in North Korea. It sold the work of North Korean coders to clients in other countries. Investigators say some of those clients knew exactly who they were hiring. One of the coders was a man named Park Jin Hyok. According to the FBI, he worked for the company from at least 2002. For years, he looked like any other programmer. [short pause] He even used his real name.",
       "visuals": [
-        {"type": "motion", "kind": "timeline", "data": ["Nov 2014 · Sony Pictures", "Feb 2016 · Bangladesh Bank", "2016–2017 · US defense contractors", "May 2017 · WannaCry"]},
-        {"type": "archival", "query": "Sony Pictures studio Culver City"}
+        {
+          "type": "stock",
+          "query": "old calendar pages",
+          "at": "back to the start"
+        },
+        {
+          "type": "archival",
+          "query": "Pyongyang city view",
+          "at": "in North Korea"
+        },
+        {
+          "type": "stock",
+          "query": "world map globe",
+          "at": "clients in other countries"
+        },
+        {
+          "type": "stock",
+          "query": "job interview office",
+          "at": "who they were hiring"
+        },
+        {
+          "type": "archival",
+          "query": "FBI wanted poster Park Jin Hyok",
+          "at": "a man named Park Jin Hyok"
+        },
+        {
+          "type": "stock",
+          "query": "computer lab 2000s",
+          "at": "from at least 2002"
+        },
+        {
+          "type": "stock",
+          "query": "man working computer",
+          "at": "any other programmer"
+        },
+        {
+          "type": "stock",
+          "query": "name badge desk",
+          "at": "his real name"
+        },
+        {
+          "type": "motion",
+          "kind": "title",
+          "text": "Park Jin Hyok",
+          "at": "named Park Jin Hyok"
+        }
       ]
     },
     {
       "id": 3,
-      "act": "stakes",
-      "label": "One name in the complaint",
-      "narration": "[serious] All of it was laid out in a criminal complaint filed under seal in Los Angeles on June 8, 2018. The sworn statement behind it came from Nathan Shields, an FBI special agent in the Los Angeles field office, and it runs past 170 numbered paragraphs. At the center of it is one man: Park Jin Hyok, a North Korean programmer who, the FBI says, worked for Chosun Expo from at least 2002. [short pause] On September 6, 2018, the charges went public.",
+      "act": "quiet_part",
+      "label": "A day job in Dalian",
+      "mood": "calm",
+      "narration": "[softly] Between 2011 and 2013, Park spent time in Dalian. That's a busy port city in northeast China. There, he worked on computer projects for paying clients. He used company email accounts, including free Gmail accounts. That's normal. Lots of small businesses use Gmail. [short pause] But the FBI says Chosun Expo had a second boss. It was linked to a hacking unit called Lab 110. The US says Lab 110 is part of North Korea's military spy service.",
       "visuals": [
-        {"type": "archival", "query": "United States Courthouse Los Angeles"},
-        {"type": "motion", "kind": "doc_callout", "text": "United States v. Park Jin Hyok · Filed June 8, 2018"},
-        {"type": "archival", "query": "FBI wanted poster Park Jin Hyok"}
+        {
+          "type": "archival",
+          "query": "Dalian skyline",
+          "at": "Park spent time in Dalian",
+          "overlay": "Dalian, China"
+        },
+        {
+          "type": "stock",
+          "query": "container port cranes",
+          "at": "a busy port city"
+        },
+        {
+          "type": "stock",
+          "query": "city street china",
+          "at": "northeast China"
+        },
+        {
+          "type": "stock",
+          "query": "laptop project planning",
+          "at": "computer projects"
+        },
+        {
+          "type": "stock",
+          "query": "gmail inbox screen",
+          "at": "free Gmail accounts"
+        },
+        {
+          "type": "stock",
+          "query": "small business owner laptop",
+          "at": "small businesses use Gmail"
+        },
+        {
+          "type": "stock",
+          "query": "shadow behind glass",
+          "at": "a second boss"
+        },
+        {
+          "type": "stock",
+          "query": "dark room monitors",
+          "at": "a hacking unit called Lab 110"
+        },
+        {
+          "type": "archival",
+          "query": "Korean People's Army parade",
+          "at": "military spy service"
+        }
       ]
     },
     {
       "id": 4,
       "act": "quiet_part",
-      "label": "Coders for hire in Dalian",
-      "narration": "[softly] To understand how the case was built, start with the ordinary part. According to the affidavit, Chosun Expo stationed programmers outside North Korea, including in Dalian, a port city in northeast China. There they did programming and IT projects for paying clients. Park, the FBI says, was one of them. He worked in China for at least some of the time between 2011 and 2013, and he did that work under his real name, using company email accounts.",
+      "label": "The hackers with a nickname",
+      "mood": "curious",
+      "narration": "[curious] Security experts had been chasing a group of hackers for years. They didn't know their real names. So they gave them a nickname, the Lazarus Group. [serious] Prosecutors say Park was part of that group. By 2014, the FBI says, he seemed to be back home in North Korea. That same year, a Hollywood comedy was about to come out. It was called The Interview. In the story, two Americans are sent to kill Kim Jong Un. [short pause] North Korea's government called the movie an act of war.",
       "visuals": [
-        {"type": "motion", "kind": "map", "text": "Dalian, China", "data": {"lat": 38.91, "lon": 121.61}},
-        {"type": "stock", "query": "Dalian city skyline", "overlay": "Dalian, China · 2011–2013"}
+        {
+          "type": "stock",
+          "query": "security analyst screens",
+          "at": "Security experts"
+        },
+        {
+          "type": "stock",
+          "query": "hands typing dark",
+          "at": "a group of hackers"
+        },
+        {
+          "type": "stock",
+          "query": "question mark shadow",
+          "at": "didn't know their real names"
+        },
+        {
+          "type": "stock",
+          "query": "courtroom gavel",
+          "at": "Prosecutors say"
+        },
+        {
+          "type": "stock",
+          "query": "airplane landing evening",
+          "at": "back home in North Korea"
+        },
+        {
+          "type": "archival",
+          "query": "Hollywood sign",
+          "at": "a Hollywood comedy"
+        },
+        {
+          "type": "stock",
+          "query": "movie theater seats",
+          "at": "The Interview"
+        },
+        {
+          "type": "stock",
+          "query": "film reel projector",
+          "at": "two Americans are sent"
+        },
+        {
+          "type": "archival",
+          "query": "Kim Il Sung Square Pyongyang",
+          "at": "an act of war"
+        }
       ]
     },
     {
       "id": 5,
       "act": "quiet_part",
-      "label": "The other employer: Lab 110",
-      "narration": "[cautiously] What the clients may not have seen was the other employer. The complaint says Chosun Expo was affiliated with a hacking organization sometimes called Lab 110, which the Justice Department describes as a component of North Korean military intelligence. Security researchers have their own name for the hackers behind these attacks. [pause] They call them the Lazarus Group. [serious] Prosecutors allege Park was a member, and that his commercial work and his hacking ran through overlapping accounts.",
+      "label": "Bait for the actors",
+      "mood": "tense",
+      "narration": "[cautiously] In September 2014, strange Facebook messages started to show up. One account used the names Watson Henny and John Mogabe. Another was called Andoson David. They posted links aimed at actors in The Interview. [short pause] The links were bait. Click one, and you could get malware. Malware is just a program built to break into a computer, or damage it. Nobody on the outside knew it yet. [slowly] But someone was knocking on Sony's door.",
       "visuals": [
-        {"type": "motion", "kind": "network", "data": ["Chosun Expo", "Lab 110", "Lazarus Group"]},
-        {"type": "stock", "query": "hacker typing dark room"}
+        {
+          "type": "stock",
+          "query": "smartphone social media scroll",
+          "at": "strange Facebook messages"
+        },
+        {
+          "type": "stock",
+          "query": "profile picture blank",
+          "at": "Watson Henny and John Mogabe"
+        },
+        {
+          "type": "stock",
+          "query": "fake account screen",
+          "at": "Andoson David"
+        },
+        {
+          "type": "stock",
+          "query": "red carpet cameras",
+          "at": "actors in The Interview"
+        },
+        {
+          "type": "stock",
+          "query": "fishing hook bait",
+          "at": "The links were bait"
+        },
+        {
+          "type": "stock",
+          "query": "finger clicking mouse",
+          "at": "Click one"
+        },
+        {
+          "type": "stock",
+          "query": "virus warning screen",
+          "at": "you could get malware"
+        },
+        {
+          "type": "stock",
+          "query": "broken computer screen",
+          "at": "damage it"
+        },
+        {
+          "type": "stock",
+          "query": "knocking on door",
+          "at": "knocking on Sony's door"
+        }
       ]
     },
     {
       "id": 6,
-      "act": "quiet_part",
-      "label": "Bait aimed at The Interview",
-      "narration": "[serious] By 2014, according to the FBI, Park appeared to be back in North Korea. That same year, Sony was preparing to release The Interview — the film the Justice Department says the attack was meant to punish. In September 2014, a Facebook account using the names Watson Henny and John Mogabe posted malicious links to actors in the film. Another account, called Andoson David, did the same. [short pause] Malware is software built to break into or damage a computer. These links were the bait.",
+      "act": "escalation",
+      "label": "Hacked by GOP",
+      "mood": "shock",
+      "narration": "[dramatically] Then came November. On November 21, 2014, Sony bosses got an email from someone calling himself Frank David. It demanded money. Three days later, on November 24, Sony computers lit up with a message. It said, Hacked by GOP. The letters stood for Guardians of Peace. [breathless] Sony had to cut off nearly 8,000 computers to stop the damage. Private files spilled onto the internet. Even a new movie, Annie, leaked online before it came out.",
       "visuals": [
-        {"type": "motion", "kind": "redact", "text": "Facebook account: \"Watson Henny\" / \"John Mogabe\" · Sept 2014"},
-        {"type": "stock", "query": "social media phone scrolling dark"}
+        {
+          "type": "stock",
+          "query": "autumn leaves falling",
+          "at": "Then came November"
+        },
+        {
+          "type": "stock",
+          "query": "executive reading email",
+          "at": "Sony bosses got an email"
+        },
+        {
+          "type": "stock",
+          "query": "money demand letter",
+          "at": "It demanded money"
+        },
+        {
+          "type": "archival",
+          "query": "Sony Pictures Studios Culver City",
+          "at": "Sony computers lit up",
+          "overlay": "Culver City, 2014"
+        },
+        {
+          "type": "stock",
+          "query": "red skull screen",
+          "at": "Hacked by GOP"
+        },
+        {
+          "type": "stock",
+          "query": "office computers dark",
+          "at": "Guardians of Peace"
+        },
+        {
+          "type": "stock",
+          "query": "unplugging network cables",
+          "at": "cut off nearly 8,000 computers"
+        },
+        {
+          "type": "stock",
+          "query": "files falling paper",
+          "at": "Private files spilled"
+        },
+        {
+          "type": "stock",
+          "query": "cinema film strip",
+          "at": "a new movie, Annie"
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "computers cut off",
+          "at": "nearly 8,000 computers",
+          "data": {
+            "from": 0,
+            "to": 8000
+          }
+        }
       ]
     },
     {
       "id": 7,
       "act": "escalation",
-      "label": "Hacked by GOP",
-      "narration": "[dramatically] Then came November. On November 21, 2014, an email sent under the name Frank David demanded compensation from Sony Pictures. Three days later, on November 24, employees' computers flashed a message: Hacked By GOP — the Guardians of Peace. [serious] To keep the damage from spreading, Sony had to disconnect somewhere between 7,500 and 8,000 workstations. Stolen files were leaked online and emailed out. Even a copy of the unreleased movie Annie ended up on the internet.",
+      "label": "$81 million walks out",
+      "mood": "tense",
+      "narration": "[serious] Hollywood was only the start. Just over a year later, the target was money. In February 2016, hackers broke into Bangladesh Bank. That's the country's central bank, like America's Federal Reserve. They sent fake payment orders through SWIFT. SWIFT is the system banks use to send money to each other across borders. [short pause] About $81 million got away. The FBI called it the biggest successful cyber-theft from a bank so far. [ominously] And they wanted more.",
       "visuals": [
-        {"type": "motion", "kind": "title", "text": "Culver City, California · Nov 24, 2014"},
-        {"type": "motion", "kind": "counter", "text": "workstations disconnected", "data": {"from": 0, "to": 8000}},
-        {"type": "stock", "query": "dark office computers"}
+        {
+          "type": "stock",
+          "query": "film studio lights",
+          "at": "Hollywood was only the start"
+        },
+        {
+          "type": "stock",
+          "query": "money counting machine",
+          "at": "the target was money"
+        },
+        {
+          "type": "archival",
+          "query": "Bangladesh Bank building Dhaka",
+          "at": "broke into Bangladesh Bank",
+          "overlay": "Dhaka, 2016"
+        },
+        {
+          "type": "archival",
+          "query": "Federal Reserve building Washington",
+          "at": "America's Federal Reserve"
+        },
+        {
+          "type": "stock",
+          "query": "bank wire transfer screen",
+          "at": "fake payment orders"
+        },
+        {
+          "type": "stock",
+          "query": "bank trading floor",
+          "at": "the system banks use"
+        },
+        {
+          "type": "stock",
+          "query": "airport departures board",
+          "at": "across borders"
+        },
+        {
+          "type": "stock",
+          "query": "hundred dollar bills",
+          "at": "About $81 million"
+        },
+        {
+          "type": "stock",
+          "query": "empty bank vault",
+          "at": "the biggest successful cyber-theft"
+        },
+        {
+          "type": "motion",
+          "kind": "counter",
+          "text": "stolen from Bangladesh Bank",
+          "at": "About $81 million",
+          "data": {
+            "from": 0,
+            "to": 81000000,
+            "prefix": "$"
+          }
+        }
       ]
     },
     {
       "id": 8,
       "act": "escalation",
-      "label": "$81 million out of a central bank",
-      "narration": "[serious] Just over a year later, the target was money. In February 2016, attackers sent fraudulent messages over SWIFT — the secure system banks use to order payments across borders — from Bangladesh Bank, the country's central bank, its version of the Federal Reserve. About $81 million got through. The FBI affidavit calls it [slowly] the largest successful cyber-theft from a financial institution to date. [short pause] And prosecutors say the same group went after other banks, too, from 2015 to 2018.",
+      "label": "Knocking at Lockheed Martin",
+      "mood": "tense",
+      "narration": "[cautiously] Prosecutors say the same group tried to steal at least $1 billion from other banks. Then they turned to America's defense industry. In 2016 and 2017, they sent spear-phishing emails to US defense companies, including Lockheed Martin. Spear-phishing means a fake email made for one person, to trick them into clicking. Some emails were about a missile defense system that Lockheed builds. [short pause] This time, the trick failed. Lockheed's doors stayed shut.",
       "visuals": [
-        {"type": "archival", "query": "Bangladesh Bank building Dhaka"},
-        {"type": "motion", "kind": "counter", "text": "stolen from Bangladesh Bank", "data": {"from": 0, "to": 81000000, "prefix": "$"}}
+        {
+          "type": "stock",
+          "query": "bank buildings skyline",
+          "at": "other banks"
+        },
+        {
+          "type": "stock",
+          "query": "fighter jet flying",
+          "at": "America's defense industry"
+        },
+        {
+          "type": "stock",
+          "query": "inbox new email",
+          "at": "spear-phishing emails"
+        },
+        {
+          "type": "archival",
+          "query": "Lockheed Martin headquarters Bethesda",
+          "at": "including Lockheed Martin"
+        },
+        {
+          "type": "stock",
+          "query": "woman reading email worried",
+          "at": "made for one person"
+        },
+        {
+          "type": "stock",
+          "query": "cursor hovering link",
+          "at": "trick them into clicking"
+        },
+        {
+          "type": "archival",
+          "query": "THAAD missile launch",
+          "at": "a missile defense system"
+        },
+        {
+          "type": "stock",
+          "query": "security gate closed",
+          "at": "the trick failed"
+        },
+        {
+          "type": "stock",
+          "query": "locked steel door",
+          "at": "doors stayed shut"
+        }
       ]
     },
     {
       "id": 9,
       "act": "escalation",
-      "label": "Knocking on Lockheed Martin",
-      "narration": "[cautiously] Next, the focus turned to America's defense industry. In 2016 and 2017, according to the Justice Department, the group sent spear-phishing emails to US defense contractors, including Lockheed Martin. Spear-phishing is a fake message tailored to one specific person, built to trick them into opening a door. The affidavit says someone using a North Korean IP address — the numeric address a computer uses online — researched Lockheed employees and messaged them. [short pause] Those attempts, prosecutors say, failed.",
+      "label": "WannaCry hits the world",
+      "mood": "shock",
+      "narration": "[urgently] Then, in May 2017, came the attack almost everyone heard about. It was called WannaCry. It was ransomware. That's a program that locks your files and demands money to unlock them. It spread by itself, from computer to computer. Hundreds of thousands of machines were hit around the world. [sad] In Britain, it hit the National Health Service, the country's public health system. Thousands of hospital appointments were canceled. [pause] Who was behind it? The FBI had been digging for years.",
       "visuals": [
-        {"type": "archival", "query": "Lockheed Martin headquarters Bethesda"},
-        {"type": "motion", "kind": "terminal", "text": "Source IP: North Korea · Target: defense contractor staff"}
+        {
+          "type": "stock",
+          "query": "news broadcast breaking",
+          "at": "the attack almost everyone heard about"
+        },
+        {
+          "type": "stock",
+          "query": "red alert screen",
+          "at": "It was called WannaCry"
+        },
+        {
+          "type": "stock",
+          "query": "padlock on laptop",
+          "at": "locks your files"
+        },
+        {
+          "type": "stock",
+          "query": "bitcoin payment screen",
+          "at": "demands money"
+        },
+        {
+          "type": "stock",
+          "query": "network cables blinking",
+          "at": "It spread by itself"
+        },
+        {
+          "type": "stock",
+          "query": "earth from space night",
+          "at": "around the world"
+        },
+        {
+          "type": "archival",
+          "query": "NHS hospital London",
+          "at": "the National Health Service"
+        },
+        {
+          "type": "stock",
+          "query": "hospital corridor empty",
+          "at": "hospital appointments were canceled"
+        },
+        {
+          "type": "stock",
+          "query": "detective files desk",
+          "at": "digging for years"
+        },
+        {
+          "type": "motion",
+          "kind": "map",
+          "text": "WannaCry, May 2017",
+          "at": "around the world",
+          "data": {
+            "region": "world"
+          }
+        }
       ]
     },
     {
       "id": 10,
-      "act": "escalation",
-      "label": "WannaCry hits the world",
-      "narration": "[serious] And then, in May 2017, came the attack almost everyone felt. WannaCry 2.0 was ransomware — software that locks up your files and demands payment to unlock them. It reached hundreds of thousands of computers worldwide, including machines in the Los Angeles area. In Britain, it hit the National Health Service, the country's public health system, and thousands of appointments were canceled. [pause] The complaint alleges the same people behind Sony and Bangladesh Bank wrote it.",
+      "act": "unmasking",
+      "label": "The clue in the inbox",
+      "mood": "curious",
+      "narration": "[curious] So how do you catch a hacker from one of the most secretive countries on Earth? [short pause] In this case, the answer was email. Remember those free Gmail accounts Chosun Expo used for its normal business? Some were in Park's real name. Agents found that one of them was tied to a second Gmail account with a very similar name. [serious] And that second account was busy. It was used to send fake emails, to study targets, and to research hacking.",
       "visuals": [
-        {"type": "stock", "query": "hospital corridor"},
-        {"type": "motion", "kind": "network", "text": "WannaCry 2.0 · May 2017"},
-        {"type": "motion", "kind": "map", "text": "Hundreds of thousands of computers", "data": {"region": "world"}}
+        {
+          "type": "archival",
+          "query": "Korean Demilitarized Zone",
+          "at": "most secretive countries on Earth"
+        },
+        {
+          "type": "stock",
+          "query": "email notification phone",
+          "at": "the answer was email"
+        },
+        {
+          "type": "stock",
+          "query": "office workers laptops",
+          "at": "its normal business"
+        },
+        {
+          "type": "stock",
+          "query": "passport name page",
+          "at": "in Park's real name"
+        },
+        {
+          "type": "stock",
+          "query": "fbi agents office",
+          "at": "Agents found"
+        },
+        {
+          "type": "stock",
+          "query": "two laptops side",
+          "at": "a second Gmail account"
+        },
+        {
+          "type": "stock",
+          "query": "busy screen typing",
+          "at": "that second account was busy"
+        },
+        {
+          "type": "stock",
+          "query": "magnifying glass documents",
+          "at": "to study targets"
+        },
+        {
+          "type": "stock",
+          "query": "reading books night",
+          "at": "to research hacking"
+        }
       ]
     },
     {
       "id": 11,
       "act": "unmasking",
-      "label": "The weak spot: free email",
-      "narration": "[curious] So how do you put a name on hackers who work for one of the most secretive governments on Earth? [short pause] In this case, the answer was email. Chosun Expo used free email services, including Gmail, for its routine business. The FBI says some of those accounts were in Park's true name. One of them was linked to a second Gmail account with a similar handle — and that second account was used for spear-phishing, scouting victims, and researching hacking methods.",
+      "label": "Who was Kim Hyon Woo?",
+      "mood": "reveal",
+      "narration": "[serious] That second account used a name, Kim Hyon Woo. The FBI says it was likely a fake name, a cover. Kim Hyon Woo accounts were used to set up other email and social media accounts. Some of those were used against Sony and Bangladesh Bank. Remember the Andoson David Facebook account that sent bait to the actors? [short pause] The FBI says it was set up with one of those same email addresses. [slowly] A single thread now ran from the quiet coder to the attacks.",
       "visuals": [
-        {"type": "stock", "query": "email inbox laptop screen"},
-        {"type": "motion", "kind": "network", "data": ["Chosun Expo Gmail", "similar handle", "spear-phishing account"]}
+        {
+          "type": "stock",
+          "query": "mask on table",
+          "at": "Kim Hyon Woo"
+        },
+        {
+          "type": "stock",
+          "query": "fake id card",
+          "at": "likely a fake name"
+        },
+        {
+          "type": "stock",
+          "query": "creating account screen",
+          "at": "set up other email"
+        },
+        {
+          "type": "stock",
+          "query": "social media icons",
+          "at": "social media accounts"
+        },
+        {
+          "type": "archival",
+          "query": "Sony Pictures Plaza",
+          "at": "used against Sony"
+        },
+        {
+          "type": "archival",
+          "query": "Dhaka Motijheel",
+          "at": "Bangladesh Bank"
+        },
+        {
+          "type": "stock",
+          "query": "facebook login screen",
+          "at": "the Andoson David Facebook account"
+        },
+        {
+          "type": "stock",
+          "query": "red string board",
+          "at": "one of those same email addresses"
+        },
+        {
+          "type": "stock",
+          "query": "thread needle closeup",
+          "at": "A single thread"
+        },
+        {
+          "type": "motion",
+          "kind": "network",
+          "text": "One thread, many accounts",
+          "at": "A single thread",
+          "data": [
+            "Park",
+            "Kim Hyon Woo",
+            "Sony",
+            "Bangladesh Bank"
+          ]
+        }
       ]
     },
     {
       "id": 12,
       "act": "unmasking",
-      "label": "Who was Kim Hyon Woo?",
-      "narration": "[serious] That second account belonged to a persona named Kim Hyon Woo. The affidavit calls the name [slowly] likely an alias, or cover name. Investigators say Kim Hyon Woo accounts were used to set up or access other email and social media accounts — including ones that targeted Sony and Bangladesh Bank. That Andoson David Facebook profile that sent bait to the actors? It was registered with one of those same addresses. [short pause] A single thread ran from the coder for hire to the attacks.",
+      "label": "Too many fingerprints",
+      "mood": "reveal",
+      "narration": "[calmly] Email wasn't the only clue. Investigators also matched fake names used again and again. They found the same pieces of code showing up in different attacks. They traced logins back to internet addresses in North Korea and China. [short pause] Eric Chien of the security company Symantec said Park mixed his normal work with his government work. And because he used American email services, US search warrants could reach those accounts. [reflective] Another expert, Priscilla Moriuchi, said the case was built on all the mistakes he made.",
       "visuals": [
-        {"type": "motion", "kind": "doc_callout", "text": "\"Kim Hyon Woo\" — likely an alias or \"cover\" name"},
-        {"type": "motion", "kind": "network", "data": ["Park · Chosun Expo", "Kim Hyon Woo", "Sony", "Bangladesh Bank"]}
+        {
+          "type": "stock",
+          "query": "fingerprint scan",
+          "at": "the only clue"
+        },
+        {
+          "type": "stock",
+          "query": "sticky notes wall",
+          "at": "fake names used again"
+        },
+        {
+          "type": "stock",
+          "query": "source code scrolling",
+          "at": "the same pieces of code"
+        },
+        {
+          "type": "stock",
+          "query": "world map lights",
+          "at": "internet addresses"
+        },
+        {
+          "type": "stock",
+          "query": "cybersecurity office team",
+          "at": "the security company Symantec"
+        },
+        {
+          "type": "stock",
+          "query": "desk two monitors",
+          "at": "his normal work"
+        },
+        {
+          "type": "archival",
+          "query": "United States District Court Los Angeles",
+          "at": "US search warrants"
+        },
+        {
+          "type": "stock",
+          "query": "server racks lights",
+          "at": "those accounts"
+        },
+        {
+          "type": "stock",
+          "query": "chess move checkmate",
+          "at": "all the mistakes he made"
+        }
       ]
     },
     {
       "id": 13,
-      "act": "unmasking",
-      "label": "Fingerprints in the code",
-      "narration": "[calmly] Email was only part of it. The Justice Department says investigators also traced shared aliases, the same proxy services, IP addresses in North Korea, China and elsewhere, and common code libraries reused from one attack to the next. They tracked so-called collector accounts, too — inboxes that receive what malware sends home. One collector account, tied to a self-spreading program called Brambul, was accessed from a North Korean IP address in 2017. [short pause] Taken together, prosecutors say, it pointed to one set of actors.",
+      "act": "aftermath",
+      "label": "Charged, then denied",
+      "mood": "tense",
+      "narration": "[serious] On June 8, 2018, prosecutors filed a criminal complaint in Los Angeles. It stayed secret for three months. Then, on September 6, 2018, the charges went public. Park was charged with conspiracy to commit computer fraud and conspiracy to commit wire fraud. The second charge alone carries up to 20 years in prison. That same day, the US Treasury put money sanctions on Park and on Chosun Expo. [surprised] And North Korea's answer? It said Park Jin Hyok doesn't even exist.",
       "visuals": [
-        {"type": "stock", "query": "server room corridor"},
-        {"type": "motion", "kind": "network", "data": ["aliases", "collector accounts", "code libraries", "proxy services", "IP addresses"]}
+        {
+          "type": "archival",
+          "query": "Los Angeles City Hall",
+          "at": "a criminal complaint in Los Angeles"
+        },
+        {
+          "type": "stock",
+          "query": "sealed envelope",
+          "at": "stayed secret for three months"
+        },
+        {
+          "type": "stock",
+          "query": "press conference microphones",
+          "at": "the charges went public"
+        },
+        {
+          "type": "archival",
+          "query": "Robert F. Kennedy Department of Justice Building",
+          "at": "Park was charged"
+        },
+        {
+          "type": "stock",
+          "query": "handcuffs table",
+          "at": "wire fraud"
+        },
+        {
+          "type": "stock",
+          "query": "prison bars",
+          "at": "up to 20 years in prison"
+        },
+        {
+          "type": "archival",
+          "query": "Treasury Building Washington",
+          "at": "the US Treasury"
+        },
+        {
+          "type": "stock",
+          "query": "frozen bank card",
+          "at": "money sanctions"
+        },
+        {
+          "type": "stock",
+          "query": "empty chair spotlight",
+          "at": "doesn't even exist"
+        },
+        {
+          "type": "motion",
+          "kind": "doc_callout",
+          "text": "Charged: Sept 6, 2018",
+          "at": "the charges went public"
+        }
       ]
     },
     {
       "id": 14,
-      "act": "unmasking",
-      "label": "All the mistakes he made",
-      "narration": "[reflective] Outside experts were blunt about why it worked. Eric Chien of the security firm Symantec pointed to a lack of opsec — operational security, the discipline of covering your tracks. He said Park had cross-contaminated his legitimate work with his government work. And using free American email services meant the accounts could be reached with US search warrants. As Priscilla Moriuchi of Recorded Future put it, investigators were able to build this case against him based on all the mistakes he made.",
-      "visuals": [
-        {"type": "motion", "kind": "quote", "text": "\"...based on all the mistakes he made.\" — Priscilla Moriuchi, Recorded Future"},
-        {"type": "stock", "query": "detective evidence board"}
-      ]
-    },
-    {
-      "id": 15,
-      "act": "aftermath",
-      "label": "Charged, sanctioned, denied",
-      "narration": "[serious] Park was charged with conspiracy to commit computer fraud, which carries up to 5 years in prison, and conspiracy to commit wire fraud, which carries up to 20. The same day, the Treasury Department sanctioned both him and Chosun Expo. Assistant Attorney General John Demers said the scale and scope of the crimes alleged was, in his word, staggering. [pause] North Korea's answer? Its government denied that Park even exists.",
-      "visuals": [
-        {"type": "archival", "query": "Department of Justice building Washington"},
-        {"type": "motion", "kind": "quote", "text": "\"The scale and scope of the cyber-crimes alleged ... is staggering\" — John Demers"},
-        {"type": "archival", "query": "US Treasury building Washington"}
-      ]
-    },
-    {
-      "id": 16,
       "act": "aftermath",
       "label": "Undone by an inbox",
-      "narration": "[softly] Park Jin Hyok has never been arrested. He remains on the FBI's wanted list, and the accusations against him have never been tested in court. [short pause] But the case put a company, and a face, behind a hacking campaign that had circled the globe. Behind the code names, the FBI argued, were people with day jobs — at a business that took paying clients. [slowly] And what gave them away was the most ordinary tool in any office… an email account. [pause] If you like stories like this, subscribe to Breach Uncovered.",
+      "mood": "calm",
+      "narration": "[softly] As far as the public knows, Park Jin Hyok has never been arrested. He is still on the FBI's wanted list. The charges have never been tested in court, so they are still only accusations. [short pause] But the case put a real company, and a real face, behind years of attacks. Behind the code names were people with day jobs. [slowly] And what gave them away was the most ordinary thing in any office… an email account. [pause] If you like true stories like this, subscribe to Breach Uncovered.",
       "visuals": [
-        {"type": "archival", "query": "FBI seal"},
-        {"type": "stock", "query": "empty office desk night"}
+        {
+          "type": "stock",
+          "query": "city night rain",
+          "at": "never been arrested"
+        },
+        {
+          "type": "archival",
+          "query": "FBI seal",
+          "at": "the FBI's wanted list"
+        },
+        {
+          "type": "stock",
+          "query": "empty courtroom",
+          "at": "never been tested in court"
+        },
+        {
+          "type": "stock",
+          "query": "question marks paper",
+          "at": "only accusations"
+        },
+        {
+          "type": "stock",
+          "query": "office building facade",
+          "at": "a real company"
+        },
+        {
+          "type": "stock",
+          "query": "silhouette man window",
+          "at": "a real face"
+        },
+        {
+          "type": "stock",
+          "query": "morning commute crowd",
+          "at": "people with day jobs"
+        },
+        {
+          "type": "stock",
+          "query": "office desk lamp night",
+          "at": "the most ordinary thing"
+        },
+        {
+          "type": "stock",
+          "query": "email icon laptop closeup",
+          "at": "an email account"
+        },
+        {
+          "type": "stock",
+          "query": "sunrise over city",
+          "at": "subscribe to Breach Uncovered"
+        }
       ]
     }
   ],
   "facts": [
-    {"claim": "The complaint against Park Jin Hyok was filed June 8, 2018 in Los Angeles federal court and announced September 6, 2018.", "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and", "confidence": "confirmed"},
-    {"claim": "Chosun Expo Joint Venture (Korea Expo Joint Venture) is described as a North Korean government front company with offices in China and the DPRK, affiliated with Lab 110, a component of DPRK military intelligence.", "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and", "confidence": "alleged"},
-    {"claim": "Affiant is FBI Special Agent Nathan P. Shields, Los Angeles Field Office; the affidavit's conclusion is at paragraph 171.", "source": "https://nsarchive.gwu.edu/media/18208/ocr", "confidence": "confirmed"},
-    {"claim": "Chosun Expo stationed programmers abroad, including in Dalian, China, doing programming and IT projects for paying clients, some of whom knew they were hiring North Koreans.", "source": "https://nsarchive.gwu.edu/media/18208/ocr", "confidence": "alleged"},
-    {"claim": "Park worked for Chosun Expo from at least 2002, was in China for at least part of 2011–2013, and appears to have returned to North Korea by 2014; Chosun Expo accounts were in his true name.", "source": "https://nsarchive.gwu.edu/media/18208/ocr", "confidence": "alleged"},
-    {"claim": "In September 2014 a Facebook account using the names Watson Henny / John Mogabe posted malware links to actors in The Interview; an 'Andoson David' Facebook account, subscribed with the Kim Hyon Woo Gmail account, did the same.", "source": "https://nsarchive.gwu.edu/media/18208/ocr", "confidence": "alleged"},
-    {"claim": "A 'Frank David' email on November 21, 2014 demanded compensation from Sony; on November 24 workstations displayed 'Hacked by #GOP'; Sony disconnected 7,500 to 8,000 workstations; a pre-release copy of Annie was posted online.", "source": "https://nsarchive.gwu.edu/media/18208/ocr", "confidence": "confirmed"},
-    {"claim": "About $81 million was stolen from Bangladesh Bank in February 2016 via fraudulent SWIFT messages; the affidavit calls it the largest successful cyber-theft from a financial institution to date; attempted losses 2015–2018 were well over $1 billion.", "source": "https://nsarchive.gwu.edu/media/18208/ocr", "confidence": "confirmed"},
-    {"claim": "Spear-phishing of US defense contractors including Lockheed Martin in 2016–2017 was unsuccessful; a subject using a North Korean IP address researched and messaged Lockheed personnel.", "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and", "confidence": "alleged"},
-    {"claim": "The complaint alleges the same subjects authored WannaCry 2.0 (May 2017), which infected hundreds of thousands of computers, including in the Central District of California.", "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and", "confidence": "alleged"},
-    {"claim": "WannaCry hit the UK's NHS and thousands of appointments were canceled.", "source": "https://en.wikipedia.org/wiki/Park_Jin_Hyok", "confidence": "reported"},
-    {"claim": "Chosun Expo used free email services for routine business; one Chosun Expo Gmail account was linked to a second with a similar handle used for spear-phishing, reconnaissance and hacking research; 'Kim Hyon Woo' was 'likely an alias or cover name'.", "source": "https://www.darkreading.com/threat-intelligence/the-opsec-fail-that-helped-unmask-a-north-korean-state-hacker-/d/d-id/1332870", "confidence": "reported"},
-    {"claim": "Investigators linked the attacks through email and social media accounts, aliases, malware collector accounts, common code libraries, proxy services and IP addresses.", "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and", "confidence": "confirmed"},
-    {"claim": "A Brambul worm collector account was accessed from a North Korean IP address in 2017.", "source": "https://nsarchive.gwu.edu/media/18208/ocr", "confidence": "alleged"},
-    {"claim": "Eric Chien (Symantec) cited 'a lack of opsec' and said Park 'cross-contaminated' legitimate and government work; Priscilla Moriuchi (Recorded Future): investigators 'were able to build this case against him based on all the mistakes he made'; free US email exposed accounts to US search warrants.", "source": "https://www.darkreading.com/threat-intelligence/the-opsec-fail-that-helped-unmask-a-north-korean-state-hacker-/d/d-id/1332870", "confidence": "confirmed"},
-    {"claim": "Charges: conspiracy to commit computer fraud and abuse (max 5 years) and conspiracy to commit wire fraud (max 20 years); Treasury OFAC sanctioned Park and KEJV under E.O. 13722; Demers: 'The scale and scope of the cyber-crimes alleged by the Complaint is staggering'.", "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and", "confidence": "confirmed"},
-    {"claim": "Park is on the FBI wanted list; North Korea denies that Park exists.", "source": "https://en.wikipedia.org/wiki/Park_Jin_Hyok", "confidence": "reported"},
-    {"claim": "The company used free email services such as Gmail for routine business and for phishing; clues in Gmail helped investigators.", "source": "https://www.scmp.com/news/asia/east-asia/article/2163158/gmail-key-tracking-down-north-korean-park-jin-hyok-who-accused", "confidence": "reported"}
+    {
+      "claim": "The complaint against Park Jin Hyok was filed June 8, 2018 in Los Angeles federal court and announced September 6, 2018.",
+      "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Chosun Expo Joint Venture (Korea Expo Joint Venture) is described as a North Korean government front company with offices in China and the DPRK, affiliated with Lab 110, a component of DPRK military intelligence.",
+      "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Affiant is FBI Special Agent Nathan P. Shields, Los Angeles Field Office; the affidavit's conclusion is at paragraph 171.",
+      "source": "https://nsarchive.gwu.edu/media/18208/ocr",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Chosun Expo stationed programmers abroad, including in Dalian, China, doing programming and IT projects for paying clients, some of whom knew they were hiring North Koreans.",
+      "source": "https://nsarchive.gwu.edu/media/18208/ocr",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Park worked for Chosun Expo from at least 2002, was in China for at least part of 2011–2013, and appears to have returned to North Korea by 2014; Chosun Expo accounts were in his true name.",
+      "source": "https://nsarchive.gwu.edu/media/18208/ocr",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "In September 2014 a Facebook account using the names Watson Henny / John Mogabe posted malware links to actors in The Interview; an 'Andoson David' Facebook account, subscribed with the Kim Hyon Woo Gmail account, did the same.",
+      "source": "https://nsarchive.gwu.edu/media/18208/ocr",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "A 'Frank David' email on November 21, 2014 demanded compensation from Sony; on November 24 workstations displayed 'Hacked by #GOP'; Sony disconnected 7,500 to 8,000 workstations; a pre-release copy of Annie was posted online.",
+      "source": "https://nsarchive.gwu.edu/media/18208/ocr",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "About $81 million was stolen from Bangladesh Bank in February 2016 via fraudulent SWIFT messages; the affidavit calls it the largest successful cyber-theft from a financial institution to date; attempted losses 2015–2018 were well over $1 billion.",
+      "source": "https://nsarchive.gwu.edu/media/18208/ocr",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Spear-phishing of US defense contractors including Lockheed Martin in 2016–2017 was unsuccessful; a subject using a North Korean IP address researched and messaged Lockheed personnel.",
+      "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "The complaint alleges the same subjects authored WannaCry 2.0 (May 2017), which infected hundreds of thousands of computers, including in the Central District of California.",
+      "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "WannaCry hit the UK's NHS and thousands of appointments were canceled.",
+      "source": "https://en.wikipedia.org/wiki/Park_Jin_Hyok",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Chosun Expo used free email services for routine business; one Chosun Expo Gmail account was linked to a second with a similar handle used for spear-phishing, reconnaissance and hacking research; 'Kim Hyon Woo' was 'likely an alias or cover name'.",
+      "source": "https://www.darkreading.com/threat-intelligence/the-opsec-fail-that-helped-unmask-a-north-korean-state-hacker-/d/d-id/1332870",
+      "confidence": "reported"
+    },
+    {
+      "claim": "Investigators linked the attacks through email and social media accounts, aliases, malware collector accounts, common code libraries, proxy services and IP addresses.",
+      "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "A Brambul worm collector account was accessed from a North Korean IP address in 2017.",
+      "source": "https://nsarchive.gwu.edu/media/18208/ocr",
+      "confidence": "alleged"
+    },
+    {
+      "claim": "Eric Chien (Symantec) cited 'a lack of opsec' and said Park 'cross-contaminated' legitimate and government work; Priscilla Moriuchi (Recorded Future): investigators 'were able to build this case against him based on all the mistakes he made'; free US email exposed accounts to US search warrants.",
+      "source": "https://www.darkreading.com/threat-intelligence/the-opsec-fail-that-helped-unmask-a-north-korean-state-hacker-/d/d-id/1332870",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Charges: conspiracy to commit computer fraud and abuse (max 5 years) and conspiracy to commit wire fraud (max 20 years); Treasury OFAC sanctioned Park and KEJV under E.O. 13722; Demers: 'The scale and scope of the cyber-crimes alleged by the Complaint is staggering'.",
+      "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Park is on the FBI wanted list; North Korea denies that Park exists.",
+      "source": "https://en.wikipedia.org/wiki/Park_Jin_Hyok",
+      "confidence": "reported"
+    },
+    {
+      "claim": "The company used free email services such as Gmail for routine business and for phishing; clues in Gmail helped investigators.",
+      "source": "https://www.scmp.com/news/asia/east-asia/article/2163158/gmail-key-tracking-down-north-korean-park-jin-hyok-who-accused",
+      "confidence": "reported"
+    },
+    {
+      "claim": "In June 2014 North Korea's government (via KCNA/foreign ministry) called The Interview, a comedy about a plot to kill Kim Jong Un, an 'act of war'.",
+      "source": "https://www.npr.org/sections/thetwo-way/2014/06/25/325646474/north-korea-threatens-war-over-new-seth-rogen-comedy",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Some spear-phishing emails to Lockheed Martin referenced THAAD, the missile defense system for which Lockheed is prime contractor; the attempts were not successful.",
+      "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "WannaCry spread itself from computer to computer (worm-like ransomware) and hit hundreds of thousands of computers, significantly impacting the UK's NHS.",
+      "source": "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack",
+      "confidence": "reported"
+    },
+    {
+      "claim": "In June 2014 North Korea's government (via KCNA/foreign ministry) called The Interview, a comedy about a plot to kill Kim Jong Un, an 'act of war'.",
+      "source": "https://www.npr.org/sections/thetwo-way/2014/06/25/325646474/north-korea-threatens-war-over-new-seth-rogen-comedy",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "Some spear-phishing emails to Lockheed Martin referenced THAAD, the missile defense system for which Lockheed is prime contractor; the attempts were not successful.",
+      "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+      "confidence": "confirmed"
+    },
+    {
+      "claim": "WannaCry spread itself from computer to computer (worm-like ransomware) and hit hundreds of thousands of computers, significantly impacting the UK's NHS.",
+      "source": "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack",
+      "confidence": "reported"
+    }
   ],
   "sources": [
     "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
     "https://nsarchive.gwu.edu/media/18208/ocr",
     "https://www.darkreading.com/threat-intelligence/the-opsec-fail-that-helped-unmask-a-north-korean-state-hacker-/d/d-id/1332870",
     "https://www.scmp.com/news/asia/east-asia/article/2163158/gmail-key-tracking-down-north-korean-park-jin-hyok-who-accused",
-    "https://en.wikipedia.org/wiki/Park_Jin_Hyok"
+    "https://en.wikipedia.org/wiki/Park_Jin_Hyok",
+    "https://www.npr.org/sections/thetwo-way/2014/06/25/325646474/north-korea-threatens-war-over-new-seth-rogen-comedy",
+    "https://www.npr.org/sections/thetwo-way/2014/06/25/325646474/north-korea-threatens-war-over-new-seth-rogen-comedy"
   ],
   "seo": {
-    "youtube_title": "North Korea's Front Company: How the FBI Unmasked a Lazarus Hacker",
-    "youtube_description": "North Korea's front company Chosun Expo and the true story of how the FBI unmasked Park Jin Hyok, the programmer charged over the Sony Pictures hack, the $81 million Bangladesh Bank heist and WannaCry.\nA hacking documentary about the coder-for-hire business the US says doubled as a cover for the Lazarus Group.\n\nOn paper, Chosun Expo Joint Venture was a software company with offices in China and North Korea, renting out programmers in cities like Dalian to paying clients. In a criminal complaint filed in Los Angeles on June 8, 2018, the FBI said it was a front for the North Korean government, tied to Lab 110, a unit of the country's military intelligence. Prosecutors accuse one of its programmers, Park Jin Hyok, of taking part in the 2014 Sony Pictures attack, the 2016 Bangladesh Bank theft, spear-phishing against Lockheed Martin and other defense contractors, and the 2017 WannaCry ransomware outbreak.\n\nThe case did not crack because of some genius exploit. It came down to email: company Gmail accounts in Park's real name, linked to an alias called Kim Hyon Woo, linked to the accounts used against Sony and Bangladesh Bank. Park was charged with conspiracy to commit computer fraud and wire fraud and sanctioned by the US Treasury. He has never been arrested, and the charges remain allegations.\n\n{{CHAPTERS}}\n\nSources:\nhttps://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and\nhttps://nsarchive.gwu.edu/media/18208/ocr\nhttps://www.darkreading.com/threat-intelligence/the-opsec-fail-that-helped-unmask-a-north-korean-state-hacker-/d/d-id/1332870\nhttps://www.scmp.com/news/asia/east-asia/article/2163158/gmail-key-tracking-down-north-korean-park-jin-hyok-who-accused\n\nEducational documentary based on public records. No hacking instructions.\n\n#cybersecurity #truecrime #LazarusGroup",
+    "youtube_title": "How the FBI Unmasked a North Korean Hacker: The Chosun Expo Story",
+    "youtube_description": "How the FBI unmasked a North Korean hacker: the true story of Chosun Expo, the \"software company\" the US says was a cover for North Korea's hackers.\nOne coder for hire, Park Jin Hyok, is charged over the Sony Pictures hack, the $81 million Bangladesh Bank theft and WannaCry. What gave him away? Gmail.\n\nOn paper, Chosun Expo was a normal company. It had offices in China and North Korea and sold the work of North Korean programmers to paying clients. One of them, Park Jin Hyok, worked in Dalian, China, using his real name. But the FBI says the company was tied to Lab 110, a hacking unit in North Korea's military spy service, and to the hackers known as the Lazarus Group.\n\nProsecutors say the same group sent bait to actors in The Interview, wiped Sony computers in 2014, stole $81 million from Bangladesh Bank in 2016, went after Lockheed Martin and released WannaCry in 2017. The case cracked because of ordinary email accounts that linked Park's real name to a fake one, Kim Hyon Woo. He was charged in 2018 and sanctioned by the US Treasury. He has never been arrested, and the charges are still accusations.\n\n{{CHAPTERS}}\n\nSources:\nhttps://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and\nhttps://nsarchive.gwu.edu/media/18208/ocr\nhttps://www.darkreading.com/threat-intelligence/the-opsec-fail-that-helped-unmask-a-north-korean-state-hacker-/d/d-id/1332870\nhttps://www.scmp.com/news/asia/east-asia/article/2163158/gmail-key-tracking-down-north-korean-park-jin-hyok-who-accused\nhttps://www.npr.org/sections/thetwo-way/2014/06/25/325646474/north-korea-threatens-war-over-new-seth-rogen-comedy\n\nEducational documentary based on public records. No hacking instructions.\n\n#cybersecurity #truecrime #LazarusGroup",
     "tags": [
       "Chosun Expo",
       "Park Jin Hyok",
@@ -220,10 +978,18 @@
       "North Korea front company",
       "Lab 110"
     ],
-    "hashtags": ["#cybersecurity", "#truecrime", "#LazarusGroup"],
-    "thumb": {"line1": "THE FRONT", "line2": "COMPANY", "tag": "NORTH KOREA'S HACKERS FOR HIRE"},
-    "facebook_text": "On paper it was a software company. The FBI says it was a cover for North Korea's hackers.\n\n• Chosun Expo rented out programmers in China to paying clients, according to the FBI\n• One of them, Park Jin Hyok, is charged over the Sony hack, the $81 million Bangladesh Bank theft and WannaCry\n• What gave the case away? Ordinary Gmail accounts in his real name\n\nWould you ever suspect the freelancer you hired? #cybersecurity #truecrime #LazarusGroup",
-    "first_comment": "The FBI says a company renting out programmers was also a cover for state hackers. Should companies be responsible for checking who really writes their code?",
+    "hashtags": [
+      "#cybersecurity",
+      "#truecrime",
+      "#LazarusGroup"
+    ],
+    "thumb": {
+      "line1": "CAUGHT BY",
+      "line2": "HIS GMAIL",
+      "tag": "NORTH KOREA'S HACKERS FOR HIRE"
+    },
+    "facebook_text": "On paper, it was a small software company. The FBI says it was a cover for North Korea's hackers.\n\n• Chosun Expo sold the work of North Korean coders to paying clients, the FBI says\n• One of them, Park Jin Hyok, is charged over the Sony hack, the $81 million Bangladesh Bank theft and WannaCry\n• What gave him away? Gmail accounts in his real name\n\nWould you ever suspect the coder you hired? #cybersecurity #truecrime #LazarusGroup",
+    "first_comment": "A company that rented out coders was also a cover for state hackers, the FBI says. Should businesses have to check who really writes their code?",
     "search_terms": [
       "chosun expo north korea",
       "park jin hyok fbi",

@@ -132,6 +132,143 @@ def drone(d, base=55.0, seed=0, dark=True):
     fade = np.minimum(t / 3, 1) * np.minimum((d - t) / 3, 1)
     return _norm(y * fade, .8)
 
+# ---------------------------------------------------------------- extra variants (so a video never repeats one sound)
+def impact_metal(d=1.5):
+    t = _t(d); x = np.zeros(len(t))
+    for f, g in ((180, 1.0), (283, .8), (417, .6), (655, .45), (1110, .3)):
+        x += np.sin(2 * np.pi * f * t) * g * np.exp(-t * (3.5 + f / 300))
+    x = x * .35 + sub_boom(d) * .8 + _hp(_noise(len(t)), 2500) * _env(len(t), .001, .05, 9) * .4
+    return _norm(x)
+
+def impact_thud(d=1.2):
+    t = _t(d); f = 90 * np.exp(-t * 9) + 38
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) * _env(len(t), .002, .6, 5) + _lp(_noise(len(t)), 300) * _env(len(t), .001, .08, 10) * .8
+    return _norm(x)
+
+def impact_crack(d=0.9):
+    t = _t(d); x = _hp(_noise(len(t)), 900) * _env(len(t), .0008, .12, 8) + _bp(_noise(len(t)), 120, 900) * _env(len(t), .001, .25, 7) * .8
+    return _norm(x + sub_boom(d) * .5)
+
+def whoosh_fast(d=0.35): return whoosh(d, True)
+def whoosh_low(d=1.0):
+    n = int(SR * d); x = _lp(_noise(n), 900); env = np.sin(np.pi * np.linspace(0, 1, n)) ** 1.2
+    return _norm(x * env, .75)
+def whoosh_air(d=0.9):
+    n = int(SR * d); x = _hp(_noise(n), 3000) * np.sin(np.pi * np.linspace(0, 1, n)) ** 2
+    return _norm(x, .55)
+
+def ping(d=1.6, f=1175):
+    t = _t(d); x = (np.sin(2 * np.pi * f * t) + .35 * np.sin(2 * np.pi * f * 2.01 * t)) * np.exp(-t * 3.2)
+    return _norm(x, .5)
+
+def tick(d=0.12):
+    t = _t(d); x = _bp(_noise(len(t)), 2200, 6500, 2) * _env(len(t), .0004, .02, 9) + np.sin(2 * np.pi * 1800 * t) * np.exp(-t * 90) * .5
+    return _norm(x, .5)
+
+def shutter(d=0.28):
+    a = tick(.05); b = np.zeros(int(SR * d), np.float32); b[:len(a)] += a; c = _bp(_noise(int(SR * .08)), 900, 4200, 2) * _env(int(SR * .08), .001, .04, 7)
+    b[int(SR * .12):int(SR * .12) + len(c)] += c * .8
+    return _norm(b, .55)
+
+def zap(d=0.5):
+    n = int(SR * d); t = np.arange(n) / SR; f = 2600 * np.exp(-t * 7) + 300
+    x = signal.square(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 7)
+    return _norm(_lp(x, 6000), .5)
+
+def sting(d=1.8):
+    t = _t(d); x = np.zeros(len(t))
+    for f in (233, 247, 349, 370):                      # tense cluster (minor 2nds)
+        x += signal.sawtooth(2 * np.pi * f * t) * .25
+    x = _lp(x, 1800) * _env(len(t), .01, d * .8, 3.2)
+    return _norm(x + sub_boom(d) * .4, .7)
+
+def swell(d=3.2, f=110):
+    t = _t(d); x = np.zeros(len(t))
+    for r in (1, 1.5, 2.0, 2.52):
+        x += np.sin(2 * np.pi * f * r * t + r) * .4
+    env = np.sin(np.pi * np.clip(t / d, 0, 1)) ** 1.6
+    return _norm(_lp(x, 900) * env, .6)
+
+def sub_drop(d=1.8):
+    t = _t(d); f = 120 * np.exp(-t * 1.8) + 28
+    return _norm(np.sin(2 * np.pi * np.cumsum(f) / SR) * _env(len(t), .01, d, 2.0), .85)
+
+def riser_noise(d=2.5):
+    n = int(SR * d); t = np.arange(n) / SR; x = _bp(_noise(n), 600, 7000, 2) * (t / d) ** 2.2
+    return _norm(x, .6)
+
+def low_pulse(d=3.0, bpm=70):
+    out = np.zeros(int(SR * d), np.float32); beat = 60 / bpm; t = 0.0
+    while t < d - .3:
+        h = np.sin(2 * np.pi * 46 * _t(.3)) * _env(int(SR * .3), .004, .2, 5); a = int(t * SR); out[a:a + len(h)] += h[:len(out) - a]; t += beat
+    return _norm(out, .75)
+
+VARIABLE = ("typing", "alarm", "heartbeat", "static", "chirps", "riser", "swell", "riser_noise", "low_pulse")
+
+# ---------------------------------------------------------------- music beds (different per episode, change with the mood)
+SCALE_MINOR = (0, 2, 3, 5, 7, 8, 10)
+MOOD_LEVEL = {"calm": .55, "curious": .65, "tense": .95, "shock": 1.1, "reveal": .85, "sad": .5, "hopeful": .7}
+MOOD_DARK = {"calm": .3, "curious": .4, "tense": .9, "shock": 1.0, "reveal": .7, "sad": .8, "hopeful": .1}
+ROOTS = (41.2, 43.65, 46.25, 49.0, 51.9, 55.0, 58.3, 61.7)      # E1 .. B1 (low, dark)
+
+def _hz(root, semis): return root * 2 ** (semis / 12)
+
+def _style_drone(n, root, r):
+    return drone(n / SR, root, int(r.integers(0, 999)))[:n]
+
+def _style_pulse(n, root, r, bpm=78):
+    t = np.arange(n) / SR; out = np.zeros(n); step = 60 / bpm / 2; k = 0; notes = [0, 0, 7, 0, 3, 0, 5, 0]
+    for i in range(int(n / SR / step)):
+        f = _hz(root * 2, notes[i % 8]); a = int(i * step * SR); L = int(step * SR * .9)
+        if a + L > n: break
+        tt = np.arange(L) / SR; env = np.minimum(tt / .005, 1) * np.exp(-tt * 7)
+        out[a:a + L] += signal.sawtooth(2 * np.pi * f * tt) * env * .5
+    out = _lp(out, 1200, 2) + np.sin(2 * np.pi * root * t) * .35 * (0.6 + .4 * np.sin(2 * np.pi * t / 8))
+    return _norm(out, .8)
+
+def _style_pads(n, root, r):
+    t = np.arange(n) / SR; out = np.zeros(n); chords = [(0, 3, 7), (8, 0, 3), (5, 8, 0), (10, 2, 5)]; seg = 8.0
+    for i in range(int(n / SR / seg) + 1):
+        a, b = int(i * seg * SR), min(n, int((i + 1) * seg * SR) + int(SR * 2))
+        if a >= n: break
+        tt = np.arange(b - a) / SR; env = np.minimum(tt / 2.5, 1) * np.minimum((b - a) / SR - tt, 2.5) / 2.5
+        for semi in chords[(i + int(r.integers(0, 4))) % 4]:
+            f = _hz(root * 2, semi); out[a:b] += (np.sin(2 * np.pi * f * tt) + .4 * np.sin(2 * np.pi * f * 2.003 * tt)) * env * .3
+    out += np.sin(2 * np.pi * root * t) * .3
+    return _norm(_lp(out, 1500, 2), .8)
+
+def _style_tick(n, root, r):
+    t = np.arange(n) / SR; out = np.sin(2 * np.pi * root * t) * .45 + _lp(signal.sawtooth(2 * np.pi * root * 1.5 * t), 400, 2) * .2
+    k = tick(); step = 0.5
+    for i in range(int(n / SR / step)):
+        a = int(i * step * SR)
+        if a + len(k) >= n: break
+        out[a:a + len(k)] += k * (.5 if i % 4 else .9)
+    pl = ping(1.2, _hz(root * 8, SCALE_MINOR[int(r.integers(0, 7))]))
+    for i in range(int(n / SR / 6.5)):
+        a = int((i * 6.5 + 2) * SR)
+        if a + len(pl) < n: out[a:a + len(pl)] += pl * .25
+    return _norm(out, .8)
+
+STYLES = (_style_drone, _style_pulse, _style_pads, _style_tick)
+STYLE_NAMES = ("drone", "pulse", "pads", "tick")
+
+def music_bed(total, ep, moods, cat_shift=0):
+    """moods: list of (t0, t1, mood). Style, key and layering depend on the episode, intensity follows the mood."""
+    n = int(SR * (total + 2)); r = np.random.default_rng(1000 + ep)
+    style = (ep - 1) % len(STYLES); root = ROOTS[(ep * 3 + cat_shift) % len(ROOTS)]
+    base = STYLES[style](n, root, r); base = np.pad(base, (0, max(0, n - len(base))))[:n]
+    dark = drone(total + 2, root, 7 + ep, True)[:n]; dark = np.pad(dark, (0, max(0, n - len(dark))))[:n]
+    lvl = np.full(n, .6, np.float32); drk = np.zeros(n, np.float32)
+    for t0, t1, m in moods:
+        a, b = int(max(0, t0) * SR), min(n, int(t1 * SR)); lvl[a:b] = MOOD_LEVEL.get(m, .65); drk[a:b] = MOOD_DARK.get(m, .4)
+    from scipy.ndimage import uniform_filter1d
+    k = int(SR * 2.5); sm = lambda x: uniform_filter1d(x, k, mode="nearest")
+    lvl, drk = sm(lvl), sm(drk)
+    mix = base * lvl * (1 - .5 * drk) + dark * drk * .8 * lvl
+    fade = np.minimum(np.arange(n) / (SR * 2), 1) * np.minimum((n - np.arange(n)) / (SR * 3), 1)
+    return _norm(mix * fade, .8)
+
 def _place(buf, ev, at, gain=1.0, pan=0.0):
     a = int(at * SR)
     if a >= buf.shape[1]: return
@@ -145,6 +282,11 @@ LIB = {
     "heartbeat": heartbeat, "alarm": alarm, "static": static, "tape_stop": tape_stop,
 }
 
+LIB.update({
+    "impact_metal": impact_metal, "impact_thud": impact_thud, "impact_crack": impact_crack,
+    "whoosh_fast": whoosh_fast, "whoosh_low": whoosh_low, "whoosh_air": whoosh_air, "ping": ping, "tick": tick, "shutter": shutter,
+    "zap": zap, "sting": sting, "swell": swell, "sub_drop": sub_drop, "riser_noise": riser_noise, "low_pulse": low_pulse,
+})
 def mix_track(total, events, music=None, music_gain=0.20, seed=0):
     """events: list of dicts {t, sfx, gain, pan, dur?}. Returns stereo float32 [2, N] (no voice)."""
     N = int(SR * total) + SR; buf = np.zeros((2, N), np.float32)
@@ -153,7 +295,7 @@ def mix_track(total, events, music=None, music_gain=0.20, seed=0):
         k = e["sfx"]
         if k not in cache: cache[k] = LIB[k]()
         ev = cache[k]
-        if "dur" in e and k in ("typing", "alarm", "heartbeat", "static", "chirps", "riser"):
+        if "dur" in e and k in VARIABLE:
             ev = LIB[k](e["dur"]) if k != "chirps" else data_chirps(e["dur"])
         _place(buf, ev, e["t"], e.get("gain", 0.8), e.get("pan", 0.0))
     if music is not None:
