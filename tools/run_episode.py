@@ -94,6 +94,7 @@ def main():
     snippet = seo.youtube_snippet(script, tl, credits); srt_text = seo.srt(scenes, render.chunk_words)
     open(f"{work}/captions.srt", "w").write(srt_text); json.dump(snippet, open(f"{work}/youtube.json", "w"), indent=1)
     print(f"built {out}  {os.path.getsize(out)/1e6:.0f} MB  {total/60:.1f} min  title: {snippet['title']}")
+    if total > 360: print(f"WARNING: video is {total/60:.1f} min, over the 6-minute limit (script narration should be 700-840 words)")
     if a.dry: return 0
 
     slot = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=15)).replace(second=0, microsecond=0) if a.now else next_slot(state); st.update({"publish_at": slot.isoformat(), "first_comment": script["seo"]["first_comment"], "title": snippet["title"]})

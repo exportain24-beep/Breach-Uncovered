@@ -37,9 +37,9 @@ Every word, title and tag is written for **native English speakers, US viewers f
 - Facebook text: conversational, US tone, first line is a scroll-stopping hook, asks a question; no hashtags spam (max 3).
 - Never mention Bangladesh/the creator's location as the channel identity (a case *about* Bangladesh Bank is fine).
 
-## Length
-5.5–8 minutes of speech = **950–1,300 words** of narration in total (validator enforces 900–1,400).
-12–18 scenes. Each scene = one beat of the story (roughly 40–90 words, about 25–35 seconds), 8–10 visuals each.
+## Length (LOCKED by the owner, 2026-10-28)
+**The finished video must be under 6 minutes** (target 5:00-5:40). That is **700-840 words** of narration (validator enforces it; the voice runs about 150 words per minute).
+10-14 scenes, each one beat of the story (50-75 words, about 20-30 seconds). Every word must earn its place: cut background, keep the story.
 
 ## Story architecture (vary it — do not make every episode identical)
 0. **THE 5-SECOND HOOK (non-negotiable).** The very first 1–2 sentences (about 5 seconds of speech, **at most 14 words in the first sentence**) must make a stranger think "wait, WHAT? I have to hear this." Use the single most shocking, strange or emotional TRUE detail of the story, stated simply: a startling number, a bizarre moment, a quiet question, a promise that something went terribly wrong. No setup, no greeting, no channel name, no "this is the story of". Examples of the right feel: "A single typo stopped a billion dollars from vanishing." / "Thousands of computers died at the same second, and nobody knew why." The hook is spoken with a strong audio tag ([dramatically], [whispers], [serious]) and its first 5 seconds get the fastest cuts.
@@ -87,15 +87,33 @@ Explain every technical term the first time in one plain sentence. Never lecture
 - Never put tags inside quoted source text unless the speaker's delivery is documented.
 - No markdown, no stage directions, no sound-effect tags, no parentheses in `narration`.
 
-## Visual direction — B-roll that follows the voice (commercial documentary look)
-The picture must CHANGE about every 3–4 seconds and each shot must match what the narrator is saying at that moment.
-A 30-second scene therefore needs **8–10 visuals**. Each visual carries an `at` cue: a 2–5 word phrase copied EXACTLY (same words, any case) from that scene's narration; the shot starts when the narrator says it. Order the visuals as they are spoken.
-- `type: "stock"` — generic b-roll from Pixabay video. Query = 2–3 plain English words that literally show the moment: "typing keyboard dark", "office night windows", "worried man phone", "server room blue", "airplane takeoff", "bank vault door", "city traffic night", "police car lights", "hospital corridor", "money counting", "stock market screen", "red alert screen". Think like a video editor: pick concrete things you can SEE. Vary them — never reuse one query in an episode; avoid cheesy "hacker in hoodie" more than twice.
-- `type: "archival"` — real places/buildings/logos/official public-domain images from Wikimedia Commons (e.g. "Sony Pictures Studios Culver City", "Federal Reserve Bank of New York building", "Pyongyang skyline", "FBI seal"). Use for the specific real place or institution being named, 1–3 per scene. Never a private person's photo.
-- `type: "motion"` — our own animated card (kinds: `timeline`, `counter`, `doc_callout`, `network`, `map`, `terminal`, `quote`, `headline`, `redact`, `title`). Use sparingly: **at most 1 per scene and at most 6 in the whole episode**, only where a number/date/place/quote really helps. Text on it ≤ 8 words. Never two on screen together.
-- `overlay` text on stock/archival: **max 3 in the whole episode**, ≤ 5 words (place + year). The narrator's captions already carry the words — do not duplicate them as on-screen text.
-- Match mood: calm explaining = wide/slow shots; tension = tight/dark shots; shock = sudden contrast.
-- Scene field `mood`: one of `calm`, `curious`, `tense`, `shock`, `reveal`, `sad`, `hopeful` — drives music and sound effects. Vary moods across the episode.
+## Visual direction - OWN MOTION GRAPHICS first, a few stock clips second (LOCKED by the owner, 2026-10-28)
+The picture must CHANGE about every 3-4 seconds and match what the narrator says at that moment (**70-90 shots per episode**).
+**At least 70% of the shots are our own full-frame motion graphics (`type: "gfx"`); stock/archival clips are at most 30%**, used only where a real place, building or scene is named and the clip clearly relates. Clips must contain no readable text. The look is a premium dark studio style (neon line work, glow, camera push-ins), like a high-end motion-graphics edit - never a slideshow of stock footage.
+Each visual carries an `at` cue: a 2-5 word phrase copied EXACTLY (same words, any case) from that scene's narration; the shot starts when the narrator says it. Order the visuals as they are spoken. Use mixed beats inside a scene (for example gfx, gfx, clip, gfx, gfx). Vary the graphic kinds: no single kind more than 25% of the gfx shots (max 4 uses if the episode is short).
+
+### `type: "gfx"` - fields: `kind`, `text` (short headline, <= 6 words, optional), `label` (small yellow line above the captions, <= 5 words, optional), `data` (kind specific), `at`
+Think about what the narrator is explaining and draw it:
+- `network` - spreading infection across many computers. `text`: what is spreading, `data: {"total": 48000}` makes a live counter.
+- `globe` - a rotating globe with attack arcs. `data`: a list of `[place, latitude, longitude]` (2-4 places, pick places FAR apart so labels do not collide: for example `[["Pyongyang", 39.0, 125.7], ["Dhaka", 23.8, 90.4], ["New York", 40.7, -74.0]]`). Arcs are drawn from each place to the next.
+- `rack` - a grid of screens that go dark one by one (wipers, outages, ransomware). `text`: what died, `data: {"total": 48000}` for the live count.
+- `terminal` - a typing console. `text`: 2-6 short commands separated by `;`. Never real exploit code, only harmless illustrative lines.
+- `counter` - a big gauge number counting up. `data: {"value": 81, "prefix": "$", "suffix": "M", "label": "stolen in hours"}`.
+- `timeline` - dated steps on a line. `data`: 2-5 items `["2014", "Short event"]`, dates short, events <= 5 words.
+- `lock` - a padlock. `data: {"state": "locked" | "open" | "crack"}` (open = the lock is bypassed, crack = broken). `text` optional.
+- `email` - a phishing or fake-message mockup. `data: {"from": "hr@example-careers.com", "subject": "Your job offer", "line": "Open the attached file"}`. Use invented, obviously generic addresses, never a real person's address.
+- `flow` - money or data moving between 2-4 parties. `data: {"nodes": ["Bangladesh Bank", "New York Fed", "Manila bank"], "amount": "$81M", "blocked": true}` (blocked puts a red X on the last link).
+- `bars` - a comparison. `data: {"items": [["Sony", 100], ["Bank", 81]], "unit": "M"}`.
+- `dossier` - a profile card for an attacker group. `text`: the name, `data: {"rows": [["Base", "North Korea"], ["Target", "Banks"]]}` (<= 5 rows, each value <= 4 words). Only for state groups or indicted people already named in public records.
+- `headline` (a news card; `text` <= 10 words), `quote` (`text`: "words - Speaker", only quotes documented in the sources), `redact` (a classified document stamp; `text`: stamp word), `doc` (a document with a highlighted line; `text`: the line).
+All text on a graphic is short (<= 8 words) and is never repeated on a second element at the same time. Numbers in a graphic must be facts listed in `facts`.
+
+### `type: "stock"` / `type: "archival"` (at most 30% of the shots)
+- `stock`: Pixabay video. Query = 2-3 plain words that literally show the moment and contain NO readable text: "server room blue", "airplane takeoff", "city traffic night", "police car lights", "hospital corridor", "worried man office". Never reuse a query in an episode.
+- `archival`: a real place/building/seal from Wikimedia Commons ("Sony Pictures Studios Culver City", "Federal Reserve Bank of New York building"). Never a private person's photo.
+- `overlay` text on a clip: max 3 in the whole episode, <= 5 words.
+- Scene field `mood`: one of `calm`, `curious`, `tense`, `shock`, `reveal`, `sad`, `hopeful` - drives music and sound effects. Vary moods across the episode.
+- The old `motion` type is retired.
 
 ## JSON schema (file: `scripts/NNN-<key>.json`, NNN = zero-padded episode number)
 ```json
@@ -106,9 +124,9 @@ A 30-second scene therefore needs **8–10 visuals**. Each visual carries an `at
     {"id": 1, "act": "cold_open", "label": "The skeleton on the screen", "mood": "shock",
      "narration": "[serious] ... text with tags ...",
      "visuals": [
-       {"type": "stock", "query": "dark office computers", "at": "words from the narration"},
-       {"type": "archival", "query": "Sony Pictures Studios Culver City", "at": "another phrase", "overlay": "Culver City, 2014"},
-       {"type": "motion", "kind": "title", "text": "Nov 24, 2014", "at": "a third phrase"}
+       {"type": "gfx", "kind": "rack", "text": "Screens go dark", "data": {"total": 48000}, "at": "words from the narration"},
+       {"type": "archival", "query": "Sony Pictures Studios Culver City", "at": "another phrase"},
+       {"type": "gfx", "kind": "timeline", "data": [["2014", "Hack begins"], ["Nov 24", "Screens go red"]], "at": "a third phrase"}
      ]}
   ],
   "facts": [
