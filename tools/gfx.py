@@ -271,7 +271,7 @@ def timeline(spec, t, dur, acc, seed):
             else: items.append(motion._split_item(str(it)))
     else: items = [motion._split_item(p) for p in re.split(r"\s*(?:→|->|\||;|\n)\s*", txt_of(spec)) if p.strip()]
     items = [(a, b) for a, b in items if a or b][:5] or [("", txt_of(spec))]; n = len(items)
-    x0, x1, y = 230, 1690, 440; reveal = ease_io(t / min(max(1.5, .8 * n), dur * .85 + .01))
+    x0, x1 = {1: (960, 960), 2: (600, 1320), 3: (420, 1500), 4: (330, 1590)}.get(n, (230, 1690)); y = 440; reveal = ease_io(t / min(max(1.5, .8 * n), dur * .85 + .01))
     cv2.line(lay, (x0, y), (int(x0 + (x1 - x0) * reveal), y), WHITE, 5, AA)
     for i, (a, b) in enumerate(items):
         fr_ = i / (n - 1) if n > 1 else .5; x = int(x0 + (x1 - x0) * fr_)
