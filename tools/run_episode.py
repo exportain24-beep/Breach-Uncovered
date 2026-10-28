@@ -72,9 +72,13 @@ def main():
         for f in ("timing.json", "assets.json"):
             if os.path.exists(f"{work}/{f}"): os.remove(f"{work}/{f}")
     else:
+        print("stage: voice (eleven_v4_turbo)", flush=True); t0 = time.time()
         timing = tts.synth_script(script, work)                              # eleven_v4_turbo only
+        print(f"stage: voice done in {time.time()-t0:.0f}s; fetching visuals", flush=True); t0 = time.time()
         assets, credits = media.fetch_all(script, work)
+        print(f"stage: visuals done in {time.time()-t0:.0f}s ({len(assets)} assets); rendering", flush=True)
     render.render(path, work, out)
+    print("stage: render done", flush=True)
     tl = json.load(open(f"{work}/timeline.json")); scenes, total = render.build_plan(script, timing)
     th = script["seo"]["thumb"]; photo = next((v["path"] for v in assets.values() if v["kind"] == "image"), None)
     cat = script["category"]; thumbnail.make({"line1": th["line1"], "line2": th["line2"], "tag": th["tag"], "year": script["year"], "episode": n, "category": cat, "photo": photo}, f"{work}/thumb.jpg")

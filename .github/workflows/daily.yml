@@ -32,6 +32,7 @@ jobs:
           key: media-${{ github.run_id }}
           restore-keys: media-
       - name: Build + upload next episode
+        timeout-minutes: 60
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
@@ -46,8 +47,8 @@ jobs:
           ARGS=""
           [ -n "${{ github.event.inputs.episode }}" ] && ARGS="$ARGS --episode ${{ github.event.inputs.episode }}"
           [ "${{ github.event.inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry"
-          [ "${{ github.event_name }}" = "push" ] && ARGS="$ARGS --now --episode $(tr -dc 0-9 < tools/.run-now)"
-          mkdir -p reports; set -o pipefail; python3 tools/run_episode.py $ARGS 2>&1 | tee reports/last-run.log | tail -n 400
+          [ "${{ github.event_name }}" = "push" ] && ARGS="$ARGS --now --episode $(head -n1 tools/.run-now | tr -dc 0-9)"
+          mkdir -p reports; set -o pipefail; python3 -u tools/run_episode.py $ARGS 2>&1 | tee reports/last-run.log | tail -n 400
       - name: Save state
         if: always()
         run: |

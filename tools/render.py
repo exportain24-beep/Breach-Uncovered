@@ -95,20 +95,24 @@ class ImgBG:
         return cv2.resize(self.img[y0:y0 + ch, x0:x0 + cw], (W, H), interpolation=cv2.INTER_LINEAR)
 
 class VidBG:
+    """Stock clip as background. Reads sequentially and loops by seeking back to the start (never re-decodes the clip per frame)."""
     def __init__(self, path):
         self.cap = cv2.VideoCapture(path)
         if not self.cap.isOpened(): raise ValueError("bad video")
-        self.fps = self.cap.get(cv2.CAP_PROP_FPS) or 25; self.idx = -1; self.last = None
+        self.fps = self.cap.get(cv2.CAP_PROP_FPS) or 25
+        n = int(self.cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0); self.n = n if n > 5 else 0
+        self.idx = -1; self.last = None
     def frame(self, t, dur):
         want = int(t * self.fps)
+        if self.n: want %= self.n
+        if want < self.idx or want - self.idx > 90:                 # loop point or big jump: seek once
+            self.cap.set(cv2.CAP_PROP_POS_FRAMES, want); self.idx = want - 1
         while self.idx < want:
             ok, f = self.cap.read()
             if not ok:
-                self.cap.set(cv2.CAP_PROP_POS_FRAMES, 0); self.idx = -1; want = 0
-                ok, f = self.cap.read()
-                if not ok: break
+                if self.last is not None: break                      # clip ended early: hold last frame
+                return None
             self.idx += 1; self.last = f
-            if self.idx >= want: break
         if self.last is None: return None
         return cover(cv2.cvtColor(self.last, cv2.COLOR_BGR2RGB))
 
