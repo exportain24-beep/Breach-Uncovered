@@ -37,9 +37,22 @@ def post_comments(state):
         except Exception as e: print("comment error", e); ok = False
         if ok: st["comment_done"] = True
 
+SLOTS_NY = (8, 14, 18)          # owner's schedule: 8 am, 2 pm, 6 pm New York time (handles EDT/EST automatically)
+def due_slot(state):
+    from zoneinfo import ZoneInfo
+    ny = ZoneInfo("America/New_York"); now = dt.datetime.now(dt.timezone.utc)
+    for h in SLOTS_NY:
+        local = now.astimezone(ny); slot = local.replace(hour=h, minute=0, second=0, microsecond=0)
+        if -dt.timedelta(minutes=35) <= now - slot <= dt.timedelta(minutes=75) and slot.isoformat() not in state.setdefault("slots_done", []):
+            return slot.astimezone(dt.timezone.utc)
+    return None
+
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--preview", action="store_true"); ap.add_argument("--episode", type=int); a = ap.parse_args()
-    state = load()
+    ap = argparse.ArgumentParser(); ap.add_argument("--preview", action="store_true"); ap.add_argument("--episode", type=int); ap.add_argument("--scheduled", action="store_true", help="cron run: only act inside a New York slot window"); a = ap.parse_args()
+    state = load(); slot = None
+    if a.scheduled:
+        slot = due_slot(state)
+        if not slot: print("no New York slot due now"); return 0
     if not a.preview:
         if not os.path.exists("data/SHORTS_GO") and a.episode is None: print("publishing not approved yet (data/SHORTS_GO missing)"); return 0
         try: post_comments(state); save(state)
@@ -57,7 +70,8 @@ def main():
     if not st.get("yt"):
         try:
             import youtube
-            pub = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=6)).replace(microsecond=0)
+            soon = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=6)).replace(microsecond=0)
+            pub = max(slot, soon) if slot else soon
             vid = youtube.upload_video(out, {"title": seo["title"][:100], "description": desc[:4900], "tags": tags + ["cybersecurity", "hacking", "true story", "shorts"], "categoryId": "27", "defaultLanguage": "en", "defaultAudioLanguage": "en"}, pub.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
             st["yt"] = vid; st["published_at"] = pub.isoformat(); save(state); print("YouTube Short OK", vid)
             try:
@@ -74,6 +88,7 @@ def main():
             import facebook
             vid = facebook.upload_reel(out, seo["facebook_text"], seo["title"]); st["fb"] = vid; st.setdefault("published_at", dt.datetime.now(dt.timezone.utc).isoformat()); print("Facebook Reel OK", vid)
         except Exception as e: traceback.print_exc(); err.append(f"facebook: {e}")
+    if slot and not err: state.setdefault("slots_done", []).append(slot.astimezone(__import__("zoneinfo").ZoneInfo("America/New_York")).isoformat())
     save(state)
     if err: print("FAILED:", err); return 1
     print(f"short {n} published"); return 0

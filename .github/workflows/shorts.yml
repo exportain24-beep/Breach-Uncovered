@@ -1,9 +1,9 @@
 name: Shorts (3 a day)
 on:
-  schedule:
-    - cron: "40 13 * * *"   # publishes ~14:00 UTC (10 am New York, 20:00 Bangladesh)
-    - cron: "40 18 * * *"   # ~19:00 UTC (3 pm New York, 01:00 Bangladesh)
-    - cron: "40 23 * * *"   # ~00:00 UTC (8 pm New York, 06:00 Bangladesh)
+  schedule:                  # 8 am, 2 pm, 6 pm New York. Two UTC times per slot cover summer (EDT) and winter (EST); the runner acts only inside the real slot window.
+    - cron: "35 11,12 * * *"
+    - cron: "35 17,18 * * *"
+    - cron: "35 21,22 * * *"
   push:
     paths: ["tools/.short-now"]          # line 1: "preview" (build only) or "preview N" / "publish N"
   workflow_dispatch:
@@ -37,7 +37,7 @@ jobs:
           FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         run: |
-          ARGS=""
+          ARGS=""; [ "${{ github.event_name }}" = "schedule" ] && ARGS="--scheduled"
           if [ "${{ github.event_name }}" = "push" ]; then L=$(head -n1 tools/.short-now); case "$L" in preview*) ARGS="--preview";; esac; N=$(echo "$L" | tr -dc 0-9); [ -n "$N" ] && ARGS="$ARGS --episode $N"; fi
           mkdir -p reports out; set -o pipefail; python3 -u tools/run_shorts.py $ARGS 2>&1 | tee reports/shorts-run.log | grep -v "frame " | tail -n 200
       - name: Save state, voices and preview
