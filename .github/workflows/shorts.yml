@@ -46,5 +46,5 @@ jobs:
           git config user.name "breach-bot"; git config user.email "actions@users.noreply.github.com"
           for d in work/short-*; do [ -d "$d/voice" ] && n=${d#work/short-} && mkdir -p data/voice/$n && cp -n $d/voice/* data/voice/$n/ || true; done
           if head -n1 tools/.short-now 2>/dev/null | grep -q preview && [ "${{ github.event_name }}" = "push" ]; then mkdir -p previews; for f in out/short-*.mp4; do [ -f "$f" ] && [ $(stat -c%s "$f") -lt 95000000 ] && cp "$f" previews/; done; fi
-          git add data/shorts_state.json data/voice reports/shorts-run.log previews 2>/dev/null || true
+          for f in data/shorts_state.json data/voice reports/shorts-run.log previews; do [ -e "$f" ] && git add "$f"; done; git status --short | head -20
           git commit -qm "Shorts state [skip ci]" || true; git pull --rebase -q || true; git push || true
