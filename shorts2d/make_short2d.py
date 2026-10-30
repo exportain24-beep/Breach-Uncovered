@@ -8,7 +8,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import render as R, sfx, motion
 W, H, FPS = 1080, 1920, 30
-GAP, OUTRO = 0.18, 2.0
+GAP, OUTRO = 0.12, 1.5
 YEL = (255, 212, 0)
 SFXK = {"building": "globe", "office": "email", "hacker": "terminal", "servers": "rack", "people": "headline", "phone": "email", "email": "email", "object": "counter",
         "network": "network", "globe": "globe", "flow": "flow", "counter": "counter", "timeline": "timeline", "lock": "lock", "terminal": "terminal", "dossier": "dossier",

@@ -18,7 +18,7 @@ def validate(path):
     for k in ("episode", "key", "title", "scenes", "facts", "seo"):
         if k not in s: E.append(f"missing {k}")
     sc = s.get("scenes", []); words = sum(len(plain(x.get("narration", "")).split()) for x in sc)
-    if not 85 <= words <= 125: E.append(f"narration {words} words (need 85-125 for 30-50 s)")
+    if not 75 <= words <= 105: E.append(f"narration {words} words (need 75-105: the Short must stay under 50 s)")
     if not 4 <= len(sc) <= 8: E.append(f"{len(sc)} scenes (need 4-8)")
     allt = " ".join(plain(x.get("narration", "")) for x in sc).strip()
     sents = [t for t in re.split(r"(?<=[.!?])\s+", allt) if t.strip()]
