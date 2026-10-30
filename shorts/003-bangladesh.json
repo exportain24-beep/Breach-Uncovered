@@ -1,0 +1,45 @@
+{
+  "episode": 3, "key": "bangladesh", "title": "The bank heist a printer helped hide", "year": 2016, "category": "state", "needs_review": false, "review_note": "",
+  "scenes": [
+    {"id": 1, "mood": "shock", "narration": "[serious] A broken printer helped hide a billion-dollar bank heist.",
+     "visuals": [{"at": "A broken printer", "kind": "object", "icon": "printer", "text": "Out of paper?"},
+                 {"at": "billion-dollar bank heist", "kind": "building", "type": "bank", "name": "Bangladesh Bank"}]},
+    {"id": 2, "mood": "tense", "narration": "In February 2016, hackers got inside Bangladesh's central bank. They sent 35 fake payment orders to the New York Fed.",
+     "visuals": [{"at": "hackers got inside", "kind": "hacker", "screen": "access granted", "count": 2},
+                 {"at": "35 fake payment orders", "kind": "counter", "value": 35, "label": "fake orders"},
+                 {"at": "to the New York Fed", "kind": "globe", "points": [["Dhaka", 23.8, 90.4], ["New York", 40.7, -74.0]]}]},
+    {"id": 3, "mood": "shock", "narration": "The total was almost one billion dollars. Five payments went through. 101 million dollars was gone.",
+     "visuals": [{"at": "almost one billion dollars", "kind": "counter", "value": 951, "prefix": "$", "suffix": "M", "label": "requested"},
+                 {"at": "Five payments went through", "kind": "flow", "nodes": ["Bangladesh Bank", "New York Fed", "Accounts abroad"], "amount": "$101M"},
+                 {"at": "was gone", "kind": "servers", "state": "alarm", "label": "Money gone"}]},
+    {"id": 4, "mood": "curious", "narration": "Nobody noticed in time. The printer that printed every transfer had stopped working. Staff thought it was a normal glitch.",
+     "visuals": [{"at": "Nobody noticed in time", "kind": "office", "who": "banker", "action": "think", "screen": "No new reports"},
+                 {"at": "had stopped working", "kind": "object", "icon": "printer", "text": "Tray empty"},
+                 {"at": "a normal glitch", "kind": "people", "who": ["banker", "workerF"], "action": "talk", "label": "Just a glitch?"}]},
+    {"id": 5, "mood": "reveal", "narration": "One payment was stopped because of a typo. The word Foundation was spelled Fandation.",
+     "visuals": [{"at": "One payment was stopped", "kind": "lock", "state": "locked", "text": "$20M stopped"},
+                 {"at": "spelled Fandation", "kind": "split", "left": "Foundation", "right": "Fandation"}]},
+    {"id": 6, "mood": "sad", "narration": "But 81 million dollars reached the Philippines and vanished into casinos.",
+     "visuals": [{"at": "81 million dollars", "kind": "globe", "points": [["New York", 40.7, -74.0], ["Manila", 14.6, 121.0]]},
+                 {"at": "vanished into casinos", "kind": "object", "icon": "money", "text": "$81M laundered"}]},
+    {"id": 7, "mood": "hopeful", "narration": "In 2018, U.S. prosecutors charged a North Korean programmer. A small typo saved the rest.",
+     "visuals": [{"at": "U.S. prosecutors charged", "kind": "dossier", "title": "Park Jin Hyok", "rows": [["Charged", "June 2018"], ["Country", "North Korea"], ["Status", "Wanted by FBI"]]},
+                 {"at": "A small typo", "kind": "stamp", "text": "CHARGED"}]}
+  ],
+  "facts": [
+    {"claim": "Hackers sent 35 fraudulent SWIFT payment orders to the New York Fed on February 4, 2016, requesting about $951 million", "source": "https://www.justice.gov/opa/press-release/file/1092091/download", "confidence": "confirmed"},
+    {"claim": "Five payments worth $101 million were paid; $20 million to Sri Lanka was reversed, $81 million went to the Philippines", "source": "https://www.reuters.com/article/us-cyber-heist-philippines-idUSKCN0WC0SR", "confidence": "confirmed"},
+    {"claim": "On February 5, 2016 the printer that printed SWIFT confirmations was found not working; staff thought it was a common glitch", "source": "https://www.reuters.com/investigates/special-report/cyber-heist-federal/", "confidence": "confirmed"},
+    {"claim": "The $20 million payment to 'Shalika Fandation' was stopped after the misspelling was questioned", "source": "https://www.reuters.com/investigates/special-report/cyber-heist-federal/", "confidence": "reported"},
+    {"claim": "Much of the $81 million went through Philippine casinos", "source": "https://www.reuters.com/article/us-usa-fed-bangladesh-idUSKCN0WI0FX", "confidence": "reported"},
+    {"claim": "The DOJ charged North Korean programmer Park Jin Hyok in 2018; he is on the FBI's Cyber's Most Wanted list", "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and", "confidence": "alleged"}
+  ],
+  "sources": ["https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and", "https://www.reuters.com/investigates/special-report/cyber-heist-federal/"],
+  "seo": {
+    "title": "How a Typo Saved Bangladesh Bank From a $1 Billion Hack",
+    "description": "In 2016 hackers tried to steal almost $1 billion from Bangladesh's central bank. A broken printer hid the attack, and one spelling mistake stopped part of it. #cybersecurity #truecrime #shorts",
+    "hashtags": ["#cybersecurity", "#truecrime", "#shorts"],
+    "facebook_text": "A broken printer helped hide a $1 billion bank heist.\nOne typo stopped part of it.\n#cybersecurity #truecrime #hacking",
+    "first_comment": "Would you have noticed the printer was off? What should the bank have done differently?"
+  }
+}
