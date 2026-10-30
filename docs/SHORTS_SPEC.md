@@ -47,7 +47,14 @@ Text on screen is never repeated twice at the same time; captions already carry 
  "scenes": [{"id": 1, "mood": "shock", "narration": "[serious] ...", "visuals": [{"at": "exact words", "kind": "building", "type": "bank", "name": "Bangladesh Bank"}]}],
  "facts": [{"claim": "...", "source": "https://...", "confidence": "confirmed|reported|alleged"}],
  "sources": ["https://..."],
- "seo": {"title": "<= 70 chars, keyword first, curiosity, honest", "description": "2-3 sentences + 3 hashtags", "hashtags": ["#cybersecurity", "#truecrime", "#shorts"], "facebook_text": "hook line + 1 line + 3 hashtags", "first_comment": "a question to spark discussion"}}
+ "seo": {"title": "<= 70 chars, keyword first, curiosity, honest", "description": "2-3 sentences + 3 hashtags", "hashtags": ["#cybersecurity", "#truecrime", "#shorts"], "facebook_text": "hook line + 1 line + 3 hashtags", "first_comment": "a question to spark discussion", "thumb": {"text": "A TYPO SAVED $1 BILLION", "hl": "$1 BILLION", "visual": 1}}}
 ```
 Audio tags in [square brackets] are allowed sparingly (max 6): [serious], [whispers], [dramatically], [pause], [short pause], [sighs].
 Run `python3 tools/validate_short.py shorts/NNN-key.json` and fix every ERROR.
+
+## Thumbnail (cover) - every Short
+`seo.thumb.text`: 3-6 huge words that make people curious and are TRUE (no clickbait lies), e.g. "A TYPO SAVED $1 BILLION", "ONE EMAIL SHUT DOWN A PIPELINE". `seo.thumb.hl`: the 1-3 words to paint yellow. `seo.thumb.visual`: index (0-based, across all visuals) of the picture shown behind the text (pick the most dramatic one).
+The engine draws a high-contrast cover (dark top, giant white/yellow text with thick outline, red highlight) and (a) uploads it as the YouTube custom thumbnail, (b) shows it in the very first 0.2 s of the video so feeds that use the first frame pick it.
+
+## Timely stories (news of the week)
+Each weekly batch should include 1-3 stories about cyber attacks reported THAT WEEK, if major, widely reported by reliable outlets (Reuters, AP, BBC, official statements, CISA/FBI, company filings). Only confirmed facts; blame is "alleged" unless officially attributed; no speculation. Add the case to data/cases.json with the next free episode number, and set `"priority": true` in the short so it is published first while it is news.

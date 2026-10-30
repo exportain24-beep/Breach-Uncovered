@@ -20,6 +20,25 @@ function drawShot(s, t) {
   ctx.restore();
 }
 window.loadShots = (list) => { shots = list; };
+// High-contrast cover: the chosen visual frozen at its most dramatic moment, darkened top, giant outlined text, yellow highlight.
+window.drawThumb = (shot, txt, hl) => {
+  const t = 2.6; drawShot({ ...shot, t0: 0, t1: 6, mood: 'shock' }, t);
+  const off = document.createElement('canvas'); off.width = W; off.height = H; off.getContext('2d').drawImage(cv, 0, 0);
+  background(ctx, 1, 'shock', 5); ctx.drawImage(off, 0, 200, W, 1400, 60, 640, W - 120, 1400 * (W - 120) / W);
+  let g = ctx.createLinearGradient(0, 0, 0, 1100); g.addColorStop(0, 'rgba(0,0,0,.92)'); g.addColorStop(.55, 'rgba(0,0,0,.55)'); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, 1100);
+  g = ctx.createLinearGradient(0, 1300, 0, H); g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(0,0,0,.85)'); ctx.fillStyle = g; ctx.fillRect(0, 1300, W, H - 1300);
+  const words = String(txt || '').toUpperCase().split(/\s+/).filter(Boolean), hot = new Set(String(hl || '').toUpperCase().split(/\s+/).filter(Boolean));
+  let sz = 170, lines = [];
+  const lay = () => { ctx.font = `900 ${sz}px Inter, Arial`; lines = []; let cur = []; for (const w of words) { const tr = [...cur, w].join(' '); if (ctx.measureText(tr).width > 960 && cur.length) { lines.push(cur); cur = [w]; } else cur.push(w); } if (cur.length) lines.push(cur); };
+  lay(); while ((lines.length > 3 || lines.some(l => ctx.measureText(l.join(' ')).width > 960)) && sz > 90) { sz -= 8; lay(); }
+  let y = 250 + sz * .55; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round';
+  for (const ln of lines) { const full = ln.join(' '); let x = (W - ctx.measureText(full).width) / 2;
+    for (const w of ln) { ctx.lineWidth = sz * .16; ctx.strokeStyle = '#000'; ctx.strokeText(w, x, y); ctx.fillStyle = hot.has(w.replace(/[^A-Z0-9$%.,']/g, '')) || hot.has(w) ? '#ffd400' : '#ffffff'; ctx.fillText(w, x, y); x += ctx.measureText(w + ' ').width; }
+    y += sz * 1.08; }
+  ctx.save(); ctx.strokeStyle = '#ff3b4e'; ctx.lineWidth = 16; ctx.shadowColor = '#ff3b4e'; ctx.shadowBlur = 30; ctx.beginPath(); ctx.ellipse(W / 2, 1180, 430, 340, -.06, 0, 6.283); ctx.stroke(); ctx.restore();
+  ctx.save(); ctx.fillStyle = '#ff3b4e'; ctx.translate(W / 2 + 360, 800); ctx.rotate(.6); ctx.fillRect(-14, -120, 28, 170); ctx.beginPath(); ctx.moveTo(-60, 40); ctx.lineTo(60, 40); ctx.lineTo(0, 120); ctx.closePath(); ctx.fill(); ctx.restore();
+  return 1;
+};
 window.draw = (t) => { const s = shots.find(x => t >= x.t0 && t < x.t1) || shots[shots.length - 1]; if (s) drawShot(s, t); return 1; };
 document.fonts.load('900 60px Inter').then(() => document.fonts.load('800 60px Inter')).then(() => document.fonts.load('400 60px Inter')).then(() => { window.ready = true; }).catch(e => { window.err = String(e); });
 </script>

@@ -104,6 +104,14 @@ def main():
     print(f"short: {total:.1f}s, {len(scenes)} scenes, {len(shots)} visuals", flush=True)
     port = serve()
     from playwright.sync_api import sync_playwright
+    th = (script.get("seo") or {}).get("thumb") or {}; allv = [v for sc in script["scenes"] for v in sc.get("visuals", [])]
+    tv = allv[min(int(th.get("visual", 0) or 0), len(allv) - 1)] if allv else {"kind": "object", "icon": "skull"}
+    thumb_png = os.path.join(a.workdir, "thumb.png")
+    with sync_playwright() as p:
+        b, pg = open_page(p, port); pg.evaluate("([s,t,h]) => window.drawThumb(s,t,h)", [tv, th.get("text") or script.get("seo", {}).get("title", ""), th.get("hl", "")]); pg.locator("#c").screenshot(path=thumb_png); b.close()
+    timg = cv2.imread(thumb_png); R.logo(92)
+    cv2.imwrite(os.path.join(a.workdir, "thumb.jpg"), timg, [cv2.IMWRITE_JPEG_QUALITY, 88])
+    thumb_rgb = cv2.cvtColor(timg, cv2.COLOR_BGR2RGB); print("thumbnail:", thumb_png)
     if a.stills:
         with sync_playwright() as p:
             b, pg = open_page(p, port); pg.evaluate("s => window.loadShots(s)", shots)
@@ -135,6 +143,7 @@ def main():
             if T > end0:
                 k = min(1, (T - end0) / .4); fr = (fr.astype(np.float32) * (1 - .9 * k)).astype(np.uint8); blend(fr, wm, (W - wm.width) // 2, 760, k)
                 tg = Image.new("RGBA", (980, 170), (0, 0, 0, 0)); d = ImageDraw.Draw(tg); d.text((490, 44), "TRUE STORIES OF REAL HACKS", font=motion.BOLD(48), fill=YEL + (255,), anchor="mm"); d.text((490, 118), "FOLLOW FOR THE NEXT STORY", font=motion.BOLD(38), fill=(255, 255, 255, 230), anchor="mm"); blend(fr, tg, 50, 1010, k)
+            if T < .2: fr = thumb_rgb.copy(); blend(fr, logo, 44, 70, .95)       # cover frames: feeds that use the first frame show the thumbnail
             ff.stdin.write(np.ascontiguousarray(fr).tobytes())
             if fi % 60 == 0: print(f"  frame {fi}/{n} ({time.time() - t_start:.0f}s)", flush=True)
         ff.stdin.close(); ff.wait(); b.close(); print(f"rendered {a.out} {os.path.getsize(a.out) / 1e6:.1f} MB, {total:.1f}s in {time.time() - t_start:.0f}s")

@@ -59,6 +59,9 @@ def validate(path):
     for k in ("title", "description", "facebook_text", "first_comment"):
         if not seo.get(k): E.append(f"seo.{k} missing")
     if len(seo.get("title", "")) > 70: E.append("seo.title > 70 chars")
+    th = seo.get("thumb") or {}
+    if not th.get("text"): Wn.append("seo.thumb.text missing (cover falls back to the title)")
+    elif len(th["text"].split()) > 6: E.append("seo.thumb.text longer than 6 words")
     return E, Wn
 
 if __name__ == "__main__":

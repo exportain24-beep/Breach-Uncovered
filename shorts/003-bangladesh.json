@@ -247,6 +247,11 @@
    "#shorts"
   ],
   "facebook_text": "A broken printer helped hide a $1 billion bank heist.\nOne typo stopped part of it.\n#cybersecurity #truecrime #hacking",
-  "first_comment": "Would you have noticed the printer was off? What should the bank have done differently?"
+  "first_comment": "Would you have noticed the printer was off? What should the bank have done differently?",
+  "thumb": {
+   "text": "A TYPO SAVED $1 BILLION",
+   "hl": "$1 BILLION",
+   "visual": 12
+  }
  }
 }

@@ -8,7 +8,11 @@ def load(): return json.load(open(STATE)) if os.path.exists(STATE) else {"shorts
 def save(s): json.dump(s, open(STATE, "w"), indent=1)
 
 def pick(state, forced=None):
-    for p in sorted(glob.glob("shorts/*.json")):
+    files = sorted(glob.glob("shorts/*.json"))
+    def prio(p):
+        try: return 0 if json.load(open(p, encoding="utf-8")).get("priority") else 1
+        except Exception: return 1
+    for p in sorted(files, key=lambda p: (prio(p), p)):
         s = json.load(open(p, encoding="utf-8")); n = f"{int(s['episode']):03d}"
         if forced is not None and int(s["episode"]) != forced: continue
         if forced is None and (n in state["shorts"] and state["shorts"][n].get("yt") and state["shorts"][n].get("fb")): continue
@@ -74,6 +78,9 @@ def main():
             pub = max(slot, soon) if slot else soon
             vid = youtube.upload_video(out, {"title": seo["title"][:100], "description": desc[:4900], "tags": tags + ["cybersecurity", "hacking", "true story", "shorts"], "categoryId": "27", "defaultLanguage": "en", "defaultAudioLanguage": "en"}, pub.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
             st["yt"] = vid; st["published_at"] = pub.isoformat(); save(state); print("YouTube Short OK", vid)
+            if os.path.exists(f"{work}/thumb.jpg"):
+                try: youtube.set_thumbnail(vid, f"{work}/thumb.jpg"); print("YouTube thumbnail set")
+                except Exception as e: print("thumbnail warning (Shorts thumbnails via API are best-effort):", e)
             try:
                 sh = json.load(open(f"{work}/shots.json")); tm = json.load(open(f"{work}/timing.json")); t0 = 0.0; cues = []
                 for sc, x in zip(s["scenes"], tm):
