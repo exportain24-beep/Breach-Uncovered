@@ -1,0 +1,31 @@
+building shorts/003-bangladesh.json
+timing: ElevenLabs voice
+short: 51.1s, 7 scenes, 17 visuals
+  frame 0/1533 (0s)
+  frame 60/1533 (7s)
+  frame 120/1533 (14s)
+  frame 180/1533 (21s)
+  frame 240/1533 (28s)
+  frame 300/1533 (35s)
+  frame 360/1533 (43s)
+  frame 420/1533 (50s)
+  frame 480/1533 (57s)
+  frame 540/1533 (65s)
+  frame 600/1533 (72s)
+  frame 660/1533 (79s)
+  frame 720/1533 (86s)
+  frame 780/1533 (93s)
+  frame 840/1533 (100s)
+  frame 900/1533 (107s)
+  frame 960/1533 (114s)
+  frame 1020/1533 (121s)
+  frame 1080/1533 (128s)
+  frame 1140/1533 (136s)
+  frame 1200/1533 (143s)
+  frame 1260/1533 (150s)
+  frame 1320/1533 (158s)
+  frame 1380/1533 (165s)
+  frame 1440/1533 (172s)
+  frame 1500/1533 (179s)
+rendered out/short-003.mp4 11.1 MB, 51.1s in 183s
+preview built: out/short-003.mp4
