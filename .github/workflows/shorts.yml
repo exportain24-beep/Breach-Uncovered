@@ -1,0 +1,50 @@
+name: Shorts (3 a day)
+on:
+  schedule:
+    - cron: "40 13 * * *"   # publishes ~14:00 UTC (10 am New York, 20:00 Bangladesh)
+    - cron: "40 18 * * *"   # ~19:00 UTC (3 pm New York, 01:00 Bangladesh)
+    - cron: "40 23 * * *"   # ~00:00 UTC (8 pm New York, 06:00 Bangladesh)
+  push:
+    paths: ["tools/.short-now"]          # line 1: "preview" (build only) or "preview N" / "publish N"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: breach-shorts, cancel-in-progress: false }
+jobs:
+  short:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Deps
+        run: |
+          ffmpeg -version >/dev/null 2>&1 || (sudo apt-get update -y -q && sudo apt-get install -y -q ffmpeg)
+          pip install -q numpy scipy pillow opencv-python-headless requests playwright
+          python -m playwright install --with-deps chromium >/dev/null
+      - name: Restore saved voices (never re-voice unchanged text)
+        run: mkdir -p work; for d in data/voice/*; do [ -d "$d" ] && mkdir -p "work/short-$(basename $d)/voice" && cp -n $d/* "work/short-$(basename $d)/voice/" || true; done
+      - name: Build + publish
+        timeout-minutes: 45
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          FB_SYSTEM_USER_TOKEN: ${{ secrets.FB_SYSTEM_USER_TOKEN }}
+          FB_APP_ID: ${{ secrets.FB_APP_ID }}
+          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event_name }}" = "push" ]; then L=$(head -n1 tools/.short-now); case "$L" in preview*) ARGS="--preview";; esac; N=$(echo "$L" | tr -dc 0-9); [ -n "$N" ] && ARGS="$ARGS --episode $N"; fi
+          mkdir -p reports out; set -o pipefail; python3 -u tools/run_shorts.py $ARGS 2>&1 | tee reports/shorts-run.log | grep -v "frame " | tail -n 200
+      - name: Save state, voices and preview
+        if: always()
+        run: |
+          git config user.name "breach-bot"; git config user.email "actions@users.noreply.github.com"
+          for d in work/short-*; do [ -d "$d/voice" ] && n=${d#work/short-} && mkdir -p data/voice/$n && cp -n $d/voice/* data/voice/$n/ || true; done
+          if head -n1 tools/.short-now 2>/dev/null | grep -q preview && [ "${{ github.event_name }}" = "push" ]; then mkdir -p previews; for f in out/short-*.mp4; do [ -f "$f" ] && [ $(stat -c%s "$f") -lt 95000000 ] && cp "$f" previews/; done; fi
+          git add data/shorts_state.json data/voice reports/shorts-run.log previews 2>/dev/null || true
+          git commit -qm "Shorts state [skip ci]" || true; git pull --rebase -q || true; git push || true

@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8"><title>Shorts 2D player</title>
+<style>
+@font-face{font-family:Inter;src:url(../assets/fonts/Inter-Medium.otf);font-weight:400 700}
+@font-face{font-family:Inter;src:url(../assets/fonts/Inter-Bold.otf);font-weight:800}
+@font-face{font-family:Inter;src:url(../assets/fonts/InterDisplay-Black.otf);font-weight:900}
+html,body{margin:0;background:#000}canvas{display:block}</style>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script type="module">
+import { W, H, background, MOOD, clamp, ease, hash } from './kit.js';
+import { KINDS } from './scenes.js';
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+let shots = [];
+const ACC = { calm: '#2ad0ff', curious: '#2ad0ff', tense: '#ff3b4e', shock: '#ff3b4e', reveal: '#ffd400', sad: '#7d8fb8', hopeful: '#2bff88' };
+function drawShot(s, t) {
+  const lt = Math.max(0, t - s.t0), dur = Math.max(.5, s.t1 - s.t0), mood = s.mood || 'calm', seed = hash(s.kind + (s.at || '') + s.t0);
+  background(ctx, t, mood, seed % 97);
+  const z = 1 + .05 * clamp(lt / dur), pk = lt < .28 ? 1 + .12 * Math.pow(1 - lt / .28, 2) : 1, sc = z * pk;
+  ctx.save(); ctx.translate(W / 2, 800); ctx.scale(sc, sc); ctx.translate(-W / 2, -800);
+  const fn = KINDS[s.kind]; try { if (fn) fn(ctx, s, lt, dur, ACC[mood] || '#2ad0ff', seed); } catch (e) { console.log('ERR scene ' + s.kind + ' ' + e.stack); }
+  ctx.restore();
+}
+window.loadShots = (list) => { shots = list; };
+window.draw = (t) => { const s = shots.find(x => t >= x.t0 && t < x.t1) || shots[shots.length - 1]; if (s) drawShot(s, t); return 1; };
+document.fonts.load('900 60px Inter').then(() => document.fonts.load('800 60px Inter')).then(() => document.fonts.load('400 60px Inter')).then(() => { window.ready = true; }).catch(e => { window.err = String(e); });
+</script>

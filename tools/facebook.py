@@ -49,3 +49,23 @@ def upload_captions(video_id, srt_text, locale="en_US"):
 def comment(video_id, text):
     r = requests.post(f"{G}/{video_id}/comments", data={"message": text, **_auth()}, timeout=30)
     return r.status_code == 200
+
+def upload_reel(path, description, title=None):
+    """Publish a vertical video as a Facebook Page Reel (Reels Publishing API: start -> rupload -> finish, video_state=PUBLISHED)."""
+    pid = os.environ["FB_PAGE_ID"]; tok = page_token(); size = os.path.getsize(path)
+    r = requests.post(f"{G}/{pid}/video_reels", data={"upload_phase": "start", **_auth()}, timeout=60)
+    if r.status_code != 200: raise RuntimeError(f"FB reel start failed {r.status_code} {r.text[:300]}")
+    vid = r.json()["video_id"]
+    with open(path, "rb") as f: body = f.read()
+    for attempt in range(5):
+        u = requests.post(f"https://rupload.facebook.com/video-upload/{V}/{vid}", headers={"Authorization": f"OAuth {tok}", "offset": "0", "file_size": str(size), "Content-Type": "application/octet-stream"}, data=body, timeout=900)
+        if u.status_code == 200 and u.json().get("success"): break
+        time.sleep(8 * (attempt + 1))
+    else: raise RuntimeError(f"FB reel upload failed {u.status_code} {u.text[:300]}")
+    data = {"upload_phase": "finish", "video_id": vid, "video_state": "PUBLISHED", "description": description, **_auth()}
+    if title: data["title"] = title[:250]
+    for attempt in range(4):
+        rr = requests.post(f"{G}/{pid}/video_reels", data=data, timeout=120)
+        if rr.status_code == 200 and rr.json().get("success", False): return vid
+        time.sleep(15 * (attempt + 1))
+    raise RuntimeError(f"FB reel finish failed {rr.status_code} {rr.text[:300]}")
