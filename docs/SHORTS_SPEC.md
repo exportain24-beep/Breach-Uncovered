@@ -5,7 +5,7 @@ Every Short tells ONE complete true cyber-attack story from start to end, explai
 **100% of the picture is our own visualisation** (2D / semi-3D isometric illustrated motion graphics). No stock clips, no Pixabay, no photos, no AI video.
 Voice: ElevenLabs `eleven_v4_turbo`, voice `oO7sLA3dWfQXsKeSAjpA`. Captions word-synced. Music and sound effects follow the mood.
 
-## Story (75-105 words of narration: the narrator reads about 2.3 words a second, so this is 33-47 s plus a 1.5 s end card)
+## Story (75-102 words of narration: the narrator reads about 2.3 words a second, so this is 33-45 s plus the fixed 2.5 s logo ending)
 - **Hook first:** the first sentence is at most 12 words and states the most surprising TRUE fact ("A printer helped hide a billion-dollar bank heist.").
 - Then, in time order: who was hit -> how the attackers got in (one simple idea, no how-to) -> the moment it broke -> the twist or clue -> who was blamed / what happened after -> one strong last line.
 - Plain spoken English, short sentences (average <= 12 words), no jargon. If a technical word is needed, explain it in five words ("malware, a hidden program").
@@ -58,3 +58,6 @@ The engine draws a high-contrast cover (dark top, giant white/yellow text with t
 
 ## Timely stories (news of the week)
 Each weekly batch should include 1-3 stories about cyber attacks reported THAT WEEK, if major, widely reported by reliable outlets (Reuters, AP, BBC, official statements, CISA/FBI, company filings). Only confirmed facts; blame is "alleged" unless officially attributed; no speculation. Add the case to data/cases.json with the next free episode number, and set `"priority": true` in the short so it is published first while it is news.
+
+## Ending (LOCKED)
+Every Short ends with the same pre-rendered 2.5 s logo animation `assets/brand/outro_vertical.mp4` (made once by tools/make_outro.py from the owner's logo). Never re-animate it per video; consistency is the point.

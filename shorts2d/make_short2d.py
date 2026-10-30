@@ -8,7 +8,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import render as R, sfx, motion
 W, H, FPS = 1080, 1920, 30
-GAP, OUTRO = 0.12, 1.5
+GAP, OUTRO = 0.12, 2.5          # OUTRO = the fixed 2.5 s logo animation (assets/brand/outro_vertical.mp4)
 YEL = (255, 212, 0)
 SFXK = {"building": "globe", "office": "email", "hacker": "terminal", "servers": "rack", "people": "headline", "phone": "email", "email": "email", "object": "counter",
         "network": "network", "globe": "globe", "flow": "flow", "counter": "counter", "timeline": "timeline", "lock": "lock", "terminal": "terminal", "dossier": "dossier",
@@ -126,7 +126,7 @@ def main():
     os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
     with sync_playwright() as p:
         b, pg = open_page(p, port); pg.evaluate("s => window.loadShots(s)", shots)
-        ff = subprocess.Popen(cmd, stdin=subprocess.PIPE); n = int(total * FPS); t_start = time.time(); si = 0; cc = {}
+        outro = cv2.VideoCapture(os.path.join(ROOT, "assets", "brand", "outro_vertical.mp4")); ff = subprocess.Popen(cmd, stdin=subprocess.PIPE); n = int(total * FPS); t_start = time.time(); si = 0; cc = {}
         for fi in range(n):
             T = fi / FPS; pg.evaluate(f"window.draw({T})"); jpg = pg.locator("#c").screenshot(type="jpeg", quality=93)
             fr = cv2.cvtColor(cv2.imdecode(np.frombuffer(jpg, np.uint8), cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB); fr = (fr.astype(np.float32) * vig).astype(np.uint8)
@@ -138,11 +138,12 @@ def main():
             for ch in cc[si]:
                 if ch[0]["s"] - .04 <= lt <= ch[-1]["e"] + .2:
                     hi = max([i for i, w in enumerate(ch) if w["s"] <= lt] or [0]); img = cap_img(ch, hi); blend(fr, img, (W - img.width) // 2, 1290, min(1, (lt - ch[0]["s"] + .04) / .08)); break
-            blend(fr, logo, 44, 70, .95)
+            if T < total - OUTRO: blend(fr, logo, 44, 70, .95)
             end0 = total - OUTRO
-            if T > end0:
-                k = min(1, (T - end0) / .4); fr = (fr.astype(np.float32) * (1 - .9 * k)).astype(np.uint8); blend(fr, wm, (W - wm.width) // 2, 760, k)
-                tg = Image.new("RGBA", (980, 170), (0, 0, 0, 0)); d = ImageDraw.Draw(tg); d.text((490, 44), "TRUE STORIES OF REAL HACKS", font=motion.BOLD(48), fill=YEL + (255,), anchor="mm"); d.text((490, 118), "FOLLOW FOR THE NEXT STORY", font=motion.BOLD(38), fill=(255, 255, 255, 230), anchor="mm"); blend(fr, tg, 50, 1010, k)
+            if T >= end0:                                           # the same pre-rendered brand outro on every Short
+                ok, of = outro.read()
+                if ok:
+                    of = cv2.cvtColor(of, cv2.COLOR_BGR2RGB); k = min(1, (T - end0) / .12); fr = (fr.astype(np.float32) * (1 - k) + of.astype(np.float32) * k).astype(np.uint8)
             if T < .2: fr = thumb_rgb.copy(); blend(fr, logo, 44, 70, .95)       # cover frames: feeds that use the first frame show the thumbnail
             ff.stdin.write(np.ascontiguousarray(fr).tobytes())
             if fi % 60 == 0: print(f"  frame {fi}/{n} ({time.time() - t_start:.0f}s)", flush=True)
