@@ -47,13 +47,17 @@ def due_slot(state):
     ny = ZoneInfo("America/New_York"); now = dt.datetime.now(dt.timezone.utc)
     for h in SLOTS_NY:
         local = now.astimezone(ny); slot = local.replace(hour=h, minute=0, second=0, microsecond=0)
-        if -dt.timedelta(minutes=35) <= now - slot <= dt.timedelta(minutes=75) and slot.isoformat() not in state.setdefault("slots_done", []):
+        if -dt.timedelta(minutes=40) <= now - slot <= dt.timedelta(hours=4) and slot.isoformat() not in state.setdefault("slots_done", []):
             return slot.astimezone(dt.timezone.utc)
     return None
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--preview", action="store_true"); ap.add_argument("--episode", type=int); ap.add_argument("--scheduled", action="store_true", help="cron run: only act inside a New York slot window"); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("--preview", action="store_true"); ap.add_argument("--episode", type=int); ap.add_argument("--scheduled", action="store_true", help="cron run: only act inside a New York slot window"); ap.add_argument("--check-due", action="store_true"); a = ap.parse_args()
+    ap2 = a
     state = load(); slot = None
+    if getattr(a, "check_due", False):
+        print("DUE" if due_slot(state) else "NOT_DUE"); return 0
+    if not a.preview and not a.scheduled and a.episode is not None: slot = due_slot(state)   # a manual publish fills the current slot so it is not doubled later
     if a.scheduled:
         slot = due_slot(state)
         if not slot: print("no New York slot due now"); return 0
