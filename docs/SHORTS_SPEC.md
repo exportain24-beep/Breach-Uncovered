@@ -30,7 +30,7 @@ What this means for every script:
 5. Score every topic in `score` (audience 20, story 20, hook 15, current interest 15, shareability 10, visual 10, reliability 10; `total`). Produce only total >= 70.
 6. Platform-specific metadata (never identical): YouTube `seo.title` (subject first, accurate, no ALL CAPS, <= 70 chars), `seo.description` (accurate context + natural keywords), `seo.hashtags` 2-4, `seo.tags` (descriptive, not a ranking shortcut); Facebook `seo.fb_title` and `seo.facebook_text` (a natural caption that complements, not repeats, the narration) with 3-5 relevant hashtags. No unrelated or trending-bait hashtags, no keyword stuffing, no engagement bait ("like if...", "share to win").
 7. Never: copied/reused clips, fake engagement, fake news, fake locations, misleading thumbnails.
-**100% of the picture is our own visualisation** (2D / semi-3D isometric illustrated motion graphics). No stock clips, no Pixabay, no photos, no AI video.
+**100% of the picture is our own visualisation** (editorial flat 2D: warm paper backgrounds, ink outlines, sticker shadows, a limited palette; dark ink rooms only for tense/shock moods). Never the generic neon/glow 'AI' look. No stock clips, no Pixabay, no photos, no AI video.
 Voice: ElevenLabs `eleven_v4_turbo`, voice `oO7sLA3dWfQXsKeSAjpA`. Captions word-synced. Music and sound effects follow the mood.
 
 ## Story (75-102 words of narration: the narrator reads about 2.3 words a second, so this is 33-45 s plus the fixed 2.5 s logo ending)
@@ -39,6 +39,32 @@ Voice: ElevenLabs `eleven_v4_turbo`, voice `oO7sLA3dWfQXsKeSAjpA`. Captions word
 - Plain spoken English, short sentences (average <= 12 words), no jargon. If a technical word is needed, explain it in five words ("malware, a hidden program").
 - 4-8 scenes. Each scene is 1-3 sentences and has a `mood`: calm, curious, tense, shock, reveal, sad, hopeful.
 - Accuracy: every number, name and date must be in `facts` with a source URL (official/court/major media). "Alleged" for unproven blame. No invented quotes, no invented scenes presented as real.
+
+## Script craft (updated 2026-11-01 by the owner: catchier, research-driven, makes people come back)
+Research before writing: read 3+ reliable sources per story (official / court / Reuters / AP / BBC / Wired / Ars / the Record / Krebs) and pick the ONE detail most people never heard (the printer, the typo, the $10.69 domain). That detail is the hook and the thumbnail.
+Hook formulas (rotate; never the same `hook_type` twice in a row):
+- Impossible fact: "A typo stopped a billion-dollar bank robbery."
+- Tiny cause, huge effect: "One $10.69 website shut down a global cyberattack."
+- Direct "you": "Your printer can tell hackers when you're asleep." (only if true)
+- Countdown / clock: "At exactly 2 p.m., 48,000 computers died."
+- Mystery: "Nobody knows who wrote the most expensive virus in history."
+- Reversal: "The hacker who saved the internet was arrested a week later."
+Rules: the hook sentence names a concrete thing (number, name, object, time) in the first 3 words when possible; no "Did you know", no "In this video", no greetings.
+Retention inside 30-50 s:
+- Line 2 must raise the stakes or open a question the viewer needs answered ("But the money never reached them.").
+- Every 2-3 sentences a micro-turn: "But...", "Then...", "Here's the strange part...". Put the twist at about 60-70% of the runtime, not at the end.
+- Payoff: the last 1-2 lines answer the hook exactly. The very last line should loop back to the first words (Shorts replay = retention), e.g. hook "A printer..." / end "...all because a printer stopped printing."
+- Never pad. Cut any sentence that doesn't add a fact, a turn or an image.
+Return viewers (series identity):
+- Optional series tags that recur: "Hacks that changed the world", "The $1 mistakes", "Unsolved". Put the series name in `seo.series` and in the Facebook caption; keep the same wording every time so viewers recognise it.
+- `seo.first_comment` asks a specific opinion question tied to the story ("Would you have noticed the typo?"), never "like and subscribe".
+Visual sync: actions now land on the spoken word, so `at` phrases and the visual's text fields must use the same words the narrator says (a building `name`, a `flow` node, a `timeline` date, a `globe` place, a `counter` value, a `stamp` word). Example: narration "...to the New York Fed" -> flow node "New York Fed".
+
+## Analytics loop (every weekly batch and every SEO review)
+Read `reports/shorts-performance.md` and `data/metrics.json` first. Compare at the same age (24h / 48h / 7d): engaged views, average % viewed, likes, shares, comments, FB plays.
+- Find the top 3 and bottom 3 Shorts. Write down what the winners share (hook_type, pillar, slot, thumb wording, length) in `reports/learnings.md` (append, dated).
+- Next batch: more of the winning hook types/pillars (about 60%), keep testing new ones (about 40%).
+- Never draw conclusions from fewer than 3 Shorts; say "not enough data yet" instead.
 
 ## Visuals: a new picture every 2-4 seconds, matched to the words
 Each scene has `visuals`, in spoken order. Each visual has `at` (2-5 words copied exactly from that scene's narration: the picture starts when the narrator says them), a `kind`, and the kind's fields. Short text only (<= 6 words per text field). About one visual per 7-10 words of narration (12-20 visuals per Short). Vary the kinds; never the same kind twice in a row.
@@ -82,8 +108,8 @@ Audio tags in [square brackets] are allowed sparingly (max 6): [serious], [whisp
 Run `python3 tools/validate_short.py shorts/NNN-key.json` and fix every ERROR.
 
 ## Thumbnail (cover) - every Short
-`seo.thumb.text`: 3-6 huge words that make people curious and are TRUE (no clickbait lies), e.g. "A TYPO SAVED $1 BILLION", "ONE EMAIL SHUT DOWN A PIPELINE". `seo.thumb.hl`: the 1-3 words to paint yellow. `seo.thumb.visual`: index (0-based, across all visuals) of the picture shown behind the text (pick the most dramatic one).
-The engine draws a high-contrast cover (dark top, giant white/yellow text with thick outline, red highlight) and (a) uploads it as the YouTube custom thumbnail, (b) shows it in the very first 0.2 s of the video so feeds that use the first frame pick it.
+`seo.thumb.text`: 3-6 huge words that make people curious and are TRUE (no clickbait lies), e.g. "A TYPO SAVED $1 BILLION", "ONE EMAIL SHUT DOWN A PIPELINE". Rules: lead with a number or concrete object; one surprising contrast (tiny vs huge, simple vs disastrous); max 6 words; never just the topic name. `seo.thumb.hl`: the 1-3 words that carry the surprise (painted white on a red block). `seo.thumb.visual`: index (0-based, across all visuals) of the picture shown in the cover card (pick the most readable, dramatic one: an object, lock, counter, split or stamp reads best at small size).
+The engine draws an editorial cover (yellow striped background, giant ink headline, red block on the key words, the picture as a tilted card with a red circle and arrow) and (a) uploads it as the YouTube custom thumbnail, (b) shows it in the very first 0.2 s of the video so feeds that use the first frame pick it.
 
 ## Timely stories (news of the week)
 Each weekly batch should include 1-3 stories about cyber attacks reported THAT WEEK, if major, widely reported by reliable outlets (Reuters, AP, BBC, official statements, CISA/FBI, company filings). Only confirmed facts; blame is "alleged" unless officially attributed; no speculation. Add the case to data/cases.json with the next free episode number, and set `"priority": true` in the short so it is published first while it is news.

@@ -1,0 +1,17 @@
+WEEKLY SHORTS SCRIPTS (runs every Friday evening Dhaka time).
+
+CONTEXT (never ask the owner anything; decide yourself and note decisions in the commit message):
+- Channel: Breach Uncovered. Repo: github.com/exportain24-beep/Breach-Uncovered ONLY. Clone it with `git clone https://github.com/exportain24-beep/Breach-Uncovered.git` and work only there. Never touch any other repo or channel (Exportain `posting`, Eilblick `ekkkrtrrrp`, etc.).
+- Format: YouTube Shorts + Facebook Reels, English, US audience, 30-50 s, 4 per day (8:00 AM trending, 12:00 PM curiosity, 5:00 PM ai, 8:30 PM mystery, New York time). Publishing is automatic via .github/workflows/shorts.yml; you only supply scripts.
+- The locked rules are in docs/SHORTS_SPEC.md. Read ALL of it first, especially "Algorithm alignment", "Script craft", "Analytics loop", "Visuals" and "Thumbnail". Follow it exactly.
+- Facts only from reliable sources, each in `facts` with a URL. Guess nothing. "Alleged" unless officially attributed.
+- Secrets live only in GitHub Secrets; never print or commit them.
+- Before committing: `python3 tools/validate_short.py shorts/*.json` must report 0 ERROR. Commit with a clear message and push to main (git pull --rebase first).
+
+JOB:
+1. Analytics first: read reports/shorts-performance.md, data/metrics.json and reports/learnings.md (if present). Identify the top 3 / bottom 3 Shorts by engaged views and average % viewed at the same age; append dated findings (which hook_type, pillar, slot, thumbnail wording won) to reports/learnings.md. With fewer than 3 data points write "not enough data yet".
+2. Research with web search: for each story read 3+ reliable sources and pick the one surprising, true detail most people never heard; that detail becomes the hook and the thumbnail.
+3. Write 21 new evergreen Shorts for next week: 7 slot_type "curiosity", 7 "ai", 7 "mystery" (the 8 AM "trending" slot is filled by the daily trending task). Spread pillars (cyber, ai, crime, mystery, privacy, future, money, history). About 60% follow what the analytics show is winning, about 40% test new hook types/topics.
+4. Each script: 5 hooks in `hooks`, the strongest used, `hook_type` rotated (never the same type twice in a row within a slot), `score` >= 70, open loops every 2-3 sentences, twist at ~60-70%, last line loops back to the hook, a specific opinion `first_comment`, optional `seo.series`. Visual `at` phrases and text fields use the narrator's exact words so actions sync to speech. Thumbnail text 3-6 true, curiosity-driving words led by a number or concrete object, `hl` = the surprise words, `visual` = the most readable picture.
+5. Platform metadata per the spec (YouTube title subject-first <= 70 chars, 2-4 hashtags; Facebook fb_title + natural caption, 3-5 hashtags; no bait, no stuffing).
+6. Add new cases to data/cases.json with the next free episode numbers; files shorts/NNN-key.json. Validate, commit, push.

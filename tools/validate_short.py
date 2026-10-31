@@ -23,6 +23,7 @@ def validate(path):
     allt = " ".join(plain(x.get("narration", "")) for x in sc).strip()
     sents = [t for t in re.split(r"(?<=[.!?])\s+", allt) if t.strip()]
     if sents and len(sents[0].split()) > 12: E.append(f"hook is {len(sents[0].split())} words (max 12)")
+    if sents and re.match(r"\s*(did you know|in this video|hey|hi|welcome|today we|let's talk|have you ever)\b", re.sub(r"\[[^\]]*\]", "", sents[0]).strip(), re.I): E.append("hook opens with a banned weak opener (did you know / in this video / greeting)")
     if sents and words / len(sents) > 12.5: E.append(f"average sentence {words / len(sents):.1f} words (max 12)")
     tags = sum(len(re.findall(r"\[[^\]]*\]", x.get("narration", ""))) for x in sc)
     if tags > 6: E.append(f"{tags} audio tags (max 6)")

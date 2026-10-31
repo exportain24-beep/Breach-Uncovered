@@ -1,0 +1,16 @@
+DAILY TRENDING SHORT (runs every afternoon Dhaka time, before the 8 AM New York slot).
+
+CONTEXT (never ask the owner anything; decide yourself and note decisions in the commit message):
+- Channel: Breach Uncovered. Repo: github.com/exportain24-beep/Breach-Uncovered ONLY. Clone it with `git clone https://github.com/exportain24-beep/Breach-Uncovered.git` and work only there. Never touch any other repo or channel (Exportain `posting`, Eilblick `ekkkrtrrrp`, etc.).
+- Format: YouTube Shorts + Facebook Reels, English, US audience, 30-50 s, 4 per day (8:00 AM trending, 12:00 PM curiosity, 5:00 PM ai, 8:30 PM mystery, New York time). Publishing is automatic via .github/workflows/shorts.yml; you only supply scripts.
+- The locked rules are in docs/SHORTS_SPEC.md. Read ALL of it first, especially "Algorithm alignment", "Script craft", "Analytics loop", "Visuals" and "Thumbnail". Follow it exactly.
+- Facts only from reliable sources, each in `facts` with a URL. Guess nothing. "Alleged" unless officially attributed.
+- Secrets live only in GitHub Secrets; never print or commit them.
+- Before committing: `python3 tools/validate_short.py shorts/*.json` must report 0 ERROR. Commit with a clear message and push to main (git pull --rebase first).
+
+JOB:
+1. Search the news of the last 24-72 hours (Reuters, AP, BBC, The Record, BleepingComputer, Wired, official CISA/FBI/company statements) for the most interesting, widely reported story in our pillars (cyber attacks, AI, digital crime, privacy, future tech, internet money). Confirmed facts only; skip anything speculative or already covered in shorts/.
+2. Read reports/shorts-performance.md and reports/learnings.md to choose the hook style that has worked best.
+3. Write ONE Short with slot_type "trending" and "priority": true, following every "Script craft" rule: concrete hook (number/name/object, <= 12 words, no weak opener), stakes in line 2, micro-turns, twist at ~60-70%, loop-back last line, specific opinion first_comment, strong true thumbnail text. Visual text fields use the narrator's exact words.
+4. Add the case to data/cases.json (next free episode), save shorts/NNN-key.json, validate (0 ERROR), commit, push.
+5. If no story is solid enough today, write the best evergreen "trending-style" Short instead (a surprising, still-relevant tech fact) and say so in the commit message.

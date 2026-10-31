@@ -1,0 +1,17 @@
+WEEKLY SEO + GROWTH REVIEW (runs every Sunday Dhaka time).
+
+CONTEXT (never ask the owner anything; decide yourself and note decisions in the commit message):
+- Channel: Breach Uncovered. Repo: github.com/exportain24-beep/Breach-Uncovered ONLY. Clone it with `git clone https://github.com/exportain24-beep/Breach-Uncovered.git` and work only there. Never touch any other repo or channel (Exportain `posting`, Eilblick `ekkkrtrrrp`, etc.).
+- Format: YouTube Shorts + Facebook Reels, English, US audience, 30-50 s, 4 per day (8:00 AM trending, 12:00 PM curiosity, 5:00 PM ai, 8:30 PM mystery, New York time). Publishing is automatic via .github/workflows/shorts.yml; you only supply scripts.
+- The locked rules are in docs/SHORTS_SPEC.md. Read ALL of it first, especially "Algorithm alignment", "Script craft", "Analytics loop", "Visuals" and "Thumbnail". Follow it exactly.
+- Facts only from reliable sources, each in `facts` with a URL. Guess nothing. "Alleged" unless officially attributed.
+- Secrets live only in GitHub Secrets; never print or commit them.
+- Before committing: `python3 tools/validate_short.py shorts/*.json` must report 0 ERROR. Commit with a clear message and push to main (git pull --rebase first).
+
+JOB:
+1. Read reports/shorts-performance.md, data/metrics.json and data/shorts_state.json. Compare Shorts at the same age (24h/48h/7d): engaged views, average % viewed, likes, shares, comments, FB plays. Never conclude from fewer than 3 Shorts.
+2. Research current, official guidance only (support.google.com/youtube, blog.youtube, about.fb.com, creators.facebook.com) for any change to Shorts/Reels ranking; note changes with the source in docs/SHORTS_SPEC.md "Algorithm alignment" (date them).
+3. Append a dated section to reports/learnings.md: what won/lost (hook_type, pillar, slot, length, thumbnail wording, title style), and 3 concrete rules for next week.
+4. Improve the metadata of UNPUBLISHED Shorts in shorts/ (not in data/shorts_state.json as published): sharper true titles (subject first, <= 70 chars), better seo.description with natural search keywords people actually use, 2-4 relevant YouTube hashtags, 3-5 Facebook hashtags, clickable true thumb text (number/object first, 3-6 words) and a specific first_comment. Never change facts or narration meaning; never add bait.
+5. If one slot time consistently underperforms for 2+ weeks, write the proposal in reports/learnings.md (do not change the schedule yourself).
+6. Validate (0 ERROR), commit, push.
