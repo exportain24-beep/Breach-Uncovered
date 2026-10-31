@@ -1,0 +1,71 @@
+{
+ "003": {
+  "title": "How a Typo Saved Bangladesh Bank From a $1 Billion Hack",
+  "yt": "lE7Wy8jbhO0",
+  "fb": "1656446789185715",
+  "published_at": "2026-10-30T10:43:13+00:00",
+  "snapshots": {
+   "24h": {
+    "taken_at": "2026-10-31T17:56:26.659154+00:00",
+    "age_hours": 31.2,
+    "youtube": {
+     "viewCount": 69,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2261,
+     "post_video_view_time": 499810,
+     "blue_reels_play_count": 221,
+     "fb_reels_total_plays": 230,
+     "fb_reels_replay_count": 9,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
+   }
+  }
+ },
+ "001": {
+  "title": "How a Comedy Movie Got Sony Pictures Hacked",
+  "yt": "pZl0Yu38kME",
+  "fb": "1734686824952398",
+  "published_at": "2026-10-31T12:36:32+00:00",
+  "snapshots": {
+   "1h": {
+    "taken_at": "2026-10-31T17:56:26.659154+00:00",
+    "age_hours": 5.3,
+    "youtube": {
+     "viewCount": 603,
+     "likeCount": 16,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 5190,
+     "post_video_view_time": 67477,
+     "blue_reels_play_count": 13,
+     "fb_reels_total_plays": 15,
+     "fb_reels_replay_count": 2,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
+   }
+  }
+ },
+ "101": {
+  "title": "Binance Hack: The $6.3 Billion Crypto Attack Explained",
+  "yt": "mLytRMoZpLk",
+  "fb": "2016287479740908",
+  "published_at": "2026-10-31T18:00:00+00:00",
+  "snapshots": {}
+ }
+}
