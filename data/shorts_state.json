@@ -21,11 +21,20 @@
    "first_comment": "Should crypto have a freeze button, or does that defeat the whole point?",
    "yt": "mLytRMoZpLk",
    "published_at": "2026-10-31T18:00:00+00:00",
-   "fb": "2016287479740908"
+   "fb": "2016287479740908",
+   "comment_done": true
+  },
+  "102": {
+   "title": "GMO Hack: Japan Firm Refuses $50 Million Ransom, Offers $1M Bounty",
+   "first_comment": "Was GMO right to refuse the ransom, even after the data was posted?",
+   "yt": "Q3YKiDe2CBM",
+   "published_at": "2026-10-31T21:00:00+00:00",
+   "fb": "1673761161201133"
   }
  },
  "slots_done": [
   "2026-10-31T08:00:00-04:00",
-  "2026-10-31T14:00:00-04:00"
+  "2026-10-31T14:00:00-04:00",
+  "2026-10-31T17:00:00-04:00"
  ]
 }
