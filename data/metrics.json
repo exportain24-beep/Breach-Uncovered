@@ -27,6 +27,29 @@
      "likes": 1,
      "comments": 1
     }
+   },
+   "6h": {
+    "taken_at": "2026-10-31T21:39:54.491514+00:00",
+    "age_hours": 34.9,
+    "youtube": {
+     "viewCount": 73,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2261,
+     "post_video_view_time": 499810,
+     "blue_reels_play_count": 221,
+     "fb_reels_total_plays": 230,
+     "fb_reels_replay_count": 9,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
    }
   }
  },
@@ -58,6 +81,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "6h": {
+    "taken_at": "2026-10-31T21:39:54.491514+00:00",
+    "age_hours": 9.1,
+    "youtube": {
+     "viewCount": 891,
+     "likeCount": 17,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 4881,
+     "post_video_view_time": 68337,
+     "blue_reels_play_count": 14,
+     "fb_reels_total_plays": 16,
+     "fb_reels_replay_count": 2,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -66,6 +112,37 @@
   "yt": "mLytRMoZpLk",
   "fb": "2016287479740908",
   "published_at": "2026-10-31T18:00:00+00:00",
+  "snapshots": {
+   "1h": {
+    "taken_at": "2026-10-31T21:39:54.491514+00:00",
+    "age_hours": 3.7,
+    "youtube": {
+     "viewCount": 30,
+     "likeCount": 1,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 5392,
+     "post_video_view_time": 280406,
+     "blue_reels_play_count": 53,
+     "fb_reels_total_plays": 60,
+     "fb_reels_replay_count": 7,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
+   }
+  }
+ },
+ "102": {
+  "title": "GMO Hack: Japan Firm Refuses $50 Million Ransom, Offers $1M Bounty",
+  "yt": "Q3YKiDe2CBM",
+  "fb": "1673761161201133",
+  "published_at": "2026-10-31T21:00:00+00:00",
   "snapshots": {}
  }
 }
