@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.join(ROOT, "tools"))
 import render as R, sfx, motion
 W, H, FPS = 1080, 1920, 30
 GAP, OUTRO = 0.12, 2.5          # OUTRO = the fixed 2.5 s logo animation (assets/brand/outro_vertical.mp4)
-YEL = (255, 212, 0)
+YEL = (255, 183, 3); INK = (27, 31, 59)
 SFXK = {"building": "globe", "office": "email", "hacker": "terminal", "servers": "rack", "people": "headline", "phone": "email", "email": "email", "object": "counter",
         "network": "network", "globe": "globe", "flow": "flow", "counter": "counter", "timeline": "timeline", "lock": "lock", "terminal": "terminal", "dossier": "dossier",
         "headline": "headline", "stamp": "redact", "split": "quote"}
@@ -53,8 +53,11 @@ def plan(scenes, total):
         for t, v in keep:
             shots.append({**v, "t0": round(sc["t0"] + t, 3), "mood": s.get("mood", "calm")}); pl["shots"].append({"type": "gfx", "kind": SFXK.get(v.get("kind"), "headline"), "t0": t})
         plans.append(pl)
-    for i, sh in enumerate(shots): sh["t1"] = shots[i + 1]["t0"] if i + 1 < len(shots) else total + 1
+    for i, sh in enumerate(shots): sh["t1"] = shots[i + 1]["t0"] if i + 1 < len(shots) else max(sh["t0"] + 1.5, total - OUTRO)
     if shots: shots[0]["t0"] = 0.0
+    gw = [(re.sub(r"[^a-z0-9$]", "", w["w"].lower()), sc["t0"] + float(w["s"])) for sc in scenes for w in sc["words"]]
+    for sh in shots:                                       # word timings inside each shot -> scene actions land on the spoken words
+        sh["w"] = [[x, round(tt - sh["t0"], 3)] for x, tt in gw if x and sh["t0"] - .3 <= tt < sh["t1"]]
     return shots, plans
 
 _cap = {}
@@ -77,7 +80,7 @@ def cap_img(ch, hi):
     for ln in lines:
         tw = sum(f.getlength(words[i]) for i in ln) + sp * (len(ln) - 1); x = (1060 - tw) / 2
         for i in ln:
-            d.text((x, y), words[i], font=f, fill=(YEL if i == hi else (255, 255, 255)) + (255,), stroke_width=10, stroke_fill=(0, 0, 0, 255)); x += f.getlength(words[i]) + sp
+            d.text((x, y), words[i], font=f, fill=(YEL if i == hi else (255, 253, 248)) + (255,), stroke_width=12, stroke_fill=INK + (255,)); x += f.getlength(words[i]) + sp
         y += 112
     _cap[key] = img; return img
 def blend(fr, img, x, y, a=1.0):
@@ -120,7 +123,7 @@ def main():
         return
     wav = os.path.join(a.workdir, "mix.wav"); R.build_audio(scenes, plans, total, script.get("category", "state"), ep, wav)
     logo = R.logo(92); wm = R.wordmark(660)
-    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32); rr = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2); vig = np.clip(1.12 - .45 * rr ** 2, .35, 1)[..., None]
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32); rr = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2); vig = np.clip(1.04 - .14 * rr ** 2, .82, 1)[..., None]
     cmd = ["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", wav, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
            "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-maxrate", "8M", "-bufsize", "16M", "-g", "60", "-keyint_min", "60", "-sc_threshold", "0", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", "-movflags", "+faststart", "-t", f"{total:.3f}", a.out]
     os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
@@ -130,8 +133,6 @@ def main():
         for fi in range(n):
             T = fi / FPS; pg.evaluate(f"window.draw({T})"); jpg = pg.locator("#c").screenshot(type="jpeg", quality=93)
             fr = cv2.cvtColor(cv2.imdecode(np.frombuffer(jpg, np.uint8), cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB); fr = (fr.astype(np.float32) * vig).astype(np.uint8)
-            for q, sh in enumerate(shots):
-                if q and sh["t0"] <= T < sh["t0"] + .12: k = 1 - (T - sh["t0"]) / .12; fr = np.clip(fr.astype(np.int16) + int(60 * k), 0, 255).astype(np.uint8); break
             while si + 1 < len(scenes) and T >= scenes[si + 1]["t0"]: si += 1
             sc = scenes[si]; lt = T - sc["t0"]
             if si not in cc: cc[si] = chunks(sc["words"])

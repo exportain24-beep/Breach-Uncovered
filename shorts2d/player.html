@@ -6,39 +6,50 @@
 html,body{margin:0;background:#000}canvas{display:block}</style>
 <canvas id="c" width="1080" height="1920"></canvas>
 <script type="module">
-import { W, H, background, MOOD, clamp, ease, hash } from './kit.js';
+import { W, H, C, background, MOOD, clamp, ease, easeIO, hash, fillRR, marker } from './kit.js';
 import { KINDS } from './scenes.js';
 const cv = document.getElementById('c'), ctx = cv.getContext('2d');
 let shots = [];
-const ACC = { calm: '#2ad0ff', curious: '#2ad0ff', tense: '#ff3b4e', shock: '#ff3b4e', reveal: '#ffd400', sad: '#7d8fb8', hopeful: '#2bff88' };
-function drawShot(s, t) {
+const ACC = { calm: C.teal, curious: C.blue, tense: C.red, shock: C.red, reveal: C.orange, sad: C.blue, hopeful: C.green };
+const WIPE = [C.yel, C.red, C.teal, C.blue, C.orange];
+function drawShot(s, t, noWipe) {
   const lt = Math.max(0, t - s.t0), dur = Math.max(.5, s.t1 - s.t0), mood = s.mood || 'calm', seed = hash(s.kind + (s.at || '') + s.t0);
   background(ctx, t, mood, seed % 97);
-  const z = 1 + .05 * clamp(lt / dur), pk = lt < .28 ? 1 + .12 * Math.pow(1 - lt / .28, 2) : 1, sc = z * pk;
-  ctx.save(); ctx.translate(W / 2, 800); ctx.scale(sc, sc); ctx.translate(-W / 2, -800);
-  const fn = KINDS[s.kind]; try { if (fn) fn(ctx, s, lt, dur, ACC[mood] || '#2ad0ff', seed); } catch (e) { console.log('ERR scene ' + s.kind + ' ' + e.stack); }
+  const z = 1 + .03 * easeIO(lt / dur);                       // slow push-in only; no punch zoom
+  ctx.save(); ctx.translate(W / 2, 800); ctx.scale(z, z); ctx.translate(-W / 2, -800);
+  const fn = KINDS[s.kind]; try { if (fn) fn(ctx, s, lt, dur, ACC[mood] || C.teal, seed); } catch (e) { console.log('ERR scene ' + s.kind + ' ' + e.stack); }
   ctx.restore();
+  if (!noWipe && s.t0 > 0 && lt < .26) {                      // brand wipe: an ink panel with a colour edge slides off to the right
+    const k = easeIO(lt / .26), x = k * (W + 120), col = WIPE[seed % WIPE.length];
+    ctx.save(); ctx.fillStyle = C.ink; ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(W + 200, 0); ctx.lineTo(W + 200, H); ctx.lineTo(x - 160, H); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = col; ctx.beginPath(); ctx.moveTo(x - 40, 0); ctx.lineTo(x, 0); ctx.lineTo(x - 160, H); ctx.lineTo(x - 200, H); ctx.closePath(); ctx.fill(); ctx.restore();
+  }
 }
 window.loadShots = (list) => { shots = list; };
-// High-contrast cover: the chosen visual frozen at its most dramatic moment, darkened top, giant outlined text, yellow highlight.
+// Cover: big ink-on-paper headline with a marker on the key words, the hero visual as a tilted sticker card, red circle + arrow.
 window.drawThumb = (shot, txt, hl) => {
-  const t = 2.6; drawShot({ ...shot, t0: 0, t1: 6, mood: 'shock' }, t);
+  drawShot({ ...shot, t0: 0, t1: 6, mood: shot.mood || 'reveal' }, 5.6, true);
   const off = document.createElement('canvas'); off.width = W; off.height = H; off.getContext('2d').drawImage(cv, 0, 0);
-  background(ctx, 1, 'shock', 5); ctx.drawImage(off, 0, 200, W, 1400, 60, 640, W - 120, 1400 * (W - 120) / W);
-  let g = ctx.createLinearGradient(0, 0, 0, 1100); g.addColorStop(0, 'rgba(0,0,0,.92)'); g.addColorStop(.55, 'rgba(0,0,0,.55)'); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, 1100);
-  g = ctx.createLinearGradient(0, 1300, 0, H); g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(0,0,0,.85)'); ctx.fillStyle = g; ctx.fillRect(0, 1300, W, H - 1300);
+  ctx.fillStyle = C.yel; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = C.ink; for (let i = -4; i < 14; i++) { ctx.save(); ctx.globalAlpha = .07; ctx.translate(i * 140, 0); ctx.rotate(.35); ctx.fillRect(0, -200, 50, H + 600); ctx.restore(); }
+  ctx.save(); ctx.translate(W / 2, 1230); ctx.rotate(-.035);
+  ctx.fillStyle = C.ink; ctx.fillRect(-470 + 16, -470 + 18, 940, 940);
+  ctx.fillStyle = C.white; ctx.fillRect(-470, -470, 940, 940); ctx.drawImage(off, 60, 300, 960, 960, -446, -446, 892, 892);
+  ctx.strokeStyle = C.ink; ctx.lineWidth = 8; ctx.strokeRect(-470, -470, 940, 940); ctx.restore();
   const words = String(txt || '').toUpperCase().split(/\s+/).filter(Boolean), hot = new Set(String(hl || '').toUpperCase().split(/\s+/).filter(Boolean));
-  let sz = 170, lines = [];
-  const lay = () => { ctx.font = `900 ${sz}px Inter, Arial`; lines = []; let cur = []; for (const w of words) { const tr = [...cur, w].join(' '); if (ctx.measureText(tr).width > 960 && cur.length) { lines.push(cur); cur = [w]; } else cur.push(w); } if (cur.length) lines.push(cur); };
-  lay(); while ((lines.length > 3 || lines.some(l => ctx.measureText(l.join(' ')).width > 960)) && sz > 90) { sz -= 8; lay(); }
-  let y = 250 + sz * .55; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round';
+  let sz = 172, lines = [];
+  const lay = () => { ctx.font = `900 ${sz}px Inter, Arial`; lines = []; let cur = []; for (const w of words) { const tr = [...cur, w].join(' '); if (ctx.measureText(tr).width > 980 && cur.length) { lines.push(cur); cur = [w]; } else cur.push(w); } if (cur.length) lines.push(cur); };
+  lay(); while ((lines.length > 3 || lines.some(l => ctx.measureText(l.join(' ')).width > 980)) && sz > 90) { sz -= 6; lay(); }
+  let y = 120 + sz * .55; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round';
   for (const ln of lines) { const full = ln.join(' '); let x = (W - ctx.measureText(full).width) / 2;
-    for (const w of ln) { ctx.lineWidth = sz * .16; ctx.strokeStyle = '#000'; ctx.strokeText(w, x, y); ctx.fillStyle = hot.has(w.replace(/[^A-Z0-9$%.,']/g, '')) || hot.has(w) ? '#ffd400' : '#ffffff'; ctx.fillText(w, x, y); x += ctx.measureText(w + ' ').width; }
+    for (const w of ln) { const isHot = hot.has(w.replace(/[^A-Z0-9$%.,']/g, '')) || hot.has(w), ww = ctx.measureText(w).width;
+      if (isHot) { ctx.save(); ctx.fillStyle = C.red; ctx.translate(x + ww / 2, y); ctx.rotate(-.025); ctx.fillRect(-ww / 2 - 16, -sz * .52, ww + 32, sz * 1.02); ctx.restore(); }
+      ctx.fillStyle = isHot ? C.white : C.ink; ctx.fillText(w, x, y + sz * .04); x += ctx.measureText(w + ' ').width; }
     y += sz * 1.08; }
-  ctx.save(); ctx.strokeStyle = '#ff3b4e'; ctx.lineWidth = 16; ctx.shadowColor = '#ff3b4e'; ctx.shadowBlur = 30; ctx.beginPath(); ctx.ellipse(W / 2, 1180, 430, 340, -.06, 0, 6.283); ctx.stroke(); ctx.restore();
-  ctx.save(); ctx.fillStyle = '#ff3b4e'; ctx.translate(W / 2 + 360, 800); ctx.rotate(.6); ctx.fillRect(-14, -120, 28, 170); ctx.beginPath(); ctx.moveTo(-60, 40); ctx.lineTo(60, 40); ctx.lineTo(0, 120); ctx.closePath(); ctx.fill(); ctx.restore();
+  ctx.save(); ctx.strokeStyle = C.red; ctx.lineWidth = 18; ctx.lineCap = 'round'; ctx.beginPath(); ctx.ellipse(W / 2 + 10, 1240, 300, 250, -.1, .2, 6.1); ctx.stroke();
+  ctx.translate(W / 2 + 330, 900); ctx.rotate(.75); ctx.fillStyle = C.red; ctx.fillRect(-16, -140, 32, 170); ctx.beginPath(); ctx.moveTo(-64, 30); ctx.lineTo(64, 30); ctx.lineTo(0, 115); ctx.closePath(); ctx.fill(); ctx.restore();
   return 1;
 };
-window.draw = (t) => { const s = shots.find(x => t >= x.t0 && t < x.t1) || shots[shots.length - 1]; if (s) drawShot(s, t); return 1; };
+window.draw = (t) => { const s = shots.find(x => t >= x.t0 && t < x.t1) || shots[shots.length - 1]; if (s === shots[shots.length - 1] && t >= s.t1) t = s.t1 - .001; if (s) drawShot(s, t); return 1; };
 document.fonts.load('900 60px Inter').then(() => document.fonts.load('800 60px Inter')).then(() => document.fonts.load('400 60px Inter')).then(() => { window.ready = true; }).catch(e => { window.err = String(e); });
 </script>

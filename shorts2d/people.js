@@ -1,5 +1,5 @@
 // Flat illustrated characters (front 3/4 view) with poses and expressions.
-import { C, rr, shade, clamp } from './kit.js';
+import { C, rr, shade, clamp, outlined } from './kit.js';
 
 export const ROLES = {
   worker:   { top: '#4f86c6', shirt: '#dfe8f5', pants: '#28324a', hair: 'short', hc: '#3a2a1c', skin: 1, acc: 'tie', tie: '#2a3a66' },
@@ -7,7 +7,7 @@ export const ROLES = {
   banker:   { top: '#3a4258', shirt: '#f4f4f4', pants: '#2a2f40', hair: 'short', hc: '#1d1814', skin: 2, acc: 'tie', tie: '#1f8a55', glasses: 1 },
   agent:    { top: '#1c2333', shirt: '#f2f2f2', pants: '#1c2333', hair: 'short', hc: '#15110e', skin: 0, acc: 'tie', tie: '#9a1426', shades: 1, badge: 1 },
   agentF:   { top: '#222b40', shirt: '#eef2f8', pants: '#222b40', hair: 'bun', hc: '#2b1b12', skin: 1, badge: 1 },
-  hacker:   { top: '#232838', shirt: '#232838', pants: '#151925', hair: 'hood', hc: '#232838', skin: 3, eyes: '#2bff88' },
+  hacker:   { top: '#232838', shirt: '#232838', pants: '#151925', hair: 'hood', hc: '#232838', skin: 3, eyes: '#52b788' },
   guard:    { top: '#25406a', shirt: '#cfd8e6', pants: '#1d2c45', hair: 'cap', hc: '#1a2a44', skin: 3, badge: 1 },
   engineer: { top: '#f0a23a', shirt: '#30343f', pants: '#30343f', hair: 'short', hc: '#15110e', skin: 2, glasses: 1, vest: 1 },
   exec:     { top: '#2d3350', shirt: '#ffffff', pants: '#2d3350', hair: 'grey', hc: '#a9a9a9', skin: 0, acc: 'tie', tie: '#d4a017' },
@@ -46,13 +46,14 @@ function poseAngles(pose, t, s) {           // positive = arm swings outward (aw
 const EXPR = { shock: 'O', handsup: 'O', cheer: 'smile', talk: 'talk', phone: 'talk', think: 'flat', sleep: 'sleep', arrest: 'frown', type: 'flat', point: 'talk' };
 
 // x = centre, y = feet line, h = full height in px.
-export function person(ctx, x, y, h, role = 'worker', pose = 'idle', t = 0, o = {}) {
+export function person(ctx, x, y, h, role = 'worker', pose = 'idle', t = 0, o = {}) { ctx.save(); ctx.fillStyle = 'rgba(27,31,59,.2)'; ctx.beginPath(); ctx.ellipse(x, y, 190 * h / 1000, 34 * h / 1000, 0, 0, 6.283); ctx.fill(); ctx.restore(); outlined(ctx, c => person_(c, x, y, h, role, pose, t, o), Math.max(4, h / 130), o.outline || C.ink); }
+function person_(ctx, x, y, h, role = 'worker', pose = 'idle', t = 0, o = {}) {
   const R = { ...(ROLES[role] || ROLES.worker), ...(o.style || {}) }, skin = C.skin[R.skin || 0], s = o.seed || 0;
   const k = h / 1000, A = poseAngles(pose, t, s), expr = o.expr || EXPR[pose] || 'smile';
   ctx.save(); ctx.translate(x, y); ctx.scale(o.flip ? -k : k, k);
   const bob = pose === 'walk' ? Math.abs(Math.cos(t * 6)) * -14 : Math.sin(t * 2 + s) * 4;
   // shadow
-  ctx.fillStyle = 'rgba(0,0,0,.33)'; ctx.beginPath(); ctx.ellipse(0, 0, 190, 34, 0, 0, 6.283); ctx.fill();
+  
   ctx.translate(0, bob);
   // legs
   if (!o.seated) {
@@ -65,7 +66,7 @@ export function person(ctx, x, y, h, role = 'worker', pose = 'idle', t = 0, o = 
   ctx.fillStyle = 'rgba(0,0,0,.14)'; ctx.beginPath(); ctx.moveTo(30, -790); ctx.quadraticCurveTo(110, -780, 150, -760); ctx.lineTo(130, -420); ctx.quadraticCurveTo(80, -405, 40, -404); ctx.closePath(); ctx.fill();
   if (R.shirt !== R.top) { ctx.fillStyle = R.shirt; ctx.beginPath(); ctx.moveTo(-55, -785); ctx.lineTo(55, -785); ctx.lineTo(0, -600); ctx.closePath(); ctx.fill(); }
   if (R.acc === 'tie') { ctx.fillStyle = R.tie; ctx.beginPath(); ctx.moveTo(-16, -770); ctx.lineTo(16, -770); ctx.lineTo(24, -620); ctx.lineTo(0, -585); ctx.lineTo(-24, -620); ctx.closePath(); ctx.fill(); }
-  if (R.vest) { ctx.fillStyle = '#d9ff3a'; ctx.fillRect(-140, -560, 280, 26); }
+  if (R.vest) { ctx.fillStyle = '#ffb703'; ctx.fillRect(-140, -560, 280, 26); }
   if (R.badge) { ctx.fillStyle = '#e9c44a'; ctx.beginPath(); ctx.arc(-80, -660, 18, 0, 6.283); ctx.fill(); }
   if (R.acc === 'steth') { ctx.strokeStyle = '#2b2f3a'; ctx.lineWidth = 10; ctx.beginPath(); ctx.arc(0, -700, 70, .2, 2.9); ctx.stroke(); }
   if (R.hair === 'hood') { ctx.fillStyle = shade(R.top, 1.15); ctx.beginPath(); ctx.moveTo(-60, -560); ctx.lineTo(60, -560); ctx.lineTo(50, -470); ctx.lineTo(-50, -470); ctx.closePath(); ctx.fill(); }
