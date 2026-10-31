@@ -1,0 +1,247 @@
+{
+ "episode": 25,
+ "key": "flyhook",
+ "title": "Invita — the FBI's fake company sting",
+ "year": 2000,
+ "category": "profile",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] The FBI built a fake company to catch two hackers.",
+   "visuals": [
+    {
+     "at": "built a fake company",
+     "kind": "building",
+     "type": "office",
+     "name": "Invita Security"
+    },
+    {
+     "at": "to catch two hackers",
+     "kind": "hacker",
+     "screen": "Job offer: Seattle",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "Two Russian hackers, Alexey Ivanov and Vasiliy Gorshkov, hit dozens of American computers.",
+   "visuals": [
+    {
+     "at": "Alexey Ivanov and Vasiliy Gorshkov",
+     "kind": "globe",
+     "points": [
+      [
+       "Chelyabinsk",
+       55.2,
+       61.4
+      ],
+      [
+       "Seattle",
+       47.6,
+       -122.3
+      ],
+      [
+       "New Jersey",
+       40.9,
+       -74.1
+      ]
+     ]
+    },
+    {
+     "at": "dozens of American computers",
+     "kind": "network",
+     "text": "Dozens of U.S. computers"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "They stole credit card numbers, then demanded money to keep quiet.",
+   "visuals": [
+    {
+     "at": "credit card numbers",
+     "kind": "object",
+     "icon": "card",
+     "text": "3,500 cards, one victim"
+    },
+    {
+     "at": "then demanded money",
+     "kind": "email",
+     "from": "Hacker group",
+     "subject": "Extortion demand",
+     "line": "Pay $6,000 or data leaks"
+    },
+    {
+     "at": "to keep quiet",
+     "kind": "flow",
+     "nodes": [
+      "New Jersey firm",
+      "Moscow bank"
+     ],
+     "amount": "$5,000"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "curious",
+   "narration": "So agents created Invita, a fake Seattle security firm, and offered job interviews.",
+   "visuals": [
+    {
+     "at": "agents created Invita",
+     "kind": "people",
+     "who": [
+      "agent",
+      "agentF"
+     ],
+     "action": "talk",
+     "label": "Undercover recruiters"
+    },
+    {
+     "at": "offered job interviews",
+     "kind": "object",
+     "icon": "plane",
+     "text": "Chelyabinsk to Seattle"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "In November 2000, both men arrived and bragged. They were arrested on the spot.",
+   "visuals": [
+    {
+     "at": "In November 2000",
+     "kind": "office",
+     "who": "hacker",
+     "action": "type",
+     "screen": "Demo for recruiters"
+    },
+    {
+     "at": "arrested on the spot",
+     "kind": "people",
+     "who": [
+      "agent",
+      "police",
+      "hacker"
+     ],
+     "action": "arrest",
+     "label": "Seattle, Nov 10, 2000"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "The twist? Hidden software recorded every key they typed. Agents used those passwords to copy files from Russia.",
+   "visuals": [
+    {
+     "at": "recorded every key",
+     "kind": "terminal",
+     "lines": [
+      "keystroke log: on",
+      "user: ****",
+      "password: captured"
+     ]
+    },
+    {
+     "at": "copy files from Russia",
+     "kind": "counter",
+     "value": 250,
+     "suffix": " GB",
+     "label": "data copied"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "hopeful",
+   "narration": "Russia charged an FBI agent with hacking. Both hackers went to prison. The job interview was the trap.",
+   "visuals": [
+    {
+     "at": "charged an FBI agent",
+     "kind": "headline",
+     "text": "FSB charges FBI agent Schuler"
+    },
+    {
+     "at": "Both hackers went to prison",
+     "kind": "dossier",
+     "title": "Ivanov and Gorshkov",
+     "rows": [
+      [
+       "Arrested",
+       "Nov 10, 2000"
+      ],
+      [
+       "Ivanov",
+       "48 months"
+      ],
+      [
+       "Gorshkov",
+       "3 years"
+      ]
+     ]
+    },
+    {
+     "at": "The job interview",
+     "kind": "stamp",
+     "text": "CHARGED"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Alexey Ivanov and Vasily Gorshkov of Chelyabinsk, Russia, hacked dozens of U.S. computers, stole usernames, passwords and credit card data, and threatened victims with demands for payment; the FBI lured them to Seattle for 'job interviews' with Invita Security, a company it created, where they bragged and were arrested",
+   "source": "https://webarchive.library.unt.edu/eot2008/20080921104432/http://www.fbi.gov/page2/oct03/hack100703.htm",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Ivanov stole about 3,500 credit card numbers from Financial Services Inc. of Glen Rock, New Jersey; the company, threatened with release of the data, wired $5,000 to a Moscow Alfabank account",
+   "source": "https://webarchive.library.unt.edu/eot2008/20080916032623/http:/www.cybercrime.gov/ivanovSent_NJ.htm",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Ivanov and Gorshkov were arrested in Seattle on November 10, 2000; Ivanov was sentenced to 48 months on July 24, 2003; Gorshkov was sentenced to three years on October 4, 2002",
+   "source": "https://webarchive.library.unt.edu/eot2008/20080916032623/http:/www.cybercrime.gov/ivanovSent_NJ.htm",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "In Seattle the men used a computer with sniffer software that recorded every keystroke; agents used the captured passwords to copy nearly 250 gigabytes from their computers in Russia",
+   "source": "https://www.nbcnews.com/id/wbna3078784",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Russia's FSB filed charges against FBI agent Michael Schuler for unauthorized access to computer information",
+   "source": "https://www.nbcnews.com/id/wbna3078784",
+   "confidence": "reported"
+  }
+ ],
+ "sources": [
+  "https://webarchive.library.unt.edu/eot2008/20080921104432/http://www.fbi.gov/page2/oct03/hack100703.htm",
+  "https://webarchive.library.unt.edu/eot2008/20080916032623/http:/www.cybercrime.gov/ivanovSent_NJ.htm",
+  "https://www.nbcnews.com/id/wbna3078784"
+ ],
+ "seo": {
+  "title": "FBI Fake Company Sting: How Agents Lured Two Russian Hackers",
+  "description": "In 2000 the FBI created Invita, a fake Seattle security firm, and invited two Russian hackers to job interviews. They bragged about their hacking and were arrested on the spot. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "The FBI built a fake company to catch two hackers.\nThe job interview was the trap.\n#cybersecurity #truecrime #fbi",
+  "first_comment": "Was copying files from Russia fair play or a step too far? What do you think?",
+  "thumb": {
+   "text": "THE JOB INTERVIEW WAS A TRAP",
+   "hl": "TRAP",
+   "visual": 10
+  }
+ }
+}

@@ -1,0 +1,252 @@
+{
+ "episode": 24,
+ "key": "changehc",
+ "title": "Change Healthcare — America's billing system goes dark",
+ "year": 2024,
+ "category": "ransomware",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] One stolen login jammed America's medical billing for months.",
+   "visuals": [
+    {
+     "at": "One stolen login",
+     "kind": "lock",
+     "state": "open",
+     "text": "No second check"
+    },
+    {
+     "at": "America's medical billing",
+     "kind": "building",
+     "type": "hospital",
+     "name": "Claims on hold"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "Change Healthcare handles billions of insurance claims every year. It belongs to UnitedHealth Group.",
+   "visuals": [
+    {
+     "at": "billions of insurance claims",
+     "kind": "counter",
+     "value": 15,
+     "suffix": "B",
+     "label": "claims a year"
+    },
+    {
+     "at": "It belongs to UnitedHealth",
+     "kind": "flow",
+     "nodes": [
+      "UnitedHealth Group",
+      "Optum",
+      "Change Healthcare"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "In February 2024, criminals used a stolen login on a remote portal. It lacked multifactor authentication, a second check.",
+   "visuals": [
+    {
+     "at": "In February 2024",
+     "kind": "hacker",
+     "screen": "Citrix portal: logged in",
+     "count": 2
+    },
+    {
+     "at": "lacked multifactor authentication",
+     "kind": "phone",
+     "app": "alert",
+     "from": "Login check",
+     "text": "MFA: not enabled"
+    },
+    {
+     "at": "a second check",
+     "kind": "split",
+     "left": "Password only",
+     "right": "Password + code"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "Nine days later, they unleashed ransomware, file-locking software. Pharmacies struggled to fill prescriptions.",
+   "visuals": [
+    {
+     "at": "Nine days later",
+     "kind": "timeline",
+     "items": [
+      [
+       "Feb 12",
+       "Break-in"
+      ],
+      [
+       "Feb 21",
+       "Ransomware"
+      ]
+     ]
+    },
+    {
+     "at": "they unleashed ransomware",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Systems unplugged"
+    },
+    {
+     "at": "Pharmacies struggled",
+     "kind": "people",
+     "who": [
+      "doctor",
+      "workerF"
+     ],
+     "action": "shock",
+     "label": "Prescriptions stuck"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "UnitedHealth paid a 22 million dollar ransom. The twist? A hacker partner claimed the gang kept the money.",
+   "visuals": [
+    {
+     "at": "a 22 million dollar ransom",
+     "kind": "object",
+     "icon": "bitcoin",
+     "text": "$22M paid"
+    },
+    {
+     "at": "A hacker partner claimed",
+     "kind": "flow",
+     "nodes": [
+      "UnitedHealth",
+      "BlackCat wallet",
+      "Affiliate"
+     ],
+     "amount": "$22M",
+     "blocked": true
+    },
+    {
+     "at": "kept the money",
+     "kind": "headline",
+     "text": "Gang's sites go dark"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "sad",
+   "narration": "The data still was not safe. Almost 193 million people were affected.",
+   "visuals": [
+    {
+     "at": "The data still",
+     "kind": "object",
+     "icon": "file",
+     "text": "Patient records"
+    },
+    {
+     "at": "Almost 193 million people",
+     "kind": "counter",
+     "value": 192.7,
+     "suffix": "M",
+     "label": "people affected"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "hopeful",
+   "narration": "The attack was blamed on the BlackCat ransomware gang. One missing check hit millions.",
+   "visuals": [
+    {
+     "at": "The attack was blamed",
+     "kind": "dossier",
+     "title": "ALPHV / BlackCat",
+     "rows": [
+      [
+       "Type",
+       "Ransomware gang"
+      ],
+      [
+       "Reward",
+       "Up to $10M"
+      ],
+      [
+       "Offered by",
+       "U.S. State Dept"
+      ]
+     ]
+    },
+    {
+     "at": "BlackCat ransomware gang",
+     "kind": "stamp",
+     "text": "WANTED"
+    },
+    {
+     "at": "One missing check",
+     "kind": "lock",
+     "state": "crack",
+     "text": "MFA now on"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "ALPHV affiliates got into Change Healthcare on February 12, 2024 through a Citrix remote-access portal using illicitly obtained credentials; the portal had no multi-factor authentication; ransomware was deployed nine days later, on February 21",
+   "source": "https://www.theregister.com/2024/04/30/unitedhealth_ceo_ransom/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "UnitedHealth CEO Andrew Witty told Congress hackers used compromised credentials on a server without multifactor authentication, and that UnitedHealth paid a $22 million ransom in bitcoin",
+   "source": "https://www.clickondetroit.com/business/2024/05/01/change-healthcare-cyberattack-was-due-to-a-lack-of-multifactor-authentication-unitedhealth-ceo-says/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Change Healthcare processes about 15 billion claim transactions; the attack disrupted care and claims processing for months; UnitedHealth's final count was 192.7 million affected individuals (July 31 letter)",
+   "source": "https://healthcareitnews.com/news/new-numbers-change-healthcare-data-breach-193-million-affected",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "An alleged ALPHV/BlackCat affiliate ('notchy') claimed the gang kept the $22 million ransom; ALPHV shut down its servers in early March 2024",
+   "source": "https://www.bleepingcomputer.com/news/security/blackcat-ransomware-turns-off-servers-amid-claim-they-stole-22-million-ransom/",
+   "confidence": "reported"
+  },
+  {
+   "claim": "The attack, carried out by BlackCat affiliates, kept thousands of pharmacies and hospitals from processing prescriptions; the U.S. State Department offers up to $10 million for information on ALPHV/BlackCat",
+   "source": "https://www.securityweek.com/us-offering-10-million-reward-for-information-on-change-healthcare-hackers/amp/",
+   "confidence": "reported"
+  }
+ ],
+ "sources": [
+  "https://www.theregister.com/2024/04/30/unitedhealth_ceo_ransom/",
+  "https://www.clickondetroit.com/business/2024/05/01/change-healthcare-cyberattack-was-due-to-a-lack-of-multifactor-authentication-unitedhealth-ceo-says/",
+  "https://healthcareitnews.com/news/new-numbers-change-healthcare-data-breach-193-million-affected",
+  "https://www.bleepingcomputer.com/news/security/blackcat-ransomware-turns-off-servers-amid-claim-they-stole-22-million-ransom/",
+  "https://www.securityweek.com/us-offering-10-million-reward-for-information-on-change-healthcare-hackers/amp/"
+ ],
+ "seo": {
+  "title": "Change Healthcare Hack: One Login, No MFA, 193 Million People",
+  "description": "In 2024 criminals used one stolen login to break into Change Healthcare, and the portal had no second check. UnitedHealth paid a $22 million ransom, yet almost 193 million people were affected. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "One stolen login jammed America's medical billing for months.\nThe portal had no second check, and the ransom did not fix it.\n#cybersecurity #ransomware #truecrime",
+  "first_comment": "Should companies ever pay a ransom? What would you have done in UnitedHealth's place?",
+  "thumb": {
+   "text": "ONE LOGIN HIT 193 MILLION",
+   "hl": "193 MILLION",
+   "visual": 8
+  }
+ }
+}

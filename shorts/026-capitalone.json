@@ -1,0 +1,229 @@
+{
+ "episode": 26,
+ "key": "capitalone",
+ "title": "Capital One — the cloud engineer who bragged",
+ "year": 2019,
+ "category": "breach",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] A hacker's online bragging exposed a theft from 100 million Americans.",
+   "visuals": [
+    {
+     "at": "A hacker's online bragging",
+     "kind": "phone",
+     "app": "chat",
+     "from": "Anonymous user",
+     "text": "Stolen data posted online"
+    },
+    {
+     "at": "100 million Americans",
+     "kind": "counter",
+     "value": 100,
+     "suffix": "M",
+     "label": "Americans affected"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "Capital One, a giant bank, kept customer data in Amazon's cloud, rented online computers.",
+   "visuals": [
+    {
+     "at": "a giant bank",
+     "kind": "building",
+     "type": "bank",
+     "name": "Capital One"
+    },
+    {
+     "at": "rented online computers",
+     "kind": "servers",
+     "state": "ok",
+     "label": "Amazon Web Services"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "In March 2019, someone slipped past a badly set firewall, a digital security gate.",
+   "visuals": [
+    {
+     "at": "In March 2019",
+     "kind": "hacker",
+     "screen": "March 22-23, 2019",
+     "count": 1
+    },
+    {
+     "at": "a badly set firewall",
+     "kind": "lock",
+     "state": "open",
+     "text": "Misconfigured firewall"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "Data on 100 million Americans and 6 million Canadians was copied. That included 140,000 Social Security numbers.",
+   "visuals": [
+    {
+     "at": "6 million Canadians",
+     "kind": "globe",
+     "points": [
+      [
+       "Seattle",
+       47.6,
+       -122.3
+      ],
+      [
+       "McLean, Virginia",
+       38.9,
+       -77.2
+      ],
+      [
+       "Toronto",
+       43.7,
+       -79.4
+      ]
+     ]
+    },
+    {
+     "at": "140,000 Social Security numbers",
+     "kind": "split",
+     "left": "140,000 SSNs",
+     "right": "80,000 bank accounts"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "Then a stranger warned Capital One. Some data was posted on GitHub, a code-sharing site.",
+   "visuals": [
+    {
+     "at": "a stranger warned Capital One",
+     "kind": "email",
+     "from": "Outside researcher",
+     "subject": "Tip: data on GitHub",
+     "line": "Leaked files spotted online"
+    },
+    {
+     "at": "posted on GitHub",
+     "kind": "terminal",
+     "lines": [
+      "repo: public",
+      "files: Capital One data",
+      "reported: July 2019"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "The FBI linked the posts to Paige Thompson, a former Amazon engineer.",
+   "visuals": [
+    {
+     "at": "The FBI linked the posts",
+     "kind": "network",
+     "text": "GitHub, Slack, Twitter linked",
+     "total": 3
+    },
+    {
+     "at": "a former Amazon engineer",
+     "kind": "people",
+     "who": [
+      "agent",
+      "agentF"
+     ],
+     "action": "arrest",
+     "label": "Seattle, July 2019"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "hopeful",
+   "narration": "In 2022, a jury convicted her of fraud and hacking. Her bragging was the clue.",
+   "visuals": [
+    {
+     "at": "a jury convicted her",
+     "kind": "dossier",
+     "title": "Paige Thompson",
+     "rows": [
+      [
+       "Convicted",
+       "June 2022"
+      ],
+      [
+       "Charges",
+       "Wire fraud, hacking"
+      ],
+      [
+       "Sentence",
+       "Time served, probation"
+      ]
+     ]
+    },
+    {
+     "at": "Her bragging was the clue",
+     "kind": "stamp",
+     "text": "CHARGED"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "About 100 million people in the U.S. and 6 million in Canada were affected, including about 140,000 Social Security numbers and 80,000 bank account numbers, mostly from credit card applications from 2005 to 2019; the intrusion happened March 22-23, 2019 through a misconfigured web application firewall",
+   "source": "https://www.geekwire.com/2019/seattle-engineer-arrested-capital-one-hack-affected-100m-people/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "FBI agents tied together Thompson's postings on GitHub, Slack and Twitter; she was a former Amazon Web Services employee and Capital One is an AWS customer",
+   "source": "https://www.geekwire.com/2019/seattle-engineer-arrested-capital-one-hack-affected-100m-people/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Capital One found the vulnerability on July 19, 2019, two days after an email told it some of its data had appeared on GitHub",
+   "source": "https://www.wskg.org/npr-news/2019-07-30/woman-charged-as-hacker-of-capital-one-data-that-exposes-over-100-million-customers",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "A Seattle jury convicted Thompson in June 2022 of wire fraud, unauthorized access to a protected computer and damaging a protected computer; she was sentenced to time served plus five years of probation; she was arrested in July 2019",
+   "source": "https://www.insurancejournal.com/news/national/2022/10/06/688694.htm",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The Treasury Department fined Capital One $80 million for failing to protect the data",
+   "source": "https://www.insurancejournal.com/news/national/2022/10/06/688694.htm",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.geekwire.com/2019/seattle-engineer-arrested-capital-one-hack-affected-100m-people/",
+  "https://www.wskg.org/npr-news/2019-07-30/woman-charged-as-hacker-of-capital-one-data-that-exposes-over-100-million-customers",
+  "https://www.insurancejournal.com/news/national/2022/10/06/688694.htm"
+ ],
+ "seo": {
+  "title": "Capital One Hack: How Online Bragging Exposed 100 Million Victims",
+  "description": "In 2019 a hacker copied data on about 100 million Americans from Capital One's cloud. A stranger spotted the files on GitHub, and the posts led the FBI to Paige Thompson. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "A hacker's online bragging exposed a theft from 100 million Americans.\nOne email from a stranger cracked the case.\n#cybersecurity #truecrime #databreach",
+  "first_comment": "Would you report leaked data if you found it online? Why do you think hackers brag?",
+  "thumb": {
+   "text": "SHE BRAGGED ABOUT 100 MILLION",
+   "hl": "100 MILLION",
+   "visual": 11
+  }
+ }
+}
