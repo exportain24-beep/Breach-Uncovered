@@ -1,0 +1,96 @@
+{
+ "episode": 10,
+ "key": "melissa",
+ "title": "Melissa: the virus that jammed email",
+ "year": 1999,
+ "category": "malware",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] In 1999, one email virus jammed mail at over 300 organizations.",
+   "visuals": [
+    {"at": "one email virus", "kind": "object", "icon": "bug", "text": "Melissa"},
+    {"at": "over 300 organizations", "kind": "counter", "value": 300, "suffix": "+", "label": "organizations jammed"}
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "curious",
+   "narration": "A man posted a file online, promising free passwords to adult websites.",
+   "visuals": [
+    {"at": "A man posted a file", "kind": "hacker", "screen": "Hijacked AOL account", "count": 1},
+    {"at": "promising free passwords", "kind": "object", "icon": "file", "text": "Fake password list"}
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "Opening it made a macro, a hidden Word program, email your first 50 contacts.",
+   "visuals": [
+    {"at": "a hidden Word program", "kind": "terminal", "lines": ["open address book", "take first 50", "send copy"]},
+    {"at": "your first 50 contacts", "kind": "network", "text": "50 new victims each", "total": 50}
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "tense",
+   "narration": "The subject read Important Message From, plus a friend's name. People trusted it.",
+   "visuals": [
+    {"at": "The subject read", "kind": "email", "from": "A friend", "subject": "Important Message From...", "line": "don't show anyone else"},
+    {"at": "People trusted it", "kind": "people", "who": ["worker", "workerF"], "action": "point", "label": "It's from a friend"}
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "shock",
+   "narration": "About one million email accounts were disrupted. Cleanup cost an estimated 80 million dollars.",
+   "visuals": [
+    {"at": "About one million", "kind": "servers", "state": "dark", "label": "1 million accounts hit"},
+    {"at": "an estimated 80 million", "kind": "counter", "value": 80, "prefix": "$", "suffix": "M", "label": "cleanup cost"}
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "A tip from AOL helped trace it. On April 1, investigators arrested David L. Smith.",
+   "visuals": [
+    {"at": "helped trace it", "kind": "building", "type": "fbi", "name": "FBI"},
+    {"at": "On April 1", "kind": "timeline", "items": [["Mar 26, 1999", "Virus spreads"], ["Apr 1, 1999", "Smith arrested"]]},
+    {"at": "David L. Smith", "kind": "dossier", "title": "David L. Smith", "rows": [["State", "New Jersey"], ["Plea", "Guilty, Dec 1999"]]}
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "He got 20 months in federal prison. A friend's name was the real weapon.",
+   "visuals": [
+    {"at": "He got 20 months", "kind": "counter", "value": 20, "suffix": " months", "label": "federal prison, 2002"},
+    {"at": "the real weapon", "kind": "split", "left": "Looks like: a friend", "right": "Really: Melissa virus"}
+   ]
+  }
+ ],
+ "facts": [
+  {"claim": "Melissa began spreading on March 26, 1999; David Lee Smith posted the file to an internet newsgroup from a hijacked AOL account, promising passwords to adult websites", "source": "https://www.fbi.gov/history/famous-cases/melissa-virus", "confidence": "confirmed"},
+  {"claim": "When opened in Microsoft Word, a macro sent the virus via Outlook to the first 50 contacts in the user's mailing lists", "source": "https://www.fbi.gov/history/famous-cases/melissa-virus", "confidence": "confirmed"},
+  {"claim": "Email servers at more than 300 organizations were overloaded or shut down, about one million email accounts were disrupted, and repairs cost an estimated $80 million", "source": "https://www.fbi.gov/history/famous-cases/melissa-virus", "confidence": "confirmed"},
+  {"claim": "A tip from AOL helped the FBI and New Jersey law enforcement trace the virus; Smith was arrested on April 1, 1999 in New Jersey, pleaded guilty in December 1999", "source": "https://www.fbi.gov/history/famous-cases/melissa-virus", "confidence": "confirmed"},
+  {"claim": "The email subject line was 'Important Message From [name]' and the body said 'Here is that document you asked for...don't show anyone else'", "source": "https://welivesecurity.com/2016/07/15/flashback-friday-melissa-virus", "confidence": "confirmed"},
+  {"claim": "On May 1, 2002 Smith was sentenced to 20 months in federal prison and a $5,000 fine; both sides agreed damage exceeded $80 million", "source": "https://www.theregister.com/2002/05/01/melissa_virus_author_jailed/", "confidence": "confirmed"}
+ ],
+ "sources": [
+  "https://www.fbi.gov/history/famous-cases/melissa-virus",
+  "https://welivesecurity.com/2016/07/15/flashback-friday-melissa-virus",
+  "https://www.theregister.com/2002/05/01/melissa_virus_author_jailed/"
+ ],
+ "seo": {
+  "title": "Melissa Virus: The 1999 Email That Jammed 300 Organizations",
+  "description": "In 1999 the Melissa virus mailed itself to the first 50 contacts of everyone who opened it. Email jammed at over 300 organizations, and its creator went to federal prison. #cybersecurity #truecrime #shorts",
+  "hashtags": ["#cybersecurity", "#truecrime", "#shorts"],
+  "facebook_text": "In 1999, one email virus jammed mail at over 300 organizations.\nIt looked like a message from a friend.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Would you open an 'Important Message' from a friend? How do you check before you click?",
+  "thumb": {"text": "ONE EMAIL JAMMED 300 ORGANIZATIONS", "hl": "300 ORGANIZATIONS", "visual": 5}
+ }
+}

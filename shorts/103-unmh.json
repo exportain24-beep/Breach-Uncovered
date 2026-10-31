@@ -1,0 +1,253 @@
+{
+ "episode": 103,
+ "key": "unmh",
+ "title": "UNM Health — the trauma center that turned ambulances away",
+ "year": 2026,
+ "category": "breach",
+ "needs_review": false,
+ "priority": true,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] A cyberattack sent ambulances away from New Mexico's only top trauma center.",
+   "visuals": [
+    {
+     "at": "sent ambulances away",
+     "kind": "object",
+     "icon": "car",
+     "text": "Ambulances diverted"
+    },
+    {
+     "at": "only top trauma center",
+     "kind": "building",
+     "type": "hospital",
+     "name": "UNM Hospital"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "UNM Hospital runs the state's only Level 1 trauma center, for the worst injuries.",
+   "visuals": [
+    {
+     "at": "Level 1 trauma center",
+     "kind": "people",
+     "who": [
+      "doctor",
+      "doctor"
+     ],
+     "action": "walk",
+     "label": "Albuquerque, New Mexico"
+    },
+    {
+     "at": "for the worst injuries",
+     "kind": "counter",
+     "value": 100000,
+     "label": "ER visits a year"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "On October 26, staff saw messages on their screens. They claimed patient data was stolen.",
+   "visuals": [
+    {
+     "at": "On October 26",
+     "kind": "office",
+     "who": "workerF",
+     "action": "shock",
+     "screen": "Data theft claim"
+    },
+    {
+     "at": "patient data was stolen",
+     "kind": "object",
+     "icon": "file",
+     "text": "Patients, staff, students"
+    },
+    {
+     "at": "was stolen",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "UNM Health Sciences"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "Ambulances went elsewhere for about two hours. Outpatient surgeries stopped for the day.",
+   "visuals": [
+    {
+     "at": "Ambulances went elsewhere",
+     "kind": "globe",
+     "points": [
+      [
+       "Albuquerque",
+       35.08,
+       -106.65
+      ],
+      [
+       "Santa Fe",
+       35.69,
+       -105.94
+      ]
+     ]
+    },
+    {
+     "at": "about two hours",
+     "kind": "object",
+     "icon": "clock",
+     "text": "About 2 hours"
+    },
+    {
+     "at": "Outpatient surgeries stopped",
+     "kind": "stamp",
+     "text": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "A new gang called Byod claimed the attack. Its claims are unverified.",
+   "visuals": [
+    {
+     "at": "claimed the attack",
+     "kind": "hacker",
+     "screen": "Byod leak site",
+     "count": 1
+    },
+    {
+     "at": "Its claims are unverified",
+     "kind": "dossier",
+     "title": "Byod (claimed)",
+     "rows": [
+      [
+       "Claims",
+       "36,000 machines hit"
+      ],
+      [
+       "Verified",
+       "No"
+      ],
+      [
+       "Seen since",
+       "September 2026"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "hopeful",
+   "narration": "By the next day, UNM said key systems were back. It says core servers were never reached.",
+   "visuals": [
+    {
+     "at": "key systems were back",
+     "kind": "timeline",
+     "items": [
+      [
+       "Oct 26",
+       "Diversion, clinics closed"
+      ],
+      [
+       "Oct 26 evening",
+       "Byod claim"
+      ],
+      [
+       "Oct 27",
+       "Systems back online"
+      ]
+     ]
+    },
+    {
+     "at": "core servers were never",
+     "kind": "lock",
+     "state": "locked",
+     "text": "Core systems not penetrated"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "tense",
+   "narration": "The FBI is assisting. For about two hours, New Mexico had no top trauma care.",
+   "visuals": [
+    {
+     "at": "The FBI is assisting",
+     "kind": "building",
+     "type": "fbi",
+     "name": "FBI"
+    },
+    {
+     "at": "no top trauma care",
+     "kind": "headline",
+     "text": "State's only Level 1 diverted"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "UNM operates New Mexico's only Level 1 trauma center; the closure left the state without an ED able to treat the most serious injuries; ~100,000 ER visits a year",
+   "source": "https://www.ksat.com/health/2026/10/26/a-cybersecurity-issue-forces-a-major-new-mexico-hospital-to-divert-patients-and-close-clinics/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "On Monday Oct 26, 2026 employees saw messages on their computers claiming student, employee and patient data had been stolen",
+   "source": "https://www.ksat.com/health/2026/10/26/a-cybersecurity-issue-forces-a-major-new-mexico-hospital-to-divert-patients-and-close-clinics/",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Ambulances were diverted to health systems in Albuquerque and Santa Fe for about two hours",
+   "source": "https://therecord.media/university-of-new-mexico-hospital-diverts-cyber-incident",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "UNM Health suspended outpatient surgeries and appointments on Oct 26",
+   "source": "https://bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "A group called Byod claimed the attack Monday evening, saying it compromised 36,000 machines; it emerged last month; claims unverified, UNM did not confirm ransomware",
+   "source": "https://therecord.media/university-of-new-mexico-hospital-diverts-cyber-incident",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "UNM said all critical electronic systems were back online and clinics resumed Oct 27; the event affected some end-user devices but did not penetrate core systems or servers",
+   "source": "https://bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "FBI spokesperson Margot Cravens said the agency was 'assisting our partner'",
+   "source": "https://www.ksat.com/health/2026/10/26/a-cybersecurity-issue-forces-a-major-new-mexico-hospital-to-divert-patients-and-close-clinics/",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.ksat.com/health/2026/10/26/a-cybersecurity-issue-forces-a-major-new-mexico-hospital-to-divert-patients-and-close-clinics/",
+  "https://therecord.media/university-of-new-mexico-hospital-diverts-cyber-incident",
+  "https://bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries"
+ ],
+ "seo": {
+  "title": "UNM Hospital Cyberattack: New Mexico's Only Level 1 Trauma Center Hit",
+  "description": "On October 26, 2026, a cyberattack forced UNM Hospital, New Mexico's only Level 1 trauma center, to divert ambulances and stop outpatient surgeries. A new group called Byod claimed it, but its claims are unverified. #cybersecurity #healthcare #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#healthcare",
+   "#shorts"
+  ],
+  "facebook_text": "A cyberattack sent ambulances away from New Mexico's only Level 1 trauma center.\nSystems came back the next day.\n#cybersecurity #healthcare #newmexico",
+  "first_comment": "Should hospitals be treated as critical infrastructure with stronger cyber rules?",
+  "thumb": {
+   "text": "CYBERATTACK TURNED AMBULANCES AWAY",
+   "hl": "AMBULANCES",
+   "visual": 0
+  }
+ }
+}

@@ -1,0 +1,261 @@
+{
+ "episode": 15,
+ "key": "lockbit",
+ "title": "Operation Cronos — hacking LockBit",
+ "year": 2024,
+ "category": "ransomware",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] Police hacked a ransomware gang and took over its website.",
+   "visuals": [
+    {
+     "at": "Police hacked a ransomware gang",
+     "kind": "lock",
+     "state": "crack",
+     "text": "LockBit site seized"
+    },
+    {
+     "at": "took over its website",
+     "kind": "building",
+     "type": "police",
+     "name": "National Crime Agency"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "tense",
+   "narration": "LockBit rented out ransomware, a program that locks files. It hit over 2,500 victims.",
+   "visuals": [
+    {
+     "at": "LockBit rented out ransomware",
+     "kind": "hacker",
+     "screen": "LockBit affiliate panel",
+     "count": 2
+    },
+    {
+     "at": "a program that locks files",
+     "kind": "object",
+     "icon": "file",
+     "text": "Files locked"
+    },
+    {
+     "at": "over 2,500 victims",
+     "kind": "counter",
+     "value": 2500,
+     "suffix": "+",
+     "label": "victims, 120+ countries"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "reveal",
+   "narration": "On February 19, 2024, police struck back. They took down 34 servers in eight countries.",
+   "visuals": [
+    {
+     "at": "On February 19, 2024",
+     "kind": "timeline",
+     "items": [
+      [
+       "Feb 19, 2024",
+       "Leak site seized"
+      ],
+      [
+       "Feb 20, 2024",
+       "Cronos announced"
+      ]
+     ]
+    },
+    {
+     "at": "took down 34 servers",
+     "kind": "servers",
+     "state": "dark",
+     "label": "34 servers down"
+    },
+    {
+     "at": "in eight countries",
+     "kind": "globe",
+     "points": [
+      [
+       "London",
+       51.5,
+       -0.1
+      ],
+      [
+       "Washington",
+       38.9,
+       -77.0
+      ],
+      [
+       "Canberra",
+       -35.3,
+       149.1
+      ],
+      [
+       "Helsinki",
+       60.2,
+       24.9
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "The gang's leak site now showed police posts. They also grabbed 1,000 decryption keys, unlock codes.",
+   "visuals": [
+    {
+     "at": "The gang's leak site",
+     "kind": "headline",
+     "text": "Now under NCA control"
+    },
+    {
+     "at": "1,000 decryption keys",
+     "kind": "lock",
+     "state": "open",
+     "text": "1,000+ keys recovered"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "curious",
+   "narration": "A countdown asked, who is LockBitSupp? That was the gang's boss.",
+   "visuals": [
+    {
+     "at": "A countdown asked",
+     "kind": "object",
+     "icon": "clock",
+     "text": "Who is LockBitSupp?"
+    },
+    {
+     "at": "the gang's boss",
+     "kind": "hacker",
+     "screen": "LockBitSupp",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "In May 2024, U.S. prosecutors charged Dmitry Khoroshev, alleging he is LockBitSupp. A $10 million reward is offered.",
+   "visuals": [
+    {
+     "at": "U.S. prosecutors charged",
+     "kind": "dossier",
+     "title": "Dmitry Khoroshev",
+     "rows": [
+      [
+       "Charged",
+       "May 2024"
+      ],
+      [
+       "Counts",
+       "26"
+      ],
+      [
+       "Alleged role",
+       "LockBitSupp"
+      ]
+     ]
+    },
+    {
+     "at": "$10 million reward",
+     "kind": "counter",
+     "value": 10,
+     "prefix": "$",
+     "suffix": "M",
+     "label": "U.S. reward"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "hopeful",
+   "narration": "He likely remains in Russia. But his mask is off.",
+   "visuals": [
+    {
+     "at": "remains in Russia",
+     "kind": "globe",
+     "points": [
+      [
+       "Moscow",
+       55.8,
+       37.6
+      ],
+      [
+       "London",
+       51.5,
+       -0.1
+      ],
+      [
+       "New Jersey",
+       40.1,
+       -74.4
+      ]
+     ]
+    },
+    {
+     "at": "his mask is off",
+     "kind": "stamp",
+     "text": "WANTED"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "On February 19, 2024 the UK National Crime Agency led Operation Cronos, seized LockBit's leak site, took down 34 servers in eight countries and obtained over 1,000 decryption keys",
+   "source": "https://www.helpnetsecurity.com/2024/02/20/lockbit-takedown/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The seized leak site displayed law-enforcement content; one page asked 'Who is LockbitSupp?' with a countdown clock",
+   "source": "https://krebsonsecurity.com/2024/05/u-s-charges-russian-man-as-boss-of-lockbit-ransomware-group/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The DOJ says LockBit attacked more than 2,500 victims in at least 120 countries",
+   "source": "https://krebsonsecurity.com/2024/05/u-s-charges-russian-man-as-boss-of-lockbit-ransomware-group/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "In May 2024 the U.S. charged Russian national Dmitry Khoroshev in a 26-count indictment, alleging he is LockBitSupp; a $10 million reward is offered",
+   "source": "https://www.helpnetsecurity.com/2024/05/07/lockbit-lockbitsupp-unmasked/",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Khoroshev lives in Russia, so extradition is considered unlikely",
+   "source": "https://www.helpnetsecurity.com/2024/05/07/lockbit-lockbitsupp-unmasked/",
+   "confidence": "reported"
+  }
+ ],
+ "sources": [
+  "https://www.helpnetsecurity.com/2024/02/20/lockbit-takedown/",
+  "https://www.helpnetsecurity.com/2024/05/07/lockbit-lockbitsupp-unmasked/",
+  "https://krebsonsecurity.com/2024/05/u-s-charges-russian-man-as-boss-of-lockbit-ransomware-group/"
+ ],
+ "seo": {
+  "title": "LockBit Takedown: How Police Hacked a Ransomware Gang",
+  "description": "In February 2024, Britain's National Crime Agency took over LockBit's own leak site in Operation Cronos. Months later, U.S. prosecutors charged the man they say ran it. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "Police hacked a ransomware gang and took over its website.\nThen a countdown asked: who is the boss?\n#cybersecurity #truecrime #ransomware",
+  "first_comment": "Should police hack criminals back? Where would you draw the line?",
+  "thumb": {
+   "text": "POLICE HACKED THE HACKERS",
+   "hl": "HACKED",
+   "visual": 0
+  }
+ }
+}

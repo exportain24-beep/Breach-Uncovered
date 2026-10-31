@@ -1,0 +1,238 @@
+{
+ "episode": 6,
+ "key": "kejv",
+ "title": "Chosun Expo - the front company behind the hacks",
+ "year": 2018,
+ "category": "profile",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] U.S. prosecutors say a software company was a hacking front.",
+   "visuals": [
+    {
+     "at": "a software company",
+     "kind": "building",
+     "type": "office",
+     "name": "Chosun Expo"
+    },
+    {
+     "at": "was a hacking front",
+     "kind": "hacker",
+     "screen": "front company",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "Chosun Expo called itself North Korea's first internet company. Its programmers worked in Dalian, China.",
+   "visuals": [
+    {
+     "at": "Chosun Expo called itself",
+     "kind": "dossier",
+     "title": "Chosun Expo",
+     "rows": [
+      [
+       "Also called",
+       "Korea Expo Joint Venture"
+      ],
+      [
+       "Founded",
+       "2002"
+      ],
+      [
+       "Base",
+       "Dalian, China"
+      ]
+     ]
+    },
+    {
+     "at": "Its programmers worked",
+     "kind": "office",
+     "who": "engineer",
+     "action": "type",
+     "screen": "Visual C++"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "curious",
+   "narration": "It advertised gaming and gambling software for clients worldwide.",
+   "visuals": [
+    {
+     "at": "gaming and gambling software",
+     "kind": "object",
+     "icon": "laptop",
+     "text": "Gaming, gambling, e-payments"
+    },
+    {
+     "at": "for clients worldwide",
+     "kind": "flow",
+     "nodes": [
+      "Clients abroad",
+      "Chosun Expo"
+     ],
+     "amount": "Coding fees",
+     "blocked": false
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "reveal",
+   "narration": "But prosecutors say it was tied to Lab 110, a military spy unit.",
+   "visuals": [
+    {
+     "at": "But prosecutors say",
+     "kind": "split",
+     "left": "Software firm",
+     "right": "Government front"
+    },
+    {
+     "at": "tied to Lab 110",
+     "kind": "building",
+     "type": "government",
+     "name": "Lab 110"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "tense",
+   "narration": "Park Jin Hyok allegedly worked there over a decade. He went home in 2014, just before the Sony hack.",
+   "visuals": [
+    {
+     "at": "Park Jin Hyok",
+     "kind": "dossier",
+     "title": "Park Jin Hyok",
+     "rows": [
+      [
+       "Employer",
+       "Chosun Expo"
+      ],
+      [
+       "Job",
+       "Programmer"
+      ],
+      [
+       "Skills",
+       "Visual C++"
+      ]
+     ]
+    },
+    {
+     "at": "just before the Sony hack",
+     "kind": "timeline",
+     "items": [
+      [
+       "2014",
+       "Park returns home"
+      ],
+      [
+       "Nov 2014",
+       "Sony hacked"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "The clue? His personal email and a hacker persona's both used tty.",
+   "visuals": [
+    {
+     "at": "His personal email",
+     "kind": "object",
+     "icon": "envelope",
+     "text": "Two linked accounts"
+    },
+    {
+     "at": "both used tty",
+     "kind": "terminal",
+     "lines": [
+      "account A: ttykim1018",
+      "account B: tty198410",
+      "match: tty"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "In 2018, Park was charged and the company sanctioned. Allegedly, the day job was the disguise.",
+   "visuals": [
+    {
+     "at": "Park was charged",
+     "kind": "stamp",
+     "text": "CHARGED"
+    },
+    {
+     "at": "the day job was",
+     "kind": "people",
+     "who": [
+      "engineer",
+      "hacker"
+     ],
+     "action": "talk",
+     "label": "Same office, allegedly"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Prosecutors describe Chosun Expo Joint Venture (Korea Expo Joint Venture) as a North Korean government front company with offices in China and the DPRK, affiliated with Lab 110 of DPRK military intelligence; Park worked there for over a decade as a programmer for paying clients worldwide and in malicious cyber activity",
+   "source": "https://www.justice.gov/usao-cdca/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyberattacks",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Chosun Expo's website called it North Korea's 'first internet company', founded in 2002; a 2015 version said it focused on gaming, gambling, e-payments and image recognition software; it operated out of Dalian, China",
+   "source": "https://www.pbs.org/newshour/nation/north-korean-programmer-charged-in-sony-hack-wannacry-attack",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Park's email ttykim1018 and the Kim Hyon Woo persona's email tty198410 both contained 'tty' and were in each other's address books; a resume listed Visual C++; Park worked at KEJV until 2014, just before the Sony hack",
+   "source": "https://www.securityweek.com/opsec-mistakes-allowed-us-link-north-korean-man-hacks",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Park returned to North Korea in 2014",
+   "source": "https://www.techtarget.com/cybersecurity/news/252448325/Lazarus-Group-hacker-charged-in-WannaCry-Sony-attacks",
+   "confidence": "reported"
+  },
+  {
+   "claim": "On September 6, 2018 OFAC designated Park Jin Hyok and Korea Expo Joint Venture (aka Chosun Expo)",
+   "source": "https://ofac.treasury.gov/recent-actions/20180906_33",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.justice.gov/usao-cdca/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyberattacks",
+  "https://www.pbs.org/newshour/nation/north-korean-programmer-charged-in-sony-hack-wannacry-attack",
+  "https://www.securityweek.com/opsec-mistakes-allowed-us-link-north-korean-man-hacks",
+  "https://ofac.treasury.gov/recent-actions/20180906_33"
+ ],
+ "seo": {
+  "title": "Chosun Expo: The Software Company U.S. Says Hid North Korean Hackers",
+  "description": "Chosun Expo advertised gaming and gambling software from Dalian, China. U.S. prosecutors say it was a front tied to North Korean military intelligence. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "U.S. prosecutors say a software company was a hacking front.\nThree letters in an email name helped link it.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Would you ever suspect a software company you hired? How would you check who really writes your code?",
+  "thumb": {
+   "text": "THE SOFTWARE FIRM HIDING HACKERS",
+   "hl": "SOFTWARE FIRM",
+   "visual": 1
+  }
+ }
+}

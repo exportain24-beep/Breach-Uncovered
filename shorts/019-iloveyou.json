@@ -1,0 +1,242 @@
+{
+ "episode": 19,
+ "key": "iloveyou",
+ "title": "ILOVEYOU: the love letter worm",
+ "year": 2000,
+ "category": "malware",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] A love letter email hit millions of computers in 2000.",
+   "visuals": [
+    {
+     "at": "A love letter email",
+     "kind": "email",
+     "from": "A known contact",
+     "subject": "ILOVEYOU",
+     "line": "LOVE-LETTER-FOR-YOU.TXT"
+    },
+    {
+     "at": "hit millions of computers",
+     "kind": "network",
+     "text": "Spreading worldwide",
+     "total": 2500000
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "curious",
+   "narration": "On May 4, 2000, the subject line read ILOVEYOU. The attachment looked like a harmless love letter.",
+   "visuals": [
+    {
+     "at": "On May 4, 2000",
+     "kind": "object",
+     "icon": "calendar",
+     "text": "May 4, 2000"
+    },
+    {
+     "at": "read ILOVEYOU",
+     "kind": "phone",
+     "app": "email",
+     "from": "A coworker",
+     "text": "ILOVEYOU"
+    },
+    {
+     "at": "a harmless love letter",
+     "kind": "split",
+     "left": ".TXT on screen",
+     "right": "Really a .vbs script"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "It was really a worm, a self-spreading program. It mailed itself to everyone in your contacts.",
+   "visuals": [
+    {
+     "at": "really a worm",
+     "kind": "object",
+     "icon": "bug",
+     "text": "Love Bug worm"
+    },
+    {
+     "at": "mailed itself to everyone",
+     "kind": "people",
+     "who": [
+      "worker",
+      "workerF",
+      "exec"
+     ],
+     "action": "shock",
+     "label": "Whole address book hit"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "It overwrote photos and music files. Email systems choked around the world.",
+   "visuals": [
+    {
+     "at": "overwrote photos and music",
+     "kind": "office",
+     "who": "workerF",
+     "action": "shock",
+     "screen": "JPG and MP3 overwritten"
+    },
+    {
+     "at": "Email systems choked",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Mail servers overloaded"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "sad",
+   "narration": "Damage estimates reached billions of dollars.",
+   "visuals": [
+    {
+     "at": "billions of dollars",
+     "kind": "counter",
+     "value": 10,
+     "prefix": "$",
+     "suffix": "B",
+     "label": "highest damage estimate"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "The trail led to Manila student Onel de Guzman. His rejected school project was a password stealer.",
+   "visuals": [
+    {
+     "at": "The trail led to Manila",
+     "kind": "globe",
+     "points": [
+      [
+       "New York",
+       40.7,
+       -74.0
+      ],
+      [
+       "London",
+       51.5,
+       -0.1
+      ],
+      [
+       "Manila",
+       14.6,
+       121.0
+      ]
+     ]
+    },
+    {
+     "at": "Onel de Guzman",
+     "kind": "dossier",
+     "title": "Onel de Guzman",
+     "rows": [
+      [
+       "Age",
+       "23"
+      ],
+      [
+       "From",
+       "Manila college"
+      ],
+      [
+       "Charged",
+       "June 29, 2000"
+      ]
+     ]
+    },
+    {
+     "at": "rejected school project",
+     "kind": "object",
+     "icon": "file",
+     "text": "Thesis: steal internet passwords"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "But no Philippine law covered hacking yet. In August 2000, charges were dropped. The famous love letter went unpunished.",
+   "visuals": [
+    {
+     "at": "no Philippine law",
+     "kind": "building",
+     "type": "government",
+     "name": "Philippine Justice Department"
+    },
+    {
+     "at": "charges were dropped",
+     "kind": "headline",
+     "text": "Love Bug charges dropped"
+    },
+    {
+     "at": "went unpunished",
+     "kind": "lock",
+     "state": "open",
+     "text": "No conviction"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "The virus was released May 4, 2000, sent to about 84 million users, and 2.5 to 3 million were affected; analysts estimated $8.7 billion in damage",
+   "source": "https://www.computerworld.com/article/1388001/love-bug-virus-charges-reportedly-dropped.html",
+   "confidence": "reported"
+  },
+  {
+   "claim": "The email subject was ILOVEYOU and the attachment LOVE-LETTER-FOR-YOU.TXT was really a Visual Basic script; it emailed itself to every Outlook contact and overwrote files including JPEG and MP3",
+   "source": "https://www.sophos.com/de-de/blog/iloveyou-the-love-bug-virus-20-years-on-could-it-happen-again",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Damage was estimated at up to $10 billion; de Guzman's rejected thesis proposal was a program to steal internet passwords",
+   "source": "https://www.deseret.com/2000/8/21/19524793/prosecutors-drop-charges-against-love-bug-suspect/",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Onel de Guzman, 23, a former student of a Manila computer college, was charged June 29, 2000; charges were dropped August 21, 2000 because existing laws did not cover hacking and the new law could not be applied retroactively",
+   "source": "https://www.computerworld.com/article/1388001/love-bug-virus-charges-reportedly-dropped.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The Philippines had no law covering this kind of computer crime until June 2000; prosecutors dropped all charges",
+   "source": "https://www.theregister.com/2000/08/21/love_bug_suspect_released/",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.computerworld.com/article/1388001/love-bug-virus-charges-reportedly-dropped.html",
+  "https://www.sophos.com/de-de/blog/iloveyou-the-love-bug-virus-20-years-on-could-it-happen-again",
+  "https://www.deseret.com/2000/8/21/19524793/prosecutors-drop-charges-against-love-bug-suspect/",
+  "https://www.theregister.com/2000/08/21/love_bug_suspect_released/"
+ ],
+ "seo": {
+  "title": "ILOVEYOU Virus: The Love Letter That Infected Millions",
+  "description": "In May 2000 an email titled ILOVEYOU spread to millions of computers and wiped files worldwide. The suspect, a Manila student, walked free because no law covered hacking. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "A love letter email hit millions of computers in 2000.\nThe suspect walked free because no law covered it.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Would you have opened an email called ILOVEYOU in 2000? Be honest.",
+  "thumb": {
+   "text": "ONE LOVE LETTER INFECTED MILLIONS",
+   "hl": "MILLIONS",
+   "visual": 1
+  }
+ }
+}

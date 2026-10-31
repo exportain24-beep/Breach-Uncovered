@@ -1,0 +1,246 @@
+{
+ "episode": 14,
+ "key": "duqu",
+ "title": "Duqu: Stuxnet's silent twin",
+ "year": 2011,
+ "category": "espionage",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] A spy program hid inside the company that hunts spy programs.",
+   "visuals": [
+    {
+     "at": "A spy program hid",
+     "kind": "object",
+     "icon": "bug",
+     "text": "Duqu 2.0"
+    },
+    {
+     "at": "the company that hunts",
+     "kind": "building",
+     "type": "office",
+     "name": "Kaspersky Lab"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "curious",
+   "narration": "In 2011, a Budapest lab found Duqu, a hidden spy program. It was nearly identical to Stuxnet, the famous sabotage worm.",
+   "visuals": [
+    {
+     "at": "a Budapest lab",
+     "kind": "people",
+     "who": [
+      "engineer",
+      "student"
+     ],
+     "action": "point",
+     "label": "CrySyS Lab, Hungary"
+    },
+    {
+     "at": "found Duqu",
+     "kind": "terminal",
+     "lines": [
+      "file: ~DQ...",
+      "name it: Duqu"
+     ]
+    },
+    {
+     "at": "a hidden spy program",
+     "kind": "object",
+     "icon": "camera",
+     "text": "Espionage, not sabotage"
+    },
+    {
+     "at": "nearly identical to Stuxnet",
+     "kind": "split",
+     "left": "Stuxnet, 2010",
+     "right": "Duqu, 2011"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "calm",
+   "narration": "Then it went quiet.",
+   "visuals": [
+    {
+     "at": "went quiet",
+     "kind": "timeline",
+     "items": [
+      [
+       "Oct 2011",
+       "Duqu found"
+      ],
+      [
+       "2012",
+       "Goes dark"
+      ],
+      [
+       "Spring 2015",
+       "Returns"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "tense",
+   "narration": "In spring 2015, Kaspersky found intruders in its own network. Its own test tool spotted them.",
+   "visuals": [
+    {
+     "at": "intruders in its own network",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Kaspersky internal systems"
+    },
+    {
+     "at": "Its own test tool",
+     "kind": "office",
+     "who": "engineer",
+     "action": "shock",
+     "screen": "Anti-APT alert"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "Duqu was back. It lived only in memory and used a stolen Foxconn certificate, a digital ID.",
+   "visuals": [
+    {
+     "at": "Duqu was back",
+     "kind": "headline",
+     "text": "June 10, 2015: Duqu 2.0"
+    },
+    {
+     "at": "lived only in memory",
+     "kind": "servers",
+     "state": "dark",
+     "label": "No files on disk"
+    },
+    {
+     "at": "stolen Foxconn certificate",
+     "kind": "object",
+     "icon": "key",
+     "text": "Foxconn certificate"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "shock",
+   "narration": "The same attackers also hit hotels hosting the Iran nuclear talks.",
+   "visuals": [
+    {
+     "at": "also hit hotels hosting",
+     "kind": "building",
+     "type": "office",
+     "name": "Talks venue hotel"
+    },
+    {
+     "at": "the Iran nuclear talks",
+     "kind": "people",
+     "who": [
+      "exec",
+      "exec",
+      "exec"
+     ],
+     "action": "talk",
+     "label": "P5+1 talks, 2014-2015"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "No country has been officially blamed. The hunters had become the hunted.",
+   "visuals": [
+    {
+     "at": "officially blamed",
+     "kind": "dossier",
+     "title": "Duqu 2.0",
+     "rows": [
+      [
+       "Found",
+       "Spring 2015"
+      ],
+      [
+       "Zero-days",
+       "Up to three"
+      ],
+      [
+       "Blamed",
+       "No one officially"
+      ]
+     ]
+    },
+    {
+     "at": "become the hunted",
+     "kind": "lock",
+     "state": "crack",
+     "text": "Security firm breached"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Symantec was alerted to Duqu by the CrySyS lab at Budapest University of Technology and Economics on October 14, 2011; it was nearly identical to Stuxnet but built for espionage, and named for files with the prefix ~DQ",
+   "source": "https://usenix.org/w32duqu-precursor-next-stuxnet",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Duqu went dark in 2012; Duqu 2.0 ran only in memory and disappeared on reboot",
+   "source": "https://www.pcworld.com/article/427968/the-duqu-cyberespionage-group-compromised-venues-hosting-iran-nuclear-negotiations.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Kaspersky detected the intrusion in early spring 2015 with a prototype anti-APT tool, announced it June 10, 2015, linked it to the 2011 Duqu group, said up to three zero-days were used, and called it a likely nation-state operation",
+   "source": "https://www.kaspersky.com/about/press-releases/duqu-is-back-kaspersky-lab-reveals-cyberattack-on-its-corporate-network-that-also-hit-high-profile-victims-in-western-countries-the-middle-east-and-asia",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Some 2014-2015 infections were linked to venues of the P5+1 Iran nuclear talks",
+   "source": "https://www.kaspersky.com/about/press-releases/duqu-is-back-kaspersky-lab-reveals-cyberattack-on-its-corporate-network-that-also-hit-high-profile-victims-in-western-countries-the-middle-east-and-asia",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Duqu 2.0 used a digital certificate stolen from Foxconn",
+   "source": "https://www.engadget.com/2015-06-16-duqu-2-0-kaspersky.html",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Kaspersky did not name a country; media reports citing former U.S. officials pointed at Israel, which is not an official attribution",
+   "source": "https://www.pcworld.com/article/427968/the-duqu-cyberespionage-group-compromised-venues-hosting-iran-nuclear-negotiations.html",
+   "confidence": "alleged"
+  }
+ ],
+ "sources": [
+  "https://www.kaspersky.com/about/press-releases/duqu-is-back-kaspersky-lab-reveals-cyberattack-on-its-corporate-network-that-also-hit-high-profile-victims-in-western-countries-the-middle-east-and-asia",
+  "https://usenix.org/w32duqu-precursor-next-stuxnet",
+  "https://www.pcworld.com/article/427968/the-duqu-cyberespionage-group-compromised-venues-hosting-iran-nuclear-negotiations.html",
+  "https://www.engadget.com/2015-06-16-duqu-2-0-kaspersky.html"
+ ],
+ "seo": {
+  "title": "Duqu 2.0: The Spy Malware That Hacked Kaspersky and the Iran Talks",
+  "description": "Duqu, a spying cousin of Stuxnet, was found in 2011 and then went quiet. In 2015 it came back inside Kaspersky's own network and at hotels hosting the Iran nuclear talks. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "A spy program hid inside the company that hunts spy programs.\nThis is the story of Duqu.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "If even a top security company can be hacked, who can stay safe? Who do you think was behind Duqu?",
+  "thumb": {
+   "text": "SPIES HACKED THE SPY HUNTERS",
+   "hl": "SPY HUNTERS",
+   "visual": 7
+  }
+ }
+}

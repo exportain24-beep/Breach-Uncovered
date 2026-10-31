@@ -1,0 +1,240 @@
+{
+ "episode": 22,
+ "key": "marinechain",
+ "title": "Marine Chain: North Korea's fake crypto fleet",
+ "year": 2018,
+ "category": "finance",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] U.S. prosecutors say North Korean hackers secretly ran a crypto shipping startup.",
+   "visuals": [
+    {
+     "at": "North Korean hackers",
+     "kind": "hacker",
+     "screen": "RGB unit",
+     "count": 3
+    },
+    {
+     "at": "crypto shipping startup",
+     "kind": "object",
+     "icon": "ship",
+     "text": "Marine Chain Platform"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "curious",
+   "narration": "Its name: Marine Chain. In 2017 and 2018, it offered tokens, digital shares, in cargo ships.",
+   "visuals": [
+    {
+     "at": "Marine Chain",
+     "kind": "headline",
+     "text": "New blockchain shipping platform"
+    },
+    {
+     "at": "In 2017 and 2018",
+     "kind": "timeline",
+     "items": [
+      [
+       "2017",
+       "Platform marketed"
+      ],
+      [
+       "2018",
+       "Token and coin sale"
+      ]
+     ]
+    },
+    {
+     "at": "tokens, digital shares",
+     "kind": "object",
+     "icon": "bitcoin",
+     "text": "Marine Chain Token"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "Investors could own a slice of a ship. It sought approval to trade in Hong Kong.",
+   "visuals": [
+    {
+     "at": "a slice of a ship",
+     "kind": "split",
+     "left": "One cargo ship",
+     "right": "Many token owners"
+    },
+    {
+     "at": "approval to trade",
+     "kind": "building",
+     "type": "government",
+     "name": "Hong Kong regulator"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "reveal",
+   "narration": "But the indictment alleges North Korea secretly controlled it. The goal: raise money and dodge U.S. sanctions.",
+   "visuals": [
+    {
+     "at": "secretly controlled it",
+     "kind": "flow",
+     "nodes": [
+      "Investors",
+      "Marine Chain",
+      "North Korea"
+     ],
+     "amount": "Hidden funds"
+    },
+    {
+     "at": "dodge U.S. sanctions",
+     "kind": "lock",
+     "state": "crack",
+     "text": "Sanctions evasion alleged"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "shock",
+   "narration": "In February 2021, the U.S. charged three military hackers. Jon Chang Hyok, Kim Il and Park Jin Hyok.",
+   "visuals": [
+    {
+     "at": "In February 2021",
+     "kind": "object",
+     "icon": "calendar",
+     "text": "Unsealed Feb 17, 2021"
+    },
+    {
+     "at": "the U.S. charged",
+     "kind": "stamp",
+     "text": "CHARGED"
+    },
+    {
+     "at": "Jon Chang Hyok",
+     "kind": "dossier",
+     "title": "Jon Chang Hyok",
+     "rows": [
+      [
+       "Age",
+       "31"
+      ],
+      [
+       "Unit",
+       "Reconnaissance General Bureau"
+      ],
+      [
+       "Status",
+       "Charged"
+      ]
+     ]
+    },
+    {
+     "at": "Kim Il and Park",
+     "kind": "people",
+     "who": [
+      "hacker",
+      "hacker"
+     ],
+     "action": "point",
+     "label": "Kim Il 27, Park 36"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "sad",
+   "narration": "Prosecutors tied them to schemes to steal over 1.3 billion dollars. Behind the ships, they saw a spy agency.",
+   "visuals": [
+    {
+     "at": "over 1.3 billion dollars",
+     "kind": "counter",
+     "value": 1.3,
+     "prefix": "$",
+     "suffix": "B",
+     "label": "alleged theft schemes"
+    },
+    {
+     "at": "Behind the ships",
+     "kind": "building",
+     "type": "fbi",
+     "name": "U.S. Justice Department"
+    },
+    {
+     "at": "a spy agency",
+     "kind": "globe",
+     "points": [
+      [
+       "Pyongyang",
+       39.0,
+       125.8
+      ],
+      [
+       "Hong Kong",
+       22.3,
+       114.2
+      ],
+      [
+       "Los Angeles",
+       34.1,
+       -118.2
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Per the indictment, the Marine Chain Platform was developed and marketed in 2017 and 2018, with a Marine Chain Token and Initial Coin Offering, offering fractional ownership of marine shipping vessels via blockchain",
+   "source": "https://www.bleepingcomputer.com/news/security/us-indicts-north-korean-hackers-for-stealing-13-billion/",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "The indictment alleges the scheme would let North Korea secretly obtain funds from investors, control vessel interests and evade U.S. sanctions",
+   "source": "https://www.bleepingcomputer.com/news/security/us-indicts-north-korean-hackers-for-stealing-13-billion/",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "The hackers sought approval from Hong Kong's Securities and Futures Commission to trade the token as a security",
+   "source": "https://www.rfa.org/english/news/korea/theft-02172021192646.html",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Jon Chang Hyok (31), Kim Il (27) and Park Jin Hyok (36), of North Korea's Reconnaissance General Bureau, were charged; indictment dated Dec 8, 2020, unsealed Feb 17, 2021",
+   "source": "https://www.rfa.org/english/news/korea/theft-02172021192646.html",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "DOJ says the defendants conspired to steal and extort more than $1.3 billion of money and cryptocurrency",
+   "source": "https://www.bleepingcomputer.com/news/security/us-indicts-north-korean-hackers-for-stealing-13-billion/",
+   "confidence": "alleged"
+  }
+ ],
+ "sources": [
+  "https://www.bleepingcomputer.com/news/security/us-indicts-north-korean-hackers-for-stealing-13-billion/",
+  "https://www.rfa.org/english/news/korea/theft-02172021192646.html"
+ ],
+ "seo": {
+  "title": "Marine Chain: The Crypto Ship Startup U.S. Says North Korea Ran",
+  "description": "U.S. prosecutors allege North Korean military hackers secretly ran Marine Chain, a crypto platform selling shares in cargo ships, to raise money and dodge sanctions. Three men were charged in 2021. #cybersecurity #crypto #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#crypto",
+   "#shorts"
+  ],
+  "facebook_text": "U.S. prosecutors say North Korean hackers secretly ran a crypto shipping startup.\nThe alleged goal: raise money and dodge sanctions.\n#cybersecurity #crypto #northkorea",
+  "first_comment": "Would you have spotted that a crypto startup was secretly run by spies?",
+  "thumb": {
+   "text": "SPIES ALLEGEDLY SOLD CRYPTO SHIPS",
+   "hl": "CRYPTO SHIPS",
+   "visual": 1
+  }
+ }
+}

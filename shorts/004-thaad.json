@@ -1,0 +1,240 @@
+{
+ "episode": 4,
+ "key": "thaad",
+ "title": "Phishing the THAAD contractors",
+ "year": 2017,
+ "category": "espionage",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] Fake job offers targeted the builders of a missile shield.",
+   "visuals": [
+    {
+     "at": "Fake job offers",
+     "kind": "email",
+     "from": "Recruiter, rival firm",
+     "subject": "A new job for you",
+     "line": "See the attached job details"
+    },
+    {
+     "at": "a missile shield",
+     "kind": "object",
+     "icon": "shield",
+     "text": "THAAD missile defense"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "In 2016 and 2017, emails hit U.S. defense contractors, including Lockheed Martin. Lockheed leads THAAD, a missile shield in South Korea.",
+   "visuals": [
+    {
+     "at": "In 2016 and 2017",
+     "kind": "timeline",
+     "items": [
+      [
+       "2016",
+       "Phishing begins"
+      ],
+      [
+       "2017",
+       "Emails mention THAAD"
+      ]
+     ]
+    },
+    {
+     "at": "including Lockheed Martin",
+     "kind": "building",
+     "type": "factory",
+     "name": "Lockheed Martin"
+    },
+    {
+     "at": "a missile shield in South Korea",
+     "kind": "globe",
+     "points": [
+      [
+       "Washington",
+       38.9,
+       -77.0
+      ],
+      [
+       "South Korea",
+       36.0,
+       128.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "curious",
+   "narration": "The hackers studied employees on social media. Then they posed as recruiters from rival firms.",
+   "visuals": [
+    {
+     "at": "studied employees on social media",
+     "kind": "office",
+     "who": "hacker",
+     "action": "type",
+     "screen": "Profile: defense engineer"
+    },
+    {
+     "at": "posed as recruiters",
+     "kind": "dossier",
+     "title": "Fake recruiter",
+     "rows": [
+      [
+       "Claims",
+       "Rival defense firm"
+      ],
+      [
+       "Target",
+       "Defense staff"
+      ],
+      [
+       "Years",
+       "2016-2017"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "tense",
+   "narration": "Some emails even mentioned THAAD. The bait hid malware, a hidden program.",
+   "visuals": [
+    {
+     "at": "Some emails even mentioned THAAD",
+     "kind": "phone",
+     "app": "email",
+     "from": "Recruiter",
+     "text": "THAAD role open"
+    },
+    {
+     "at": "The bait hid malware",
+     "kind": "object",
+     "icon": "bug",
+     "text": "Hidden malware"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "hopeful",
+   "narration": "But Lockheed was not breached.",
+   "visuals": [
+    {
+     "at": "Lockheed was not breached",
+     "kind": "lock",
+     "state": "locked",
+     "text": "Lockheed not infiltrated"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "The fake recruiters reused aliases from the Sony hack. Some logins came from North Korea.",
+   "visuals": [
+    {
+     "at": "reused aliases from the Sony hack",
+     "kind": "split",
+     "left": "Sony hack, 2014",
+     "right": "Same aliases, 2016"
+    },
+    {
+     "at": "Some logins came from",
+     "kind": "globe",
+     "points": [
+      [
+       "Pyongyang",
+       39.0,
+       125.8
+      ],
+      [
+       "U.S. contractors",
+       38.9,
+       -77.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "In 2018, U.S. prosecutors charged a North Korean programmer. The dream job was the trap.",
+   "visuals": [
+    {
+     "at": "U.S. prosecutors charged",
+     "kind": "stamp",
+     "text": "CHARGED"
+    },
+    {
+     "at": "The dream job was",
+     "kind": "hacker",
+     "screen": "Apply now",
+     "count": 1
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "In 2016 and 2017 the conspiracy targeted several U.S. defense contractors, including Lockheed Martin, with spear-phishing emails often sent from accounts posing as recruiters at competing defense firms; some referenced THAAD, deployed in South Korea",
+   "source": "https://www.justice.gov/usao-cdca/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyberattacks",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Lockheed Martin, the prime contractor for THAAD, was not successfully infiltrated",
+   "source": "https://www.justice.gov/usao-cdca/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyberattacks",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Some messages used aliases and accounts seen in the Sony attack, sometimes accessed from North Korean IP addresses, and malware with the same data table",
+   "source": "https://www.justice.gov/usao-cdca/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyberattacks",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Before attacks, the hackers researched targets online and on social media, including Lockheed Martin employees",
+   "source": "https://www.federaltimes.com/?p=16538",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "The attempts to infiltrate Lockheed were unsuccessful; the emails posed as recruiters at competing contractors",
+   "source": "https://www.techtarget.com/cybersecurity/news/252448325/Lazarus-Group-hacker-charged-in-WannaCry-Sony-attacks",
+   "confidence": "reported"
+  },
+  {
+   "claim": "North Korean programmer Park Jin Hyok was charged in a complaint filed June 8, 2018 and unsealed September 6, 2018",
+   "source": "https://www.justice.gov/usao-cdca/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyberattacks",
+   "confidence": "alleged"
+  }
+ ],
+ "sources": [
+  "https://www.justice.gov/usao-cdca/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyberattacks",
+  "https://www.techtarget.com/cybersecurity/news/252448325/Lazarus-Group-hacker-charged-in-WannaCry-Sony-attacks",
+  "https://www.federaltimes.com/?p=16538"
+ ],
+ "seo": {
+  "title": "THAAD Phishing: Fake Recruiters Targeted Lockheed Martin Staff",
+  "description": "In 2016 and 2017, emails from fake recruiters targeted U.S. defense contractors, some mentioning the THAAD missile shield. U.S. prosecutors later charged a North Korean programmer. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "Fake job offers targeted the builders of a missile shield.\nThe dream job was the trap.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Would you open a job offer from a rival company? How do you check a recruiter is real?",
+  "thumb": {
+   "text": "FAKE JOBS TARGETED MISSILE MAKERS",
+   "hl": "FAKE JOBS",
+   "visual": 0
+  }
+ }
+}

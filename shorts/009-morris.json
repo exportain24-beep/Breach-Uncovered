@@ -1,0 +1,252 @@
+{
+ "episode": 9,
+ "key": "morris",
+ "title": "The Morris Worm",
+ "year": 1988,
+ "category": "hacker",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] In 1988, one student's experiment crashed a tenth of the internet.",
+   "visuals": [
+    {
+     "at": "one student's experiment",
+     "kind": "office",
+     "who": "student",
+     "action": "type",
+     "screen": "Nov 2, 1988"
+    },
+    {
+     "at": "a tenth of the internet",
+     "kind": "network",
+     "text": "10% of the internet",
+     "total": 6000
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "Robert Morris was a Cornell graduate student. He released a worm, a program that copies itself.",
+   "visuals": [
+    {
+     "at": "Robert Morris was",
+     "kind": "dossier",
+     "title": "Robert Tappan Morris",
+     "rows": [
+      [
+       "Status",
+       "Graduate student"
+      ],
+      [
+       "School",
+       "Cornell University"
+      ]
+     ]
+    },
+    {
+     "at": "He released a worm",
+     "kind": "object",
+     "icon": "bug",
+     "text": "Self-copying program"
+    },
+    {
+     "at": "a program that copies",
+     "kind": "terminal",
+     "lines": [
+      "copy 1",
+      "copy 2",
+      "copy 3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "curious",
+   "narration": "He said he wanted to measure the internet. He launched it through MIT.",
+   "visuals": [
+    {
+     "at": "measure the internet",
+     "kind": "counter",
+     "value": 60000,
+     "label": "computers online, 1988"
+    },
+    {
+     "at": "through MIT",
+     "kind": "building",
+     "type": "school",
+     "name": "MIT"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "tense",
+   "narration": "But a mistake made it spread too fast. Computers slowed to a crawl.",
+   "visuals": [
+    {
+     "at": "a mistake made it",
+     "kind": "object",
+     "icon": "laptop",
+     "text": "Bug in the worm"
+    },
+    {
+     "at": "spread too fast",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Overloaded"
+    },
+    {
+     "at": "slowed to a crawl",
+     "kind": "people",
+     "who": [
+      "engineer",
+      "student"
+     ],
+     "action": "shock",
+     "label": "Unix machines frozen"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "shock",
+   "narration": "About 6,000 of 60,000 connected machines were hit within a day.",
+   "visuals": [
+    {
+     "at": "About 6,000 of 60,000",
+     "kind": "counter",
+     "value": 6000,
+     "label": "machines hit in 24 hours"
+    },
+    {
+     "at": "within a day",
+     "kind": "headline",
+     "text": "Worm jams 6,000 computers"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "The FBI traced it back to his Cornell computer.",
+   "visuals": [
+    {
+     "at": "The FBI traced it",
+     "kind": "building",
+     "type": "fbi",
+     "name": "FBI"
+    },
+    {
+     "at": "his Cornell computer",
+     "kind": "globe",
+     "points": [
+      [
+       "Ithaca, NY",
+       42.4,
+       -76.5
+      ],
+      [
+       "Cambridge, MA",
+       42.4,
+       -71.1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "hopeful",
+   "narration": "In 1990, he became the first person convicted under a new U.S. hacking law. He got probation. Today he teaches at MIT.",
+   "visuals": [
+    {
+     "at": "the first person convicted",
+     "kind": "stamp",
+     "text": "CHARGED"
+    },
+    {
+     "at": "He got probation",
+     "kind": "timeline",
+     "items": [
+      [
+       "Nov 1988",
+       "Worm released"
+      ],
+      [
+       "1990",
+       "Convicted"
+      ],
+      [
+       "Sentence",
+       "Probation, $10,050 fine"
+      ]
+     ]
+    },
+    {
+     "at": "Today he teaches at MIT",
+     "kind": "people",
+     "who": [
+      "student",
+      "student",
+      "engineer"
+     ],
+     "action": "talk",
+     "label": "Professor at MIT"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "The worm was launched on the evening of November 2, 1988 and crashed about 6,000 Unix machines, roughly 10% of the internet at the time",
+   "source": "https://www.darkreading.com/vulnerabilities-threats/the-morris-worm-turns-30",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Robert Morris was a Cornell computer science graduate student; about 6,000 of roughly 60,000 internet-connected machines were affected within 24 hours; the FBI traced it to his Cornell machine although it first seemed to come from MIT",
+   "source": "https://alumni.cornell.edu/cornellians/morris-worm/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Morris said the worm was designed to gauge the size of the internet; he released it by hacking into an MIT computer from his Cornell terminal; a programming error caused major slowdowns",
+   "source": "https://www.tomshardware.com/tech-industry/cyber-security/on-this-day-in-1988-the-morris-worm-slithered-out-and-sparked-a-new-era-in-cybersecurity-10-percent-of-the-internet-was-infected-within-24-hours",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Morris was the first person convicted under the Computer Fraud and Abuse Act (convicted 1990) and received three years' probation, 400 hours of community service and a $10,050 fine, with no prison time",
+   "source": "https://www.darkreading.com/vulnerabilities-threats/the-morris-worm-turns-30",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Morris later earned a PhD at Harvard and has taught at MIT since the mid-2000s",
+   "source": "https://alumni.cornell.edu/cornellians/morris-worm/",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.darkreading.com/vulnerabilities-threats/the-morris-worm-turns-30",
+  "https://alumni.cornell.edu/cornellians/morris-worm/",
+  "https://www.tomshardware.com/tech-industry/cyber-security/on-this-day-in-1988-the-morris-worm-slithered-out-and-sparked-a-new-era-in-cybersecurity-10-percent-of-the-internet-was-infected-within-24-hours"
+ ],
+ "seo": {
+  "title": "Morris Worm: The 1988 Experiment That Crashed the Internet",
+  "description": "In 1988 a Cornell graduate student released a self-copying program to measure the internet. A mistake made it spread out of control and hit about 6,000 machines. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "In 1988, one student's experiment crashed a tenth of the internet.\nHe became the first person convicted under a new U.S. hacking law.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Should Morris have gone to prison, or was probation fair for a mistake?",
+  "thumb": {
+   "text": "STUDENT CRASHED 10% OF INTERNET",
+   "hl": "10%",
+   "visual": 1
+  }
+ }
+}

@@ -1,0 +1,249 @@
+{
+ "episode": 23,
+ "key": "night_dragon",
+ "title": "Night Dragon: raiding the oil majors",
+ "year": 2011,
+ "category": "espionage",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "tense",
+   "narration": "[serious] For over a year, hackers quietly raided global oil companies.",
+   "visuals": [
+    {
+     "at": "hackers quietly raided",
+     "kind": "hacker",
+     "screen": "Night Dragon",
+     "count": 2
+    },
+    {
+     "at": "global oil companies",
+     "kind": "building",
+     "type": "factory",
+     "name": "Oil and gas major"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "curious",
+   "narration": "In February 2011, security firm McAfee named it Night Dragon.",
+   "visuals": [
+    {
+     "at": "In February 2011",
+     "kind": "object",
+     "icon": "calendar",
+     "text": "February 2011"
+    },
+    {
+     "at": "named it Night Dragon",
+     "kind": "headline",
+     "text": "McAfee: energy firms targeted"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "Targets included oil and gas firms in the U.S., Taiwan, Greece and Kazakhstan. It began by November 2009.",
+   "visuals": [
+    {
+     "at": "the U.S., Taiwan",
+     "kind": "globe",
+     "points": [
+      [
+       "United States",
+       38.0,
+       -97.0
+      ],
+      [
+       "Taiwan",
+       23.7,
+       121.0
+      ],
+      [
+       "Greece",
+       39.0,
+       22.0
+      ],
+      [
+       "Kazakhstan",
+       48.0,
+       67.0
+      ]
+     ]
+    },
+    {
+     "at": "began by November 2009",
+     "kind": "timeline",
+     "items": [
+      [
+       "Nov 2009",
+       "Attacks underway"
+      ],
+      [
+       "Feb 2011",
+       "McAfee report"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "curious",
+   "narration": "The tools were simple. Tricky emails fooled staff, and known Windows weak spots opened doors.",
+   "visuals": [
+    {
+     "at": "Tricky emails fooled staff",
+     "kind": "email",
+     "from": "Spoofed sender",
+     "subject": "Spear-phishing",
+     "line": "Targeted fake email"
+    },
+    {
+     "at": "known Windows weak spots",
+     "kind": "lock",
+     "state": "crack",
+     "text": "Unpatched Windows"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "shock",
+   "narration": "They took control of computers. They copied secret oil field bids and financing plans.",
+   "visuals": [
+    {
+     "at": "took control of computers",
+     "kind": "terminal",
+     "lines": [
+      "remote session open",
+      "copying files..."
+     ]
+    },
+    {
+     "at": "secret oil field bids",
+     "kind": "object",
+     "icon": "file",
+     "text": "Oil field bids"
+    },
+    {
+     "at": "financing plans",
+     "kind": "flow",
+     "nodes": [
+      "Oil company",
+      "Attacker servers"
+     ],
+     "amount": "Bids and financing data"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "The clue: they mostly worked weekday office hours. A man in Shandong, China, provided servers.",
+   "visuals": [
+    {
+     "at": "weekday office hours",
+     "kind": "office",
+     "who": "worker",
+     "action": "type",
+     "screen": "Weekdays, nine to five"
+    },
+    {
+     "at": "provided servers",
+     "kind": "servers",
+     "state": "ok",
+     "label": "Heze, Shandong province"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "McAfee said the tools came mainly from China, but named no government. The victims stay unnamed.",
+   "visuals": [
+    {
+     "at": "came mainly from China",
+     "kind": "dossier",
+     "title": "Night Dragon",
+     "rows": [
+      [
+       "Found by",
+       "McAfee"
+      ],
+      [
+       "Origin",
+       "Mainly China"
+      ],
+      [
+       "Victims",
+       "Unnamed"
+      ]
+     ]
+    },
+    {
+     "at": "named no government",
+     "kind": "split",
+     "left": "Tools: from China",
+     "right": "Sponsor: unproven"
+    },
+    {
+     "at": "stay unnamed",
+     "kind": "people",
+     "who": [
+      "exec",
+      "engineer"
+     ],
+     "action": "talk",
+     "label": "Five firms confirmed hit"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "McAfee reported in February 2011 that the Night Dragon attacks began by November 2009 and targeted oil and gas companies in the U.S., Taiwan, Greece and Kazakhstan; victims were not named",
+   "source": "https://m.washingtontimes.com/news/2011/feb/10/salesman-hackers-use-chinese-companys-servers/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Attackers took information on operations, oil field bids and financing; an individual in Heze, Shandong province, provided servers used to control victims' computers; activity during weekday business hours suggested company men",
+   "source": "https://m.washingtontimes.com/news/2011/feb/10/salesman-hackers-use-chinese-companys-servers/",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Five global energy firms were confirmed victims; methods included social engineering, spear-phishing, Windows exploits and Trojans",
+   "source": "https://www.theregister.com/2011/02/10/night_dragon_cyberespionage/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "McAfee CTO George Kurtz said the tools, techniques and network activities originated primarily in China; the state was a suspect but not proven",
+   "source": "https://www.theregister.com/2011/02/10/night_dragon_cyberespionage/",
+   "confidence": "alleged"
+  }
+ ],
+ "sources": [
+  "https://m.washingtontimes.com/news/2011/feb/10/salesman-hackers-use-chinese-companys-servers/",
+  "https://www.theregister.com/2011/02/10/night_dragon_cyberespionage/"
+ ],
+ "seo": {
+  "title": "Night Dragon: The Hackers Who Raided Global Oil Giants",
+  "description": "In 2011 McAfee revealed Night Dragon, a long spying campaign against oil and gas firms that stole secret oil field bids. McAfee said the tools came mainly from China, but no government was named. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "For over a year, hackers quietly raided global oil companies.\nThey stole secret oil field bids and kept office hours.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Why do you think hackers wanted oil field bids instead of money?",
+  "thumb": {
+   "text": "HACKERS STOLE OIL FIELD SECRETS",
+   "hl": "OIL FIELD",
+   "visual": 10
+  }
+ }
+}

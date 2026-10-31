@@ -1,0 +1,232 @@
+{
+ "episode": 20,
+ "key": "log4shell",
+ "title": "Log4Shell: the bug in everything",
+ "year": 2021,
+ "category": "vuln",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] One tiny free tool put hundreds of millions of devices at risk.",
+   "visuals": [
+    {
+     "at": "One tiny free tool",
+     "kind": "terminal",
+     "lines": [
+      "log: user signed in",
+      "log: page loaded",
+      "log: all normal"
+     ]
+    },
+    {
+     "at": "hundreds of millions of devices",
+     "kind": "counter",
+     "value": 100,
+     "suffix": "M+",
+     "label": "devices exposed"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "Log4j is a program's diary. Volunteers built it. It hides in thousands of apps.",
+   "visuals": [
+    {
+     "at": "a program's diary",
+     "kind": "object",
+     "icon": "file",
+     "text": "Apache Log4j"
+    },
+    {
+     "at": "Volunteers built it",
+     "kind": "people",
+     "who": [
+      "engineer",
+      "workerF"
+     ],
+     "action": "talk",
+     "label": "Apache volunteers"
+    },
+    {
+     "at": "in thousands of apps",
+     "kind": "network",
+     "text": "Thousands of software packages"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "In November 2021, an Alibaba security worker found a flaw. They warned the volunteers.",
+   "visuals": [
+    {
+     "at": "an Alibaba security worker",
+     "kind": "building",
+     "type": "office",
+     "name": "Alibaba Cloud"
+    },
+    {
+     "at": "warned the volunteers",
+     "kind": "email",
+     "from": "Alibaba cloud security",
+     "subject": "Flaw in Log4j",
+     "line": "Reported November 24, 2021"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "In December, the bug went public. Minecraft rushed out a fix.",
+   "visuals": [
+    {
+     "at": "the bug went public",
+     "kind": "headline",
+     "text": "CVE-2021-44228 goes public"
+    },
+    {
+     "at": "Minecraft rushed out",
+     "kind": "phone",
+     "app": "alert",
+     "from": "Minecraft",
+     "text": "Patch now available"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "tense",
+   "narration": "America's cyber chief called it one of the most serious flaws she'd seen.",
+   "visuals": [
+    {
+     "at": "America's cyber chief",
+     "kind": "dossier",
+     "title": "Jen Easterly",
+     "rows": [
+      [
+       "Role",
+       "CISA director"
+      ],
+      [
+       "Date",
+       "December 2021"
+      ]
+     ]
+    },
+    {
+     "at": "most serious flaws",
+     "kind": "lock",
+     "state": "crack",
+     "text": "Log4Shell"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "The twist: no single company was hacked. The weak spot sat inside software everywhere.",
+   "visuals": [
+    {
+     "at": "no single company",
+     "kind": "split",
+     "left": "One company hacked",
+     "right": "Thousands of products exposed"
+    },
+    {
+     "at": "inside software everywhere",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Unpatched Log4j"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "A U.S. review board warned it could linger a decade or longer. Much of the internet rests on volunteers' code.",
+   "visuals": [
+    {
+     "at": "A U.S. review board",
+     "kind": "timeline",
+     "items": [
+      [
+       "Nov 24, 2021",
+       "Flaw reported"
+      ],
+      [
+       "Dec 2021",
+       "Made public"
+      ],
+      [
+       "July 2022",
+       "Review board report"
+      ]
+     ]
+    },
+    {
+     "at": "a decade or longer",
+     "kind": "object",
+     "icon": "clock",
+     "text": "Endemic for years"
+    },
+    {
+     "at": "rests on volunteers' code",
+     "kind": "people",
+     "who": [
+      "engineer",
+      "student"
+     ],
+     "action": "walk",
+     "label": "Volunteer-led maintainers"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Log4j is a free, open-source Java logging library created by Apache Software Foundation volunteers; a member of Alibaba's cloud security team found the flaw and Apache was alerted on November 24",
+   "source": "https://www.cbsnews.com/news/log4j-vulnerability-breach-patch",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "U.S. officials estimated hundreds of millions of devices were exposed; Minecraft's makers warned players and released a patch",
+   "source": "https://www.cbsnews.com/news/log4j-vulnerability-breach-patch",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "CISA director Jen Easterly called the flaw one of the most serious she has seen in her entire career, if not the most serious; tracked as CVE-2021-44228",
+   "source": "https://www.techradar.com/au/news/log4j-could-be-the-most-serious-threat-ever-seen-cisa-head-warns",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The Cyber Safety Review Board (July 2022) called Log4j an endemic vulnerability that may remain for a decade or longer; Log4j is in thousands of software packages and is maintained by a volunteer-led community",
+   "source": "https://www.cisa.gov/sites/default/files/publications/CSRB-Log4J-Key-Findings-and-Recommendations-Summary-508c.pdf",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.cbsnews.com/news/log4j-vulnerability-breach-patch",
+  "https://www.techradar.com/au/news/log4j-could-be-the-most-serious-threat-ever-seen-cisa-head-warns",
+  "https://www.cisa.gov/sites/default/files/publications/CSRB-Log4J-Key-Findings-and-Recommendations-Summary-508c.pdf"
+ ],
+ "seo": {
+  "title": "Log4Shell: The Free Tool That Put Millions of Devices at Risk",
+  "description": "In December 2021 a flaw in Log4j, a free logging tool built by volunteers, exposed hundreds of millions of devices. America's cyber chief called it one of the most serious flaws of her career. #cybersecurity #log4j #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#log4j",
+   "#shorts"
+  ],
+  "facebook_text": "One tiny free tool put hundreds of millions of devices at risk.\nIt was built by volunteers and hid inside thousands of apps.\n#cybersecurity #log4j #tech",
+  "first_comment": "Should big companies pay the volunteers whose free code they rely on?",
+  "thumb": {
+   "text": "A FREE TOOL EXPOSED MILLIONS",
+   "hl": "MILLIONS",
+   "visual": 1
+  }
+ }
+}

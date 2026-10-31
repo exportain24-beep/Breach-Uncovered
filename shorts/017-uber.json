@@ -1,0 +1,228 @@
+{
+ "episode": 17,
+ "key": "uber",
+ "title": "Uber's secret $100,000 bug bounty",
+ "year": 2016,
+ "category": "breach",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] Uber paid hackers $100,000 to keep a breach secret.",
+   "visuals": [
+    {
+     "at": "Uber paid hackers",
+     "kind": "flow",
+     "nodes": [
+      "Uber",
+      "Hackers"
+     ],
+     "amount": "$100K in bitcoin",
+     "blocked": false
+    },
+    {
+     "at": "keep a breach secret",
+     "kind": "lock",
+     "state": "locked",
+     "text": "Hidden for a year"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "tense",
+   "narration": "In 2016, hackers found Uber logins left on GitHub, a code-sharing site. They took data on 57 million riders and drivers.",
+   "visuals": [
+    {
+     "at": "found Uber logins left",
+     "kind": "terminal",
+     "lines": [
+      "repo: uber-internal",
+      "access key: ********"
+     ]
+    },
+    {
+     "at": "They took data",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Cloud backup copied"
+    },
+    {
+     "at": "57 million riders and drivers",
+     "kind": "counter",
+     "value": 57,
+     "suffix": "M",
+     "label": "riders and drivers"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "Then they contacted security chief Joe Sullivan. Ten days earlier, he had testified to the FTC, a regulator.",
+   "visuals": [
+    {
+     "at": "security chief Joe Sullivan",
+     "kind": "office",
+     "who": "exec",
+     "action": "shock",
+     "screen": "Ransom demand"
+    },
+    {
+     "at": "Ten days earlier",
+     "kind": "timeline",
+     "items": [
+      [
+       "Nov 4, 2016",
+       "Sullivan testifies"
+      ],
+      [
+       "Nov 14, 2016",
+       "Hackers make contact"
+      ]
+     ]
+    },
+    {
+     "at": "testified to the FTC",
+     "kind": "building",
+     "type": "government",
+     "name": "Federal Trade Commission"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "reveal",
+   "narration": "Uber called it a bug bounty, a reward for finding flaws. Its usual top bounty was $10,000.",
+   "visuals": [
+    {
+     "at": "a bug bounty",
+     "kind": "object",
+     "icon": "bug",
+     "text": "Paid via HackerOne"
+    },
+    {
+     "at": "usual top bounty",
+     "kind": "split",
+     "left": "Top bounty: $10,000",
+     "right": "This payout: $100,000"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "shock",
+   "narration": "A year later, Uber's new boss revealed everything.",
+   "visuals": [
+    {
+     "at": "Uber's new boss",
+     "kind": "office",
+     "who": "exec",
+     "action": "type",
+     "screen": "Nov 21, 2017"
+    },
+    {
+     "at": "revealed everything",
+     "kind": "headline",
+     "text": "Uber admits hiding 2016 breach"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "sad",
+   "narration": "In 2022, a jury convicted Sullivan of obstruction and hiding a felony. He got probation.",
+   "visuals": [
+    {
+     "at": "a jury convicted Sullivan",
+     "kind": "dossier",
+     "title": "Joe Sullivan",
+     "rows": [
+      [
+       "Convicted",
+       "Oct 2022"
+      ],
+      [
+       "Charges",
+       "Obstruction, misprision"
+      ],
+      [
+       "Sentenced",
+       "May 2023"
+      ]
+     ]
+    },
+    {
+     "at": "He got probation",
+     "kind": "counter",
+     "value": 3,
+     "suffix": " years",
+     "label": "probation"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "reveal",
+   "narration": "The cover-up became the crime.",
+   "visuals": [
+    {
+     "at": "The cover-up became",
+     "kind": "lock",
+     "state": "crack",
+     "text": "Secret exposed"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Uber paid the hackers $100,000 in bitcoin in December 2016; they signed NDAs falsely stating no data was taken; the breach exposed about 57 million users and drivers",
+   "source": "https://www.justice.gov/usao-ndca/pr/former-chief-security-officer-uber-convicted-federal-charges-covering-data-breach",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Sullivan testified to the FTC on November 4, 2016; the hackers contacted him on November 14, 2016",
+   "source": "https://www.justice.gov/usao-ndca/pr/former-chief-security-officer-uber-convicted-federal-charges-covering-data-breach",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Attackers used credentials found in a GitHub repository to reach an AWS S3 backup; Uber paid through its HackerOne bug bounty program; CEO Dara Khosrowshahi disclosed it November 21, 2017",
+   "source": "https://www.securityweek.com/hackers-florida-canada-behind-2016-uber-breach/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The $100,000 was allegedly disguised as a bug bounty; Uber's highest bounty at the time was $10,000; Sullivan got three years of probation in May 2023",
+   "source": "https://www.theregister.com/2023/05/04/uber_cso_joe_sullivan_sentenced/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "A jury convicted Sullivan in October 2022 of obstruction of FTC proceedings and misprision of a felony",
+   "source": "https://www.justice.gov/usao-ndca/pr/former-chief-security-officer-uber-convicted-federal-charges-covering-data-breach",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.justice.gov/usao-ndca/pr/former-chief-security-officer-uber-convicted-federal-charges-covering-data-breach",
+  "https://www.securityweek.com/hackers-florida-canada-behind-2016-uber-breach/",
+  "https://www.theregister.com/2023/05/04/uber_cso_joe_sullivan_sentenced/"
+ ],
+ "seo": {
+  "title": "Uber Breach Cover-Up: The Secret $100,000 Bug Bounty",
+  "description": "In 2016 hackers stole data on 57 million Uber riders and drivers. Uber paid them $100,000 and called it a bug bounty, and its security chief was later convicted. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "Uber paid hackers $100,000 to keep a breach secret.\nA year later, the truth came out.\n#cybersecurity #truecrime #databreach",
+  "first_comment": "Should security chiefs go to prison for hiding a breach? What would you have done?",
+  "thumb": {
+   "text": "UBER PAID HACKERS $100,000",
+   "hl": "$100,000",
+   "visual": 0
+  }
+ }
+}

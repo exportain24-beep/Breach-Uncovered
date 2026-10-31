@@ -1,0 +1,246 @@
+{
+ "episode": 12,
+ "key": "joanap",
+ "title": "Joanap: the FBI maps a hidden botnet",
+ "year": 2019,
+ "category": "state",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] The FBI pretended to be infected computers to map a botnet.",
+   "visuals": [
+    {
+     "at": "The FBI pretended",
+     "kind": "building",
+     "type": "fbi",
+     "name": "FBI Los Angeles"
+    },
+    {
+     "at": "infected computers",
+     "kind": "network",
+     "text": "Joanap botnet"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "curious",
+   "narration": "A botnet is an army of hijacked computers. This one, Joanap, was blamed on North Korea.",
+   "visuals": [
+    {
+     "at": "army of hijacked computers",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Hijacked Windows PCs"
+    },
+    {
+     "at": "This one, Joanap",
+     "kind": "dossier",
+     "title": "Joanap",
+     "rows": [
+      [
+       "Type",
+       "Peer-to-peer botnet"
+      ],
+      [
+       "Active since",
+       "2009"
+      ],
+      [
+       "Spread by",
+       "Brambul worm"
+      ]
+     ]
+    },
+    {
+     "at": "blamed on North Korea",
+     "kind": "globe",
+     "points": [
+      [
+       "Pyongyang",
+       39.0,
+       125.8
+      ],
+      [
+       "Los Angeles",
+       34.1,
+       -118.2
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "A worm called Brambul spread it. Infected PCs gave hackers full control.",
+   "visuals": [
+    {
+     "at": "A worm called Brambul",
+     "kind": "object",
+     "icon": "bug",
+     "text": "Brambul worm"
+    },
+    {
+     "at": "gave hackers full control",
+     "kind": "hacker",
+     "screen": "root access",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "curious",
+   "narration": "Joanap had no boss computer. Victims talked to each other.",
+   "visuals": [
+    {
+     "at": "no boss computer",
+     "kind": "split",
+     "left": "Usual: one boss server",
+     "right": "Joanap: peer to peer"
+    },
+    {
+     "at": "talked to each other",
+     "kind": "network",
+     "text": "Peers talk directly"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "In 2019, agents got court approval. With Air Force investigators, the FBI ran fake infected computers. Real victims connected.",
+   "visuals": [
+    {
+     "at": "got court approval",
+     "kind": "timeline",
+     "items": [
+      [
+       "2009",
+       "Botnet active"
+      ],
+      [
+       "Jan 30, 2019",
+       "DOJ announces mapping"
+      ]
+     ]
+    },
+    {
+     "at": "Air Force investigators",
+     "kind": "people",
+     "who": [
+      "agent",
+      "agentF",
+      "soldier"
+     ],
+     "action": "talk",
+     "label": "FBI and AFOSI"
+    },
+    {
+     "at": "ran fake infected computers",
+     "kind": "servers",
+     "state": "ok",
+     "label": "Decoy peers"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "hopeful",
+   "narration": "That showed who was infected. Victims were warned through internet providers and governments.",
+   "visuals": [
+    {
+     "at": "who was infected",
+     "kind": "terminal",
+     "lines": [
+      "log: IP address",
+      "log: port number",
+      "log: timestamp"
+     ]
+    },
+    {
+     "at": "through internet providers",
+     "kind": "phone",
+     "app": "alert",
+     "from": "Your ISP",
+     "text": "Your PC may be infected"
+    },
+    {
+     "at": "and governments",
+     "kind": "building",
+     "type": "government",
+     "name": "Foreign governments"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "reveal",
+   "narration": "U.S. prosecutors had already charged a North Korean programmer. To beat the army, the FBI joined it.",
+   "visuals": [
+    {
+     "at": "already charged a North Korean",
+     "kind": "stamp",
+     "text": "CHARGED"
+    },
+    {
+     "at": "the FBI joined it",
+     "kind": "object",
+     "icon": "shield",
+     "text": "Botnet mapped"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "On January 30, 2019 the Justice Department announced a court-authorized effort to map and disrupt the Joanap botnet, using search warrants and court orders under Rule 41",
+   "source": "https://www.justice.gov/usao-cdca/pr/justice-department-announces-court-authorized-efforts-map-and-disrupt-botnet-used-north",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Joanap gives root-level remote control of Windows computers, is peer-to-peer with no central server, is spread by the Brambul worm, and has operated since 2009",
+   "source": "https://www.justice.gov/usao-cdca/pr/justice-department-announces-court-authorized-efforts-map-and-disrupt-botnet-used-north",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The FBI and the Air Force Office of Special Investigations ran servers that mimicked infected peers, collecting IP addresses, ports and timestamps to map the botnet",
+   "source": "https://www.justice.gov/usao-cdca/pr/justice-department-announces-court-authorized-efforts-map-and-disrupt-botnet-used-north",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "U.S. victims were notified through their ISPs; foreign victims through their governments",
+   "source": "https://cyberscoop.com/joanap-botnet-north-korea-department-of-justice/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "U.S. officials attributed Joanap to the North Korean government; North Korean programmer Park Jin Hyok was charged in 2018 in a complaint alleging a conspiracy that used Brambul",
+   "source": "https://cyberscoop.com/joanap-botnet-north-korea-department-of-justice/",
+   "confidence": "alleged"
+  }
+ ],
+ "sources": [
+  "https://www.justice.gov/usao-cdca/pr/justice-department-announces-court-authorized-efforts-map-and-disrupt-botnet-used-north",
+  "https://cyberscoop.com/joanap-botnet-north-korea-department-of-justice/"
+ ],
+ "seo": {
+  "title": "Joanap Botnet: How the FBI Posed as Victims to Map North Korea's Army",
+  "description": "In 2019 the FBI and Air Force investigators, with court approval, ran fake infected computers inside the Joanap botnet. It revealed the victims of a network U.S. officials blame on North Korea. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "The FBI pretended to be infected computers to map a botnet.\nThis is how they found Joanap's victims.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Should the FBI be allowed to join a botnet to find its victims? Where would you draw the line?",
+  "thumb": {
+   "text": "THE FBI JOINED THE BOTNET",
+   "hl": "JOINED",
+   "visual": 11
+  }
+ }
+}

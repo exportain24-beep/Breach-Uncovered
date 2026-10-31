@@ -1,0 +1,288 @@
+{
+ "episode": 101,
+ "key": "binance2026",
+ "title": "Binance 2026 — the $6.3 billion hot-wallet attack",
+ "year": 2026,
+ "category": "finance",
+ "needs_review": false,
+ "priority": true,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] Binance says one attack hit 6.3 billion dollars in crypto. Trackers call it a record.",
+   "visuals": [
+    {
+     "at": "6.3 billion dollars",
+     "kind": "counter",
+     "value": 6.3,
+     "prefix": "$",
+     "suffix": "B",
+     "label": "Binance estimate"
+    },
+    {
+     "at": "Trackers call it",
+     "kind": "headline",
+     "text": "Record crypto theft, Oct 2026"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "tense",
+   "narration": "On October 29, money poured out of Binance's wallets, across many blockchains.",
+   "visuals": [
+    {
+     "at": "On October 29",
+     "kind": "object",
+     "icon": "bitcoin",
+     "text": "Thursday, October 29"
+    },
+    {
+     "at": "poured out of Binance's",
+     "kind": "flow",
+     "nodes": [
+      "Binance wallets",
+      "Attacker addresses"
+     ],
+     "amount": "$6.3B",
+     "blocked": false
+    },
+    {
+     "at": "across many blockchains",
+     "kind": "network",
+     "text": "About 43 attacker wallets",
+     "total": 43
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "curious",
+   "narration": "Binance says it may have started with one engineer's hacked laptop. Then it found more breaches.",
+   "visuals": [
+    {
+     "at": "may have started",
+     "kind": "office",
+     "who": "engineer",
+     "action": "type",
+     "screen": "DevOps laptop"
+    },
+    {
+     "at": "one engineer's hacked laptop",
+     "kind": "object",
+     "icon": "laptop",
+     "text": "Possible entry point"
+    },
+    {
+     "at": "found more breaches",
+     "kind": "lock",
+     "state": "crack",
+     "text": "Wider breach found"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "Deposits and withdrawals stopped. Bitcoin fell below 77,000 dollars.",
+   "visuals": [
+    {
+     "at": "Deposits and withdrawals stopped",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Withdrawals paused"
+    },
+    {
+     "at": "Bitcoin fell below",
+     "kind": "counter",
+     "value": 77000,
+     "prefix": "$",
+     "label": "Bitcoin, October 30"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "The twist? Many stolen coins were stablecoins, crypto tied to the dollar. Issuers can freeze those. Tether and Circle froze over 2.3 billion.",
+   "visuals": [
+    {
+     "at": "The twist",
+     "kind": "split",
+     "left": "Bitcoin: no freeze button",
+     "right": "Stablecoins: issuer can freeze"
+    },
+    {
+     "at": "Issuers can freeze those",
+     "kind": "lock",
+     "state": "locked",
+     "text": "Tether: $1.567B frozen"
+    },
+    {
+     "at": "Tether and Circle froze",
+     "kind": "flow",
+     "nodes": [
+      "Attacker",
+      "Tether $1.567B",
+      "Circle $800M"
+     ],
+     "amount": "$2.37B frozen",
+     "blocked": true
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "hopeful",
+   "narration": "Binance says about 3 billion is frozen. It promises to cover every loss.",
+   "visuals": [
+    {
+     "at": "3 billion is frozen",
+     "kind": "counter",
+     "value": 3,
+     "prefix": "$",
+     "suffix": "B",
+     "label": "frozen, per Binance"
+    },
+    {
+     "at": "It promises",
+     "kind": "people",
+     "who": [
+      "exec",
+      "workerF"
+     ],
+     "action": "talk",
+     "label": "Co-CEO Richard Teng"
+    },
+    {
+     "at": "cover every loss",
+     "kind": "object",
+     "icon": "shield",
+     "text": "SAFU fund plus company money"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "tense",
+   "narration": "No one is officially blamed. Billions are still out there.",
+   "visuals": [
+    {
+     "at": "officially blamed",
+     "kind": "dossier",
+     "title": "Attacker: unknown",
+     "rows": [
+      [
+       "Official blame",
+       "None yet"
+      ],
+      [
+       "Police",
+       "Engaged"
+      ],
+      [
+       "Still free",
+       "Over $3B, Elliptic"
+      ]
+     ]
+    },
+    {
+     "at": "billions are still out",
+     "kind": "globe",
+     "points": [
+      [
+       "Asia",
+       25.0,
+       115.0
+      ],
+      [
+       "Europe",
+       50.0,
+       10.0
+      ],
+      [
+       "Americas",
+       38.0,
+       -95.0
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Binance said on Oct 29, 2026 the security incident had an estimated total impact of about $6.3 billion, with about $3 billion already frozen",
+   "source": "https://www.foxbusiness.com/technology/binance-says-security-incident-had-estimated-6-3b-impact-3b-assets-frozen",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Investigators/blockchain trackers describe it as the largest crypto theft on record, above Bybit's ~$1.5B in Feb 2025",
+   "source": "https://finance.yahoo.com/markets/article/bitcoin-drops-to-76000-as-binance-hack-spooks-investors-tether-circle-freeze-assets-083406383.html",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Funds were drained across multiple blockchains; Elliptic said the attacker controlled about $3.33B across roughly 43 wallets",
+   "source": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Binance said the incident may involve a compromised DevOps engineer's laptop that let an attacker access a service container; later said it uncovered additional points of breach",
+   "source": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Binance temporarily suspended deposits and withdrawals",
+   "source": "https://www.foxbusiness.com/technology/binance-says-security-incident-had-estimated-6-3b-impact-3b-assets-frozen",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Bitcoin fell about 5% to below $77,000 on Friday Oct 30",
+   "source": "https://finance.yahoo.com/markets/article/bitcoin-drops-to-76000-as-binance-hack-spooks-investors-tether-circle-freeze-assets-083406383.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Tether froze more than 1.567 billion USDT and Circle froze 800 million USDC tied to the incident",
+   "source": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Binance said users will not bear the financial impact and it will cover all losses via SAFU and company funds; co-CEO Richard Teng: 'We are committed to covering all hacked losses through our company funds'",
+   "source": "https://finance.yahoo.com/markets/article/bitcoin-drops-to-76000-as-binance-hack-spooks-investors-tether-circle-freeze-assets-083406383.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Teng: 'Our investigation has not attributed responsibility to any individual'; Binance engaged law enforcement. Private firms' attributions are not official and are omitted",
+   "source": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Binance found additional breaches beyond the laptop and aimed to resume withdrawals by Sunday",
+   "source": "https://cryptonews.net/news/security/33678716/",
+   "confidence": "reported"
+  }
+ ],
+ "sources": [
+  "https://www.foxbusiness.com/technology/binance-says-security-incident-had-estimated-6-3b-impact-3b-assets-frozen",
+  "https://finance.yahoo.com/markets/article/bitcoin-drops-to-76000-as-binance-hack-spooks-investors-tether-circle-freeze-assets-083406383.html",
+  "https://thehackernews.com/2026/10/binance-suffers-security-breach.html"
+ ],
+ "seo": {
+  "title": "Binance Hack: The $6.3 Billion Crypto Attack Explained",
+  "description": "On October 29, 2026, Binance said a security incident hit about $6.3 billion in crypto. Stablecoin issuers froze billions, and Binance says it will cover every loss. #cybersecurity #crypto #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#crypto",
+   "#shorts"
+  ],
+  "facebook_text": "Binance says one attack hit $6.3 billion in crypto.\nAbout $3 billion was frozen. Billions are still out there.\n#cybersecurity #crypto #binance",
+  "first_comment": "Should crypto have a freeze button, or does that defeat the whole point?",
+  "thumb": {
+   "text": "$6.3 BILLION HIT BINANCE",
+   "hl": "$6.3 BILLION",
+   "visual": 0
+  }
+ }
+}

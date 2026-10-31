@@ -1,0 +1,96 @@
+{
+ "episode": 8,
+ "key": "stuxnet",
+ "title": "Stuxnet: the first digital weapon",
+ "year": 2010,
+ "category": "infra",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] A computer worm secretly broke machines inside Iran's nuclear program.",
+   "visuals": [
+    {"at": "A computer worm", "kind": "object", "icon": "bug", "text": "Stuxnet"},
+    {"at": "Iran's nuclear program", "kind": "building", "type": "government", "name": "Iran nuclear program"}
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "The target was Natanz, where centrifuges, fast spinning machines, enriched uranium.",
+   "visuals": [
+    {"at": "The target was Natanz", "kind": "dossier", "title": "Natanz", "rows": [["Country", "Iran"], ["Job", "Enrich uranium"]]},
+    {"at": "fast spinning machines", "kind": "people", "who": ["engineer", "worker"], "action": "walk", "label": "Centrifuge hall"}
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "It probably arrived on a USB stick. It hunted Siemens controllers, boxes that run machines.",
+   "visuals": [
+    {"at": "a USB stick", "kind": "object", "icon": "usb", "text": "Infected drive"},
+    {"at": "It hunted Siemens controllers", "kind": "terminal", "lines": ["looking for Siemens controller", "match found", "waiting"]},
+    {"at": "boxes that run machines", "kind": "office", "who": "engineer", "action": "type", "screen": "Controller: running"}
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "Then it made centrifuges spin wrong, while screens showed everything normal.",
+   "visuals": [
+    {"at": "made centrifuges spin wrong", "kind": "servers", "state": "alarm", "label": "Centrifuges failing"},
+    {"at": "screens showed everything normal", "kind": "split", "left": "Real: spinning wrong", "right": "Screen: all normal"}
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "sad",
+   "narration": "Experts say Iran replaced about 1,000 centrifuges around early 2010.",
+   "visuals": [
+    {"at": "about 1,000 centrifuges", "kind": "counter", "value": 1000, "label": "centrifuges replaced"},
+    {"at": "around early 2010", "kind": "timeline", "items": [["Late 2009", "Centrifuges replaced"], ["2010", "Worm discovered"]]}
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "That year, the worm escaped onto computers worldwide. Security experts in Belarus were called to help.",
+   "visuals": [
+    {"at": "escaped onto computers worldwide", "kind": "network", "text": "Spreading beyond Iran"},
+    {"at": "experts in Belarus", "kind": "globe", "points": [["Minsk", 53.9, 27.6], ["Tehran", 35.7, 51.4]]}
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "curious",
+   "narration": "Reports say the U.S. and Israel built it. Neither has ever admitted it. Code had become a weapon.",
+   "visuals": [
+    {"at": "Reports say", "kind": "headline", "text": "NYT: operation Olympic Games"},
+    {"at": "Neither has ever admitted", "kind": "stamp", "text": "CLASSIFIED"},
+    {"at": "Code had become a weapon", "kind": "object", "icon": "skull", "text": "Digital weapon"}
+   ]
+  }
+ ],
+ "facts": [
+  {"claim": "Stuxnet was designed to arrive on a removable drive such as a USB stick, targeted specific Siemens PLCs controlling uranium-enrichment centrifuges, made them spin erratically while reporting normal readings to operators", "source": "https://www.csoonline.com/article/3218104/malware/what-is-stuxnet-who-created-it-and-how-does-it-work.html", "confidence": "reported"},
+  {"claim": "Stuxnet came to light in 2010 after an office in Iran asked Belarusian Sergey Ulasen of antivirus firm VirusBlokAda for help with rebooting computers", "source": "https://www.csoonline.com/article/3218104/malware/what-is-stuxnet-who-created-it-and-how-does-it-work.html", "confidence": "reported"},
+  {"claim": "ISIS (Institute for Science and International Security) reported that Iran replaced about 1,000 centrifuges at the Natanz Fuel Enrichment Plant in late 2009 or early 2010 and that Stuxnet is a reasonable explanation", "source": "https://isis-online.org/isis-reports/did-stuxnet-take-out-1000-centrifuges-at-the-natanz-enrichment-plant/", "confidence": "reported"},
+  {"claim": "The New York Times (2012) reported the operation 'Olympic Games', begun under Bush and accelerated under Obama; an element of it accidentally became public in summer 2010", "source": "https://www.npr.org/sections/thetwo-way/2012/06/01/154127061/obama-sped-up-wave-of-cyberattacks-against-iran-says-nyt", "confidence": "reported"},
+  {"claim": "It is widely believed that U.S. and Israeli intelligence created Stuxnet; neither government has officially acknowledged it", "source": "https://www.csoonline.com/article/3218104/malware/what-is-stuxnet-who-created-it-and-how-does-it-work.html", "confidence": "alleged"}
+ ],
+ "sources": [
+  "https://www.csoonline.com/article/3218104/malware/what-is-stuxnet-who-created-it-and-how-does-it-work.html",
+  "https://isis-online.org/isis-reports/did-stuxnet-take-out-1000-centrifuges-at-the-natanz-enrichment-plant/",
+  "https://www.npr.org/sections/thetwo-way/2012/06/01/154127061/obama-sped-up-wave-of-cyberattacks-against-iran-says-nyt"
+ ],
+ "seo": {
+  "title": "Stuxnet: The Computer Worm That Broke Iran's Nuclear Machines",
+  "description": "Stuxnet was a hidden program that made Iran's uranium centrifuges spin wrong while screens showed all was normal. Reports say the U.S. and Israel built it, but neither has admitted it. #cybersecurity #truecrime #shorts",
+  "hashtags": ["#cybersecurity", "#truecrime", "#shorts"],
+  "facebook_text": "A computer worm secretly broke machines inside Iran's nuclear program.\nScreens showed everything was normal.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Should countries be allowed to use computer code as a weapon? What do you think?",
+  "thumb": {"text": "A WORM BROKE NUCLEAR MACHINES", "hl": "NUCLEAR MACHINES", "visual": 7}
+ }
+}

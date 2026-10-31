@@ -1,0 +1,247 @@
+{
+ "episode": 11,
+ "key": "heartbleed",
+ "title": "Heartbleed: the bug that leaked the internet's memory",
+ "year": 2014,
+ "category": "vuln",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] One missed check left the internet's locks leaking for two years.",
+   "visuals": [
+    {
+     "at": "One missed check",
+     "kind": "lock",
+     "state": "crack",
+     "text": "OpenSSL"
+    },
+    {
+     "at": "leaking for two years",
+     "kind": "timeline",
+     "items": [
+      [
+       "Dec 31, 2011",
+       "Bug added"
+      ],
+      [
+       "Apr 7, 2014",
+       "Bug revealed"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "OpenSSL is free code that keeps websites secure. On New Year's Eve 2011, a programmer made a tiny mistake.",
+   "visuals": [
+    {
+     "at": "free code that keeps",
+     "kind": "terminal",
+     "lines": [
+      "openssl version",
+      "OpenSSL 1.0.1"
+     ]
+    },
+    {
+     "at": "New Year's Eve 2011",
+     "kind": "object",
+     "icon": "calendar",
+     "text": "Dec 31, 2011"
+    },
+    {
+     "at": "made a tiny mistake",
+     "kind": "office",
+     "who": "engineer",
+     "action": "type",
+     "screen": "Heartbeat feature"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "curious",
+   "narration": "Nobody noticed. In April 2014, Google and Codenomicon researchers found it. Its name: Heartbleed.",
+   "visuals": [
+    {
+     "at": "Nobody noticed",
+     "kind": "people",
+     "who": [
+      "engineer",
+      "worker"
+     ],
+     "action": "talk",
+     "label": "Reviewed, still missed"
+    },
+    {
+     "at": "Google and Codenomicon",
+     "kind": "headline",
+     "text": "Two teams find it independently"
+    },
+    {
+     "at": "Its name: Heartbleed",
+     "kind": "dossier",
+     "title": "Heartbleed",
+     "rows": [
+      [
+       "ID",
+       "CVE-2014-0160"
+      ],
+      [
+       "Software",
+       "OpenSSL 1.0.1"
+      ],
+      [
+       "Fixed in",
+       "1.0.1g"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "Servers could be tricked into spilling memory, even secret keys. About 17 percent of secure websites were exposed.",
+   "visuals": [
+    {
+     "at": "spilling memory",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "64 KB per leak"
+    },
+    {
+     "at": "even secret keys",
+     "kind": "object",
+     "icon": "key",
+     "text": "Private keys"
+    },
+    {
+     "at": "About 17 percent",
+     "kind": "counter",
+     "value": 17,
+     "suffix": "%",
+     "label": "secure sites exposed"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "sad",
+   "narration": "Canada's tax agency lost data on about 900 people. It shut its online services.",
+   "visuals": [
+    {
+     "at": "Canada's tax agency",
+     "kind": "building",
+     "type": "government",
+     "name": "Canada Revenue Agency"
+    },
+    {
+     "at": "about 900 people",
+     "kind": "counter",
+     "value": 900,
+     "label": "SINs stolen in 6 hours"
+    },
+    {
+     "at": "shut its online services",
+     "kind": "lock",
+     "state": "locked",
+     "text": "Tax site offline"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "Police charged a 19-year-old from London, Ontario.",
+   "visuals": [
+    {
+     "at": "Police charged a 19-year-old",
+     "kind": "people",
+     "who": [
+      "police",
+      "student"
+     ],
+     "action": "arrest",
+     "label": "RCMP, April 2014"
+    },
+    {
+     "at": "London, Ontario",
+     "kind": "stamp",
+     "text": "CHARGED"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "hopeful",
+   "narration": "One forgotten check put half a million trusted websites at risk.",
+   "visuals": [
+    {
+     "at": "One forgotten check",
+     "kind": "network",
+     "text": "Patching to 1.0.1g"
+    },
+    {
+     "at": "half a million trusted websites",
+     "kind": "object",
+     "icon": "shield",
+     "text": "500,000 certificates at risk"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "The Heartbleed code was committed on New Year's Eve 2011 and disclosed on April 7, 2014; fixed in OpenSSL 1.0.1g",
+   "source": "https://www.netcraft.com/blog/half-a-million-widely-trusted-websites-vulnerable-to-heartbleed-bug",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "About 17% (around half a million) of trusted SSL websites were vulnerable; up to 64 KB of memory could leak, including private keys",
+   "source": "https://www.netcraft.com/blog/half-a-million-widely-trusted-websites-vulnerable-to-heartbleed-bug",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Programmer Robin Seggelmann wrote the code by mistake ('I missed validating a variable containing a length'); a reviewer also missed it; Google and Codenomicon researchers found it independently",
+   "source": "https://globalnews.ca/news/1265777/meet-the-man-who-broke-the-internet/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The Canada Revenue Agency said about 900 people's social insurance numbers were stolen over six hours; it had shut down online services",
+   "source": "https://www.nbcnews.com/tech/security/hundreds-canadian-tax-id-numbers-stolen-heartbleed-breach-n80241",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The RCMP charged Stephen Solis-Reyes, 19, of London, Ontario, with unauthorized use of a computer and mischief in relation to data",
+   "source": "https://www.nbcnews.com/tech/security/man-charged-heartbleed-attack-canada-tax-agency-n82391",
+   "confidence": "alleged"
+  }
+ ],
+ "sources": [
+  "https://www.netcraft.com/blog/half-a-million-widely-trusted-websites-vulnerable-to-heartbleed-bug",
+  "https://globalnews.ca/news/1265777/meet-the-man-who-broke-the-internet/",
+  "https://www.nbcnews.com/tech/security/hundreds-canadian-tax-id-numbers-stolen-heartbleed-breach-n80241",
+  "https://www.nbcnews.com/tech/security/man-charged-heartbleed-attack-canada-tax-agency-n82391"
+ ],
+ "seo": {
+  "title": "Heartbleed: How One Missed Check Exposed Half a Million Websites",
+  "description": "In 2014 researchers revealed Heartbleed, a two-year-old mistake in OpenSSL, the free code that secures much of the web. Canada's tax agency lost data on about 900 people before it shut its site. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "One missed check left the internet's locks leaking for two years.\nThis is the story of Heartbleed.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Did you change your passwords back in 2014? Who should pay to check the free code the internet runs on?",
+  "thumb": {
+   "text": "ONE BUG, HALF A MILLION SITES",
+   "hl": "HALF A MILLION",
+   "visual": 8
+  }
+ }
+}

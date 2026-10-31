@@ -1,0 +1,269 @@
+{
+ "episode": 7,
+ "key": "yahoo",
+ "title": "Yahoo: half a billion accounts and the FSB",
+ "year": 2014,
+ "category": "breach",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] Two Russian spy officers were charged over a giant Yahoo hack.",
+   "visuals": [
+    {
+     "at": "Two Russian spy officers",
+     "kind": "stamp",
+     "text": "CHARGED"
+    },
+    {
+     "at": "a giant Yahoo hack",
+     "kind": "building",
+     "type": "office",
+     "name": "Yahoo"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "tense",
+   "narration": "In early 2014, one Yahoo worker clicked a fake email. That was the way in.",
+   "visuals": [
+    {
+     "at": "one Yahoo worker clicked",
+     "kind": "office",
+     "who": "worker",
+     "action": "type",
+     "screen": "Early 2014"
+    },
+    {
+     "at": "a fake email",
+     "kind": "email",
+     "from": "Unknown sender",
+     "subject": "Please review",
+     "line": "Click this link"
+    },
+    {
+     "at": "That was the way in",
+     "kind": "hacker",
+     "screen": "inside Yahoo",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "Hackers stole a copy of Yahoo's user database. 500 million accounts.",
+   "visuals": [
+    {
+     "at": "stole a copy",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Backup copied Dec 2014"
+    },
+    {
+     "at": "500 million accounts",
+     "kind": "counter",
+     "value": 500,
+     "suffix": "M",
+     "label": "accounts exposed"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "curious",
+   "narration": "They forged cookies, small files that keep you logged in. Inboxes opened without passwords.",
+   "visuals": [
+    {
+     "at": "They forged cookies",
+     "kind": "object",
+     "icon": "key",
+     "text": "Fake login cookie"
+    },
+    {
+     "at": "without passwords",
+     "kind": "lock",
+     "state": "open",
+     "text": "6,500 accounts targeted"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "Targets included Russian journalists and officials. Yahoo told the world in September 2016.",
+   "visuals": [
+    {
+     "at": "Targets included Russian journalists",
+     "kind": "people",
+     "who": [
+      "worker",
+      "workerF",
+      "exec"
+     ],
+     "action": "shock",
+     "label": "Journalists and officials"
+    },
+    {
+     "at": "told the world",
+     "kind": "headline",
+     "text": "Yahoo: 500 million accounts stolen"
+    },
+    {
+     "at": "in September 2016",
+     "kind": "timeline",
+     "items": [
+      [
+       "2014",
+       "Data stolen"
+      ],
+      [
+       "Sep 2016",
+       "Yahoo discloses"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "shock",
+   "narration": "In 2017, U.S. prosecutors charged two FSB officers and two hackers. Only Canadian Karim Baratov was arrested.",
+   "visuals": [
+    {
+     "at": "U.S. prosecutors charged",
+     "kind": "dossier",
+     "title": "Dmitry Dokuchaev, Igor Sushchin",
+     "rows": [
+      [
+       "Agency",
+       "Russia's FSB"
+      ],
+      [
+       "Charged",
+       "March 2017"
+      ],
+      [
+       "Hacker",
+       "Alexsey Belan"
+      ]
+     ]
+    },
+    {
+     "at": "Only Canadian Karim Baratov",
+     "kind": "globe",
+     "points": [
+      [
+       "Moscow",
+       55.8,
+       37.6
+      ],
+      [
+       "Canada",
+       43.7,
+       -79.4
+      ],
+      [
+       "San Francisco",
+       37.8,
+       -122.4
+      ]
+     ]
+    },
+    {
+     "at": "was arrested",
+     "kind": "people",
+     "who": [
+      "police",
+      "hacker"
+     ],
+     "action": "arrest",
+     "label": "Arrested in Canada"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "He got five years. One click had opened half a billion accounts.",
+   "visuals": [
+    {
+     "at": "He got five years",
+     "kind": "counter",
+     "value": 5,
+     "suffix": " years",
+     "label": "Baratov, May 2018"
+    },
+    {
+     "at": "One click had opened",
+     "kind": "lock",
+     "state": "crack",
+     "text": "500,000,000 accounts"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "A spear-phishing email sent in early 2014 to a Yahoo employee gave the hackers their way in; a backup copy of the user database was stolen in December 2014",
+   "source": "https://www.csoonline.com/article/560623/inside-the-russian-hack-of-yahoo-how-they-did-it.html",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "The stolen data covered about 500 million accounts; the hackers could forge authentication cookies giving access without a password, and used Yahoo's Account Management Tool to access at least 6,500 accounts",
+   "source": "https://www.welivesecurity.com/2017/03/16/us-charges-russian-fsb-officials-connection-massive-yahoo-security-breach/",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Targets included Russian journalists and Russian and U.S. government officials",
+   "source": "https://www.welivesecurity.com/2017/03/16/us-charges-russian-fsb-officials-connection-massive-yahoo-security-breach/",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Yahoo announced on September 22, 2016 that data from at least 500 million accounts was stolen in 2014, blaming a state-sponsored actor",
+   "source": "https://fortune.com/2016/09/22/yahoo-hack",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The DOJ indicted FSB officers Dmitry Dokuchaev and Igor Sushchin, hacker Alexsey Belan and Karim Baratov",
+   "source": "https://www.justice.gov/usao-ndca/us-v-dmitry-dokuchaev-et-al",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Charges were announced in March 2017; Baratov, a Canadian national, was arrested in Canada that month and was the only one of the four arrested; on May 29, 2018 he was sentenced to five years in prison",
+   "source": "https://www.voanews.com/a/canadian-who-aided-yahoo-email-hackers-gets-5-year-term/4415160.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Baratov pleaded guilty to nine felony hacking charges and got 60 months in prison",
+   "source": "https://www.techtarget.com/cybersecurity/news/252442240/Yahoo-hacker-sentenced-to-five-years-in-prison-for-massive-breach",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.justice.gov/usao-ndca/us-v-dmitry-dokuchaev-et-al",
+  "https://www.voanews.com/a/canadian-who-aided-yahoo-email-hackers-gets-5-year-term/4415160.html",
+  "https://www.csoonline.com/article/560623/inside-the-russian-hack-of-yahoo-how-they-did-it.html",
+  "https://www.welivesecurity.com/2017/03/16/us-charges-russian-fsb-officials-connection-massive-yahoo-security-breach/",
+  "https://fortune.com/2016/09/22/yahoo-hack"
+ ],
+ "seo": {
+  "title": "Yahoo Hack: How One Click Exposed 500 Million Accounts",
+  "description": "In 2014 hackers stole data on 500 million Yahoo accounts after one employee clicked a fake email. U.S. prosecutors later charged two Russian FSB officers and two hackers. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "One click in a fake email opened half a billion Yahoo accounts.\nU.S. prosecutors charged two Russian FSB officers.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Were you a Yahoo user in 2014? Did you ever change your password after this?",
+  "thumb": {
+   "text": "ONE CLICK. 500 MILLION ACCOUNTS.",
+   "hl": "500 MILLION",
+   "visual": 6
+  }
+ }
+}

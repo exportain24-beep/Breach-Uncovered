@@ -1,0 +1,239 @@
+{
+ "episode": 18,
+ "key": "shamoon",
+ "title": "Shamoon — 30,000 Aramco computers wiped",
+ "year": 2012,
+ "category": "infra",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] One virus made over 30,000 Saudi Aramco computers useless.",
+   "visuals": [
+    {
+     "at": "One virus",
+     "kind": "object",
+     "icon": "bug",
+     "text": "Shamoon"
+    },
+    {
+     "at": "over 30,000 Saudi Aramco computers",
+     "kind": "counter",
+     "value": 30000,
+     "suffix": "+",
+     "label": "computers useless"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "On August 15, 2012, most Aramco staff were home for a holy night.",
+   "visuals": [
+    {
+     "at": "On August 15, 2012",
+     "kind": "timeline",
+     "items": [
+      [
+       "Aug 15, 2012",
+       "Night of Power eve"
+      ],
+      [
+       "11:08 a.m.",
+       "Virus strikes"
+      ]
+     ]
+    },
+    {
+     "at": "most Aramco staff",
+     "kind": "building",
+     "type": "factory",
+     "name": "Saudi Aramco"
+    },
+    {
+     "at": "home for a holy night",
+     "kind": "people",
+     "who": [
+      "worker",
+      "workerF"
+     ],
+     "action": "walk",
+     "label": "55,000 staff at home"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "That morning, Shamoon spread through the network. It wiped about three in four office computers.",
+   "visuals": [
+    {
+     "at": "Shamoon spread",
+     "kind": "terminal",
+     "lines": [
+      "host 0412: offline",
+      "host 0413: offline",
+      "host 0414: offline"
+     ]
+    },
+    {
+     "at": "through the network",
+     "kind": "network",
+     "text": "Aramco office PCs",
+     "total": 30000
+    },
+    {
+     "at": "three in four",
+     "kind": "servers",
+     "state": "dark",
+     "label": "Data overwritten"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "In place of files, screens showed a burning American flag.",
+   "visuals": [
+    {
+     "at": "a burning American flag",
+     "kind": "office",
+     "who": "engineer",
+     "action": "shock",
+     "screen": "Burning U.S. flag"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "curious",
+   "narration": "A group called the Cutting Sword of Justice claimed the attack. Experts suspected that name was a decoy.",
+   "visuals": [
+    {
+     "at": "the Cutting Sword of Justice",
+     "kind": "dossier",
+     "title": "Cutting Sword of Justice",
+     "rows": [
+      [
+       "Known before?",
+       "No"
+      ],
+      [
+       "Claim",
+       "Aramco attack"
+      ],
+      [
+       "Real?",
+       "Doubted"
+      ]
+     ]
+    },
+    {
+     "at": "a decoy",
+     "kind": "split",
+     "left": "Claimed: activists",
+     "right": "Suspected: cover story"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "Anonymous U.S. officials blamed Iran, without public proof.",
+   "visuals": [
+    {
+     "at": "blamed Iran",
+     "kind": "globe",
+     "points": [
+      [
+       "Tehran",
+       35.7,
+       51.4
+      ],
+      [
+       "Dhahran",
+       26.3,
+       50.1
+      ],
+      [
+       "Washington",
+       38.9,
+       -77.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "Aramco had to replace tens of thousands of hard drives. One wiper, a delete-everything program, emptied an oil giant's offices.",
+   "visuals": [
+    {
+     "at": "tens of thousands of hard drives",
+     "kind": "object",
+     "icon": "laptop",
+     "text": "Hard drives replaced"
+    },
+    {
+     "at": "a delete-everything program",
+     "kind": "lock",
+     "state": "crack",
+     "text": "Wiped, not ransomed"
+    },
+    {
+     "at": "an oil giant's offices",
+     "kind": "object",
+     "icon": "pipeline",
+     "text": "Saudi Aramco"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "The Shamoon outbreak struck Saudi Aramco on August 15, 2012, hitting about 30,000 workstations; a previously unknown group, the Cutting Sword of Justice, claimed it",
+   "source": "https://www.theregister.com/2012/08/29/saudi_aramco_malware_attack_analysis/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The attack began at 11:08 a.m. while more than 55,000 employees were home for Lailat al Qadr; it erased data on about three-quarters of corporate PCs and replaced it with a burning American flag; tens of thousands of hard drives were replaced; researchers saw the group name as a likely red herring",
+   "source": "https://www.nbcnews.com/id/wbna49528938",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Anonymous U.S. officials blamed Iran-based hackers; U.S. intelligence officials offered no specific evidence",
+   "source": "https://www.mprnews.org/story/2012/10/12/iran-hackers-behind-gulf-oil-cyberattacks-us-says",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Panetta said more than 30,000 infected computers were rendered useless and had to be replaced, calling it probably the most destructive attack the private sector had seen",
+   "source": "https://www.eweek.com/security/iranian-cyber-attack-is-most-destructive-to-date-says-defense-secretary/",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.theregister.com/2012/08/29/saudi_aramco_malware_attack_analysis/",
+  "https://www.nbcnews.com/id/wbna49528938",
+  "https://www.mprnews.org/story/2012/10/12/iran-hackers-behind-gulf-oil-cyberattacks-us-says",
+  "https://www.eweek.com/security/iranian-cyber-attack-is-most-destructive-to-date-says-defense-secretary/"
+ ],
+ "seo": {
+  "title": "Shamoon: The Virus That Wiped 30,000 Saudi Aramco Computers",
+  "description": "In August 2012, the Shamoon virus wiped data on more than 30,000 computers at Saudi Aramco and left a burning flag on screens. U.S. officials blamed Iran, without public proof. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "One virus made over 30,000 Saudi Aramco computers useless.\nThe screens showed a burning flag.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "If a virus wiped every computer at your job tomorrow, how long would it take to recover?",
+  "thumb": {
+   "text": "ONE VIRUS WIPED 30,000 COMPUTERS",
+   "hl": "30,000",
+   "visual": 8
+  }
+ }
+}

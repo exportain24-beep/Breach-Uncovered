@@ -1,0 +1,271 @@
+{
+ "episode": 102,
+ "key": "gmo",
+ "title": "GMO Internet — the $50 million ransom Japan refused",
+ "year": 2026,
+ "category": "ransomware",
+ "needs_review": false,
+ "priority": true,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] Hackers asked a Japanese company for 50 million dollars. It said no.",
+   "visuals": [
+    {
+     "at": "Hackers asked",
+     "kind": "hacker",
+     "screen": "Pay 8 billion yen",
+     "count": 1
+    },
+    {
+     "at": "a Japanese company",
+     "kind": "building",
+     "type": "office",
+     "name": "GMO Internet Group"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "GMO Internet rents cloud desktops, online computers, to currency traders.",
+   "visuals": [
+    {
+     "at": "rents cloud desktops",
+     "kind": "servers",
+     "state": "ok",
+     "label": "Onamae Desktop Cloud"
+    },
+    {
+     "at": "to currency traders",
+     "kind": "office",
+     "who": "workerF",
+     "action": "type",
+     "screen": "FX trading app"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "On October 20, GMO found a rogue program on customer servers.",
+   "visuals": [
+    {
+     "at": "On October 20",
+     "kind": "object",
+     "icon": "bug",
+     "text": "Unauthorized program found"
+    },
+    {
+     "at": "on customer servers",
+     "kind": "counter",
+     "value": 26739,
+     "label": "servers possibly affected"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "Then came an email demanding eight billion yen, about 50 million dollars.",
+   "visuals": [
+    {
+     "at": "Then came an email",
+     "kind": "email",
+     "from": "Attacker",
+     "subject": "Extortion demand, Oct 21",
+     "line": "Pay about ¥8 billion"
+    },
+    {
+     "at": "eight billion yen",
+     "kind": "object",
+     "icon": "bitcoin",
+     "text": "¥8B ≈ $50M"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "tense",
+   "narration": "GMO refused. It told customers to back up and unplug their PCs.",
+   "visuals": [
+    {
+     "at": "GMO refused",
+     "kind": "stamp",
+     "text": "REFUSED"
+    },
+    {
+     "at": "back up and unplug",
+     "kind": "phone",
+     "app": "alert",
+     "from": "GMO",
+     "text": "Back up, then unplug"
+    },
+    {
+     "at": "their PCs",
+     "kind": "timeline",
+     "items": [
+      [
+       "Oct 20",
+       "Malware found"
+      ],
+      [
+       "Oct 21",
+       "Ransom email"
+      ],
+      [
+       "Oct 27",
+       "Noon deadline"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "sad",
+   "narration": "The attackers posted stolen data anyway. Some traders saw trades they never made.",
+   "visuals": [
+    {
+     "at": "posted stolen data",
+     "kind": "headline",
+     "text": "GMO: customer data published"
+    },
+    {
+     "at": "trades they never made",
+     "kind": "people",
+     "who": [
+      "worker",
+      "workerF"
+     ],
+     "action": "shock",
+     "label": "OANDA Japan accounts"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "reveal",
+   "narration": "Then GMO struck back with a bounty of up to one million dollars.",
+   "visuals": [
+    {
+     "at": "struck back",
+     "kind": "split",
+     "left": "Demand: $50M",
+     "right": "Bounty: $1M"
+    },
+    {
+     "at": "up to one million",
+     "kind": "dossier",
+     "title": "GMO Cybercrime Bounty",
+     "rows": [
+      [
+       "Reward",
+       "Up to $1M"
+      ],
+      [
+       "Needs",
+       "Arrest or wanted notice"
+      ],
+      [
+       "Attacker",
+       "Not named"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "mood": "hopeful",
+   "narration": "No one is named yet. They wanted 50 million. Now there's a million-dollar bounty on them.",
+   "visuals": [
+    {
+     "at": "No one is named",
+     "kind": "lock",
+     "state": "crack",
+     "text": "Entry point still unconfirmed"
+    },
+    {
+     "at": "million-dollar bounty on them",
+     "kind": "counter",
+     "value": 1,
+     "prefix": "$",
+     "suffix": "M",
+     "label": "bounty for tips"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "GMO's Onamae.com Desktop Cloud hosts Windows desktops used for FX trading",
+   "source": "https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "On October 20, 2026, GMO confirmed a third party had installed an unauthorized program on some customers' server environments",
+   "source": "https://www.bernama.com/en/news.php?id=2626188",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "GMO counts up to 26,739 servers as potentially affected (not a confirmed count of break-ins)",
+   "source": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The hackers emailed GMO demanding about 8 billion yen (about $50 million); per CEO Masatoshi Kumagai's blog the demand was in cryptocurrency; received Oct 21",
+   "source": "https://techcrunch.com/2026/10/27/japan-internet-giant-gmo-says-hackers-posted-stolen-customer-data/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "GMO said it would not pay because it could not guarantee deletion of data; urged users to back up and disconnect before the noon deadline",
+   "source": "https://www.bernama.com/en/news.php?id=2626188",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Customers were told on Oct 27 to back up data, then disconnect, shut down and unplug PCs before noon",
+   "source": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "GMO said it believes the attacker published information linked to its customers and business (Oct 27)",
+   "source": "https://techcrunch.com/2026/10/27/japan-internet-giant-gmo-says-hackers-posted-stolen-customer-data/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "OANDA Japan confirmed a third party traded on some customer accounts using credentials believed to have come from GMO's servers",
+   "source": "https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "On Oct 28 GMO launched the GMO Cybercrime Bounty, up to $1 million for tips leading to an arrest or international wanted notice; GMO has not named a group or said how attackers got in",
+   "source": "https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+  "https://www.bernama.com/en/news.php?id=2626188",
+  "https://techcrunch.com/2026/10/27/japan-internet-giant-gmo-says-hackers-posted-stolen-customer-data/",
+  "https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html"
+ ],
+ "seo": {
+  "title": "GMO Hack: Japan Firm Refuses $50 Million Ransom, Offers $1M Bounty",
+  "description": "In October 2026, hackers broke into GMO Internet's cloud desktops for currency traders and demanded about $50 million. GMO refused, told customers to unplug their PCs, and offered a $1 million bounty. #cybersecurity #ransomware #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#ransomware",
+   "#shorts"
+  ],
+  "facebook_text": "Hackers asked a Japanese company for $50 million. It said no.\nThen it put a $1 million bounty on them.\n#cybersecurity #ransomware #japan",
+  "first_comment": "Was GMO right to refuse the ransom, even after the data was posted?",
+  "thumb": {
+   "text": "THEY REFUSED $50 MILLION RANSOM",
+   "hl": "$50 MILLION",
+   "visual": 8
+  }
+ }
+}

@@ -1,0 +1,241 @@
+{
+ "episode": 16,
+ "key": "baratov",
+ "title": "Karim Baratov — the hacker-for-hire",
+ "year": 2014,
+ "category": "profile",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] A young Canadian broke into email accounts for $100 each.",
+   "visuals": [
+    {
+     "at": "A young Canadian",
+     "kind": "hacker",
+     "screen": "Orders: 1 inbox",
+     "count": 1
+    },
+    {
+     "at": "for $100 each",
+     "kind": "counter",
+     "value": 100,
+     "prefix": "$",
+     "label": "per hacked inbox"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "curious",
+   "narration": "Karim Baratov lived in Hamilton, Ontario. He admitted breaking into over 11,000 webmail accounts.",
+   "visuals": [
+    {
+     "at": "Karim Baratov",
+     "kind": "dossier",
+     "title": "Karim Baratov",
+     "rows": [
+      [
+       "Born",
+       "Kazakhstan"
+      ],
+      [
+       "Home",
+       "Hamilton, Ontario"
+      ],
+      [
+       "Age",
+       "22 at arrest"
+      ]
+     ]
+    },
+    {
+     "at": "over 11,000 webmail accounts",
+     "kind": "network",
+     "text": "Inboxes broken into",
+     "total": 11000
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "U.S. prosecutors said one buyer was Russia's FSB, a spy agency.",
+   "visuals": [
+    {
+     "at": "one buyer",
+     "kind": "flow",
+     "nodes": [
+      "FSB officer",
+      "Baratov"
+     ],
+     "amount": "$100 per inbox",
+     "blocked": false
+    },
+    {
+     "at": "Russia's FSB, a spy agency",
+     "kind": "building",
+     "type": "government",
+     "name": "FSB, Moscow"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "reveal",
+   "narration": "The FSB was tied to the 2014 Yahoo hack of about 500 million accounts.",
+   "visuals": [
+    {
+     "at": "tied to the 2014 Yahoo hack",
+     "kind": "globe",
+     "points": [
+      [
+       "Moscow",
+       55.8,
+       37.6
+      ],
+      [
+       "Hamilton",
+       43.3,
+       -79.9
+      ],
+      [
+       "Sunnyvale",
+       37.4,
+       -122.0
+      ]
+     ]
+    },
+    {
+     "at": "about 500 million accounts",
+     "kind": "counter",
+     "value": 500,
+     "suffix": "M",
+     "label": "Yahoo users, 2014"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "curious",
+   "narration": "He owned luxury cars, including an Aston Martin.",
+   "visuals": [
+    {
+     "at": "an Aston Martin",
+     "kind": "object",
+     "icon": "car",
+     "text": "Aston Martin at 22"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "sad",
+   "narration": "In March 2017, police arrested him in Hamilton. He pleaded guilty in the U.S. that November.",
+   "visuals": [
+    {
+     "at": "police arrested him",
+     "kind": "people",
+     "who": [
+      "police",
+      "police"
+     ],
+     "action": "arrest",
+     "label": "Hamilton, March 2017"
+    },
+    {
+     "at": "He pleaded guilty",
+     "kind": "stamp",
+     "text": "CHARGED"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "In May 2018, he got five years and a $250,000 fine. Prosecutors said his $100 jobs served Russian spies.",
+   "visuals": [
+    {
+     "at": "five years",
+     "kind": "timeline",
+     "items": [
+      [
+       "Mar 2017",
+       "Arrested"
+      ],
+      [
+       "Nov 2017",
+       "Guilty plea"
+      ],
+      [
+       "May 2018",
+       "Five years"
+      ]
+     ]
+    },
+    {
+     "at": "$250,000 fine",
+     "kind": "object",
+     "icon": "money",
+     "text": "$250,000 fine"
+    },
+    {
+     "at": "served Russian spies",
+     "kind": "split",
+     "left": "$100 a job",
+     "right": "Five years prison"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Baratov, born in Kazakhstan and living in Hamilton, Ontario, charged $100 per hack, was arrested in Hamilton in March 2017 and pleaded guilty in November; he got five years and a $250,000 fine",
+   "source": "https://www.theglobeandmail.com/canada/article-canadian-hacker-sentenced-to-5-years-in-prison-for-yahoo-security",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Baratov admitted hacking more than 11,000 webmail accounts from 2010 to March 2017 and became a resource for Russia's FSB",
+   "source": "https://www.darkreading.com/attacks-breaches/hacker-sentenced-to-5-years-in-yahoo-credential-theft-case",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The 2014 Yahoo breach affected about 500 million users; Russia's FSB paid Baratov and provided stolen data",
+   "source": "https://www.cbsnews.com/amp/sanfrancisco/news/hacker-yahoo-breach-russia-sentenced",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Baratov was 22 when charged and owned an Aston Martin",
+   "source": "https://techcentral.co.za/yahoo-hacker-had-aston-martin-at-22/197580",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Sentence was handed down in May 2018",
+   "source": "https://www.darkreading.com/attacks-breaches/hacker-sentenced-to-5-years-in-yahoo-credential-theft-case",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://www.theglobeandmail.com/canada/article-canadian-hacker-sentenced-to-5-years-in-prison-for-yahoo-security",
+  "https://www.darkreading.com/attacks-breaches/hacker-sentenced-to-5-years-in-yahoo-credential-theft-case",
+  "https://www.cbsnews.com/amp/sanfrancisco/news/hacker-yahoo-breach-russia-sentenced"
+ ],
+ "seo": {
+  "title": "Karim Baratov: The $100 Hacker Who Worked for Russian Spies",
+  "description": "Karim Baratov, a young Canadian, broke into email accounts for $100 each. U.S. prosecutors said one of his buyers was Russia's FSB, linked to the 2014 Yahoo hack. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "A young Canadian hacked email accounts for $100 each.\nOne of his buyers was a Russian spy agency, prosecutors said.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Did five years fit the crime? Should hackers-for-hire face the same punishment as the spies who paid them?",
+  "thumb": {
+   "text": "$100 HACKS FOR RUSSIAN SPIES",
+   "hl": "RUSSIAN SPIES",
+   "visual": 5
+  }
+ }
+}

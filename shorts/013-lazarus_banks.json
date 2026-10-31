@@ -1,0 +1,272 @@
+{
+ "episode": 13,
+ "key": "lazarus_banks",
+ "title": "Lazarus and the billion-dollar bank campaign",
+ "year": 2015,
+ "category": "finance",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] U.S. officials called North Korea's hackers the world's leading bank robbers.",
+   "visuals": [
+    {
+     "at": "North Korea's hackers",
+     "kind": "hacker",
+     "screen": "Lazarus Group",
+     "count": 3
+    },
+    {
+     "at": "the world's leading bank robbers",
+     "kind": "headline",
+     "text": "Feb 2021: three hackers indicted"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "curious",
+   "narration": "From 2015 to 2019, one team allegedly targeted banks worldwide. Vietnam, Taiwan, Mexico, Malta and Africa.",
+   "visuals": [
+    {
+     "at": "From 2015 to 2019",
+     "kind": "timeline",
+     "items": [
+      [
+       "2015",
+       "Campaign begins"
+      ],
+      [
+       "Oct 2018",
+       "Pakistan ATM theft"
+      ],
+      [
+       "Feb 2019",
+       "Malta heist"
+      ]
+     ]
+    },
+    {
+     "at": "targeted banks worldwide",
+     "kind": "globe",
+     "points": [
+      [
+       "Hanoi",
+       21.0,
+       105.8
+      ],
+      [
+       "Mexico City",
+       19.4,
+       -99.1
+      ],
+      [
+       "Valletta",
+       35.9,
+       14.5
+      ],
+      [
+       "Taipei",
+       25.0,
+       121.5
+      ]
+     ]
+    },
+    {
+     "at": "Vietnam, Taiwan, Mexico, Malta",
+     "kind": "building",
+     "type": "bank",
+     "name": "Banks on four continents"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "They broke into bank networks and sent fake payment orders.",
+   "visuals": [
+    {
+     "at": "broke into bank networks",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Bank network breached"
+    },
+    {
+     "at": "sent fake payment orders",
+     "kind": "flow",
+     "nodes": [
+      "Hacked bank",
+      "SWIFT",
+      "Foreign accounts"
+     ],
+     "amount": "Fake orders"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "In total, they allegedly tried to steal over 1.2 billion dollars.",
+   "visuals": [
+    {
+     "at": "over 1.2 billion dollars",
+     "kind": "counter",
+     "value": 1.2,
+     "prefix": "$",
+     "suffix": "B",
+     "label": "attempted, 2015-2019"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "tense",
+   "narration": "Then came a new trick. In 2018, BankIslami in Pakistan lost 6.1 million dollars from ATMs.",
+   "visuals": [
+    {
+     "at": "Then came a new trick",
+     "kind": "split",
+     "left": "Fake transfers",
+     "right": "ATM cash-outs"
+    },
+    {
+     "at": "BankIslami in Pakistan",
+     "kind": "building",
+     "type": "bank",
+     "name": "BankIslami"
+    },
+    {
+     "at": "6.1 million dollars from ATMs",
+     "kind": "object",
+     "icon": "atm",
+     "text": "$6.1M withdrawn"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "A Canadian-American man agreed to plead guilty to laundering their money.",
+   "visuals": [
+    {
+     "at": "A Canadian-American man",
+     "kind": "dossier",
+     "title": "Ghaleb Alaumary",
+     "rows": [
+      [
+       "From",
+       "Mississauga, Canada"
+      ],
+      [
+       "Role",
+       "Money launderer"
+      ],
+      [
+       "Plea",
+       "Agreed to plead guilty"
+      ]
+     ]
+    },
+    {
+     "at": "laundering their money",
+     "kind": "object",
+     "icon": "money",
+     "text": "Pakistan, India, Malta funds"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "In 2021, three North Korean military hackers were indicted, including Park Jin Hyok. They allegedly robbed banks without walking inside.",
+   "visuals": [
+    {
+     "at": "were indicted",
+     "kind": "stamp",
+     "text": "CHARGED"
+    },
+    {
+     "at": "including Park Jin Hyok",
+     "kind": "dossier",
+     "title": "Park Jin Hyok",
+     "rows": [
+      [
+       "Also charged",
+       "Jon Chang Hyok, Kim Il"
+      ],
+      [
+       "Unit",
+       "RGB military intelligence"
+      ],
+      [
+       "Indictment",
+       "Unsealed Feb 17, 2021"
+      ]
+     ]
+    },
+    {
+     "at": "without walking inside",
+     "kind": "lock",
+     "state": "open",
+     "text": "$1.3B scheme alleged"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Assistant Attorney General John Demers called North Korea's operatives 'the world's leading bank robbers'",
+   "source": "https://www.justice.gov/opa/pr/three-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyberattacks-and",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "From 2015 to 2019 the hackers allegedly attempted to steal more than $1.2 billion from banks in Vietnam, Bangladesh, Taiwan, Mexico, Malta and Africa by breaching networks and sending fraudulent SWIFT messages",
+   "source": "https://www.bleepingcomputer.com/news/security/us-indicts-north-korean-hackers-for-stealing-13-billion/",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "In October 2018 $6.1 million was stolen from BankIslami Pakistan Limited in an ATM cash-out scheme",
+   "source": "https://www.cbsnews.com/news/north-korea-hackers-charged-justice-department",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Ghaleb Alaumary, a Canadian-American of Mississauga, Ontario, agreed to plead guilty to laundering funds from the BankIslami and Indian ATM cash-outs and the February 2019 Maltese bank heist",
+   "source": "https://www.justice.gov/opa/pr/three-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyberattacks-and",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Jon Chang Hyok, Kim Il and Park Jin Hyok, alleged members of North Korea's Reconnaissance General Bureau (Lazarus Group/APT38), were indicted; unsealed February 17, 2021; alleged scheme of more than $1.3 billion",
+   "source": "https://www.justice.gov/opa/pr/three-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyberattacks-and",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Park Jin Hyok was first charged in a complaint filed June 8, 2018, which said the group attacked several other banks from 2015 to 2018",
+   "source": "https://www.justice.gov/usao-cdca/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyberattacks",
+   "confidence": "alleged"
+  }
+ ],
+ "sources": [
+  "https://www.justice.gov/opa/pr/three-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyberattacks-and",
+  "https://www.justice.gov/usao-cdca/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyberattacks",
+  "https://www.bleepingcomputer.com/news/security/us-indicts-north-korean-hackers-for-stealing-13-billion/",
+  "https://www.cbsnews.com/news/north-korea-hackers-charged-justice-department"
+ ],
+ "seo": {
+  "title": "Lazarus Bank Hacks: North Korea's Alleged $1.2 Billion Robbery Spree",
+  "description": "U.S. prosecutors say North Korean military hackers targeted banks from Vietnam to Malta between 2015 and 2019. One ATM scheme alone took $6.1 million from a bank in Pakistan. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "U.S. officials called North Korea's hackers the world's leading bank robbers.\nThey never walked into a single bank.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Can banks ever fully stop hackers who work for a whole country? What would you change first?",
+  "thumb": {
+   "text": "THE WORLD'S LEADING BANK ROBBERS",
+   "hl": "BANK ROBBERS",
+   "visual": 7
+  }
+ }
+}

@@ -1279,5 +1279,41 @@
   "origin": "added_replacement",
   "note": "",
   "status": "pending"
+ },
+ {
+  "episode": 101,
+  "key": "binance2026",
+  "title": "Binance 2026 — the $6.3 billion hot-wallet attack",
+  "year": 2026,
+  "category": "finance",
+  "actor": "unknown",
+  "sources_from_user_file": [],
+  "origin": "weekly_news",
+  "note": "News of the week 2026-10-31",
+  "status": "pending"
+ },
+ {
+  "episode": 102,
+  "key": "gmo",
+  "title": "GMO Internet — the $50 million ransom Japan refused",
+  "year": 2026,
+  "category": "ransomware",
+  "actor": "unknown",
+  "sources_from_user_file": [],
+  "origin": "weekly_news",
+  "note": "News of the week 2026-10-31",
+  "status": "pending"
+ },
+ {
+  "episode": 103,
+  "key": "unmh",
+  "title": "UNM Health — the trauma center that turned ambulances away",
+  "year": 2026,
+  "category": "breach",
+  "actor": "unknown",
+  "sources_from_user_file": [],
+  "origin": "weekly_news",
+  "note": "News of the week 2026-10-31",
+  "status": "pending"
  }
 ]

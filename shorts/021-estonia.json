@@ -1,0 +1,256 @@
+{
+ "episode": 21,
+ "key": "estonia",
+ "title": "Estonia 2007: a nation under digital siege",
+ "year": 2007,
+ "category": "state",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] In 2007, moving one statue set off cyberattacks on a country.",
+   "visuals": [
+    {
+     "at": "moving one statue",
+     "kind": "headline",
+     "text": "Bronze Soldier moved, Tallinn"
+    },
+    {
+     "at": "cyberattacks on a country",
+     "kind": "network",
+     "text": "Estonia under attack"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "tense",
+   "narration": "In April 2007, Estonia moved a Soviet war memorial from central Tallinn. Riots broke out.",
+   "visuals": [
+    {
+     "at": "In April 2007",
+     "kind": "object",
+     "icon": "calendar",
+     "text": "April 2007"
+    },
+    {
+     "at": "a Soviet war memorial",
+     "kind": "split",
+     "left": "Estonia: symbol of occupation",
+     "right": "Russia: an insult"
+    },
+    {
+     "at": "Riots broke out",
+     "kind": "people",
+     "who": [
+      "police",
+      "worker",
+      "student"
+     ],
+     "action": "shock",
+     "label": "Riots in Tallinn"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "On April 27, the attacks began. Floods of fake traffic jammed websites. That's DDoS, a traffic jam attack.",
+   "visuals": [
+    {
+     "at": "On April 27",
+     "kind": "timeline",
+     "items": [
+      [
+       "Apr 27",
+       "Attacks begin"
+      ],
+      [
+       "May 3",
+       "First peak"
+      ],
+      [
+       "May 8-9",
+       "Victory Day wave"
+      ]
+     ]
+    },
+    {
+     "at": "Floods of fake traffic",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Fake traffic flood"
+    },
+    {
+     "at": "a traffic jam attack",
+     "kind": "terminal",
+     "lines": [
+      "request",
+      "request",
+      "request",
+      "request"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "Government, bank and newspaper websites went down.",
+   "visuals": [
+    {
+     "at": "Government, bank",
+     "kind": "building",
+     "type": "government",
+     "name": "Estonian Government"
+    },
+    {
+     "at": "newspaper websites went down",
+     "kind": "office",
+     "who": "banker",
+     "action": "shock",
+     "screen": "Site unavailable"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "tense",
+   "narration": "Another wave hit around May 9, Russia's Victory Day. The attacks lasted 22 days.",
+   "visuals": [
+    {
+     "at": "around May 9",
+     "kind": "object",
+     "icon": "calendar",
+     "text": "May 9: Victory Day"
+    },
+    {
+     "at": "lasted 22 days",
+     "kind": "counter",
+     "value": 22,
+     "suffix": " days",
+     "label": "of attacks"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "Estonia's foreign minister said much of it came from Russia. Moscow denied it. Proof never came.",
+   "visuals": [
+    {
+     "at": "Estonia's foreign minister",
+     "kind": "dossier",
+     "title": "Urmas Paet",
+     "rows": [
+      [
+       "Role",
+       "Foreign minister"
+      ],
+      [
+       "Claim",
+       "Kremlin involved"
+      ]
+     ]
+    },
+    {
+     "at": "came from Russia",
+     "kind": "flow",
+     "nodes": [
+      "Servers in Russia",
+      "Estonian websites"
+     ],
+     "amount": "Junk traffic"
+    },
+    {
+     "at": "Moscow denied it",
+     "kind": "split",
+     "left": "Tallinn: Russia did it",
+     "right": "Moscow: substantiate it"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "sad",
+   "narration": "Only one person was fined, a 20-year-old in Estonia. A whole country learned war can go online.",
+   "visuals": [
+    {
+     "at": "Only one person was fined",
+     "kind": "dossier",
+     "title": "Dmitri Galushkevich",
+     "rows": [
+      [
+       "Age",
+       "20"
+      ],
+      [
+       "Fine",
+       "About $1,620"
+      ],
+      [
+       "Target",
+       "Ruling party website"
+      ]
+     ]
+    },
+    {
+     "at": "war can go online",
+     "kind": "hacker",
+     "screen": "Estonia 2007",
+     "count": 3
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Estonia moved the Bronze Soldier, a Soviet WWII memorial, from central Tallinn; it sparked riots by ethnic Russians; Russia saw the move as an insult",
+   "source": "https://csmonitor.com/2007/0517/p99s01-duts.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "DDoS attacks shut down government, newspaper and banking websites in waves: from April 27 peaking around May 3, and on May 8-9 around Russia's Victory Day",
+   "source": "https://csmonitor.com/2007/0517/p99s01-duts.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Foreign Minister Urmas Paet said the Kremlin was directly involved and much traffic came from Russia; Russia's EU ambassador Vladimir Chizhov denied it and said the claim had to be substantiated",
+   "source": "https://csmonitor.com/2007/0517/p99s01-duts.html",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Estonia suffered 22 days of cyberattacks in 2007 after the Bronze Soldier was moved; Estonia blamed Russia",
+   "source": "https://news.err.ee/1608688201/research-education",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Dmitri Galushkevich, 20, was fined about $1,620 for attacking the website of Prime Minister Andrus Ansip's Reform Party",
+   "source": "https://www.informationweek.com/cyber-resilience/estonian-hacker-fined-for-cyber-attack",
+   "confidence": "confirmed"
+  }
+ ],
+ "sources": [
+  "https://csmonitor.com/2007/0517/p99s01-duts.html",
+  "https://news.err.ee/1608688201/research-education",
+  "https://www.informationweek.com/cyber-resilience/estonian-hacker-fined-for-cyber-attack"
+ ],
+ "seo": {
+  "title": "Estonia 2007: How Moving One Statue Sparked Nationwide Cyberattacks",
+  "description": "In 2007 Estonia moved a Soviet war memorial, and its government, bank and news websites were flooded offline for weeks. Estonia blamed Russia; Moscow denied it. #cybersecurity #cyberwar #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#cyberwar",
+   "#shorts"
+  ],
+  "facebook_text": "In 2007, moving one statue set off cyberattacks on a whole country.\nEstonia blamed Russia. Moscow denied it.\n#cybersecurity #cyberwar #history",
+  "first_comment": "Should a cyberattack on a country be treated like a military attack?",
+  "thumb": {
+   "text": "ONE STATUE, A NATION ATTACKED",
+   "hl": "ONE STATUE",
+   "visual": 6
+  }
+ }
+}
