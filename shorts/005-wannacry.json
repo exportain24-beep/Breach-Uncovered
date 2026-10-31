@@ -1,0 +1,226 @@
+{
+ "episode": 5,
+ "key": "wannacry",
+ "title": "The 22-year-old who stopped WannaCry",
+ "year": 2017,
+ "category": "criminal",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] A $10.69 web address stopped a global cyberattack.",
+   "visuals": [
+    {
+     "at": "A $10.69 web address",
+     "kind": "counter",
+     "value": 10.69,
+     "prefix": "$",
+     "label": "one web address"
+    },
+    {
+     "at": "a global cyberattack",
+     "kind": "globe",
+     "points": [
+      [
+       "London",
+       51.5,
+       -0.1
+      ],
+      [
+       "Madrid",
+       40.4,
+       -3.7
+      ],
+      [
+       "Beijing",
+       39.9,
+       116.4
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "tense",
+   "narration": "On May 12, 2017, ransomware called WannaCry spread worldwide. It locked files and asked for $300 in bitcoin.",
+   "visuals": [
+    {
+     "at": "On May 12, 2017",
+     "kind": "network",
+     "text": "computers locked",
+     "total": 200000
+    },
+    {
+     "at": "It locked files",
+     "kind": "phone",
+     "app": "alert",
+     "from": "WannaCry",
+     "text": "Your files are locked. Pay $300."
+    },
+    {
+     "at": "$300 in bitcoin",
+     "kind": "object",
+     "icon": "bitcoin",
+     "text": "$300 ransom"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "sad",
+   "narration": "British hospitals were hit hard. Some emergency rooms had to send patients away.",
+   "visuals": [
+    {
+     "at": "British hospitals were hit",
+     "kind": "building",
+     "type": "hospital",
+     "name": "NHS Hospital"
+    },
+    {
+     "at": "emergency rooms",
+     "kind": "people",
+     "who": [
+      "doctor",
+      "workerF"
+     ],
+     "action": "shock",
+     "label": "Patients diverted"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "curious",
+   "narration": "Then a 22-year-old in England looked at the code. It checked a strange web address that nobody owned.",
+   "visuals": [
+    {
+     "at": "a 22-year-old in England",
+     "kind": "office",
+     "who": "student",
+     "action": "type",
+     "screen": "Analyzing sample..."
+    },
+    {
+     "at": "looked at the code",
+     "kind": "terminal",
+     "lines": [
+      "check web address",
+      "no answer",
+      "keep spreading"
+     ]
+    },
+    {
+     "at": "nobody owned",
+     "kind": "lock",
+     "state": "open",
+     "text": "Unregistered domain"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "He bought it for $10.69. The attack hit its kill switch and stopped spreading.",
+   "visuals": [
+    {
+     "at": "He bought it",
+     "kind": "object",
+     "icon": "card",
+     "text": "$10.69 domain"
+    },
+    {
+     "at": "its kill switch",
+     "kind": "lock",
+     "state": "locked",
+     "text": "Kill switch on"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "hopeful",
+   "narration": "In 2018, U.S. prosecutors charged a North Korean programmer for the attack.",
+   "visuals": [
+    {
+     "at": "U.S. prosecutors charged",
+     "kind": "dossier",
+     "title": "Park Jin Hyok",
+     "rows": [
+      [
+       "Charged",
+       "2018"
+      ],
+      [
+       "Country",
+       "North Korea"
+      ],
+      [
+       "Status",
+       "Wanted by FBI"
+      ]
+     ]
+    },
+    {
+     "at": "for the attack",
+     "kind": "stamp",
+     "text": "CHARGED"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "WannaCry was released worldwide on Friday, May 12, 2017",
+   "source": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Ransom was $300 in bitcoin; roughly 200,000 victims in 150 countries",
+   "source": "https://www.occrp.org/en/news/ransomware-attack-hits-200000-targets-in-150-countries",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Five NHS A&E departments had to divert patients",
+   "source": "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Marcus Hutchins, 22, registered the kill-switch domain for $10.69",
+   "source": "https://www.bgr.com/tech/ransomware-wannacry-cyber-attack-kill-switch/",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Hutchins registered the unregistered domain the sample queried, which acted as a kill switch",
+   "source": "https://www.malwaretech.com/2017/05/how-to-accidentally-stop-a-global-cyber-attacks.html",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Park Jin Hyok charged in 2018 over WannaCry and other attacks",
+   "source": "https://www.justice.gov/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and",
+   "confidence": "alleged"
+  }
+ ],
+ "sources": [
+  "https://www.nao.org.uk/press-releases/investigation-wannacry-cyber-attack-and-the-nhs/",
+  "https://www.malwaretech.com/2017/05/how-to-accidentally-stop-a-global-cyber-attacks.html"
+ ],
+ "seo": {
+  "title": "How a $10.69 Web Address Stopped the WannaCry Attack",
+  "description": "In May 2017 WannaCry ransomware locked computers in 150 countries and hit British hospitals. A 22-year-old found a hidden kill switch and stopped it. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "A $10.69 web address stopped a global cyberattack.\nA 22-year-old found the kill switch.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Would you have spotted the kill switch? Should hospitals still run old Windows?",
+  "thumb": {
+   "text": "$10.69 STOPPED A CYBERATTACK",
+   "hl": "$10.69",
+   "visual": 11
+  }
+ }
+}

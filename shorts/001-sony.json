@@ -1,0 +1,195 @@
+{
+ "episode": 1,
+ "key": "sony",
+ "title": "How a comedy got Sony hacked",
+ "year": 2014,
+ "category": "state",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] A comedy movie got a Hollywood studio hacked.",
+   "visuals": [
+    {
+     "at": "A comedy movie",
+     "kind": "object",
+     "icon": "camera",
+     "text": "The Interview"
+    },
+    {
+     "at": "a Hollywood studio hacked",
+     "kind": "building",
+     "type": "studio",
+     "name": "Sony Pictures"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "tense",
+   "narration": "On November 24, 2014, Sony staff saw a red skeleton on their screens. Thousands of computers stopped working.",
+   "visuals": [
+    {
+     "at": "November 24, 2014",
+     "kind": "object",
+     "icon": "skull",
+     "text": "Hacked by #GOP"
+    },
+    {
+     "at": "Thousands of computers",
+     "kind": "servers",
+     "state": "dark",
+     "label": "Computers wiped"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "sad",
+   "narration": "Hackers leaked films, salaries and private emails. Staff went back to pen and paper.",
+   "visuals": [
+    {
+     "at": "Hackers leaked films",
+     "kind": "stamp",
+     "text": "LEAKED"
+    },
+    {
+     "at": "pen and paper",
+     "kind": "office",
+     "who": "workerF",
+     "action": "think",
+     "screen": "System offline"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "tense",
+   "narration": "In December, they threatened cinemas showing The Interview. Sony canceled the release.",
+   "visuals": [
+    {
+     "at": "they threatened cinemas",
+     "kind": "phone",
+     "app": "alert",
+     "from": "Guardians of Peace",
+     "text": "Do not show the movie."
+    },
+    {
+     "at": "Sony canceled the release",
+     "kind": "headline",
+     "text": "Sony cancels The Interview"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "The FBI said North Korea was behind it. The film was about killing its leader.",
+   "visuals": [
+    {
+     "at": "The FBI said",
+     "kind": "building",
+     "type": "fbi",
+     "name": "FBI"
+    },
+    {
+     "at": "about killing its leader",
+     "kind": "globe",
+     "points": [
+      [
+       "Pyongyang",
+       39.0,
+       125.7
+      ],
+      [
+       "Los Angeles",
+       34.0,
+       -118.2
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "hopeful",
+   "narration": "Sony released it online on Christmas Eve, and it earned over $40 million.",
+   "visuals": [
+    {
+     "at": "released it online",
+     "kind": "phone",
+     "app": "chat",
+     "from": "Streaming",
+     "text": "Now playing: The Interview"
+    },
+    {
+     "at": "over $40 million",
+     "kind": "counter",
+     "value": 40,
+     "prefix": "$",
+     "suffix": "M",
+     "label": "digital sales"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "On November 24, 2014 malware made Sony employee computers inoperable",
+   "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "A red skeleton was displayed and employees worked with pens and paper",
+   "source": "https://fortune.com/longform/sony-hack-final-part/",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Leaked unreleased films, salaries and emails",
+   "source": "https://en.wikipedia.org/wiki/2014_Sony_Pictures_hack",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Hackers threatened theaters; Sony canceled the release on December 17, 2014",
+   "source": "https://fortune.com/longform/sony-hack-final-part/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "FBI said the North Korean government was responsible",
+   "source": "https://techcrunch.com/2014/12/19/the-fbi-blames-north-korea-for-sony-hack/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The Interview is a comedy about killing Kim Jong Un",
+   "source": "https://www.npr.org/sections/thetwo-way/2014/06/25/325646474/north-korea-threatens-war-over-new-seth-rogen-comedy",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Released online December 24; earned more than $40 million digitally",
+   "source": "https://fortune.com/longform/sony-hack-final-part/",
+   "confidence": "reported"
+  }
+ ],
+ "sources": [
+  "https://techcrunch.com/2014/12/19/the-fbi-blames-north-korea-for-sony-hack/",
+  "https://fortune.com/longform/sony-hack-final-part/"
+ ],
+ "seo": {
+  "title": "How a Comedy Movie Got Sony Pictures Hacked",
+  "description": "In 2014 hackers wiped Sony Pictures computers, leaked films and emails, and threatened cinemas over The Interview. The FBI blamed North Korea. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "A comedy movie got a Hollywood studio hacked.\nThe true story of the Sony hack.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Should Sony have canceled the movie, or was that giving the hackers a win?",
+  "thumb": {
+   "text": "A COMEDY GOT SONY HACKED",
+   "hl": "SONY HACKED",
+   "visual": 2
+  }
+ }
+}

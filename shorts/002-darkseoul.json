@@ -1,0 +1,204 @@
+{
+ "episode": 2,
+ "key": "darkseoul",
+ "title": "The day 48,000 computers died at 2 p.m.",
+ "year": 2013,
+ "category": "state",
+ "needs_review": false,
+ "review_note": "",
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] At exactly 2 p.m., 48,000 computers died at once.",
+   "visuals": [
+    {
+     "at": "At exactly 2 p.m.",
+     "kind": "object",
+     "icon": "clock",
+     "text": "2:00 PM"
+    },
+    {
+     "at": "48,000 computers died",
+     "kind": "network",
+     "text": "computers wiped",
+     "total": 48000
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "tense",
+   "narration": "It was March 20, 2013, in South Korea. Big banks and TV stations went dark.",
+   "visuals": [
+    {
+     "at": "March 20, 2013",
+     "kind": "timeline",
+     "items": [
+      [
+       "Mar 20",
+       "2:00 PM wipe"
+      ],
+      [
+       "Apr 10",
+       "North Korea blamed"
+      ]
+     ]
+    },
+    {
+     "at": "Big banks",
+     "kind": "building",
+     "type": "bank",
+     "name": "Shinhan Bank"
+    },
+    {
+     "at": "TV stations went dark",
+     "kind": "servers",
+     "state": "dark",
+     "label": "Screens dead"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "sad",
+   "narration": "Screens said the boot device was not found. ATMs stopped. One coffee shop took only cash.",
+   "visuals": [
+    {
+     "at": "Screens said",
+     "kind": "terminal",
+     "lines": [
+      "Boot device not found",
+      "Please install an OS"
+     ]
+    },
+    {
+     "at": "ATMs stopped",
+     "kind": "object",
+     "icon": "atm",
+     "text": "Out of service"
+    },
+    {
+     "at": "only cash",
+     "kind": "object",
+     "icon": "money",
+     "text": "Cash only"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "curious",
+   "narration": "A hidden program had waited for that exact minute. It came in through stolen passwords and update software.",
+   "visuals": [
+    {
+     "at": "A hidden program",
+     "kind": "object",
+     "icon": "bug",
+     "text": "Time bomb"
+    },
+    {
+     "at": "stolen passwords",
+     "kind": "lock",
+     "state": "crack",
+     "text": "Stolen passwords"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "In April, South Korea blamed North Korea. The same group was later linked to the Sony hack.",
+   "visuals": [
+    {
+     "at": "South Korea blamed",
+     "kind": "globe",
+     "points": [
+      [
+       "Pyongyang",
+       39.0,
+       125.7
+      ],
+      [
+       "Seoul",
+       37.6,
+       127.0
+      ]
+     ]
+    },
+    {
+     "at": "linked to the Sony hack",
+     "kind": "dossier",
+     "title": "Lazarus Group",
+     "rows": [
+      [
+       "Base",
+       "North Korea"
+      ],
+      [
+       "Also linked",
+       "Sony hack"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Computers at South Korean banks and broadcasters went down at 2 p.m. on March 20, 2013",
+   "source": "https://www.washingtontimes.com/news/2013/mar/20/major-computer-crash-in-skorea-hackers-suspected/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "About 48,000 PCs and servers were hit",
+   "source": "https://www.darkreading.com/cyberattacks-data-breaches/north-korea-behind-bank-malware-south-korea-says",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Screens read 'Boot device not found. Please install an operating system'",
+   "source": "https://www.nbcnews.com/news/amp/wbna51256632",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Shinhan Bank online banking and ATMs shut down; a Seoul Starbucks asked customers to pay cash",
+   "source": "https://www.washingtontimes.com/news/2013/mar/20/major-computer-crash-in-skorea-hackers-suspected/",
+   "confidence": "reported"
+  },
+  {
+   "claim": "Malware spread through patch management software using stolen credentials, with a logic bomb set for March 20",
+   "source": "https://www.darkreading.com/cyberattacks-data-breaches/north-korea-behind-bank-malware-south-korea-says",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "South Korea attributed the attack to North Korea on April 10, 2013",
+   "source": "https://expansion.mx/mundo/2013/04/10/corea-del-sur-culpa-al-norte-de-ciberataques-contra-sus-bancos-y-medios",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Operation Blockbuster linked DarkSeoul and the Sony attack to the Lazarus Group",
+   "source": "https://www.kaspersky.com/about/news/virus/2016/Kaspersky-Lab-helps-to-disrupt-activity-of-Lazarus-Group-responsible-for-multiple-devastating-cyber-attacks",
+   "confidence": "reported"
+  }
+ ],
+ "sources": [
+  "https://www.darkreading.com/cyberattacks-data-breaches/north-korea-behind-bank-malware-south-korea-says",
+  "https://www.washingtontimes.com/news/2013/mar/20/major-computer-crash-in-skorea-hackers-suspected/"
+ ],
+ "seo": {
+  "title": "DarkSeoul: 48,000 Computers Wiped at 2 p.m.",
+  "description": "On March 20, 2013 a hidden time bomb wiped 48,000 computers at South Korean banks and TV stations at the same minute. South Korea blamed North Korea. #cybersecurity #truecrime #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#truecrime",
+   "#shorts"
+  ],
+  "facebook_text": "At exactly 2 p.m., 48,000 computers died at once.\nThe hidden time bomb behind DarkSeoul.\n#cybersecurity #truecrime #hacking",
+  "first_comment": "Would your office survive if every computer died at 2 p.m.? What would you do first?",
+  "thumb": {
+   "text": "48,000 COMPUTERS DIED AT 2PM",
+   "hl": "48,000",
+   "visual": 1
+  }
+ }
+}
