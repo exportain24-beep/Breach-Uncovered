@@ -1,7 +1,35 @@
-# Breach Uncovered - SHORTS spec (LOCKED by the owner, 2026-10-30)
+# Breach Uncovered - SHORTS spec (LOCKED by the owner, 2026-10-30; updated 2026-10-31: 4 a day, wider tech pillars, algorithm rules)
 
-The channel now publishes **only vertical Shorts** (YouTube Shorts + Facebook Reels): **3 per day**, each **30-50 seconds**, in English.
-Every Short tells ONE complete true cyber-attack story from start to end, explained so simply that anyone understands it.
+The channel publishes **only vertical Shorts** (YouTube Shorts + Facebook Reels): **4 per day** at **8:00 AM, 12:00 PM, 5:00 PM and 8:30 PM New York time** (America/New_York, DST handled), each **30-50 seconds**, in natural American English, for a US-first audience (then UK/CA/AU/NZ).
+Every Short tells ONE complete true technology story from start to end, explained so simply that anyone understands it.
+
+## Brand pillars (topics)
+Breach Uncovered = the hidden stories behind technology, cybersecurity, AI, digital crime and the internet.
+A cybersecurity & hacking - B artificial intelligence (breakthroughs, AI scams, deepfakes, AI security) - C digital crime & investigations (FBI cases, fraud, SIM swapping, social engineering) - D internet mysteries & internet history - E digital privacy & surveillance - F future technology (quantum, robotics, space tech) - G digital money & fintech (crypto incidents, investment scams) - H technology history (famous software failures, discoveries).
+Field `pillar`: one of cyber, ai, crime, mystery, privacy, future, money, history.
+
+## Four daily formats (field `slot_type`)
+| slot (New York) | slot_type | purpose |
+|---|---|---|
+| 8:00 AM | `trending` | a verified tech/cyber/AI story from the last days (written daily, fresh) |
+| 12:00 PM | `curiosity` | a shocking real-world tech story with broad appeal (breaches, failures, big scams) |
+| 5:00 PM | `ai` | AI and future technology (widens the audience) |
+| 8:30 PM | `mystery` | digital mystery, investigation or privacy story (comments and shares) |
+These are editorial assignments, not cages: a strong story can fill another slot. Never invent a trend to fill a slot.
+
+## Algorithm alignment (verified 2026-10-31 - official sources only)
+- YouTube Shorts ranking uses the % of viewers who choose to view (vs swipe away), average view duration, average % viewed, likes and survey results; it is personalized by topic interest; topic interest, competition and seasonality matter; there is no required posting cadence; the system prefers no format. (support.google.com/youtube/answer/11914225)
+- Since Aug 24, 2026 YouTube counts a view from the first frame; the old view is now the "engaged view", and retention/AVD analytics use engaged views. Judge Shorts by engaged views and retention, not raw views. (blog.youtube/inside-youtube/engaged-views-youtube-explained)
+- Facebook (Meta, Mar 13 2026): original content made by the Page is rewarded; duplicates, minor edits, re-uploads and narrating someone else's footage are deprioritized and can make a Page non-recommendable. Everything we publish is 100% our own visuals, script and voice. (about.fb.com/news/2026/03/rewarding-original-creators-on-facebook)
+- Meta Reels recommendations weigh real interest matching and viewer satisfaction, not only likes/watch time (engineering.fb.com, Jan 14 2026).
+What this means for every script:
+1. The first 1-2 seconds must stop the scroll: the hook sentence starts the video with no intro, no channel name; the first visual is the strongest picture.
+2. Retention: every scene opens a small question the next scene answers (open loops); a new picture every 2-4 s; no slow middle; the ending pays off the hook (no bait the video does not deliver).
+3. Satisfaction: the viewer learns something real and specific (a number, a name, a twist) worth sharing; end with one line that makes people comment.
+4. Hook lab: write 5 different hooks in `hooks` (question, shocking fact, mystery, unexpected consequence, real-world warning, historical...) and use the strongest; set `hook_type`. Do not reuse the same hook structure on consecutive Shorts.
+5. Score every topic in `score` (audience 20, story 20, hook 15, current interest 15, shareability 10, visual 10, reliability 10; `total`). Produce only total >= 70.
+6. Platform-specific metadata (never identical): YouTube `seo.title` (subject first, accurate, no ALL CAPS, <= 70 chars), `seo.description` (accurate context + natural keywords), `seo.hashtags` 2-4, `seo.tags` (descriptive, not a ranking shortcut); Facebook `seo.fb_title` and `seo.facebook_text` (a natural caption that complements, not repeats, the narration) with 3-5 relevant hashtags. No unrelated or trending-bait hashtags, no keyword stuffing, no engagement bait ("like if...", "share to win").
+7. Never: copied/reused clips, fake engagement, fake news, fake locations, misleading thumbnails.
 **100% of the picture is our own visualisation** (2D / semi-3D isometric illustrated motion graphics). No stock clips, no Pixabay, no photos, no AI video.
 Voice: ElevenLabs `eleven_v4_turbo`, voice `oO7sLA3dWfQXsKeSAjpA`. Captions word-synced. Music and sound effects follow the mood.
 
@@ -43,11 +71,12 @@ Text on screen is never repeated twice at the same time; captions already carry 
 
 ## JSON (file `shorts/NNN-<key>.json`, NNN = the case's episode number from data/cases.json)
 ```json
-{"episode": 3, "key": "bangladesh", "title": "...", "year": 2016, "category": "state", "needs_review": false, "review_note": "",
+{"episode": 3, "key": "bangladesh", "title": "...", "year": 2016, "category": "state", "pillar": "cyber", "slot_type": "curiosity", "needs_review": false, "review_note": "",
+ "hooks": ["5 candidate opening lines"], "hook_type": "shocking_fact", "score": {"audience": 18, "story": 18, "hook": 14, "interest": 9, "share": 9, "visual": 9, "reliability": 10, "total": 87},
  "scenes": [{"id": 1, "mood": "shock", "narration": "[serious] ...", "visuals": [{"at": "exact words", "kind": "building", "type": "bank", "name": "Bangladesh Bank"}]}],
  "facts": [{"claim": "...", "source": "https://...", "confidence": "confirmed|reported|alleged"}],
  "sources": ["https://..."],
- "seo": {"title": "<= 70 chars, keyword first, curiosity, honest", "description": "2-3 sentences + 3 hashtags", "hashtags": ["#cybersecurity", "#truecrime", "#shorts"], "facebook_text": "hook line + 1 line + 3 hashtags", "first_comment": "a question to spark discussion", "thumb": {"text": "A TYPO SAVED $1 BILLION", "hl": "$1 BILLION", "visual": 1}}}
+ "seo": {"title": "<= 70 chars, subject first, curiosity, honest", "description": "2-3 sentences of real context + 2-4 hashtags", "hashtags": ["#cybersecurity", "#truecrime", "#shorts"], "tags": ["descriptive tags"], "fb_title": "Facebook title", "facebook_text": "natural caption + 3-5 hashtags", "first_comment": "a question to spark discussion", "thumb": {"text": "A TYPO SAVED $1 BILLION", "hl": "$1 BILLION", "visual": 1}}}
 ```
 Audio tags in [square brackets] are allowed sparingly (max 6): [serious], [whispers], [dramatically], [pause], [short pause], [sighs].
 Run `python3 tools/validate_short.py shorts/NNN-key.json` and fix every ERROR.

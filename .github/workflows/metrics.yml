@@ -1,0 +1,32 @@
+name: Shorts metrics (1h / 6h / 24h / 48h / 7d)
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: breach-metrics, cancel-in-progress: false }
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q requests
+      - name: Collect snapshots
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          FB_SYSTEM_USER_TOKEN: ${{ secrets.FB_SYSTEM_USER_TOKEN }}
+          FB_APP_ID: ${{ secrets.FB_APP_ID }}
+          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+        run: python3 tools/shorts_metrics.py || true
+      - name: Save
+        run: |
+          git config user.name "breach-bot"; git config user.email "actions@users.noreply.github.com"
+          for f in data/metrics.json reports/shorts-performance.md; do [ -e "$f" ] && git add "$f"; done
+          git diff --cached --quiet || (git commit -qm "Shorts metrics [skip ci]" && (git pull --rebase -q || true) && git push || true)

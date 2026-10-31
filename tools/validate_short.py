@@ -59,6 +59,17 @@ def validate(path):
     for k in ("title", "description", "facebook_text", "first_comment"):
         if not seo.get(k): E.append(f"seo.{k} missing")
     if len(seo.get("title", "")) > 70: E.append("seo.title > 70 chars")
+    if s.get("pillar") not in (None, "cyber", "ai", "crime", "mystery", "privacy", "future", "money", "history"): E.append("bad pillar")
+    if s.get("slot_type") not in (None, "trending", "curiosity", "ai", "mystery"): E.append("bad slot_type")
+    for k in ("pillar", "slot_type", "hooks", "hook_type", "score"):
+        if k not in s: Wn.append(f"missing {k} (new scripts must have it)")
+    if isinstance(s.get("hooks"), list) and 0 < len(s["hooks"]) < 3: Wn.append("hooks: write 5 candidates")
+    if isinstance(s.get("score"), dict) and s["score"].get("total", 100) < 70: E.append("score.total < 70: pick a stronger topic")
+    yh = [h for h in seo.get("hashtags", []) if h.startswith("#")]
+    if yh and not 2 <= len(yh) <= 4: Wn.append(f"YouTube hashtags {len(yh)} (use 2-4)")
+    fh = re.findall(r"#\w+", seo.get("facebook_text", ""))
+    if seo.get("facebook_text") and not 3 <= len(fh) <= 5: Wn.append(f"Facebook hashtags {len(fh)} (use 3-5)")
+    if re.search(r"\b(like if|share to win|comment yes|tag a friend)\b", (seo.get("facebook_text", "") + seo.get("description", "")).lower()): E.append("engagement bait in captions")
     th = seo.get("thumb") or {}
     if not th.get("text"): Wn.append("seo.thumb.text missing (cover falls back to the title)")
     elif len(th["text"].split()) > 6: E.append("seo.thumb.text longer than 6 words")
