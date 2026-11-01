@@ -45,7 +45,15 @@
    "first_comment": "Would you let your car share your driving with your insurer for a cheaper rate, or never?",
    "yt": "IhtZz7pqkyU",
    "published_at": "2026-11-01T14:41:05+00:00",
-   "fb": "1128179469862123"
+   "fb": "1128179469862123",
+   "comment_done": true
+  },
+  "002": {
+   "title": "DarkSeoul: 48,000 Computers Wiped at 2 p.m.",
+   "first_comment": "Would your office survive if every computer died at 2 p.m.? What would you do first?",
+   "yt": "I4hXuS8T1x4",
+   "published_at": "2026-11-01T19:21:13+00:00",
+   "fb": "1673922861103891"
   }
  },
  "slots_done": [
@@ -53,6 +61,7 @@
   "2026-10-31T14:00:00-04:00",
   "2026-10-31T17:00:00-04:00",
   "2026-10-31T20:30:00-04:00",
-  "2026-11-01T08:00:00-05:00"
+  "2026-11-01T08:00:00-05:00",
+  "2026-11-01T12:00:00-05:00"
  ]
 }
