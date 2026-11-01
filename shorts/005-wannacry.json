@@ -209,10 +209,11 @@
  ],
  "seo": {
   "title": "How a $10.69 Web Address Stopped the WannaCry Attack",
-  "description": "In May 2017 WannaCry ransomware locked computers in 150 countries and hit British hospitals. A 22-year-old found a hidden kill switch and stopped it. #cybersecurity #truecrime #shorts",
+  "description": "In May 2017 WannaCry ransomware locked computers in 150 countries and hit British hospitals. A 22-year-old found a hidden kill switch and stopped it. Learn how the WannaCry kill switch worked and who found it. #cybersecurity #wannacry #ransomware #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#wannacry",
+   "#ransomware",
    "#shorts"
   ],
   "facebook_text": "A $10.69 web address stopped a global cyberattack.\nA 22-year-old found the kill switch.\n#cybersecurity #truecrime #hacking",
@@ -221,7 +222,15 @@
    "text": "$10.69 STOPPED A CYBERATTACK",
    "hl": "$10.69",
    "visual": 11
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "wannacry",
+   "ransomware",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

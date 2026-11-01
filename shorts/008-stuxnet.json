@@ -219,10 +219,11 @@
  ],
  "seo": {
   "title": "Stuxnet: The Computer Worm That Broke Iran's Nuclear Machines",
-  "description": "Stuxnet was a hidden program that made Iran's uranium centrifuges spin wrong while screens showed all was normal. Reports say the U.S. and Israel built it, but neither has admitted it. #cybersecurity #truecrime #shorts",
+  "description": "Stuxnet was a hidden program that made Iran's uranium centrifuges spin wrong while screens showed all was normal. Reports say the U.S. and Israel built it, but neither has admitted it. Learn what the Stuxnet virus was and how it sabotaged Iran's nuclear program. #cybersecurity #stuxnet #cyberwar #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#stuxnet",
+   "#cyberwar",
    "#shorts"
   ],
   "facebook_text": "A computer worm secretly broke machines inside Iran's nuclear program.\nScreens showed everything was normal.\n#cybersecurity #truecrime #hacking",
@@ -231,7 +232,15 @@
    "text": "A WORM BROKE NUCLEAR MACHINES",
    "hl": "NUCLEAR MACHINES",
    "visual": 7
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "stuxnet",
+   "cyberwar",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

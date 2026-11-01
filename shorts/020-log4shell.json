@@ -215,10 +215,11 @@
  ],
  "seo": {
   "title": "Log4Shell: The Free Tool That Put Millions of Devices at Risk",
-  "description": "In December 2021 a flaw in Log4j, a free logging tool built by volunteers, exposed hundreds of millions of devices. America's cyber chief called it one of the most serious flaws of her career. #cybersecurity #log4j #shorts",
+  "description": "In December 2021 a flaw in Log4j, a free logging tool built by volunteers, exposed hundreds of millions of devices. America's cyber chief called it one of the most serious flaws of her career. Learn what the Log4Shell vulnerability is and why it was so dangerous. #cybersecurity #log4shell #opensource #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#log4j",
+   "#log4shell",
+   "#opensource",
    "#shorts"
   ],
   "facebook_text": "One tiny free tool put hundreds of millions of devices at risk.\nIt was built by volunteers and hid inside thousands of apps.\n#cybersecurity #log4j #tech",
@@ -227,7 +228,15 @@
    "text": "A FREE TOOL EXPOSED MILLIONS",
    "hl": "MILLIONS",
    "visual": 1
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "log4shell",
+   "opensource",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

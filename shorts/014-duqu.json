@@ -229,10 +229,11 @@
  ],
  "seo": {
   "title": "Duqu 2.0: The Spy Malware That Hacked Kaspersky and the Iran Talks",
-  "description": "Duqu, a spying cousin of Stuxnet, was found in 2011 and then went quiet. In 2015 it came back inside Kaspersky's own network and at hotels hosting the Iran nuclear talks. #cybersecurity #truecrime #shorts",
+  "description": "Duqu, a spying cousin of Stuxnet, was found in 2011 and then went quiet. In 2015 it came back inside Kaspersky's own network and at hotels hosting the Iran nuclear talks. Learn what Duqu 2.0 malware was and how Kaspersky found it. #cybersecurity #duqu #cyberespionage #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#duqu",
+   "#cyberespionage",
    "#shorts"
   ],
   "facebook_text": "A spy program hid inside the company that hunts spy programs.\nThis is the story of Duqu.\n#cybersecurity #truecrime #hacking",
@@ -241,7 +242,15 @@
    "text": "SPIES HACKED THE SPY HUNTERS",
    "hl": "SPY HUNTERS",
    "visual": 7
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "duqu",
+   "cyberespionage",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

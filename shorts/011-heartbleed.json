@@ -230,10 +230,11 @@
  ],
  "seo": {
   "title": "Heartbleed: How One Missed Check Exposed Half a Million Websites",
-  "description": "In 2014 researchers revealed Heartbleed, a two-year-old mistake in OpenSSL, the free code that secures much of the web. Canada's tax agency lost data on about 900 people before it shut its site. #cybersecurity #truecrime #shorts",
+  "description": "In 2014 researchers revealed Heartbleed, a two-year-old mistake in OpenSSL, the free code that secures much of the web. Canada's tax agency lost data on about 900 people before it shut its site. Learn what the Heartbleed bug was and why it mattered for website security. #cybersecurity #heartbleed #websecurity #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#heartbleed",
+   "#websecurity",
    "#shorts"
   ],
   "facebook_text": "One missed check left the internet's locks leaking for two years.\nThis is the story of Heartbleed.\n#cybersecurity #truecrime #hacking",
@@ -242,7 +243,15 @@
    "text": "ONE BUG, HALF A MILLION SITES",
    "hl": "HALF A MILLION",
    "visual": 8
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "heartbleed",
+   "websecurity",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

@@ -235,10 +235,11 @@
  ],
  "seo": {
   "title": "Change Healthcare Hack: One Login, No MFA, 193 Million People",
-  "description": "In 2024 criminals used one stolen login to break into Change Healthcare, and the portal had no second check. UnitedHealth paid a $22 million ransom, yet almost 193 million people were affected. #cybersecurity #truecrime #shorts",
+  "description": "In 2024 criminals used one stolen login to break into Change Healthcare, and the portal had no second check. UnitedHealth paid a $22 million ransom, yet almost 193 million people were affected. Learn how the Change Healthcare ransomware attack happened and what MFA could have changed. #cybersecurity #changehealthcare #ransomware #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#changehealthcare",
+   "#ransomware",
    "#shorts"
   ],
   "facebook_text": "One stolen login jammed America's medical billing for months.\nThe portal had no second check, and the ransom did not fix it.\n#cybersecurity #ransomware #truecrime",
@@ -247,7 +248,15 @@
    "text": "ONE LOGIN HIT 193 MILLION",
    "hl": "193 MILLION",
    "visual": 8
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "changehealthcare",
+   "ransomware",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

@@ -229,10 +229,11 @@
  ],
  "seo": {
   "title": "Joanap Botnet: How the FBI Posed as Victims to Map North Korea's Army",
-  "description": "In 2019 the FBI and Air Force investigators, with court approval, ran fake infected computers inside the Joanap botnet. It revealed the victims of a network U.S. officials blame on North Korea. #cybersecurity #truecrime #shorts",
+  "description": "In 2019 the FBI and Air Force investigators, with court approval, ran fake infected computers inside the Joanap botnet. It revealed the victims of a network U.S. officials blame on North Korea. Learn how the FBI took down part of the Joanap botnet. #cybersecurity #fbi #botnet #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#fbi",
+   "#botnet",
    "#shorts"
   ],
   "facebook_text": "The FBI pretended to be infected computers to map a botnet.\nThis is how they found Joanap's victims.\n#cybersecurity #truecrime #hacking",
@@ -241,7 +242,15 @@
    "text": "THE FBI JOINED THE BOTNET",
    "hl": "JOINED",
    "visual": 11
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "fbi",
+   "botnet",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

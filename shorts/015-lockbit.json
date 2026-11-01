@@ -244,10 +244,11 @@
  ],
  "seo": {
   "title": "LockBit Takedown: How Police Hacked a Ransomware Gang",
-  "description": "In February 2024, Britain's National Crime Agency took over LockBit's own leak site in Operation Cronos. Months later, U.S. prosecutors charged the man they say ran it. #cybersecurity #truecrime #shorts",
+  "description": "In February 2024, Britain's National Crime Agency took over LockBit's own leak site in Operation Cronos. Months later, U.S. prosecutors charged the man they say ran it. Learn how the LockBit ransomware takedown (Operation Cronos) worked. #cybersecurity #lockbit #ransomware #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#lockbit",
+   "#ransomware",
    "#shorts"
   ],
   "facebook_text": "Police hacked a ransomware gang and took over its website.\nThen a countdown asked: who is the boss?\n#cybersecurity #truecrime #ransomware",
@@ -256,7 +257,15 @@
    "text": "POLICE HACKED THE HACKERS",
    "hl": "HACKED",
    "visual": 0
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "lockbit",
+   "ransomware",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

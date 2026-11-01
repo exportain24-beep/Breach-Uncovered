@@ -252,10 +252,11 @@
  ],
  "seo": {
   "title": "Yahoo Hack: How One Click Exposed 500 Million Accounts",
-  "description": "In 2014 hackers stole data on 500 million Yahoo accounts after one employee clicked a fake email. U.S. prosecutors later charged two Russian FSB officers and two hackers. #cybersecurity #truecrime #shorts",
+  "description": "In 2014 hackers stole data on 500 million Yahoo accounts after one employee clicked a fake email. U.S. prosecutors later charged two Russian FSB officers and two hackers. Learn how the 2014 Yahoo data breach happened and who was charged. #cybersecurity #yahoo #databreach #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#yahoo",
+   "#databreach",
    "#shorts"
   ],
   "facebook_text": "One click in a fake email opened half a billion Yahoo accounts.\nU.S. prosecutors charged two Russian FSB officers.\n#cybersecurity #truecrime #hacking",
@@ -264,7 +265,15 @@
    "text": "ONE CLICK. 500 MILLION ACCOUNTS.",
    "hl": "500 MILLION",
    "visual": 6
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "yahoo",
+   "databreach",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

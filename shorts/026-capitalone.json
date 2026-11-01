@@ -212,10 +212,11 @@
  ],
  "seo": {
   "title": "Capital One Hack: How Online Bragging Exposed 100 Million Victims",
-  "description": "In 2019 a hacker copied data on about 100 million Americans from Capital One's cloud. A stranger spotted the files on GitHub, and the posts led the FBI to Paige Thompson. #cybersecurity #truecrime #shorts",
+  "description": "In 2019 a hacker copied data on about 100 million Americans from Capital One's cloud. A stranger spotted the files on GitHub, and the posts led the FBI to Paige Thompson. Learn how the Capital One breach happened and how Paige Thompson was caught. #cybersecurity #capitalone #databreach #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#capitalone",
+   "#databreach",
    "#shorts"
   ],
   "facebook_text": "A hacker's online bragging exposed a theft from 100 million Americans.\nOne email from a stranger cracked the case.\n#cybersecurity #truecrime #databreach",
@@ -224,7 +225,15 @@
    "text": "SHE BRAGGED ABOUT 100 MILLION",
    "hl": "100 MILLION",
    "visual": 11
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "capitalone",
+   "databreach",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

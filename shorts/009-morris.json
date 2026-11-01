@@ -235,10 +235,11 @@
  ],
  "seo": {
   "title": "Morris Worm: The 1988 Experiment That Crashed the Internet",
-  "description": "In 1988 a Cornell graduate student released a self-copying program to measure the internet. A mistake made it spread out of control and hit about 6,000 machines. #cybersecurity #truecrime #shorts",
+  "description": "In 1988 a Cornell graduate student released a self-copying program to measure the internet. A mistake made it spread out of control and hit about 6,000 machines. Learn how the Morris worm of 1988 crashed early internet computers. #cybersecurity #morrisworm #techhistory #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#morrisworm",
+   "#techhistory",
    "#shorts"
   ],
   "facebook_text": "In 1988, one student's experiment crashed a tenth of the internet.\nHe became the first person convicted under a new U.S. hacking law.\n#cybersecurity #truecrime #hacking",
@@ -247,7 +248,15 @@
    "text": "STUDENT CRASHED 10% OF INTERNET",
    "hl": "10%",
    "visual": 1
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "morrisworm",
+   "techhistory",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

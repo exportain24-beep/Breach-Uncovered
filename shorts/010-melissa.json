@@ -215,10 +215,11 @@
  ],
  "seo": {
   "title": "Melissa Virus: The 1999 Email That Jammed 300 Organizations",
-  "description": "In 1999 the Melissa virus mailed itself to the first 50 contacts of everyone who opened it. Email jammed at over 300 organizations, and its creator went to federal prison. #cybersecurity #truecrime #shorts",
+  "description": "In 1999 the Melissa virus mailed itself to the first 50 contacts of everyone who opened it. Email jammed at over 300 organizations, and its creator went to federal prison. Learn how the Melissa virus spread by email in 1999. #cybersecurity #melissavirus #techhistory #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#melissavirus",
+   "#techhistory",
    "#shorts"
   ],
   "facebook_text": "In 1999, one email virus jammed mail at over 300 organizations.\nIt looked like a message from a friend.\n#cybersecurity #truecrime #hacking",
@@ -227,7 +228,15 @@
    "text": "ONE EMAIL JAMMED 300 ORGANIZATIONS",
    "hl": "300 ORGANIZATIONS",
    "visual": 5
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "melissavirus",
+   "techhistory",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }

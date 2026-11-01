@@ -211,10 +211,11 @@
  ],
  "seo": {
   "title": "Uber Breach Cover-Up: The Secret $100,000 Bug Bounty",
-  "description": "In 2016 hackers stole data on 57 million Uber riders and drivers. Uber paid them $100,000 and called it a bug bounty, and its security chief was later convicted. #cybersecurity #truecrime #shorts",
+  "description": "In 2016 hackers stole data on 57 million Uber riders and drivers. Uber paid them $100,000 and called it a bug bounty, and its security chief was later convicted. Learn how the 2016 Uber data breach cover-up was exposed. #cybersecurity #uber #databreach #shorts",
   "hashtags": [
    "#cybersecurity",
-   "#truecrime",
+   "#uber",
+   "#databreach",
    "#shorts"
   ],
   "facebook_text": "Uber paid hackers $100,000 to keep a breach secret.\nA year later, the truth came out.\n#cybersecurity #truecrime #databreach",
@@ -223,7 +224,15 @@
    "text": "UBER PAID HACKERS $100,000",
    "hl": "$100,000",
    "visual": 0
-  }
+  },
+  "tags": [
+   "cybersecurity",
+   "uber",
+   "databreach",
+   "cybersecurity news",
+   "hacking story explained",
+   "tech history"
+  ]
  },
  "story_style": "step-by-step v2 (2026-11-01)"
 }
