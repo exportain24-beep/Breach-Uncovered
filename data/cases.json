@@ -1315,5 +1315,17 @@
   "origin": "weekly_news",
   "note": "News of the week 2026-10-31",
   "status": "pending"
+ },
+ {
+  "episode": 104,
+  "key": "gm_driverdata",
+  "title": "GM Smart Driver — the cars that told insurers how you brake",
+  "year": 2026,
+  "category": "privacy",
+  "actor": "General Motors (settled, allegations)",
+  "sources_from_user_file": [],
+  "origin": "daily_trending",
+  "note": "Daily trending 2026-11-01 (settlement announced 2026-10-29)",
+  "status": "pending"
  }
 ]

@@ -1,0 +1,303 @@
+{
+ "episode": 104,
+ "key": "gm_driverdata",
+ "title": "GM Smart Driver — the cars that told insurers how you brake",
+ "year": 2026,
+ "category": "privacy",
+ "pillar": "privacy",
+ "slot_type": "trending",
+ "priority": true,
+ "needs_review": false,
+ "review_note": "",
+ "hooks": [
+  "Your GM car may have reported your hard braking to insurers.",
+  "Every hard stop in millions of GM cars was allegedly for sale.",
+  "A safe-driving feature allegedly raised some drivers' insurance.",
+  "GM just paid 220 million dollars over how you brake.",
+  "Over 370,000 drivers were told they weren't tracked. They were."
+ ],
+ "hook_type": "direct_you",
+ "score": {
+  "audience": 19,
+  "story": 17,
+  "hook": 14,
+  "interest": 14,
+  "share": 9,
+  "visual": 8,
+  "reliability": 10,
+  "total": 91
+ },
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] Your GM car may have reported your hard braking to insurers. Now it cost GM 220 million dollars.",
+   "visuals": [
+    {
+     "at": "Your GM car",
+     "kind": "object",
+     "icon": "car",
+     "text": "Hard braking: logged"
+    },
+    {
+     "at": "reported your hard braking",
+     "kind": "flow",
+     "nodes": [
+      "Your car",
+      "Insurer"
+     ],
+     "blocked": false
+    },
+    {
+     "at": "220 million dollars",
+     "kind": "counter",
+     "value": 220000000,
+     "prefix": "$",
+     "label": "GM settlement"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "From 2016 to 2024, GM ran Smart Driver. It promised safer driving.",
+   "visuals": [
+    {
+     "at": "From 2016 to 2024",
+     "kind": "timeline",
+     "items": [
+      [
+       "2016",
+       "Smart Driver starts"
+      ],
+      [
+       "2024",
+       "Smart Driver ends"
+      ]
+     ]
+    },
+    {
+     "at": "GM ran Smart Driver",
+     "kind": "phone",
+     "app": "alert",
+     "from": "Smart Driver",
+     "text": "Tips to drive safer"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "curious",
+   "narration": "Most joined at the dealership, alongside OnStar. States say staff sometimes clicked yes for them.",
+   "visuals": [
+    {
+     "at": "joined at the dealership",
+     "kind": "building",
+     "type": "office",
+     "name": "GM Dealership"
+    },
+    {
+     "at": "alongside OnStar",
+     "kind": "office",
+     "who": "worker",
+     "action": "type",
+     "screen": "OnStar + Smart Driver"
+    },
+    {
+     "at": "staff sometimes clicked yes",
+     "kind": "people",
+     "who": [
+      "worker",
+      "exec"
+     ],
+     "action": "point",
+     "label": "Bonuses for sign-ups"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "tense",
+   "narration": "So what did it record? Every trip. Hard braking, fast starts, speeding.",
+   "visuals": [
+    {
+     "at": "what did it record",
+     "kind": "terminal",
+     "lines": [
+      "trip 214: 7:42-8:15",
+      "hard_brake: 3",
+      "rapid_accel: 2",
+      "over_limit: yes"
+     ]
+    },
+    {
+     "at": "Hard braking, fast starts",
+     "kind": "dossier",
+     "title": "One driver's data",
+     "rows": [
+      [
+       "Trips",
+       "Every one"
+      ],
+      [
+       "Hard braking",
+       "Counted"
+      ],
+      [
+       "Speeding",
+       "Flagged"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "The twist? States allege GM sold it to brokers, then insurers. Some premiums went up.",
+   "visuals": [
+    {
+     "at": "The twist",
+     "kind": "stamp",
+     "text": "SOLD"
+    },
+    {
+     "at": "GM sold it to brokers",
+     "kind": "flow",
+     "nodes": [
+      "GM",
+      "Data brokers",
+      "Insurers"
+     ],
+     "amount": "Driving data",
+     "blocked": false
+    },
+    {
+     "at": "Some premiums went up",
+     "kind": "phone",
+     "app": "bank",
+     "from": "Car insurance",
+     "text": "Your premium went up"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "shock",
+   "narration": "GM's app told over 370,000 drivers they weren't enrolled. They were.",
+   "visuals": [
+    {
+     "at": "told over 370,000 drivers",
+     "kind": "counter",
+     "value": 370000,
+     "suffix": "+",
+     "label": "told 'not enrolled'"
+    },
+    {
+     "at": "They were",
+     "kind": "split",
+     "left": "App: not enrolled",
+     "right": "Reality: enrolled"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "hopeful",
+   "narration": "On October 29, 36 attorneys general settled. As one said, people bought a car, not a tracking device.",
+   "visuals": [
+    {
+     "at": "36 attorneys general settled",
+     "kind": "building",
+     "type": "government",
+     "name": "36 Attorneys General"
+    },
+    {
+     "at": "not a tracking device",
+     "kind": "object",
+     "icon": "satellite",
+     "text": "Not a tracking device"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "GM agreed on Oct 29, 2026 to pay $220 million to settle claims by 36 attorneys general (35 states + DC), led by Oregon and Washington",
+   "source": "https://www.insurancejournal.com/news/national/2026/10/30/890832.htm",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Smart Driver ran from 2016 to 2024, enrolled millions of drivers, was marketed as improving driving safety; GM says it ended the product in 2024",
+   "source": "https://therecord.media/general-motors-lawsuit-privacy",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Most customers enrolled at dealerships in a single sign-up that also covered OnStar; staff allegedly accepted terms on customers' behalf; sales staff got bonuses partly based on enrollments",
+   "source": "https://coag.gov/press-releases/general-motors-will-pay-220m-for-illegally-sharing-drivers-private-data/",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Data collected: number of trips, start and end time of each drive, hard braking and rapid acceleration counts, whether the driver exceeded the speed limit",
+   "source": "https://coag.gov/press-releases/general-motors-will-pay-220m-for-illegally-sharing-drivers-private-data/",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "GM allegedly sold driving and location data to data brokers who sold it to insurers, which used it partly to set rates and sometimes raised premiums",
+   "source": "https://coag.gov/press-releases/general-motors-will-pay-220m-for-illegally-sharing-drivers-private-data/",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "The OnStar app wrongly told over 370,000 drivers they weren't enrolled; GM later unenrolled them without disclosing the error",
+   "source": "https://coag.gov/press-releases/general-motors-will-pay-220m-for-illegally-sharing-drivers-private-data/",
+   "confidence": "alleged"
+  },
+  {
+   "claim": "Settlement requires GM to get affirmative express consent before collecting or sharing driving and location data",
+   "source": "https://therecord.media/general-motors-lawsuit-privacy",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Oregon AG Dan Rayfield: 'People bought a car, not a tracking device.'",
+   "source": "https://www.insurancejournal.com/news/national/2026/10/30/890832.htm",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Separate FTC order (finalized Jan 2026) bans GM/OnStar from sharing such data with consumer reporting agencies for five years; NYT reported data went to LexisNexis and Verisk",
+   "source": "https://www.theregister.com/2026/01/15/ftc_gm_tracking_ban/",
+   "confidence": "reported"
+  }
+ ],
+ "sources": [
+  "https://www.insurancejournal.com/news/national/2026/10/30/890832.htm",
+  "https://therecord.media/general-motors-lawsuit-privacy",
+  "https://coag.gov/press-releases/general-motors-will-pay-220m-for-illegally-sharing-drivers-private-data/",
+  "https://www.theregister.com/2026/01/15/ftc_gm_tracking_ban/"
+ ],
+ "seo": {
+  "title": "GM Pays $220 Million Over Selling Drivers' Braking Data to Insurers",
+  "description": "On October 29, 2026, General Motors agreed to pay $220 million to 36 attorneys general over its Smart Driver program. States allege GM sold trip, hard-braking and speeding data to brokers who sold it to insurers, without drivers' consent. GM ended Smart Driver in 2024 and must now get consent first. #privacy #gm #shorts",
+  "hashtags": [
+   "#privacy",
+   "#gm",
+   "#shorts"
+  ],
+  "tags": [
+   "General Motors settlement",
+   "GM Smart Driver",
+   "OnStar data",
+   "driver data privacy",
+   "car insurance data",
+   "data brokers",
+   "connected car privacy"
+  ],
+  "fb_title": "Your car was reporting your braking. GM just paid $220M.",
+  "facebook_text": "Trips, hard stops, speeding: states say GM's Smart Driver data ended up with insurers.\nThe new deal means GM has to ask drivers first. Would you ever turn this kind of tracking on for a discount?\n#privacy #generalmotors #carinsurance #dataprivacy",
+  "first_comment": "Would you let your car share your driving with your insurer for a cheaper rate, or never?",
+  "thumb": {
+   "text": "$220M OVER YOUR HARD BRAKING",
+   "hl": "HARD BRAKING",
+   "visual": 0
+  }
+ }
+}
