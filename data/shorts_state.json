@@ -37,13 +37,22 @@
    "first_comment": "Should hospitals be treated as critical infrastructure with stronger cyber rules?",
    "yt": "GuoVMlGUCuU",
    "published_at": "2026-11-01T00:43:15+00:00",
-   "fb": "1811483626791413"
+   "fb": "1811483626791413",
+   "comment_done": true
+  },
+  "104": {
+   "title": "GM Pays $220 Million Over Selling Drivers' Braking Data to Insurers",
+   "first_comment": "Would you let your car share your driving with your insurer for a cheaper rate, or never?",
+   "yt": "IhtZz7pqkyU",
+   "published_at": "2026-11-01T14:41:05+00:00",
+   "fb": "1128179469862123"
   }
  },
  "slots_done": [
   "2026-10-31T08:00:00-04:00",
   "2026-10-31T14:00:00-04:00",
   "2026-10-31T17:00:00-04:00",
-  "2026-10-31T20:30:00-04:00"
+  "2026-10-31T20:30:00-04:00",
+  "2026-11-01T08:00:00-05:00"
  ]
 }
