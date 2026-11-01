@@ -1,32 +1,31 @@
-building shorts/103-unmh.json
+building shorts/005-wannacry.json
 timing: ElevenLabs voice
-short: 44.7s, 7 scenes, 15 visuals
-thumbnail: work/short-103/thumb.png
-  frame 0/1342 (0s)
-  frame 60/1342 (11s)
-  frame 120/1342 (21s)
-  frame 180/1342 (32s)
-  frame 240/1342 (49s)
-  frame 300/1342 (64s)
-  frame 360/1342 (73s)
-  frame 420/1342 (85s)
-  frame 480/1342 (97s)
-  frame 540/1342 (108s)
-  frame 600/1342 (116s)
-  frame 660/1342 (126s)
-  frame 720/1342 (133s)
-  frame 780/1342 (144s)
-  frame 840/1342 (155s)
-  frame 900/1342 (162s)
-  frame 960/1342 (169s)
-  frame 1020/1342 (176s)
-  frame 1080/1342 (184s)
-  frame 1140/1342 (191s)
-  frame 1200/1342 (199s)
-  frame 1260/1342 (207s)
-  frame 1320/1342 (216s)
-rendered out/short-103.mp4 10.9 MB, 44.7s in 219s
-YouTube Short OK GuoVMlGUCuU
-YouTube thumbnail set
-Facebook Reel OK 1811483626791413
-short 103 published
+short: 49.2s, 6 scenes, 14 visuals
+thumbnail: work/short-005/thumb.png
+  frame 0/1475 (0s)
+  frame 60/1475 (8s)
+  frame 120/1475 (16s)
+  frame 180/1475 (24s)
+  frame 240/1475 (32s)
+  frame 300/1475 (41s)
+  frame 360/1475 (49s)
+  frame 420/1475 (59s)
+  frame 480/1475 (68s)
+  frame 540/1475 (77s)
+  frame 600/1475 (95s)
+  frame 660/1475 (113s)
+  frame 720/1475 (126s)
+  frame 780/1475 (139s)
+  frame 840/1475 (148s)
+  frame 900/1475 (155s)
+  frame 960/1475 (167s)
+  frame 1020/1475 (178s)
+  frame 1080/1475 (187s)
+  frame 1140/1475 (194s)
+  frame 1200/1475 (201s)
+  frame 1260/1475 (209s)
+  frame 1320/1475 (217s)
+  frame 1380/1475 (224s)
+  frame 1440/1475 (233s)
+rendered out/short-005.mp4 10.5 MB, 49.2s in 238s
+preview built: out/short-005.mp4
