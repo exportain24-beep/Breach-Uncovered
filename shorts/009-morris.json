@@ -20,7 +20,7 @@
      "screen": "Nov 2, 1988"
     },
     {
-     "at": "a tenth of the internet",
+     "at": "a tenth of",
      "kind": "network",
      "text": "10% of the internet",
      "total": 6000
@@ -48,13 +48,13 @@
      ]
     },
     {
-     "at": "He released a worm",
+     "at": "He released a",
      "kind": "object",
      "icon": "bug",
      "text": "Self-copying program"
     },
     {
-     "at": "a program that copies",
+     "at": "a program that",
      "kind": "terminal",
      "lines": [
       "copy 1",
@@ -67,7 +67,7 @@
   {
    "id": 3,
    "mood": "curious",
-   "narration": "He said he wanted to measure the internet. He launched it through MIT.",
+   "narration": "He said he only wanted to measure the internet. He launched it through MIT.",
    "visuals": [
     {
      "at": "measure the internet",
@@ -86,10 +86,10 @@
   {
    "id": 4,
    "mood": "tense",
-   "narration": "But a mistake made it spread too fast. Computers slowed to a crawl.",
+   "narration": "But one mistake made it spread too fast. Computers slowed to a crawl.",
    "visuals": [
     {
-     "at": "a mistake made it",
+     "at": "But one mistake",
      "kind": "object",
      "icon": "laptop",
      "text": "Bug in the worm"
@@ -101,7 +101,7 @@
      "label": "Overloaded"
     },
     {
-     "at": "slowed to a crawl",
+     "at": "slowed to a",
      "kind": "people",
      "who": [
       "engineer",
@@ -115,16 +115,16 @@
   {
    "id": 5,
    "mood": "shock",
-   "narration": "About 6,000 of 60,000 connected machines were hit within a day.",
+   "narration": "Within a day, about 6,000 of 60,000 connected machines were hit.",
    "visuals": [
     {
-     "at": "About 6,000 of 60,000",
+     "at": "about 6,000 of",
      "kind": "counter",
      "value": 6000,
      "label": "machines hit in 24 hours"
     },
     {
-     "at": "within a day",
+     "at": "6,000 of 60,000",
      "kind": "headline",
      "text": "Worm jams 6,000 computers"
     }
@@ -133,10 +133,10 @@
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "The FBI traced it back to his Cornell computer.",
+   "narration": "Then the FBI traced it back to his Cornell computer.",
    "visuals": [
     {
-     "at": "The FBI traced it",
+     "at": "the FBI traced",
      "kind": "building",
      "type": "fbi",
      "name": "FBI"
@@ -165,7 +165,7 @@
    "narration": "In 1990, he became the first person convicted under a new U.S. hacking law. He got probation. Today he teaches at MIT.",
    "visuals": [
     {
-     "at": "the first person convicted",
+     "at": "the first person",
      "kind": "stamp",
      "text": "CHARGED"
     },
@@ -188,7 +188,7 @@
      ]
     },
     {
-     "at": "Today he teaches at MIT",
+     "at": "Today he teaches",
      "kind": "people",
      "who": [
       "student",
@@ -248,5 +248,6 @@
    "hl": "10%",
    "visual": 1
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

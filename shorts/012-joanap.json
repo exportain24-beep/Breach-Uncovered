@@ -19,7 +19,7 @@
      "name": "FBI Los Angeles"
     },
     {
-     "at": "infected computers",
+     "at": "infected computers to",
      "kind": "network",
      "text": "Joanap botnet"
     }
@@ -31,13 +31,13 @@
    "narration": "A botnet is an army of hijacked computers. This one, Joanap, was blamed on North Korea.",
    "visuals": [
     {
-     "at": "army of hijacked computers",
+     "at": "army of hijacked",
      "kind": "servers",
      "state": "alarm",
      "label": "Hijacked Windows PCs"
     },
     {
-     "at": "This one, Joanap",
+     "at": "This one Joanap",
      "kind": "dossier",
      "title": "Joanap",
      "rows": [
@@ -56,7 +56,7 @@
      ]
     },
     {
-     "at": "blamed on North Korea",
+     "at": "blamed on North",
      "kind": "globe",
      "points": [
       [
@@ -79,13 +79,13 @@
    "narration": "A worm called Brambul spread it. Infected PCs gave hackers full control.",
    "visuals": [
     {
-     "at": "A worm called Brambul",
+     "at": "A worm called",
      "kind": "object",
      "icon": "bug",
      "text": "Brambul worm"
     },
     {
-     "at": "gave hackers full control",
+     "at": "gave hackers full",
      "kind": "hacker",
      "screen": "root access",
      "count": 2
@@ -95,7 +95,7 @@
   {
    "id": 4,
    "mood": "curious",
-   "narration": "Joanap had no boss computer. Victims talked to each other.",
+   "narration": "The problem? Joanap had no boss computer. Victims talked to each other.",
    "visuals": [
     {
      "at": "no boss computer",
@@ -104,7 +104,7 @@
      "right": "Joanap: peer to peer"
     },
     {
-     "at": "talked to each other",
+     "at": "talked to each",
      "kind": "network",
      "text": "Peers talk directly"
     }
@@ -113,7 +113,7 @@
   {
    "id": 5,
    "mood": "reveal",
-   "narration": "In 2019, agents got court approval. With Air Force investigators, the FBI ran fake infected computers. Real victims connected.",
+   "narration": "So in 2019, agents got court approval. With Air Force investigators, the FBI ran fake infected computers. Real victims connected.",
    "visuals": [
     {
      "at": "got court approval",
@@ -141,7 +141,7 @@
      "label": "FBI and AFOSI"
     },
     {
-     "at": "ran fake infected computers",
+     "at": "ran fake infected",
      "kind": "servers",
      "state": "ok",
      "label": "Decoy peers"
@@ -151,7 +151,7 @@
   {
    "id": 6,
    "mood": "hopeful",
-   "narration": "That showed who was infected. Victims were warned through internet providers and governments.",
+   "narration": "That showed who was infected. Then victims were warned.",
    "visuals": [
     {
      "at": "who was infected",
@@ -163,14 +163,14 @@
      ]
     },
     {
-     "at": "through internet providers",
+     "at": "infected Then victims",
      "kind": "phone",
      "app": "alert",
      "from": "Your ISP",
      "text": "Your PC may be infected"
     },
     {
-     "at": "and governments",
+     "at": "victims were warned",
      "kind": "building",
      "type": "government",
      "name": "Foreign governments"
@@ -183,12 +183,12 @@
    "narration": "U.S. prosecutors had already charged a North Korean programmer. To beat the army, the FBI joined it.",
    "visuals": [
     {
-     "at": "already charged a North Korean",
+     "at": "already charged a",
      "kind": "stamp",
      "text": "CHARGED"
     },
     {
-     "at": "the FBI joined it",
+     "at": "the FBI joined",
      "kind": "object",
      "icon": "shield",
      "text": "Botnet mapped"
@@ -242,5 +242,6 @@
    "hl": "JOINED",
    "visual": 11
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

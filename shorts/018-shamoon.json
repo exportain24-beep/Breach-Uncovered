@@ -13,13 +13,13 @@
    "narration": "[serious] One virus made over 30,000 Saudi Aramco computers useless.",
    "visuals": [
     {
-     "at": "One virus",
+     "at": "One virus made",
      "kind": "object",
      "icon": "bug",
      "text": "Shamoon"
     },
     {
-     "at": "over 30,000 Saudi Aramco computers",
+     "at": "over 30,000 Saudi",
      "kind": "counter",
      "value": 30000,
      "suffix": "+",
@@ -30,10 +30,10 @@
   {
    "id": 2,
    "mood": "calm",
-   "narration": "On August 15, 2012, most Aramco staff were home for a holy night.",
+   "narration": "It was August 15, 2012. Most Aramco staff were home for a holy night.",
    "visuals": [
     {
-     "at": "On August 15, 2012",
+     "at": "15 2012 Most",
      "kind": "timeline",
      "items": [
       [
@@ -47,13 +47,13 @@
      ]
     },
     {
-     "at": "most Aramco staff",
+     "at": "Most Aramco staff",
      "kind": "building",
      "type": "factory",
      "name": "Saudi Aramco"
     },
     {
-     "at": "home for a holy night",
+     "at": "home for a",
      "kind": "people",
      "who": [
       "worker",
@@ -67,10 +67,10 @@
   {
    "id": 3,
    "mood": "tense",
-   "narration": "That morning, Shamoon spread through the network. It wiped about three in four office computers.",
+   "narration": "That morning, Shamoon spread through the network. One by one, it wiped about three in four office computers.",
    "visuals": [
     {
-     "at": "Shamoon spread",
+     "at": "Shamoon spread through",
      "kind": "terminal",
      "lines": [
       "host 0412: offline",
@@ -95,10 +95,10 @@
   {
    "id": 4,
    "mood": "shock",
-   "narration": "In place of files, screens showed a burning American flag.",
+   "narration": "Where files had been, screens showed a burning American flag.",
    "visuals": [
     {
-     "at": "a burning American flag",
+     "at": "a burning American",
      "kind": "office",
      "who": "engineer",
      "action": "shock",
@@ -109,10 +109,10 @@
   {
    "id": 5,
    "mood": "curious",
-   "narration": "A group called the Cutting Sword of Justice claimed the attack. Experts suspected that name was a decoy.",
+   "narration": "Then a group called the Cutting Sword of Justice claimed the attack. Experts suspected that name was a decoy.",
    "visuals": [
     {
-     "at": "the Cutting Sword of Justice",
+     "at": "the Cutting Sword",
      "kind": "dossier",
      "title": "Cutting Sword of Justice",
      "rows": [
@@ -144,7 +144,7 @@
    "narration": "Anonymous U.S. officials blamed Iran, without public proof.",
    "visuals": [
     {
-     "at": "blamed Iran",
+     "at": "blamed Iran without",
      "kind": "globe",
      "points": [
       [
@@ -172,7 +172,7 @@
    "narration": "Aramco had to replace tens of thousands of hard drives. One wiper, a delete-everything program, emptied an oil giant's offices.",
    "visuals": [
     {
-     "at": "tens of thousands of hard drives",
+     "at": "tens of thousands",
      "kind": "object",
      "icon": "laptop",
      "text": "Hard drives replaced"
@@ -184,7 +184,7 @@
      "text": "Wiped, not ransomed"
     },
     {
-     "at": "an oil giant's offices",
+     "at": "an oil giant's",
      "kind": "object",
      "icon": "pipeline",
      "text": "Saudi Aramco"
@@ -235,5 +235,6 @@
    "hl": "30,000",
    "visual": 8
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

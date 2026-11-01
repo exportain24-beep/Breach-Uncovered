@@ -13,13 +13,13 @@
    "narration": "[serious] The FBI built a fake company to catch two hackers.",
    "visuals": [
     {
-     "at": "built a fake company",
+     "at": "built a fake",
      "kind": "building",
      "type": "office",
      "name": "Invita Security"
     },
     {
-     "at": "to catch two hackers",
+     "at": "to catch two",
      "kind": "hacker",
      "screen": "Job offer: Seattle",
      "count": 2
@@ -29,10 +29,10 @@
   {
    "id": 2,
    "mood": "calm",
-   "narration": "Two Russian hackers, Alexey Ivanov and Vasiliy Gorshkov, hit dozens of American computers.",
+   "narration": "Two Russian hackers, Alexey Ivanov and Vasiliy Gorshkov, had hit dozens of American computers.",
    "visuals": [
     {
-     "at": "Alexey Ivanov and Vasiliy Gorshkov",
+     "at": "Alexey Ivanov and",
      "kind": "globe",
      "points": [
       [
@@ -53,7 +53,7 @@
      ]
     },
     {
-     "at": "dozens of American computers",
+     "at": "dozens of American",
      "kind": "network",
      "text": "Dozens of U.S. computers"
     }
@@ -62,7 +62,7 @@
   {
    "id": 3,
    "mood": "tense",
-   "narration": "They stole credit card numbers, then demanded money to keep quiet.",
+   "narration": "First they stole credit card numbers. Then they demanded money to keep quiet.",
    "visuals": [
     {
      "at": "credit card numbers",
@@ -71,7 +71,7 @@
      "text": "3,500 cards, one victim"
     },
     {
-     "at": "then demanded money",
+     "at": "demanded money to",
      "kind": "email",
      "from": "Hacker group",
      "subject": "Extortion demand",
@@ -124,7 +124,7 @@
      "screen": "Demo for recruiters"
     },
     {
-     "at": "arrested on the spot",
+     "at": "arrested on the",
      "kind": "people",
      "who": [
       "agent",
@@ -151,7 +151,7 @@
      ]
     },
     {
-     "at": "copy files from Russia",
+     "at": "copy files from",
      "kind": "counter",
      "value": 250,
      "suffix": " GB",
@@ -165,12 +165,12 @@
    "narration": "Russia charged an FBI agent with hacking. Both hackers went to prison. The job interview was the trap.",
    "visuals": [
     {
-     "at": "charged an FBI agent",
+     "at": "charged an FBI",
      "kind": "headline",
      "text": "FSB charges FBI agent Schuler"
     },
     {
-     "at": "Both hackers went to prison",
+     "at": "Both hackers went",
      "kind": "dossier",
      "title": "Ivanov and Gorshkov",
      "rows": [
@@ -243,5 +243,6 @@
    "hl": "TRAP",
    "visual": 10
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

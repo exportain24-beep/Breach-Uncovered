@@ -13,7 +13,7 @@
    "narration": "[serious] At exactly 2 p.m., 48,000 computers died at once.",
    "visuals": [
     {
-     "at": "At exactly 2 p.m.",
+     "at": "At exactly 2",
      "kind": "object",
      "icon": "clock",
      "text": "2:00 PM"
@@ -29,10 +29,10 @@
   {
    "id": 2,
    "mood": "tense",
-   "narration": "It was March 20, 2013, in South Korea. Big banks and TV stations went dark.",
+   "narration": "It was March 20, 2013, in South Korea. First, big banks went dark. Then TV stations.",
    "visuals": [
     {
-     "at": "March 20, 2013",
+     "at": "March 20 2013",
      "kind": "timeline",
      "items": [
       [
@@ -46,13 +46,13 @@
      ]
     },
     {
-     "at": "Big banks",
+     "at": "big banks went",
      "kind": "building",
      "type": "bank",
      "name": "Shinhan Bank"
     },
     {
-     "at": "TV stations went dark",
+     "at": "went dark Then",
      "kind": "servers",
      "state": "dark",
      "label": "Screens dead"
@@ -62,10 +62,10 @@
   {
    "id": 3,
    "mood": "sad",
-   "narration": "Screens said the boot device was not found. ATMs stopped. One coffee shop took only cash.",
+   "narration": "Screens showed one line: boot device not found. ATMs stopped working. One coffee shop could only take cash.",
    "visuals": [
     {
-     "at": "Screens said",
+     "at": "boot device not",
      "kind": "terminal",
      "lines": [
       "Boot device not found",
@@ -73,13 +73,13 @@
      ]
     },
     {
-     "at": "ATMs stopped",
+     "at": "ATMs stopped working",
      "kind": "object",
      "icon": "atm",
      "text": "Out of service"
     },
     {
-     "at": "only cash",
+     "at": "only take cash",
      "kind": "object",
      "icon": "money",
      "text": "Cash only"
@@ -89,16 +89,16 @@
   {
    "id": 4,
    "mood": "curious",
-   "narration": "A hidden program had waited for that exact minute. It came in through stolen passwords and update software.",
+   "narration": "So how did it happen? Attackers got in with stolen passwords. They hid a program inside update software. Then it waited for one exact minute.",
    "visuals": [
     {
-     "at": "A hidden program",
+     "at": "So how did",
      "kind": "object",
      "icon": "bug",
      "text": "Time bomb"
     },
     {
-     "at": "stolen passwords",
+     "at": "stolen passwords They",
      "kind": "lock",
      "state": "crack",
      "text": "Stolen passwords"
@@ -108,7 +108,7 @@
   {
    "id": 5,
    "mood": "reveal",
-   "narration": "In April, South Korea blamed North Korea. The same group was later linked to the Sony hack.",
+   "narration": "In April, South Korea blamed North Korea. The same group was later linked to the Sony hack. All of it was timed for 2 p.m.",
    "visuals": [
     {
      "at": "South Korea blamed",
@@ -127,7 +127,7 @@
      ]
     },
     {
-     "at": "linked to the Sony hack",
+     "at": "linked to the",
      "kind": "dossier",
      "title": "Lazarus Group",
      "rows": [
@@ -200,5 +200,6 @@
    "hl": "48,000",
    "visual": 1
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

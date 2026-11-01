@@ -13,7 +13,7 @@
    "narration": "[serious] One tiny free tool put hundreds of millions of devices at risk.",
    "visuals": [
     {
-     "at": "One tiny free tool",
+     "at": "One tiny free",
      "kind": "terminal",
      "lines": [
       "log: user signed in",
@@ -22,7 +22,7 @@
      ]
     },
     {
-     "at": "hundreds of millions of devices",
+     "at": "hundreds of millions",
      "kind": "counter",
      "value": 100,
      "suffix": "M+",
@@ -33,7 +33,7 @@
   {
    "id": 2,
    "mood": "calm",
-   "narration": "Log4j is a program's diary. Volunteers built it. It hides in thousands of apps.",
+   "narration": "It's called Log4j, a program's diary. Volunteers built it. It hides in thousands of apps.",
    "visuals": [
     {
      "at": "a program's diary",
@@ -52,7 +52,7 @@
      "label": "Apache volunteers"
     },
     {
-     "at": "in thousands of apps",
+     "at": "in thousands of",
      "kind": "network",
      "text": "Thousands of software packages"
     }
@@ -64,7 +64,7 @@
    "narration": "In November 2021, an Alibaba security worker found a flaw. They warned the volunteers.",
    "visuals": [
     {
-     "at": "an Alibaba security worker",
+     "at": "an Alibaba security",
      "kind": "building",
      "type": "office",
      "name": "Alibaba Cloud"
@@ -84,7 +84,7 @@
    "narration": "In December, the bug went public. Minecraft rushed out a fix.",
    "visuals": [
     {
-     "at": "the bug went public",
+     "at": "the bug went",
      "kind": "headline",
      "text": "CVE-2021-44228 goes public"
     },
@@ -150,7 +150,7 @@
    "narration": "A U.S. review board warned it could linger a decade or longer. Much of the internet rests on volunteers' code.",
    "visuals": [
     {
-     "at": "A U.S. review board",
+     "at": "A U.S review",
      "kind": "timeline",
      "items": [
       [
@@ -168,13 +168,13 @@
      ]
     },
     {
-     "at": "a decade or longer",
+     "at": "a decade or",
      "kind": "object",
      "icon": "clock",
      "text": "Endemic for years"
     },
     {
-     "at": "rests on volunteers' code",
+     "at": "rests on volunteers'",
      "kind": "people",
      "who": [
       "engineer",
@@ -228,5 +228,6 @@
    "hl": "MILLIONS",
    "visual": 1
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

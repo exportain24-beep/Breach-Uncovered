@@ -23,7 +23,7 @@
      "blocked": false
     },
     {
-     "at": "keep a breach secret",
+     "at": "keep a breach",
      "kind": "lock",
      "state": "locked",
      "text": "Hidden for a year"
@@ -33,10 +33,10 @@
   {
    "id": 2,
    "mood": "tense",
-   "narration": "In 2016, hackers found Uber logins left on GitHub, a code-sharing site. They took data on 57 million riders and drivers.",
+   "narration": "In 2016, hackers found Uber logins left on GitHub, a code-sharing site. With them, they took data on 57 million riders and drivers.",
    "visuals": [
     {
-     "at": "found Uber logins left",
+     "at": "found Uber logins",
      "kind": "terminal",
      "lines": [
       "repo: uber-internal",
@@ -44,13 +44,13 @@
      ]
     },
     {
-     "at": "They took data",
+     "at": "they took data",
      "kind": "servers",
      "state": "alarm",
      "label": "Cloud backup copied"
     },
     {
-     "at": "57 million riders and drivers",
+     "at": "57 million riders",
      "kind": "counter",
      "value": 57,
      "suffix": "M",
@@ -64,7 +64,7 @@
    "narration": "Then they contacted security chief Joe Sullivan. Ten days earlier, he had testified to the FTC, a regulator.",
    "visuals": [
     {
-     "at": "security chief Joe Sullivan",
+     "at": "security chief Joe",
      "kind": "office",
      "who": "exec",
      "action": "shock",
@@ -85,7 +85,7 @@
      ]
     },
     {
-     "at": "testified to the FTC",
+     "at": "testified to the",
      "kind": "building",
      "type": "government",
      "name": "Federal Trade Commission"
@@ -95,7 +95,7 @@
   {
    "id": 4,
    "mood": "reveal",
-   "narration": "Uber called it a bug bounty, a reward for finding flaws. Its usual top bounty was $10,000.",
+   "narration": "So Uber called it a bug bounty, a reward for finding flaws. But its usual top bounty was $10,000.",
    "visuals": [
     {
      "at": "a bug bounty",
@@ -136,7 +136,7 @@
    "narration": "In 2022, a jury convicted Sullivan of obstruction and hiding a felony. He got probation.",
    "visuals": [
     {
-     "at": "a jury convicted Sullivan",
+     "at": "a jury convicted",
      "kind": "dossier",
      "title": "Joe Sullivan",
      "rows": [
@@ -224,5 +224,6 @@
    "hl": "$100,000",
    "visual": 0
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

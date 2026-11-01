@@ -13,7 +13,7 @@
    "narration": "[serious] A $10.69 web address stopped a global cyberattack.",
    "visuals": [
     {
-     "at": "A $10.69 web address",
+     "at": "A $10.69 web",
      "kind": "counter",
      "value": 10.69,
      "prefix": "$",
@@ -45,16 +45,16 @@
   {
    "id": 2,
    "mood": "tense",
-   "narration": "On May 12, 2017, ransomware called WannaCry spread worldwide. It locked files and asked for $300 in bitcoin.",
+   "narration": "May 12, 2017. Ransomware called WannaCry spread around the world. It locked files and demanded $300 in bitcoin.",
    "visuals": [
     {
-     "at": "On May 12, 2017",
+     "at": "locked files and",
      "kind": "network",
      "text": "computers locked",
      "total": 200000
     },
     {
-     "at": "It locked files",
+     "at": "files and demanded",
      "kind": "phone",
      "app": "alert",
      "from": "WannaCry",
@@ -71,16 +71,16 @@
   {
    "id": 3,
    "mood": "sad",
-   "narration": "British hospitals were hit hard. Some emergency rooms had to send patients away.",
+   "narration": "British hospitals were hit hard. Some emergency rooms had to send patients away. And it kept spreading.",
    "visuals": [
     {
-     "at": "British hospitals were hit",
+     "at": "British hospitals were",
      "kind": "building",
      "type": "hospital",
      "name": "NHS Hospital"
     },
     {
-     "at": "emergency rooms",
+     "at": "emergency rooms had",
      "kind": "people",
      "who": [
       "doctor",
@@ -94,17 +94,17 @@
   {
    "id": 4,
    "mood": "curious",
-   "narration": "Then a 22-year-old in England looked at the code. It checked a strange web address that nobody owned.",
+   "narration": "Then a 22-year-old in England looked inside the code. It checked a strange web address. Nobody owned it.",
    "visuals": [
     {
-     "at": "a 22-year-old in England",
+     "at": "a 22-year-old in",
      "kind": "office",
      "who": "student",
      "action": "type",
      "screen": "Analyzing sample..."
     },
     {
-     "at": "looked at the code",
+     "at": "checked a strange",
      "kind": "terminal",
      "lines": [
       "check web address",
@@ -113,7 +113,7 @@
      ]
     },
     {
-     "at": "nobody owned",
+     "at": "Nobody owned it",
      "kind": "lock",
      "state": "open",
      "text": "Unregistered domain"
@@ -123,10 +123,10 @@
   {
    "id": 5,
    "mood": "reveal",
-   "narration": "He bought it for $10.69. The attack hit its kill switch and stopped spreading.",
+   "narration": "So he bought it, for $10.69. The attack hit its kill switch and stopped spreading.",
    "visuals": [
     {
-     "at": "He bought it",
+     "at": "he bought it",
      "kind": "object",
      "icon": "card",
      "text": "$10.69 domain"
@@ -142,10 +142,10 @@
   {
    "id": 6,
    "mood": "hopeful",
-   "narration": "In 2018, U.S. prosecutors charged a North Korean programmer for the attack.",
+   "narration": "In 2018, U.S. prosecutors charged a North Korean programmer. But a $10.69 web address had already stopped it.",
    "visuals": [
     {
-     "at": "U.S. prosecutors charged",
+     "at": "U.S prosecutors charged",
      "kind": "dossier",
      "title": "Park Jin Hyok",
      "rows": [
@@ -164,7 +164,7 @@
      ]
     },
     {
-     "at": "for the attack",
+     "at": "charged a North",
      "kind": "stamp",
      "text": "CHARGED"
     }
@@ -222,5 +222,6 @@
    "hl": "$10.69",
    "visual": 11
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

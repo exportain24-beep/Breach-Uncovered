@@ -13,12 +13,12 @@
    "narration": "[serious] Two Russian spy officers were charged over a giant Yahoo hack.",
    "visuals": [
     {
-     "at": "Two Russian spy officers",
+     "at": "Two Russian spy",
      "kind": "stamp",
      "text": "CHARGED"
     },
     {
-     "at": "a giant Yahoo hack",
+     "at": "a giant Yahoo",
      "kind": "building",
      "type": "office",
      "name": "Yahoo"
@@ -28,10 +28,10 @@
   {
    "id": 2,
    "mood": "tense",
-   "narration": "In early 2014, one Yahoo worker clicked a fake email. That was the way in.",
+   "narration": "It started in early 2014. One Yahoo worker clicked a fake email. That opened the door.",
    "visuals": [
     {
-     "at": "one Yahoo worker clicked",
+     "at": "One Yahoo worker",
      "kind": "office",
      "who": "worker",
      "action": "type",
@@ -45,7 +45,7 @@
      "line": "Click this link"
     },
     {
-     "at": "That was the way in",
+     "at": "email That opened",
      "kind": "hacker",
      "screen": "inside Yahoo",
      "count": 1
@@ -55,10 +55,10 @@
   {
    "id": 3,
    "mood": "tense",
-   "narration": "Hackers stole a copy of Yahoo's user database. 500 million accounts.",
+   "narration": "Next, hackers copied Yahoo's user database. 500 million accounts.",
    "visuals": [
     {
-     "at": "stole a copy",
+     "at": "copied Yahoo's user",
      "kind": "servers",
      "state": "alarm",
      "label": "Backup copied Dec 2014"
@@ -75,10 +75,10 @@
   {
    "id": 4,
    "mood": "curious",
-   "narration": "They forged cookies, small files that keep you logged in. Inboxes opened without passwords.",
+   "narration": "Then they forged cookies, small files that keep you logged in. Inboxes opened without passwords.",
    "visuals": [
     {
-     "at": "They forged cookies",
+     "at": "they forged cookies",
      "kind": "object",
      "icon": "key",
      "text": "Fake login cookie"
@@ -94,10 +94,10 @@
   {
    "id": 5,
    "mood": "reveal",
-   "narration": "Targets included Russian journalists and officials. Yahoo told the world in September 2016.",
+   "narration": "Whose inboxes? Targets included Russian journalists and officials. Yahoo told the world in September 2016.",
    "visuals": [
     {
-     "at": "Targets included Russian journalists",
+     "at": "Targets included Russian",
      "kind": "people",
      "who": [
       "worker",
@@ -134,7 +134,7 @@
    "narration": "In 2017, U.S. prosecutors charged two FSB officers and two hackers. Only Canadian Karim Baratov was arrested.",
    "visuals": [
     {
-     "at": "U.S. prosecutors charged",
+     "at": "U.S prosecutors charged",
      "kind": "dossier",
      "title": "Dmitry Dokuchaev, Igor Sushchin",
      "rows": [
@@ -153,7 +153,7 @@
      ]
     },
     {
-     "at": "Only Canadian Karim Baratov",
+     "at": "Only Canadian Karim",
      "kind": "globe",
      "points": [
       [
@@ -188,17 +188,17 @@
   {
    "id": 7,
    "mood": "sad",
-   "narration": "He got five years. One click had opened half a billion accounts.",
+   "narration": "He got five years. And it all began with one click.",
    "visuals": [
     {
-     "at": "He got five years",
+     "at": "He got five",
      "kind": "counter",
      "value": 5,
      "suffix": " years",
      "label": "Baratov, May 2018"
     },
     {
-     "at": "One click had opened",
+     "at": "all began with",
      "kind": "lock",
      "state": "crack",
      "text": "500,000,000 accounts"
@@ -265,5 +265,6 @@
    "hl": "500 MILLION",
    "visual": 6
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

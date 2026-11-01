@@ -29,7 +29,7 @@
   {
    "id": 2,
    "mood": "curious",
-   "narration": "In February 2011, security firm McAfee named it Night Dragon.",
+   "narration": "It began by November 2009. In February 2011, security firm McAfee named it Night Dragon.",
    "visuals": [
     {
      "at": "In February 2011",
@@ -38,7 +38,7 @@
      "text": "February 2011"
     },
     {
-     "at": "named it Night Dragon",
+     "at": "named it Night",
      "kind": "headline",
      "text": "McAfee: energy firms targeted"
     }
@@ -47,10 +47,10 @@
   {
    "id": 3,
    "mood": "tense",
-   "narration": "Targets included oil and gas firms in the U.S., Taiwan, Greece and Kazakhstan. It began by November 2009.",
+   "narration": "The targets: oil and gas firms in the U.S., Taiwan, Greece and Kazakhstan.",
    "visuals": [
     {
-     "at": "the U.S., Taiwan",
+     "at": "the U.S Taiwan",
      "kind": "globe",
      "points": [
       [
@@ -76,7 +76,7 @@
      ]
     },
     {
-     "at": "began by November 2009",
+     "at": "U.S Taiwan Greece",
      "kind": "timeline",
      "items": [
       [
@@ -94,17 +94,17 @@
   {
    "id": 4,
    "mood": "curious",
-   "narration": "The tools were simple. Tricky emails fooled staff, and known Windows weak spots opened doors.",
+   "narration": "The method was simple. First, tricky emails fooled staff. Then known Windows weak spots opened doors.",
    "visuals": [
     {
-     "at": "Tricky emails fooled staff",
+     "at": "tricky emails fooled",
      "kind": "email",
      "from": "Spoofed sender",
      "subject": "Spear-phishing",
      "line": "Targeted fake email"
     },
     {
-     "at": "known Windows weak spots",
+     "at": "known Windows weak",
      "kind": "lock",
      "state": "crack",
      "text": "Unpatched Windows"
@@ -117,7 +117,7 @@
    "narration": "They took control of computers. They copied secret oil field bids and financing plans.",
    "visuals": [
     {
-     "at": "took control of computers",
+     "at": "took control of",
      "kind": "terminal",
      "lines": [
       "remote session open",
@@ -125,7 +125,7 @@
      ]
     },
     {
-     "at": "secret oil field bids",
+     "at": "secret oil field",
      "kind": "object",
      "icon": "file",
      "text": "Oil field bids"
@@ -167,7 +167,7 @@
    "narration": "McAfee said the tools came mainly from China, but named no government. The victims stay unnamed.",
    "visuals": [
     {
-     "at": "came mainly from China",
+     "at": "came mainly from",
      "kind": "dossier",
      "title": "Night Dragon",
      "rows": [
@@ -245,5 +245,6 @@
    "hl": "OIL FIELD",
    "visual": 10
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

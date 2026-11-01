@@ -30,10 +30,10 @@
   {
    "id": 2,
    "mood": "curious",
-   "narration": "Karim Baratov lived in Hamilton, Ontario. He admitted breaking into over 11,000 webmail accounts.",
+   "narration": "His name was Karim Baratov, from Hamilton, Ontario. He admitted breaking into over 11,000 webmail accounts.",
    "visuals": [
     {
-     "at": "Karim Baratov",
+     "at": "Karim Baratov from",
      "kind": "dossier",
      "title": "Karim Baratov",
      "rows": [
@@ -52,7 +52,7 @@
      ]
     },
     {
-     "at": "over 11,000 webmail accounts",
+     "at": "over 11,000 webmail",
      "kind": "network",
      "text": "Inboxes broken into",
      "total": 11000
@@ -65,7 +65,7 @@
    "narration": "U.S. prosecutors said one buyer was Russia's FSB, a spy agency.",
    "visuals": [
     {
-     "at": "one buyer",
+     "at": "one buyer was",
      "kind": "flow",
      "nodes": [
       "FSB officer",
@@ -75,7 +75,7 @@
      "blocked": false
     },
     {
-     "at": "Russia's FSB, a spy agency",
+     "at": "Russia's FSB a",
      "kind": "building",
      "type": "government",
      "name": "FSB, Moscow"
@@ -85,10 +85,10 @@
   {
    "id": 4,
    "mood": "reveal",
-   "narration": "The FSB was tied to the 2014 Yahoo hack of about 500 million accounts.",
+   "narration": "And the FSB was tied to the 2014 Yahoo hack of about 500 million accounts.",
    "visuals": [
     {
-     "at": "tied to the 2014 Yahoo hack",
+     "at": "tied to the",
      "kind": "globe",
      "points": [
       [
@@ -109,7 +109,7 @@
      ]
     },
     {
-     "at": "about 500 million accounts",
+     "at": "about 500 million",
      "kind": "counter",
      "value": 500,
      "suffix": "M",
@@ -120,7 +120,7 @@
   {
    "id": 5,
    "mood": "curious",
-   "narration": "He owned luxury cars, including an Aston Martin.",
+   "narration": "Meanwhile, he owned luxury cars, including an Aston Martin.",
    "visuals": [
     {
      "at": "an Aston Martin",
@@ -133,7 +133,7 @@
   {
    "id": 6,
    "mood": "sad",
-   "narration": "In March 2017, police arrested him in Hamilton. He pleaded guilty in the U.S. that November.",
+   "narration": "In March 2017, police arrested him in Hamilton. That November, he pleaded guilty in the U.S.",
    "visuals": [
     {
      "at": "police arrested him",
@@ -146,7 +146,7 @@
      "label": "Hamilton, March 2017"
     },
     {
-     "at": "He pleaded guilty",
+     "at": "he pleaded guilty",
      "kind": "stamp",
      "text": "CHARGED"
     }
@@ -158,7 +158,7 @@
    "narration": "In May 2018, he got five years and a $250,000 fine. Prosecutors said his $100 jobs served Russian spies.",
    "visuals": [
     {
-     "at": "five years",
+     "at": "five years and",
      "kind": "timeline",
      "items": [
       [
@@ -176,7 +176,7 @@
      ]
     },
     {
-     "at": "$250,000 fine",
+     "at": "$250,000 fine Prosecutors",
      "kind": "object",
      "icon": "money",
      "text": "$250,000 fine"
@@ -237,5 +237,6 @@
    "hl": "RUSSIAN SPIES",
    "visual": 5
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

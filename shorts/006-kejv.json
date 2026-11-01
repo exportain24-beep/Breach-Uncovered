@@ -10,7 +10,7 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] U.S. prosecutors say a software company was a hacking front.",
+   "narration": "[serious] U.S. prosecutors say a software company was really a hacking front.",
    "visuals": [
     {
      "at": "a software company",
@@ -19,7 +19,7 @@
      "name": "Chosun Expo"
     },
     {
-     "at": "was a hacking front",
+     "at": "company was really",
      "kind": "hacker",
      "screen": "front company",
      "count": 3
@@ -32,7 +32,7 @@
    "narration": "Chosun Expo called itself North Korea's first internet company. Its programmers worked in Dalian, China.",
    "visuals": [
     {
-     "at": "Chosun Expo called itself",
+     "at": "Chosun Expo called",
      "kind": "dossier",
      "title": "Chosun Expo",
      "rows": [
@@ -62,16 +62,16 @@
   {
    "id": 3,
    "mood": "curious",
-   "narration": "It advertised gaming and gambling software for clients worldwide.",
+   "narration": "On the surface, it sold gaming and gambling software to clients worldwide.",
    "visuals": [
     {
-     "at": "gaming and gambling software",
+     "at": "gaming and gambling",
      "kind": "object",
      "icon": "laptop",
      "text": "Gaming, gambling, e-payments"
     },
     {
-     "at": "for clients worldwide",
+     "at": "clients worldwide",
      "kind": "flow",
      "nodes": [
       "Clients abroad",
@@ -94,7 +94,7 @@
      "right": "Government front"
     },
     {
-     "at": "tied to Lab 110",
+     "at": "tied to Lab",
      "kind": "building",
      "type": "government",
      "name": "Lab 110"
@@ -104,7 +104,7 @@
   {
    "id": 5,
    "mood": "tense",
-   "narration": "Park Jin Hyok allegedly worked there over a decade. He went home in 2014, just before the Sony hack.",
+   "narration": "Programmer Park Jin Hyok allegedly worked there over a decade. He went home in 2014, just before the Sony hack.",
    "visuals": [
     {
      "at": "Park Jin Hyok",
@@ -126,7 +126,7 @@
      ]
     },
     {
-     "at": "just before the Sony hack",
+     "at": "just before the",
      "kind": "timeline",
      "items": [
       [
@@ -144,7 +144,7 @@
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "The clue? His personal email and a hacker persona's both used tty.",
+   "narration": "So what linked him? His personal email and a hacker persona both used tty.",
    "visuals": [
     {
      "at": "His personal email",
@@ -174,7 +174,7 @@
      "text": "CHARGED"
     },
     {
-     "at": "the day job was",
+     "at": "the day job",
      "kind": "people",
      "who": [
       "engineer",
@@ -234,5 +234,6 @@
    "hl": "SOFTWARE FIRM",
    "visual": 1
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

@@ -10,7 +10,7 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] Fake job offers targeted the builders of a missile shield.",
+   "narration": "[serious] Fake job offers targeted the people who build a missile shield.",
    "visuals": [
     {
      "at": "Fake job offers",
@@ -30,10 +30,10 @@
   {
    "id": 2,
    "mood": "calm",
-   "narration": "In 2016 and 2017, emails hit U.S. defense contractors, including Lockheed Martin. Lockheed leads THAAD, a missile shield in South Korea.",
+   "narration": "The shield is THAAD, led by Lockheed Martin. In 2016 and 2017, U.S. defense contractors got strange emails.",
    "visuals": [
     {
-     "at": "In 2016 and 2017",
+     "at": "In 2016 and",
      "kind": "timeline",
      "items": [
       [
@@ -47,13 +47,13 @@
      ]
     },
     {
-     "at": "including Lockheed Martin",
+     "at": "2016 and 2017",
      "kind": "building",
      "type": "factory",
      "name": "Lockheed Martin"
     },
     {
-     "at": "a missile shield in South Korea",
+     "at": "U.S defense contractors",
      "kind": "globe",
      "points": [
       [
@@ -73,10 +73,10 @@
   {
    "id": 3,
    "mood": "curious",
-   "narration": "The hackers studied employees on social media. Then they posed as recruiters from rival firms.",
+   "narration": "Step one: the hackers studied employees on social media. Step two: they posed as recruiters from rival firms.",
    "visuals": [
     {
-     "at": "studied employees on social media",
+     "at": "studied employees on",
      "kind": "office",
      "who": "hacker",
      "action": "type",
@@ -106,17 +106,17 @@
   {
    "id": 4,
    "mood": "tense",
-   "narration": "Some emails even mentioned THAAD. The bait hid malware, a hidden program.",
+   "narration": "Some emails even mentioned THAAD. But the attachment hid malware, a hidden program.",
    "visuals": [
     {
-     "at": "Some emails even mentioned THAAD",
+     "at": "Some emails even",
      "kind": "phone",
      "app": "email",
      "from": "Recruiter",
      "text": "THAAD role open"
     },
     {
-     "at": "The bait hid malware",
+     "at": "malware a hidden",
      "kind": "object",
      "icon": "bug",
      "text": "Hidden malware"
@@ -126,10 +126,10 @@
   {
    "id": 5,
    "mood": "hopeful",
-   "narration": "But Lockheed was not breached.",
+   "narration": "Did it work? Lockheed was not breached.",
    "visuals": [
     {
-     "at": "Lockheed was not breached",
+     "at": "Lockheed was not",
      "kind": "lock",
      "state": "locked",
      "text": "Lockheed not infiltrated"
@@ -139,16 +139,16 @@
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "The fake recruiters reused aliases from the Sony hack. Some logins came from North Korea.",
+   "narration": "Then investigators found a clue. The fake recruiters reused aliases from the Sony hack. Some logins came from North Korea.",
    "visuals": [
     {
-     "at": "reused aliases from the Sony hack",
+     "at": "reused aliases from",
      "kind": "split",
      "left": "Sony hack, 2014",
      "right": "Same aliases, 2016"
     },
     {
-     "at": "Some logins came from",
+     "at": "Some logins came",
      "kind": "globe",
      "points": [
       [
@@ -171,12 +171,12 @@
    "narration": "In 2018, U.S. prosecutors charged a North Korean programmer. The dream job was the trap.",
    "visuals": [
     {
-     "at": "U.S. prosecutors charged",
+     "at": "U.S prosecutors charged",
      "kind": "stamp",
      "text": "CHARGED"
     },
     {
-     "at": "The dream job was",
+     "at": "The dream job",
      "kind": "hacker",
      "screen": "Apply now",
      "count": 1
@@ -236,5 +236,6 @@
    "hl": "FAKE JOBS",
    "visual": 0
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

@@ -40,6 +40,16 @@ Voice: ElevenLabs `eleven_v4_turbo`, voice `oO7sLA3dWfQXsKeSAjpA`. Captions word
 - 4-8 scenes. Each scene is 1-3 sentences and has a `mood`: calm, curious, tense, shock, reveal, sad, hopeful.
 - Accuracy: every number, name and date must be in `facts` with a source URL (official/court/major media). "Alleged" for unproven blame. No invented quotes, no invented scenes presented as real.
 
+## Story structure: tell it step by step (owner, 2026-11-01)
+A Short is a tiny story, not a list of facts. A viewer who knows nothing must understand what happened, in order, on the first watch.
+1. Hook: the surprising result, one line.
+2. Setup: when, where, who, in one or two plain lines ("May 12, 2017. Ransomware called WannaCry spread around the world.").
+3. Steps in time order, joined with story words: First / Then / Next / So / But / Meanwhile / In the end. Each step causes the next; never jump between unrelated facts.
+4. The turn: one "But..." or "Then..." moment where things change (the clue, the mistake, the catch).
+5. Outcome: what happened to the people involved.
+6. Last line: echoes the hook in new words ("The job interview was the trap.").
+Use small questions to keep people watching ("So how did it happen?", "Did it work?"), at most two per Short. One idea per sentence. If a sentence needs the viewer to already know something, explain it first or cut it.
+
 ## Script craft (updated 2026-11-01 by the owner: catchier, research-driven, makes people come back)
 Research before writing: read 3+ reliable sources per story (official / court / Reuters / AP / BBC / Wired / Ars / the Record / Krebs) and pick the ONE detail most people never heard (the printer, the typo, the $10.69 domain). That detail is the hook and the thumbnail.
 Hook formulas (rotate; never the same `hook_type` twice in a row):

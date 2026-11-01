@@ -13,13 +13,13 @@
    "narration": "[serious] Police hacked a ransomware gang and took over its website.",
    "visuals": [
     {
-     "at": "Police hacked a ransomware gang",
+     "at": "Police hacked a",
      "kind": "lock",
      "state": "crack",
      "text": "LockBit site seized"
     },
     {
-     "at": "took over its website",
+     "at": "took over its",
      "kind": "building",
      "type": "police",
      "name": "National Crime Agency"
@@ -32,13 +32,13 @@
    "narration": "LockBit rented out ransomware, a program that locks files. It hit over 2,500 victims.",
    "visuals": [
     {
-     "at": "LockBit rented out ransomware",
+     "at": "LockBit rented out",
      "kind": "hacker",
      "screen": "LockBit affiliate panel",
      "count": 2
     },
     {
-     "at": "a program that locks files",
+     "at": "a program that",
      "kind": "object",
      "icon": "file",
      "text": "Files locked"
@@ -55,10 +55,10 @@
   {
    "id": 3,
    "mood": "reveal",
-   "narration": "On February 19, 2024, police struck back. They took down 34 servers in eight countries.",
+   "narration": "Then, on February 19, 2024, police struck back. They took down 34 servers in eight countries.",
    "visuals": [
     {
-     "at": "On February 19, 2024",
+     "at": "on February 19",
      "kind": "timeline",
      "items": [
       [
@@ -72,7 +72,7 @@
      ]
     },
     {
-     "at": "took down 34 servers",
+     "at": "took down 34",
      "kind": "servers",
      "state": "dark",
      "label": "34 servers down"
@@ -108,10 +108,10 @@
   {
    "id": 4,
    "mood": "shock",
-   "narration": "The gang's leak site now showed police posts. They also grabbed 1,000 decryption keys, unlock codes.",
+   "narration": "The gang's own leak site now showed police posts. They also grabbed 1,000 decryption keys, unlock codes.",
    "visuals": [
     {
-     "at": "The gang's leak site",
+     "at": "now showed police",
      "kind": "headline",
      "text": "Now under NCA control"
     },
@@ -126,10 +126,10 @@
   {
    "id": 5,
    "mood": "curious",
-   "narration": "A countdown asked, who is LockBitSupp? That was the gang's boss.",
+   "narration": "A countdown appeared. It asked, who is LockBitSupp? That was the gang's boss.",
    "visuals": [
     {
-     "at": "A countdown asked",
+     "at": "who is LockBitSupp",
      "kind": "object",
      "icon": "clock",
      "text": "Who is LockBitSupp?"
@@ -148,7 +148,7 @@
    "narration": "In May 2024, U.S. prosecutors charged Dmitry Khoroshev, alleging he is LockBitSupp. A $10 million reward is offered.",
    "visuals": [
     {
-     "at": "U.S. prosecutors charged",
+     "at": "U.S prosecutors charged",
      "kind": "dossier",
      "title": "Dmitry Khoroshev",
      "rows": [
@@ -203,7 +203,7 @@
      ]
     },
     {
-     "at": "his mask is off",
+     "at": "his mask is",
      "kind": "stamp",
      "text": "WANTED"
     }
@@ -257,5 +257,6 @@
    "hl": "HACKED",
    "visual": 0
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

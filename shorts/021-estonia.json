@@ -18,7 +18,7 @@
      "text": "Bronze Soldier moved, Tallinn"
     },
     {
-     "at": "cyberattacks on a country",
+     "at": "cyberattacks on a",
      "kind": "network",
      "text": "Estonia under attack"
     }
@@ -27,16 +27,16 @@
   {
    "id": 2,
    "mood": "tense",
-   "narration": "In April 2007, Estonia moved a Soviet war memorial from central Tallinn. Riots broke out.",
+   "narration": "It was April 2007. Estonia moved a Soviet war memorial from central Tallinn. Riots broke out.",
    "visuals": [
     {
-     "at": "In April 2007",
+     "at": "April 2007 Estonia",
      "kind": "object",
      "icon": "calendar",
      "text": "April 2007"
     },
     {
-     "at": "a Soviet war memorial",
+     "at": "a Soviet war",
      "kind": "split",
      "left": "Estonia: symbol of occupation",
      "right": "Russia: an insult"
@@ -78,13 +78,13 @@
      ]
     },
     {
-     "at": "Floods of fake traffic",
+     "at": "Floods of fake",
      "kind": "servers",
      "state": "alarm",
      "label": "Fake traffic flood"
     },
     {
-     "at": "a traffic jam attack",
+     "at": "a traffic jam",
      "kind": "terminal",
      "lines": [
       "request",
@@ -101,13 +101,13 @@
    "narration": "Government, bank and newspaper websites went down.",
    "visuals": [
     {
-     "at": "Government, bank",
+     "at": "Government bank and",
      "kind": "building",
      "type": "government",
      "name": "Estonian Government"
     },
     {
-     "at": "newspaper websites went down",
+     "at": "newspaper websites went",
      "kind": "office",
      "who": "banker",
      "action": "shock",
@@ -118,7 +118,7 @@
   {
    "id": 5,
    "mood": "tense",
-   "narration": "Another wave hit around May 9, Russia's Victory Day. The attacks lasted 22 days.",
+   "narration": "A second wave hit around May 9, Russia's Victory Day. The attacks lasted 22 days.",
    "visuals": [
     {
      "at": "around May 9",
@@ -178,7 +178,7 @@
    "narration": "Only one person was fined, a 20-year-old in Estonia. A whole country learned war can go online.",
    "visuals": [
     {
-     "at": "Only one person was fined",
+     "at": "Only one person",
      "kind": "dossier",
      "title": "Dmitri Galushkevich",
      "rows": [
@@ -197,7 +197,7 @@
      ]
     },
     {
-     "at": "war can go online",
+     "at": "war can go",
      "kind": "hacker",
      "screen": "Estonia 2007",
      "count": 3
@@ -252,5 +252,6 @@
    "hl": "ONE STATUE",
    "visual": 6
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }

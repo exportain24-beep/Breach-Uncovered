@@ -32,14 +32,14 @@
    "narration": "Change Healthcare handles billions of insurance claims every year. It belongs to UnitedHealth Group.",
    "visuals": [
     {
-     "at": "billions of insurance claims",
+     "at": "billions of insurance",
      "kind": "counter",
      "value": 15,
      "suffix": "B",
      "label": "claims a year"
     },
     {
-     "at": "It belongs to UnitedHealth",
+     "at": "It belongs to",
      "kind": "flow",
      "nodes": [
       "UnitedHealth Group",
@@ -101,7 +101,7 @@
      "label": "Systems unplugged"
     },
     {
-     "at": "Pharmacies struggled",
+     "at": "Pharmacies struggled to",
      "kind": "people",
      "who": [
       "doctor",
@@ -118,13 +118,13 @@
    "narration": "UnitedHealth paid a 22 million dollar ransom. The twist? A hacker partner claimed the gang kept the money.",
    "visuals": [
     {
-     "at": "a 22 million dollar ransom",
+     "at": "a 22 million",
      "kind": "object",
      "icon": "bitcoin",
      "text": "$22M paid"
     },
     {
-     "at": "A hacker partner claimed",
+     "at": "A hacker partner",
      "kind": "flow",
      "nodes": [
       "UnitedHealth",
@@ -144,16 +144,16 @@
   {
    "id": 6,
    "mood": "sad",
-   "narration": "The data still was not safe. Almost 193 million people were affected.",
+   "narration": "Even then, the data was not safe. Almost 193 million people were affected.",
    "visuals": [
     {
-     "at": "The data still",
+     "at": "Even then the",
      "kind": "object",
      "icon": "file",
      "text": "Patient records"
     },
     {
-     "at": "Almost 193 million people",
+     "at": "Almost 193 million",
      "kind": "counter",
      "value": 192.7,
      "suffix": "M",
@@ -167,7 +167,7 @@
    "narration": "The attack was blamed on the BlackCat ransomware gang. One missing check hit millions.",
    "visuals": [
     {
-     "at": "The attack was blamed",
+     "at": "The attack was",
      "kind": "dossier",
      "title": "ALPHV / BlackCat",
      "rows": [
@@ -248,5 +248,6 @@
    "hl": "193 MILLION",
    "visual": 8
   }
- }
+ },
+ "story_style": "step-by-step v2 (2026-11-01)"
 }
