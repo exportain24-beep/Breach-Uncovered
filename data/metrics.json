@@ -212,6 +212,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "6h": {
+    "taken_at": "2026-11-01T07:38:02.043238+00:00",
+    "age_hours": 10.6,
+    "youtube": {
+     "viewCount": 387,
+     "likeCount": 2,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 6170,
+     "post_video_view_time": 709560,
+     "blue_reels_play_count": 118,
+     "fb_reels_total_plays": 130,
+     "fb_reels_replay_count": 12,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
    }
   }
  },
@@ -220,6 +243,30 @@
   "yt": "GuoVMlGUCuU",
   "fb": "1811483626791413",
   "published_at": "2026-11-01T00:43:15+00:00",
-  "snapshots": {}
+  "snapshots": {
+   "6h": {
+    "taken_at": "2026-11-01T07:38:02.043238+00:00",
+    "age_hours": 6.9,
+    "youtube": {
+     "viewCount": 3,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2651,
+     "post_video_view_time": 577963,
+     "blue_reels_play_count": 218,
+     "fb_reels_total_plays": 230,
+     "fb_reels_replay_count": 12,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 0
+    }
+   }
+  }
  }
 }

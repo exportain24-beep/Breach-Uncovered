@@ -1,5 +1,5 @@
 # Shorts performance
-Updated 2026-11-01 01:14 UTC. Raw YouTube views count from the first frame since Aug 24 2026; judge by engaged views, average % viewed and shares.
+Updated 2026-11-01 07:38 UTC. Raw YouTube views count from the first frame since Aug 24 2026; judge by engaged views, average % viewed and shares.
 
 ## At 1h
 | Short | YT views | YT likes | YT comments | engaged views | avg % viewed | FB plays | verdict |
@@ -15,6 +15,8 @@ Updated 2026-11-01 01:14 UTC. Raw YouTube views count from the first frame since
 | 003 How a Typo Saved Bangladesh Bank From a  | 73 | 0 | 1 | n/a | n/a | 221 | normal |
 | 001 How a Comedy Movie Got Sony Pictures Hac | 891 | 17 | 1 | n/a | n/a | 14 | exceptional |
 | 101 Binance Hack: The $6.3 Billion Crypto At | 46 | 1 | 1 | n/a | n/a | 60 | below baseline |
+| 102 GMO Hack: Japan Firm Refuses $50 Million | 387 | 2 | 1 | n/a | n/a | 118 | exceptional |
+| 103 UNM Hospital Cyberattack: New Mexico's O | 3 | 0 | 0 | n/a | n/a | 218 | below baseline |
 
 ## At 24h
 | Short | YT views | YT likes | YT comments | engaged views | avg % viewed | FB plays | verdict |
