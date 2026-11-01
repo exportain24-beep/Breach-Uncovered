@@ -29,12 +29,21 @@
    "first_comment": "Was GMO right to refuse the ransom, even after the data was posted?",
    "yt": "Q3YKiDe2CBM",
    "published_at": "2026-10-31T21:00:00+00:00",
-   "fb": "1673761161201133"
+   "fb": "1673761161201133",
+   "comment_done": true
+  },
+  "103": {
+   "title": "UNM Hospital Cyberattack: New Mexico's Only Level 1 Trauma Center Hit",
+   "first_comment": "Should hospitals be treated as critical infrastructure with stronger cyber rules?",
+   "yt": "GuoVMlGUCuU",
+   "published_at": "2026-11-01T00:43:15+00:00",
+   "fb": "1811483626791413"
   }
  },
  "slots_done": [
   "2026-10-31T08:00:00-04:00",
   "2026-10-31T14:00:00-04:00",
-  "2026-10-31T17:00:00-04:00"
+  "2026-10-31T17:00:00-04:00",
+  "2026-10-31T20:30:00-04:00"
  ]
 }
