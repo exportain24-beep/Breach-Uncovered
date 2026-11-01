@@ -73,6 +73,29 @@
      "likes": 1,
      "comments": 1
     }
+   },
+   "48h": {
+    "taken_at": "2026-11-01T15:14:31.016890+00:00",
+    "age_hours": 52.5,
+    "youtube": {
+     "viewCount": 90,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2296,
+     "post_video_view_time": 512197,
+     "blue_reels_play_count": 223,
+     "fb_reels_total_plays": 232,
+     "fb_reels_replay_count": 9,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
    }
   }
  },
@@ -122,6 +145,29 @@
      "post_video_view_time": 68337,
      "blue_reels_play_count": 14,
      "fb_reels_total_plays": 16,
+     "fb_reels_replay_count": 2,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
+   },
+   "24h": {
+    "taken_at": "2026-11-01T15:14:31.016890+00:00",
+    "age_hours": 26.6,
+    "youtube": {
+     "viewCount": 931,
+     "likeCount": 17,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 4686,
+     "post_video_view_time": 70296,
+     "blue_reels_play_count": 15,
+     "fb_reels_total_plays": 17,
      "fb_reels_replay_count": 2,
      "post_video_followers": 0,
      "likes": 0,
@@ -266,7 +312,37 @@
      "likes": 1,
      "comments": 0
     }
+   },
+   "1h": {
+    "taken_at": "2026-11-01T15:14:31.016890+00:00",
+    "age_hours": 14.5,
+    "youtube": {
+     "viewCount": 4,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2821,
+     "post_video_view_time": 623571,
+     "blue_reels_play_count": 222,
+     "fb_reels_total_plays": 234,
+     "fb_reels_replay_count": 12,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
    }
   }
+ },
+ "104": {
+  "title": "GM Pays $220 Million Over Selling Drivers' Braking Data to Insurers",
+  "yt": "IhtZz7pqkyU",
+  "fb": "1128179469862123",
+  "published_at": "2026-11-01T14:41:05+00:00",
+  "snapshots": {}
  }
 }
