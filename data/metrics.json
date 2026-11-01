@@ -304,6 +304,29 @@
      "likes": 1,
      "comments": 1
     }
+   },
+   "24h": {
+    "taken_at": "2026-11-01T23:38:52.220370+00:00",
+    "age_hours": 26.6,
+    "youtube": {
+     "viewCount": 398,
+     "likeCount": 2,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 5637,
+     "post_video_view_time": 761012,
+     "blue_reels_play_count": 135,
+     "fb_reels_total_plays": 148,
+     "fb_reels_replay_count": 13,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
    }
   }
  },
@@ -389,6 +412,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "6h": {
+    "taken_at": "2026-11-01T23:38:52.220370+00:00",
+    "age_hours": 9.0,
+    "youtube": {
+     "viewCount": 87,
+     "likeCount": 1,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 5165,
+     "post_video_view_time": 1033113,
+     "blue_reels_play_count": 200,
+     "fb_reels_total_plays": 216,
+     "fb_reels_replay_count": 16,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -397,6 +443,37 @@
   "yt": "I4hXuS8T1x4",
   "fb": "1673922861103891",
   "published_at": "2026-11-01T19:21:13+00:00",
+  "snapshots": {
+   "1h": {
+    "taken_at": "2026-11-01T23:38:52.220370+00:00",
+    "age_hours": 4.3,
+    "youtube": {
+     "viewCount": 23,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3351,
+     "post_video_view_time": 673693,
+     "blue_reels_play_count": 201,
+     "fb_reels_total_plays": 212,
+     "fb_reels_replay_count": 11,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
+   }
+  }
+ },
+ "004": {
+  "title": "THAAD Phishing: Fake Recruiters Targeted Lockheed Martin Staff",
+  "yt": "5bjE3-xPhi0",
+  "fb": "1356790236392993",
+  "published_at": "2026-11-01T23:10:17+00:00",
   "snapshots": {}
  }
 }
