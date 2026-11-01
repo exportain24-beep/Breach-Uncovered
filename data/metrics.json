@@ -50,6 +50,29 @@
      "likes": 1,
      "comments": 1
     }
+   },
+   "1h": {
+    "taken_at": "2026-11-01T01:14:19.795075+00:00",
+    "age_hours": 38.5,
+    "youtube": {
+     "viewCount": 74,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2261,
+     "post_video_view_time": 499810,
+     "blue_reels_play_count": 221,
+     "fb_reels_total_plays": 230,
+     "fb_reels_replay_count": 9,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
    }
   }
  },
@@ -135,6 +158,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "6h": {
+    "taken_at": "2026-11-01T01:14:19.795075+00:00",
+    "age_hours": 7.2,
+    "youtube": {
+     "viewCount": 46,
+     "likeCount": 1,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 6596,
+     "post_video_view_time": 389187,
+     "blue_reels_play_count": 60,
+     "fb_reels_total_plays": 69,
+     "fb_reels_replay_count": 9,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -143,6 +189,37 @@
   "yt": "Q3YKiDe2CBM",
   "fb": "1673761161201133",
   "published_at": "2026-10-31T21:00:00+00:00",
+  "snapshots": {
+   "1h": {
+    "taken_at": "2026-11-01T01:14:19.795075+00:00",
+    "age_hours": 4.2,
+    "youtube": {
+     "viewCount": 186,
+     "likeCount": 2,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 5883,
+     "post_video_view_time": 335367,
+     "blue_reels_play_count": 59,
+     "fb_reels_total_plays": 62,
+     "fb_reels_replay_count": 3,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
+   }
+  }
+ },
+ "103": {
+  "title": "UNM Hospital Cyberattack: New Mexico's Only Level 1 Trauma Center Hit",
+  "yt": "GuoVMlGUCuU",
+  "fb": "1811483626791413",
+  "published_at": "2026-11-01T00:43:15+00:00",
   "snapshots": {}
  }
 }
