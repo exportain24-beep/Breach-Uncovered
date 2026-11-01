@@ -227,6 +227,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "24h": {
+    "taken_at": "2026-11-01T19:45:20.912811+00:00",
+    "age_hours": 25.8,
+    "youtube": {
+     "viewCount": 77,
+     "likeCount": 1,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 6102,
+     "post_video_view_time": 482078,
+     "blue_reels_play_count": 79,
+     "fb_reels_total_plays": 89,
+     "fb_reels_replay_count": 10,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -343,6 +366,37 @@
   "yt": "IhtZz7pqkyU",
   "fb": "1128179469862123",
   "published_at": "2026-11-01T14:41:05+00:00",
+  "snapshots": {
+   "1h": {
+    "taken_at": "2026-11-01T19:45:20.912811+00:00",
+    "age_hours": 5.1,
+    "youtube": {
+     "viewCount": 71,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 5452,
+     "post_video_view_time": 986972,
+     "blue_reels_play_count": 199,
+     "fb_reels_total_plays": 215,
+     "fb_reels_replay_count": 16,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
+   }
+  }
+ },
+ "002": {
+  "title": "DarkSeoul: 48,000 Computers Wiped at 2 p.m.",
+  "yt": "I4hXuS8T1x4",
+  "fb": "1673922861103891",
+  "published_at": "2026-11-01T19:21:13+00:00",
   "snapshots": {}
  }
 }
