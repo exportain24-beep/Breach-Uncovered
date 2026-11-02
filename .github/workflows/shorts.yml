@@ -20,7 +20,7 @@ jobs:
       - name: Is a slot due?
         id: due
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then echo "go=$(python3 tools/run_shorts.py --check-due | tail -1)" >> "$GITHUB_OUTPUT"; else echo "go=DUE" >> "$GITHUB_OUTPUT"; fi
+          if [ "${{ github.event_name }}" != "push" ]; then echo "go=$(python3 tools/run_shorts.py --check-due | tail -1)" >> "$GITHUB_OUTPUT"; else echo "go=DUE" >> "$GITHUB_OUTPUT"; fi
       - name: Deps
         if: steps.due.outputs.go == 'DUE'
         run: |
@@ -43,10 +43,10 @@ jobs:
           FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         run: |
-          ARGS=""; [ "${{ github.event_name }}" = "schedule" ] && ARGS="--scheduled"
+          ARGS=""; [ "${{ github.event_name }}" != "push" ] && ARGS="--scheduled"
           if [ "${{ github.event_name }}" = "push" ]; then L=$(head -n1 tools/.short-now); case "$L" in preview*) ARGS="--preview";; esac; N=$(echo "$L" | tr -dc 0-9); [ -n "$N" ] && ARGS="$ARGS --episode $N"; fi
           mkdir -p reports out; set -o pipefail; python3 -u tools/run_shorts.py $ARGS 2>&1 | tee reports/shorts-run.log | grep -v "frame " | tail -n 200
-          if [ "${{ github.event_name }}" = "schedule" ]; then for i in 1 2; do [ "$(python3 tools/run_shorts.py --check-due | tail -1)" = DUE ] || break; python3 -u tools/run_shorts.py --scheduled 2>&1 | tee -a reports/shorts-run.log | grep -v "frame " | tail -n 120; done; fi
+          if [ "${{ github.event_name }}" != "push" ]; then for i in 1 2; do [ "$(python3 tools/run_shorts.py --check-due | tail -1)" = DUE ] || break; python3 -u tools/run_shorts.py --scheduled 2>&1 | tee -a reports/shorts-run.log | grep -v "frame " | tail -n 120; done; fi
       - name: Save state, voices and preview
         if: always() && steps.due.outputs.go == 'DUE'
         run: |
