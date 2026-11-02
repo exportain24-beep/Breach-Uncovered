@@ -1,5 +1,5 @@
 # Shorts performance
-Updated 2026-11-02 16:06 UTC. Raw YouTube views count from the first frame since Aug 24 2026; judge by engaged views, average % viewed and shares.
+Updated 2026-11-02 23:35 UTC. Raw YouTube views count from the first frame since Aug 24 2026; judge by engaged views, average % viewed and shares.
 
 ## At 1h
 | Short | YT views | YT likes | YT comments | engaged views | avg % viewed | FB plays | verdict |
@@ -21,13 +21,16 @@ Updated 2026-11-02 16:06 UTC. Raw YouTube views count from the first frame since
 |---|---|---|---|---|---|---|---|
 | 003 How a Typo Saved Bangladesh Bank From a  | 73 | 0 | 1 | n/a | n/a | 221 | normal |
 | 001 How a Comedy Movie Got Sony Pictures Hac | 891 | 17 | 1 | n/a | n/a | 14 | exceptional |
-| 101 Binance Hack: The $6.3 Billion Crypto At | 46 | 1 | 1 | n/a | n/a | 60 | below baseline |
+| 101 Binance Hack: The $6.3 Billion Crypto At | 46 | 1 | 1 | n/a | n/a | 60 | normal |
 | 102 GMO Hack: Japan Firm Refuses $50 Million | 387 | 2 | 1 | n/a | n/a | 118 | exceptional |
 | 103 UNM Hospital Cyberattack: New Mexico's O | 3 | 0 | 0 | n/a | n/a | 218 | below baseline |
-| 104 GM Pays $220 Million Over Selling Driver | 87 | 1 | 1 | n/a | n/a | 200 | normal |
+| 104 GM Pays $220 Million Over Selling Driver | 87 | 1 | 1 | n/a | n/a | 200 | above baseline |
 | 002 DarkSeoul: 48,000 Computers Wiped at 2 p | 26 | 0 | 1 | n/a | n/a | 278 | below baseline |
 | 004 THAAD Phishing: Fake Recruiters Targeted | 0 | 0 | 1 | n/a | n/a | 158 | below baseline |
 | 005 How a $10.69 Web Address Stopped the Wan | 238 | 8 | 1 | n/a | n/a | 287 | exceptional |
+| 105 Air Alert Hack: Fake Nuclear Warnings Hi | 21 | 0 | 0 | n/a | n/a | 231 | below baseline |
+| 006 Chosun Expo: The Software Company U.S. S | 280 | 3 | 0 | n/a | n/a | 2 | exceptional |
+| 015 LockBit Takedown: How Police Hacked a Ra | 36 | 1 | 0 | n/a | n/a | 214 | below baseline |
 
 ## At 24h
 | Short | YT views | YT likes | YT comments | engaged views | avg % viewed | FB plays | verdict |
@@ -38,9 +41,13 @@ Updated 2026-11-02 16:06 UTC. Raw YouTube views count from the first frame since
 | 102 GMO Hack: Japan Firm Refuses $50 Million | 398 | 2 | 1 | n/a | n/a | 135 | exceptional |
 | 103 UNM Hospital Cyberattack: New Mexico's O | 12 | 0 | 1 | n/a | n/a | 222 | below baseline |
 | 104 GM Pays $220 Million Over Selling Driver | 89 | 1 | 1 | n/a | n/a | 202 | normal |
+| 002 DarkSeoul: 48,000 Computers Wiped at 2 p | 39 | 0 | 1 | n/a | n/a | 280 | below baseline |
+| 004 THAAD Phishing: Fake Recruiters Targeted | 17 | 0 | 1 | n/a | n/a | 198 | below baseline |
 
 ## At 48h
 | Short | YT views | YT likes | YT comments | engaged views | avg % viewed | FB plays | verdict |
 |---|---|---|---|---|---|---|---|
-| 003 How a Typo Saved Bangladesh Bank From a  | 90 | 0 | 1 | n/a | n/a | 223 | insufficient data |
-| 001 How a Comedy Movie Got Sony Pictures Hac | 964 | 17 | 1 | n/a | n/a | 15 | insufficient data |
+| 003 How a Typo Saved Bangladesh Bank From a  | 90 | 0 | 1 | n/a | n/a | 223 | below baseline |
+| 001 How a Comedy Movie Got Sony Pictures Hac | 964 | 17 | 1 | n/a | n/a | 15 | exceptional |
+| 101 Binance Hack: The $6.3 Billion Crypto At | 92 | 1 | 1 | 24 | 67.35 | 79 | below baseline |
+| 102 GMO Hack: Japan Firm Refuses $50 Million | 411 | 2 | 1 | 126 | 32.42 | 136 | above baseline |

@@ -273,6 +273,38 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "48h": {
+    "taken_at": "2026-11-02T23:35:04.035984+00:00",
+    "age_hours": 53.6,
+    "youtube": {
+     "viewCount": 92,
+     "likeCount": 1,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": {
+      "engagedViews": 24,
+      "views": 62,
+      "averageViewDuration": 33,
+      "averageViewPercentage": 67.35,
+      "likes": 1,
+      "shares": 1,
+      "comments": 0,
+      "subscribersGained": 0
+     }
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 6102,
+     "post_video_view_time": 482078,
+     "blue_reels_play_count": 79,
+     "fb_reels_total_plays": 89,
+     "fb_reels_replay_count": 10,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -345,6 +377,38 @@
      "post_video_view_time": 761012,
      "blue_reels_play_count": 135,
      "fb_reels_total_plays": 148,
+     "fb_reels_replay_count": 13,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
+   },
+   "48h": {
+    "taken_at": "2026-11-02T23:35:04.035984+00:00",
+    "age_hours": 50.6,
+    "youtube": {
+     "viewCount": 411,
+     "likeCount": 2,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": {
+      "engagedViews": 126,
+      "views": 387,
+      "averageViewDuration": 15,
+      "averageViewPercentage": 32.42,
+      "likes": 2,
+      "shares": 0,
+      "comments": 0,
+      "subscribersGained": 0
+     }
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 5602,
+     "post_video_view_time": 761989,
+     "blue_reels_play_count": 136,
+     "fb_reels_total_plays": 149,
      "fb_reels_replay_count": 13,
      "post_video_followers": 0,
      "likes": 1,
@@ -558,6 +622,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "24h": {
+    "taken_at": "2026-11-02T23:35:04.035984+00:00",
+    "age_hours": 28.2,
+    "youtube": {
+     "viewCount": 39,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3210,
+     "post_video_view_time": 898877,
+     "blue_reels_play_count": 280,
+     "fb_reels_total_plays": 300,
+     "fb_reels_replay_count": 20,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -607,6 +694,29 @@
      "post_video_view_time": 431655,
      "blue_reels_play_count": 197,
      "fb_reels_total_plays": 212,
+     "fb_reels_replay_count": 15,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
+   },
+   "24h": {
+    "taken_at": "2026-11-02T23:35:04.035984+00:00",
+    "age_hours": 24.4,
+    "youtube": {
+     "viewCount": 17,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2180,
+     "post_video_view_time": 431799,
+     "blue_reels_play_count": 198,
+     "fb_reels_total_plays": 213,
      "fb_reels_replay_count": 15,
      "post_video_followers": 0,
      "likes": 0,
@@ -697,6 +807,29 @@
      "likes": 1,
      "comments": 0
     }
+   },
+   "6h": {
+    "taken_at": "2026-11-02T23:35:04.035984+00:00",
+    "age_hours": 10.6,
+    "youtube": {
+     "viewCount": 21,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3625,
+     "post_video_view_time": 837501,
+     "blue_reels_play_count": 231,
+     "fb_reels_total_plays": 250,
+     "fb_reels_replay_count": 19,
+     "post_video_followers": 1,
+     "likes": 1,
+     "comments": 0
+    }
    }
   }
  },
@@ -705,7 +838,31 @@
   "yt": "kZECFy5SjHs",
   "fb": "29695166120102132",
   "published_at": "2026-11-02T17:00:00+00:00",
-  "snapshots": {}
+  "snapshots": {
+   "6h": {
+    "taken_at": "2026-11-02T23:35:04.035984+00:00",
+    "age_hours": 6.6,
+    "youtube": {
+     "viewCount": 280,
+     "likeCount": 3,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 23716,
+     "post_video_view_time": 47432,
+     "blue_reels_play_count": 2,
+     "fb_reels_total_plays": 3,
+     "fb_reels_replay_count": 1,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 0
+    }
+   }
+  }
  },
  "015": {
   "title": "LockBit Takedown: How Police Hacked a Ransomware Gang",
@@ -730,6 +887,29 @@
      "post_video_view_time": 470606,
      "blue_reels_play_count": 208,
      "fb_reels_total_plays": 214,
+     "fb_reels_replay_count": 6,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 0
+    }
+   },
+   "6h": {
+    "taken_at": "2026-11-02T23:35:04.035984+00:00",
+    "age_hours": 10.5,
+    "youtube": {
+     "viewCount": 36,
+     "likeCount": 1,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2256,
+     "post_video_view_time": 482944,
+     "blue_reels_play_count": 214,
+     "fb_reels_total_plays": 220,
      "fb_reels_replay_count": 6,
      "post_video_followers": 0,
      "likes": 0,
