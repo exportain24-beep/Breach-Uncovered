@@ -1,35 +1,34 @@
-building shorts/004-thaad.json
+building shorts/005-wannacry.json
 timing: ElevenLabs voice
-short: 50.3s, 7 scenes, 14 visuals
-thumbnail: work/short-004/thumb.png
-  frame 0/1510 (0s)
-  frame 60/1510 (6s)
-  frame 120/1510 (13s)
-  frame 180/1510 (19s)
-  frame 240/1510 (25s)
-  frame 300/1510 (31s)
-  frame 360/1510 (37s)
-  frame 420/1510 (43s)
-  frame 480/1510 (52s)
-  frame 540/1510 (60s)
-  frame 600/1510 (67s)
-  frame 660/1510 (73s)
-  frame 720/1510 (79s)
-  frame 780/1510 (85s)
-  frame 840/1510 (92s)
-  frame 900/1510 (99s)
-  frame 960/1510 (105s)
-  frame 1020/1510 (111s)
-  frame 1080/1510 (117s)
-  frame 1140/1510 (123s)
-  frame 1200/1510 (129s)
-  frame 1260/1510 (135s)
-  frame 1320/1510 (141s)
-  frame 1380/1510 (147s)
-  frame 1440/1510 (155s)
-  frame 1500/1510 (164s)
-rendered out/short-004.mp4 9.8 MB, 50.3s in 165s
-YouTube Short OK 5bjE3-xPhi0
+short: 49.2s, 6 scenes, 14 visuals
+thumbnail: work/short-005/thumb.png
+  frame 0/1475 (0s)
+  frame 60/1475 (7s)
+  frame 120/1475 (15s)
+  frame 180/1475 (22s)
+  frame 240/1475 (29s)
+  frame 300/1475 (37s)
+  frame 360/1475 (44s)
+  frame 420/1475 (53s)
+  frame 480/1475 (62s)
+  frame 540/1475 (70s)
+  frame 600/1475 (86s)
+  frame 660/1475 (102s)
+  frame 720/1475 (115s)
+  frame 780/1475 (126s)
+  frame 840/1475 (134s)
+  frame 900/1475 (142s)
+  frame 960/1475 (152s)
+  frame 1020/1475 (162s)
+  frame 1080/1475 (170s)
+  frame 1140/1475 (177s)
+  frame 1200/1475 (184s)
+  frame 1260/1475 (192s)
+  frame 1320/1475 (199s)
+  frame 1380/1475 (206s)
+  frame 1440/1475 (214s)
+rendered out/short-005.mp4 10.5 MB, 49.2s in 219s
+YouTube Short OK pOV6dsEJvF0
 YouTube thumbnail set
-Facebook Reel OK 1356790236392993
-short 004 published
+Facebook Reel OK 1476229624352314
+short 005 published
