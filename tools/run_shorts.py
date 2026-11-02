@@ -42,18 +42,24 @@ def post_comments(state):
         except Exception as e: print("comment error", e); ok = False
         if ok: st["comment_done"] = True
 
-SLOTS_NY = ((8, 0, "trending"), (12, 0, "curiosity"), (17, 0, "ai"), (20, 30, "mystery"))   # owner's schedule (New York, DST automatic) + the format each slot prefers
-LEAD_H, LATE_H = 10, 3      # prepare a slot up to 10 h early (uploaded as scheduled for the exact slot time); catch up to 3 h late
+def _sched():
+    try: return json.load(open("data/schedule.json"))
+    except Exception: return {"slots_ny": [[8, 0, "trending"], [14, 0, "curiosity"], [20, 0, "mystery"]], "lead_hours": 3, "late_hours": 3}
+SLOTS_NY = tuple(tuple(x) for x in _sched()["slots_ny"])   # owner's schedule (New York, DST automatic) + the format each slot prefers
 def due_slot(state):
-    """Earliest New York slot that is not done yet and lies between now-3h and now+10h.
-    GitHub's hourly cron really fires only every 3-5 h, so Shorts are rendered early and scheduled on both platforms."""
+    """Earliest New York slot not done yet, between now-late_hours and now+lead_hours, inside the owner's start/end window (data/schedule.json).
+    Each Short is built ahead of time and uploaded scheduled for the exact slot time on YouTube and Facebook."""
     from zoneinfo import ZoneInfo
+    cfg = _sched(); lead, late = dt.timedelta(hours=cfg.get("lead_hours", 3)), dt.timedelta(hours=cfg.get("late_hours", 3))
+    start = dt.datetime.fromisoformat(cfg["start"]) if cfg.get("start") else None; end = dt.datetime.fromisoformat(cfg["end"]) if cfg.get("end") else None
     ny = ZoneInfo("America/New_York"); now = dt.datetime.now(dt.timezone.utc); local = now.astimezone(ny)
     for day in (0, 1):
         d = (local + dt.timedelta(days=day)).date()
         for h, m, kind in SLOTS_NY:
             slot = dt.datetime(d.year, d.month, d.day, h, m, tzinfo=ny)
-            if -dt.timedelta(hours=LEAD_H) <= now - slot <= dt.timedelta(hours=LATE_H) and slot.isoformat() not in state.setdefault("slots_done", []):
+            if start and slot < start: continue
+            if end and slot > end: continue
+            if -lead <= now - slot <= late and slot.isoformat() not in state.setdefault("slots_done", []):
                 due_slot.kind = kind; return slot.astimezone(dt.timezone.utc)
     return None
 due_slot.kind = None

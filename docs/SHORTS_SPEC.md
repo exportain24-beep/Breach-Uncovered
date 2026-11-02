@@ -8,7 +8,9 @@ Breach Uncovered = the hidden stories behind technology, cybersecurity, AI, digi
 A cybersecurity & hacking - B artificial intelligence (breakthroughs, AI scams, deepfakes, AI security) - C digital crime & investigations (FBI cases, fraud, SIM swapping, social engineering) - D internet mysteries & internet history - E digital privacy & surveillance - F future technology (quantum, robotics, space tech) - G digital money & fintech (crypto incidents, investment scams) - H technology history (famous software failures, discoveries).
 Field `pillar`: one of cyber, ai, crime, mystery, privacy, future, money, history.
 
-## Four daily formats (field `slot_type`)
+## Schedule (owner, 2026-11-02): from Fri 6 Nov 2026 8 PM Dhaka, 3 Shorts a day at New York 8 AM (trending), 2 PM (curiosity), 8 PM (mystery) until end of 2030 - see data/schedule.json. Each Short is built ~2 h before and uploaded scheduled for the exact time.
+
+## Daily formats (field `slot_type`; the 5 PM "ai" slot is retired - ai topics now go into curiosity/mystery)
 | slot (New York) | slot_type | purpose |
 |---|---|---|
 | 8:00 AM | `trending` | a verified tech/cyber/AI story from the last days (written daily, fresh) |
