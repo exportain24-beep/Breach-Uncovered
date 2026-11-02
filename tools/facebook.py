@@ -50,8 +50,9 @@ def comment(video_id, text):
     r = requests.post(f"{G}/{video_id}/comments", data={"message": text, **_auth()}, timeout=30)
     return r.status_code == 200
 
-def upload_reel(path, description, title=None):
-    """Publish a vertical video as a Facebook Page Reel (Reels Publishing API: start -> rupload -> finish, video_state=PUBLISHED)."""
+def upload_reel(path, description, title=None, publish_at=None):
+    """Publish a vertical video as a Facebook Page Reel (Reels Publishing API: start -> rupload -> finish).
+    publish_at (aware datetime, >10 min ahead): video_state=SCHEDULED + scheduled_publish_time; if Meta refuses the schedule, it is published now."""
     pid = os.environ["FB_PAGE_ID"]; tok = page_token(); size = os.path.getsize(path)
     r = requests.post(f"{G}/{pid}/video_reels", data={"upload_phase": "start", **_auth()}, timeout=60)
     if r.status_code != 200: raise RuntimeError(f"FB reel start failed {r.status_code} {r.text[:300]}")
@@ -64,8 +65,11 @@ def upload_reel(path, description, title=None):
     else: raise RuntimeError(f"FB reel upload failed {u.status_code} {u.text[:300]}")
     data = {"upload_phase": "finish", "video_id": vid, "video_state": "PUBLISHED", "description": description, **_auth()}
     if title: data["title"] = title[:250]
+    if publish_at is not None: data.update(video_state="SCHEDULED", scheduled_publish_time=str(int(publish_at.timestamp())))
     for attempt in range(4):
         rr = requests.post(f"{G}/{pid}/video_reels", data=data, timeout=120)
         if rr.status_code == 200 and rr.json().get("success", False): return vid
+        if data.get("video_state") == "SCHEDULED" and attempt >= 1:      # schedule refused twice -> publish now rather than lose the post
+            print("FB schedule refused, publishing now:", rr.status_code, rr.text[:200]); data["video_state"] = "PUBLISHED"; data.pop("scheduled_publish_time", None)
         time.sleep(15 * (attempt + 1))
     raise RuntimeError(f"FB reel finish failed {rr.status_code} {rr.text[:300]}")

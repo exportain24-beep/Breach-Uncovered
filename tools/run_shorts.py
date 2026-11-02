@@ -43,13 +43,18 @@ def post_comments(state):
         if ok: st["comment_done"] = True
 
 SLOTS_NY = ((8, 0, "trending"), (12, 0, "curiosity"), (17, 0, "ai"), (20, 30, "mystery"))   # owner's schedule (New York, DST automatic) + the format each slot prefers
+LEAD_H, LATE_H = 10, 3      # prepare a slot up to 10 h early (uploaded as scheduled for the exact slot time); catch up to 3 h late
 def due_slot(state):
+    """Earliest New York slot that is not done yet and lies between now-3h and now+10h.
+    GitHub's hourly cron really fires only every 3-5 h, so Shorts are rendered early and scheduled on both platforms."""
     from zoneinfo import ZoneInfo
-    ny = ZoneInfo("America/New_York"); now = dt.datetime.now(dt.timezone.utc)
-    for h, m, kind in SLOTS_NY:
-        local = now.astimezone(ny); slot = local.replace(hour=h, minute=m, second=0, microsecond=0)
-        if -dt.timedelta(minutes=40) <= now - slot <= dt.timedelta(hours=3) and slot.isoformat() not in state.setdefault("slots_done", []):
-            due_slot.kind = kind; return slot.astimezone(dt.timezone.utc)
+    ny = ZoneInfo("America/New_York"); now = dt.datetime.now(dt.timezone.utc); local = now.astimezone(ny)
+    for day in (0, 1):
+        d = (local + dt.timedelta(days=day)).date()
+        for h, m, kind in SLOTS_NY:
+            slot = dt.datetime(d.year, d.month, d.day, h, m, tzinfo=ny)
+            if -dt.timedelta(hours=LEAD_H) <= now - slot <= dt.timedelta(hours=LATE_H) and slot.isoformat() not in state.setdefault("slots_done", []):
+                due_slot.kind = kind; return slot.astimezone(dt.timezone.utc)
     return None
 due_slot.kind = None
 
@@ -99,7 +104,8 @@ def main():
     if not st.get("fb"):
         try:
             import facebook
-            vid = facebook.upload_reel(out, seo["facebook_text"], seo.get("fb_title") or seo["title"]); st["fb"] = vid; st.setdefault("published_at", dt.datetime.now(dt.timezone.utc).isoformat()); print("Facebook Reel OK", vid)
+            when = slot if (slot and slot > dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=15)) else None
+            vid = facebook.upload_reel(out, seo["facebook_text"], seo.get("fb_title") or seo["title"], when); st["fb"] = vid; st.setdefault("published_at", (when or dt.datetime.now(dt.timezone.utc)).isoformat()); print("Facebook Reel OK", vid, "scheduled for " + when.isoformat() if when else "published now")
         except Exception as e: traceback.print_exc(); err.append(f"facebook: {e}")
     if slot and not err: state.setdefault("slots_done", []).append(slot.astimezone(__import__("zoneinfo").ZoneInfo("America/New_York")).isoformat())
     save(state)

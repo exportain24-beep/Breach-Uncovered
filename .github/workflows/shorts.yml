@@ -1,7 +1,8 @@
 name: Shorts (3 a day)
 on:
-  schedule:                  # hourly heartbeat; the runner publishes only when a New York slot (8 am, 2 pm, 6 pm) is due or was missed in the last 4 h (GitHub cron can be late)
+  schedule:                  # heartbeat (GitHub fires it only every ~3-5 h): each run prepares every NY slot due in the next 10 h and uploads it scheduled for the exact slot time
     - cron: "35 * * * *"
+    - cron: "5 */2 * * *"
   push:
     paths: ["tools/.short-now"]          # line 1: "preview" (build only) or "preview N" / "publish N"
   workflow_dispatch:
@@ -11,7 +12,7 @@ concurrency: { group: breach-shorts, cancel-in-progress: false }
 jobs:
   short:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -31,7 +32,7 @@ jobs:
         run: mkdir -p work; for d in data/voice/*; do [ -d "$d" ] && mkdir -p "work/short-$(basename $d)/voice" && cp -n $d/* "work/short-$(basename $d)/voice/" || true; done
       - name: Build + publish
         if: steps.due.outputs.go == 'DUE'
-        timeout-minutes: 45
+        timeout-minutes: 100
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -45,6 +46,7 @@ jobs:
           ARGS=""; [ "${{ github.event_name }}" = "schedule" ] && ARGS="--scheduled"
           if [ "${{ github.event_name }}" = "push" ]; then L=$(head -n1 tools/.short-now); case "$L" in preview*) ARGS="--preview";; esac; N=$(echo "$L" | tr -dc 0-9); [ -n "$N" ] && ARGS="$ARGS --episode $N"; fi
           mkdir -p reports out; set -o pipefail; python3 -u tools/run_shorts.py $ARGS 2>&1 | tee reports/shorts-run.log | grep -v "frame " | tail -n 200
+          if [ "${{ github.event_name }}" = "schedule" ]; then for i in 1 2; do [ "$(python3 tools/run_shorts.py --check-due | tail -1)" = DUE ] || break; python3 -u tools/run_shorts.py --scheduled 2>&1 | tee -a reports/shorts-run.log | grep -v "frame " | tail -n 120; done; fi
       - name: Save state, voices and preview
         if: always() && steps.due.outputs.go == 'DUE'
         run: |
