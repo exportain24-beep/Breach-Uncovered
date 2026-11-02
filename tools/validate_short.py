@@ -1,13 +1,17 @@
 """Validate Shorts scripts (docs/SHORTS_SPEC.md). usage: python3 tools/validate_short.py shorts/*.json"""
 import json, re, sys
 from urllib.parse import urlparse
-KINDS = {"building": ["type", "name"], "office": ["who", "action"], "hacker": [], "servers": ["state"], "people": ["who", "action"], "phone": ["app", "text"],
+KINDS = {"steps": ["items"], "face": ["who", "emotion"], "bigtext": ["text"], "building": ["type", "name"], "office": ["who", "action"], "hacker": [], "servers": ["state"], "people": ["who", "action"], "phone": ["app", "text"],
          "email": ["from", "subject"], "object": ["icon"], "network": [], "globe": ["points"], "flow": ["nodes"], "counter": ["value"], "timeline": ["items"],
          "lock": ["state"], "terminal": ["lines"], "dossier": ["title", "rows"], "headline": ["text"], "stamp": ["text"], "split": ["left", "right"]}
 ROLES = {"worker", "workerF", "banker", "agent", "agentF", "hacker", "guard", "engineer", "exec", "crook", "police", "doctor", "soldier", "student"}
 ICONS = set("printer usb laptop money clock calendar envelope key file wifi camera plane ship car atm card bitcoin skull bug shield satellite pipeline bulb".split())
 BTYPES = set("bank fbi office hospital government factory police airport school studio power".split())
 TEXT_FIELDS = ("name", "screen", "label", "text", "from", "subject", "line", "title", "left", "right", "amount")
+JARGON = set("""malware ransomware botnet worm worms firewall domain cookies cookie multifactor authentication encryption encrypted decryption decrypt
+credentials phishing exploit exploits vulnerability vulnerabilities payload backdoor ddos macro openssl certificate controllers database
+protocol indictment indicted obstruction laundering launder sanctions sanctioned persona servers server cyberattack cyberattacks
+infrastructure algorithm bandwidth trojan spyware keylogger patch patched zero-day allegedly""".split())
 plain = lambda n: re.sub(r"\[[^\]]*\]", " ", n)
 def norm(s): return re.sub(r"[^\w\s']", "", s.lower().replace("’", "'"))
 
@@ -18,13 +22,20 @@ def validate(path):
     for k in ("episode", "key", "title", "scenes", "facts", "seo"):
         if k not in s: E.append(f"missing {k}")
     sc = s.get("scenes", []); words = sum(len(plain(x.get("narration", "")).split()) for x in sc)
-    if not 75 <= words <= 102: E.append(f"narration {words} words (need 75-102: with the 2.5 s logo ending the Short must stay under 50 s)")
+    legacy = bool(s.get("legacy"))          # already-published scripts keep the older, looser rules
+    lo, hi = (75, 102) if legacy else (85, 108)
+    if not lo <= words <= hi: E.append(f"narration {words} words (need {lo}-{hi}: about 40-50 s with the 2.5 s logo ending)")
     if not 4 <= len(sc) <= 8: E.append(f"{len(sc)} scenes (need 4-8)")
     allt = " ".join(plain(x.get("narration", "")) for x in sc).strip()
     sents = [t for t in re.split(r"(?<=[.!?])\s+", allt) if t.strip()]
     if sents and len(sents[0].split()) > 12: E.append(f"hook is {len(sents[0].split())} words (max 12)")
     if sents and re.match(r"\s*(did you know|in this video|hey|hi|welcome|today we|let's talk|have you ever)\b", re.sub(r"\[[^\]]*\]", "", sents[0]).strip(), re.I): E.append("hook opens with a banned weak opener (did you know / in this video / greeting)")
-    if sents and words / len(sents) > 12.5: E.append(f"average sentence {words / len(sents):.1f} words (max 12)")
+    if sents and words / len(sents) > (12.5 if legacy else 11): E.append(f"average sentence {words / len(sents):.1f} words (max {'12' if legacy else '10'})")
+    if not legacy:                          # owner 2026-11-02: plain English for people with no tech knowledge
+        bad = sorted({w for w in re.findall(r"[a-z0-9-]+", allt.lower()) if w in JARGON})
+        if bad: E.append("technical words a normal viewer won't know: " + ", ".join(bad) + " (say it in everyday words)")
+        long_s = [x for x in sents if len(x.split()) > 16]
+        if long_s: E.append(f"sentence too long ({len(long_s[0].split())} words, max 16): {long_s[0][:60]}")
     tags = sum(len(re.findall(r"\[[^\]]*\]", x.get("narration", ""))) for x in sc)
     if tags > 6: E.append(f"{tags} audio tags (max 6)")
     nv, prev = 0, None

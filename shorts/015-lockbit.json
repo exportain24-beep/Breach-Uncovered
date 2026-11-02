@@ -10,202 +10,138 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] Police hacked a ransomware gang and took over its website.",
+   "narration": "[serious] Police hacked a gang of hackers and took over their website.",
    "visuals": [
     {
      "at": "Police hacked a",
-     "kind": "lock",
-     "state": "crack",
-     "text": "LockBit site seized"
-    },
-    {
-     "at": "took over its",
-     "kind": "building",
-     "type": "police",
-     "name": "National Crime Agency"
+     "kind": "bigtext",
+     "text": "POLICE HACKED THE HACKERS",
+     "hl": "POLICE"
     }
    ]
   },
   {
    "id": 2,
    "mood": "tense",
-   "narration": "LockBit rented out ransomware, a program that locks files. It hit over 2,500 victims.",
+   "narration": "The gang was called LockBit. They locked files and asked for money to unlock them. Over 2,500 victims.",
    "visuals": [
     {
-     "at": "LockBit rented out",
-     "kind": "hacker",
-     "screen": "LockBit affiliate panel",
-     "count": 2
-    },
-    {
-     "at": "a program that",
-     "kind": "object",
-     "icon": "file",
+     "at": "They locked files",
+     "kind": "lock",
+     "state": "locked",
      "text": "Files locked"
     },
     {
-     "at": "over 2,500 victims",
+     "at": "Over 2,500 victims",
      "kind": "counter",
      "value": 2500,
-     "suffix": "+",
-     "label": "victims, 120+ countries"
+     "label": "victims"
     }
    ]
   },
   {
    "id": 3,
    "mood": "reveal",
-   "narration": "Then, on February 19, 2024, police struck back. They took down 34 servers in eight countries.",
+   "narration": "Then, on February 19, 2024, police struck back. They shut down 34 of the gang's computers.",
    "visuals": [
     {
-     "at": "on February 19",
-     "kind": "timeline",
-     "items": [
-      [
-       "Feb 19, 2024",
-       "Leak site seized"
-      ],
-      [
-       "Feb 20, 2024",
-       "Cronos announced"
-      ]
-     ]
+     "at": "police struck back",
+     "kind": "people",
+     "who": [
+      "police",
+      "police",
+      "agentF"
+     ],
+     "action": "cheer",
+     "label": "Police strike back"
     },
     {
-     "at": "took down 34",
+     "at": "shut down 34",
      "kind": "servers",
      "state": "dark",
-     "label": "34 servers down"
-    },
-    {
-     "at": "in eight countries",
-     "kind": "globe",
-     "points": [
-      [
-       "London",
-       51.5,
-       -0.1
-      ],
-      [
-       "Washington",
-       38.9,
-       -77.0
-      ],
-      [
-       "Canberra",
-       -35.3,
-       149.1
-      ],
-      [
-       "Helsinki",
-       60.2,
-       24.9
-      ]
-     ]
+     "label": "34 computers shut"
     }
    ]
   },
   {
    "id": 4,
    "mood": "shock",
-   "narration": "The gang's own leak site now showed police posts. They also grabbed 1,000 decryption keys, unlock codes.",
+   "narration": "The gang's own website now showed police messages. Police also took 1,000 keys to unlock files.",
    "visuals": [
     {
-     "at": "now showed police",
+     "at": "The gang's own",
      "kind": "headline",
-     "text": "Now under NCA control"
+     "text": "Site now in police hands"
     },
     {
-     "at": "1,000 decryption keys",
-     "kind": "lock",
-     "state": "open",
-     "text": "1,000+ keys recovered"
+     "at": "took 1,000 keys",
+     "kind": "object",
+     "icon": "key",
+     "text": "1,000 unlock keys"
     }
    ]
   },
   {
    "id": 5,
    "mood": "curious",
-   "narration": "A countdown appeared. It asked, who is LockBitSupp? That was the gang's boss.",
+   "narration": "Then a countdown appeared on the site. It asked, who is LockBitSupp? That was the gang's boss.",
    "visuals": [
     {
-     "at": "who is LockBitSupp",
-     "kind": "object",
-     "icon": "clock",
-     "text": "Who is LockBitSupp?"
+     "at": "a countdown appeared",
+     "kind": "stamp",
+     "text": "COUNTDOWN"
     },
     {
-     "at": "the gang's boss",
-     "kind": "hacker",
-     "screen": "LockBitSupp",
-     "count": 1
+     "at": "who is LockBitSupp",
+     "kind": "bigtext",
+     "text": "WHO IS LOCKBITSUPP?",
+     "hl": "LOCKBITSUPP?"
     }
    ]
   },
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "In May 2024, U.S. prosecutors charged Dmitry Khoroshev, alleging he is LockBitSupp. A $10 million reward is offered.",
+   "narration": "In May 2024, America named him: Dmitry Khoroshev, officials say. There is a 10 million dollar reward.",
    "visuals": [
     {
-     "at": "U.S prosecutors charged",
+     "at": "America named him",
      "kind": "dossier",
      "title": "Dmitry Khoroshev",
      "rows": [
       [
-       "Charged",
-       "May 2024"
-      ],
-      [
-       "Counts",
-       "26"
-      ],
-      [
-       "Alleged role",
+       "Online name",
        "LockBitSupp"
+      ],
+      [
+       "Reward",
+       "$10 million"
       ]
      ]
-    },
-    {
-     "at": "$10 million reward",
-     "kind": "counter",
-     "value": 10,
-     "prefix": "$",
-     "suffix": "M",
-     "label": "U.S. reward"
     }
    ]
   },
   {
    "id": 7,
    "mood": "hopeful",
-   "narration": "He likely remains in Russia. But his mask is off.",
+   "narration": "He is probably still in Russia. But everyone knows his name now.",
    "visuals": [
     {
-     "at": "remains in Russia",
+     "at": "still in Russia",
      "kind": "globe",
      "points": [
       [
-       "Moscow",
-       55.8,
+       "Russia",
+       55.7,
        37.6
-      ],
-      [
-       "London",
-       51.5,
-       -0.1
-      ],
-      [
-       "New Jersey",
-       40.1,
-       -74.4
       ]
      ]
     },
     {
-     "at": "his mask is",
-     "kind": "stamp",
-     "text": "WANTED"
+     "at": "everyone knows his",
+     "kind": "bigtext",
+     "text": "EVERYONE KNOWS HIS NAME",
+     "hl": "NAME"
     }
    ]
   }
@@ -256,7 +192,7 @@
   "thumb": {
    "text": "POLICE HACKED THE HACKERS",
    "hl": "HACKED",
-   "visual": 0
+   "visual": 2
   },
   "tags": [
    "cybersecurity",
@@ -267,5 +203,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "mint"
 }

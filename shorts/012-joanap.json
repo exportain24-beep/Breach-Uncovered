@@ -10,188 +10,137 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] The FBI pretended to be infected computers to map a botnet.",
+   "narration": "[serious] To catch hackers, the FBI pretended to be their victims.",
    "visuals": [
     {
-     "at": "The FBI pretended",
+     "at": "the FBI pretended",
      "kind": "building",
      "type": "fbi",
-     "name": "FBI Los Angeles"
+     "name": "FBI"
     },
     {
-     "at": "infected computers to",
-     "kind": "network",
-     "text": "Joanap botnet"
+     "at": "to be their",
+     "kind": "bigtext",
+     "text": "PRETEND TO BE A VICTIM",
+     "hl": "VICTIM"
     }
    ]
   },
   {
    "id": 2,
-   "mood": "curious",
-   "narration": "A botnet is an army of hijacked computers. This one, Joanap, was blamed on North Korea.",
+   "mood": "tense",
+   "narration": "Hackers had taken over many computers around the world. Together, they formed a secret army. Its name was Joanap.",
    "visuals": [
     {
-     "at": "army of hijacked",
-     "kind": "servers",
-     "state": "alarm",
-     "label": "Hijacked Windows PCs"
+     "at": "Hackers had taken",
+     "kind": "network",
+     "text": "a secret army"
     },
     {
-     "at": "This one Joanap",
-     "kind": "dossier",
-     "title": "Joanap",
-     "rows": [
-      [
-       "Type",
-       "Peer-to-peer botnet"
-      ],
-      [
-       "Active since",
-       "2009"
-      ],
-      [
-       "Spread by",
-       "Brambul worm"
-      ]
-     ]
-    },
-    {
-     "at": "blamed on North",
-     "kind": "globe",
-     "points": [
-      [
-       "Pyongyang",
-       39.0,
-       125.8
-      ],
-      [
-       "Los Angeles",
-       34.1,
-       -118.2
-      ]
-     ]
+     "at": "Its name was",
+     "kind": "bigtext",
+     "text": "JOANAP",
+     "hl": "JOANAP"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "A worm called Brambul spread it. Infected PCs gave hackers full control.",
+   "narration": "The army spread by itself, from computer to computer. Each one obeyed the hackers. America blamed North Korea.",
    "visuals": [
     {
-     "at": "A worm called",
-     "kind": "object",
-     "icon": "bug",
-     "text": "Brambul worm"
+     "at": "Each one obeyed",
+     "kind": "hacker",
+     "count": 1,
+     "screen": "Obey"
     },
     {
-     "at": "gave hackers full",
-     "kind": "hacker",
-     "screen": "root access",
-     "count": 2
+     "at": "America blamed North",
+     "kind": "globe",
+     "points": [
+      [
+       "America",
+       38.9,
+       -77.0
+      ],
+      [
+       "North Korea",
+       39.0,
+       125.8
+      ]
+     ]
     }
    ]
   },
   {
    "id": 4,
    "mood": "curious",
-   "narration": "The problem? Joanap had no boss computer. Victims talked to each other.",
+   "narration": "The problem? This army had no boss computer. The computers only talked to each other.",
    "visuals": [
     {
-     "at": "no boss computer",
-     "kind": "split",
-     "left": "Usual: one boss server",
-     "right": "Joanap: peer to peer"
-    },
-    {
-     "at": "talked to each",
-     "kind": "network",
-     "text": "Peers talk directly"
+     "at": "had no boss",
+     "kind": "object",
+     "icon": "laptop",
+     "text": "No boss computer"
     }
    ]
   },
   {
    "id": 5,
    "mood": "reveal",
-   "narration": "So in 2019, agents got court approval. With Air Force investigators, the FBI ran fake infected computers. Real victims connected.",
+   "narration": "So in 2019, a judge said yes. The FBI set up fake victim computers. Real infected computers called them.",
    "visuals": [
     {
-     "at": "got court approval",
-     "kind": "timeline",
-     "items": [
-      [
-       "2009",
-       "Botnet active"
-      ],
-      [
-       "Jan 30, 2019",
-       "DOJ announces mapping"
-      ]
-     ]
+     "at": "a judge said",
+     "kind": "building",
+     "type": "government",
+     "name": "Court"
     },
     {
-     "at": "Air Force investigators",
+     "at": "The FBI set",
      "kind": "people",
      "who": [
       "agent",
-      "agentF",
-      "soldier"
+      "agentF"
      ],
-     "action": "talk",
-     "label": "FBI and AFOSI"
-    },
-    {
-     "at": "ran fake infected",
-     "kind": "servers",
-     "state": "ok",
-     "label": "Decoy peers"
+     "action": "point",
+     "label": "Fake victims"
     }
    ]
   },
   {
    "id": 6,
    "mood": "hopeful",
-   "narration": "That showed who was infected. Then victims were warned.",
+   "narration": "Now the FBI could see every computer in the army. The owners were warned.",
    "visuals": [
     {
-     "at": "who was infected",
-     "kind": "terminal",
-     "lines": [
-      "log: IP address",
-      "log: port number",
-      "log: timestamp"
-     ]
+     "at": "Now the FBI",
+     "kind": "network",
+     "text": "every computer found"
     },
     {
-     "at": "infected Then victims",
-     "kind": "phone",
-     "app": "alert",
-     "from": "Your ISP",
-     "text": "Your PC may be infected"
-    },
-    {
-     "at": "victims were warned",
-     "kind": "building",
-     "type": "government",
-     "name": "Foreign governments"
+     "at": "The owners were",
+     "kind": "people",
+     "who": [
+      "worker",
+      "workerF"
+     ],
+     "action": "shock",
+     "label": "Owners warned"
     }
    ]
   },
   {
    "id": 7,
    "mood": "reveal",
-   "narration": "U.S. prosecutors had already charged a North Korean programmer. To beat the army, the FBI joined it.",
+   "narration": "To beat the army, the FBI joined it.",
    "visuals": [
     {
-     "at": "already charged a",
-     "kind": "stamp",
-     "text": "CHARGED"
-    },
-    {
-     "at": "the FBI joined",
-     "kind": "object",
-     "icon": "shield",
-     "text": "Botnet mapped"
+     "at": "To beat the",
+     "kind": "bigtext",
+     "text": "TO BEAT IT, JOIN IT",
+     "hl": "JOIN"
     }
    ]
   }
@@ -241,7 +190,7 @@
   "thumb": {
    "text": "THE FBI JOINED THE BOTNET",
    "hl": "JOINED",
-   "visual": 11
+   "visual": 1
   },
   "tags": [
    "cybersecurity",
@@ -252,5 +201,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "paper"
 }

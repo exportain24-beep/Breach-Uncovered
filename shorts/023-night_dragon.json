@@ -10,82 +10,71 @@
   {
    "id": 1,
    "mood": "tense",
-   "narration": "[serious] For over a year, hackers quietly raided global oil companies.",
+   "narration": "[serious] For over a year, hackers secretly raided big oil companies.",
    "visuals": [
     {
-     "at": "hackers quietly raided",
-     "kind": "hacker",
-     "screen": "Night Dragon",
-     "count": 2
-    },
-    {
-     "at": "global oil companies",
+     "at": "big oil companies",
      "kind": "building",
      "type": "factory",
-     "name": "Oil and gas major"
+     "name": "Oil company"
     }
    ]
   },
   {
    "id": 2,
    "mood": "curious",
-   "narration": "It began by November 2009. In February 2011, security firm McAfee named it Night Dragon.",
+   "narration": "It started by November 2009. In 2011, the security company McAfee exposed it. They called it Night Dragon.",
    "visuals": [
     {
-     "at": "In February 2011",
-     "kind": "object",
-     "icon": "calendar",
-     "text": "February 2011"
+     "at": "It started by",
+     "kind": "timeline",
+     "items": [
+      [
+       "Nov 2009",
+       "Raids start"
+      ],
+      [
+       "2011",
+       "McAfee exposes it"
+      ]
+     ]
     },
     {
-     "at": "named it Night",
-     "kind": "headline",
-     "text": "McAfee: energy firms targeted"
+     "at": "called it Night",
+     "kind": "bigtext",
+     "text": "NIGHT DRAGON",
+     "hl": "DRAGON"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "The targets: oil and gas firms in the U.S., Taiwan, Greece and Kazakhstan.",
+   "narration": "The targets were oil and gas companies in America, Taiwan, Greece and Kazakhstan.",
    "visuals": [
     {
-     "at": "the U.S Taiwan",
+     "at": "The targets were",
      "kind": "globe",
      "points": [
       [
-       "United States",
-       38.0,
-       -97.0
-      ],
-      [
-       "Taiwan",
-       23.7,
-       121.0
+       "America",
+       38.9,
+       -77.0
       ],
       [
        "Greece",
-       39.0,
-       22.0
+       37.9,
+       23.7
       ],
       [
        "Kazakhstan",
-       48.0,
-       67.0
-      ]
-     ]
-    },
-    {
-     "at": "U.S Taiwan Greece",
-     "kind": "timeline",
-     "items": [
-      [
-       "Nov 2009",
-       "Attacks underway"
+       51.1,
+       71.4
       ],
       [
-       "Feb 2011",
-       "McAfee report"
+       "Taiwan",
+       25.0,
+       121.5
       ]
      ]
     }
@@ -94,112 +83,72 @@
   {
    "id": 4,
    "mood": "curious",
-   "narration": "The method was simple. First, tricky emails fooled staff. Then known Windows weak spots opened doors.",
+   "narration": "Their method was simple. First, trick emails fooled workers. Then old Windows weak spots let them in.",
    "visuals": [
     {
-     "at": "tricky emails fooled",
-     "kind": "email",
-     "from": "Spoofed sender",
-     "subject": "Spear-phishing",
-     "line": "Targeted fake email"
-    },
-    {
-     "at": "known Windows weak",
-     "kind": "lock",
-     "state": "crack",
-     "text": "Unpatched Windows"
+     "at": "Their method was",
+     "kind": "steps",
+     "items": [
+      [
+       "envelope",
+       "Trick emails fool workers"
+      ],
+      [
+       "laptop",
+       "Old weak spots let them in"
+      ]
+     ]
     }
    ]
   },
   {
    "id": 5,
    "mood": "shock",
-   "narration": "They took control of computers. They copied secret oil field bids and financing plans.",
+   "narration": "Inside, they took control of computers. They copied secret oil field bids and money plans.",
    "visuals": [
     {
-     "at": "took control of",
-     "kind": "terminal",
-     "lines": [
-      "remote session open",
-      "copying files..."
-     ]
+     "at": "Inside they took",
+     "kind": "hacker",
+     "count": 2,
+     "screen": "Oil field bids"
     },
     {
-     "at": "secret oil field",
+     "at": "They copied secret",
      "kind": "object",
      "icon": "file",
-     "text": "Oil field bids"
-    },
-    {
-     "at": "financing plans",
-     "kind": "flow",
-     "nodes": [
-      "Oil company",
-      "Attacker servers"
-     ],
-     "amount": "Bids and financing data"
+     "text": "Secret oil bids"
     }
    ]
   },
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "The clue: they mostly worked weekday office hours. A man in Shandong, China, provided servers.",
+   "narration": "One clue: they mostly worked normal office hours. A man in Shandong, China, ran their computers.",
    "visuals": [
     {
-     "at": "weekday office hours",
-     "kind": "office",
-     "who": "worker",
-     "action": "type",
-     "screen": "Weekdays, nine to five"
+     "at": "normal office hours",
+     "kind": "object",
+     "icon": "clock",
+     "text": "Office hours"
     },
     {
-     "at": "provided servers",
-     "kind": "servers",
-     "state": "ok",
-     "label": "Heze, Shandong province"
+     "at": "A man in",
+     "kind": "building",
+     "type": "office",
+     "name": "Shandong, China"
     }
    ]
   },
   {
    "id": 7,
    "mood": "sad",
-   "narration": "McAfee said the tools came mainly from China, but named no government. The victims stay unnamed.",
+   "narration": "McAfee said the tools came mainly from China, but named no government. The victims were never named.",
    "visuals": [
     {
-     "at": "came mainly from",
-     "kind": "dossier",
-     "title": "Night Dragon",
-     "rows": [
-      [
-       "Found by",
-       "McAfee"
-      ],
-      [
-       "Origin",
-       "Mainly China"
-      ],
-      [
-       "Victims",
-       "Unnamed"
-      ]
-     ]
-    },
-    {
-     "at": "named no government",
-     "kind": "split",
-     "left": "Tools: from China",
-     "right": "Sponsor: unproven"
-    },
-    {
-     "at": "stay unnamed",
-     "kind": "people",
-     "who": [
-      "exec",
-      "engineer"
-     ],
-     "action": "talk",
-     "label": "Five firms confirmed hit"
+     "at": "The victims were",
+     "kind": "bigtext",
+     "text": "VICTIMS NEVER NAMED",
+     "hl": "NEVER"
     }
    ]
   }
@@ -244,7 +193,7 @@
   "thumb": {
    "text": "HACKERS STOLE OIL FIELD SECRETS",
    "hl": "OIL FIELD",
-   "visual": 10
+   "visual": 2
   },
   "tags": [
    "cybersecurity",
@@ -255,5 +204,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "sun"
 }

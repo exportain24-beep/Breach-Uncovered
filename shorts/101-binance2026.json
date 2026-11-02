@@ -284,5 +284,6 @@
    "hl": "$6.3 BILLION",
    "visual": 0
   }
- }
+ },
+ "legacy": true
 }

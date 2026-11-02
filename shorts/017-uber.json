@@ -10,7 +10,7 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] Uber paid hackers $100,000 to keep a breach secret.",
+   "narration": "[serious] Uber paid hackers 100,000 dollars to keep a secret.",
    "visuals": [
     {
      "at": "Uber paid hackers",
@@ -19,35 +19,20 @@
       "Uber",
       "Hackers"
      ],
-     "amount": "$100K in bitcoin",
-     "blocked": false
-    },
-    {
-     "at": "keep a breach",
-     "kind": "lock",
-     "state": "locked",
-     "text": "Hidden for a year"
+     "amount": "$100,000"
     }
    ]
   },
   {
    "id": 2,
    "mood": "tense",
-   "narration": "In 2016, hackers found Uber logins left on GitHub, a code-sharing site. With them, they took data on 57 million riders and drivers.",
+   "narration": "In 2016, hackers found Uber passwords left on a public code website. They took data on 57 million riders and drivers.",
    "visuals": [
     {
-     "at": "found Uber logins",
-     "kind": "terminal",
-     "lines": [
-      "repo: uber-internal",
-      "access key: ********"
-     ]
-    },
-    {
-     "at": "they took data",
-     "kind": "servers",
-     "state": "alarm",
-     "label": "Cloud backup copied"
+     "at": "found Uber passwords",
+     "kind": "object",
+     "icon": "laptop",
+     "text": "Passwords left online"
     },
     {
      "at": "57 million riders",
@@ -61,118 +46,80 @@
   {
    "id": 3,
    "mood": "tense",
-   "narration": "Then they contacted security chief Joe Sullivan. Ten days earlier, he had testified to the FTC, a regulator.",
+   "narration": "Then the hackers wrote to Uber's safety boss, Joe Sullivan. Just ten days earlier, he had answered questions from a U.S. agency.",
    "visuals": [
     {
-     "at": "security chief Joe",
-     "kind": "office",
-     "who": "exec",
-     "action": "shock",
-     "screen": "Ransom demand"
-    },
-    {
-     "at": "Ten days earlier",
-     "kind": "timeline",
-     "items": [
+     "at": "Uber's safety boss",
+     "kind": "dossier",
+     "title": "Joe Sullivan",
+     "rows": [
       [
-       "Nov 4, 2016",
-       "Sullivan testifies"
-      ],
-      [
-       "Nov 14, 2016",
-       "Hackers make contact"
+       "Job",
+       "Uber safety boss"
       ]
      ]
     },
     {
-     "at": "testified to the",
+     "at": "a U.S. agency",
      "kind": "building",
      "type": "government",
-     "name": "Federal Trade Commission"
+     "name": "U.S. agency"
     }
    ]
   },
   {
    "id": 4,
    "mood": "reveal",
-   "narration": "So Uber called it a bug bounty, a reward for finding flaws. But its usual top bounty was $10,000.",
+   "narration": "So Uber called the payment a reward for finding problems. But its usual top reward was 10,000 dollars.",
    "visuals": [
     {
-     "at": "a bug bounty",
-     "kind": "object",
-     "icon": "bug",
-     "text": "Paid via HackerOne"
-    },
-    {
-     "at": "usual top bounty",
+     "at": "called the payment",
      "kind": "split",
-     "left": "Top bounty: $10,000",
-     "right": "This payout: $100,000"
+     "left": "Usual reward: $10,000",
+     "right": "Paid: $100,000"
     }
    ]
   },
   {
    "id": 5,
    "mood": "shock",
-   "narration": "A year later, Uber's new boss revealed everything.",
+   "narration": "A year later, Uber's new boss told everyone.",
    "visuals": [
     {
      "at": "Uber's new boss",
-     "kind": "office",
-     "who": "exec",
-     "action": "type",
-     "screen": "Nov 21, 2017"
+     "kind": "headline",
+     "text": "Uber reveals hidden hack"
     },
     {
-     "at": "revealed everything",
-     "kind": "headline",
-     "text": "Uber admits hiding 2016 breach"
+     "at": "told everyone",
+     "kind": "bigtext",
+     "text": "THE SECRET CAME OUT",
+     "hl": "SECRET"
     }
    ]
   },
   {
    "id": 6,
    "mood": "sad",
-   "narration": "In 2022, a jury convicted Sullivan of obstruction and hiding a felony. He got probation.",
+   "narration": "In 2022, a jury found Sullivan guilty of hiding a crime. He did not go to prison.",
    "visuals": [
     {
-     "at": "a jury convicted",
-     "kind": "dossier",
-     "title": "Joe Sullivan",
-     "rows": [
-      [
-       "Convicted",
-       "Oct 2022"
-      ],
-      [
-       "Charges",
-       "Obstruction, misprision"
-      ],
-      [
-       "Sentenced",
-       "May 2023"
-      ]
-     ]
-    },
-    {
-     "at": "He got probation",
-     "kind": "counter",
-     "value": 3,
-     "suffix": " years",
-     "label": "probation"
+     "at": "found Sullivan guilty",
+     "kind": "stamp",
+     "text": "GUILTY"
     }
    ]
   },
   {
    "id": 7,
    "mood": "reveal",
-   "narration": "The cover-up became the crime.",
+   "narration": "Hiding it became the crime.",
    "visuals": [
     {
-     "at": "The cover-up became",
-     "kind": "lock",
-     "state": "crack",
-     "text": "Secret exposed"
+     "at": "Hiding it became",
+     "kind": "bigtext",
+     "text": "HIDING IT WAS THE CRIME",
+     "hl": "CRIME"
     }
    ]
   }
@@ -223,7 +170,7 @@
   "thumb": {
    "text": "UBER PAID HACKERS $100,000",
    "hl": "$100,000",
-   "visual": 0
+   "visual": 2
   },
   "tags": [
    "cybersecurity",
@@ -234,5 +181,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "peach"
 }

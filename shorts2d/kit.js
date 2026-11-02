@@ -9,7 +9,7 @@ export const C = {
   skin: ['#f2c9a5', '#e0a97c', '#c68642', '#8d5524', '#ffdbb4'],
 };
 // mood -> [background, secondary shape colour, accent]. Light paper for most moods; ink for the dark ones.
-export const MOOD = {
+export const MOOD = {  // mutable: setTheme() rewrites it per story
   calm: [C.paper, C.sky, C.teal], curious: [C.paper, C.yel, C.blue], tense: [C.ink, C.ink2, C.red], shock: ['#2b1d2f', '#4a2433', C.red],
   reveal: [C.paper, C.orange, C.red], sad: ['#dfe3e8', '#b8c4d0', C.blue], hopeful: [C.paper, C.green, C.teal],
 };
@@ -52,12 +52,40 @@ function grain() {
   for (let i = 0; i < d.data.length; i += 4) { const v = r() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 14; }
   g.putImageData(d, 0, 0); GRAIN = c; return c;
 }
+// Per-story look: every Short gets its own colours + background pattern (owner: "don't use the same graphics everywhere").
+export const THEMES = {
+  paper: { light: '#f3ead8', s1: '#8ecae6', s2: '#2a9d8f', dark: '#1b1f3b', d2: '#3a3f63', acc: '#ffb703', pat: 'blobs' },
+  mint:  { light: '#dff3e4', s1: '#9ad1b0', s2: '#2a9d8f', dark: '#123c3a', d2: '#1f5a55', acc: '#ffb703', pat: 'dots' },
+  lilac: { light: '#ece4f7', s1: '#c3b1e1', s2: '#7b5ea7', dark: '#2a1f45', d2: '#41336b', acc: '#ffb703', pat: 'stripes' },
+  sky:   { light: '#e3f1fb', s1: '#8ecae6', s2: '#3a6ea5', dark: '#10243f', d2: '#21406a', acc: '#ffb703', pat: 'grid' },
+  peach: { light: '#fde8dc', s1: '#f4a582', s2: '#e63946', dark: '#3b1b1b', d2: '#5c2a2a', acc: '#ffd166', pat: 'halftone' },
+  news:  { light: '#efefea', s1: '#cfcfc6', s2: '#8d8a83', dark: '#1d1d1f', d2: '#3a3a3e', acc: '#e63946', pat: 'lines' },
+  sun:   { light: '#fff3c4', s1: '#ffd166', s2: '#f4845f', dark: '#2d2340', d2: '#47385f', acc: '#e63946', pat: 'rays' },
+};
+export let THEME = THEMES.paper;
+export function setTheme(name) {
+  THEME = THEMES[name] || THEMES.paper; const T = THEME;
+  Object.assign(MOOD, { calm: [T.light, T.s1, T.s2], curious: [T.light, T.acc, T.s2], tense: [T.dark, T.d2, C.red], shock: [T.dark, T.d2, C.red],
+    reveal: [T.light, C.orange, C.red], sad: [shade(T.light, .93), T.s1, C.blue], hopeful: [T.light, C.green, T.s2] });
+}
+function pattern(ctx, t, col, a) {
+  const P = THEME.pat; ctx.save(); ctx.globalAlpha = a; ctx.fillStyle = col; ctx.strokeStyle = col;
+  if (P === 'dots') { const o = (t * 12) % 60; for (let y = -60; y < H + 60; y += 60) for (let x = (y / 60 % 2) * 30 - 60; x < W + 60; x += 60) { ctx.beginPath(); ctx.arc(x + o, y + o, 7, 0, 6.283); ctx.fill(); } }
+  else if (P === 'stripes') { ctx.lineWidth = 34; const o = (t * 20) % 120; for (let x = -H; x < W + H; x += 120) { ctx.beginPath(); ctx.moveTo(x + o, 0); ctx.lineTo(x + o + H * .5, H); ctx.stroke(); } }
+  else if (P === 'grid') { ctx.lineWidth = 3; const o = (t * 10) % 90; for (let x = -90; x < W + 90; x += 90) { ctx.beginPath(); ctx.moveTo(x + o, 0); ctx.lineTo(x + o, H); ctx.stroke(); } for (let y = -90; y < H + 90; y += 90) { ctx.beginPath(); ctx.moveTo(0, y + o); ctx.lineTo(W, y + o); ctx.stroke(); } }
+  else if (P === 'halftone') { for (let y = 0; y < H; y += 46) for (let x = (y / 46 % 2) * 23; x < W; x += 46) { const r = 3 + 11 * (y / H) * (.75 + .25 * Math.sin(t + x * .01)); ctx.beginPath(); ctx.arc(x, y, r, 0, 6.283); ctx.fill(); } }
+  else if (P === 'lines') { ctx.lineWidth = 2; for (let y = 40; y < H; y += 34) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); } ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(70, 0); ctx.lineTo(70, H); ctx.stroke(); }
+  else if (P === 'rays') { ctx.translate(W / 2, 820); ctx.rotate(t * .05); for (let i = 0; i < 16; i++) { ctx.rotate(Math.PI / 8); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(1800, -170); ctx.lineTo(1800, 170); ctx.fill(); } }
+  ctx.restore();
+}
 export function background(ctx, t, mood, seed) {
   const m = MOOD[mood] || MOOD.calm; ctx.fillStyle = m[0]; ctx.fillRect(0, 0, W, H);
+  const dark = isDark(mood);
+  if (THEME.pat !== 'blobs') pattern(ctx, t, dark ? m[1] : m[1], dark ? .35 : .45);
   const r = rng(seed || 7); ctx.save();
-  for (let i = 0; i < 3; i++) {                       // three large flat shapes drifting slowly
+  for (let i = 0; i < (THEME.pat === 'blobs' ? 3 : 1); i++) {
     const x = r() * W, y = 300 + r() * 1100, rad = 260 + r() * 260, dx = Math.sin(t * .25 + i) * 30, dy = Math.cos(t * .2 + i * 2) * 24;
-    ctx.globalAlpha = isDark(mood) ? .5 : .22; ctx.fillStyle = isDark(mood) ? m[1] : (i === 1 ? m[2] : m[1]); ctx.beginPath();
+    ctx.globalAlpha = dark ? .5 : .22; ctx.fillStyle = dark ? m[1] : (i === 1 ? m[2] : m[1]); ctx.beginPath();
     if (i === 2) { ctx.save(); ctx.translate(x + dx, y + dy); ctx.rotate(.3 + t * .03); ctx.fillRect(-rad * .6, -rad * .6, rad * 1.2, rad * 1.2); ctx.restore(); }
     else { ctx.arc(x + dx, y + dy, rad, 0, 6.283); ctx.fill(); }
   }

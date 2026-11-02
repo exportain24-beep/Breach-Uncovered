@@ -10,95 +10,58 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] One stolen login jammed America's medical billing for months.",
+   "narration": "[serious] One stolen password jammed American medicine bills for months.",
    "visuals": [
     {
-     "at": "One stolen login",
-     "kind": "lock",
-     "state": "open",
-     "text": "No second check"
-    },
-    {
-     "at": "America's medical billing",
-     "kind": "building",
-     "type": "hospital",
-     "name": "Claims on hold"
+     "at": "One stolen password",
+     "kind": "object",
+     "icon": "key",
+     "text": "One stolen password"
     }
    ]
   },
   {
    "id": 2,
    "mood": "calm",
-   "narration": "Change Healthcare handles billions of insurance claims every year. It belongs to UnitedHealth Group.",
+   "narration": "Change Healthcare handles billions of health insurance payments every year. It is part of UnitedHealth Group.",
    "visuals": [
     {
-     "at": "billions of insurance",
-     "kind": "counter",
-     "value": 15,
-     "suffix": "B",
-     "label": "claims a year"
-    },
-    {
-     "at": "It belongs to",
-     "kind": "flow",
-     "nodes": [
-      "UnitedHealth Group",
-      "Optum",
-      "Change Healthcare"
-     ]
+     "at": "Change Healthcare handles",
+     "kind": "building",
+     "type": "hospital",
+     "name": "Change Healthcare"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "In February 2024, criminals used a stolen login on a remote portal. It lacked multifactor authentication, a second check.",
+   "narration": "In February 2024, criminals used a stolen password to log in. The door had no second lock, like a code sent to a phone.",
    "visuals": [
     {
-     "at": "In February 2024",
-     "kind": "hacker",
-     "screen": "Citrix portal: logged in",
-     "count": 2
-    },
-    {
-     "at": "lacked multifactor authentication",
-     "kind": "phone",
-     "app": "alert",
-     "from": "Login check",
-     "text": "MFA: not enabled"
-    },
-    {
-     "at": "a second check",
+     "at": "used a stolen",
      "kind": "split",
-     "left": "Password only",
-     "right": "Password + code"
+     "left": "Password + phone code",
+     "right": "Password only"
+    },
+    {
+     "at": "no second lock",
+     "kind": "lock",
+     "state": "open",
+     "text": "No second lock"
     }
    ]
   },
   {
    "id": 4,
    "mood": "shock",
-   "narration": "Nine days later, they unleashed ransomware, file-locking software. Pharmacies struggled to fill prescriptions.",
+   "narration": "Nine days later, they locked the company's files. Pharmacies struggled to give people medicine.",
    "visuals": [
     {
-     "at": "Nine days later",
-     "kind": "timeline",
-     "items": [
-      [
-       "Feb 12",
-       "Break-in"
-      ],
-      [
-       "Feb 21",
-       "Ransomware"
-      ]
-     ]
-    },
-    {
-     "at": "they unleashed ransomware",
+     "at": "they locked the",
      "kind": "servers",
      "state": "alarm",
-     "label": "Systems unplugged"
+     "label": "Files locked"
     },
     {
      "at": "Pharmacies struggled to",
@@ -108,54 +71,41 @@
       "workerF"
      ],
      "action": "shock",
-     "label": "Prescriptions stuck"
+     "label": "No medicine"
     }
    ]
   },
   {
    "id": 5,
    "mood": "reveal",
-   "narration": "UnitedHealth paid a 22 million dollar ransom. The twist? A hacker partner claimed the gang kept the money.",
+   "narration": "UnitedHealth paid 22 million dollars to the criminals. The twist? A partner said the gang kept all the money.",
    "visuals": [
     {
-     "at": "a 22 million",
-     "kind": "object",
-     "icon": "bitcoin",
-     "text": "$22M paid"
-    },
-    {
-     "at": "A hacker partner",
+     "at": "UnitedHealth paid 22",
      "kind": "flow",
      "nodes": [
       "UnitedHealth",
-      "BlackCat wallet",
-      "Affiliate"
+      "Criminals"
      ],
-     "amount": "$22M",
-     "blocked": true
+     "amount": "$22 million"
     },
     {
-     "at": "kept the money",
-     "kind": "headline",
-     "text": "Gang's sites go dark"
+     "at": "the gang kept",
+     "kind": "bigtext",
+     "text": "THE GANG KEPT IT ALL",
+     "hl": "KEPT"
     }
    ]
   },
   {
    "id": 6,
    "mood": "sad",
-   "narration": "Even then, the data was not safe. Almost 193 million people were affected.",
+   "narration": "And the data still leaked. Almost 193 million people were affected.",
    "visuals": [
-    {
-     "at": "Even then the",
-     "kind": "object",
-     "icon": "file",
-     "text": "Patient records"
-    },
     {
      "at": "Almost 193 million",
      "kind": "counter",
-     "value": 192.7,
+     "value": 193,
      "suffix": "M",
      "label": "people affected"
     }
@@ -164,37 +114,24 @@
   {
    "id": 7,
    "mood": "hopeful",
-   "narration": "The attack was blamed on the BlackCat ransomware gang. One missing check hit millions.",
+   "narration": "Officials blamed the BlackCat gang. One missing lock hit millions.",
    "visuals": [
     {
-     "at": "The attack was",
+     "at": "Officials blamed the",
      "kind": "dossier",
-     "title": "ALPHV / BlackCat",
+     "title": "BlackCat gang",
      "rows": [
       [
-       "Type",
-       "Ransomware gang"
-      ],
-      [
-       "Reward",
-       "Up to $10M"
-      ],
-      [
-       "Offered by",
-       "U.S. State Dept"
+       "Blamed for",
+       "The attack"
       ]
      ]
     },
     {
-     "at": "BlackCat ransomware gang",
-     "kind": "stamp",
-     "text": "WANTED"
-    },
-    {
-     "at": "One missing check",
-     "kind": "lock",
-     "state": "crack",
-     "text": "MFA now on"
+     "at": "One missing lock",
+     "kind": "bigtext",
+     "text": "ONE MISSING LOCK",
+     "hl": "LOCK"
     }
    ]
   }
@@ -258,5 +195,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "lilac"
 }

@@ -299,5 +299,6 @@
    "hl": "HARD BRAKING",
    "visual": 0
   }
- }
+ },
+ "legacy": true
 }

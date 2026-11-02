@@ -10,73 +10,56 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] In 1988, one student's experiment crashed a tenth of the internet.",
+   "narration": "[serious] In 1988, one student's test broke a tenth of the internet.",
    "visuals": [
     {
-     "at": "one student's experiment",
-     "kind": "office",
+     "at": "one student's test",
+     "kind": "face",
      "who": "student",
-     "action": "type",
-     "screen": "Nov 2, 1988"
+     "emotion": "shock"
     },
     {
      "at": "a tenth of",
-     "kind": "network",
-     "text": "10% of the internet",
-     "total": 6000
+     "kind": "counter",
+     "value": 10,
+     "suffix": "%",
+     "label": "of the internet"
     }
    ]
   },
   {
    "id": 2,
    "mood": "calm",
-   "narration": "Robert Morris was a Cornell graduate student. He released a worm, a program that copies itself.",
+   "narration": "His name was Robert Morris. He studied at Cornell University. He wrote a program that could copy itself.",
    "visuals": [
     {
-     "at": "Robert Morris was",
-     "kind": "dossier",
-     "title": "Robert Tappan Morris",
-     "rows": [
-      [
-       "Status",
-       "Graduate student"
-      ],
-      [
-       "School",
-       "Cornell University"
-      ]
-     ]
+     "at": "studied at Cornell",
+     "kind": "building",
+     "type": "school",
+     "name": "Cornell University"
     },
     {
-     "at": "He released a",
+     "at": "wrote a program",
      "kind": "object",
-     "icon": "bug",
-     "text": "Self-copying program"
-    },
-    {
-     "at": "a program that",
-     "kind": "terminal",
-     "lines": [
-      "copy 1",
-      "copy 2",
-      "copy 3"
-     ]
+     "icon": "file",
+     "text": "A self-copying program"
     }
    ]
   },
   {
    "id": 3,
    "mood": "curious",
-   "narration": "He said he only wanted to measure the internet. He launched it through MIT.",
+   "narration": "He said he only wanted to count how big the internet was. He let it go from MIT.",
    "visuals": [
     {
-     "at": "measure the internet",
-     "kind": "counter",
-     "value": 60000,
-     "label": "computers online, 1988"
+     "at": "only wanted to",
+     "kind": "face",
+     "who": "student",
+     "emotion": "think",
+     "text": "How big is the internet?"
     },
     {
-     "at": "through MIT",
+     "at": "go from MIT",
      "kind": "building",
      "type": "school",
      "name": "MIT"
@@ -86,117 +69,63 @@
   {
    "id": 4,
    "mood": "tense",
-   "narration": "But one mistake made it spread too fast. Computers slowed to a crawl.",
+   "narration": "But there was one mistake. It copied itself too many times. Computers slowed down, then almost stopped.",
    "visuals": [
     {
-     "at": "But one mistake",
-     "kind": "object",
-     "icon": "laptop",
-     "text": "Bug in the worm"
-    },
-    {
-     "at": "spread too fast",
-     "kind": "servers",
-     "state": "alarm",
-     "label": "Overloaded"
-    },
-    {
-     "at": "slowed to a",
-     "kind": "people",
-     "who": [
-      "engineer",
-      "student"
-     ],
-     "action": "shock",
-     "label": "Unix machines frozen"
+     "at": "copied itself too",
+     "kind": "network",
+     "text": "copying too fast"
     }
    ]
   },
   {
    "id": 5,
    "mood": "shock",
-   "narration": "Within a day, about 6,000 of 60,000 connected machines were hit.",
+   "narration": "In one day, about 6,000 of 60,000 computers were hit.",
    "visuals": [
     {
      "at": "about 6,000 of",
      "kind": "counter",
      "value": 6000,
-     "label": "machines hit in 24 hours"
-    },
-    {
-     "at": "6,000 of 60,000",
-     "kind": "headline",
-     "text": "Worm jams 6,000 computers"
+     "label": "of 60,000 computers"
     }
    ]
   },
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "Then the FBI traced it back to his Cornell computer.",
+   "narration": "Then the FBI followed the trail back to his computer at Cornell.",
    "visuals": [
     {
-     "at": "the FBI traced",
+     "at": "Then the FBI",
      "kind": "building",
      "type": "fbi",
      "name": "FBI"
-    },
-    {
-     "at": "his Cornell computer",
-     "kind": "globe",
-     "points": [
-      [
-       "Ithaca, NY",
-       42.4,
-       -76.5
-      ],
-      [
-       "Cambridge, MA",
-       42.4,
-       -71.1
-      ]
-     ]
     }
    ]
   },
   {
    "id": 7,
    "mood": "hopeful",
-   "narration": "In 1990, he became the first person convicted under a new U.S. hacking law. He got probation. Today he teaches at MIT.",
+   "narration": "In 1990, he was the first found guilty under a new U.S. law. No prison. Today he teaches at MIT.",
    "visuals": [
     {
-     "at": "the first person",
-     "kind": "stamp",
-     "text": "CHARGED"
-    },
-    {
-     "at": "He got probation",
+     "at": "In 1990 he",
      "kind": "timeline",
      "items": [
       [
-       "Nov 1988",
-       "Worm released"
+       "1988",
+       "The test"
       ],
       [
        "1990",
-       "Convicted"
+       "Found guilty"
       ],
       [
-       "Sentence",
-       "Probation, $10,050 fine"
+       "Today",
+       "Teacher at MIT"
       ]
      ]
-    },
-    {
-     "at": "Today he teaches",
-     "kind": "people",
-     "who": [
-      "student",
-      "student",
-      "engineer"
-     ],
-     "action": "talk",
-     "label": "Professor at MIT"
     }
    ]
   }
@@ -258,5 +187,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "sun"
 }

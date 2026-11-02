@@ -10,182 +10,126 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] A young Canadian broke into email accounts for $100 each.",
+   "narration": "[serious] A young man in Canada opened strangers' emails for 100 dollars each.",
    "visuals": [
     {
-     "at": "A young Canadian",
-     "kind": "hacker",
-     "screen": "Orders: 1 inbox",
-     "count": 1
+     "at": "A young man",
+     "kind": "face",
+     "who": "student",
+     "emotion": "happy"
     },
     {
-     "at": "for $100 each",
+     "at": "100 dollars each",
      "kind": "counter",
      "value": 100,
      "prefix": "$",
-     "label": "per hacked inbox"
+     "label": "per email account"
     }
    ]
   },
   {
    "id": 2,
-   "mood": "curious",
-   "narration": "His name was Karim Baratov, from Hamilton, Ontario. He admitted breaking into over 11,000 webmail accounts.",
+   "mood": "calm",
+   "narration": "His name was Karim Baratov. He admitted breaking into over 11,000 email accounts.",
    "visuals": [
     {
-     "at": "Karim Baratov from",
+     "at": "His name was",
      "kind": "dossier",
      "title": "Karim Baratov",
      "rows": [
       [
-       "Born",
-       "Kazakhstan"
-      ],
-      [
        "Home",
-       "Hamilton, Ontario"
+       "Hamilton, Canada"
       ],
       [
-       "Age",
-       "22 at arrest"
+       "Accounts",
+       "11,000+"
       ]
      ]
-    },
-    {
-     "at": "over 11,000 webmail",
-     "kind": "network",
-     "text": "Inboxes broken into",
-     "total": 11000
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "U.S. prosecutors said one buyer was Russia's FSB, a spy agency.",
+   "narration": "People paid him to get inside. But one customer, America says, was Russia's spy agency.",
    "visuals": [
     {
-     "at": "one buyer was",
+     "at": "one customer America",
      "kind": "flow",
      "nodes": [
-      "FSB officer",
-      "Baratov"
+      "Russian spy agency",
+      "Karim Baratov"
      ],
-     "amount": "$100 per inbox",
-     "blocked": false
-    },
-    {
-     "at": "Russia's FSB a",
-     "kind": "building",
-     "type": "government",
-     "name": "FSB, Moscow"
+     "amount": "$100 per job"
     }
    ]
   },
   {
    "id": 4,
    "mood": "reveal",
-   "narration": "And the FSB was tied to the 2014 Yahoo hack of about 500 million accounts.",
+   "narration": "That same spy agency was linked to the Yahoo hack of 500 million accounts.",
    "visuals": [
     {
-     "at": "tied to the",
-     "kind": "globe",
-     "points": [
-      [
-       "Moscow",
-       55.8,
-       37.6
-      ],
-      [
-       "Hamilton",
-       43.3,
-       -79.9
-      ],
-      [
-       "Sunnyvale",
-       37.4,
-       -122.0
-      ]
-     ]
+     "at": "That same spy",
+     "kind": "building",
+     "type": "government",
+     "name": "Russian spy agency"
     },
     {
-     "at": "about 500 million",
+     "at": "500 million accounts",
      "kind": "counter",
      "value": 500,
      "suffix": "M",
-     "label": "Yahoo users, 2014"
+     "label": "Yahoo accounts"
     }
    ]
   },
   {
    "id": 5,
    "mood": "curious",
-   "narration": "Meanwhile, he owned luxury cars, including an Aston Martin.",
+   "narration": "Meanwhile, he drove fancy cars, like an Aston Martin.",
    "visuals": [
     {
-     "at": "an Aston Martin",
+     "at": "he drove fancy",
      "kind": "object",
      "icon": "car",
-     "text": "Aston Martin at 22"
+     "text": "Fancy cars"
     }
    ]
   },
   {
    "id": 6,
    "mood": "sad",
-   "narration": "In March 2017, police arrested him in Hamilton. That November, he pleaded guilty in the U.S.",
+   "narration": "In March 2017, police arrested him at home in Canada. Later, he admitted it in a U.S. court.",
    "visuals": [
     {
      "at": "police arrested him",
      "kind": "people",
      "who": [
       "police",
-      "police"
+      "crook"
      ],
      "action": "arrest",
-     "label": "Hamilton, March 2017"
-    },
-    {
-     "at": "he pleaded guilty",
-     "kind": "stamp",
-     "text": "CHARGED"
+     "label": "Arrested, 2017"
     }
    ]
   },
   {
    "id": 7,
    "mood": "sad",
-   "narration": "In May 2018, he got five years and a $250,000 fine. Prosecutors said his $100 jobs served Russian spies.",
+   "narration": "He got five years in prison. His 100-dollar jobs helped Russian spies, officials said.",
    "visuals": [
     {
-     "at": "five years and",
-     "kind": "timeline",
-     "items": [
-      [
-       "Mar 2017",
-       "Arrested"
-      ],
-      [
-       "Nov 2017",
-       "Guilty plea"
-      ],
-      [
-       "May 2018",
-       "Five years"
-      ]
-     ]
+     "at": "five years in",
+     "kind": "stamp",
+     "text": "5 YEARS"
     },
     {
-     "at": "$250,000 fine Prosecutors",
-     "kind": "object",
-     "icon": "money",
-     "text": "$250,000 fine"
-    },
-    {
-     "at": "served Russian spies",
-     "kind": "split",
-     "left": "$100 a job",
-     "right": "Five years prison"
+     "at": "His 100-dollar jobs",
+     "kind": "bigtext",
+     "text": "$100 JOBS FOR SPIES",
+     "hl": "SPIES"
     }
    ]
   }
@@ -236,7 +180,7 @@
   "thumb": {
    "text": "$100 HACKS FOR RUSSIAN SPIES",
    "hl": "RUSSIAN SPIES",
-   "visual": 5
+   "visual": 1
   },
   "tags": [
    "cybersecurity",
@@ -247,5 +191,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "sun"
 }

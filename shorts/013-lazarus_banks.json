@@ -10,105 +10,76 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] U.S. officials called North Korea's hackers the world's leading bank robbers.",
+   "narration": "[serious] America called them the world's top bank robbers. They never entered a bank.",
    "visuals": [
     {
-     "at": "North Korea's hackers",
-     "kind": "hacker",
-     "screen": "Lazarus Group",
-     "count": 3
+     "at": "the world's top",
+     "kind": "building",
+     "type": "bank",
+     "name": "Bank"
     },
     {
-     "at": "the world's leading",
-     "kind": "headline",
-     "text": "Feb 2021: three hackers indicted"
+     "at": "They never entered",
+     "kind": "bigtext",
+     "text": "NEVER ENTERED A BANK",
+     "hl": "NEVER"
     }
    ]
   },
   {
    "id": 2,
    "mood": "curious",
-   "narration": "From 2015 to 2019, one team allegedly hit banks in Vietnam, Taiwan, Mexico, Malta and Africa.",
+   "narration": "From 2015 to 2019, officials say, a North Korean team hit banks in many countries.",
    "visuals": [
     {
-     "at": "From 2015 to",
-     "kind": "timeline",
-     "items": [
-      [
-       "2015",
-       "Campaign begins"
-      ],
-      [
-       "Oct 2018",
-       "Pakistan ATM theft"
-      ],
-      [
-       "Feb 2019",
-       "Malta heist"
-      ]
-     ]
-    },
-    {
-     "at": "Mexico Malta and",
+     "at": "hit banks in",
      "kind": "globe",
      "points": [
       [
-       "Hanoi",
+       "Vietnam",
        21.0,
        105.8
       ],
       [
-       "Mexico City",
-       19.4,
-       -99.1
-      ],
-      [
-       "Valletta",
+       "Malta",
        35.9,
        14.5
       ],
       [
-       "Taipei",
-       25.0,
-       121.5
+       "Mexico",
+       19.4,
+       -99.1
       ]
      ]
-    },
-    {
-     "at": "Malta and Africa",
-     "kind": "building",
-     "type": "bank",
-     "name": "Banks on four continents"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "The method: break into a bank's network. Then send fake payment orders.",
+   "narration": "Their plan was simple. First, break into a bank's computers. Then send fake orders to move money.",
    "visuals": [
     {
-     "at": "network Then send",
-     "kind": "servers",
-     "state": "alarm",
-     "label": "Bank network breached"
-    },
-    {
-     "at": "fake payment orders",
-     "kind": "flow",
-     "nodes": [
-      "Hacked bank",
-      "SWIFT",
-      "Foreign accounts"
-     ],
-     "amount": "Fake orders"
+     "at": "Their plan was",
+     "kind": "steps",
+     "title": "The plan",
+     "items": [
+      [
+       "laptop",
+       "Break into bank computers"
+      ],
+      [
+       "money",
+       "Send fake money orders"
+      ]
+     ]
     }
    ]
   },
   {
    "id": 4,
    "mood": "shock",
-   "narration": "In total, they allegedly tried to steal over 1.2 billion dollars.",
+   "narration": "In total, they tried to take over 1.2 billion dollars.",
    "visuals": [
     {
      "at": "over 1.2 billion",
@@ -116,101 +87,60 @@
      "value": 1.2,
      "prefix": "$",
      "suffix": "B",
-     "label": "attempted, 2015-2019"
+     "label": "they tried to take"
     }
    ]
   },
   {
    "id": 5,
    "mood": "tense",
-   "narration": "Then came a new trick. In 2018, BankIslami in Pakistan lost 6.1 million dollars from ATMs.",
+   "narration": "Then they tried a new trick: cash machines. In 2018, a bank in Pakistan lost 6.1 million dollars.",
    "visuals": [
     {
-     "at": "Then came a",
-     "kind": "split",
-     "left": "Fake transfers",
-     "right": "ATM cash-outs"
-    },
-    {
-     "at": "BankIslami in Pakistan",
-     "kind": "building",
-     "type": "bank",
-     "name": "BankIslami"
-    },
-    {
-     "at": "6.1 million dollars",
+     "at": "cash machines",
      "kind": "object",
      "icon": "atm",
-     "text": "$6.1M withdrawn"
+     "text": "Cash machines"
+    },
+    {
+     "at": "a bank in",
+     "kind": "building",
+     "type": "bank",
+     "name": "Bank in Pakistan"
     }
    ]
   },
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "A Canadian-American man agreed to plead guilty to laundering their money.",
+   "narration": "Someone had to clean the stolen money. A man in Canada later admitted helping.",
    "visuals": [
     {
-     "at": "A Canadian-American man",
-     "kind": "dossier",
-     "title": "Ghaleb Alaumary",
-     "rows": [
-      [
-       "From",
-       "Mississauga, Canada"
-      ],
-      [
-       "Role",
-       "Money launderer"
-      ],
-      [
-       "Plea",
-       "Agreed to plead guilty"
-      ]
+     "at": "clean the stolen",
+     "kind": "flow",
+     "nodes": [
+      "Stolen money",
+      "Helper in Canada",
+      "Clean money"
      ]
-    },
-    {
-     "at": "laundering their money",
-     "kind": "object",
-     "icon": "money",
-     "text": "Pakistan, India, Malta funds"
     }
    ]
   },
   {
    "id": 7,
    "mood": "sad",
-   "narration": "In 2021, three North Korean military hackers were indicted, including Park Jin Hyok. They allegedly robbed banks without walking inside.",
+   "narration": "In 2021, three North Korean army hackers were charged. They robbed banks without walking inside.",
    "visuals": [
     {
-     "at": "were indicted including",
+     "at": "were charged",
      "kind": "stamp",
      "text": "CHARGED"
     },
     {
-     "at": "including Park Jin",
-     "kind": "dossier",
-     "title": "Park Jin Hyok",
-     "rows": [
-      [
-       "Also charged",
-       "Jon Chang Hyok, Kim Il"
-      ],
-      [
-       "Unit",
-       "RGB military intelligence"
-      ],
-      [
-       "Indictment",
-       "Unsealed Feb 17, 2021"
-      ]
-     ]
-    },
-    {
      "at": "without walking inside",
-     "kind": "lock",
-     "state": "open",
-     "text": "$1.3B scheme alleged"
+     "kind": "bigtext",
+     "text": "NEVER WALKED INSIDE",
+     "hl": "NEVER"
     }
    ]
   }
@@ -267,7 +197,7 @@
   "thumb": {
    "text": "THE WORLD'S LEADING BANK ROBBERS",
    "hl": "BANK ROBBERS",
-   "visual": 7
+   "visual": 4
   },
   "tags": [
    "cybersecurity",
@@ -278,5 +208,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "news"
 }

@@ -291,5 +291,6 @@
    "hl": "NUCLEAR DANGER",
    "visual": 0
   }
- }
+ },
+ "legacy": true
 }

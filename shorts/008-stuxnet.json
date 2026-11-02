@@ -10,152 +10,119 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] A computer worm secretly broke machines inside Iran's nuclear program.",
+   "narration": "[serious] A computer virus secretly broke machines inside Iran's nuclear site.",
    "visuals": [
     {
-     "at": "A computer worm",
+     "at": "A computer virus",
      "kind": "object",
      "icon": "bug",
-     "text": "Stuxnet"
+     "text": "Secret virus"
     },
     {
-     "at": "Iran's nuclear program",
+     "at": "Iran's nuclear site",
      "kind": "building",
-     "type": "government",
-     "name": "Iran nuclear program"
+     "type": "power",
+     "name": "Iran nuclear site"
     }
    ]
   },
   {
    "id": 2,
    "mood": "calm",
-   "narration": "The target was Natanz. There, centrifuges, fast spinning machines, enriched uranium.",
+   "narration": "The place was called Natanz. Inside, many machines spun very fast. They made nuclear fuel.",
    "visuals": [
     {
-     "at": "The target was",
-     "kind": "dossier",
-     "title": "Natanz",
-     "rows": [
-      [
-       "Country",
-       "Iran"
-      ],
-      [
-       "Job",
-       "Enrich uranium"
-      ]
-     ]
+     "at": "called Natanz",
+     "kind": "building",
+     "type": "factory",
+     "name": "Natanz"
     },
     {
-     "at": "fast spinning machines",
-     "kind": "people",
-     "who": [
-      "engineer",
-      "worker"
-     ],
-     "action": "walk",
-     "label": "Centrifuge hall"
+     "at": "machines spun very",
+     "kind": "servers",
+     "state": "ok",
+     "label": "Fast spinning machines"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "First, it probably arrived on a USB stick. Then it hunted Siemens controllers, the boxes that run machines.",
+   "narration": "It probably came in on a USB stick. Then it found the boxes that run the machines.",
    "visuals": [
     {
-     "at": "a USB stick",
-     "kind": "object",
-     "icon": "usb",
-     "text": "Infected drive"
-    },
-    {
-     "at": "it hunted Siemens",
-     "kind": "terminal",
-     "lines": [
-      "looking for Siemens controller",
-      "match found",
-      "waiting"
-     ]
-    },
-    {
-     "at": "boxes that run",
-     "kind": "office",
-     "who": "engineer",
-     "action": "type",
-     "screen": "Controller: running"
-    }
-   ]
-  },
-  {
-   "id": 4,
-   "mood": "shock",
-   "narration": "Next, it made centrifuges spin wrong, while screens showed everything normal.",
-   "visuals": [
-    {
-     "at": "made centrifuges spin",
-     "kind": "servers",
-     "state": "alarm",
-     "label": "Centrifuges failing"
-    },
-    {
-     "at": "screens showed everything",
-     "kind": "split",
-     "left": "Real: spinning wrong",
-     "right": "Screen: all normal"
-    }
-   ]
-  },
-  {
-   "id": 5,
-   "mood": "sad",
-   "narration": "Experts say Iran replaced about 1,000 centrifuges around early 2010.",
-   "visuals": [
-    {
-     "at": "about 1,000 centrifuges",
-     "kind": "counter",
-     "value": 1000,
-     "label": "centrifuges replaced"
-    },
-    {
-     "at": "around early 2010",
-     "kind": "timeline",
+     "at": "It probably came",
+     "kind": "steps",
+     "title": "How it got in",
      "items": [
       [
-       "Late 2009",
-       "Centrifuges replaced"
+       "usb",
+       "Came in on a USB stick"
       ],
       [
-       "2010",
-       "Worm discovered"
+       "laptop",
+       "Found the control boxes"
       ]
      ]
     }
    ]
   },
   {
-   "id": 6,
-   "mood": "reveal",
-   "narration": "But that year, the worm escaped onto computers worldwide. Security experts in Belarus were called to help.",
+   "id": 4,
+   "mood": "shock",
+   "narration": "Next, it made the machines spin at the wrong speed. But the screens still showed everything was fine.",
    "visuals": [
     {
-     "at": "escaped onto computers",
-     "kind": "network",
-     "text": "Spreading beyond Iran"
+     "at": "spin at the",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "Wrong speed"
     },
     {
-     "at": "experts in Belarus",
+     "at": "screens still showed",
+     "kind": "office",
+     "who": "engineer",
+     "action": "think",
+     "screen": "All normal"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "sad",
+   "narration": "Experts say Iran had to replace about 1,000 machines.",
+   "visuals": [
+    {
+     "at": "about 1,000 machines",
+     "kind": "counter",
+     "value": 1000,
+     "label": "machines replaced"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "reveal",
+   "narration": "Then the virus escaped. It spread to computers around the world. Experts in Belarus were called to help.",
+   "visuals": [
+    {
+     "at": "Then the virus",
+     "kind": "network",
+     "text": "spread worldwide"
+    },
+    {
+     "at": "Experts in Belarus",
      "kind": "globe",
      "points": [
       [
-       "Minsk",
-       53.9,
-       27.6
+       "Iran",
+       33.7,
+       51.7
       ],
       [
-       "Tehran",
-       35.7,
-       51.4
+       "Belarus",
+       53.9,
+       27.6
       ]
      ]
     }
@@ -164,23 +131,20 @@
   {
    "id": 7,
    "mood": "curious",
-   "narration": "Reports say the U.S. and Israel built it. Neither has ever admitted it. Code had become a weapon.",
+   "narration": "Reports say America and Israel made it. Neither ever said yes. A computer virus had become a weapon.",
    "visuals": [
     {
-     "at": "Reports say the",
-     "kind": "headline",
-     "text": "NYT: operation Olympic Games"
+     "at": "Reports say America",
+     "kind": "face",
+     "who": "agent",
+     "emotion": "think",
+     "text": "Who made it?"
     },
     {
-     "at": "Neither has ever",
-     "kind": "stamp",
-     "text": "CLASSIFIED"
-    },
-    {
-     "at": "Code had become",
-     "kind": "object",
-     "icon": "skull",
-     "text": "Digital weapon"
+     "at": "A computer virus had",
+     "kind": "bigtext",
+     "text": "A VIRUS BECAME A WEAPON",
+     "hl": "WEAPON"
     }
    ]
   }
@@ -242,5 +206,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "mint"
 }

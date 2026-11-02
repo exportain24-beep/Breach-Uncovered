@@ -267,5 +267,6 @@
    "hl": "$50 MILLION",
    "visual": 8
   }
- }
+ },
+ "legacy": true
 }

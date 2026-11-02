@@ -10,85 +10,45 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] One virus made over 30,000 Saudi Aramco computers useless.",
+   "narration": "[serious] One morning, 30,000 computers at an oil giant stopped working.",
    "visuals": [
     {
-     "at": "One virus made",
-     "kind": "object",
-     "icon": "bug",
-     "text": "Shamoon"
-    },
-    {
-     "at": "over 30,000 Saudi",
+     "at": "30,000 computers at",
      "kind": "counter",
      "value": 30000,
-     "suffix": "+",
-     "label": "computers useless"
+     "label": "computers stopped"
     }
    ]
   },
   {
    "id": 2,
    "mood": "calm",
-   "narration": "It was August 15, 2012. Most Aramco staff were home for a holy night.",
+   "narration": "The company was Saudi Aramco. On August 15, 2012, most workers were at home for a holy night.",
    "visuals": [
     {
-     "at": "15 2012 Most",
-     "kind": "timeline",
-     "items": [
-      [
-       "Aug 15, 2012",
-       "Night of Power eve"
-      ],
-      [
-       "11:08 a.m.",
-       "Virus strikes"
-      ]
-     ]
-    },
-    {
-     "at": "Most Aramco staff",
+     "at": "The company was",
      "kind": "building",
      "type": "factory",
      "name": "Saudi Aramco"
     },
     {
-     "at": "home for a",
-     "kind": "people",
-     "who": [
-      "worker",
-      "workerF"
-     ],
-     "action": "walk",
-     "label": "55,000 staff at home"
+     "at": "On August 15",
+     "kind": "object",
+     "icon": "calendar",
+     "text": "Aug 15, 2012"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "That morning, Shamoon spread through the network. One by one, it wiped about three in four office computers.",
+   "narration": "That morning, a virus called Shamoon raced through the company. It wiped three out of four office computers.",
    "visuals": [
     {
-     "at": "Shamoon spread through",
-     "kind": "terminal",
-     "lines": [
-      "host 0412: offline",
-      "host 0413: offline",
-      "host 0414: offline"
-     ]
-    },
-    {
-     "at": "through the network",
+     "at": "a virus called",
      "kind": "network",
-     "text": "Aramco office PCs",
+     "text": "computers wiped",
      "total": 30000
-    },
-    {
-     "at": "three in four",
-     "kind": "servers",
-     "state": "dark",
-     "label": "Data overwritten"
     }
    ]
   },
@@ -98,96 +58,66 @@
    "narration": "Where files had been, screens showed a burning American flag.",
    "visuals": [
     {
-     "at": "a burning American",
+     "at": "Where files had",
      "kind": "office",
-     "who": "engineer",
+     "who": "worker",
      "action": "shock",
-     "screen": "Burning U.S. flag"
+     "screen": "FILES GONE"
+    },
+    {
+     "at": "a burning American",
+     "kind": "bigtext",
+     "text": "A BURNING FLAG",
+     "hl": "FLAG"
     }
    ]
   },
   {
    "id": 5,
    "mood": "curious",
-   "narration": "Then a group called the Cutting Sword of Justice claimed the attack. Experts suspected that name was a decoy.",
+   "narration": "A group called the Cutting Sword of Justice said they did it. Experts thought that name was fake.",
    "visuals": [
     {
      "at": "the Cutting Sword",
-     "kind": "dossier",
-     "title": "Cutting Sword of Justice",
-     "rows": [
-      [
-       "Known before?",
-       "No"
-      ],
-      [
-       "Claim",
-       "Aramco attack"
-      ],
-      [
-       "Real?",
-       "Doubted"
-      ]
-     ]
-    },
-    {
-     "at": "a decoy",
-     "kind": "split",
-     "left": "Claimed: activists",
-     "right": "Suspected: cover story"
+     "kind": "bigtext",
+     "text": "CUTTING SWORD OF JUSTICE",
+     "hl": "SWORD"
     }
    ]
   },
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "Anonymous U.S. officials blamed Iran, without public proof.",
+   "narration": "Some U.S. officials blamed Iran, but showed no proof.",
    "visuals": [
     {
-     "at": "blamed Iran without",
-     "kind": "globe",
-     "points": [
-      [
-       "Tehran",
-       35.7,
-       51.4
-      ],
-      [
-       "Dhahran",
-       26.3,
-       50.1
-      ],
-      [
-       "Washington",
-       38.9,
-       -77.0
-      ]
-     ]
+     "at": "Some U.S. officials",
+     "kind": "people",
+     "who": [
+      "agent",
+      "agentF"
+     ],
+     "action": "talk",
+     "label": "No proof shown"
     }
    ]
   },
   {
    "id": 7,
    "mood": "sad",
-   "narration": "Aramco had to replace tens of thousands of hard drives. One wiper, a delete-everything program, emptied an oil giant's offices.",
+   "narration": "Aramco had to buy tens of thousands of new hard drives. One virus emptied an oil giant's offices.",
    "visuals": [
     {
-     "at": "tens of thousands",
+     "at": "new hard drives",
      "kind": "object",
      "icon": "laptop",
-     "text": "Hard drives replaced"
+     "text": "New hard drives"
     },
     {
-     "at": "a delete-everything program",
-     "kind": "lock",
-     "state": "crack",
-     "text": "Wiped, not ransomed"
-    },
-    {
-     "at": "an oil giant's",
-     "kind": "object",
-     "icon": "pipeline",
-     "text": "Saudi Aramco"
+     "at": "One virus emptied",
+     "kind": "bigtext",
+     "text": "ONE VIRUS EMPTIED IT",
+     "hl": "ONE"
     }
    ]
   }
@@ -234,7 +164,7 @@
   "thumb": {
    "text": "ONE VIRUS WIPED 30,000 COMPUTERS",
    "hl": "30,000",
-   "visual": 8
+   "visual": 0
   },
   "tags": [
    "cybersecurity",
@@ -245,5 +175,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "lilac"
 }

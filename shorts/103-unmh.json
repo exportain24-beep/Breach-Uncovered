@@ -249,5 +249,6 @@
    "hl": "AMBULANCES",
    "visual": 0
   }
- }
+ },
+ "legacy": true
 }

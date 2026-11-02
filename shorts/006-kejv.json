@@ -10,132 +10,119 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] U.S. prosecutors say a software company was really a hacking front.",
+   "narration": "[serious] U.S. officials say a normal-looking company hid a secret.",
    "visuals": [
     {
-     "at": "a software company",
-     "kind": "building",
-     "type": "office",
-     "name": "Chosun Expo"
+     "at": "a normal-looking company",
+     "kind": "face",
+     "who": "exec",
+     "emotion": "happy",
+     "text": "We make games!"
     },
     {
-     "at": "company was really",
-     "kind": "hacker",
-     "screen": "front company",
-     "count": 3
+     "at": "hid a secret",
+     "kind": "bigtext",
+     "text": "IT HID A SECRET",
+     "hl": "SECRET"
     }
    ]
   },
   {
    "id": 2,
    "mood": "calm",
-   "narration": "Chosun Expo called itself North Korea's first internet company. Its programmers worked in Dalian, China.",
+   "narration": "It was called Chosun Expo. It worked from an office in China.",
    "visuals": [
     {
-     "at": "Chosun Expo called",
-     "kind": "dossier",
-     "title": "Chosun Expo",
-     "rows": [
-      [
-       "Also called",
-       "Korea Expo Joint Venture"
-      ],
-      [
-       "Founded",
-       "2002"
-      ],
-      [
-       "Base",
-       "Dalian, China"
-      ]
-     ]
+     "at": "called Chosun Expo",
+     "kind": "building",
+     "type": "office",
+     "name": "Chosun Expo"
     },
     {
-     "at": "Its programmers worked",
-     "kind": "office",
-     "who": "engineer",
-     "action": "type",
-     "screen": "Visual C++"
+     "at": "an office in China",
+     "kind": "globe",
+     "points": [
+      [
+       "China",
+       38.9,
+       121.6
+      ],
+      [
+       "North Korea",
+       39.0,
+       125.8
+      ]
+     ]
     }
    ]
   },
   {
    "id": 3,
    "mood": "curious",
-   "narration": "On the surface, it sold gaming and gambling software to clients worldwide.",
+   "narration": "On the outside, it made games and betting apps for customers around the world.",
    "visuals": [
     {
-     "at": "gaming and gambling",
+     "at": "made games and",
      "kind": "object",
      "icon": "laptop",
-     "text": "Gaming, gambling, e-payments"
-    },
-    {
-     "at": "clients worldwide",
-     "kind": "flow",
-     "nodes": [
-      "Clients abroad",
-      "Chosun Expo"
-     ],
-     "amount": "Coding fees",
-     "blocked": false
+     "text": "Games and betting apps"
     }
    ]
   },
   {
    "id": 4,
    "mood": "reveal",
-   "narration": "But prosecutors say it was tied to Lab 110, a military spy unit.",
+   "narration": "But officials say it was really linked to a spy unit of North Korea's army.",
    "visuals": [
     {
-     "at": "But prosecutors say",
+     "at": "But officials say",
      "kind": "split",
-     "left": "Software firm",
-     "right": "Government front"
+     "left": "Game company",
+     "right": "Army spy unit"
     },
     {
-     "at": "tied to Lab",
-     "kind": "building",
-     "type": "government",
-     "name": "Lab 110"
+     "at": "a spy unit",
+     "kind": "people",
+     "who": [
+      "soldier",
+      "soldier"
+     ],
+     "action": "point",
+     "label": "Spy unit"
     }
    ]
   },
   {
    "id": 5,
    "mood": "tense",
-   "narration": "Programmer Park Jin Hyok allegedly worked there over a decade. He went home in 2014, just before the Sony hack.",
+   "narration": "Worker Park Jin Hyok was there over ten years. He went home in 2014, just before Sony was attacked.",
    "visuals": [
     {
-     "at": "Park Jin Hyok",
+     "at": "Worker Park Jin",
      "kind": "dossier",
      "title": "Park Jin Hyok",
      "rows": [
-      [
-       "Employer",
-       "Chosun Expo"
-      ],
       [
        "Job",
        "Programmer"
       ],
       [
-       "Skills",
-       "Visual C++"
+       "Years there",
+       "Over 10"
       ]
      ]
     },
     {
-     "at": "just before the",
+     "at": "went home in",
      "kind": "timeline",
      "items": [
       [
        "2014",
-       "Park returns home"
+       "Park goes home"
       ],
       [
        "Nov 2014",
-       "Sony hacked"
+       "Sony attacked"
       ]
      ]
     }
@@ -144,44 +131,38 @@
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "So what linked him? His personal email and a hacker persona both used tty.",
+   "narration": "How did they connect him? His own email and a hacker's fake name both used the same three letters.",
    "visuals": [
     {
-     "at": "His personal email",
-     "kind": "object",
-     "icon": "envelope",
-     "text": "Two linked accounts"
+     "at": "How did they",
+     "kind": "face",
+     "who": "agent",
+     "emotion": "think",
+     "text": "Same letters?"
     },
     {
-     "at": "both used tty",
-     "kind": "terminal",
-     "lines": [
-      "account A: ttykim1018",
-      "account B: tty198410",
-      "match: tty"
-     ]
+     "at": "the same three",
+     "kind": "bigtext",
+     "text": "SAME THREE LETTERS",
+     "hl": "THREE"
     }
    ]
   },
   {
    "id": 7,
    "mood": "sad",
-   "narration": "In 2018, Park was charged and the company sanctioned. Allegedly, the day job was the disguise.",
+   "narration": "In 2018, America charged him. The office job, they say, was a mask.",
    "visuals": [
     {
-     "at": "Park was charged",
+     "at": "America charged him",
      "kind": "stamp",
      "text": "CHARGED"
     },
     {
-     "at": "the day job",
-     "kind": "people",
-     "who": [
-      "engineer",
-      "hacker"
-     ],
-     "action": "talk",
-     "label": "Same office, allegedly"
+     "at": "was a mask",
+     "kind": "bigtext",
+     "text": "THE JOB WAS A MASK",
+     "hl": "MASK"
     }
    ]
   }
@@ -244,5 +225,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "news"
 }

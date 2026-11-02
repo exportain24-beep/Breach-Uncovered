@@ -6,7 +6,7 @@
 html,body{margin:0;background:#000}canvas{display:block}</style>
 <canvas id="c" width="1080" height="1920"></canvas>
 <script type="module">
-import { W, H, C, background, MOOD, clamp, ease, easeIO, hash, fillRR, marker } from './kit.js';
+import { W, H, C, background, MOOD, clamp, ease, easeIO, hash, fillRR, marker, setTheme, THEMES } from './kit.js';
 import { KINDS } from './scenes.js';
 const cv = document.getElementById('c'), ctx = cv.getContext('2d');
 let shots = [];
@@ -26,6 +26,7 @@ function drawShot(s, t, noWipe) {
   }
 }
 window.loadShots = (list) => { shots = list; };
+window.setTheme = (name) => { setTheme(name); return 1; };
 // Cover: big ink-on-paper headline with a marker on the key words, the hero visual as a tilted sticker card, red circle + arrow.
 window.drawThumb = (shot, txt, hl) => {
   drawShot({ ...shot, t0: 0, t1: 6, mood: shot.mood || 'reveal' }, 5.6, true);

@@ -20,11 +20,14 @@ def serve():
     srv = socketserver.ThreadingTCPServer(("127.0.0.1", 0), functools.partial(Q, directory=ROOT)); srv.daemon_threads = True
     threading.Thread(target=srv.serve_forever, daemon=True).start(); return srv.server_address[1]
 
+THEME_NAME = ["paper"]
+THEMES = ["mint", "lilac", "sky", "peach", "news", "sun", "paper"]
 def open_page(p, port):
     b = p.chromium.launch(args=["--disable-gpu-vsync", "--disable-web-security"])
     pg = b.new_page(viewport={"width": W, "height": H}); pg.on("console", lambda m: print("[browser]", m.text[:400]) if "ERR" in m.text else None)
     pg.goto(f"http://127.0.0.1:{port}/shorts2d/player.html"); pg.wait_for_function("window.ready===true || window.err", timeout=60000)
     if pg.evaluate("window.err || ''"): raise SystemExit("player error: " + pg.evaluate("window.err"))
+    pg.evaluate("n => window.setTheme(n)", THEME_NAME[0])
     return b, pg
 
 def timeline(script, timing):
@@ -93,6 +96,7 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("script"); ap.add_argument("out"); ap.add_argument("--workdir", default="/tmp/short2d_work"); ap.add_argument("--offline", action="store_true")
     ap.add_argument("--seconds", type=float); ap.add_argument("--stills", type=float, nargs="*")
     a = ap.parse_args(); script = json.load(open(a.script, encoding="utf-8")); os.makedirs(a.workdir, exist_ok=True); ep = script["episode"]
+    THEME_NAME[0] = script.get("theme") or THEMES[int(ep) % len(THEMES)]; print("theme:", THEME_NAME[0])
     if a.offline or not os.environ.get("ELEVENLABS_API_KEY"):
         timing = R.estimate_timing(script)
         for x in timing:                                   # estimate tuned to the narrator's real pace (~2.45 words/s)

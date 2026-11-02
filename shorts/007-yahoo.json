@@ -10,94 +10,88 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] Two Russian spy officers were charged over a giant Yahoo hack.",
+   "narration": "[serious] One click on a fake email opened 500 million accounts.",
    "visuals": [
     {
-     "at": "Two Russian spy",
-     "kind": "stamp",
-     "text": "CHARGED"
-    },
-    {
-     "at": "a giant Yahoo",
-     "kind": "building",
-     "type": "office",
-     "name": "Yahoo"
-    }
-   ]
-  },
-  {
-   "id": 2,
-   "mood": "tense",
-   "narration": "It started in early 2014. One Yahoo worker clicked a fake email. That opened the door.",
-   "visuals": [
-    {
-     "at": "One Yahoo worker",
-     "kind": "office",
-     "who": "worker",
-     "action": "type",
-     "screen": "Early 2014"
-    },
-    {
-     "at": "a fake email",
-     "kind": "email",
-     "from": "Unknown sender",
-     "subject": "Please review",
-     "line": "Click this link"
-    },
-    {
-     "at": "email That opened",
-     "kind": "hacker",
-     "screen": "inside Yahoo",
-     "count": 1
-    }
-   ]
-  },
-  {
-   "id": 3,
-   "mood": "tense",
-   "narration": "Next, hackers copied Yahoo's user database. 500 million accounts.",
-   "visuals": [
-    {
-     "at": "copied Yahoo's user",
-     "kind": "servers",
-     "state": "alarm",
-     "label": "Backup copied Dec 2014"
+     "at": "One click on",
+     "kind": "object",
+     "icon": "envelope",
+     "text": "One click"
     },
     {
      "at": "500 million accounts",
      "kind": "counter",
      "value": 500,
      "suffix": "M",
-     "label": "accounts exposed"
+     "label": "accounts opened"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "tense",
+   "narration": "It was early 2014. A Yahoo worker got an email. It looked normal. The worker clicked it.",
+   "visuals": [
+    {
+     "at": "It was early",
+     "kind": "building",
+     "type": "office",
+     "name": "Yahoo"
+    },
+    {
+     "at": "A Yahoo worker",
+     "kind": "office",
+     "who": "worker",
+     "action": "type",
+     "screen": "New email"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "That one click let hackers inside. Then they copied the list of Yahoo users. 500 million accounts.",
+   "visuals": [
+    {
+     "at": "let hackers inside",
+     "kind": "hacker",
+     "count": 2,
+     "screen": "We are in"
+    },
+    {
+     "at": "copied the list",
+     "kind": "servers",
+     "state": "alarm",
+     "label": "500 million users"
     }
    ]
   },
   {
    "id": 4,
    "mood": "curious",
-   "narration": "Then they forged cookies, small files that keep you logged in. Inboxes opened without passwords.",
+   "narration": "Next, they made fake keys to open inboxes. No password needed.",
    "visuals": [
     {
-     "at": "they forged cookies",
+     "at": "made fake keys",
      "kind": "object",
      "icon": "key",
-     "text": "Fake login cookie"
+     "text": "Fake keys"
     },
     {
-     "at": "without passwords",
+     "at": "No password needed",
      "kind": "lock",
      "state": "open",
-     "text": "6,500 accounts targeted"
+     "text": "No password"
     }
    ]
   },
   {
    "id": 5,
    "mood": "reveal",
-   "narration": "Whose inboxes? Targets included Russian journalists and officials. Yahoo told the world in September 2016.",
+   "narration": "Whose emails did they read? Russian reporters and officials. Yahoo told the world in 2016.",
    "visuals": [
     {
-     "at": "Targets included Russian",
+     "at": "Russian reporters and",
      "kind": "people",
      "who": [
       "worker",
@@ -105,103 +99,47 @@
       "exec"
      ],
      "action": "shock",
-     "label": "Journalists and officials"
+     "label": "Reporters and officials"
     },
     {
-     "at": "told the world",
+     "at": "Yahoo told the",
      "kind": "headline",
      "text": "Yahoo: 500 million accounts stolen"
-    },
-    {
-     "at": "in September 2016",
-     "kind": "timeline",
-     "items": [
-      [
-       "2014",
-       "Data stolen"
-      ],
-      [
-       "Sep 2016",
-       "Yahoo discloses"
-      ]
-     ]
     }
    ]
   },
   {
    "id": 6,
    "mood": "shock",
-   "narration": "In 2017, U.S. prosecutors charged two FSB officers and two hackers. Only Canadian Karim Baratov was arrested.",
+   "narration": "In 2017, America charged two Russian spy officers and two hackers. Only one was caught, a young Canadian.",
    "visuals": [
     {
-     "at": "U.S prosecutors charged",
-     "kind": "dossier",
-     "title": "Dmitry Dokuchaev, Igor Sushchin",
-     "rows": [
-      [
-       "Agency",
-       "Russia's FSB"
-      ],
-      [
-       "Charged",
-       "March 2017"
-      ],
-      [
-       "Hacker",
-       "Alexsey Belan"
-      ]
-     ]
+     "at": "America charged two",
+     "kind": "stamp",
+     "text": "CHARGED"
     },
     {
-     "at": "Only Canadian Karim",
-     "kind": "globe",
-     "points": [
-      [
-       "Moscow",
-       55.8,
-       37.6
-      ],
-      [
-       "Canada",
-       43.7,
-       -79.4
-      ],
-      [
-       "San Francisco",
-       37.8,
-       -122.4
-      ]
-     ]
-    },
-    {
-     "at": "was arrested",
+     "at": "Only one was",
      "kind": "people",
      "who": [
       "police",
-      "hacker"
+      "crook"
      ],
      "action": "arrest",
-     "label": "Arrested in Canada"
+     "label": "Only one caught"
     }
    ]
   },
   {
    "id": 7,
    "mood": "sad",
-   "narration": "He got five years. And it all began with one click.",
+   "narration": "He got five years in prison. All from one click.",
    "visuals": [
     {
-     "at": "He got five",
-     "kind": "counter",
-     "value": 5,
-     "suffix": " years",
-     "label": "Baratov, May 2018"
-    },
-    {
-     "at": "all began with",
-     "kind": "lock",
-     "state": "crack",
-     "text": "500,000,000 accounts"
+     "at": "All from one",
+     "kind": "bigtext",
+     "text": "ALL FROM ONE CLICK",
+     "hl": "ONE"
     }
    ]
   }
@@ -264,7 +202,7 @@
   "thumb": {
    "text": "ONE CLICK. 500 MILLION ACCOUNTS.",
    "hl": "500 MILLION",
-   "visual": 6
+   "visual": 1
   },
   "tags": [
    "cybersecurity",
@@ -275,5 +213,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "sky"
 }

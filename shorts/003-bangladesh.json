@@ -253,5 +253,6 @@
    "hl": "$1 BILLION",
    "visual": 12
   }
- }
+ },
+ "legacy": true
 }

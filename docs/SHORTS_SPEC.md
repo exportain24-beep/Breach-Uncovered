@@ -41,6 +41,22 @@ Voice: ElevenLabs `eleven_v4_turbo`, voice `oO7sLA3dWfQXsKeSAjpA`. Captions word
 - 4-8 scenes. Each scene is 1-3 sentences and has a `mood`: calm, curious, tense, shock, reveal, sad, hopeful.
 - Accuracy: every number, name and date must be in `facts` with a source URL (official/court/major media). "Alleged" for unproven blame. No invented quotes, no invented scenes presented as real.
 
+## Plain English for everyone (owner, 2026-11-02 - overrides anything above that conflicts)
+The viewer has NO tech knowledge and may not be a native English speaker. They just scroll videos. After 50 seconds they must be able to tell a friend what happened.
+- Everyday words only. Never use: malware, ransomware, botnet, worm, server, firewall, domain, cookies, multifactor, encryption, credentials, phishing, exploit, vulnerability, DDoS, macro, database, indictment, laundering, sanctions, allegedly, cyberattack (the validator rejects these). Say it plainly: "a hidden program", "the company's computers", "a fake email", "a second lock, like a code sent to your phone", "charged", "officials say".
+- Short sentences: average 10 words or fewer, none over 16. One idea per sentence.
+- 85-108 words (about 40-50 s with the logo ending). Tell it like a story to a friend: who, what happened first, then, then the surprise, how it ended.
+- Explain every name the first time ("Kaspersky, a security company"). No acronyms without meaning (FBI, U.S. are fine).
+- Every script gets a `theme` (mint, lilac, sky, peach, news, sun, paper) so Shorts in a row never look the same; never use the same theme twice in a row.
+- Use the story-telling visuals: `steps` (numbered steps of how it happened), `face` (a character's feeling), `bigtext` (the key line slams in), and do not repeat one kind more than 3 times per Short.
+
+New visual kinds:
+| kind | shows | fields |
+|---|---|---|
+| `steps` | numbered cards 1-2-3 that appear as each step is said | `items`: list of [icon, short text] (2-4), optional `title` |
+| `face` | one character close-up with an emotion and a speech/thought bubble | `who`, `emotion`: shock / happy / worried / think / angry / sad / talk, optional `text` |
+| `bigtext` | big words slamming in one by one, key word on a red block | `text` (<= 6 words), `hl` (the key word) |
+
 ## Story structure: tell it step by step (owner, 2026-11-01)
 A Short is a tiny story, not a list of facts. A viewer who knows nothing must understand what happened, in order, on the first watch.
 1. Hook: the surprising result, one line.

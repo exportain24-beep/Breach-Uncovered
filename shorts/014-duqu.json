@@ -10,149 +10,112 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] A spy program hid inside the company that hunts spy programs.",
+   "narration": "[serious] A spy program hid inside the company that catches spy programs.",
    "visuals": [
     {
      "at": "A spy program",
      "kind": "object",
      "icon": "bug",
-     "text": "Duqu 2.0"
+     "text": "Spy program"
     },
     {
-     "at": "the company that",
+     "at": "inside the company",
      "kind": "building",
      "type": "office",
-     "name": "Kaspersky Lab"
+     "name": "Spy-catcher company"
     }
    ]
   },
   {
    "id": 2,
    "mood": "curious",
-   "narration": "It started in 2011. A Budapest lab found Duqu, a hidden spy program. It was nearly identical to Stuxnet, the famous sabotage worm.",
+   "narration": "In 2011, experts in Hungary found a spy program. They named it Duqu. It looked like a famous virus that broke Iran's machines.",
    "visuals": [
     {
-     "at": "A Budapest lab",
-     "kind": "people",
-     "who": [
-      "engineer",
-      "student"
-     ],
-     "action": "point",
-     "label": "CrySyS Lab, Hungary"
-    },
-    {
-     "at": "found Duqu a",
-     "kind": "terminal",
-     "lines": [
-      "file: ~DQ...",
-      "name it: Duqu"
+     "at": "experts in Hungary",
+     "kind": "globe",
+     "points": [
+      [
+       "Hungary",
+       47.5,
+       19.0
+      ],
+      [
+       "Iran",
+       33.7,
+       51.7
+      ]
      ]
     },
     {
-     "at": "a hidden spy",
-     "kind": "object",
-     "icon": "camera",
-     "text": "Espionage, not sabotage"
-    },
-    {
-     "at": "nearly identical to",
-     "kind": "split",
-     "left": "Stuxnet, 2010",
-     "right": "Duqu, 2011"
+     "at": "named it Duqu",
+     "kind": "bigtext",
+     "text": "DUQU",
+     "hl": "DUQU"
     }
    ]
   },
   {
    "id": 3,
    "mood": "calm",
-   "narration": "Then Duqu went quiet.",
+   "narration": "Then Duqu went quiet for years.",
    "visuals": [
     {
-     "at": "went quiet",
-     "kind": "timeline",
-     "items": [
-      [
-       "Oct 2011",
-       "Duqu found"
-      ],
-      [
-       "2012",
-       "Goes dark"
-      ],
-      [
-       "Spring 2015",
-       "Returns"
-      ]
-     ]
+     "at": "went quiet for",
+     "kind": "object",
+     "icon": "clock",
+     "text": "Quiet for years"
     }
    ]
   },
   {
    "id": 4,
    "mood": "tense",
-   "narration": "In spring 2015, Kaspersky found intruders in its own network. Its own test tool spotted them.",
+   "narration": "In 2015, the security company Kaspersky checked its own computers. Its own test tool found strangers inside.",
    "visuals": [
     {
-     "at": "intruders in its",
-     "kind": "servers",
-     "state": "alarm",
-     "label": "Kaspersky internal systems"
+     "at": "the security company",
+     "kind": "building",
+     "type": "office",
+     "name": "Kaspersky"
     },
     {
      "at": "Its own test",
      "kind": "office",
      "who": "engineer",
      "action": "shock",
-     "screen": "Anti-APT alert"
+     "screen": "Strangers inside!"
     }
    ]
   },
   {
    "id": 5,
    "mood": "reveal",
-   "narration": "Duqu was back. It lived only in memory, and used a stolen Foxconn certificate, a digital ID.",
+   "narration": "Duqu was back. It hid only in the computer's memory, so it was hard to find.",
    "visuals": [
     {
      "at": "Duqu was back",
-     "kind": "headline",
-     "text": "June 10, 2015: Duqu 2.0"
-    },
-    {
-     "at": "lived only in",
-     "kind": "servers",
-     "state": "dark",
-     "label": "No files on disk"
-    },
-    {
-     "at": "stolen Foxconn certificate",
-     "kind": "object",
-     "icon": "key",
-     "text": "Foxconn certificate"
+     "kind": "bigtext",
+     "text": "DUQU WAS BACK",
+     "hl": "BACK"
     }
    ]
   },
   {
    "id": 6,
    "mood": "shock",
-   "narration": "The same attackers also hit hotels hosting the Iran nuclear talks.",
+   "narration": "The same spies also attacked hotels hosting Iran's nuclear talks.",
    "visuals": [
     {
-     "at": "also hit hotels",
-     "kind": "building",
-     "type": "office",
-     "name": "Talks venue hotel"
-    },
-    {
-     "at": "the Iran nuclear",
+     "at": "attacked hotels hosting",
      "kind": "people",
      "who": [
       "exec",
       "exec",
-      "exec"
+      "agent"
      ],
      "action": "talk",
-     "label": "P5+1 talks, 2014-2015"
+     "label": "Nuclear talks"
     }
    ]
   },
@@ -162,29 +125,10 @@
    "narration": "No country has been officially blamed. The hunters had become the hunted.",
    "visuals": [
     {
-     "at": "officially blamed The",
-     "kind": "dossier",
-     "title": "Duqu 2.0",
-     "rows": [
-      [
-       "Found",
-       "Spring 2015"
-      ],
-      [
-       "Zero-days",
-       "Up to three"
-      ],
-      [
-       "Blamed",
-       "No one officially"
-      ]
-     ]
-    },
-    {
-     "at": "become the hunted",
-     "kind": "lock",
-     "state": "crack",
-     "text": "Security firm breached"
+     "at": "The hunters had",
+     "kind": "split",
+     "left": "Hunters",
+     "right": "Hunted"
     }
    ]
   }
@@ -241,7 +185,7 @@
   "thumb": {
    "text": "SPIES HACKED THE SPY HUNTERS",
    "hl": "SPY HUNTERS",
-   "visual": 7
+   "visual": 3
   },
   "tags": [
    "cybersecurity",
@@ -252,5 +196,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "sky"
 }

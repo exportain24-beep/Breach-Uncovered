@@ -10,170 +10,127 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] A hacker's online bragging exposed a theft from 100 million Americans.",
+   "narration": "[serious] A hacker's bragging online exposed data on 100 million Americans.",
    "visuals": [
     {
-     "at": "A hacker's online",
-     "kind": "phone",
-     "app": "chat",
-     "from": "Anonymous user",
-     "text": "Stolen data posted online"
+     "at": "A hacker's bragging",
+     "kind": "bigtext",
+     "text": "BRAGGING EXPOSED IT",
+     "hl": "BRAGGING"
     },
     {
      "at": "100 million Americans",
      "kind": "counter",
      "value": 100,
      "suffix": "M",
-     "label": "Americans affected"
+     "label": "Americans"
     }
    ]
   },
   {
    "id": 2,
    "mood": "calm",
-   "narration": "Capital One, a giant bank, kept customer data in Amazon's cloud, rented online computers.",
+   "narration": "Capital One is a big American bank. It kept customer data on Amazon's rented computers.",
    "visuals": [
     {
-     "at": "a giant bank",
+     "at": "Capital One is",
      "kind": "building",
      "type": "bank",
      "name": "Capital One"
     },
     {
-     "at": "rented online computers",
+     "at": "Amazon's rented computers",
      "kind": "servers",
      "state": "ok",
-     "label": "Amazon Web Services"
+     "label": "Rented computers"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "In March 2019, someone slipped past a badly set firewall, a digital security gate.",
+   "narration": "In March 2019, someone slipped past a badly set security gate.",
    "visuals": [
     {
-     "at": "In March 2019",
-     "kind": "hacker",
-     "screen": "March 22-23, 2019",
-     "count": 1
-    },
-    {
-     "at": "a badly set",
+     "at": "slipped past a",
      "kind": "lock",
      "state": "open",
-     "text": "Misconfigured firewall"
+     "text": "Badly set gate"
     }
    ]
   },
   {
    "id": 4,
    "mood": "shock",
-   "narration": "Then data on 100 million Americans and 6 million Canadians was copied. That included 140,000 Social Security numbers.",
+   "narration": "Then the data was copied. 100 million Americans and 6 million Canadians. Including 140,000 secret ID numbers.",
    "visuals": [
     {
-     "at": "6 million Canadians",
-     "kind": "globe",
-     "points": [
-      [
-       "Seattle",
-       47.6,
-       -122.3
-      ],
-      [
-       "McLean, Virginia",
-       38.9,
-       -77.2
-      ],
-      [
-       "Toronto",
-       43.7,
-       -79.4
-      ]
-     ]
+     "at": "the data was",
+     "kind": "hacker",
+     "count": 1,
+     "screen": "Copying..."
     },
     {
-     "at": "140,000 Social Security",
-     "kind": "split",
-     "left": "140,000 SSNs",
-     "right": "80,000 bank accounts"
+     "at": "Including 140,000",
+     "kind": "counter",
+     "value": 140000,
+     "label": "ID numbers"
     }
    ]
   },
   {
    "id": 5,
    "mood": "reveal",
-   "narration": "Later, a stranger warned Capital One. Some data was posted on GitHub, a code-sharing site.",
+   "narration": "Later, a stranger warned the bank. Some of the data was posted on a public code website.",
    "visuals": [
     {
      "at": "a stranger warned",
-     "kind": "email",
-     "from": "Outside researcher",
-     "subject": "Tip: data on GitHub",
-     "line": "Leaked files spotted online"
+     "kind": "phone",
+     "app": "email",
+     "from": "A stranger",
+     "text": "Your data is online"
     },
     {
-     "at": "posted on GitHub",
-     "kind": "terminal",
-     "lines": [
-      "repo: public",
-      "files: Capital One data",
-      "reported: July 2019"
-     ]
+     "at": "posted on a",
+     "kind": "object",
+     "icon": "laptop",
+     "text": "Data posted online"
     }
    ]
   },
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "The FBI linked the posts to Paige Thompson, a former Amazon engineer.",
+   "narration": "The FBI tracked the posts to Paige Thompson, a former Amazon worker.",
    "visuals": [
     {
-     "at": "The FBI linked",
-     "kind": "network",
-     "text": "GitHub, Slack, Twitter linked",
-     "total": 3
-    },
-    {
-     "at": "a former Amazon",
-     "kind": "people",
-     "who": [
-      "agent",
-      "agentF"
-     ],
-     "action": "arrest",
-     "label": "Seattle, July 2019"
+     "at": "Paige Thompson",
+     "kind": "dossier",
+     "title": "Paige Thompson",
+     "rows": [
+      [
+       "Before",
+       "Amazon worker"
+      ]
+     ]
     }
    ]
   },
   {
    "id": 7,
    "mood": "hopeful",
-   "narration": "In 2022, a jury convicted her of fraud and hacking. Her bragging was the clue.",
+   "narration": "In 2022, a jury found her guilty. Her own bragging was the clue.",
    "visuals": [
     {
-     "at": "a jury convicted",
-     "kind": "dossier",
-     "title": "Paige Thompson",
-     "rows": [
-      [
-       "Convicted",
-       "June 2022"
-      ],
-      [
-       "Charges",
-       "Wire fraud, hacking"
-      ],
-      [
-       "Sentence",
-       "Time served, probation"
-      ]
-     ]
+     "at": "found her guilty",
+     "kind": "stamp",
+     "text": "GUILTY"
     },
     {
-     "at": "Her bragging was",
-     "kind": "stamp",
-     "text": "CHARGED"
+     "at": "Her own bragging",
+     "kind": "bigtext",
+     "text": "BRAGGING WAS THE CLUE",
+     "hl": "CLUE"
     }
    ]
   }
@@ -224,7 +181,7 @@
   "thumb": {
    "text": "SHE BRAGGED ABOUT 100 MILLION",
    "hl": "100 MILLION",
-   "visual": 11
+   "visual": 1
   },
   "tags": [
    "cybersecurity",
@@ -235,5 +192,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "peach"
 }

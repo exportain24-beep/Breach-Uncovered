@@ -10,187 +10,140 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] One missed check left the internet's locks leaking for two years.",
+   "narration": "[serious] One tiny mistake left the internet's locks leaking for two years.",
    "visuals": [
     {
-     "at": "One missed check",
+     "at": "the internet's locks",
      "kind": "lock",
      "state": "crack",
-     "text": "OpenSSL"
+     "text": "Leaking lock"
     },
     {
-     "at": "leaking for two",
-     "kind": "timeline",
-     "items": [
-      [
-       "Dec 31, 2011",
-       "Bug added"
-      ],
-      [
-       "Apr 7, 2014",
-       "Bug revealed"
-      ]
-     ]
+     "at": "for two years",
+     "kind": "counter",
+     "value": 2,
+     "suffix": " years",
+     "label": "nobody noticed"
     }
    ]
   },
   {
    "id": 2,
    "mood": "calm",
-   "narration": "OpenSSL is free code that keeps websites secure. On New Year's Eve 2011, a programmer made a tiny mistake.",
+   "narration": "Many websites use the same free code to keep your data safe. On New Year's Eve 2011, a programmer made a small mistake.",
    "visuals": [
     {
-     "at": "free code that",
-     "kind": "terminal",
-     "lines": [
-      "openssl version",
-      "OpenSSL 1.0.1"
-     ]
-    },
-    {
-     "at": "New Year's Eve",
+     "at": "the same free",
      "kind": "object",
-     "icon": "calendar",
-     "text": "Dec 31, 2011"
+     "icon": "shield",
+     "text": "Free safety code"
     },
     {
-     "at": "made a tiny",
+     "at": "On New Year's",
      "kind": "office",
      "who": "engineer",
      "action": "type",
-     "screen": "Heartbeat feature"
+     "screen": "Dec 31, 2011"
     }
    ]
   },
   {
    "id": 3,
    "mood": "curious",
-   "narration": "Nobody noticed. In April 2014, Google and Codenomicon researchers found it. Its name: Heartbleed.",
+   "narration": "Nobody saw it. Then, in April 2014, experts at Google and another company found it. They called it Heartbleed.",
    "visuals": [
     {
-     "at": "Nobody noticed In",
-     "kind": "people",
-     "who": [
-      "engineer",
-      "worker"
-     ],
-     "action": "talk",
-     "label": "Reviewed, still missed"
-    },
-    {
-     "at": "Google and Codenomicon",
-     "kind": "headline",
-     "text": "Two teams find it independently"
-    },
-    {
-     "at": "Its name Heartbleed",
-     "kind": "dossier",
-     "title": "Heartbleed",
-     "rows": [
+     "at": "Then in April",
+     "kind": "timeline",
+     "items": [
       [
-       "ID",
-       "CVE-2014-0160"
+       "Dec 2011",
+       "The mistake"
       ],
       [
-       "Software",
-       "OpenSSL 1.0.1"
-      ],
-      [
-       "Fixed in",
-       "1.0.1g"
+       "Apr 2014",
+       "Found: Heartbleed"
       ]
      ]
+    },
+    {
+     "at": "called it Heartbleed",
+     "kind": "bigtext",
+     "text": "HEARTBLEED",
+     "hl": "HEARTBLEED"
     }
    ]
   },
   {
    "id": 4,
    "mood": "shock",
-   "narration": "Servers could be tricked into spilling memory, even secret keys. About 17 percent of secure websites were exposed.",
+   "narration": "The problem? Websites could be tricked into leaking secrets. About 17 out of 100 safe websites were open.",
    "visuals": [
     {
-     "at": "spilling memory even",
-     "kind": "servers",
-     "state": "alarm",
-     "label": "64 KB per leak"
-    },
-    {
-     "at": "even secret keys",
+     "at": "tricked into leaking",
      "kind": "object",
      "icon": "key",
-     "text": "Private keys"
+     "text": "Secrets leak out"
     },
     {
-     "at": "About 17 percent",
+     "at": "About 17 out",
      "kind": "counter",
      "value": 17,
      "suffix": "%",
-     "label": "secure sites exposed"
+     "label": "of safe websites"
     }
    ]
   },
   {
    "id": 5,
    "mood": "sad",
-   "narration": "Then the damage. Canada's tax agency lost data on about 900 people. It shut its online services.",
+   "narration": "Canada's tax office lost data on about 900 people. It closed its website.",
    "visuals": [
     {
-     "at": "Canada's tax agency",
+     "at": "Canada's tax office",
      "kind": "building",
      "type": "government",
-     "name": "Canada Revenue Agency"
+     "name": "Canada tax office"
     },
     {
-     "at": "about 900 people",
-     "kind": "counter",
-     "value": 900,
-     "label": "SINs stolen in 6 hours"
-    },
-    {
-     "at": "shut its online",
-     "kind": "lock",
-     "state": "locked",
-     "text": "Tax site offline"
+     "at": "closed its website",
+     "kind": "stamp",
+     "text": "CLOSED"
     }
    ]
   },
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "Police charged a 19-year-old from London, Ontario.",
+   "narration": "Police caught a 19-year-old from Ontario, Canada.",
    "visuals": [
     {
-     "at": "Police charged a",
-     "kind": "people",
-     "who": [
-      "police",
-      "student"
-     ],
-     "action": "arrest",
-     "label": "RCMP, April 2014"
-    },
-    {
-     "at": "London Ontario",
-     "kind": "stamp",
-     "text": "CHARGED"
+     "at": "Police caught a",
+     "kind": "dossier",
+     "title": "A 19-year-old",
+     "rows": [
+      [
+       "From",
+       "Ontario, Canada"
+      ],
+      [
+       "Status",
+       "Charged"
+      ]
+     ]
     }
    ]
   },
   {
    "id": 7,
    "mood": "hopeful",
-   "narration": "Half a million trusted websites, all at risk from one forgotten check.",
+   "narration": "Half a million websites, all open because of one small mistake.",
    "visuals": [
     {
-     "at": "one forgotten check",
-     "kind": "network",
-     "text": "Patching to 1.0.1g"
-    },
-    {
-     "at": "forgotten check",
-     "kind": "object",
-     "icon": "shield",
-     "text": "500,000 certificates at risk"
+     "at": "one small mistake",
+     "kind": "bigtext",
+     "text": "ONE SMALL MISTAKE",
+     "hl": "SMALL"
     }
    ]
   }
@@ -242,7 +195,7 @@
   "thumb": {
    "text": "ONE BUG, HALF A MILLION SITES",
    "hl": "HALF A MILLION",
-   "visual": 8
+   "visual": 1
   },
   "tags": [
    "cybersecurity",
@@ -253,5 +206,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "lilac"
 }

@@ -304,4 +304,49 @@ function split(ctx, v, t, dur, acc, seed) {
   const kv = pop(t, Math.max(.2, d2 - .2)); if (kv > 0) { ctx.save(); ctx.translate(CX, 760); ctx.scale(kv, kv); ctx.beginPath(); ctx.arc(0, 0, 66, 0, 6.283); ctx.fillStyle = C.yel; ctx.fill(); ctx.strokeStyle = C.ink; ctx.lineWidth = 6; ctx.stroke(); text(ctx, 'VS', 0, 4, 56, C.ink, { w: 900 }); ctx.restore(); }
 }
 
-export const KINDS = { building, office, hacker, servers, people, phone, email, object, network, globe, flow, counter, timeline, lock, terminal, dossier, headline, stamp, split };
+
+// ---------------------------------------------------------------- steps: numbered story steps, each card lands when its first word is spoken
+function steps(ctx, v, t, dur, acc, seed) {
+  const items = (v.items || []).slice(0, 4), n = items.length || 1, gap = Math.min(250, 760 / n), y0 = 790 - (n - 1) * gap / 2;
+  if (v.title) pill(ctx, String(v.title).toUpperCase(), CX, 330, 52, C.yel, C.ink, ease(t / .3));
+  const cols = [C.yel, C.sky, C.orange, C.green];
+  items.forEach((it, i) => {
+    const [ic, tx] = Array.isArray(it) ? it : [null, it], d = Math.min(cue(v, String(tx).split(' ')[0], .25 + i * Math.min(1, dur * .7 / n)), dur * .8), k = pop(t, d); if (k <= 0) return;
+    const y = y0 + i * gap; ctx.save(); ctx.translate(CX + (1 - ease((t - d) / .4)) * 300, y);
+    card(ctx, -440, -gap * .38, 880, gap * .76, C.white, 26);
+    ctx.fillStyle = cols[i % 4]; ctx.strokeStyle = C.ink; ctx.lineWidth = 6; ctx.beginPath(); ctx.arc(-350, 0, 58, 0, 6.283); ctx.fill(); ctx.stroke(); text(ctx, String(i + 1), -350, 4, 70, C.ink, { w: 900 });
+    if (ic) { ctx.save(); ctx.translate(330, 0); ctx.scale(.36, .36); drawIcon(ctx, ic, t); ctx.restore(); }
+    const ls = wrap(ctx, String(tx), ic ? 470 : 640, 50, 800).slice(0, 2); ls.forEach((l, j) => text(ctx, l, -260, (j - (ls.length - 1) / 2) * 56, 50, C.ink, { align: 'left', w: 800 }));
+    ctx.restore();
+    if (i < n - 1 && t > d + .4) { ctx.strokeStyle = fg(v.mood); ctx.lineWidth = 7; ctx.setLineDash([12, 12]); ctx.beginPath(); ctx.moveTo(CX - 350, y + gap * .38); ctx.lineTo(CX - 350, y + gap * .62); ctx.stroke(); ctx.setLineDash([]); }
+  });
+}
+
+// ---------------------------------------------------------------- face: one character close-up showing a feeling, with a speech or thought bubble
+function face(ctx, v, t, dur, acc, seed) {
+  const emo = v.emotion || 'worried', pose = { shock: 'shock', happy: 'cheer', worried: 'think', think: 'think', angry: 'point', sad: 'idle', talk: 'talk' }[emo] || 'talk';
+  const expr = { shock: 'O', happy: 'smile', worried: 'frown', think: 'flat', angry: 'frown', sad: 'frown', talk: 'talk' }[emo];
+  const m = MOOD[v.mood] || MOOD.calm; ctx.save(); ctx.fillStyle = m[1]; ctx.beginPath(); ctx.arc(CX, 1000, 470 * ease(t / .4), 0, 6.283); ctx.fill(); ctx.restore();
+  if (emo === 'shock') { ctx.save(); ctx.strokeStyle = C.ink; ctx.lineWidth = 8; for (let i = 0; i < 10; i++) { const a = i / 10 * 6.283 + .2, r1 = 520 + 30 * Math.sin(t * 12 + i); ctx.beginPath(); ctx.moveTo(CX + Math.cos(a) * r1, 1000 + Math.sin(a) * r1); ctx.lineTo(CX + Math.cos(a) * (r1 + 70), 1000 + Math.sin(a) * (r1 + 70)); ctx.stroke(); } ctx.restore(); }
+  const k = back(t / .5); ctx.save(); ctx.beginPath(); ctx.rect(0, 0, W, 1240); ctx.clip();
+  person(ctx, CX, 1240 + 1500 * .62 + (1 - k) * 300, 1500, v.who || 'worker', pose, t, { seed, expr }); ctx.restore();
+  if (emo === 'think' || emo === 'worried') for (let i = 0; i < 3; i++) { const kk = pop(t, .3 + i * .12); if (kk > 0) { ctx.fillStyle = C.white; ctx.strokeStyle = C.ink; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(CX + 200 + i * 40, 560 - i * 50, (14 + i * 8) * kk, 0, 6.283); ctx.fill(); ctx.stroke(); } }
+  if (v.text) bubble(ctx, v.text, CX, 360, t, Math.min(cue(v, v.text.split(' ')[0], .35), dur * .5), { sz: 54 });
+}
+
+// ---------------------------------------------------------------- bigtext: the key words slam in one by one, the important word highlighted
+function bigtext(ctx, v, t, dur, acc, seed) {
+  const words = String(v.text || '').toUpperCase().split(/\s+/).filter(Boolean).slice(0, 7), hot = new Set(String(v.hl || '').toUpperCase().split(/\s+/));
+  let sz = 170, lines; const lay = () => { ctx.font = `900 ${sz}px Inter, Arial`; lines = []; let cur = []; for (const w of words) { if (cur.length && ctx.measureText([...cur, w].join(' ')).width > 920) { lines.push(cur); cur = [w]; } else cur.push(w); } if (cur.length) lines.push(cur); };
+  lay(); while ((lines.length > 4 || lines.some(l => ctx.measureText(l.join(' ')).width > 920)) && sz > 80) { sz -= 8; lay(); }
+  let idx = 0, y = 760 - (lines.length - 1) * sz * .58; const dk = isDark(v.mood);
+  for (const ln of lines) { ctx.font = `900 ${sz}px Inter, Arial`; let x = CX - ctx.measureText(ln.join(' ')).width / 2;
+    for (const w of ln) { const d = Math.min(cue(v, w, .12 + idx * .22), dur * .75), k = clamp((t - d) / .18), ww = ctx.measureText(w).width, isHot = hot.has(w.replace(/[^A-Z0-9$%]/g, '')) || hot.has(w);
+      if (k > 0) { ctx.save(); ctx.translate(x + ww / 2, y); const sc = 1 + (1 - ease(k)) * .9; ctx.scale(sc, sc); ctx.rotate((1 - ease(k)) * (idx % 2 ? .15 : -.15)); ctx.globalAlpha = k;
+        if (isHot) { ctx.fillStyle = C.red; ctx.fillRect(-ww / 2 - 14, -sz * .55, ww + 28, sz * 1.04); }
+        ctx.fillStyle = isHot ? C.white : (dk ? C.white : C.ink); ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(w, 0, sz * .04); ctx.restore(); }
+      x += ctx.measureText(w + ' ').width; idx++; }
+    y += sz * 1.12; }
+}
+
+export const KINDS = { steps, face, bigtext, building, office, hacker, servers, people, phone, email, object, network, globe, flow, counter, timeline, lock, terminal, dossier, headline, stamp, split };

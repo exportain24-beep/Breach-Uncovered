@@ -10,168 +10,137 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] In 1999, one email virus jammed mail at over 300 organizations.",
+   "narration": "[serious] In 1999, one email jammed the mail at over 300 workplaces.",
    "visuals": [
     {
-     "at": "one email virus",
+     "at": "one email jammed",
      "kind": "object",
-     "icon": "bug",
-     "text": "Melissa"
+     "icon": "envelope",
+     "text": "One email"
     },
     {
-     "at": "over 300 organizations",
+     "at": "over 300 workplaces",
      "kind": "counter",
      "value": 300,
-     "suffix": "+",
-     "label": "organizations jammed"
+     "label": "workplaces jammed"
     }
    ]
   },
   {
    "id": 2,
    "mood": "curious",
-   "narration": "It began with a file posted online. It promised free passwords to adult websites.",
+   "narration": "It started with a file shared online. It promised free passwords to adult websites.",
    "visuals": [
     {
-     "at": "It began with",
-     "kind": "hacker",
-     "screen": "Hijacked AOL account",
-     "count": 1
-    },
-    {
-     "at": "file posted online",
+     "at": "a file shared",
      "kind": "object",
      "icon": "file",
-     "text": "Fake password list"
+     "text": "Free passwords?"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "Open it, and a macro, a hidden Word program, emailed your first 50 contacts.",
+   "narration": "When someone opened it, a hidden program woke up. It sent itself to their first 50 contacts.",
    "visuals": [
     {
-     "at": "a hidden Word",
-     "kind": "terminal",
-     "lines": [
-      "open address book",
-      "take first 50",
-      "send copy"
+     "at": "When someone opened",
+     "kind": "steps",
+     "items": [
+      [
+       "file",
+       "You open the file"
+      ],
+      [
+       "bug",
+       "A hidden program wakes up"
+      ],
+      [
+       "envelope",
+       "It mails 50 friends"
+      ]
      ]
-    },
-    {
-     "at": "your first 50",
-     "kind": "network",
-     "text": "50 new victims each",
-     "total": 50
     }
    ]
   },
   {
    "id": 4,
    "mood": "tense",
-   "narration": "The subject read Important Message From, plus a friend's name. So people opened it.",
+   "narration": "The email said Important Message From, and a friend's name. So people trusted it, and opened it too.",
    "visuals": [
     {
-     "at": "The subject read",
+     "at": "The email said",
      "kind": "email",
-     "from": "A friend",
-     "subject": "Important Message From...",
-     "line": "don't show anyone else"
+     "from": "Your friend",
+     "subject": "Important Message From..."
     },
     {
-     "at": "friend's name So",
-     "kind": "people",
-     "who": [
-      "worker",
-      "workerF"
-     ],
-     "action": "point",
-     "label": "It's from a friend"
+     "at": "So people trusted",
+     "kind": "face",
+     "who": "workerF",
+     "emotion": "happy",
+     "text": "It's from my friend!"
     }
    ]
   },
   {
    "id": 5,
    "mood": "shock",
-   "narration": "About one million email accounts were disrupted. Cleanup cost an estimated 80 million dollars.",
+   "narration": "About one million email accounts were hit. Fixing it cost about 80 million dollars.",
    "visuals": [
     {
      "at": "About one million",
-     "kind": "servers",
-     "state": "dark",
-     "label": "1 million accounts hit"
+     "kind": "counter",
+     "value": 1000000,
+     "label": "email accounts hit"
     },
     {
-     "at": "an estimated 80",
-     "kind": "counter",
-     "value": 80,
-     "prefix": "$",
-     "suffix": "M",
-     "label": "cleanup cost"
+     "at": "Fixing it cost",
+     "kind": "object",
+     "icon": "money",
+     "text": "$80 million to fix"
     }
    ]
   },
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "Then a tip from AOL helped trace it. On April 1, investigators arrested David L. Smith.",
+   "narration": "Then a tip from AOL led police to one man, David Smith.",
    "visuals": [
     {
-     "at": "helped trace it",
+     "at": "a tip from",
      "kind": "building",
-     "type": "fbi",
-     "name": "FBI"
+     "type": "office",
+     "name": "AOL"
     },
     {
-     "at": "On April 1",
-     "kind": "timeline",
-     "items": [
-      [
-       "Mar 26, 1999",
-       "Virus spreads"
-      ],
-      [
-       "Apr 1, 1999",
-       "Smith arrested"
-      ]
-     ]
-    },
-    {
-     "at": "David L Smith",
-     "kind": "dossier",
-     "title": "David L. Smith",
-     "rows": [
-      [
-       "State",
-       "New Jersey"
-      ],
-      [
-       "Plea",
-       "Guilty, Dec 1999"
-      ]
-     ]
+     "at": "one man David",
+     "kind": "people",
+     "who": [
+      "police",
+      "crook"
+     ],
+     "action": "arrest",
+     "label": "David Smith"
     }
    ]
   },
   {
    "id": 7,
    "mood": "sad",
-   "narration": "He got 20 months in federal prison. The real weapon was a friend's name.",
+   "narration": "He went to prison for 20 months. The real trick was a friend's name.",
    "visuals": [
     {
-     "at": "He got 20",
-     "kind": "counter",
-     "value": 20,
-     "suffix": " months",
-     "label": "federal prison, 2002"
+     "at": "for 20 months",
+     "kind": "stamp",
+     "text": "20 MONTHS"
     },
     {
-     "at": "The real weapon",
-     "kind": "split",
-     "left": "Looks like: a friend",
-     "right": "Really: Melissa virus"
+     "at": "The real trick",
+     "kind": "bigtext",
+     "text": "THE TRICK: A FRIEND'S NAME",
+     "hl": "FRIEND'S"
     }
    ]
   }
@@ -227,7 +196,7 @@
   "thumb": {
    "text": "ONE EMAIL JAMMED 300 ORGANIZATIONS",
    "hl": "300 ORGANIZATIONS",
-   "visual": 5
+   "visual": 1
   },
   "tags": [
    "cybersecurity",
@@ -238,5 +207,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "peach"
 }

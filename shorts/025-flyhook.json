@@ -10,152 +10,129 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] The FBI built a fake company to catch two hackers.",
+   "narration": "[serious] The FBI built a fake company just to catch two hackers.",
    "visuals": [
     {
-     "at": "built a fake",
+     "at": "a fake company",
      "kind": "building",
      "type": "office",
-     "name": "Invita Security"
+     "name": "Fake company"
     },
     {
-     "at": "to catch two",
-     "kind": "hacker",
-     "screen": "Job offer: Seattle",
-     "count": 2
+     "at": "catch two hackers",
+     "kind": "bigtext",
+     "text": "A TRAP FOR TWO HACKERS",
+     "hl": "TRAP"
     }
    ]
   },
   {
    "id": 2,
    "mood": "calm",
-   "narration": "Two Russian hackers, Alexey Ivanov and Vasiliy Gorshkov, had hit dozens of American computers.",
+   "narration": "Two Russian hackers, Alexey Ivanov and Vasiliy Gorshkov, had broken into dozens of American computers.",
    "visuals": [
     {
-     "at": "Alexey Ivanov and",
+     "at": "Two Russian hackers",
      "kind": "globe",
      "points": [
       [
-       "Chelyabinsk",
+       "Russia",
        55.2,
        61.4
       ],
       [
-       "Seattle",
+       "American",
        47.6,
        -122.3
-      ],
-      [
-       "New Jersey",
-       40.9,
-       -74.1
       ]
      ]
     },
     {
      "at": "dozens of American",
      "kind": "network",
-     "text": "Dozens of U.S. computers"
+     "text": "dozens of computers"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "First they stole credit card numbers. Then they demanded money to keep quiet.",
+   "narration": "First, they stole credit card numbers. Then they asked for money to stay quiet.",
    "visuals": [
     {
-     "at": "credit card numbers",
+     "at": "stole credit card",
      "kind": "object",
      "icon": "card",
-     "text": "3,500 cards, one victim"
+     "text": "Stolen cards"
     },
     {
-     "at": "demanded money to",
-     "kind": "email",
-     "from": "Hacker group",
-     "subject": "Extortion demand",
-     "line": "Pay $6,000 or data leaks"
-    },
-    {
-     "at": "to keep quiet",
-     "kind": "flow",
-     "nodes": [
-      "New Jersey firm",
-      "Moscow bank"
-     ],
-     "amount": "$5,000"
+     "at": "asked for money",
+     "kind": "object",
+     "icon": "money",
+     "text": "Pay to stay quiet"
     }
    ]
   },
   {
    "id": 4,
    "mood": "curious",
-   "narration": "So agents created Invita, a fake Seattle security firm, and offered job interviews.",
+   "narration": "So FBI agents made a fake Seattle company called Invita. They invited the hackers to job interviews.",
    "visuals": [
     {
-     "at": "agents created Invita",
-     "kind": "people",
-     "who": [
-      "agent",
-      "agentF"
-     ],
-     "action": "talk",
-     "label": "Undercover recruiters"
+     "at": "a fake Seattle",
+     "kind": "building",
+     "type": "office",
+     "name": "Invita, Seattle"
     },
     {
-     "at": "offered job interviews",
-     "kind": "object",
-     "icon": "plane",
-     "text": "Chelyabinsk to Seattle"
+     "at": "invited the hackers",
+     "kind": "office",
+     "who": "worker",
+     "action": "phone",
+     "screen": "Job interview?"
     }
    ]
   },
   {
    "id": 5,
    "mood": "reveal",
-   "narration": "In November 2000, both men arrived and bragged. They were arrested on the spot.",
+   "narration": "In November 2000, both men came and showed off. They were arrested on the spot.",
    "visuals": [
     {
-     "at": "In November 2000",
-     "kind": "office",
-     "who": "hacker",
-     "action": "type",
-     "screen": "Demo for recruiters"
+     "at": "both men came",
+     "kind": "people",
+     "who": [
+      "hacker",
+      "hacker"
+     ],
+     "action": "talk",
+     "label": "Showing off"
     },
     {
      "at": "arrested on the",
-     "kind": "people",
-     "who": [
-      "agent",
-      "police",
-      "hacker"
-     ],
-     "action": "arrest",
-     "label": "Seattle, Nov 10, 2000"
+     "kind": "stamp",
+     "text": "ARRESTED"
     }
    ]
   },
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "The twist? Hidden software recorded every key they typed. Agents used those passwords to copy files from Russia.",
+   "narration": "The twist? A hidden tool recorded every key they typed. That let agents copy their files from Russia.",
    "visuals": [
     {
      "at": "recorded every key",
      "kind": "terminal",
      "lines": [
-      "keystroke log: on",
-      "user: ****",
-      "password: captured"
+      "typing...",
+      "password saved"
      ]
     },
     {
-     "at": "copy files from",
-     "kind": "counter",
-     "value": 250,
-     "suffix": " GB",
-     "label": "data copied"
+     "at": "copy their files",
+     "kind": "object",
+     "icon": "file",
+     "text": "Files copied"
     }
    ]
   },
@@ -165,33 +142,15 @@
    "narration": "Russia charged an FBI agent with hacking. Both hackers went to prison. The job interview was the trap.",
    "visuals": [
     {
-     "at": "charged an FBI",
+     "at": "Russia charged an",
      "kind": "headline",
-     "text": "FSB charges FBI agent Schuler"
-    },
-    {
-     "at": "Both hackers went",
-     "kind": "dossier",
-     "title": "Ivanov and Gorshkov",
-     "rows": [
-      [
-       "Arrested",
-       "Nov 10, 2000"
-      ],
-      [
-       "Ivanov",
-       "48 months"
-      ],
-      [
-       "Gorshkov",
-       "3 years"
-      ]
-     ]
+     "text": "Russia charges FBI agent"
     },
     {
      "at": "The job interview",
-     "kind": "stamp",
-     "text": "CHARGED"
+     "kind": "bigtext",
+     "text": "THE JOB WAS THE TRAP",
+     "hl": "TRAP"
     }
    ]
   }
@@ -242,7 +201,7 @@
   "thumb": {
    "text": "THE JOB INTERVIEW WAS A TRAP",
    "hl": "TRAP",
-   "visual": 10
+   "visual": 1
   },
   "tags": [
    "cybersecurity",
@@ -253,5 +212,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "paper"
 }

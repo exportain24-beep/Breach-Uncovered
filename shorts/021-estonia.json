@@ -10,57 +10,84 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] In 2007, moving one statue set off cyberattacks on a country.",
+   "narration": "[serious] In 2007, moving one statue started attacks on a whole country.",
    "visuals": [
     {
      "at": "moving one statue",
-     "kind": "headline",
-     "text": "Bronze Soldier moved, Tallinn"
-    },
-    {
-     "at": "cyberattacks on a",
-     "kind": "network",
-     "text": "Estonia under attack"
+     "kind": "bigtext",
+     "text": "ONE STATUE MOVED",
+     "hl": "STATUE"
     }
    ]
   },
   {
    "id": 2,
    "mood": "tense",
-   "narration": "It was April 2007. Estonia moved a Soviet war memorial from central Tallinn. Riots broke out.",
+   "narration": "The country was Estonia. In April 2007, it moved an old Soviet war statue in its capital. Angry crowds filled the streets.",
    "visuals": [
     {
-     "at": "April 2007 Estonia",
-     "kind": "object",
-     "icon": "calendar",
-     "text": "April 2007"
+     "at": "The country was",
+     "kind": "globe",
+     "points": [
+      [
+       "Estonia",
+       58.6,
+       25.0
+      ]
+     ]
     },
     {
-     "at": "a Soviet war",
-     "kind": "split",
-     "left": "Estonia: symbol of occupation",
-     "right": "Russia: an insult"
-    },
-    {
-     "at": "Riots broke out",
+     "at": "Angry crowds filled",
      "kind": "people",
      "who": [
-      "police",
+      "student",
       "worker",
-      "student"
+      "workerF",
+      "crook"
      ],
      "action": "shock",
-     "label": "Riots in Tallinn"
+     "label": "Angry crowds"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "On April 27, the attacks began. Floods of fake traffic jammed websites. That's DDoS, a traffic jam attack.",
+   "narration": "On April 27, the attacks began. Huge floods of fake visitors jammed websites.",
    "visuals": [
     {
-     "at": "On April 27",
+     "at": "the attacks began",
+     "kind": "object",
+     "icon": "calendar",
+     "text": "April 27, 2007"
+    },
+    {
+     "at": "Huge floods of",
+     "kind": "network",
+     "text": "fake visitors"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "shock",
+   "narration": "Government, bank and news websites went down.",
+   "visuals": [
+    {
+     "at": "Government bank and",
+     "kind": "servers",
+     "state": "dark",
+     "label": "Websites down"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "tense",
+   "narration": "A second wave hit around May 9, Russia's Victory Day. In total, it lasted 22 days.",
+   "visuals": [
+    {
+     "at": "A second wave",
      "kind": "timeline",
      "items": [
       [
@@ -68,139 +95,59 @@
        "Attacks begin"
       ],
       [
-       "May 3",
-       "First peak"
+       "May 9",
+       "Second wave"
       ],
       [
-       "May 8-9",
-       "Victory Day wave"
+       "22 days",
+       "In total"
       ]
      ]
-    },
-    {
-     "at": "Floods of fake",
-     "kind": "servers",
-     "state": "alarm",
-     "label": "Fake traffic flood"
-    },
-    {
-     "at": "a traffic jam",
-     "kind": "terminal",
-     "lines": [
-      "request",
-      "request",
-      "request",
-      "request"
-     ]
-    }
-   ]
-  },
-  {
-   "id": 4,
-   "mood": "shock",
-   "narration": "Government, bank and newspaper websites went down.",
-   "visuals": [
-    {
-     "at": "Government bank and",
-     "kind": "building",
-     "type": "government",
-     "name": "Estonian Government"
-    },
-    {
-     "at": "newspaper websites went",
-     "kind": "office",
-     "who": "banker",
-     "action": "shock",
-     "screen": "Site unavailable"
-    }
-   ]
-  },
-  {
-   "id": 5,
-   "mood": "tense",
-   "narration": "A second wave hit around May 9, Russia's Victory Day. The attacks lasted 22 days.",
-   "visuals": [
-    {
-     "at": "around May 9",
-     "kind": "object",
-     "icon": "calendar",
-     "text": "May 9: Victory Day"
-    },
-    {
-     "at": "lasted 22 days",
-     "kind": "counter",
-     "value": 22,
-     "suffix": " days",
-     "label": "of attacks"
     }
    ]
   },
   {
    "id": 6,
    "mood": "reveal",
-   "narration": "Estonia's foreign minister said much of it came from Russia. Moscow denied it. Proof never came.",
+   "narration": "Estonia said much of it came from Russia. Russia said no. Nothing was proven.",
    "visuals": [
     {
-     "at": "Estonia's foreign minister",
-     "kind": "dossier",
-     "title": "Urmas Paet",
-     "rows": [
-      [
-       "Role",
-       "Foreign minister"
-      ],
-      [
-       "Claim",
-       "Kremlin involved"
-      ]
-     ]
-    },
-    {
-     "at": "came from Russia",
-     "kind": "flow",
-     "nodes": [
-      "Servers in Russia",
-      "Estonian websites"
+     "at": "Estonia said much",
+     "kind": "people",
+     "who": [
+      "agent",
+      "exec"
      ],
-     "amount": "Junk traffic"
-    },
-    {
-     "at": "Moscow denied it",
-     "kind": "split",
-     "left": "Tallinn: Russia did it",
-     "right": "Moscow: substantiate it"
+     "action": "talk",
+     "label": "Not proven"
     }
    ]
   },
   {
    "id": 7,
    "mood": "sad",
-   "narration": "Only one person was fined, a 20-year-old in Estonia. A whole country learned war can go online.",
+   "narration": "Only one person was fined, a 20-year-old in Estonia. A whole country learned war can happen online.",
    "visuals": [
     {
      "at": "Only one person",
      "kind": "dossier",
-     "title": "Dmitri Galushkevich",
+     "title": "One person fined",
      "rows": [
       [
        "Age",
        "20"
       ],
       [
-       "Fine",
-       "About $1,620"
-      ],
-      [
-       "Target",
-       "Ruling party website"
+       "Country",
+       "Estonia"
       ]
      ]
     },
     {
-     "at": "war can go",
-     "kind": "hacker",
-     "screen": "Estonia 2007",
-     "count": 3
+     "at": "learned war can",
+     "kind": "bigtext",
+     "text": "WAR CAN HAPPEN ONLINE",
+     "hl": "ONLINE"
     }
    ]
   }
@@ -251,7 +198,7 @@
   "thumb": {
    "text": "ONE STATUE, A NATION ATTACKED",
    "hl": "ONE STATUE",
-   "visual": 6
+   "visual": 9
   },
   "tags": [
    "cybersecurity",
@@ -262,5 +209,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "sky"
 }

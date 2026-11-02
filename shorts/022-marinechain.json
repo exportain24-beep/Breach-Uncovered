@@ -10,147 +10,107 @@
   {
    "id": 1,
    "mood": "shock",
-   "narration": "[serious] U.S. prosecutors say North Korean hackers secretly ran a crypto shipping startup.",
+   "narration": "[serious] Officials say North Korean hackers secretly ran a shipping business online.",
    "visuals": [
     {
-     "at": "North Korean hackers",
-     "kind": "hacker",
-     "screen": "RGB unit",
-     "count": 3
-    },
-    {
-     "at": "crypto shipping startup",
+     "at": "a shipping business",
      "kind": "object",
      "icon": "ship",
-     "text": "Marine Chain Platform"
+     "text": "Ship business?"
     }
    ]
   },
   {
    "id": 2,
    "mood": "curious",
-   "narration": "It was called Marine Chain. In 2017 and 2018, it offered tokens, digital shares, in cargo ships.",
+   "narration": "It was called Marine Chain. In 2017 and 2018, it sold digital shares of real cargo ships.",
    "visuals": [
     {
-     "at": "Marine Chain In",
-     "kind": "headline",
-     "text": "New blockchain shipping platform"
+     "at": "called Marine Chain",
+     "kind": "building",
+     "type": "office",
+     "name": "Marine Chain"
     },
     {
-     "at": "In 2017 and",
-     "kind": "timeline",
-     "items": [
-      [
-       "2017",
-       "Platform marketed"
-      ],
-      [
-       "2018",
-       "Token and coin sale"
-      ]
-     ]
-    },
-    {
-     "at": "tokens digital shares",
+     "at": "sold digital shares",
      "kind": "object",
-     "icon": "bitcoin",
-     "text": "Marine Chain Token"
+     "icon": "ship",
+     "text": "Digital ship shares"
     }
    ]
   },
   {
    "id": 3,
    "mood": "tense",
-   "narration": "The pitch: own a slice of a ship. It even sought approval to trade in Hong Kong.",
+   "narration": "The idea: buy a small piece of a ship. It even tried to sell on a market in Hong Kong.",
    "visuals": [
     {
-     "at": "a slice of",
-     "kind": "split",
-     "left": "One cargo ship",
-     "right": "Many token owners"
+     "at": "The idea buy",
+     "kind": "steps",
+     "items": [
+      [
+       "money",
+       "Pay a little"
+      ],
+      [
+       "ship",
+       "Own a piece of a ship"
+      ]
+     ]
     },
     {
-     "at": "approval to trade",
-     "kind": "building",
-     "type": "government",
-     "name": "Hong Kong regulator"
+     "at": "in Hong Kong",
+     "kind": "globe",
+     "points": [
+      [
+       "Hong Kong",
+       22.3,
+       114.2
+      ]
+     ]
     }
    ]
   },
   {
    "id": 4,
    "mood": "reveal",
-   "narration": "But the indictment alleges North Korea secretly controlled it. The goal: raise money and dodge U.S. sanctions.",
+   "narration": "But America says North Korea secretly controlled it. The goal was to get money around American bans.",
    "visuals": [
     {
-     "at": "secretly controlled it",
-     "kind": "flow",
-     "nodes": [
-      "Investors",
-      "Marine Chain",
-      "North Korea"
-     ],
-     "amount": "Hidden funds"
-    },
-    {
-     "at": "dodge U.S sanctions",
-     "kind": "lock",
-     "state": "crack",
-     "text": "Sanctions evasion alleged"
+     "at": "But America says",
+     "kind": "split",
+     "left": "Ship business",
+     "right": "North Korea"
     }
    ]
   },
   {
    "id": 5,
    "mood": "shock",
-   "narration": "In February 2021, the U.S. charged three military hackers: Jon Chang Hyok, Kim Il and Park Jin Hyok.",
+   "narration": "In February 2021, America charged three army hackers, including Park Jin Hyok.",
    "visuals": [
     {
-     "at": "In February 2021",
-     "kind": "object",
-     "icon": "calendar",
-     "text": "Unsealed Feb 17, 2021"
-    },
-    {
-     "at": "the U.S charged",
+     "at": "America charged three",
      "kind": "stamp",
      "text": "CHARGED"
     },
     {
-     "at": "Jon Chang Hyok",
+     "at": "including Park Jin",
      "kind": "dossier",
-     "title": "Jon Chang Hyok",
+     "title": "Park Jin Hyok",
      "rows": [
       [
-       "Age",
-       "31"
-      ],
-      [
-       "Unit",
-       "Reconnaissance General Bureau"
-      ],
-      [
-       "Status",
-       "Charged"
+       "Charged",
+       "Feb 2021"
       ]
      ]
-    },
-    {
-     "at": "Kim Il and",
-     "kind": "people",
-     "who": [
-      "hacker",
-      "hacker"
-     ],
-     "action": "point",
-     "label": "Kim Il 27, Park 36"
     }
    ]
   },
   {
    "id": 6,
    "mood": "sad",
-   "narration": "Prosecutors tied them to schemes to steal over 1.3 billion dollars. Allegedly, the ships were a cover.",
+   "narration": "Officials tied them to plans to steal over 1.3 billion dollars. The ships, they say, were a cover.",
    "visuals": [
     {
      "at": "over 1.3 billion",
@@ -158,34 +118,13 @@
      "value": 1.3,
      "prefix": "$",
      "suffix": "B",
-     "label": "alleged theft schemes"
+     "label": "they planned to steal"
     },
     {
-     "at": "1.3 billion dollars",
-     "kind": "building",
-     "type": "fbi",
-     "name": "U.S. Justice Department"
-    },
-    {
-     "at": "Allegedly the ships",
-     "kind": "globe",
-     "points": [
-      [
-       "Pyongyang",
-       39.0,
-       125.8
-      ],
-      [
-       "Hong Kong",
-       22.3,
-       114.2
-      ],
-      [
-       "Los Angeles",
-       34.1,
-       -118.2
-      ]
-     ]
+     "at": "The ships they",
+     "kind": "bigtext",
+     "text": "THE SHIPS WERE A COVER",
+     "hl": "COVER"
     }
    ]
   }
@@ -235,7 +174,7 @@
   "thumb": {
    "text": "SPIES ALLEGEDLY SOLD CRYPTO SHIPS",
    "hl": "CRYPTO SHIPS",
-   "visual": 1
+   "visual": 8
   },
   "tags": [
    "cybersecurity",
@@ -246,5 +185,6 @@
    "tech history"
   ]
  },
- "story_style": "step-by-step v2 (2026-11-01)"
+ "story_style": "plain-v3 (2026-11-02)",
+ "theme": "mint"
 }
