@@ -1,66 +1,36 @@
-building shorts/105-alert_apps.json
+building shorts/015-lockbit.json
+theme: mint
 timing: ElevenLabs voice
-short: 48.0s, 7 scenes, 18 visuals
-thumbnail: work/short-105/thumb.png
-  frame 0/1440 (0s)
-  frame 60/1440 (7s)
-  frame 120/1440 (14s)
-  frame 180/1440 (22s)
-  frame 240/1440 (29s)
-  frame 300/1440 (37s)
-  frame 360/1440 (48s)
-  frame 420/1440 (57s)
-  frame 480/1440 (64s)
-  frame 540/1440 (71s)
-  frame 600/1440 (79s)
-  frame 660/1440 (86s)
-  frame 720/1440 (93s)
-  frame 780/1440 (100s)
-  frame 840/1440 (107s)
-  frame 900/1440 (114s)
-  frame 960/1440 (121s)
-  frame 1020/1440 (129s)
-  frame 1080/1440 (136s)
-  frame 1140/1440 (149s)
-  frame 1200/1440 (156s)
-  frame 1260/1440 (163s)
-  frame 1320/1440 (171s)
-  frame 1380/1440 (178s)
-rendered out/short-105.mp4 10.4 MB, 48.0s in 186s
-YouTube Short OK EiLubdbvi-g
+short: 51.2s, 7 scenes, 12 visuals
+thumbnail: work/short-015/thumb.png
+  frame 0/1536 (0s)
+  frame 60/1536 (8s)
+  frame 120/1536 (16s)
+  frame 180/1536 (24s)
+  frame 240/1536 (32s)
+  frame 300/1536 (40s)
+  frame 360/1536 (48s)
+  frame 420/1536 (68s)
+  frame 480/1536 (92s)
+  frame 540/1536 (113s)
+  frame 600/1536 (121s)
+  frame 660/1536 (130s)
+  frame 720/1536 (138s)
+  frame 780/1536 (148s)
+  frame 840/1536 (160s)
+  frame 900/1536 (168s)
+  frame 960/1536 (176s)
+  frame 1020/1536 (184s)
+  frame 1080/1536 (192s)
+  frame 1140/1536 (200s)
+  frame 1200/1536 (208s)
+  frame 1260/1536 (217s)
+  frame 1320/1536 (225s)
+  frame 1380/1536 (233s)
+  frame 1440/1536 (241s)
+  frame 1500/1536 (250s)
+rendered out/short-015.mp4 14.0 MB, 51.2s in 256s
+YouTube Short OK oUEytH4ZYbU
 YouTube thumbnail set
-Facebook Reel OK 1426004619681489 scheduled for 2026-11-02T13:00:00+00:00
-short 105 published
-building shorts/006-kejv.json
-timing: ElevenLabs voice
-short: 46.1s, 7 scenes, 14 visuals
-thumbnail: work/short-006/thumb.png
-  frame 0/1383 (0s)
-  frame 60/1383 (8s)
-  frame 120/1383 (28s)
-  frame 180/1383 (39s)
-  frame 240/1383 (46s)
-  frame 300/1383 (56s)
-  frame 360/1383 (68s)
-  frame 420/1383 (78s)
-  frame 480/1383 (88s)
-  frame 540/1383 (95s)
-  frame 600/1383 (103s)
-  frame 660/1383 (110s)
-  frame 720/1383 (117s)
-  frame 780/1383 (124s)
-  frame 840/1383 (132s)
-  frame 900/1383 (139s)
-  frame 960/1383 (149s)
-  frame 1020/1383 (160s)
-  frame 1080/1383 (168s)
-  frame 1140/1383 (175s)
-  frame 1200/1383 (182s)
-  frame 1260/1383 (192s)
-  frame 1320/1383 (209s)
-  frame 1380/1383 (226s)
-rendered out/short-006.mp4 10.0 MB, 46.1s in 227s
-YouTube Short OK kZECFy5SjHs
-YouTube thumbnail set
-Facebook Reel OK 29695166120102132 scheduled for 2026-11-02T17:00:00+00:00
-short 006 published
+Facebook Reel OK 1437721215215918 published now
+short 015 published
