@@ -56,4 +56,4 @@ jobs:
           if head -n1 tools/.short-now 2>/dev/null | grep -q preview && [ "${{ github.event_name }}" = "push" ]; then FILES="data/voice previews"; else FILES="data/shorts_state.json data/voice reports/shorts-run.log"; fi
           for f in $FILES; do [ -e "$f" ] && git add "$f"; done; git status --short | head -20
           git commit -qm "Shorts state [skip ci]" || true
-          for i in 1 2 3; do git pull --rebase -X theirs -q && git push -q && break; git rebase --abort 2>/dev/null; sleep 5; done   # never lose the publish record to a push race
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs -q && git push -q && break; git rebase --abort 2>/dev/null; sleep 5; done   # never lose the publish record to a push race
