@@ -1327,5 +1327,17 @@
   "origin": "daily_trending",
   "note": "Daily trending 2026-11-01 (settlement announced 2026-10-29)",
   "status": "pending"
+ },
+ {
+  "episode": 105,
+  "key": "alert_apps",
+  "title": "Air Alert hack — the phone apps that faked nuclear danger in Ukraine and Russia",
+  "year": 2026,
+  "category": "state",
+  "actor": "unknown (Hitcore claim unverified)",
+  "sources_from_user_file": [],
+  "origin": "daily_trending",
+  "note": "Daily trending 2026-11-02 (hacks Nov 1-2, 2026)",
+  "status": "pending"
  }
 ]

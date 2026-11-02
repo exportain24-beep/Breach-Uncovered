@@ -1,0 +1,295 @@
+{
+ "episode": 105,
+ "key": "alert_apps",
+ "title": "Air Alert hack — the phone apps that faked nuclear danger in Ukraine and Russia",
+ "year": 2026,
+ "category": "state",
+ "pillar": "cyber",
+ "slot_type": "trending",
+ "priority": true,
+ "needs_review": false,
+ "review_note": "",
+ "hooks": [
+  "A phone app warned Kyiv of nuclear radiation. None existed.",
+  "Two countries at war got fake nuclear alerts in one weekend.",
+  "Ukraine's air raid app was hacked. Then Russia's was too.",
+  "'Don't worry, the Oreshnik is coming,' said a hacked alert app.",
+  "The app people trust for real missiles started lying."
+ ],
+ "hook_type": "impossible_fact",
+ "score": {
+  "audience": 18,
+  "story": 18,
+  "hook": 14,
+  "interest": 15,
+  "share": 9,
+  "visual": 9,
+  "reliability": 9,
+  "total": 92
+ },
+ "scenes": [
+  {
+   "id": 1,
+   "mood": "shock",
+   "narration": "[serious] A phone app warned Kyiv of nuclear radiation. None existed. It was Ukraine's official air raid app.",
+   "visuals": [
+    {
+     "at": "A phone app warned Kyiv",
+     "kind": "phone",
+     "app": "alert",
+     "from": "Air Alert",
+     "text": "Radiation danger: Kyiv"
+    },
+    {
+     "at": "None existed",
+     "kind": "stamp",
+     "text": "FAKE"
+    },
+    {
+     "at": "official air raid app",
+     "kind": "building",
+     "type": "government",
+     "name": "Air Alert"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "mood": "calm",
+   "narration": "Late Sunday, November 1, phones lit up.",
+   "visuals": [
+    {
+     "at": "Late Sunday, November 1",
+     "kind": "timeline",
+     "items": [
+      [
+       "Nov 1",
+       "Air Alert hacked"
+      ],
+      [
+       "Nov 2",
+       "Russia's app hacked"
+      ]
+     ]
+    },
+    {
+     "at": "phones lit up",
+     "kind": "office",
+     "who": "workerF",
+     "action": "shock",
+     "screen": "Air Alert"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "mood": "tense",
+   "narration": "First, radiation. Then a chemical threat. Then street fighting. One even said, the Oreshnik is coming. A Russian missile.",
+   "visuals": [
+    {
+     "at": "First, radiation",
+     "kind": "object",
+     "icon": "skull",
+     "text": "Radiation"
+    },
+    {
+     "at": "Then a chemical threat",
+     "kind": "headline",
+     "text": "Chemical threat"
+    },
+    {
+     "at": "the Oreshnik is coming",
+     "kind": "phone",
+     "app": "chat",
+     "from": "Air Alert",
+     "text": "The Oreshnik is coming!"
+    },
+    {
+     "at": "A Russian missile",
+     "kind": "dossier",
+     "title": "Oreshnik",
+     "rows": [
+      [
+       "Type",
+       "Russian missile"
+      ],
+      [
+       "This alert",
+       "Fake"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "mood": "calm",
+   "narration": "The Air Force said: there is no radiation threat. The app was paused.",
+   "visuals": [
+    {
+     "at": "The Air Force said",
+     "kind": "split",
+     "left": "App: radiation",
+     "right": "Air Force: no threat"
+    },
+    {
+     "at": "The app was paused",
+     "kind": "lock",
+     "state": "locked",
+     "text": "Alerts paused"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "mood": "reveal",
+   "narration": "But here's the strange part. By Monday, Russia said its own emergency app was hacked too. Fake nuclear warheads, launched at every region.",
+   "visuals": [
+    {
+     "at": "here's the strange part",
+     "kind": "stamp",
+     "text": "HACKED"
+    },
+    {
+     "at": "its own emergency app",
+     "kind": "building",
+     "type": "government",
+     "name": "Emergency Ministry"
+    },
+    {
+     "at": "Fake nuclear warheads",
+     "kind": "counter",
+     "value": 0,
+     "label": "real warheads launched"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "mood": "curious",
+   "narration": "Who did it? One post named Hitcore. Nothing is proven.",
+   "visuals": [
+    {
+     "at": "Who did it",
+     "kind": "hacker",
+     "screen": "???",
+     "count": 2
+    },
+    {
+     "at": "One post named Hitcore",
+     "kind": "dossier",
+     "title": "Hitcore",
+     "rows": [
+      [
+       "Claim",
+       "Unverified"
+      ],
+      [
+       "Proof",
+       "None yet"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "mood": "reveal",
+   "narration": "Two countries at war. Both scared by a phone app.",
+   "visuals": [
+    {
+     "at": "Two countries at war",
+     "kind": "globe",
+     "points": [
+      [
+       "Kyiv",
+       50.45,
+       30.52
+      ],
+      [
+       "Moscow",
+       55.75,
+       37.62
+      ]
+     ]
+    },
+    {
+     "at": "Both scared by a phone app",
+     "kind": "phone",
+     "app": "alert",
+     "from": "Emergency alert",
+     "text": "This alert was fake"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Ukraine's emergency alert app was targeted by a cyberattack late Sunday Nov 1, 2026; residents got messages of high nuclear radiation danger in Kyiv, a chemical threat and public disturbances; the app was temporarily suspended and restored overnight",
+   "source": "https://www.news4jax.com/news/world/2026/11/02/ukraine-and-russia-both-report-cyberattacks-on-emergency-apps/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The app is Air Alert, an officially supported app made with the Digital Transformation Ministry and Ajax Systems; warnings included nuclear, chemical and street fighting threats; the Air Force said 'There is no radiation threat!' and that the app was likely compromised by the enemy",
+   "source": "https://kyivindependent.com/ukraines-air-raid-alert-system-hacked-air-force-says-as-false-nuclear-chemical-warnings-sound/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "One message (in Russian) read: 'There will be a nuclear alert across all of Ukraine right now! Don't worry, the Oreshnik is coming!'",
+   "source": "https://meduza.io/en/news/2026/11/02/emergency-alert-apps-hacked-in-russia-and-ukraine-sending-false-warnings-of-nuclear-threats",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Oreshnik is a Russian missile; Air Alert users got a fake alert about an alleged Oreshnik launch",
+   "source": "https://militarnyi.com/en/news/russia-s-emergency-services-app-hit-by-cyberattack-following-hack-of-ukraine-s-air-alert-app/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "Russian officials said on Monday Nov 2 hackers sent fake alerts via the Emergency Ministry's mobile app; the ministry did not name the attackers and said the wider public alert system worked normally",
+   "source": "https://www.news4jax.com/news/world/2026/11/02/ukraine-and-russia-both-report-cyberattacks-on-emergency-apps/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "The Russian fake alerts claimed nuclear warheads had been launched toward all Russian regions; MChS app breached on the night of November 2",
+   "source": "https://militarnyi.com/en/news/russia-s-emergency-services-app-hit-by-cyberattack-following-hack-of-ukraine-s-air-alert-app/",
+   "confidence": "confirmed"
+  },
+  {
+   "claim": "One false post mentioned the hacking group Hitcore; Russian Telegram channel Mash said Hitcore claimed responsibility; AP could not verify it",
+   "source": "https://www.news4jax.com/news/world/2026/11/02/ukraine-and-russia-both-report-cyberattacks-on-emergency-apps/",
+   "confidence": "alleged"
+  }
+ ],
+ "sources": [
+  "https://www.news4jax.com/news/world/2026/11/02/ukraine-and-russia-both-report-cyberattacks-on-emergency-apps/",
+  "https://kyivindependent.com/ukraines-air-raid-alert-system-hacked-air-force-says-as-false-nuclear-chemical-warnings-sound/",
+  "https://meduza.io/en/news/2026/11/02/emergency-alert-apps-hacked-in-russia-and-ukraine-sending-false-warnings-of-nuclear-threats",
+  "https://militarnyi.com/en/news/russia-s-emergency-services-app-hit-by-cyberattack-following-hack-of-ukraine-s-air-alert-app/"
+ ],
+ "seo": {
+  "title": "Air Alert Hack: Fake Nuclear Warnings Hit Ukraine, Then Russia",
+  "description": "Late on November 1, 2026, Ukraine's official Air Alert app sent fake warnings of nuclear radiation, a chemical threat and street fighting in Kyiv. By Monday, Russia said its Emergency Ministry app was hacked too, with a fake alert of nuclear warheads launched. Nobody has proven who did it. #cybersecurity #ukraine #shorts",
+  "hashtags": [
+   "#cybersecurity",
+   "#ukraine",
+   "#shorts"
+  ],
+  "tags": [
+   "Air Alert app hack",
+   "Ukraine alert app hacked",
+   "Russia emergency ministry app hack",
+   "fake nuclear alert",
+   "emergency alert cyberattack",
+   "Hitcore",
+   "Oreshnik fake alert"
+  ],
+  "fb_title": "Fake nuclear alerts on both sides of a war",
+  "facebook_text": "Ukraine's Air Alert app warned of radiation that didn't exist. A day later Russia said its own emergency app was hacked the same way.\nIf your alert app said a missile was coming, would you trust it or check first?\n#cybersecurity #ukraine #russia #emergencyalert",
+  "first_comment": "If an official alert app told you radiation was coming, would you run first or check the news first?",
+  "thumb": {
+   "text": "HACKED APP FAKED NUCLEAR DANGER",
+   "hl": "NUCLEAR DANGER",
+   "visual": 0
+  }
+ }
+}
