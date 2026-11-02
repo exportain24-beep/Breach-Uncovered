@@ -64,7 +64,7 @@ def main():
     state = load(); slot = None
     if getattr(a, "check_due", False):
         print("DUE" if due_slot(state) else "NOT_DUE"); return 0
-    if not a.preview and not a.scheduled and a.episode is not None: slot = due_slot(state)   # a manual publish fills the current slot so it is not doubled later
+    # a manual "publish N" goes live right away and does not take a schedule slot
     if a.scheduled:
         slot = due_slot(state)
         if not slot: print("no New York slot due now"); return 0
