@@ -381,6 +381,29 @@
      "likes": 1,
      "comments": 1
     }
+   },
+   "24h": {
+    "taken_at": "2026-11-02T06:13:11.963032+00:00",
+    "age_hours": 29.5,
+    "youtube": {
+     "viewCount": 12,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2819,
+     "post_video_view_time": 625895,
+     "blue_reels_play_count": 222,
+     "fb_reels_total_plays": 234,
+     "fb_reels_replay_count": 12,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
    }
   }
  },
@@ -466,6 +489,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "6h": {
+    "taken_at": "2026-11-02T06:13:11.963032+00:00",
+    "age_hours": 10.9,
+    "youtube": {
+     "viewCount": 26,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3238,
+     "post_video_view_time": 897057,
+     "blue_reels_play_count": 278,
+     "fb_reels_total_plays": 298,
+     "fb_reels_replay_count": 20,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -474,6 +520,61 @@
   "yt": "5bjE3-xPhi0",
   "fb": "1356790236392993",
   "published_at": "2026-11-01T23:10:17+00:00",
-  "snapshots": {}
+  "snapshots": {
+   "6h": {
+    "taken_at": "2026-11-02T06:13:11.963032+00:00",
+    "age_hours": 7.0,
+    "youtube": {
+     "viewCount": 0,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2322,
+     "post_video_view_time": 359994,
+     "blue_reels_play_count": 158,
+     "fb_reels_total_plays": 170,
+     "fb_reels_replay_count": 12,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
+   }
+  }
+ },
+ "005": {
+  "title": "How a $10.69 Web Address Stopped the WannaCry Attack",
+  "yt": "pOV6dsEJvF0",
+  "fb": "1476229624352314",
+  "published_at": "2026-11-02T02:54:39+00:00",
+  "snapshots": {
+   "1h": {
+    "taken_at": "2026-11-02T06:13:11.963032+00:00",
+    "age_hours": 3.3,
+    "youtube": {
+     "viewCount": 88,
+     "likeCount": 4,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3090,
+     "post_video_view_time": 692203,
+     "blue_reels_play_count": 224,
+     "fb_reels_total_plays": 243,
+     "fb_reels_replay_count": 19,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 0
+    }
+   }
+  }
  }
 }
