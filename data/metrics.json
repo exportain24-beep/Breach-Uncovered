@@ -173,6 +173,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "48h": {
+    "taken_at": "2026-11-02T16:06:13.805386+00:00",
+    "age_hours": 51.5,
+    "youtube": {
+     "viewCount": 964,
+     "likeCount": 17,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 4686,
+     "post_video_view_time": 70296,
+     "blue_reels_play_count": 15,
+     "fb_reels_total_plays": 17,
+     "fb_reels_replay_count": 2,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -458,6 +481,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "24h": {
+    "taken_at": "2026-11-02T16:06:13.805386+00:00",
+    "age_hours": 25.4,
+    "youtube": {
+     "viewCount": 89,
+     "likeCount": 1,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 10638,
+     "post_video_view_time": 2149073,
+     "blue_reels_play_count": 202,
+     "fb_reels_total_plays": 222,
+     "fb_reels_replay_count": 20,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -543,6 +589,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "1h": {
+    "taken_at": "2026-11-02T16:06:13.805386+00:00",
+    "age_hours": 16.9,
+    "youtube": {
+     "viewCount": 2,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2191,
+     "post_video_view_time": 431655,
+     "blue_reels_play_count": 197,
+     "fb_reels_total_plays": 212,
+     "fb_reels_replay_count": 15,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -572,6 +641,98 @@
      "fb_reels_replay_count": 19,
      "post_video_followers": 0,
      "likes": 1,
+     "comments": 0
+    }
+   },
+   "6h": {
+    "taken_at": "2026-11-02T16:06:13.805386+00:00",
+    "age_hours": 13.2,
+    "youtube": {
+     "viewCount": 238,
+     "likeCount": 8,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3176,
+     "post_video_view_time": 911704,
+     "blue_reels_play_count": 287,
+     "fb_reels_total_plays": 309,
+     "fb_reels_replay_count": 22,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
+   }
+  }
+ },
+ "105": {
+  "title": "Air Alert Hack: Fake Nuclear Warnings Hit Ukraine, Then Russia",
+  "yt": "EiLubdbvi-g",
+  "fb": "1426004619681489",
+  "published_at": "2026-11-02T13:00:00+00:00",
+  "snapshots": {
+   "1h": {
+    "taken_at": "2026-11-02T16:06:13.805386+00:00",
+    "age_hours": 3.1,
+    "youtube": {
+     "viewCount": 0,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3683,
+     "post_video_view_time": 810343,
+     "blue_reels_play_count": 221,
+     "fb_reels_total_plays": 239,
+     "fb_reels_replay_count": 18,
+     "post_video_followers": 1,
+     "likes": 1,
+     "comments": 0
+    }
+   }
+  }
+ },
+ "006": {
+  "title": "Chosun Expo: The Software Company U.S. Says Hid North Korean Hackers",
+  "yt": "kZECFy5SjHs",
+  "fb": "29695166120102132",
+  "published_at": "2026-11-02T17:00:00+00:00",
+  "snapshots": {}
+ },
+ "015": {
+  "title": "LockBit Takedown: How Police Hacked a Ransomware Gang",
+  "yt": "oUEytH4ZYbU",
+  "fb": "1437721215215918",
+  "published_at": "2026-11-02T13:02:22+00:00",
+  "snapshots": {
+   "1h": {
+    "taken_at": "2026-11-02T16:06:13.805386+00:00",
+    "age_hours": 3.1,
+    "youtube": {
+     "viewCount": 11,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2273,
+     "post_video_view_time": 470606,
+     "blue_reels_play_count": 208,
+     "fb_reels_total_plays": 214,
+     "fb_reels_replay_count": 6,
+     "post_video_followers": 0,
+     "likes": 0,
      "comments": 0
     }
    }
