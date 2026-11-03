@@ -700,6 +700,38 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "48h": {
+    "taken_at": "2026-11-03T21:04:09.891115+00:00",
+    "age_hours": 49.7,
+    "youtube": {
+     "viewCount": 44,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": {
+      "engagedViews": 9,
+      "views": 31,
+      "averageViewDuration": 16,
+      "averageViewPercentage": 35.66,
+      "likes": 0,
+      "shares": 0,
+      "comments": 0,
+      "subscribersGained": 0
+     }
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3210,
+     "post_video_view_time": 898877,
+     "blue_reels_play_count": 280,
+     "fb_reels_total_plays": 300,
+     "fb_reels_replay_count": 20,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -968,6 +1000,29 @@
     "age_hours": 13.9,
     "youtube": {
      "viewCount": 307,
+     "likeCount": 3,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 23716,
+     "post_video_view_time": 47432,
+     "blue_reels_play_count": 2,
+     "fb_reels_total_plays": 3,
+     "fb_reels_replay_count": 1,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 0
+    }
+   },
+   "24h": {
+    "taken_at": "2026-11-03T21:04:09.891115+00:00",
+    "age_hours": 28.1,
+    "youtube": {
+     "viewCount": 308,
      "likeCount": 3,
      "dislikeCount": 0,
      "favoriteCount": 0,
