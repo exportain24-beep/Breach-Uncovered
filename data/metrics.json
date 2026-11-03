@@ -600,6 +600,29 @@
      "likes": 0,
      "comments": 1
     }
+   },
+   "48h": {
+    "taken_at": "2026-11-03T15:12:50.189090+00:00",
+    "age_hours": 48.5,
+    "youtube": {
+     "viewCount": 89,
+     "likeCount": 1,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 10590,
+     "post_video_view_time": 2149900,
+     "blue_reels_play_count": 203,
+     "fb_reels_total_plays": 223,
+     "fb_reels_replay_count": 20,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 1
+    }
    }
   }
  },
@@ -885,6 +908,29 @@
      "likes": 1,
      "comments": 0
     }
+   },
+   "24h": {
+    "taken_at": "2026-11-03T15:12:50.189090+00:00",
+    "age_hours": 26.2,
+    "youtube": {
+     "viewCount": 33,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3610,
+     "post_video_view_time": 844967,
+     "blue_reels_play_count": 234,
+     "fb_reels_total_plays": 253,
+     "fb_reels_replay_count": 19,
+     "post_video_followers": 1,
+     "likes": 1,
+     "comments": 0
+    }
    }
   }
  },
@@ -988,6 +1034,29 @@
      "post_video_view_time": 482944,
      "blue_reels_play_count": 214,
      "fb_reels_total_plays": 220,
+     "fb_reels_replay_count": 6,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 0
+    }
+   },
+   "24h": {
+    "taken_at": "2026-11-03T15:12:50.189090+00:00",
+    "age_hours": 26.2,
+    "youtube": {
+     "viewCount": 51,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2268,
+     "post_video_view_time": 487658,
+     "blue_reels_play_count": 215,
+     "fb_reels_total_plays": 221,
      "fb_reels_replay_count": 6,
      "post_video_followers": 0,
      "likes": 0,
