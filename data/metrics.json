@@ -491,6 +491,38 @@
      "likes": 1,
      "comments": 1
     }
+   },
+   "48h": {
+    "taken_at": "2026-11-03T06:53:50.498843+00:00",
+    "age_hours": 54.2,
+    "youtube": {
+     "viewCount": 22,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": {
+      "engagedViews": 2,
+      "views": 3,
+      "averageViewDuration": 26,
+      "averageViewPercentage": 58.10999999999999,
+      "likes": 0,
+      "shares": 0,
+      "comments": 0,
+      "subscribersGained": 0
+     }
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2819,
+     "post_video_view_time": 625895,
+     "blue_reels_play_count": 222,
+     "fb_reels_total_plays": 234,
+     "fb_reels_replay_count": 12,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
    }
   }
  },
@@ -776,6 +808,29 @@
      "likes": 1,
      "comments": 1
     }
+   },
+   "24h": {
+    "taken_at": "2026-11-03T06:53:50.498843+00:00",
+    "age_hours": 28.0,
+    "youtube": {
+     "viewCount": 249,
+     "likeCount": 8,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3165,
+     "post_video_view_time": 911796,
+     "blue_reels_play_count": 288,
+     "fb_reels_total_plays": 310,
+     "fb_reels_replay_count": 22,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
    }
   }
  },
@@ -844,6 +899,29 @@
     "age_hours": 6.6,
     "youtube": {
      "viewCount": 280,
+     "likeCount": 3,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 23716,
+     "post_video_view_time": 47432,
+     "blue_reels_play_count": 2,
+     "fb_reels_total_plays": 3,
+     "fb_reels_replay_count": 1,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 0
+    }
+   },
+   "1h": {
+    "taken_at": "2026-11-03T06:53:50.498843+00:00",
+    "age_hours": 13.9,
+    "youtube": {
+     "viewCount": 307,
      "likeCount": 3,
      "dislikeCount": 0,
      "favoriteCount": 0,
