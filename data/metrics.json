@@ -918,6 +918,38 @@
      "likes": 1,
      "comments": 1
     }
+   },
+   "48h": {
+    "taken_at": "2026-11-04T09:19:56.086928+00:00",
+    "age_hours": 54.4,
+    "youtube": {
+     "viewCount": 259,
+     "likeCount": 8,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 1,
+     "privacy": "public",
+     "analytics": {
+      "engagedViews": 99,
+      "views": 220,
+      "averageViewDuration": 21,
+      "averageViewPercentage": 42.91,
+      "likes": 8,
+      "shares": 0,
+      "comments": 0,
+      "subscribersGained": 1
+     }
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3158,
+     "post_video_view_time": 912940,
+     "blue_reels_play_count": 289,
+     "fb_reels_total_plays": 311,
+     "fb_reels_replay_count": 22,
+     "post_video_followers": 0,
+     "likes": 1,
+     "comments": 1
+    }
    }
   }
  },
