@@ -1,5 +1,5 @@
 # Shorts performance
-Updated 2026-11-03 21:04 UTC. Raw YouTube views count from the first frame since Aug 24 2026; judge by engaged views, average % viewed and shares.
+Updated 2026-11-04 01:25 UTC. Raw YouTube views count from the first frame since Aug 24 2026; judge by engaged views, average % viewed and shares.
 
 ## At 1h
 | Short | YT views | YT likes | YT comments | engaged views | avg % viewed | FB plays | verdict |
@@ -59,3 +59,4 @@ Updated 2026-11-03 21:04 UTC. Raw YouTube views count from the first frame since
 | 103 UNM Hospital Cyberattack: New Mexico's O | 22 | 0 | 1 | 2 | 58.10999999999999 | 222 | below baseline |
 | 104 GM Pays $220 Million Over Selling Driver | 89 | 1 | 1 | n/a | n/a | 203 | normal |
 | 002 DarkSeoul: 48,000 Computers Wiped at 2 p | 44 | 0 | 1 | 9 | 35.66 | 280 | below baseline |
+| 004 THAAD Phishing: Fake Recruiters Targeted | 30 | 0 | 1 | 0 | 0 | 198 | below baseline |
