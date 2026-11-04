@@ -1,5 +1,5 @@
 # Shorts performance
-Updated 2026-11-04 18:00 UTC. Raw YouTube views count from the first frame since Aug 24 2026; judge by engaged views, average % viewed and shares.
+Updated 2026-11-04 23:42 UTC. Raw YouTube views count from the first frame since Aug 24 2026; judge by engaged views, average % viewed and shares.
 
 ## At 1h
 | Short | YT views | YT likes | YT comments | engaged views | avg % viewed | FB plays | verdict |
