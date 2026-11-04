@@ -1027,6 +1027,29 @@
      "likes": 1,
      "comments": 0
     }
+   },
+   "48h": {
+    "taken_at": "2026-11-04T18:00:16.952775+00:00",
+    "age_hours": 53.0,
+    "youtube": {
+     "viewCount": 52,
+     "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 3598,
+     "post_video_view_time": 845630,
+     "blue_reels_play_count": 235,
+     "fb_reels_total_plays": 254,
+     "fb_reels_replay_count": 19,
+     "post_video_followers": 1,
+     "likes": 1,
+     "comments": 0
+    }
    }
   }
  },
@@ -1087,6 +1110,29 @@
     "age_hours": 28.1,
     "youtube": {
      "viewCount": 308,
+     "likeCount": 3,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 23716,
+     "post_video_view_time": 47432,
+     "blue_reels_play_count": 2,
+     "fb_reels_total_plays": 3,
+     "fb_reels_replay_count": 1,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 0
+    }
+   },
+   "48h": {
+    "taken_at": "2026-11-04T18:00:16.952775+00:00",
+    "age_hours": 49.0,
+    "youtube": {
+     "viewCount": 310,
      "likeCount": 3,
      "dislikeCount": 0,
      "favoriteCount": 0,
@@ -1165,6 +1211,29 @@
     "youtube": {
      "viewCount": 51,
      "likeCount": 0,
+     "dislikeCount": 0,
+     "favoriteCount": 0,
+     "commentCount": 0,
+     "privacy": "public",
+     "analytics": "not yet reported (YouTube Analytics lags ~1-2 days)"
+    },
+    "facebook": {
+     "post_video_avg_time_watched": 2268,
+     "post_video_view_time": 487658,
+     "blue_reels_play_count": 215,
+     "fb_reels_total_plays": 221,
+     "fb_reels_replay_count": 6,
+     "post_video_followers": 0,
+     "likes": 0,
+     "comments": 0
+    }
+   },
+   "48h": {
+    "taken_at": "2026-11-04T18:00:16.952775+00:00",
+    "age_hours": 53.0,
+    "youtube": {
+     "viewCount": 64,
+     "likeCount": 1,
      "dislikeCount": 0,
      "favoriteCount": 0,
      "commentCount": 0,

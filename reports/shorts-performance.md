@@ -1,5 +1,5 @@
 # Shorts performance
-Updated 2026-11-04 09:19 UTC. Raw YouTube views count from the first frame since Aug 24 2026; judge by engaged views, average % viewed and shares.
+Updated 2026-11-04 18:00 UTC. Raw YouTube views count from the first frame since Aug 24 2026; judge by engaged views, average % viewed and shares.
 
 ## At 1h
 | Short | YT views | YT likes | YT comments | engaged views | avg % viewed | FB plays | verdict |
@@ -61,3 +61,6 @@ Updated 2026-11-04 09:19 UTC. Raw YouTube views count from the first frame since
 | 002 DarkSeoul: 48,000 Computers Wiped at 2 p | 44 | 0 | 1 | 9 | 35.66 | 280 | below baseline |
 | 004 THAAD Phishing: Fake Recruiters Targeted | 30 | 0 | 1 | 0 | 0 | 198 | below baseline |
 | 005 How a $10.69 Web Address Stopped the Wan | 259 | 8 | 1 | 99 | 42.91 | 289 | above baseline |
+| 105 Air Alert Hack: Fake Nuclear Warnings Hi | 52 | 0 | 0 | n/a | n/a | 235 | below baseline |
+| 006 Chosun Expo: The Software Company U.S. S | 310 | 3 | 0 | n/a | n/a | 2 | exceptional |
+| 015 LockBit Takedown: How Police Hacked a Ra | 64 | 1 | 0 | n/a | n/a | 215 | normal |
